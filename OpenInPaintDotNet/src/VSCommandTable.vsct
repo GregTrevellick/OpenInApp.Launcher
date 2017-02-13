@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidOpenInAppPackage">
+    <Buttons>
+      <Button guid="guidOpenInVsCmdSet" id="OpenInApp" priority="0x0500" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_FOLDER_EXPLORE" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Open in Paint.NET</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\VsixCommandIcon_16x16.png" usedList="bmpPic1"/>
+    </Bitmaps>
+  </Commands>
+  
+      <CommandPlacements>
+        <CommandPlacement guid="guidOpenInVsCmdSet" id="OpenInApp" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_EXPLORE"/>
+        </CommandPlacement>
+        <CommandPlacement guid="guidOpenInVsCmdSet" id="OpenInApp" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_EXPLORE"/>
+        </CommandPlacement>
+        <CommandPlacement guid="guidOpenInVsCmdSet" id="OpenInApp" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_OPEN"/>
+        </CommandPlacement>
+    </CommandPlacements>
+   
+  <Symbols>
+        <!-- This is the package guid. -->    
+    <GuidSymbol name="guidOpenInAppPackage" value="{123D2A90-F17C-4563-97E1-659F2CB16C7C}" />
+
+    <GuidSymbol name="guidOpenInVsCmdSet" value="{16DED3D5-00B3-4444-A8CC-536FE62CEFC9}">
+      <IDSymbol name="OpenInApp" value="0x0100" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{11FDDE54-27FA-469F-8E59-92D457DC9E02}" >
+      <IDSymbol name="bmpPic1" value="1" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

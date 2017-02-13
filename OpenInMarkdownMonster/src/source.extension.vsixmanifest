@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="MFA20CC7-7C8E-4E41-B258-539C067E5649" Version="1.1.0" Language="en-US" Publisher="GregTrevellick" />
+    <DisplayName>Open in Markdown Monster</DisplayName>
+    <Description xml:space="preserve">Open multiple files simultaneously in Markdown Monster directly from Solution Explorer.</Description>
+    <MoreInfo>https://github.com/GregTrevellick/OpenInMarkdownMonster</MoreInfo>
+    <License>LICENSE.txt</License>
+    <ReleaseNotes>https://github.com/GregTrevellick/OpenInMarkdownMonster/blob/master/CHANGELOG.md</ReleaseNotes>
+    <Icon>Resources\VsixExtensionIcon_90x90.png</Icon>
+    <PreviewImage>Resources\VsixExtensionPreview_175x175.png</PreviewImage>
+    <Tags>open, open in, MarkdownMonster, Markdown Monster, Markdown</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="11.0" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="12.0" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="14.0" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+  </Assets>
+</PackageManifest>

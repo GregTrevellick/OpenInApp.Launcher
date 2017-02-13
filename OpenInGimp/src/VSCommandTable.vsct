@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidOpenInAppPackage">
+    <Buttons>
+      <Button guid="guidOpenInVsCmdSet" id="OpenInApp" priority="0x0500" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_FOLDER_EXPLORE" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Open in GIMP</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\VsixCommandIcon_16x16.png" usedList="bmpPic1"/>
+    </Bitmaps>
+  </Commands>
+  
+      <CommandPlacements>
+        <CommandPlacement guid="guidOpenInVsCmdSet" id="OpenInApp" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_EXPLORE"/>
+        </CommandPlacement>
+        <CommandPlacement guid="guidOpenInVsCmdSet" id="OpenInApp" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_EXPLORE"/>
+        </CommandPlacement>
+        <CommandPlacement guid="guidOpenInVsCmdSet" id="OpenInApp" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_OPEN"/>
+        </CommandPlacement>
+    </CommandPlacements>
+   
+  <Symbols>
+        <!-- This is the package guid. -->    
+    <GuidSymbol name="guidOpenInAppPackage" value="{81F42674-2915-4A51-8960-F29F9D89BD02}" />
+
+    <GuidSymbol name="guidOpenInVsCmdSet" value="{6A5FF9B8-8E55-48F7-8263-511A3DB79208}">
+      <IDSymbol name="OpenInApp" value="0x0100" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{E8F1A2CC-90C3-43E8-92F0-4BDE463F4A18}">
+      <IDSymbol name="bmpPic1" value="1" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidOpenInAppPackage">
+    <Buttons>
+      <Button guid="guidOpenInVsCmdSet" id="OpenInApp" priority="0x0500" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_FOLDER_EXPLORE" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Open in Visual Studio 2012</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\VsixCommandIcon_16x16.png" usedList="bmpPic1"/>
+    </Bitmaps>
+  </Commands>
+  
+      <CommandPlacements>
+        <CommandPlacement guid="guidOpenInVsCmdSet" id="OpenInApp" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_EXPLORE"/>
+        </CommandPlacement>
+        <CommandPlacement guid="guidOpenInVsCmdSet" id="OpenInApp" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_EXPLORE"/>
+        </CommandPlacement>
+        <CommandPlacement guid="guidOpenInVsCmdSet" id="OpenInApp" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_OPEN"/>
+        </CommandPlacement>
+    </CommandPlacements>
+   
+  <Symbols>
+        <!-- This is the package guid. -->    
+    <GuidSymbol name="guidOpenInAppPackage" value="{BCF0AD90-A27C-489F-B4C5-7A05F73746F0}" />
+
+    <GuidSymbol name="guidOpenInVsCmdSet" value="{00458D90-CD38-4288-B22C-2B24D77864B6}">
+      <IDSymbol name="OpenInApp" value="0x0100" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{C3BAD7D4-E37A-422E-A516-F3E63D440444}" >
+      <IDSymbol name="bmpPic1" value="1" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
