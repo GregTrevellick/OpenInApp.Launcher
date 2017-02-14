@@ -83,7 +83,6 @@
     <None Include="Assetts\ISSUE_TEMPLATE.md" />
     <None Include="Assetts\README.md" />
     <None Include="Assetts\READMEGregtGregt.md" />
-    <None Include="packages.config" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
       <Generator>VsixManifestGenerator</Generator>
