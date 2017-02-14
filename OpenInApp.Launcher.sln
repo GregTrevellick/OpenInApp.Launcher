@@ -14,33 +14,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInAltovaXmlSpy", "OpenInAltovaXmlSpy\src\OpenInAltovaXmlSpy.csproj", "{0DD8CCEA-DC16-4065-B148-E388F9FD30D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInAltovaXmlSpy", "OpenInAltovaXmlSpy\OpenInAltovaXmlSpy.csproj", "{0DD8CCEA-DC16-4065-B148-E388F9FD30D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Command", "OpenInApp.Command\src\OpenInApp.Command.csproj", "{FB454D10-D473-4E49-A289-9BB8713DA1A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Command", "OpenInApp.Command\OpenInApp.Command.csproj", "{FB454D10-D473-4E49-A289-9BB8713DA1A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Common", "OpenInApp.Common\src\OpenInApp.Common.csproj", "{78680FB3-22E5-4200-9756-2C2CEC66161D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Common", "OpenInApp.Common\OpenInApp.Common.csproj", "{78680FB3-22E5-4200-9756-2C2CEC66161D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Common.Tests", "OpenInApp.Common.Tests\src\OpenInApp.Common.Tests.csproj", "{14817DAF-3B76-4E3A-9C6B-B69C9A438183}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Common.Tests", "OpenInApp.Common.Tests\OpenInApp.Common.Tests.csproj", "{14817DAF-3B76-4E3A-9C6B-B69C9A438183}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInGimp", "OpenInGimp\src\OpenInGimp.csproj", "{BAB701B5-1EED-46E4-967C-33541737085D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInGimp", "OpenInGimp\OpenInGimp.csproj", "{BAB701B5-1EED-46E4-967C-33541737085D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInMarkdownMonster", "OpenInMarkdownMonster\src\OpenInMarkdownMonster.csproj", "{18067DC7-DCDD-47DF-AD90-160D9579C0B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInMarkdownMonster", "OpenInMarkdownMonster\OpenInMarkdownMonster.csproj", "{18067DC7-DCDD-47DF-AD90-160D9579C0B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInPaintDotNet", "OpenInPaintDotNet\src\OpenInPaintDotNet.csproj", "{0B1434B0-FA30-469C-8E25-BE99F2D6AE01}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInPaintDotNet", "OpenInPaintDotNet\OpenInPaintDotNet.csproj", "{0B1434B0-FA30-469C-8E25-BE99F2D6AE01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInGregtGregt", "OpenInTemplate\src\OpenInGregtGregt.csproj", "{ED1F9EAE-6ADA-457E-BD47-650DD5B8304E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInGregtGregt", "OpenInTemplate\OpenInGregtGregt.csproj", "{ED1F9EAE-6ADA-457E-BD47-650DD5B8304E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2012", "OpenInVS2012\src\OpenInVS2012.csproj", "{9090BD01-3E3D-4117-B827-B56AF964DBD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2012", "OpenInVS2012\OpenInVS2012.csproj", "{9090BD01-3E3D-4117-B827-B56AF964DBD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2013", "OpenInVS2013\src\OpenInVS2013.csproj", "{00617280-1657-471F-A48A-CB3C2048B6BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2013", "OpenInVS2013\OpenInVS2013.csproj", "{00617280-1657-471F-A48A-CB3C2048B6BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2015", "OpenInVS2015\src\OpenInVS2015.csproj", "{044707DC-FDD8-4B88-9C58-641467CC7FA1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2015", "OpenInVS2015\OpenInVS2015.csproj", "{044707DC-FDD8-4B88-9C58-641467CC7FA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2017Community", "OpenInVS2017Community\src\OpenInVS2017Community.csproj", "{3F5B1A50-2E7E-46C8-8879-53B34E48D0B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2017Community", "OpenInVS2017Community\OpenInVS2017Community.csproj", "{3F5B1A50-2E7E-46C8-8879-53B34E48D0B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2017Enterprise", "OpenInVS2017Enterprise\src\OpenInVS2017Enterprise.csproj", "{033AFEA5-C4FC-4176-AF55-B0E0054E4B9C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2017Enterprise", "OpenInVS2017Enterprise\OpenInVS2017Enterprise.csproj", "{033AFEA5-C4FC-4176-AF55-B0E0054E4B9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2017Professional", "OpenInVS2017Professional\src\OpenInVS2017Professional.csproj", "{5E307B73-F302-42C0-945F-C695D6D4FE91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2017Professional", "OpenInVS2017Professional\OpenInVS2017Professional.csproj", "{5E307B73-F302-42C0-945F-C695D6D4FE91}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSIXProject1", "VSIXProject1\VSIXProject1.csproj", "{8C412AEC-4BEB-451D-A4E6-4D362F73F6B4}"
 EndProject
