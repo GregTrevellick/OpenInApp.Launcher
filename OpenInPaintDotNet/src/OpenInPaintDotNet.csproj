@@ -83,6 +83,7 @@
     <None Include="Assetts\CONTRIBUTING.md" />
     <None Include="Assetts\ISSUE_TEMPLATE.md" />
     <None Include="Assetts\README.md" />
+    <None Include="packages.config" />
     <None Include="Properties\vsix-compress.props" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
