@@ -139,11 +139,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\OpenInApp.Command\OpenInApp.Command\OpenInApp.Command.csproj">
+    <ProjectReference Include="..\..\OpenInApp.Command\src\OpenInApp.Command.csproj">
       <Project>{fb454d10-d473-4e49-a289-9bb8713da1a1}</Project>
       <Name>OpenInApp.Command</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\OpenInApp.Common\OpenInApp.Common\OpenInApp.Common.csproj">
+    <ProjectReference Include="..\..\OpenInApp.Common\src\OpenInApp.Common.csproj">
       <Project>{78680fb3-22e5-4200-9756-2c2cec66161d}</Project>
       <Name>OpenInApp.Common</Name>
     </ProjectReference>
