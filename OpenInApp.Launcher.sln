@@ -16,11 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInAltovaXmlSpy", "OpenInAltovaXmlSpy\src\OpenInAltovaXmlSpy.csproj", "{0DD8CCEA-DC16-4065-B148-E388F9FD30D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Command", "OpenInApp.Command\OpenInApp.Command\OpenInApp.Command.csproj", "{FB454D10-D473-4E49-A289-9BB8713DA1A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Command", "OpenInApp.Command\src\OpenInApp.Command.csproj", "{FB454D10-D473-4E49-A289-9BB8713DA1A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Common", "OpenInApp.Common\OpenInApp.Common\OpenInApp.Common.csproj", "{78680FB3-22E5-4200-9756-2C2CEC66161D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Common", "OpenInApp.Common\src\OpenInApp.Common.csproj", "{78680FB3-22E5-4200-9756-2C2CEC66161D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Common.Tests", "OpenInApp.Common.Tests\OpenInApp.Common.Tests\OpenInApp.Common.Tests.csproj", "{14817DAF-3B76-4E3A-9C6B-B69C9A438183}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Common.Tests", "OpenInApp.Common.Tests\src\OpenInApp.Common.Tests.csproj", "{14817DAF-3B76-4E3A-9C6B-B69C9A438183}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInGimp", "OpenInGimp\src\OpenInGimp.csproj", "{BAB701B5-1EED-46E4-967C-33541737085D}"
 EndProject
