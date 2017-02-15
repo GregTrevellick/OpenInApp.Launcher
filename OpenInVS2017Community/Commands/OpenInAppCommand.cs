@@ -1,5 +1,6 @@
 ﻿using EnvDTE;
 using EnvDTE80;
+//using EnvDTE80;
 using Microsoft.VisualStudio.Shell;
 using OpenInApp.Common.Helpers;
 using OpenInVS2017Community.Helpers;
