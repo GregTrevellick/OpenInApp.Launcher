@@ -34,19 +34,19 @@ If you like this ***free*** extension, please give it a [review][VSMarketplaceRe
 
 - Open multiple files simultaneously in [Visual Studio 2013][ThirdPartyAppHomePage] with VS2012, VS2013 and VS2015.
 
-  ![](src/Resources/ReadMeScreenShot_ContextMenu.png)
+  ![](../Resources/ReadMeScreenShot_ContextMenu.png)
 
 - Warning if attempting to open a large quantity of files. The quantity is configurable in Tools > Options.
 
-  ![](src/Resources/ReadMeScreenShot_WarningLargeQuantity.png)
+  ![](../Resources/ReadMeScreenShot_WarningLargeQuantity.png)
 
 - Warning if attempting to open one or more file types whose extension is not typically associated with [Visual Studio 2013][ThirdPartyAppHomePage]. The list of typical file extensions is configurable in Tools > Options.
 
-  ![](src/Resources/ReadMeScreenShot_WarningNonTypical.png)
+  ![](../Resources/ReadMeScreenShot_WarningNonTypical.png)
 
 - Option to supress the warning message if attempting to open a file whose extension is not typically associated with [Visual Studio 2013][ThirdPartyAppHomePage].
 
-  ![](src/Resources/ReadMeScreenShot_OptionsGeneral.png)
+  ![](../Resources/ReadMeScreenShot_OptionsGeneral.png)
 
 ## Use Cases
 
