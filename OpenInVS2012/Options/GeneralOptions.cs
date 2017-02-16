@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.Shell;
+using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
 using OpenInVS2012.Helpers;
 using System.ComponentModel;
@@ -8,7 +9,7 @@ namespace OpenInVS2012.Options.VS2012
 {
     public class GeneralOptions : DialogPage
     {
-        private string Caption { get { return new FileHelper().Caption; } }
+        //private string Caption { get { return new FileHelper().Caption; } }
 
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(ConstantsForApp.CommonActualPathToExeOptionLabel)]
@@ -67,7 +68,7 @@ namespace OpenInVS2012.Options.VS2012
                 {
                     MessageBox.Show(
                         CommonConstants.FileQuantityWarningLimitInvalid,
-                        Caption,
+                        ConstantsForApp.Caption,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
@@ -140,11 +141,25 @@ namespace OpenInVS2012.Options.VS2012
                 if (!CommonFileHelper.DoesFileExist(ActualPathToExe))
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
-                    new FileHelper().PromptForActualExeFile(ActualPathToExe);
+
+                    var filePrompterHelper = new FilePrompterHelper(ConstantsForApp.Caption, ConstantsForApp.ExecutableFileToBrowseFor);
+
+                    var persistOptionsDto = filePrompterHelper.PromptForActualExeFile(ActualPathToExe);
+
+                    if (persistOptionsDto.Persist)
+                    {
+                        PersistVSToolOptions(persistOptionsDto.ValueToPersist);
+                    }
                 }
             }
 
             base.OnApply(e);
+        }
+
+        internal void PersistVSToolOptions(string fileName)
+        {
+            VSPackage.Options.ActualPathToExe = fileName;
+            VSPackage.Options.SaveSettingsToStorage();
         }
     }
 }

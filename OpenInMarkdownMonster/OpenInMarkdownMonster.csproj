@@ -63,7 +63,6 @@
       <DependentUpon>source.extension.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ConstantsForApp.cs" />
-    <Compile Include="Helpers\FileHelper.cs" />
     <Compile Include="source.extension.cs">
       <DependentUpon>source.extension.vsixmanifest</DependentUpon>
     </Compile>

@@ -1,18 +1,17 @@
-﻿using EnvDTE;
-using EnvDTE80;
-using Microsoft.VisualStudio.Shell;
+﻿using Microsoft.VisualStudio.Shell;
+using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
 using OpenInAppPaintDotNet.Helpers;
 using OpenInAppPaintDotNet;
 using System;
 using System.ComponentModel.Design;
-using System.Linq;
+//using System.Linq;
 
 namespace OpenInAppPaintDotNet.Commands
 {
     internal sealed class OpenInAppCommand
     {
-        private string Caption { get { return new FileHelper().Caption; } }
+        private string Caption { get { return ConstantsForApp.Caption; } }
         public readonly Guid CommandSet = new Guid(PackageGuids.guidOpenInVsCmdSetString);
         public OpenInAppCommand Instance { get; private set; }
 
@@ -41,88 +40,63 @@ namespace OpenInAppPaintDotNet.Commands
             {
                 _package = package;
                 var commandService = ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
-
                 if (commandService != null)
                 {
-                    var menuCommandID = new CommandID(CommandSet, PackageIds.OpenInApp);
-                    var menuItem = new MenuCommand(MenuItemCallback, menuCommandID);
-                    commandService.AddCommand(menuItem);
+                    AddMenuCommand(commandService, PackageIds.CmdIdOpenInAppFolderExplore, true);
+                    AddMenuCommand(commandService, PackageIds.CmdIdOpenInAppCodeWin, false);
                 }
             }
         }
 
-        private void MenuItemCallback(object sender, EventArgs e)
+        private void AddMenuCommand(OleMenuCommandService commandService, int packageId, bool isFromSolutionExplorer)
         {
-            var dte = (DTE2)ServiceProvider.GetService(typeof(DTE));
+            var menuCommandID = new CommandID(CommandSet, packageId);
 
-            try
+            MenuCommand menuCommand;
+
+            if (isFromSolutionExplorer)
             {
-                var actualPathToExeExists = CommonFileHelper.DoesFileExist(VSPackage.Options.ActualPathToExe);
-
-                bool proceedToExecute = true;
-                if (!actualPathToExeExists)
-                {
-                    proceedToExecute = false;
-                    new FileHelper().PromptForActualExeFile(VSPackage.Options.ActualPathToExe);
-                    var newActualPathToExeExists = CommonFileHelper.DoesFileExist(VSPackage.Options.ActualPathToExe);
-                    if (newActualPathToExeExists)
-                    {
-                        proceedToExecute = true;
-                    }
-                    else
-                    {
-                        // User somehow managed to browse/select a new location for the exe that doesn't actually exist - virtually impossible, but you never know...
-                        OpenInAppHelper.InformUserMissingFile(Caption, VSPackage.Options.ActualPathToExe);
-                    }
-                }
-                if (proceedToExecute)
-                {
-                    var actualFilesToBeOpened = CommonFileHelper.GetFileNamesToBeOpened(dte);
-                    var actualFilesToBeOpenedExist = CommonFileHelper.DoFilesExist(actualFilesToBeOpened);
-                    if (!actualFilesToBeOpenedExist)
-                    {
-                        var missingFileName = CommonFileHelper.GetMissingFileName(actualFilesToBeOpened);
-                        OpenInAppHelper.InformUserMissingFile(Caption, missingFileName);
-                    }
-                    else
-                    {
-                        var fileQuantityWarningLimitInt = VSPackage.Options.FileQuantityWarningLimitInt;
-                        proceedToExecute = false;
-                        if (actualFilesToBeOpened.Count() > fileQuantityWarningLimitInt)
-                        {
-                            proceedToExecute = OpenInAppHelper.ConfirmProceedToExecute(Caption, CommonConstants.ConfirmOpenFileQuantityExceedsWarningLimit);
-                        }
-                        else
-                        {
-                            proceedToExecute = true;
-                        }
-                        if (proceedToExecute)
-                        {
-                            var typicalFileExtensionAsList = CommonFileHelper.GetTypicalFileExtensionAsList(VSPackage.Options.TypicalFileExtensions);
-                            var areTypicalFileExtensions = CommonFileHelper.AreTypicalFileExtensions(actualFilesToBeOpened, typicalFileExtensionAsList);
-                            if (!areTypicalFileExtensions)
-                            {
-                                if (VSPackage.Options.SuppressTypicalFileExtensionsWarning)
-                                {
-                                    proceedToExecute = true;
-                                }
-                                else
-                                {
-                                    proceedToExecute = OpenInAppHelper.ConfirmProceedToExecute(Caption, CommonConstants.ConfirmOpenNonTypicalFile);
-                                }
-                            }
-                            if (proceedToExecute)
-                            {
-                                OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, VSPackage.Options.ActualPathToExe);
-                            }
-                        }
-                    }
-                }
+                menuCommand = new MenuCommand(MenuItemCallback_FolderExplore, menuCommandID);
             }
-            catch (Exception ex)
+            else
             {
-                Logger.Log(ex);
-                OpenInAppHelper.ShowUnexpectedError(Caption);
+                menuCommand = new MenuCommand(MenuItemCallback_CodeWin, menuCommandID);
+            }
+
+            commandService.AddCommand(menuCommand);
+        }
+
+        private void MenuItemCallback_FolderExplore(object sender, EventArgs e)
+        {
+            MenuItemCallback(true);
+        }
+
+        private void MenuItemCallback_CodeWin(object sender, EventArgs e)
+        {
+            MenuItemCallback(false);
+        }
+
+        private void MenuItemCallback(bool isFromSolutionExplorer)
+        {
+            var menuItemCallBackHelper = new MenuItemCallBackHelper();
+
+            var dto = new InvokeCommandCallBackDto
+            {
+                ActualPathToExe = VSPackage.Options.ActualPathToExe,
+                Caption = ConstantsForApp.Caption,
+                ExecutableFileToBrowseFor = ConstantsForApp.ExecutableFileToBrowseFor,
+                FileQuantityWarningLimit = VSPackage.Options.FileQuantityWarningLimit,
+                IsFromSolutionExplorer = isFromSolutionExplorer,
+                ServiceProvider = ServiceProvider,
+                SuppressTypicalFileExtensionsWarning = VSPackage.Options.SuppressTypicalFileExtensionsWarning,
+                TypicalFileExtensions = VSPackage.Options.TypicalFileExtensions
+            };
+
+            var persistOptionsDto = menuItemCallBackHelper.InvokeCommandCallBack(dto);
+
+            if (persistOptionsDto.Persist)
+            {
+                VSPackage.Options.PersistVSToolOptions(persistOptionsDto.ValueToPersist);
             }
         }
     }

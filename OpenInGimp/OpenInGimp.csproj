@@ -60,7 +60,6 @@
       <DependentUpon>source.extension.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ConstantsForApp.cs" />
-    <Compile Include="Helpers\FileHelper.cs" />
     <Compile Include="Options\GeneralOptions.cs">
       <SubType>Component</SubType>
     </Compile>

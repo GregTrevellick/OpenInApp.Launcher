@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.Shell;
+using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
 using OpenInAppMarkdownMonster.Helpers;
 using System.ComponentModel;
@@ -8,7 +9,7 @@ namespace OpenInAppMarkdownMonster.Options.MarkdownMonster
 {
     public class GeneralOptions : DialogPage
     {
-        private string Caption { get { return new FileHelper().Caption; } }
+        //private string Caption { get { return new FileHelper().Caption; } }
 
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(ConstantsForApp.CommonActualPathToExeOptionLabel)]

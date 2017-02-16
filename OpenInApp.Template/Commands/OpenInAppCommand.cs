@@ -7,9 +7,9 @@ using System.ComponentModel.Design;
 
 namespace OpenInGregtGregt.Commands
 {
-    internal sealed class OpenInAppCommand 
+    internal sealed class OpenInAppCommand
     {
-        private string Caption { get { return ConstantsForApp.Caption;  } }
+        private string Caption { get { return ConstantsForApp.Caption; } }
         public readonly Guid CommandSet = new Guid(PackageGuids.guidOpenInVsCmdSetString);
         public OpenInAppCommand Instance { get; private set; }
 
@@ -68,7 +68,7 @@ namespace OpenInGregtGregt.Commands
         {
             MenuItemCallback(true);
         }
- 
+
         private void MenuItemCallback_CodeWin(object sender, EventArgs e)
         {
             MenuItemCallback(false);
