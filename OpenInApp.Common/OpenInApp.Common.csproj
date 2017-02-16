@@ -98,7 +98,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\chart.png" />
-    <Content Include="Assets\LICENSE.txt" />
     <Content Include="Assets\OpenInApp_Generic_175x175.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

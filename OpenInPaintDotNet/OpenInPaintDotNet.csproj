@@ -102,7 +102,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\chart.png" />
-    <Content Include="Assets\LICENSE.txt" />
     <Content Include="Assets\ThirdPartyLogo.png" />
     <Content Include="Resources\ReadMeScreenShot_WarningLargeQuantity.png" />
     <Content Include="Resources\ReadMeScreenShot_WarningNonTypical.png" />
