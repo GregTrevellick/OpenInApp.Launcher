@@ -88,18 +88,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assetts\CHANGELOG.md" />
-    <None Include="Assetts\CONTRIBUTING.md" />
-    <None Include="Assetts\ISSUE_TEMPLATE.md" />
-    <None Include="Assetts\README.md" />
+    <None Include="Assets\CHANGELOG.md" />
+    <None Include="Assets\CONTRIBUTING.md" />
+    <None Include="Assets\ISSUE_TEMPLATE.md" />
+    <None Include="Assets\README.md" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assetts\chart.png" />
-    <Content Include="Assetts\LICENSE.txt" />
-    <Content Include="Assetts\OpenInApp_Generic_175x175.png" />
+    <Content Include="Assets\chart.png" />
+    <Content Include="Assets\LICENSE.txt" />
+    <Content Include="Assets\OpenInApp_Generic_175x175.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
