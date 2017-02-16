@@ -68,7 +68,7 @@ namespace OpenInAppMarkdownMonster.Options.MarkdownMonster
                 {
                     MessageBox.Show(
                         CommonConstants.FileQuantityWarningLimitInvalid,
-                        Caption,
+                        ConstantsForApp.Caption,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
@@ -141,11 +141,25 @@ namespace OpenInAppMarkdownMonster.Options.MarkdownMonster
                 if (!CommonFileHelper.DoesFileExist(ActualPathToExe))
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
-                    new FileHelper().PromptForActualExeFile(ActualPathToExe);
+
+                    var filePrompterHelper = new FilePrompterHelper(ConstantsForApp.Caption, ConstantsForApp.ExecutableFileToBrowseFor);
+
+                    var persistOptionsDto = filePrompterHelper.PromptForActualExeFile(ActualPathToExe);
+
+                    if (persistOptionsDto.Persist)
+                    {
+                        PersistVSToolOptions(persistOptionsDto.ValueToPersist);
+                    }
                 }
             }
 
             base.OnApply(e);
+        }
+
+        internal void PersistVSToolOptions(string fileName)
+        {
+            VSPackage.Options.ActualPathToExe = fileName;
+            VSPackage.Options.SaveSettingsToStorage();
         }
     }
 }
