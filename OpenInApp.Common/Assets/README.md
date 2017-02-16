@@ -1,6 +1,6 @@
 # OpenInApp.Common
 
-[![Licence](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
+[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Build status](https://ci.appveyor.com/api/projects/status/ix4cov77vx5j3dcm?svg=true)](https://ci.appveyor.com/project/GregTrevellick/openinapp-common)
 
 

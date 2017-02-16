@@ -13,7 +13,7 @@
 
 # Open In GIMP - GNU Image Manipulation Program
 
-[![Licence](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
+[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Build status][AppVeyorProjectBuildStatusBadgeSvg]][AppVeyorProjectUrl]
 [![][VersionNumberBadgeURL]][VSMarketplaceUrl]
 
@@ -91,7 +91,7 @@ See the [change log](CHANGELOG.md) for road map and release history.
 
 Bugs can be logged [here][GitHubRepoIssuesURL].
 
-Software [Licence](/LICENSE.txt).
+Software [License](/LICENSE.txt).
 
 [![](chart.png)][GitHubPagesURL]
 
