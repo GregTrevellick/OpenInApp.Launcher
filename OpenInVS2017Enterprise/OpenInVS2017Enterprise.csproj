@@ -77,8 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\CHANGELOG.md" />
-    <None Include="Assets\CONTRIBUTING.md" />
-    <None Include="Assets\ISSUE_TEMPLATE.md" />
     <None Include="Assets\README.md" />
     <None Include="packages.config" />
     <None Include="source.extension.vsixmanifest">
