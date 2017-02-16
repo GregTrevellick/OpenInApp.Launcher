@@ -103,7 +103,7 @@
     </Content>
     <Content Include="Assets\chart.png" />
     <Content Include="Assets\ThirdPartyLogo.png" />
-    <Content Include="Resources\ReadMeScreenShot_OptionsGeneral.png" />
+    <Content Include="Assets\ReadMeScreenShot_OptionsGeneral.png" />
     <Content Include="Resources\VsixCommandIcon_16x16.png">
       <IncludeInVSIX>true</IncludeInVSIX>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -116,7 +116,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Resources\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="Assets\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="source.extension.ico">
       <DependentUpon>source.extension.vsixmanifest</DependentUpon>
       <IncludeInVSIX>true</IncludeInVSIX>
