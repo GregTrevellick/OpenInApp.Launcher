@@ -33,7 +33,7 @@ If you like this ***free*** extension, please give it a [review][VSMarketplaceRe
 
 - Open multiple files simultaneously in [GIMP][ThirdPartyAppHomePage] with VS2012, VS2013 and VS2015.
 
-  ![](../Resources/ReadMeScreenShot_ContextMenu.png)
+  ![](ReadMeScreenShot_ContextMenu.png)
 
 - Warning if attempting to open a large quantity of files. The quantity is configurable in Tools > Options.
 
@@ -45,7 +45,7 @@ If you like this ***free*** extension, please give it a [review][VSMarketplaceRe
 
 - Option to supress the warning message if attempting to open a file whose extension is not typically associated with [GIMP][ThirdPartyAppHomePage].
 
-  ![](../Resources/ReadMeScreenShot_OptionsGeneral.png)
+  ![](ReadMeScreenShot_OptionsGeneral.png)
 
 ## Use Cases
 
