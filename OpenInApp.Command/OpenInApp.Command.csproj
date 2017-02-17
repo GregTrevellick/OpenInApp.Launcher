@@ -68,8 +68,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="VsixLogger, Version=1.1.43.0, Culture=neutral, PublicKeyToken=29d32695dc822296, processorArchitecture=MSIL">
-      <HintPath>..\packages\VsixLogger.1.1.43.0\lib\net45\VsixLogger.dll</HintPath>
+    <Reference Include="VsixLogger, Version=1.1.44.0, Culture=neutral, PublicKeyToken=29d32695dc822296, processorArchitecture=MSIL">
+      <HintPath>..\packages\VsixLogger.1.1.44.0\lib\net45\VsixLogger.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
