@@ -11,7 +11,7 @@ namespace OpenInGregtGregt
         public const string Name = "Open in gregtgregt";
         public const string Description = @"Open multiple files simultaneously in gregtgregt directly from Solution Explorer.";
         public const string Language = "en-US";
-        public const string Version = "1.0.2";
+        public const string Version = "1.1.1";
         public const string Author = "GregTrevellick";
         public const string Tags = "open, open in, gregtgregt";
     }
