@@ -79,11 +79,11 @@ Thanks also to [Carlos Quintero](http://www.visualstudioextensibility.com/), Vis
 Additional thanks goes to [Build 2016 Conference](https://channel9.msdn.com/Events/Build/2016/B886) and [Visual Studio Toolbox](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Extensions-by-Mads-Kristensen).
 
 Thanks also to the third party application entities themselves
-- [Altova XMLSpy XML Editor]: (http://www.altova.com/xml-editor/)
-- [GIMP - GNU Image Manipulation Program]: (https://www.gimp.org/)
-- [Markdown Monster]: (https://markdownmonster.west-wind.com/)
-- [Paint.Net]: (http://www.getpaint.net/)
-- [Microsoft Visual Studio]: (https://www.visualstudio.com/vs/)
+- [Altova XMLSpy XML Editor](http://www.altova.com/xml-editor/)
+- [GIMP - GNU Image Manipulation Program](https://www.gimp.org/)
+- [Markdown Monster](https://markdownmonster.west-wind.com/)
+- [Microsoft Visual Studio](https://www.visualstudio.com/vs/)
+- [Paint.Net](http://www.getpaint.net/)
 
 ## Miscellaneous
 
