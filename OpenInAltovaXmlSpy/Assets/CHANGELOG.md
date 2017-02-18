@@ -24,8 +24,3 @@ These are the changes to each version that has been released on the official Vis
 # Road Map
 
 - [ ] Publish the extension for VS2017    
-
-<!--
-- [ ] Add 'Open in Altova XML spy' to the right click context menu within the IDE text editor
-- [ ] Add 'Open in Altova XML spy' to the right click context menu for tabs in the tabwell
--->

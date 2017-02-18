@@ -19,3 +19,8 @@ https://coveralls.zendesk.com/hc/en-us/articles/203488029
 https://github.com/csmacnz/coveralls.net    
 https://github.com/jdeering/coveralls.net
 -->
+
+
+<!-- 
+gregt open in gvim ?
+-->
