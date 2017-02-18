@@ -1,9 +1,9 @@
-[AppVeyorProjectUrl]: https://ci.appveyor.com/project/GregTrevellick/openingimp
-[AppVeyorProjectBuildStatusBadgeSvg]: https://ci.appveyor.com/api/projects/status/d0bl0472merg43ta?svg=true
-[GitHubPagesURL]: https://gregtrevellick.github.io/OpenInGimp/
-[GitHubRepoURL]: https://github.com/GregTrevellick/OpenInGimp
-[GitHubRepoIssuesURL]: https://github.com/GregTrevellick/OpenInGimp/issues
-[GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/OpenInGimp/pulls
+[AppVeyorProjectUrl]: https://ci.appveyor.com/project/GregTrevellick/openinapp-launcher
+[AppVeyorProjectBuildStatusBadgeSvg]: https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true
+[GitHubPagesURL]: https://gregtrevellick.github.io/OpenInApp.Launcher/
+[GitHubRepoURL]: https://github.com/GregTrevellick/OpenInApp.Launcher
+[GitHubRepoIssuesURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/issues
+[GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/pulls
 [ThirdPartyAppHomePage]: https://www.gimp.org/
 [ThirdPartyAppOfficialLogo]: ThirdPartyLogo.png
 [VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpeninGIMP-GNUImageManipulationProgram.svg

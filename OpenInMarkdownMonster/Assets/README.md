@@ -1,9 +1,9 @@
-[AppVeyorProjectUrl]: https://ci.appveyor.com/project/GregTrevellick/openinmarkdownmonster
-[AppVeyorProjectBuildStatusBadgeSvg]: https://ci.appveyor.com/api/projects/status/smnm0umu798i7jk5?svg=true
-[GitHubPagesURL]: https://gregtrevellick.github.io/OpenInMarkdownMonster/
-[GitHubRepoURL]: https://github.com/GregTrevellick/OpenInMarkdownMonster
-[GitHubRepoIssuesURL]: https://github.com/GregTrevellick/OpenInMarkdownMonster/issues
-[GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/OpenInMarkdownMonster/pulls
+[AppVeyorProjectUrl]: https://ci.appveyor.com/project/GregTrevellick/openinapp-launcher
+[AppVeyorProjectBuildStatusBadgeSvg]: https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true
+[GitHubPagesURL]: https://gregtrevellick.github.io/OpenInApp.Launcher/
+[GitHubRepoURL]: https://github.com/GregTrevellick/OpenInApp.Launcher
+[GitHubRepoIssuesURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/issues
+[GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/pulls
 [ThirdPartyAppHomePage]: https://markdownmonster.west-wind.com/
 [ThirdPartyAppOfficialLogo]: ThirdPartyLogo.png 
 <!--https://raw.githubusercontent.com/RickStrahl/MarkdownMonster/master/Art/MarkdownMonster.png-->

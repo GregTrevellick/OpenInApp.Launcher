@@ -80,7 +80,6 @@
   <ItemGroup>
     <None Include="Assets\CHANGELOG.md" />
     <None Include="Assets\README.md" />
-    <None Include="Assets\READMEGregtGregt.md" />
     <None Include="packages.config" />
     <None Include="Properties\vsix-compress.props" />
     <None Include="source.extension.vsixmanifest">

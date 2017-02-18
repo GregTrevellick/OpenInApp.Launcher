@@ -88,15 +88,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\CHANGELOG.md" />
-    <None Include="Assets\README.md" />
+    <None Include="zAssets\zCHANGELOG.md" />
+    <None Include="zAssets\zREADME.md" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\chart.png" />
-    <Content Include="Assets\OpenInApp_Generic_175x175.png" />
+    <Content Include="zAssets\zchart.png" />
+    <Content Include="zAssets\zOpenInApp_Generic_175x175.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

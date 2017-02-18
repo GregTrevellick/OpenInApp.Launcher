@@ -1,9 +1,9 @@
-[AppVeyorProjectUrl]: https://ci.appveyor.com/project/GregTrevellick/openinpaintdotnet
-[AppVeyorProjectBuildStatusBadgeSvg]: https://ci.appveyor.com/api/projects/status/1m2yhxf7dajm3f53?svg=true
-[GitHubPagesURL]: https://gregtrevellick.github.io/OpenInPaintDotNet/
-[GitHubRepoURL]: https://github.com/GregTrevellick/OpenInPaintDotNet
-[GitHubRepoIssuesURL]: https://github.com/GregTrevellick/OpenInPaintDotNet/issues
-[GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/OpenInPaintDotNet/pulls
+[AppVeyorProjectUrl]: https://ci.appveyor.com/project/GregTrevellick/openinapp-launcher
+[AppVeyorProjectBuildStatusBadgeSvg]: https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true
+[GitHubPagesURL]: https://gregtrevellick.github.io/OpenInApp.Launcher/
+[GitHubRepoURL]: https://github.com/GregTrevellick/OpenInApp.Launcher
+[GitHubRepoIssuesURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/issues
+[GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/pulls
 [ThirdPartyAppHomePage]: http://www.getpaint.net/
 [ThirdPartyAppOfficialLogo]: ThirdPartyLogo.png
 <!--http://www.getpaint.net/images/Logo4.png-->

@@ -1,9 +1,9 @@
 [AppVeyorProjectUrl]: https://ci.appveyor.com/project/GregTrevellick/openinvs2015
-[AppVeyorProjectBuildStatusBadgeSvg]: https://ci.appveyor.com/api/projects/status/2k4t35na3yn1o3ix?svg=true
-[GitHubPagesURL]: https://gregtrevellick.github.io/OpenInVS2015/
-[GitHubRepoURL]: https://github.com/GregTrevellick/OpenInVS2015
-[GitHubRepoIssuesURL]: https://github.com/GregTrevellick/OpenInVS2015/issues
-[GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/OpenInVS2015/pulls
+[AppVeyorProjectBuildStatusBadgeSvg]: https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true
+[GitHubPagesURL]: https://gregtrevellick.github.io/OpenInApp.Launcher/
+[GitHubRepoURL]: https://github.com/GregTrevellick/OpenInApp.Launcher
+[GitHubRepoIssuesURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/issues
+[GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/pulls
 [ThirdPartyAppHomePage]: https://www.visualstudio.com/vs/
 [ThirdPartyAppOfficialLogo]: ThirdPartyLogo.png 
 <!--https://msdnshared.blob.core.windows.net/media/2015/05/8814.VisualStudioClean1.png-->
