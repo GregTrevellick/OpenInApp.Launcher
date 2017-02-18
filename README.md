@@ -4,6 +4,7 @@
 [GitHubRepoURL]: https://github.com/GregTrevellick/OpenInApp.Launcher
 [GitHubRepoIssuesURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/issues
 [GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/pulls
+[ThirdPartyAppHomePage]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
 [ThirdPartyAppOfficialLogo]: OpenInApp_Generic_175x175.png 
 [VisualStudioURL]: https://www.visualstudio.com/
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
@@ -21,7 +22,7 @@ The [Visual Studio][VisualStudioURL] extensions are officially available at the 
 
 Open multiple files simultaneously in a third party application directly from [Visual Studio's][VisualStudioURL] Solution Explorer.
 
-![][ThirdPartyAppOfficialLogo]
+[![][ThirdPartyAppOfficialLogo]][ThirdPartyAppHomePage]
 
 ## Features
 
