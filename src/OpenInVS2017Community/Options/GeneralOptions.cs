@@ -9,8 +9,6 @@ namespace OpenInVS2017Community.Options.VS2017Community
 {
     public class GeneralOptions : DialogPage
     {
-        //private string Caption { get { return new FileHelper().Caption; } }
-
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(ConstantsForApp.CommonActualPathToExeOptionLabel)]
         [Description(CommonConstants.ActualPathToExeOptionDetailedDescription)]

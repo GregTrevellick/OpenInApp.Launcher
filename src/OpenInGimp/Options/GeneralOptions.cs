@@ -9,8 +9,6 @@ namespace OpenInAppGimp.Options.Gimp
 {
     public class GeneralOptions : DialogPage
     {
-        //private string Caption { get { return new FileHelper().Caption; } }
-
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(ConstantsForApp.CommonActualPathToExeOptionLabel)]
         [Description(CommonConstants.ActualPathToExeOptionDetailedDescription)]
@@ -19,7 +17,7 @@ namespace OpenInAppGimp.Options.Gimp
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.TypicalFileExtensionsOptionLabel)]
         [Description(CommonConstants.TypicalFileExtensionsOptionDetailedDescription)]
-        public string TypicalFileExtensions //{ get; set; } = GetTypicalFileExtensions();
+        public string TypicalFileExtensions 
         {
             get
             {
