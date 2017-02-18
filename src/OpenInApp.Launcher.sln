@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		CHANGELOG.md = CHANGELOG.md
 		chart.png = chart.png
-		CONTRIBUTING.md = CONTRIBUTING.md
-		ISSUE_TEMPLATE.md = ISSUE_TEMPLATE.md
 		LICENSE.txt = LICENSE.txt
 		OpenInApp_Generic_175x175.png = OpenInApp_Generic_175x175.png
 		README.md = README.md
@@ -43,6 +41,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2017Enterprise", "OpenInVS2017Enterprise\OpenInVS2017Enterprise.csproj", "{033AFEA5-C4FC-4176-AF55-B0E0054E4B9C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2017Professional", "OpenInVS2017Professional\OpenInVS2017Professional.csproj", "{5E307B73-F302-42C0-945F-C695D6D4FE91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{7D008998-3D8D-43BA-833C-06586753FD8C}"
+	ProjectSection(SolutionItems) = preProject
+		..\assets\zCONTRIBUTING.md = ..\assets\zCONTRIBUTING.md
+		..\assets\zISSUE_TEMPLATE.md = ..\assets\zISSUE_TEMPLATE.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -109,5 +113,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D008998-3D8D-43BA-833C-06586753FD8C} = {D0240FDC-C28B-406B-A2B3-D664C41A7517}
 	EndGlobalSection
 EndGlobal
