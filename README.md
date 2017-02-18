@@ -5,7 +5,7 @@
 [GitHubRepoIssuesURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/issues
 [GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/pulls
 [ThirdPartyAppHomePage]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
-[ThirdPartyAppOfficialLogo]: OpenInApp_Generic_175x175.png 
+[ThirdPartyAppOfficialLogo]: assets/OpenInApp_Generic_175x175.png 
 [VisualStudioURL]: https://www.visualstudio.com/
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
 
@@ -28,19 +28,19 @@ Open multiple files simultaneously in a third party application directly from [V
 
 - Open multiple files simultaneously in the third party application with VS2012, VS2013 and VS2015.
 
-  ![](ReadMeScreenShot_ContextMenu.png)
+  ![](assets/ReadMeScreenShot_ContextMenu.png)
 
 - Warning if attempting to open a large quantity of files. The quantity is configurable in Tools > Options.
 
-  ![](ReadMeScreenShot_WarningLargeQuantity.png)
+  ![](assets/ReadMeScreenShot_WarningLargeQuantity.png)
 
 - Warning if attempting to open one or more file types whose extension is not typically associated with the third party application. The list of typical file extensions is configurable in Tools > Options.
 
-  ![](ReadMeScreenShot_WarningNonTypical.png)
+  ![](assets/ReadMeScreenShot_WarningNonTypical.png)
 
 - Option to supress the warning message if attempting to open a file whose extension is not typically associated with the third party application.
 
-  ![](ReadMeScreenShot_OptionsGeneral.png)
+  ![](assets/ReadMeScreenShot_OptionsGeneral.png)
 
 ## Use Cases
 
@@ -95,6 +95,6 @@ Bugs can be logged [here][GitHubRepoIssuesURL].
 
 Software [License](/LICENSE.txt).
 
-[![](chart.png)][GitHubPagesURL]
+[![](assets/chart.png)][GitHubPagesURL]
 
 Similar "Open In" VS extensions can be found [here](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).

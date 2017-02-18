@@ -6,13 +6,8 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D0240FDC-C28B-406B-A2B3-D664C41A7517}"
 	ProjectSection(SolutionItems) = preProject
 		..\CHANGELOG.md = ..\CHANGELOG.md
-		..\chart.png = ..\chart.png
 		..\LICENSE.txt = ..\LICENSE.txt
-		..\OpenInApp_Generic_175x175.png = ..\OpenInApp_Generic_175x175.png
 		..\README.md = ..\README.md
-		..\ReadMeScreenShot_OptionsGeneral.png = ..\ReadMeScreenShot_OptionsGeneral.png
-		..\ReadMeScreenShot_WarningLargeQuantity.png = ..\ReadMeScreenShot_WarningLargeQuantity.png
-		..\ReadMeScreenShot_WarningNonTypical.png = ..\ReadMeScreenShot_WarningNonTypical.png
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInAltovaXmlSpy", "OpenInAltovaXmlSpy\OpenInAltovaXmlSpy.csproj", "{0DD8CCEA-DC16-4065-B148-E388F9FD30D3}"
@@ -45,6 +40,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2017Professional", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{7D008998-3D8D-43BA-833C-06586753FD8C}"
 	ProjectSection(SolutionItems) = preProject
+		..\assets\chart.png = ..\assets\chart.png
+		..\assets\OpenInApp_Generic_175x175.png = ..\assets\OpenInApp_Generic_175x175.png
+		..\assets\ReadMeScreenShot_OptionsGeneral.png = ..\assets\ReadMeScreenShot_OptionsGeneral.png
+		..\assets\ReadMeScreenShot_WarningLargeQuantity.png = ..\assets\ReadMeScreenShot_WarningLargeQuantity.png
+		..\assets\ReadMeScreenShot_WarningNonTypical.png = ..\assets\ReadMeScreenShot_WarningNonTypical.png
 		..\assets\zCONTRIBUTING.md = ..\assets\zCONTRIBUTING.md
 		..\assets\zISSUE_TEMPLATE.md = ..\assets\zISSUE_TEMPLATE.md
 	EndProjectSection

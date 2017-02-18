@@ -38,11 +38,11 @@ If you like this ***free*** extension, please give it a [review][VSMarketplaceRe
 
 - Warning if attempting to open a large quantity of files. The quantity is configurable in Tools > Options.
 
-  ![](../../ReadMeScreenShot_WarningLargeQuantity.png)
+  ![](../../../assets/ReadMeScreenShot_WarningLargeQuantity.png)
 
 - Warning if attempting to open one or more file types whose extension is not typically associated with [Visual Studio 2012][ThirdPartyAppHomePage]. The list of typical file extensions is configurable in Tools > Options.
 
-  ![](../../ReadMeScreenShot_WarningNonTypical.png)
+  ![](../../../assets/ReadMeScreenShot_WarningNonTypical.png)
 
 - Option to supress the warning message if attempting to open a file whose extension is not typically associated with [Visual Studio 2012][ThirdPartyAppHomePage].
 
