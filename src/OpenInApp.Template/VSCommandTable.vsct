@@ -31,8 +31,37 @@
     </Bitmaps>
   </Commands>
 
+  <!--TODO gregtgregt add ability to open .csproj & .sln files in altova-->
+  <!-- gregtgregt delete this comment:
+  IF 
+    Altova=0x0100, 
+    Gimp=0x0200, 
+    VS2013=0x2213 
+    VS2015=0x2215
+  THEN
+    Open
+    Open with
+    <separator>
+    Open in Altova
+    <separator>
+    Exclude from project
+    <separator>
+    Cut
+    Copy
+    Delete
+    Rename
+    <separator>
+    Properties
+    <separator>
+    Open in GIMP
+    <separator>
+    Open in VS2013
+    <separator>
+    Open in VS2015
+  SO
+    THESE NUMBERS MUST REMAIN THE SAME FOR ALL .VSCT FILES TO ENSURE THE ITEMS REMAIN TOGETHER
+  -->
   <CommandPlacements>
-    <!--TODO gregtgregt add ability to open .csproj & .sln files in altova-->
     <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x100">
       <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE" />
     </CommandPlacement>
