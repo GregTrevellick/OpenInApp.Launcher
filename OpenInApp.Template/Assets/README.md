@@ -22,9 +22,6 @@ This [Visual Studio][VisualStudioURL] extension is officially available at the [
 
 ---------------------------------------
 
-credits - justin clareburt vs2017 video, publish in crm, open in gvim, carlos quintero in github.
-
-
 <!--COPY START FOR VS GALLERY-->
 
 Open multiple files simultaneously in [ThirdPartyApp][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Solution Explorer.
