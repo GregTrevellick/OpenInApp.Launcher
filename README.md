@@ -31,11 +31,11 @@ Open multiple files simultaneously in a third party application directly from [V
 
 - Warning if attempting to open a large quantity of files. The quantity is configurable in Tools > Options.
 
-  ![](../../ReadMeScreenShot_WarningLargeQuantity.png)
+  ![](ReadMeScreenShot_WarningLargeQuantity.png)
 
 - Warning if attempting to open one or more file types whose extension is not typically associated with the third party application. The list of typical file extensions is configurable in Tools > Options.
 
-  ![](../../ReadMeScreenShot_WarningNonTypical.png)
+  ![](ReadMeScreenShot_WarningNonTypical.png)
 
 - Option to supress the warning message if attempting to open a file whose extension is not typically associated with the third party application.
 
