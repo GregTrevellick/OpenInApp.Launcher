@@ -21,7 +21,7 @@ The [Visual Studio][VisualStudioURL] extensions are officially available at the 
 
 Open multiple files simultaneously in a third party application directly from [Visual Studio's][VisualStudioURL] Solution Explorer.
 
-[![][ThirdPartyAppOfficialLogo]]
+![][ThirdPartyAppOfficialLogo]
 
 ## Features
 
