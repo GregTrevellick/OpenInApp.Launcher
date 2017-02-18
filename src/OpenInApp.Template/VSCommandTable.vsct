@@ -5,6 +5,35 @@
   <Extern href="vsshlids.h"/>    
   <!--<Include href="KnownImageIds.vsct"/>-->
 
+  <!-- gregtgregt delete this comment:
+  IF 
+    Altova=four lots of 0x0100
+    Gimp=four lots of 0x0700
+    VS2013=four lots of 0x2213 
+    VS2015=four lots of 0x2215
+  THEN
+    Open
+    Open with
+    <separator>
+    Open in Altova
+    <separator>
+    Open in GIMP
+    <separator>
+    Open in VS2013
+    <separator>
+    Open in VS2015
+    <separator>
+    Exclude from project
+    <separator>
+    Cut
+    Copy
+    Delete
+    Rename
+    <separator>
+    Properties
+  SO
+    THESE NUMBERS ARE KIND OF IRRELEVANT (?)
+  -->
   <Commands package="guidOpenInAppPackage">
     <Groups>
       <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
@@ -34,8 +63,8 @@
   <!--TODO gregtgregt add ability to open .csproj & .sln files in altova-->
   <!-- gregtgregt delete this comment:
   IF 
-    Altova=0x0100, 
-    Gimp=0x0200, 
+    Altova=0x0100
+    Gimp=0x0700
     VS2013=0x2213 
     VS2015=0x2215
   THEN
