@@ -9,6 +9,8 @@ namespace OpenInApp.Common.Tests.Helpers
     {
         //gregt %windir% %programfiles% %LocalAppData%
 
+            //examdiff
+
         [Test()]
         [Category("I")]
         //TESTED & LIVE [TestCase(@"C:\Program Files (x86)\Altova\XMLSpy2016\XMLSpy.exe", false, null)]
