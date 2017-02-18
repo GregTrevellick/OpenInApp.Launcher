@@ -32,13 +32,15 @@
     <separator>
     Properties
   SO
-    THESE NUMBERS ARE KIND OF IRRELEVANT (?)
+    WHEN THESE NUMBERS ARE DIFFERNT PER VSIX A SEPARATOR IS GENERATED, SO KEEP IDENTICAL FOR EACH VSIX TO AVOID SEPARATORS (?)
   -->
   <Commands package="guidOpenInAppPackage">
     <Groups>
       <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN"></Parent>
       </Group>
       <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x100">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"></Parent>
       </Group>
     </Groups>
     <Buttons>    
@@ -60,6 +62,7 @@
     </Bitmaps>
   </Commands>
 
+  <!-- Use CommandPlacement Element entries in the CommandPlacements Element section to put menus, groups, and commands in their parent menus and groups. -->
   <!--TODO gregtgregt add ability to open .csproj & .sln files in altova-->
   <!-- gregtgregt delete this comment:
   IF 
@@ -92,10 +95,10 @@
   -->
   <CommandPlacements>
     <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x100">
-      <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE" />
+      <Parent guid="guidOpenInVsCmdSet" id="IDM_VS_CTXT_ITEMNODE" />
     </CommandPlacement>
     <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
-      <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN" />
+      <Parent guid="guidOpenInVsCmdSet" id="IDM_VS_CTXT_CODEWIN" />
     </CommandPlacement>
   </CommandPlacements>
 
