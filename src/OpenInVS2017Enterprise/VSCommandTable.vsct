@@ -6,9 +6,9 @@
  
   <Commands package="guidOpenInAppPackage">
     <Groups>
-      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
+      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0xFFFF">
       </Group>
-      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x100">
+      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0xFFFF">
       </Group>
     </Groups>
     <Buttons>    
@@ -33,10 +33,10 @@
   </Commands>
 
   <CommandPlacements>
-    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x100">
+    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0xFFFF">
       <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE" />
     </CommandPlacement>
-    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
+    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0xFFFF">
       <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN" />
     </CommandPlacement>
   </CommandPlacements>
