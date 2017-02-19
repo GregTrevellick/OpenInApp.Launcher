@@ -36,10 +36,10 @@
   -->
   <Commands package="guidOpenInAppPackage">
     <Groups>
-      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0xFFFF">
+      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
         <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN"></Parent>
       </Group>
-      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0xFFFF">
+      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x0100">
         <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"></Parent>
       </Group>
     </Groups>
@@ -98,11 +98,11 @@
   <CommandPlacements>
     <!--TODO gregtgregt add ability to open .csproj & .sln files in altova-->
     <!-- Placement for group. The parent of a group is a menu, context menu or toolbar. The priority sets the position of the group compared to the priority of other existing groups in the menu.-->
-    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0xFFFF">
+    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x0100">
       <!-- The parent of the group will be soln explr -->
       <Parent guid="guidOpenInVsCmdSet" id="IDM_VS_CTXT_ITEMNODE" />
     </CommandPlacement>
-    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0xFFFF">
+    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
       <!-- The parent of the group will be the code window context menu -->
       <Parent guid="guidOpenInVsCmdSet" id="IDM_VS_CTXT_CODEWIN" />
     </CommandPlacement>

@@ -6,7 +6,7 @@
   
   <Commands package="guidOpenInAppPackage">
     <Groups>
-      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0xFFFF">
+      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
       </Group>
       <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x0100">
       </Group>
@@ -33,10 +33,10 @@
   </Commands>
 
   <CommandPlacements>
-    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0xFFFF">
+    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x0100">
       <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE" />
     </CommandPlacement>
-    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0xFFFF">
+    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
       <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN" />
     </CommandPlacement>
   </CommandPlacements>
