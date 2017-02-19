@@ -10,6 +10,8 @@ namespace OpenInApp.Common.Tests.Helpers
         //gregt %windir% %programfiles% %LocalAppData%
 
             //examdiff
+            // webstorm
+            // screentogif
 
         [Test()]
         [Category("I")]
