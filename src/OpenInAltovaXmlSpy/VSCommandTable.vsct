@@ -42,7 +42,6 @@
   </CommandPlacements>
    
   <Symbols>
-        <!-- This is the package guid. -->    
     <GuidSymbol name="guidOpenInAppPackage" value="{62a5a896-9442-4aa3-a87c-0daece0e04a5}" />
     <GuidSymbol name="guidOpenInVsCmdSet" value="{82afac2b-5d6f-43f7-8c37-c575653bc07c}">
       <IDSymbol name="GroupOpenInAppCodeWin" value="0x1030" />

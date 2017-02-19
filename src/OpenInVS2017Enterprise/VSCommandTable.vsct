@@ -33,7 +33,6 @@
   </Commands>
 
   <CommandPlacements>
-    <!--TODO gregtgregt add ability to open .csproj & .sln files in altova-->
     <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x100">
       <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE" />
     </CommandPlacement>
@@ -43,16 +42,13 @@
   </CommandPlacements>
    
   <Symbols>
-        <!-- This is the package guid. -->    
     <GuidSymbol name="guidOpenInAppPackage" value="{73964048-7313-47FA-A646-5D719FDFEEA3}" />
-
     <GuidSymbol name="guidOpenInVsCmdSet" value="{711E6E25-6E9D-4CBB-8E25-052A17ABD64B}">
       <IDSymbol name="GroupOpenInAppCodeWin" value="0x1030" />
       <IDSymbol name="CmdIdOpenInAppCodeWin" value="0x0100" />
       <IDSymbol name="GroupOpenInAppFolderExplore" value="0x1040" />
       <IDSymbol name="CmdIdOpenInAppFolderExplore" value="0x0110" />
     </GuidSymbol>
-
     <GuidSymbol name="guidImages" value="{B1B0350B-E81B-47B5-AB93-933084A83A54}" >
       <IDSymbol name="bmpPic1" value="1" />
     </GuidSymbol>
