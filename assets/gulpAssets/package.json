@@ -1,0 +1,11 @@
+{
+        "name": "ReadMeGulpConcat",
+        "version": "1.0.0",
+        "private": true,
+        "devDependencies": {
+                "gulp": "3.8.11",
+                "gulp-bower": "0.0.10",
+                "gulp-config": "0.3.0",
+                "gulp-concat": "2.4.3"
+        }
+}
