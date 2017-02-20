@@ -80,6 +80,7 @@
   <ItemGroup>
     <None Include="Assets\CHANGELOG.md" />
     <None Include="Assets\README.md" />
+    <None Include="package.json" />
     <None Include="packages.config" />
     <None Include="Properties\vsix-compress.props" />
     <None Include="source.extension.vsixmanifest">
@@ -117,6 +118,7 @@
     </Content>
     <Content Include="Assets\chart.png" />
     <Content Include="Assets\ThirdPartyLogoGregtGregt.png" />
+    <Content Include="gulpfile.js" />
     <Content Include="Resources\VsixCommandIcon_16x16.png">
       <IncludeInVSIX>true</IncludeInVSIX>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
