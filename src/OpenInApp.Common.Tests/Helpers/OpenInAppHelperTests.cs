@@ -9,9 +9,18 @@ namespace OpenInApp.Common.Tests.Helpers
     {
         //gregt %windir% %programfiles% %LocalAppData%
 
-            //examdiff
-            // webstorm
-            // screentogif
+        //examdiff
+        // webstorm
+        // screentogif
+
+    //    http://www.jedsoft.org/jed/
+//http://texteditors.org/cgi-bin/wiki.pl?ACE
+//http://texteditors.org/cgi-bin/wiki.pl?UltraEdit
+//http://texteditors.org/cgi-bin/wiki.pl?Zeus
+            //http://texteditors.org/cgi-bin/wiki.pl?ZendStudio
+
+//http://texteditors.org/cgi-bin/wiki.pl?Brainfck_Center
+//https://sourceforge.net/projects/e7bfc/
 
         [Test()]
         [Category("I")]
