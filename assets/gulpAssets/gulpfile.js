@@ -4,8 +4,8 @@ var bower = require('gulp-bower');
 var concat = require('gulp-concat');
 
 gulp.task('concat', function () {
-    return gulp.src(['Assets/README_Header.md', 'Assets/README_Footer.md'])
-    .pipe(concat('Assets/README_COMBINED.md'))
+    return gulp.src(['README_Header.md', '../../src/OpenInAltovaXmlSpy/Assets/CHANGELOG.md', 'README_Footer.md'])
+    .pipe(concat('../../src/OpenInAltovaXmlSpy/Assets/README_COMBINED.md'))
     .pipe(gulp.dest('.'));
 });
 
