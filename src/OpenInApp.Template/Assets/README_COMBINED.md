@@ -1,6 +1,6 @@
 # hdr
 
-header
+header1
 # ftr
 
-footer
+footer1
