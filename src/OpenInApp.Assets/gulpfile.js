@@ -5,19 +5,19 @@ var concat = require('gulp-concat');
 
 gulp.task('concat', function () {
     return gulp.src([
-        '../../assets/ReadMeCommon00LauncherAppVariables.md',
-        'Assets/ReadMeCommon00ThirdPartyAppVariables.md',
-        '../../assets/ReadMeCommon10GitHubTitle.md',
-        '../../assets/ReadMeCommon20GitHubHeader.md',
-        '../../assets/ReadMeCommon30VSMarketplaceHeader.md',
-        '../../assets/ReadMeCommon40VSMarketplaceFeatures.md',
-        '../../assets/ReadMeCommon50VSMarketplaceUseCases.md',
-        '../../assets/ReadMeCommon60GitHubLegal.md',
-        '../../assets/ReadMeCommon70GitHubCredits.md',
-        '../../assets/ReadMeCommon80GitHubMiscellaneous.md',
-        '../../assets/ReadMeCommon90GitHubFooter.md'
+        'CommonAssets/ReadMeCommon00LauncherAppVariables.md',
+        'ProjectAssets/Gimp/ReadMeCommon00ThirdPartyAppVariables.md',
+        'CommonAssets/ReadMeCommon10GitHubTitle.md',
+        'CommonAssets/ReadMeCommon20GitHubHeader.md',
+        'CommonAssets/ReadMeCommon30VSMarketplaceHeader.md',
+        'CommonAssets/ReadMeCommon40VSMarketplaceFeatures.md',
+        'CommonAssets/ReadMeCommon50VSMarketplaceUseCases.md',
+        'CommonAssets/ReadMeCommon60GitHubLegal.md',
+        'CommonAssets/ReadMeCommon70GitHubCredits.md',
+        'CommonAssets/ReadMeCommon80GitHubMiscellaneous.md',
+        'CommonAssets/ReadMeCommon90GitHubFooter.md'
     ])
-    .pipe(concat('Assets/README.md'))
+    .pipe(concat('ProjectAssets/Gimp/README.md'))
     .pipe(gulp.dest('.'));
 });
 
