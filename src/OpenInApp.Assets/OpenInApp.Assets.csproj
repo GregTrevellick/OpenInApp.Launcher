@@ -43,16 +43,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Markdown\ReadMeCommon00LauncherAppVariables.md" />
-    <None Include="Markdown\ReadMeCommon10GitHubTitle.md" />
-    <None Include="Markdown\ReadMeCommon20GitHubHeader.md" />
-    <None Include="Markdown\ReadMeCommon30VSMarketplaceHeader.md" />
-    <None Include="Markdown\ReadMeCommon40VSMarketplaceFeatures.md" />
-    <None Include="Markdown\ReadMeCommon50VSMarketplaceUseCases.md" />
-    <None Include="Markdown\ReadMeCommon60GitHubLegal.md" />
-    <None Include="Markdown\ReadMeCommon70GitHubCredits.md" />
-    <None Include="Markdown\ReadMeCommon80GitHubMiscellaneous.md" />
-    <None Include="Markdown\ReadMeCommon90GitHubFooter.md" />
+    <None Include="CommonAssets\ReadMeCommon00LauncherAppVariables.md" />
+    <None Include="CommonAssets\ReadMeCommon10GitHubTitle.md" />
+    <None Include="CommonAssets\ReadMeCommon20GitHubHeader.md" />
+    <None Include="CommonAssets\ReadMeCommon30VSMarketplaceHeader.md" />
+    <None Include="CommonAssets\ReadMeCommon40VSMarketplaceFeatures.md" />
+    <None Include="CommonAssets\ReadMeCommon50VSMarketplaceUseCases.md" />
+    <None Include="CommonAssets\ReadMeCommon60GitHubLegal.md" />
+    <None Include="CommonAssets\ReadMeCommon70GitHubCredits.md" />
+    <None Include="CommonAssets\ReadMeCommon80GitHubMiscellaneous.md" />
+    <None Include="CommonAssets\ReadMeCommon90GitHubFooter.md" />
     <None Include="package.json" />
     <None Include="ProjectAssets\AltovaXmlSpy\CHANGELOG.md" />
     <None Include="ProjectAssets\AltovaXmlSpy\README.md" />
