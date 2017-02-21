@@ -58,6 +58,19 @@
   <ItemGroup>
     <Content Include="gulpfile.js" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProjectAssets\AltovaXmlSpy\" />
+    <Folder Include="ProjectAssets\Gimp\" />
+    <Folder Include="ProjectAssets\MarkdownMonster\" />
+    <Folder Include="ProjectAssets\PaintDotNet\" />
+    <Folder Include="ProjectAssets\Template\" />
+    <Folder Include="ProjectAssets\VS2012\" />
+    <Folder Include="ProjectAssets\VS2013\" />
+    <Folder Include="ProjectAssets\VS2015\" />
+    <Folder Include="ProjectAssets\VS2017Community\" />
+    <Folder Include="ProjectAssets\VS2017Enterprise\" />
+    <Folder Include="ProjectAssets\VS2017Professional\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
