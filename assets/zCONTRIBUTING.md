@@ -1,3 +1,5 @@
+<!-- gregt incorporate -->
+
 # Contributing
 
 Looking to contribute something? **Here's how you can help.**

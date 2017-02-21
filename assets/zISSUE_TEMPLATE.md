@@ -1,3 +1,5 @@
+<!-- gregt incorporate -->
+
 ### Installed product versions
 - Visual Studio: [example 2015 Community]
 - This extension: [example 1.1.21]
