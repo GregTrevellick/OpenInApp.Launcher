@@ -82,7 +82,6 @@
     <None Include="zAssets\README.md" />
     <None Include="zAssets\zReadMeCommon00ThirdPartyAppVariables.md" />
     <None Include="zAssets\zREADME.md" />
-    <None Include="zpackage.jsonz" />
     <None Include="packages.config" />
     <None Include="Properties\vsix-compress.props" />
     <None Include="source.extension.vsixmanifest">
@@ -120,7 +119,6 @@
     </Content>
     <Content Include="zAssets\chart.png" />
     <Content Include="zAssets\ThirdPartyLogoGregtGregt.png" />
-    <None Include="zgulpfile.jsz" />
     <Content Include="Resources\VsixCommandIcon_16x16.png">
       <IncludeInVSIX>true</IncludeInVSIX>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

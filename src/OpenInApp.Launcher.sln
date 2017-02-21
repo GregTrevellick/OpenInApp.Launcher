@@ -47,14 +47,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{7D0089
 		..\assets\ReadMeScreenShot_WarningNonTypical.png = ..\assets\ReadMeScreenShot_WarningNonTypical.png
 		..\assets\zCONTRIBUTING.md = ..\assets\zCONTRIBUTING.md
 		..\assets\zISSUE_TEMPLATE.md = ..\assets\zISSUE_TEMPLATE.md
-		..\assets\zReadMeCommon00LauncherAppVariables.md = ..\assets\zReadMeCommon00LauncherAppVariables.md
-		..\assets\zReadMeCommon10GitHubTitle.md = ..\assets\zReadMeCommon10GitHubTitle.md
-		..\assets\zReadMeCommon40VSMarketplaceFeatures.md = ..\assets\zReadMeCommon40VSMarketplaceFeatures.md
-		..\assets\zReadMeCommon50VSMarketplaceUseCases.md = ..\assets\zReadMeCommon50VSMarketplaceUseCases.md
-		..\assets\zReadMeCommon60GitHubLegal.md = ..\assets\zReadMeCommon60GitHubLegal.md
-		..\assets\zReadMeCommon70GitHubCredits.md = ..\assets\zReadMeCommon70GitHubCredits.md
-		..\assets\zReadMeCommon80GitHubMiscellaneous.md = ..\assets\zReadMeCommon80GitHubMiscellaneous.md
-		..\assets\zReadMeCommon90GitHubFooter.md = ..\assets\zReadMeCommon90GitHubFooter.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Assets", "OpenInApp.Assets\OpenInApp.Assets.csproj", "{3FB0055C-325C-40A6-8D60-5AA0B09D58DC}"
