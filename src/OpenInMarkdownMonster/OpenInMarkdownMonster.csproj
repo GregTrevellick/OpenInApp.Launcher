@@ -80,7 +80,7 @@
   <ItemGroup>
     <None Include="Assets\CHANGELOG.md" />
     <None Include="Assets\README.md" />
-    <None Include="Assets\ReadMeCommon00ThirdPartyAppVariables.md" />
+    <None Include="Assets\zReadMeCommon00ThirdPartyAppVariables.md" />
     <None Include="Assets\zREADME.md" />
     <None Include="packages.config" />
     <None Include="Properties\vsix-compress.props" />
