@@ -1,4 +1,4 @@
-﻿/// <binding AfterBuild='concat' Clean='concat' ProjectOpened='concat' />
+﻿/// <binding AfterBuild='default' ProjectOpened='default' />
 var gulp = require('gulp');
 var bower = require('gulp-bower');
 var concat = require('gulp-concat');
