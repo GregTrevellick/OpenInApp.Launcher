@@ -3,16 +3,16 @@ var gulp = require('gulp');
 var bower = require('gulp-bower');
 var concat = require('gulp-concat');
 
-gulp.task('OpenInAltovaXmlSpy', function () { return OIAConcat('OpenInAltovaXmlSpy') });
-gulp.task('OpenInApp.Template', function () { return OIAConcat('OpenInApp.Template') });
-gulp.task('OpenInGimp', function () { return OIAConcat('OpenInGimp') });
-gulp.task('OpenInMarkdownMonster', function () { return OIAConcat('OpenInMarkdownMonster') });
-gulp.task('OpenInPaintDotNet', function () { return OIAConcat('OpenInPaintDotNet') });
-gulp.task('OpenInVS2012', function () { return OIAConcat('OpenInVS2012') });
-gulp.task('OpenInVS2013', function () { return OIAConcat('OpenInVS2013') });
-gulp.task('OpenInVS2015', function () { return OIAConcat('OpenInVS2015') });
-gulp.task('OpenInVS2017Community', function () { return OIAConcat('OpenInVS2017Community') });
-gulp.task('OpenInVS2017Enterprise', function () { return OIAConcat('OpenInVS2017Enterprise') });
+gulp.task('OpenInAltovaXmlSpy',       function () { return OIAConcat('OpenInAltovaXmlSpy') });
+gulp.task('OpenInApp.Template',       function () { return OIAConcat('OpenInApp.Template') });
+gulp.task('OpenInGimp',               function () { return OIAConcat('OpenInGimp') });
+gulp.task('OpenInMarkdownMonster',    function () { return OIAConcat('OpenInMarkdownMonster') });
+gulp.task('OpenInPaintDotNet',        function () { return OIAConcat('OpenInPaintDotNet') });
+gulp.task('OpenInVS2012',             function () { return OIAConcat('OpenInVS2012') });
+gulp.task('OpenInVS2013',             function () { return OIAConcat('OpenInVS2013') });
+gulp.task('OpenInVS2015',             function () { return OIAConcat('OpenInVS2015') });
+gulp.task('OpenInVS2017Community',    function () { return OIAConcat('OpenInVS2017Community') });
+gulp.task('OpenInVS2017Enterprise',   function () { return OIAConcat('OpenInVS2017Enterprise') });
 gulp.task('OpenInVS2017Professional', function () { return OIAConcat('OpenInVS2017Professional') });
 
 gulp.task('default',
