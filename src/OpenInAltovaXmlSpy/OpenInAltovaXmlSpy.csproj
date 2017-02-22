@@ -78,10 +78,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="zAssets\CHANGELOG.md" />
-    <None Include="zAssets\README.md" />
-    <None Include="zAssets\zReadMeCommon00ThirdPartyAppVariables.md" />
-    <None Include="zAssets\zREADME.md" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -106,9 +102,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="zAssets\chart.png" />
-    <Content Include="zAssets\ThirdPartyLogo.png" />
-    <Content Include="zAssets\ReadMeScreenShot_OptionsGeneral.png" />
     <Content Include="Resources\VsixCommandIcon_16x16.png">
       <IncludeInVSIX>true</IncludeInVSIX>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -121,7 +114,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="zAssets\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="source.extension.ico">
       <DependentUpon>source.extension.vsixmanifest</DependentUpon>
       <IncludeInVSIX>true</IncludeInVSIX>
