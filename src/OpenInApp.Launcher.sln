@@ -42,11 +42,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{7D0089
 	ProjectSection(SolutionItems) = preProject
 		..\assets\chart.png = ..\assets\chart.png
 		..\assets\OpenInApp_Generic_175x175.png = ..\assets\OpenInApp_Generic_175x175.png
-		..\assets\ReadMeScreenShot_OptionsGeneral.png = ..\assets\ReadMeScreenShot_OptionsGeneral.png
-		..\assets\ReadMeScreenShot_WarningLargeQuantity.png = ..\assets\ReadMeScreenShot_WarningLargeQuantity.png
-		..\assets\ReadMeScreenShot_WarningNonTypical.png = ..\assets\ReadMeScreenShot_WarningNonTypical.png
 		..\assets\zCONTRIBUTING.md = ..\assets\zCONTRIBUTING.md
 		..\assets\zISSUE_TEMPLATE.md = ..\assets\zISSUE_TEMPLATE.md
+		..\assets\zReadMeScreenShot_OptionsGeneral.png = ..\assets\zReadMeScreenShot_OptionsGeneral.png
+		..\assets\zReadMeScreenShot_WarningLargeQuantity.png = ..\assets\zReadMeScreenShot_WarningLargeQuantity.png
+		..\assets\zReadMeScreenShot_WarningNonTypical.png = ..\assets\zReadMeScreenShot_WarningNonTypical.png
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Assets", "OpenInApp.Assets\OpenInApp.Assets.csproj", "{3FB0055C-325C-40A6-8D60-5AA0B09D58DC}"

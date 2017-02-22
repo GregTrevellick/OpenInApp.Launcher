@@ -31,15 +31,15 @@ If you like this ***free*** extension, please give it a [review][VSMarketplaceRe
 
 - Warning if attempting to open a large quantity of files. The quantity is configurable in Tools > Options.
 
-  ![](../../../assets/ReadMeScreenShot_WarningLargeQuantity.png)
+  ![](../ReadMeScreenShot_WarningLargeQuantity.png)
 
 - Warning if attempting to open one or more file types whose extension is not typically associated with [ThirdPartyApp][ThirdPartyAppHomePage]. The list of typical file extensions is configurable in Tools > Options.
 
-  ![](../../../assets/ReadMeScreenShot_WarningNonTypical.png)
+  ![](../ReadMeScreenShot_WarningNonTypical.png)
 
 - Option to supress the warning message if attempting to open a file whose extension is not typically associated with [ThirdPartyApp][ThirdPartyAppHomePage].
 
-  ![](ReadMeScreenShot_OptionsGeneral.png)
+  ![](../ReadMeScreenShot_OptionsGeneral.png)
 
 ## Use Cases
 
@@ -99,4 +99,5 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 [GitHubRepoURL]: https://github.com/GregTrevellick/OpenInApp.Launcher
 [GitHubRepoIssuesURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/issues
 [GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/pulls
+[ThirdPartyAppOfficialLogo]: ThirdPartyLogo.png
 [VisualStudioURL]: https://www.visualstudio.com/
