@@ -91,7 +91,7 @@
     <None Include="OpenInVS2017Professional\ReadMeHeader.md" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Ggulpfile.js" />
+    <Content Include="Gulpfile.js" />
     <Content Include="OpenInAltovaXmlSpy\chart.png" />
     <Content Include="OpenInAltovaXmlSpy\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInAltovaXmlSpy\ReadMeScreenShot_OptionsGeneral.png" />
