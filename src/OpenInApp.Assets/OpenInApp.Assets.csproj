@@ -43,6 +43,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="OpenInAltovaXmlSpy\zREADME.md" />
+    <None Include="OpenInApp.Template\zREADME.md" />
+    <None Include="OpenInGimp\zREADME.md" />
+    <None Include="OpenInMarkdownMonster\zREADME.md" />
+    <None Include="OpenInPaintDotNet\zREADME.md" />
+    <None Include="OpenInVS2012\zREADME.md" />
+    <None Include="OpenInVS2013\zREADME.md" />
+    <None Include="OpenInVS2015\zREADME.md" />
+    <None Include="OpenInVS2017Community\zREADME.md" />
+    <None Include="OpenInVS2017Enterprise\zREADME.md" />
+    <None Include="OpenInVS2017Professional\zREADME.md" />
     <None Include="ReadMeCommon.md" />
     <None Include="package.json" />
     <None Include="OpenInAltovaXmlSpy\CHANGELOG.md" />
