@@ -17,7 +17,7 @@ The [Visual Studio][VisualStudioURL] extensions are officially available at the 
 
 <!-- COPY START FOR VS GALLERY -->
 
-![](../ReadMeAnimatedUsage.gif)
+![](src/OpenInApp.Assets/ReadMeAnimatedUsage.gif)
 
 Open multiple files simultaneously in a third party application directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
@@ -29,19 +29,19 @@ If you like any of these ***free*** extensions, please give them a [review][VSMa
 
 - Open multiple files simultaneously in the third party application with VS2012, VS2013 and VS2015.
 
-  ![](Src/OpenInApp.Assets/ReadMeScreenShot_ContextMenu.png)
+  ![](src/OpenInApp.Assets/ReadMeScreenShot_ContextMenu.png)
 
 - Warning if attempting to open a large quantity of files. The quantity is configurable in Tools > Options.
 
-  ![](Src/OpenInApp.Assets/ReadMeScreenShot_WarningLargeQuantity.png)
+  ![](src/OpenInApp.Assets/ReadMeScreenShot_WarningLargeQuantity.png)
 
 - Warning if attempting to open one or more file types whose extension is not typically associated with the third party application. The list of typical file extensions is configurable in Tools > Options.
 
-  ![](Src/OpenInApp.Assets/ReadMeScreenShot_WarningNonTypical.png)
+  ![](src/OpenInApp.Assets/ReadMeScreenShot_WarningNonTypical.png)
 
 - Option to supress the warning message if attempting to open a file whose extension is not typically associated with the third party application.
 
-  ![](Src/OpenInApp.Assets/ReadMeScreenShot_OptionsGeneral.png)
+  ![](src/OpenInApp.Assets/ReadMeScreenShot_OptionsGeneral.png)
 
 ## Use Cases
 
