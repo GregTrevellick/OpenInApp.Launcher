@@ -19,7 +19,7 @@ This [Visual Studio][VisualStudioURL] extension is officially available at the [
 
 ![](../ReadMeAnimatedUsage.gif)
 
-Open multiple files simultaneously in [OpenInGimp][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Solution Explorer.
+Open multiple files simultaneously in [GIMP][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Solution Explorer.
 
 If you like this ***free*** extension, please give it a [review][VSMarketplaceReviewsUrl].
 
@@ -27,7 +27,7 @@ If you like this ***free*** extension, please give it a [review][VSMarketplaceRe
 
 ## Features
 
-- Open multiple files simultaneously in [OpenInGimp][ThirdPartyAppHomePage] with VS2012, VS2013 and VS2015.
+- Open multiple files simultaneously in [GIMP][ThirdPartyAppHomePage] with VS2012, VS2013 and VS2015.
 
   ![](ReadMeScreenShot_ContextMenu.png)
 
@@ -35,11 +35,11 @@ If you like this ***free*** extension, please give it a [review][VSMarketplaceRe
 
   ![](../ReadMeScreenShot_WarningLargeQuantity.png)
 
-- Warning if attempting to open one or more file types whose extension is not typically associated with [OpenInGimp][ThirdPartyAppHomePage]. The list of typical file extensions is configurable in Tools > Options.
+- Warning if attempting to open one or more file types whose extension is not typically associated with [GIMP][ThirdPartyAppHomePage]. The list of typical file extensions is configurable in Tools > Options.
 
   ![](../ReadMeScreenShot_WarningNonTypical.png)
 
-- Option to supress the warning message if attempting to open a file whose extension is not typically associated with [OpenInGimp][ThirdPartyAppHomePage].
+- Option to supress the warning message if attempting to open a file whose extension is not typically associated with [GIMP][ThirdPartyAppHomePage].
 
   ![](../ReadMeScreenShot_OptionsGeneral.png)
 
@@ -50,36 +50,52 @@ The [Visual Studio IDE][VisualStudioURL] has an outstanding and feature-rich edi
 That said, there may be times when you wish to edit a file in an alternative editor/application without overriding the default [Visual Studio][VisualStudioURL] editor, for example:-
 
 - You only occasionally wish to use a specific alternative editor.
+
 - You have overriden the default [Visual Studio][VisualStudioURL] editor to a particular application, but need easy IDE access to a second particular editor.
+
 - Certain files (e.g. gigantic size files, or files with complex content) may be better suited in an alternative editor.
+
 - Pair programming scenarios where each developer has different preferred editor.
+
 - You are more familiar with a certain editor's features, or simply have a favourite editor.
 
 <!--COPY END FOR VS GALLERY-->
 
 ## Legal
 
-The [owner](https://github.com/GregTrevellick) of this [GitHub repository / software][GitHubRepoURL] is not affiliated, associated, authorized, endorsed by, employed by, sponsored by, or in any way officially connected with [OpenInGimp][ThirdPartyAppHomePage] or any of its subsidiaries or its affiliates.
+The [owner](https://github.com/GregTrevellick) of this [GitHub repository / software][GitHubRepoURL] is not affiliated, associated, authorized, endorsed by, employed by, sponsored by, or in any way officially connected with [GIMP][ThirdPartyAppHomePage] or any of its subsidiaries or its affiliates.
 
-Nor has [this][GitHubRepoURL] software been authorised, approved, verified or in anyway assessed by [OpenInGimp][ThirdPartyAppHomePage], or any of its subsidiaries or its affiliates, either as [raw source code][GitHubRepoURL] on [GitHub.com](https://github.com/) or as a [Visual Studio Extension][VSMarketplaceUrl] in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs).
+Nor has [this][GitHubRepoURL] software been authorised, approved, verified or in anyway assessed by [GIMP][ThirdPartyAppHomePage], or any of its subsidiaries or its affiliates, either as [raw source code][GitHubRepoURL] on [GitHub.com](https://github.com/) or as a [Visual Studio Extension][VSMarketplaceUrl] in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs).
 
-All Trademark, intellectual property rights, and other rights belonging to [OpenInGimp][ThirdPartyAppHomePage] as described in [here][ThirdPartyAppHomePage] apply.
+All Trademark, intellectual property rights, and other rights belonging to [GIMP][ThirdPartyAppHomePage] as described in [here][ThirdPartyAppHomePage] apply.
 
-All [OpenInGimp][ThirdPartyAppHomePage] logos and [OpenInGimp][ThirdPartyAppHomePage] links belong to [OpenInGimp][ThirdPartyAppHomePage] and their use here and any associated goodwill inures to [OpenInGimp][ThirdPartyAppHomePage].
+All [GIMP][ThirdPartyAppHomePage] logos and [GIMP][ThirdPartyAppHomePage] links belong to [GIMP][ThirdPartyAppHomePage] and their use here and any associated goodwill inures to [GIMP][ThirdPartyAppHomePage].
 
-In no event shall [OpenInGimp][ThirdPartyAppHomePage] be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or dealings in the software.
+In no event shall [GIMP][ThirdPartyAppHomePage] be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or dealings in the software.
 
 ## Credits
 
-Adapted from code originally written by [Mads Kristensen](https://github.com/madskristensen) [here](https://github.com/madskristensen/OpenInSublimeText/ "Open in Sublime Text") and [here](https://github.com/madskristensen/OpenInVsCode "Open in Visual Studio Code").
+Inspired and adapted from these original code repositories
 
-Also adapted from code originally written by [Calvin Allen](https://github.com/CalvinAllen) [here](https://github.com/CalvinAllen/OpenInNotepadPlusPlus).
+- [Mads Kristensen](https://github.com/madskristensen) 
+  - [Open in Sublime Text](https://github.com/madskristensen/OpenInSublimeText/ "Open in Sublime Text")
+  - [Open in Visual Studio Code](https://github.com/madskristensen/OpenInVsCode "Open in Visual Studio Code")
+- [Calvin Allen](https://github.com/CalvinAllen) 
+  - [Open in NotePad++](https://github.com/CalvinAllen/OpenInNotepadPlusPlus  "Open in NotePad++") 
+- [Cem Yabansu](https://github.com/cemyabansu) 
+  - [Publish In Crm](https://github.com/cemyabansu/PublishInCrm "Publish In Crm")
 
-Thanks also to [Carlos Quintero](http://www.visualstudioextensibility.com/), Visual Studio Extensibility [sample code](https://github.com/visualstudioextensibility/VSX-Samples) and [Cem Yabansu](https://github.com/cemyabansu).
+Special thanks to the following educational resources
 
-Additional thanks goes to [Build 2016 Conference](https://channel9.msdn.com/Events/Build/2016/B886) and [Visual Studio Toolbox](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Extensions-by-Mads-Kristensen).
+- [Carlos Quintero](http://www.visualstudioextensibility.com/)
+- [Visual Studio Extensibility code samples](https://github.com/visualstudioextensibility/VSX-Samples)
+- [Build 2016 Conference](https://channel9.msdn.com/Events/Build/2016/B886) 
+- [Visual Studio Toolbox](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Extensions-by-Mads-Kristensen)
 
-Thanks also to [OpenInGimp][ThirdPartyAppHomePage] themselves.
+Additional thanks to 
+- [Screen To Gif](http://www.screentogif.com/) 
+- [Paint Dot Net](http://www.getpaint.net/)  
+- [GIMP][ThirdPartyAppHomePage] 
 
 ## Miscellaneous
 
