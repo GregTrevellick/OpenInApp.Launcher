@@ -22,6 +22,8 @@ Open multiple files simultaneously in [Altova XMLSpy XML Editor][ThirdPartyAppHo
 
 If you like this ***free*** extension, please give it a [review][VSMarketplaceReviewsUrl].
 
+Similar "Open In" VS extensions can be found [here](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
+
 [![][ThirdPartyAppOfficialLogo]][ThirdPartyAppHomePage]
 
 ## Features
@@ -100,15 +102,13 @@ Additional thanks to
 
 Contributions to this project are welcome by raising an [Issue][GitHubRepoIssuesURL] or submitting a [Pull Request][GitHubRepoPullRequestsURL].
 
-See the [change log](CHANGELOG.md) for road map and release history.
+See the [change log](CHANGELOG.md) for release history.
 
 Bugs can be logged [here][GitHubRepoIssuesURL].
 
-Software [License](/LICENSE.txt).
+[Software License](/LICENSE.txt).
 
 [![](chart.png)][GitHubPagesURL]
-
-Similar "Open In" VS extensions can be found [here](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
 
 [AppVeyorProjectUrl]: https://ci.appveyor.com/project/GregTrevellick/openinapp-launcher
 [AppVeyorProjectBuildStatusBadgeSvg]: https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true
