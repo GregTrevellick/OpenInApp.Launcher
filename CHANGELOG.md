@@ -1,10 +1,56 @@
 # Change log
 
-## 1.0.0
-
-**CCYY-MM-DD**
-
+## Visual Studio 2012 1.0.0
+**2017-01-30** 
 - [x] Initial release
+
+## Visual Studio 2013 1.0.0
+**2017-01-30** 
+- [x] Initial release
+
+## Visual Studio 2015 1.0.0
+**2017-01-30** 
+- [x] Initial release
+
+## Visual Studio 2017 Ent 1.0.2
+**2017-02-04** 
+- [x] Update logos
+
+## Visual Studio 2017 Ent 1.0.1
+**2017-01-31** 
+- [x] Initial release
+
+## Visual Studio 2013 Comm 1.0.3
+**2017-02-04** 
+- [x] Update logos
+
+## Visual Studio 2013 Comm 1.0.2
+**2017-01-31** 
+- [x] Initial release
+
+## Visual Studio 2017 Pro 1.0.2
+**2017-02-04** 
+- [x] Update logos
+
+## vsVisual Studio 2017 Pro 1.0.1
+**2017-01-31** 
+- [x] Initial release
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!--
