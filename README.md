@@ -91,7 +91,6 @@ Special thanks to the following educational resources
 Additional thanks to 
 - [Screen To Gif](http://www.screentogif.com/) 
 - [Paint Dot Net](http://www.getpaint.net/)  
-- [GIMP][ThirdPartyAppHomePage] 
 
 ## Miscellaneous
 
