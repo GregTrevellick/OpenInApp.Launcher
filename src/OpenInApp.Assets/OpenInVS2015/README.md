@@ -6,7 +6,6 @@
 
 # Open In Visual Studio 2015
 
-
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Build status][AppVeyorProjectBuildStatusBadgeSvg]][AppVeyorProjectUrl]
 [![][VersionNumberBadgeURL]][VSMarketplaceUrl]
@@ -15,11 +14,11 @@ This [Visual Studio][VisualStudioURL] extension is officially available at the [
 
 ---------------------------------------
 
-<!--COPY START FOR VS GALLERY-->
+<!-- COPY START FOR VS GALLERY -->
 
 ![](../ReadMeAnimatedUsage.gif)
 
-Open multiple files simultaneously in [Visual Studio 2015][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Solution Explorer.
+Open multiple files simultaneously in [Visual Studio 2015][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 If you like this ***free*** extension, please give it a [review][VSMarketplaceReviewsUrl].
 
@@ -59,7 +58,7 @@ That said, there may be times when you wish to edit a file in an alternative edi
 
 - You are more familiar with a certain editor's features, or simply have a favourite editor.
 
-<!--COPY END FOR VS GALLERY-->
+<!-- COPY END FOR VS GALLERY -->
 
 ## Legal
 

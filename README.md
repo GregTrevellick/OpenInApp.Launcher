@@ -1,26 +1,27 @@
-[AppVeyorProjectUrl]: https://ci.appveyor.com/project/GregTrevellick/openinapp-launcher
-[AppVeyorProjectBuildStatusBadgeSvg]: https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true
-[GitHubPagesURL]: https://gregtrevellick.github.io/OpenInApp.Launcher/
-[GitHubRepoURL]: https://github.com/GregTrevellick/OpenInApp.Launcher
-[GitHubRepoIssuesURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/issues
-[GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/pulls
 [ThirdPartyAppHomePage]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
-[ThirdPartyAppOfficialLogo]: assets/OpenInApp_Generic_175x175.png 
-[VisualStudioURL]: https://www.visualstudio.com/
+<!-- Logo source = TODO -->
+[VersionNumberBadgeURL]: NotApplicable
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
+[VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
 
 # Open In App Launcher
 
+A repository containing code for use in a series of [Visual Studio][VisualStudioURL] extensions that allow a file to be opened in third party applications directly from within [Visual Studio][VisualStudioURL].
+
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Build status][AppVeyorProjectBuildStatusBadgeSvg]][AppVeyorProjectUrl]
-
-A repository containing code for use in a series of Visual Studio extensions that allow a file to be opened in third party applications directly from within Visual Studio.
 
 The [Visual Studio][VisualStudioURL] extensions are officially available at the [Visual Studio Marketplace][VSMarketplaceUrl].
 
 ---------------------------------------
 
-Open multiple files simultaneously in a third party application directly from [Visual Studio's][VisualStudioURL] Solution Explorer.
+<!-- COPY START FOR VS GALLERY -->
+
+![](../ReadMeAnimatedUsage.gif)
+
+Open multiple files simultaneously in a third party application directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
+
+If you like any of these ***free*** extensions, please give them a [review][VSMarketplaceReviewsUrl].
 
 [![][ThirdPartyAppOfficialLogo]][ThirdPartyAppHomePage]
 
@@ -54,7 +55,7 @@ That said, there may be times when you wish to edit a file in an alternative edi
 - Pair programming scenarios where each developer has different preferred editor.
 - You are more familiar with a certain editor's features, or simply have a favourite editor.
 
-<!--COPY END FOR VS GALLERY-->
+<!-- COPY END FOR VS GALLERY -->
 
 ## Legal
 
@@ -70,20 +71,27 @@ In no event shall any of the third party application entities be liable for any 
 
 ## Credits
 
-Adapted from code originally written by [Mads Kristensen](https://github.com/madskristensen) [here](https://github.com/madskristensen/OpenInSublimeText/ "Open in Sublime Text") and [here](https://github.com/madskristensen/OpenInVsCode "Open in Visual Studio Code").
+Inspired and adapted from these original code repositories
 
-Also adapted from code originally written by [Calvin Allen](https://github.com/CalvinAllen) [here](https://github.com/CalvinAllen/OpenInNotepadPlusPlus).
- 
-Thanks also to [Carlos Quintero](http://www.visualstudioextensibility.com/), Visual Studio Extensibility [sample code](https://github.com/visualstudioextensibility/VSX-Samples) and [Cem Yabansu](https://github.com/cemyabansu).
+- [Mads Kristensen](https://github.com/madskristensen) 
+  - [Open in Sublime Text](https://github.com/madskristensen/OpenInSublimeText/ "Open in Sublime Text")
+  - [Open in Visual Studio Code](https://github.com/madskristensen/OpenInVsCode "Open in Visual Studio Code")
+- [Calvin Allen](https://github.com/CalvinAllen) 
+  - [Open in NotePad++](https://github.com/CalvinAllen/OpenInNotepadPlusPlus  "Open in NotePad++") 
+- [Cem Yabansu](https://github.com/cemyabansu) 
+  - [Publish In Crm](https://github.com/cemyabansu/PublishInCrm "Publish In Crm")
 
-Additional thanks goes to [Build 2016 Conference](https://channel9.msdn.com/Events/Build/2016/B886) and [Visual Studio Toolbox](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Extensions-by-Mads-Kristensen).
+Special thanks to the following educational resources
 
-The third party applications themselves:
-- [Altova XMLSpy XML Editor](http://www.altova.com/xml-editor/)
-- [GIMP - GNU Image Manipulation Program](https://www.gimp.org/)
-- [Markdown Monster](https://markdownmonster.west-wind.com/)
-- [Microsoft Visual Studio](https://www.visualstudio.com/vs/)
-- [Paint.Net](http://www.getpaint.net/)
+- [Carlos Quintero](http://www.visualstudioextensibility.com/)
+- [Visual Studio Extensibility code samples](https://github.com/visualstudioextensibility/VSX-Samples)
+- [Build 2016 Conference](https://channel9.msdn.com/Events/Build/2016/B886) 
+- [Visual Studio Toolbox](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Extensions-by-Mads-Kristensen)
+
+Additional thanks to 
+- [Screen To Gif](http://www.screentogif.com/) 
+- [Paint Dot Net](http://www.getpaint.net/)  
+- [GIMP][ThirdPartyAppHomePage] 
 
 ## Miscellaneous
 
@@ -98,3 +106,12 @@ Software [License](/LICENSE.txt).
 [![](assets/chart.png)][GitHubPagesURL]
 
 Similar "Open In" VS extensions can be found [here](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
+
+[AppVeyorProjectUrl]: https://ci.appveyor.com/project/GregTrevellick/openinapp-launcher
+[AppVeyorProjectBuildStatusBadgeSvg]: https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true
+[GitHubPagesURL]: https://gregtrevellick.github.io/OpenInApp.Launcher/
+[GitHubRepoURL]: https://github.com/GregTrevellick/OpenInApp.Launcher
+[GitHubRepoIssuesURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/issues
+[GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/pulls
+[ThirdPartyAppOfficialLogo]: assets/OpenInApp_Generic_175x175.png 
+[VisualStudioURL]: https://www.visualstudio.com/
