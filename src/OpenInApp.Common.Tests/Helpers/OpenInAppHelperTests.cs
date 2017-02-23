@@ -8,19 +8,19 @@ namespace OpenInApp.Common.Tests.Helpers
     public class OpenInAppHelperTests
     {
         //gregt %windir% %programfiles% %LocalAppData%
-
+        //Open in “My Exe”
+        //Open in IE 11 – check at spur
+        //open in sublime text vs2012/vs2013?
         //examdiff
-        // webstorm
-        // screentogif
-
-    //    http://www.jedsoft.org/jed/
-//http://texteditors.org/cgi-bin/wiki.pl?ACE
-//http://texteditors.org/cgi-bin/wiki.pl?UltraEdit
-//http://texteditors.org/cgi-bin/wiki.pl?Zeus
-            //http://texteditors.org/cgi-bin/wiki.pl?ZendStudio
-
-//http://texteditors.org/cgi-bin/wiki.pl?Brainfck_Center
-//https://sourceforge.net/projects/e7bfc/
+        //webstorm
+        //screentogif
+        //http://www.jedsoft.org/jed/
+        //http://texteditors.org/cgi-bin/wiki.pl?ACE
+        //http://texteditors.org/cgi-bin/wiki.pl?UltraEdit
+        //http://texteditors.org/cgi-bin/wiki.pl?Zeus
+        //http://texteditors.org/cgi-bin/wiki.pl?ZendStudio
+        //http://texteditors.org/cgi-bin/wiki.pl?Brainfck_Center
+        //https://sourceforge.net/projects/e7bfc/
 
         [Test()]
         [Category("I")]

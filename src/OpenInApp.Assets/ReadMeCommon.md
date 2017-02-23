@@ -42,9 +42,13 @@ The [Visual Studio IDE][VisualStudioURL] has an outstanding and feature-rich edi
 That said, there may be times when you wish to edit a file in an alternative editor/application without overriding the default [Visual Studio][VisualStudioURL] editor, for example:-
 
 - You only occasionally wish to use a specific alternative editor.
+
 - You have overriden the default [Visual Studio][VisualStudioURL] editor to a particular application, but need easy IDE access to a second particular editor.
+
 - Certain files (e.g. gigantic size files, or files with complex content) may be better suited in an alternative editor.
+
 - Pair programming scenarios where each developer has different preferred editor.
+
 - You are more familiar with a certain editor's features, or simply have a favourite editor.
 
 <!--COPY END FOR VS GALLERY-->
@@ -63,15 +67,27 @@ In no event shall [ThirdPartyApp][ThirdPartyAppHomePage] be liable for any claim
 
 ## Credits
 
-Adapted from code originally written by [Mads Kristensen](https://github.com/madskristensen) [here](https://github.com/madskristensen/OpenInSublimeText/ "Open in Sublime Text") and [here](https://github.com/madskristensen/OpenInVsCode "Open in Visual Studio Code").
+Inspired and adapted from these original code repositories
 
-Also adapted from code originally written by [Calvin Allen](https://github.com/CalvinAllen) [here](https://github.com/CalvinAllen/OpenInNotepadPlusPlus).
+- [Mads Kristensen](https://github.com/madskristensen) 
+  - [Open in Sublime Text](https://github.com/madskristensen/OpenInSublimeText/ "Open in Sublime Text")
+  - [Open in Visual Studio Code](https://github.com/madskristensen/OpenInVsCode "Open in Visual Studio Code")
+- [Calvin Allen](https://github.com/CalvinAllen) 
+  - [Open in NotePad++](https://github.com/CalvinAllen/OpenInNotepadPlusPlus  "Open in NotePad++") 
+- [Cem Yabansu](https://github.com/cemyabansu) 
+  - [Publish In Crm](https://github.com/cemyabansu/PublishInCrm "Publish In Crm")
 
-Thanks also to [Carlos Quintero](http://www.visualstudioextensibility.com/), Visual Studio Extensibility [sample code](https://github.com/visualstudioextensibility/VSX-Samples) and [Cem Yabansu](https://github.com/cemyabansu).
+Special thanks to the following educational resources
 
-Additional thanks goes to [Build 2016 Conference](https://channel9.msdn.com/Events/Build/2016/B886) and [Visual Studio Toolbox](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Extensions-by-Mads-Kristensen).
+- [Carlos Quintero](http://www.visualstudioextensibility.com/)
+- [Visual Studio Extensibility code samples](https://github.com/visualstudioextensibility/VSX-Samples)
+- [Build 2016 Conference](https://channel9.msdn.com/Events/Build/2016/B886) 
+- [Visual Studio Toolbox](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Extensions-by-Mads-Kristensen)
 
-Thanks also to [ThirdPartyApp][ThirdPartyAppHomePage] themselves.
+Additional thanks to 
+- [Screen To Gif](http://www.screentogif.com/) 
+- [Paint Dot Net](http://www.getpaint.net/)  
+- [ThirdPartyApp][ThirdPartyAppHomePage] 
 
 ## Miscellaneous
 
