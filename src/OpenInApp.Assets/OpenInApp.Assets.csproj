@@ -45,19 +45,14 @@
   <ItemGroup>
     <None Include="ReadMeCommon.md" />
     <None Include="package.json" />
-    <None Include="OpenInAltovaXmlSpy\CHANGELOG.md" />
     <None Include="OpenInAltovaXmlSpy\README.md" />
     <None Include="OpenInAltovaXmlSpy\ReadMeHeader.md" />
-    <None Include="OpenInGimp\CHANGELOG.md" />
     <None Include="OpenInGimp\README.md" />
     <None Include="OpenInGimp\ReadMeHeader.md" />
-    <None Include="OpenInMarkdownMonster\CHANGELOG.md" />
     <None Include="OpenInMarkdownMonster\README.md" />
     <None Include="OpenInMarkdownMonster\ReadMeHeader.md" />
-    <None Include="OpenInPaintDotNet\CHANGELOG.md" />
     <None Include="OpenInPaintDotNet\README.md" />
     <None Include="OpenInPaintDotNet\ReadMeHeader.md" />
-    <None Include="OpenInApp.Template\CHANGELOG.md" />
     <None Include="OpenInApp.Template\README.md" />
     <None Include="OpenInApp.Template\ReadMeHeader.md" />
     <None Include="OpenInVS2012\README.md" />

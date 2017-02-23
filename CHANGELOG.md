@@ -1,5 +1,55 @@
 # Change log
 
+These are the changes to each version that has been released on the official Visual Studio extension gallery.
+
+## 1.2.x (all apps)
+**CCYY-MM-DD** 
+- [x] Add context menu command to Code Editor window
+- [x] Remove context menu command from Solution node in solution explorer
+- [x] Remove context menu command from Project node in solution explorer
+- [x] Save all files before opening in external application
+
+## PaintDotNet 1.0.59
+**2017-01-24**
+- [x] Bug fix for Tools > Options conflicts with other ["Open In" VS extensions](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
+
+## PaintDotNet 1.0.27
+**2017-01-09**
+- [x] Initial release
+
+## markdown monster 1.0.60
+**2017-01-24** 
+- [x] Bug fix for Tools > Options conflicts with other ["Open In" VS extensions](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
+
+## markdown monster 1.0.49
+**2017-01-18** 
+- [x] Asterisk as wildcard for typical files types
+
+## markdown monster 1.0.24
+**2017-01-10** 
+- [x] Initial release
+
+## gimp 1.0.47
+**2017-01-24** 
+- [x] Bug fix for Tools > Options conflicts with other ["Open In" VS extensions](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
+
+## gimp 1.0.11
+**2017-01-11**
+- [x] Initial release
+
+## Altova xml spy 1.0.148
+**2017-01-24** 
+- [x] Bug fix for Tools > Options conflicts with other ["Open In" VS extensions](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
+
+## Altova xml spy 1.0.137
+**2017-01-18** 
+- [x] Enable wildcard as file type in options
+- [x] Bug fix for typical file types being case-sensitive
+
+## Altova xml spy 1.0.0
+**2016-12-20** 
+- [x] Initial release
+
 ## Visual Studio 2012 1.0.0
 **2017-01-30** 
 - [x] Initial release
