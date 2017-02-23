@@ -136,6 +136,7 @@
     <Content Include="OpenInVS2017Professional\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInVS2017Professional\ReadMeScreenShot_OptionsGeneral.png" />
     <Content Include="OpenInVS2017Professional\ThirdPartyLogo.png" />
+    <Content Include="ReadMeAnimatedUsage.gif" />
     <Content Include="ReadMeScreenShot_OptionsGeneral.png" />
     <Content Include="ReadMeScreenShot_WarningLargeQuantity.png" />
     <Content Include="ReadMeScreenShot_WarningNonTypical.png" />

@@ -17,6 +17,8 @@ This [Visual Studio][VisualStudioURL] extension is officially available at the [
 
 <!--COPY START FOR VS GALLERY-->
 
+![](../ReadMeAnimatedUsage.gif)
+
 Open multiple files simultaneously in [OpenInVS2017Enterprise][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Solution Explorer.
 
 If you like this ***free*** extension, please give it a [review][VSMarketplaceReviewsUrl].
