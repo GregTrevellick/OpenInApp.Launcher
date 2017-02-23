@@ -80,7 +80,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dtos\FileBrowseOutcomeDto.cs" />
+    <Compile Include="Helpers\Dtos\FileBrowseOutcomeDto.cs" />
     <Compile Include="Helpers\OpenInAppHelper.cs" />
     <Compile Include="Helpers\CommonFileHelper.cs" />
     <Compile Include="Helpers\CommonConstants.cs" />

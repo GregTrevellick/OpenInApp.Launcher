@@ -6,7 +6,6 @@
 
 # Open In ThirdPartyApp
 
-
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Build status][AppVeyorProjectBuildStatusBadgeSvg]][AppVeyorProjectUrl]
 [![][VersionNumberBadgeURL]][VSMarketplaceUrl]
@@ -15,21 +14,19 @@ This [Visual Studio][VisualStudioURL] extension is officially available at the [
 
 ---------------------------------------
 
-<!--COPY START FOR VS GALLERY-->
+<!-- COPY START FOR VS GALLERY -->
 
 ![](../ReadMeAnimatedUsage.gif)
 
-Open multiple files simultaneously in [OpenInApp.Template][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Solution Explorer.
+Open multiple files simultaneously in [GregtGregt][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 If you like this ***free*** extension, please give it a [review][VSMarketplaceReviewsUrl].
-
-Similar "Open In" VS extensions can be found [here](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
 
 [![][ThirdPartyAppOfficialLogo]][ThirdPartyAppHomePage]
 
 ## Features
 
-- Open multiple files simultaneously in [OpenInApp.Template][ThirdPartyAppHomePage] with VS2012, VS2013 and VS2015.
+- Open multiple files simultaneously in [GregtGregt][ThirdPartyAppHomePage] with VS2012, VS2013 and VS2015.
 
   ![](ReadMeScreenShot_ContextMenu.png)
 
@@ -37,11 +34,11 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 
   ![](../ReadMeScreenShot_WarningLargeQuantity.png)
 
-- Warning if attempting to open one or more file types whose extension is not typically associated with [OpenInApp.Template][ThirdPartyAppHomePage]. The list of typical file extensions is configurable in Tools > Options.
+- Warning if attempting to open one or more file types whose extension is not typically associated with [GregtGregt][ThirdPartyAppHomePage]. The list of typical file extensions is configurable in Tools > Options.
 
   ![](../ReadMeScreenShot_WarningNonTypical.png)
 
-- Option to supress the warning message if attempting to open a file whose extension is not typically associated with [OpenInApp.Template][ThirdPartyAppHomePage].
+- Option to supress the warning message if attempting to open a file whose extension is not typically associated with [GregtGregt][ThirdPartyAppHomePage].
 
   ![](../ReadMeScreenShot_OptionsGeneral.png)
 
@@ -61,19 +58,19 @@ That said, there may be times when you wish to edit a file in an alternative edi
 
 - You are more familiar with a certain editor's features, or simply have a favourite editor.
 
-<!--COPY END FOR VS GALLERY-->
+<!-- COPY END FOR VS GALLERY -->
 
 ## Legal
 
-The [owner](https://github.com/GregTrevellick) of this [GitHub repository / software][GitHubRepoURL] is not affiliated, associated, authorized, endorsed by, employed by, sponsored by, or in any way officially connected with [OpenInApp.Template][ThirdPartyAppHomePage] or any of its subsidiaries or its affiliates.
+The [owner](https://github.com/GregTrevellick) of this [GitHub repository / software][GitHubRepoURL] is not affiliated, associated, authorized, endorsed by, employed by, sponsored by, or in any way officially connected with [GregtGregt][ThirdPartyAppHomePage] or any of its subsidiaries or its affiliates.
 
-Nor has [this][GitHubRepoURL] software been authorised, approved, verified or in anyway assessed by [OpenInApp.Template][ThirdPartyAppHomePage], or any of its subsidiaries or its affiliates, either as [raw source code][GitHubRepoURL] on [GitHub.com](https://github.com/) or as a [Visual Studio Extension][VSMarketplaceUrl] in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs).
+Nor has [this][GitHubRepoURL] software been authorised, approved, verified or in anyway assessed by [GregtGregt][ThirdPartyAppHomePage], or any of its subsidiaries or its affiliates, either as [raw source code][GitHubRepoURL] on [GitHub.com](https://github.com/) or as a [Visual Studio Extension][VSMarketplaceUrl] in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs).
 
-All Trademark, intellectual property rights, and other rights belonging to [OpenInApp.Template][ThirdPartyAppHomePage] as described in [here][ThirdPartyAppHomePage] apply.
+All Trademark, intellectual property rights, and other rights belonging to [GregtGregt][ThirdPartyAppHomePage] as described in [here][ThirdPartyAppHomePage] apply.
 
-All [OpenInApp.Template][ThirdPartyAppHomePage] logos and [OpenInApp.Template][ThirdPartyAppHomePage] links belong to [OpenInApp.Template][ThirdPartyAppHomePage] and their use here and any associated goodwill inures to [OpenInApp.Template][ThirdPartyAppHomePage].
+All [GregtGregt][ThirdPartyAppHomePage] logos and [GregtGregt][ThirdPartyAppHomePage] links belong to [GregtGregt][ThirdPartyAppHomePage] and their use here and any associated goodwill inures to [GregtGregt][ThirdPartyAppHomePage].
 
-In no event shall [OpenInApp.Template][ThirdPartyAppHomePage] be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or dealings in the software.
+In no event shall [GregtGregt][ThirdPartyAppHomePage] be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or dealings in the software.
 
 ## Credits
 
@@ -97,19 +94,21 @@ Special thanks to the following educational resources
 Additional thanks to 
 - [Screen To Gif](http://www.screentogif.com/) 
 - [Paint Dot Net](http://www.getpaint.net/)  
-- [OpenInApp.Template][ThirdPartyAppHomePage] 
+- [GregtGregt][ThirdPartyAppHomePage] 
 
 ## Miscellaneous
 
 Contributions to this project are welcome by raising an [Issue][GitHubRepoIssuesURL] or submitting a [Pull Request][GitHubRepoPullRequestsURL].
 
-See the [change log](CHANGELOG.md) for release history.
+See the [change log](CHANGELOG.md) for road map and release history.
 
 Bugs can be logged [here][GitHubRepoIssuesURL].
 
-[Software License](/LICENSE.txt).
+Software [License](/LICENSE.txt).
 
 [![](chart.png)][GitHubPagesURL]
+
+Similar "Open In" VS extensions can be found [here](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
 
 [AppVeyorProjectUrl]: https://ci.appveyor.com/project/GregTrevellick/openinapp-launcher
 [AppVeyorProjectBuildStatusBadgeSvg]: https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true
