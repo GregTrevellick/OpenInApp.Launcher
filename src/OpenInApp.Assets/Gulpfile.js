@@ -33,7 +33,6 @@ function OIAConcat (appNam) {
     return gulp
         .src([appNam + '/ReadMeHeader.md', 'ReadMeCommon.md'])
         .pipe(concat(appNam + '/README.md'))
-        //.pipe(replace({ patterns: [{ match: '[ThirdPartyApp]', replacement: '[' + appNam + ']' }] }) )
         .pipe(replace('[ThirdPartyApp]', '[' + appNam + ']'))
         .pipe(gulp.dest('.'));
 } 
