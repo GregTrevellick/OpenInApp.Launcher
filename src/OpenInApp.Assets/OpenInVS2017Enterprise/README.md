@@ -17,7 +17,7 @@ This [Visual Studio][VisualStudioURL] extension is officially available at the [
 
 <!--COPY START FOR VS GALLERY-->
 
-Open multiple files simultaneously in [ThirdPartyApp][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Solution Explorer.
+Open multiple files simultaneously in [OpenInVS2017Enterprise][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Solution Explorer.
 
 If you like this ***free*** extension, please give it a [review][VSMarketplaceReviewsUrl].
 
@@ -25,7 +25,7 @@ If you like this ***free*** extension, please give it a [review][VSMarketplaceRe
 
 ## Features
 
-- Open multiple files simultaneously in [ThirdPartyApp][ThirdPartyAppHomePage] with VS2012, VS2013 and VS2015.
+- Open multiple files simultaneously in [OpenInVS2017Enterprise][ThirdPartyAppHomePage] with VS2012, VS2013 and VS2015.
 
   ![](ReadMeScreenShot_ContextMenu.png)
 
@@ -33,11 +33,11 @@ If you like this ***free*** extension, please give it a [review][VSMarketplaceRe
 
   ![](../ReadMeScreenShot_WarningLargeQuantity.png)
 
-- Warning if attempting to open one or more file types whose extension is not typically associated with [ThirdPartyApp][ThirdPartyAppHomePage]. The list of typical file extensions is configurable in Tools > Options.
+- Warning if attempting to open one or more file types whose extension is not typically associated with [OpenInVS2017Enterprise][ThirdPartyAppHomePage]. The list of typical file extensions is configurable in Tools > Options.
 
   ![](../ReadMeScreenShot_WarningNonTypical.png)
 
-- Option to supress the warning message if attempting to open a file whose extension is not typically associated with [ThirdPartyApp][ThirdPartyAppHomePage].
+- Option to supress the warning message if attempting to open a file whose extension is not typically associated with [OpenInVS2017Enterprise][ThirdPartyAppHomePage].
 
   ![](../ReadMeScreenShot_OptionsGeneral.png)
 
@@ -57,15 +57,15 @@ That said, there may be times when you wish to edit a file in an alternative edi
 
 ## Legal
 
-The [owner](https://github.com/GregTrevellick) of this [GitHub repository / software][GitHubRepoURL] is not affiliated, associated, authorized, endorsed by, employed by, sponsored by, or in any way officially connected with [ThirdPartyApp][ThirdPartyAppHomePage] or any of its subsidiaries or its affiliates.
+The [owner](https://github.com/GregTrevellick) of this [GitHub repository / software][GitHubRepoURL] is not affiliated, associated, authorized, endorsed by, employed by, sponsored by, or in any way officially connected with [OpenInVS2017Enterprise][ThirdPartyAppHomePage] or any of its subsidiaries or its affiliates.
 
-Nor has [this][GitHubRepoURL] software been authorised, approved, verified or in anyway assessed by [ThirdPartyApp][ThirdPartyAppHomePage], or any of its subsidiaries or its affiliates, either as [raw source code][GitHubRepoURL] on [GitHub.com](https://github.com/) or as a [Visual Studio Extension][VSMarketplaceUrl] in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs).
+Nor has [this][GitHubRepoURL] software been authorised, approved, verified or in anyway assessed by [OpenInVS2017Enterprise][ThirdPartyAppHomePage], or any of its subsidiaries or its affiliates, either as [raw source code][GitHubRepoURL] on [GitHub.com](https://github.com/) or as a [Visual Studio Extension][VSMarketplaceUrl] in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs).
 
-All Trademark, intellectual property rights, and other rights belonging to [ThirdPartyApp][ThirdPartyAppHomePage] as described in [here][ThirdPartyAppHomePage] apply.
+All Trademark, intellectual property rights, and other rights belonging to [OpenInVS2017Enterprise][ThirdPartyAppHomePage] as described in [here][ThirdPartyAppHomePage] apply.
 
-All [ThirdPartyApp][ThirdPartyAppHomePage] logos and [ThirdPartyApp][ThirdPartyAppHomePage] links belong to [ThirdPartyApp][ThirdPartyAppHomePage] and their use here and any associated goodwill inures to [ThirdPartyApp][ThirdPartyAppHomePage].
+All [OpenInVS2017Enterprise][ThirdPartyAppHomePage] logos and [OpenInVS2017Enterprise][ThirdPartyAppHomePage] links belong to [OpenInVS2017Enterprise][ThirdPartyAppHomePage] and their use here and any associated goodwill inures to [OpenInVS2017Enterprise][ThirdPartyAppHomePage].
 
-In no event shall [ThirdPartyApp][ThirdPartyAppHomePage] be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or dealings in the software.
+In no event shall [OpenInVS2017Enterprise][ThirdPartyAppHomePage] be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or dealings in the software.
 
 ## Credits
 
@@ -77,7 +77,7 @@ Thanks also to [Carlos Quintero](http://www.visualstudioextensibility.com/), Vis
 
 Additional thanks goes to [Build 2016 Conference](https://channel9.msdn.com/Events/Build/2016/B886) and [Visual Studio Toolbox](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Extensions-by-Mads-Kristensen).
 
-Thanks also to [ThirdPartyApp][ThirdPartyAppHomePage] themselves.
+Thanks also to [OpenInVS2017Enterprise][ThirdPartyAppHomePage] themselves.
 
 ## Miscellaneous
 

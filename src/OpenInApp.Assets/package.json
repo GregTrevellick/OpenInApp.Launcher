@@ -1,11 +1,12 @@
 {
-        "name": "GulpConcatReadMe",
-        "version": "1.0.0",
-        "private": true,
-        "devDependencies": {
-                "gulp": "3.8.11",
-                "gulp-bower": "0.0.10",
-                "gulp-config": "0.3.0",
-                "gulp-concat": "2.4.3"
-        }
-}  
+  "name": "GulpConcatReadMe",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "gulp": "3.8.11",
+    "gulp-bower": "0.0.10",
+    "gulp-config": "0.3.0",
+    "gulp-concat": "2.4.3",
+    "gulp-replace": "0.5.4"
+  } 
+}   

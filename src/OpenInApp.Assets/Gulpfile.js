@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 var bower = require('gulp-bower');
 var concat = require('gulp-concat');
+var replace = require('gulp-replace');
 
 gulp.task('OpenInAltovaXmlSpy',       function () { return OIAConcat('OpenInAltovaXmlSpy') });
 gulp.task('OpenInApp.Template',       function () { return OIAConcat('OpenInApp.Template') });
@@ -32,5 +33,7 @@ function OIAConcat (appNam) {
     return gulp
         .src([appNam + '/ReadMeHeader.md', 'ReadMeCommon.md'])
         .pipe(concat(appNam + '/README.md'))
+        //.pipe(replace({ patterns: [{ match: '[ThirdPartyApp]', replacement: '[' + appNam + ']' }] }) )
+        .pipe(replace('[ThirdPartyApp]', '[' + appNam + ']'))
         .pipe(gulp.dest('.'));
-}
+} 
