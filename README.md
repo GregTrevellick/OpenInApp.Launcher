@@ -28,19 +28,19 @@ Open multiple files simultaneously in a third party application directly from [V
 
 - Open multiple files simultaneously in the third party application with VS2012, VS2013 and VS2015.
 
-  ![](assets/ReadMeScreenShot_ContextMenu.png)
+  ![](Src/OpenInApp.Assets/ReadMeScreenShot_ContextMenu.png)
 
 - Warning if attempting to open a large quantity of files. The quantity is configurable in Tools > Options.
 
-  ![](assets/ReadMeScreenShot_WarningLargeQuantity.png)
+  ![](Src/OpenInApp.Assets/ReadMeScreenShot_WarningLargeQuantity.png)
 
 - Warning if attempting to open one or more file types whose extension is not typically associated with the third party application. The list of typical file extensions is configurable in Tools > Options.
 
-  ![](assets/ReadMeScreenShot_WarningNonTypical.png)
+  ![](Src/OpenInApp.Assets/ReadMeScreenShot_WarningNonTypical.png)
 
 - Option to supress the warning message if attempting to open a file whose extension is not typically associated with the third party application.
 
-  ![](assets/ReadMeScreenShot_OptionsGeneral.png)
+  ![](Src/OpenInApp.Assets/ReadMeScreenShot_OptionsGeneral.png)
 
 ## Use Cases
 
