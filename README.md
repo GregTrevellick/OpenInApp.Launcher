@@ -29,7 +29,7 @@ If you like any of these ***free*** extensions, please give them a [review][VSMa
 
 - Open multiple files simultaneously in the third party application with VS2012, VS2013 and VS2015.
 
-  ![](src/OpenInApp.Assets/ReadMeScreenShot_ContextMenu.png)
+  ![](src/OpenInApp.Assets/OpenInApp.Template/ReadMeScreenShot_ContextMenu.png)
 
 - Warning if attempting to open a large quantity of files. The quantity is configurable in Tools > Options.
 
