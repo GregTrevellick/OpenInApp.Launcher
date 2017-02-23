@@ -14,6 +14,4 @@ These are the changes to each version that has been released on the official Vis
 
 - [x] Initial release
 
-# Road Map
 
-- [ ] Publish the extension for VS2017

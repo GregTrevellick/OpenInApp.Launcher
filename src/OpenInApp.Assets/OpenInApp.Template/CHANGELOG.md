@@ -4,7 +4,7 @@ These are the changes to each version that has been released on the official Vis
 
 ## 1.x.x
 
-**CCYY-MM-DD** <!--HH:MM UK / HH:MM UTC-->
+**CCYY-MM-DD** 
 
 - [x] Add context menu command to Code Editor window
 - [x] Remove context menu command from Solution node in solution explorer
@@ -13,10 +13,6 @@ These are the changes to each version that has been released on the official Vis
 
 ## 1.0.0
 
-**CCYY-MM-DD** <!--HH:MM UK / HH:MM UTC-->
+**CCYY-MM-DD** 
 
 - [x] Initial release
-
-# Road Map
-
-- [ ] Publish the extension for VS2017
