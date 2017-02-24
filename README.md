@@ -25,10 +25,7 @@ Software License is available [here](/LICENSE.txt).
 
 ---------------------------------------
 
-<!-- 
-## Features
-## Use Cases
--->
+[![Altova Xml Spy](src/OpenInApp.Assets/OpenInAltovaXmlSpy/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInAltovaXmlSpy/README.md)
 
 ## Legal
 
