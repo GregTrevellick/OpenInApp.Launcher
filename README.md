@@ -1,4 +1,4 @@
-[ThirdPartyAppHomePage]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
+<!-- [ThirdPartyAppHomePage]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance -->
 <!-- Logo source = TODO -->
 [VersionNumberBadgeURL]: NotApplicable
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
@@ -23,8 +23,9 @@ Open multiple files simultaneously in a third party application directly from [V
 
 If you like any of these ***free*** extensions, please give them a [review][VSMarketplaceReviewsUrl].
 
-[![][ThirdPartyAppOfficialLogo]][ThirdPartyAppHomePage]
+<!-- [![][ThirdPartyAppOfficialLogo]][ThirdPartyAppHomePage] -->
 
+<!-- 
 ## Features
 
 - Open multiple files simultaneously in the third party application with VS2012, VS2013 and VS2015.
@@ -53,7 +54,8 @@ That said, there may be times when you wish to edit a file in an alternative edi
 - You have overriden the default [Visual Studio][VisualStudioURL] editor to a particular application, but need easy IDE access to a second particular editor.
 - Certain files (e.g. gigantic size files, or files with complex content) may be better suited in an alternative editor.
 - Pair programming scenarios where each developer has different preferred editor.
-- You are more familiar with a certain editor's features, or simply have a favourite editor.
+- You are more familiar with a certain editor's features, or simply have a favourite editor. 
+-->
 
 <!-- COPY END FOR VS GALLERY -->
 
@@ -112,5 +114,5 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 [GitHubRepoURL]: https://github.com/GregTrevellick/OpenInApp.Launcher
 [GitHubRepoIssuesURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/issues
 [GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/pulls
-[ThirdPartyAppOfficialLogo]: assets/OpenInApp_Generic_175x175.png 
+<!-- [ThirdPartyAppOfficialLogo]: assets/OpenInApp_Generic_175x175.png  -->
 [VisualStudioURL]: https://www.visualstudio.com/
