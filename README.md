@@ -25,11 +25,11 @@ Software License is available [here](/LICENSE.txt).
 
 ---------------------------------------
 
-[![Altova Xml Spy](src/OpenInApp.Assets/OpenInAltovaXmlSpy/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInAltovaXmlSpy/README.md)
+[![Altova Xml Spy](src/OpenInAltovaXmlSpy/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInAltovaXmlSpy/README.md)
 
 [![Gimp](src/OpenInGimp/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInGimp/README.md)
 
-<!--[![Markdown Monster](src/OpenInApp.Assets/OpenInMarkdownMonster/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInMarkdownMonster/README.md)-->
+[![Markdown Monster](src/OpenInMarkdownMonster/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInMarkdownMonster/README.md)
 
 [![Paint Dot Net](src/OpenInApp.Assets/OpenInPaintDotNet/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInPaintDotNet/README.md)
 
@@ -37,13 +37,13 @@ Software License is available [here](/LICENSE.txt).
 
 [![Visual Studio 2013](src/OpenInVS2013/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2013/README.md)
 
-[![Visual Studio 2015](src/OpenInApp.Assets/OpenInVS2015/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInVS2015/README.md)
+[![Visual Studio 2015](src/OpenInVS2015//Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2015/README.md)
 
-[![Visual Studio 2017 Community](src/OpenInApp.Assets/OpenInVS2017Community/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInVS2017Community/README.md)
+[![Visual Studio 2017 Community](src/OpenInVS2017Community//Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2017Community/README.md)
 
-[![Visual Studio 2017 Enterprise](src/OpenInApp.Assets/OpenInVS2017Enterprise/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInVS2017Enterprise/README.md)
+[![Visual Studio 2017 Enterprise](src/OpenInVS2017Enterprise//Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2017Enterprise/README.md)
 
-[![Visual Studio 2017 Professional](src/OpenInApp.Assets/OpenInVS2017Professional/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInVS2017Professional/README.md)
+[![Visual Studio 2017 Professional](src/OpenInVS2017Professional//Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2017Professional/README.md)
 
 ## Legal
 
