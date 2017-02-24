@@ -11,9 +11,9 @@ A repository containing code for use in a series of [Visual Studio][VisualStudio
 
 The [Visual Studio][VisualStudioURL] extensions are officially available at the [Visual Studio Marketplace][VSMarketplaceUrl].
 
-If you like any of these ***free*** extensions, please give them a [review][VSMarketplaceReviewsUrl].
-
 ![](src/OpenInApp.Assets/ReadMeAnimatedUsage.gif)
+
+If you like any of these ***free*** extensions, please give them a [review][VSMarketplaceReviewsUrl].
 
 Contributions to this project are welcome by raising an [Issue][GitHubRepoIssuesURL] or submitting a [Pull Request][GitHubRepoPullRequestsURL].
 
