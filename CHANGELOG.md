@@ -129,9 +129,12 @@ http://www.blog.ryanbartsch.com/2016/11/Code-coverage-with-Appveyor-and-Coverall
 https://coveralls.zendesk.com/hc/en-us/articles/203488029    
 https://github.com/csmacnz/coveralls.net    
 https://github.com/jdeering/coveralls.net
--->
 
+hide buttons based on file type (no gimp/pdn for txt files for example)
 
-<!-- 
+close down old repos, appveyor defns, nuget pkgs
+
+vs2017 upgrade
+
 gregt open in gvim ?
 -->
