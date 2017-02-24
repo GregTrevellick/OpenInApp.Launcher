@@ -1,63 +1,34 @@
-<!-- [ThirdPartyAppHomePage]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance -->
-<!-- Logo source = TODO -->
 [VersionNumberBadgeURL]: NotApplicable
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
 [VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
 
 # Open In App Launcher
 
-A repository containing code for use in a series of [Visual Studio][VisualStudioURL] extensions that allow a file to be opened in third party applications directly from within [Visual Studio][VisualStudioURL].
-
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Build status][AppVeyorProjectBuildStatusBadgeSvg]][AppVeyorProjectUrl]
 
+A repository containing code for use in a series of [Visual Studio][VisualStudioURL] extensions that allow multiple files to be opened simultaneously in third party applications directly from within the [Visual Studio][VisualStudioURL] Code Editor window and / or Solution Explorer.
+
 The [Visual Studio][VisualStudioURL] extensions are officially available at the [Visual Studio Marketplace][VSMarketplaceUrl].
-
----------------------------------------
-
-<!-- COPY START FOR VS GALLERY -->
-
-![](src/OpenInApp.Assets/ReadMeAnimatedUsage.gif)
-
-Open multiple files simultaneously in a third party application directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 If you like any of these ***free*** extensions, please give them a [review][VSMarketplaceReviewsUrl].
 
-<!-- [![][ThirdPartyAppOfficialLogo]][ThirdPartyAppHomePage] -->
+![](src/OpenInApp.Assets/ReadMeAnimatedUsage.gif)
+
+Contributions to this project are welcome by raising an [Issue][GitHubRepoIssuesURL] or submitting a [Pull Request][GitHubRepoPullRequestsURL].
+
+Bugs can be logged [here][GitHubRepoIssuesURL].
+
+See the [change log](CHANGELOG.md) for release history.
+
+Software License is available [here](/LICENSE.txt).
+
+---------------------------------------
 
 <!-- 
 ## Features
-
-- Open multiple files simultaneously in the third party application with VS2012, VS2013 and VS2015.
-
-  ![](src/OpenInApp.Assets/OpenInApp.Template/ReadMeScreenShot_ContextMenu.png)
-
-- Warning if attempting to open a large quantity of files. The quantity is configurable in Tools > Options.
-
-  ![](src/OpenInApp.Assets/ReadMeScreenShot_WarningLargeQuantity.png)
-
-- Warning if attempting to open one or more file types whose extension is not typically associated with the third party application. The list of typical file extensions is configurable in Tools > Options.
-
-  ![](src/OpenInApp.Assets/ReadMeScreenShot_WarningNonTypical.png)
-
-- Option to supress the warning message if attempting to open a file whose extension is not typically associated with the third party application.
-
-  ![](src/OpenInApp.Assets/ReadMeScreenShot_OptionsGeneral.png)
-
 ## Use Cases
-
-The [Visual Studio IDE][VisualStudioURL] has an outstanding and feature-rich editor for a wide range of file types, even in the free "Community" editions, which can be overridden to open a third-party application.
-
-That said, there may be times when you wish to edit a file in an alternative editor/application without overriding the default [Visual Studio][VisualStudioURL] editor, for example:-
-
-- You only occasionally wish to use a specific alternative editor.
-- You have overriden the default [Visual Studio][VisualStudioURL] editor to a particular application, but need easy IDE access to a second particular editor.
-- Certain files (e.g. gigantic size files, or files with complex content) may be better suited in an alternative editor.
-- Pair programming scenarios where each developer has different preferred editor.
-- You are more familiar with a certain editor's features, or simply have a favourite editor. 
 -->
-
-<!-- COPY END FOR VS GALLERY -->
 
 ## Legal
 
@@ -83,30 +54,21 @@ Inspired and adapted from these original code repositories
 - [Cem Yabansu](https://github.com/cemyabansu) 
   - [Publish In Crm](https://github.com/cemyabansu/PublishInCrm "Publish In Crm")
 
-Special thanks to the following educational resources
+Additional thanks to
 
-- [Carlos Quintero](http://www.visualstudioextensibility.com/)
+- [Visual Studio Extensibility](http://www.visualstudioextensibility.com/)
 - [Visual Studio Extensibility code samples](https://github.com/visualstudioextensibility/VSX-Samples)
 - [Build 2016 Conference](https://channel9.msdn.com/Events/Build/2016/B886) 
 - [Visual Studio Toolbox](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Extensions-by-Mads-Kristensen)
-
-Additional thanks to 
 - [Screen To Gif](http://www.screentogif.com/) 
 - [Paint Dot Net](http://www.getpaint.net/)  
 
-## Miscellaneous
-
-Contributions to this project are welcome by raising an [Issue][GitHubRepoIssuesURL] or submitting a [Pull Request][GitHubRepoPullRequestsURL].
-
-See the [change log](CHANGELOG.md) for road map and release history.
-
-Bugs can be logged [here][GitHubRepoIssuesURL].
-
-Software [License](/LICENSE.txt).
-
 [![](assets/chart.png)][GitHubPagesURL]
 
-Similar "Open In" VS extensions can be found [here](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
+
+
+
+
 
 [AppVeyorProjectUrl]: https://ci.appveyor.com/project/GregTrevellick/openinapp-launcher
 [AppVeyorProjectBuildStatusBadgeSvg]: https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true
@@ -114,5 +76,4 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 [GitHubRepoURL]: https://github.com/GregTrevellick/OpenInApp.Launcher
 [GitHubRepoIssuesURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/issues
 [GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/OpenInApp.Launcher/pulls
-<!-- [ThirdPartyAppOfficialLogo]: assets/OpenInApp_Generic_175x175.png  -->
 [VisualStudioURL]: https://www.visualstudio.com/
