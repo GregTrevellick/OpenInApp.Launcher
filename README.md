@@ -27,6 +27,24 @@ Software License is available [here](/LICENSE.txt).
 
 [![Altova Xml Spy](src/OpenInApp.Assets/OpenInAltovaXmlSpy/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInAltovaXmlSpy/README.md)
 
+[![Gimp](src/OpenInApp.Assets/OpenInGimp/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInGimp/README.md)
+
+<!--[![Markdown Monster](src/OpenInApp.Assets/OpenInMarkdownMonster/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInMarkdownMonster/README.md)-->
+
+[![Paint Dot Net](src/OpenInApp.Assets/OpenInPaintDotNet/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInPaintDotNet/README.md)
+
+[![Visual Studio 2012](src/OpenInApp.Assets/OpenInVS2012/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInVS2012/README.md)
+
+[![Visual Studio 2013](src/OpenInApp.Assets/OpenInVS2013/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInVS2013/README.md)
+
+[![Visual Studio 2015](src/OpenInApp.Assets/OpenInVS2015/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInVS2015/README.md)
+
+[![Visual Studio 2017 Community](src/OpenInApp.Assets/OpenInVS2017Community/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInVS2017Community/README.md)
+
+[![Visual Studio 2017 Enterprise](src/OpenInApp.Assets/OpenInVS2017Enterprise/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInVS2017Enterprise/README.md)
+
+[![Visual Studio 2017 Professional](src/OpenInApp.Assets/OpenInVS2017Professional/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInVS2017Professional/README.md)
+
 ## Legal
 
 The [owner](https://github.com/GregTrevellick) of this [GitHub repository / software][GitHubRepoURL] is not affiliated, associated, authorized, endorsed by, employed by, sponsored by, or in any way officially connected with any of the third party application entities or any of its subsidiaries or its affiliates.
