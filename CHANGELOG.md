@@ -136,5 +136,5 @@ close down old repos, appveyor defns, nuget pkgs
 
 vs2017 upgrade
 
-gregt open in gvim ?
+
 -->
