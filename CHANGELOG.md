@@ -1,103 +1,118 @@
 # Change log
 
-These are the changes to each version that has been released on the official Visual Studio extension gallery.
+These are the changes to each version that has been released in the Visual Studio Marketplace.
 
-## 1.2.x (all apps)
+## 1.2.x 
 **CCYY-MM-DD** 
 - [x] Add context menu command to Code Editor window
 - [x] Remove context menu command from Solution node in solution explorer
 - [x] Remove context menu command from Project node in solution explorer
 - [x] Save all files before opening in external application
+- [x] Consolidate distinct repositories into a single code repository
+  - [x] AXS,  gimp, pdn, mm
+  - [x] vs2012/13/15/17*
 
-## PaintDotNet 1.0.59
-**2017-01-24**
-- [x] Bug fix for Tools > Options conflicts with other ["Open In" VS extensions](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
+# Historic Change log
 
-## PaintDotNet 1.0.27
-**2017-01-09**
-- [x] Initial release
+These are the changes to each version that has been released in the Visual Studio Marketplace, prior to consolidation into a single code repository.
 
-## markdown monster 1.0.60
+
+
+## Altova Xml Spy
+### 1.0.148
 **2017-01-24** 
 - [x] Bug fix for Tools > Options conflicts with other ["Open In" VS extensions](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
-
-## markdown monster 1.0.49
-**2017-01-18** 
-- [x] Asterisk as wildcard for typical files types
-
-## markdown monster 1.0.24
-**2017-01-10** 
-- [x] Initial release
-
-## gimp 1.0.47
-**2017-01-24** 
-- [x] Bug fix for Tools > Options conflicts with other ["Open In" VS extensions](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
-
-## gimp 1.0.11
-**2017-01-11**
-- [x] Initial release
-
-## Altova xml spy 1.0.148
-**2017-01-24** 
-- [x] Bug fix for Tools > Options conflicts with other ["Open In" VS extensions](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
-
-## Altova xml spy 1.0.137
+### 1.0.137
 **2017-01-18** 
 - [x] Enable wildcard as file type in options
 - [x] Bug fix for typical file types being case-sensitive
-
-## Altova xml spy 1.0.0
+### 1.0.0
 **2016-12-20** 
 - [x] Initial release
 
-## Visual Studio 2012 1.0.0
+
+
+## GIMP
+### 1.0.47
+**2017-01-24** 
+- [x] Bug fix for Tools > Options conflicts with other ["Open In" VS extensions](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
+### 1.0.11
+**2017-01-11**
+- [x] Initial release
+
+
+
+## Markdown Monster
+### 1.0.60
+**2017-01-24** 
+- [x] Bug fix for Tools > Options conflicts with other ["Open In" VS extensions](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
+### 1.0.49
+**2017-01-18** 
+- [x] Asterisk as wildcard for typical files types
+### 1.0.24
+**2017-01-10** 
+- [x] Initial release
+
+
+
+## Paint Dot Net 
+### 1.0.59
+**2017-01-24**
+- [x] Bug fix for Tools > Options conflicts with other ["Open In" VS extensions](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
+### 1.0.27
+**2017-01-09**
+- [x] Initial release
+
+
+
+## Visual Studio 2012 
+### 1.0.0
 **2017-01-30** 
 - [x] Initial release
 
-## Visual Studio 2013 1.0.0
+
+
+## Visual Studio 2013 
+### 1.0.0
 **2017-01-30** 
 - [x] Initial release
 
-## Visual Studio 2015 1.0.0
+
+
+## Visual Studio 2015
+### 1.0.0
 **2017-01-30** 
 - [x] Initial release
 
-## Visual Studio 2017 Ent 1.0.2
+
+
+## Visual Studio 2013 Community
+### 1.0.3
 **2017-02-04** 
 - [x] Update logos
-
-## Visual Studio 2017 Ent 1.0.1
-**2017-01-31** 
-- [x] Initial release
-
-## Visual Studio 2013 Comm 1.0.3
-**2017-02-04** 
-- [x] Update logos
-
-## Visual Studio 2013 Comm 1.0.2
-**2017-01-31** 
-- [x] Initial release
-
-## Visual Studio 2017 Pro 1.0.2
-**2017-02-04** 
-- [x] Update logos
-
-## vsVisual Studio 2017 Pro 1.0.1
+### 1.0.2
 **2017-01-31** 
 - [x] Initial release
 
 
 
+## Visual Studio 2017 Enterprise
+### 1.0.2
+**2017-02-04** 
+- [x] Update logos
+### 1.0.1
+**2017-01-31** 
+- [x] Initial release
 
 
 
-
-
-
-
-
-
-
+## Visual Studio 2017 Professional
+### 1.0.2
+**2017-02-04** 
+- [x] Update logos
+### 1.0.1
+**2017-01-31** 
+- [x] Initial release
 
 
 
