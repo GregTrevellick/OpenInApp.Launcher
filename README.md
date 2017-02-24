@@ -26,23 +26,15 @@ Software License is available [here](/LICENSE.txt).
 ---------------------------------------
 
 [![Altova Xml Spy](src/OpenInAltovaXmlSpy/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInAltovaXmlSpy/README.md)
-
 [![Gimp](src/OpenInGimp/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInGimp/README.md)
-
 [![Markdown Monster](src/OpenInMarkdownMonster/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInMarkdownMonster/README.md)
-
-[![Paint Dot Net](src/OpenInApp.Assets/OpenInPaintDotNet/ThirdPartyLogo.png)](src/OpenInApp.Assets/OpenInPaintDotNet/README.md)
-
+[![Paint Dot Net](src/OpenInPaintDotNet/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInPaintDotNet/README.md)
 [![Visual Studio 2012](src/OpenInVS2012/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2012/README.md)
 
 [![Visual Studio 2013](src/OpenInVS2013/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2013/README.md)
-
 [![Visual Studio 2015](src/OpenInVS2015//Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2015/README.md)
-
 [![Visual Studio 2017 Community](src/OpenInVS2017Community//Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2017Community/README.md)
-
 [![Visual Studio 2017 Enterprise](src/OpenInVS2017Enterprise//Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2017Enterprise/README.md)
-
 [![Visual Studio 2017 Professional](src/OpenInVS2017Professional//Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2017Professional/README.md)
 
 ## Legal
