@@ -77,7 +77,7 @@ namespace OpenInApp.Command
                                 if (proceedToExecute)
                                 {
                                     /* gregtgregt delete this comment
-                                     * true for sublime text, vs code, etc
+                                     * true for sublime text, vs code, etc markdown monster , gimp, altova, paint dot net too
                                      * false for devenv.exe */
                                     OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, dto.ActualPathToExe, true);
                                 }

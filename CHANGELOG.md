@@ -9,6 +9,7 @@ These are the changes to each version that has been released in the Visual Studi
 - [x] Remove context menu command from Project node in solution explorer
 - [x] Save all files before opening in external application
 - [x] Consolidate separate code repositories into a single code repository
+- [x] Open multiple files at once - gregt was this feature there all along ?
 
 # Historic Change log
 
