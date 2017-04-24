@@ -8,9 +8,7 @@ These are the changes to each version that has been released in the Visual Studi
 - [x] Remove context menu command from Solution node in solution explorer
 - [x] Remove context menu command from Project node in solution explorer
 - [x] Save all files before opening in external application
-- [x] Consolidate distinct repositories into a single code repository
-  - [x] AXS,  gimp, pdn, mm
-  - [x] vs2012/13/15/17*
+- [x] Consolidate separate code repositories into a single code repository
 
 # Historic Change log
 
@@ -104,7 +102,7 @@ NEW 3RD PARTY APP / BUILD PROCESS
 =================================
 Clone OpenInApp.Template as a new project
 Find replace all "gregtgregt" to the be the new app
-Add new app to Gulpfile.js 
+Add new app to Gulpfile.js - this merges ReadMeHeader.md & ReadMeCommon.md into ReadMe.md inside the app folder in OpenInApp.Template project
 Build solution - this will create/populate a folder for the app inside the OpenInApp.Assets project
 Publish the new project as a vsix in the usual manner
 
