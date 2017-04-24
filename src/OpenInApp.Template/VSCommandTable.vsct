@@ -1,48 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
   <Extern href="stdidcmd.h"/>
   <Extern href="vsshlids.h"/>    
-  <!--<Include href="KnownImageIds.vsct"/>-->
-
-  <!-- gregtgregt delete this comment:
-  IF 
-    Altova=four lots of 0x0100
-    Gimp=four lots of 0x0700
-    VS2013=four lots of 0x2213 
-    VS2015=four lots of 0x2215
-  THEN
-    Open
-    Open with
-    <separator>
-    Open in Altova
-    <separator>
-    Open in GIMP
-    <separator>
-    Open in VS2013
-    <separator>
-    Open in VS2015
-    <separator>
-    Exclude from project
-    <separator>
-    Cut
-    Copy
-    Delete
-    Rename
-    <separator>
-    Properties
-  SO
-    WHEN THESE NUMBERS ARE DIFFERNT PER VSIX A SEPARATOR IS GENERATED, SO KEEP IDENTICAL FOR EACH VSIX TO AVOID SEPARATORS (?)
-  -->
   <Commands package="guidOpenInAppPackage">
     <Groups>
       <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
-        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN"></Parent>
       </Group>
       <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x0100">
-        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"></Parent>
       </Group>
     </Groups>
+
     <Buttons>    
       <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppCodeWin" priority="0x0100" type="Button">
         <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" />
@@ -64,68 +31,24 @@
     </Bitmaps>
   </Commands>
 
-  <!-- Use CommandPlacement Element entries in the CommandPlacements Element section to put menus, groups, and commands in their parent menus and groups. -->
-  <!--TODO gregtgregt add ability to open .csproj & .sln files in altova-->
-  <!-- gregtgregt delete this comment:
-  IF 
-    Altova=0x0100
-    Gimp=0x0700
-    VS2013=0x2213 
-    VS2015=0x2215
-  THEN
-    Open
-    Open with
-    <separator>
-    Open in Altova
-    <separator>
-    Exclude from project
-    <separator>
-    Cut
-    Copy
-    Delete
-    Rename
-    <separator>
-    Properties
-    <separator>
-    Open in GIMP
-    <separator>
-    Open in VS2013
-    <separator>
-    Open in VS2015
-  SO
-    THESE NUMBERS MUST REMAIN THE SAME FOR ALL .VSCT FILES TO ENSURE THE ITEMS REMAIN TOGETHER
-  -->
   <CommandPlacements>
-    <!--TODO gregtgregt add ability to open .csproj & .sln files in altova-->
-    <!-- Placement for group. The parent of a group is a menu, context menu or toolbar. The priority sets the position of the group compared to the priority of other existing groups in the menu.-->
     <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x0100">
-      <!-- The parent of the group will be soln explr -->
-      <Parent guid="guidOpenInVsCmdSet" id="IDM_VS_CTXT_ITEMNODE" />
+      <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE" />
     </CommandPlacement>
     <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
-      <!-- The parent of the group will be the code window context menu -->
-      <Parent guid="guidOpenInVsCmdSet" id="IDM_VS_CTXT_CODEWIN" />
+      <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN" />
     </CommandPlacement>
-    <!-- Placement for command. The parent of a command is always a group, never a menu, context menu or toolbar. -->
-    <!--
-    <CommandPlacement guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppFolderExplore" priority="0x0001" >
-        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore"/>
-    </CommandPlacement>  
-    <CommandPlacement guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppCodeWin" priority="0x0001" >
-        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin"/>
-    </CommandPlacement>      
-    -->    
   </CommandPlacements>
 
   <Symbols>
-    <GuidSymbol name="guidOpenInAppPackage" value="{111117A9-1607-40E1-81B5-28D1454C1111}" /><!--gregtgregt new guid-->
-    <GuidSymbol name="guidOpenInVsCmdSet" value="{222217A9-1607-40E1-81B5-28D1454C2222}"><!--gregtgregt new guid-->
+    <GuidSymbol name="guidOpenInAppPackage" value="{111117A9-1607-40E1-81B5-28D1454C1111}" />
+    <GuidSymbol name="guidOpenInVsCmdSet" value="{222217A9-1607-40E1-81B5-28D1454C2222}">
       <IDSymbol name="GroupOpenInAppCodeWin" value="0x1030" />
       <IDSymbol name="CmdIdOpenInAppCodeWin" value="0x0100" />
       <IDSymbol name="GroupOpenInAppFolderExplore" value="0x1040" />
       <IDSymbol name="CmdIdOpenInAppFolderExplore" value="0x0110" />
     </GuidSymbol>
-    <GuidSymbol name="guidImages" value="{333317A9-1607-40E1-81B5-28D1454C3333}" ><!--gregtgregt new guid-->
+    <GuidSymbol name="guidImages" value="{333317A9-1607-40E1-81B5-28D1454C3333}" >
       <IDSymbol name="bmpPic1" value="1" />
     </GuidSymbol>
   </Symbols>

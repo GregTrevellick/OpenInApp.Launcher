@@ -16,8 +16,6 @@ These are the changes to each version that has been released in the Visual Studi
 
 These are the changes to each version that has been released in the Visual Studio Marketplace, prior to consolidation into a single code repository.
 
-
-
 ## Altova Xml Spy
 ### 1.0.148
 **2017-01-24** 
@@ -30,8 +28,6 @@ These are the changes to each version that has been released in the Visual Studi
 **2016-12-20** 
 - [x] Initial release
 
-
-
 ## GIMP
 ### 1.0.47
 **2017-01-24** 
@@ -39,8 +35,6 @@ These are the changes to each version that has been released in the Visual Studi
 ### 1.0.11
 **2017-01-11**
 - [x] Initial release
-
-
 
 ## Markdown Monster
 ### 1.0.60
@@ -53,8 +47,6 @@ These are the changes to each version that has been released in the Visual Studi
 **2017-01-10** 
 - [x] Initial release
 
-
-
 ## Paint Dot Net 
 ### 1.0.59
 **2017-01-24**
@@ -63,28 +55,20 @@ These are the changes to each version that has been released in the Visual Studi
 **2017-01-09**
 - [x] Initial release
 
-
-
 ## Visual Studio 2012 
 ### 1.0.0
 **2017-01-30** 
 - [x] Initial release
-
-
 
 ## Visual Studio 2013 
 ### 1.0.0
 **2017-01-30** 
 - [x] Initial release
 
-
-
 ## Visual Studio 2015
 ### 1.0.0
 **2017-01-30** 
 - [x] Initial release
-
-
 
 ## Visual Studio 2013 Community
 ### 1.0.3
@@ -94,8 +78,6 @@ These are the changes to each version that has been released in the Visual Studi
 **2017-01-31** 
 - [x] Initial release
 
-
-
 ## Visual Studio 2017 Enterprise
 ### 1.0.2
 **2017-02-04** 
@@ -103,8 +85,6 @@ These are the changes to each version that has been released in the Visual Studi
 ### 1.0.1
 **2017-01-31** 
 - [x] Initial release
-
-
 
 ## Visual Studio 2017 Professional
 ### 1.0.2
@@ -119,7 +99,21 @@ These are the changes to each version that has been released in the Visual Studi
 
 
 <!--
+
+NEW 3RD PARTY APP / BUILD PROCESS
+=================================
+Clone OpenInApp.Template as a new project
+Find replace all "gregtgregt" to the be the new app
+Add new app to Gulpfile.js 
+Build solution - this will create/populate a folder for the app inside the OpenInApp.Assets project
+Publish the new project as a vsix in the usual manner
+
+
+
+
 FUTURE 
+======
+
 integrate with coverall.io & add unit test code coverage badge    
 http://ngeor.net/2016/03/code-coverage-for-open-source-net-with-appveyor-and-coveralls/    
 https://cetus.io/tim/Digging-in/    
@@ -135,6 +129,5 @@ hide buttons based on file type (no gimp/pdn for txt files for example)
 close down old repos, appveyor defns, nuget pkgs
 
 vs2017 upgrade
-
 
 -->

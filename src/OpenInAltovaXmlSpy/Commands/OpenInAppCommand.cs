@@ -4,7 +4,6 @@ using OpenInApp.Common.Helpers;
 using OpenInAppAltovaXmlSpy.Helpers;
 using System;
 using System.ComponentModel.Design;
-//using System.Linq;
 
 namespace OpenInAppAltovaXmlSpy.Commands
 {

@@ -4,7 +4,6 @@ using OpenInApp.Common.Helpers;
 using OpenInAppMarkdownMonster.Helpers;
 using System;
 using System.ComponentModel.Design;
-//using System.Linq;
 
 namespace OpenInAppMarkdownMonster.Commands
 {

@@ -4,7 +4,6 @@ using OpenInApp.Common.Helpers;
 using OpenInAppGimp.Helpers;
 using System;
 using System.ComponentModel.Design;
-//using System.Linq;
 
 namespace OpenInAppGimp.Commands
 {

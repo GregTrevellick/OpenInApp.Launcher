@@ -5,7 +5,6 @@ using OpenInAppPaintDotNet.Helpers;
 using OpenInAppPaintDotNet;
 using System;
 using System.ComponentModel.Design;
-//using System.Linq;
 
 namespace OpenInAppPaintDotNet.Commands
 {

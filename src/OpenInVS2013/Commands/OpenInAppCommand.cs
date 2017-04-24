@@ -4,7 +4,6 @@ using OpenInApp.Common.Helpers;
 using OpenInVS2013.Helpers;
 using System;
 using System.ComponentModel.Design;
-//using System.Linq;
 
 namespace OpenInVS2013.Commands
 {
