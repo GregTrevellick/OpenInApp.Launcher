@@ -86,9 +86,11 @@ namespace OpenInAppPaintDotNet.Commands
                 ExecutableFileToBrowseFor = ConstantsForApp.ExecutableFileToBrowseFor,
                 FileQuantityWarningLimit = VSPackage.Options.FileQuantityWarningLimit,
                 IsFromSolutionExplorer = isFromSolutionExplorer,
+                SeparateProcessPerFileToBeOpened = ConstantsForApp.SeparateProcessPerFileToBeOpened,
                 ServiceProvider = ServiceProvider,
                 SuppressTypicalFileExtensionsWarning = VSPackage.Options.SuppressTypicalFileExtensionsWarning,
-                TypicalFileExtensions = VSPackage.Options.TypicalFileExtensions
+                TypicalFileExtensions = VSPackage.Options.TypicalFileExtensions,
+                UseShellExecute = ConstantsForApp.UseShellExecute
             };
 
             var persistOptionsDto = menuItemCallBackHelper.InvokeCommandCallBack(dto);

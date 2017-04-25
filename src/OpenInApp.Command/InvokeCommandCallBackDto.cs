@@ -12,5 +12,9 @@ namespace OpenInApp.Command
         public IServiceProvider ServiceProvider { get; set; }        
         public bool SuppressTypicalFileExtensionsWarning { get; set; }
         public string TypicalFileExtensions { get; set; }
+
+
+        public bool SeparateProcessPerFileToBeOpened{ get; set; }
+        public bool UseShellExecute { get; set; }
     }
 }

@@ -21,5 +21,7 @@ namespace OpenInAppMarkdownMonster.Helpers
 
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;
+        internal static bool SeparateProcessPerFileToBeOpened = true;
+        internal static bool UseShellExecute = true;
     }
 }
