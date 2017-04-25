@@ -76,11 +76,13 @@ namespace OpenInApp.Command
                                 }
                                 if (proceedToExecute)
                                 {
-                                    /* gregt
-                                     * code this up to be conditional
-                                     * needs to be "true" for markdown monster, gimp, altova & paint dot net
-                                     * needs top be "false" for devenv.exe (vs2012/13/15/17c/17e/17p) */
-                                    OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, dto.ActualPathToExe, false);
+                                    // gregt code this up to be conditional
+
+                                    //markdown monster, gimp, altova & paint dot net
+                                    //OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, dto.ActualPathToExe, true, true);
+
+                                    //devenv.exe (vs2012/13/15/17c/17e/17p)
+                                    OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, dto.ActualPathToExe, true, false);
                                 }
                             }
                         }
