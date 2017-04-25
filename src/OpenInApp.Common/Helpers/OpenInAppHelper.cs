@@ -17,8 +17,7 @@ namespace OpenInApp.Common.Helpers
         /// <param name="actualFilesToBeOpened">The actual files to be opened.</param>
         /// <param name="executableFullPath">The full path to the executable.</param>
         /// <param name="separateProcessPerFileToBeOpened">Whether or not to start a single process or multiple processes for the actual files to be opened.</param> 
-        /// <param name="useShellExecute">Whether or not to use shell execution or execute via operating system. Default is true.</param>
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////public static void InvokeCommand(IEnumerable<string> actualFilesToBeOpened, string executableFullPath, bool separateProcessPerFileToBeOpened = false, bool useShellExecute = true)
+        /// <param name="useShellExecute">Whether or not to use shell execution or execute via operating system.</param>
         public static void InvokeCommand(IEnumerable<string> actualFilesToBeOpened, string executableFullPath, bool separateProcessPerFileToBeOpened, bool useShellExecute)
         {
             string fileName;
