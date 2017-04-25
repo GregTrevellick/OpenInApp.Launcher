@@ -82,7 +82,19 @@ namespace OpenInApp.Command
                                     //OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, dto.ActualPathToExe, true, true);
 
                                     //devenv.exe (vs2012/13/15/17c/17e/17p)
-                                    OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, dto.ActualPathToExe, true, false);
+                                    //OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, dto.ActualPathToExe, true, false);
+
+
+                                    //gregt to  be tested !!!
+                                    var separateProcessPerFileToBeOpened = true;
+                                    var useShellExecute = true;
+
+                                    if (dto.ActualPathToExe.Contains("devenv.exe"))
+                                    {
+                                        useShellExecute = false;
+                                    }
+
+                                    OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, dto.ActualPathToExe, separateProcessPerFileToBeOpened, useShellExecute);
                                 }
                             }
                         }
