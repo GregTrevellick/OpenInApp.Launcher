@@ -102,9 +102,15 @@ These are the changes to each version that has been released in the Visual Studi
 NEW 3RD PARTY APP / BUILD PROCESS
 =================================
 Clone OpenInApp.Template as a new project
+
 Find replace all "gregtgregt" to the be the new app
-Add new app to Gulpfile.js - this merges ReadMeHeader.md (which has app specific variables) & ReadMeCommon.md (the generic readme for each vsix, located in OpenInApp.Assets\ReadMeCommon.md) into ReadMe.md inside the app folder in OpenInApp.Template project
+
+Copy an existing ReadMeScreenShot_ContextMenu.png (e.g. in OpenInApp.Assets\OpenInApp.Template) into the new folder, & update the wording for the new app
+
+Add new app to Gulpfile.js - this merges ReadMeHeader.md (which has app specific variables) & ReadMeCommon.md (the generic readme for each vsix, located in OpenInApp.Assets\ReadMeCommon.md) into ReadMe.md inside the app folder in OpenInApp.Template project - this app specific ReadMe.md isn't for the GitHub landing page of OIA.Launcher, but the content is for copy/pasting into the VSMP page for the app itself
+
 Build solution - this will create/populate a folder for the app inside the OpenInApp.Assets project & create (e.g) C:\Users\greg\Source\Repos\OpenInApp.Launcher\src\OpenInGimp\bin\Debug\OpenInAppGimp.vsix for subsequent uploading
+
 Publish the new project as a vsix in the usual manner
 
 
