@@ -2,14 +2,13 @@
 
 These are the changes to each version that has been released in the Visual Studio Marketplace.
 
-## 1.2.x 
-**CCYY-MM-DD** 
+## 1.1.1 
+**2017-04-26** 
 - [x] Add context menu command to Code Editor window
 - [x] Remove context menu command from Solution node in solution explorer
 - [x] Remove context menu command from Project node in solution explorer
 - [x] Save all files before opening in external application
 - [x] Consolidate separate code repositories into a single code repository
-- [x] Open multiple files at once - gregt was this feature there all along ?
 
 # Historic Change log
 
