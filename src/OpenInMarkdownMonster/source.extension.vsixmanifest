@@ -3,7 +3,7 @@
   <Metadata>
     <Identity Id="MFA20CC7-7C8E-4E41-B258-539C067E5649" Version="1.1.1" Language="en-US" Publisher="GregTrevellick" />
     <DisplayName>Open in Markdown Monster</DisplayName>
-    <Description xml:space="preserve">Open multiple files simultaneously in Markdown Monster directly from Solution Explorer.</Description>
+    <Description xml:space="preserve">Open multiple files simultaneously in Markdown Monster directly from Solution Explorer or Code Editor window.</Description>
     <MoreInfo>https://github.com/GregTrevellick/OpenInMarkdownMonster</MoreInfo>
     <License>LICENSE.txt</License>
     <ReleaseNotes>https://github.com/GregTrevellick/OpenInMarkdownMonster/blob/master/CHANGELOG.md</ReleaseNotes>

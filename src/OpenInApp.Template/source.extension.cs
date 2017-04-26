@@ -9,7 +9,7 @@ namespace OpenInGregtGregt
     {
         public const string Id = "gregtgregt.AA6B2292-8144-47F4-B559-2178E2B0DE44";
         public const string Name = "Open in gregtgregt";
-        public const string Description = @"Open multiple files simultaneously in gregtgregt directly from Solution Explorer.";
+        public const string Description = @"Open multiple files simultaneously in gregtgregt directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
         public const string Version = "1.1.15";
         public const string Author = "GregTrevellick";

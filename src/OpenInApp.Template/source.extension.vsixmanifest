@@ -3,7 +3,7 @@
   <Metadata>
     <Identity Id="gregtgregt.AA6B2292-8144-47F4-B559-2178E2B0DE44" Version="1.1.15" Language="en-US" Publisher="GregTrevellick" />
     <DisplayName>Open in gregtgregt</DisplayName>
-    <Description xml:space="preserve">Open multiple files simultaneously in gregtgregt directly from Solution Explorer.</Description>
+    <Description xml:space="preserve">Open multiple files simultaneously in gregtgregt directly from Solution Explorer or Code Editor window.</Description>
     <MoreInfo>https://github.com/GregTrevellick/OpenInGregtGregt</MoreInfo>
     <License>LICENSE.txt</License>
     <ReleaseNotes>https://github.com/GregTrevellick/OpenInGregtGregt/blob/master/CHANGELOG.md</ReleaseNotes>

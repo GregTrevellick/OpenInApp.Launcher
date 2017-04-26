@@ -9,7 +9,7 @@ namespace OpenInVS2013
     {
         public const string Id = "4EE49344-F83F-40D8-9901-79C6D5673B71";
         public const string Name = "Open in Visual Studio 2013";
-        public const string Description = @"Open multiple files simultaneously in Visual Studio 2013 directly from Solution Explorer.";
+        public const string Description = @"Open multiple files simultaneously in Visual Studio 2013 directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
         public const string Version = "1.1.1";
         public const string Author = "GregTrevellick";

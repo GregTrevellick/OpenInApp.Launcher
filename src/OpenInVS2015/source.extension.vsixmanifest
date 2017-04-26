@@ -3,7 +3,7 @@
   <Metadata>
     <Identity Id="51818B3F-32D2-4538-BB5B-73A4BEDCB8B5" Version="1.1.1" Language="en-US" Publisher="GregTrevellick" />
     <DisplayName>Open in Visual Studio 2015</DisplayName>
-    <Description xml:space="preserve">Open multiple files simultaneously in Visual Studio 2015 directly from Solution Explorer.</Description>
+    <Description xml:space="preserve">Open multiple files simultaneously in Visual Studio 2015 directly from Solution Explorer or Code Editor window.</Description>
     <MoreInfo>https://github.com/GregTrevellick/OpenInAppVS2015</MoreInfo>
     <License>LICENSE.txt</License>
     <ReleaseNotes>https://github.com/GregTrevellick/OpenInAppVS2015/blob/master/CHANGELOG.md</ReleaseNotes>

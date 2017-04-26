@@ -9,7 +9,7 @@ namespace OpenInVS2015
     {
         public const string Id = "51818B3F-32D2-4538-BB5B-73A4BEDCB8B5";
         public const string Name = "Open in Visual Studio 2015";
-        public const string Description = @"Open multiple files simultaneously in Visual Studio 2015 directly from Solution Explorer.";
+        public const string Description = @"Open multiple files simultaneously in Visual Studio 2015 directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
         public const string Version = "1.1.1";
         public const string Author = "GregTrevellick";

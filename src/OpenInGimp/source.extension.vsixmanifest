@@ -3,7 +3,7 @@
   <Metadata>
     <Identity Id="AE977542-57A6-448A-89FB-A0915C592A6E" Version="1.1.1" Language="en-US" Publisher="GregTrevellick" />
     <DisplayName>Open in GIMP - GNU Image Manipulation Program</DisplayName>
-    <Description xml:space="preserve">Open multiple files simultaneously in GIMP (GNU Image Manipulation Program) directly from Solution Explorer.</Description>
+    <Description xml:space="preserve">Open multiple files simultaneously in GIMP (GNU Image Manipulation Program) directly from Solution Explorer or Code Editor window.</Description>
     <MoreInfo>https://github.com/GregTrevellick/OpenInGimp</MoreInfo>
     <License>LICENSE.txt</License>
     <ReleaseNotes>https://github.com/GregTrevellick/OpenInGimp/blob/master/CHANGELOG.md</ReleaseNotes>

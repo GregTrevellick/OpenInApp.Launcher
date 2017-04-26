@@ -118,8 +118,6 @@ ensure vsmp has the repo url as "https://github.com/GregTrevellick/OpenInApp.Lau
 
 rename "https://github.com/GregTrevellick/OpenInGimp" to have a "Z" prefix
 
-retire "https://ci.appveyor.com/project/GregTrevellick/openingimp"
-
 update the VSMP extension description from "https://github.com/GregTrevellick/OpenInApp.Launcher/blob/master/src/OpenInApp.Assets/OpenInGimp/README.md" (not from Visual Studio IDE)
 
 
@@ -137,8 +135,6 @@ https://github.com/csmacnz/coveralls.net
 https://github.com/jdeering/coveralls.net
 
 hide buttons based on file type (no gimp/pdn for txt files for example)
-
-close down old repos, appveyor defns, nuget pkgs
 
 vs2017 upgrade
 

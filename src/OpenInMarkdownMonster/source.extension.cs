@@ -9,7 +9,7 @@ namespace OpenInAppMarkdownMonster
     {
         public const string Id = "MFA20CC7-7C8E-4E41-B258-539C067E5649";
         public const string Name = "Open in Markdown Monster";
-        public const string Description = @"Open multiple files simultaneously in Markdown Monster directly from Solution Explorer.";
+        public const string Description = @"Open multiple files simultaneously in Markdown Monster directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
         public const string Version = "1.1.1";
         public const string Author = "GregTrevellick";

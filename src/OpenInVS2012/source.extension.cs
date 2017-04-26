@@ -9,7 +9,7 @@ namespace OpenInVS2012
     {
         public const string Id = "4F1F19BB-1F05-4D64-9053-A35BD4A634B5";
         public const string Name = "Open in Visual Studio 2012";
-        public const string Description = @"Open multiple files simultaneously in Visual Studio 2012 directly from Solution Explorer.";
+        public const string Description = @"Open multiple files simultaneously in Visual Studio 2012 directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
         public const string Version = "1.1.1";
         public const string Author = "GregTrevellick";

@@ -9,7 +9,7 @@ namespace OpenInVS2017Community
     {
         public const string Id = "077346DD-CC6F-4D46-BC6B-2634EE1720D0";
         public const string Name = "Open in Visual Studio 2017 Community";
-        public const string Description = @"Open multiple files simultaneously in Visual Studio 2017 Community Edition directly from Solution Explorer.";
+        public const string Description = @"Open multiple files simultaneously in Visual Studio 2017 Community Edition directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
         public const string Version = "1.1.1";
         public const string Author = "GregTrevellick";
