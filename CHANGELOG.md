@@ -103,8 +103,8 @@ NEW 3RD PARTY APP / BUILD PROCESS
 =================================
 Clone OpenInApp.Template as a new project
 Find replace all "gregtgregt" to the be the new app
-Add new app to Gulpfile.js - this merges ReadMeHeader.md & ReadMeCommon.md into ReadMe.md inside the app folder in OpenInApp.Template project
-Build solution - this will create/populate a folder for the app inside the OpenInApp.Assets project
+Add new app to Gulpfile.js - this merges ReadMeHeader.md (which has app specific variables) & ReadMeCommon.md (the generic readme for each vsix, located in OpenInApp.Assets\ReadMeCommon.md) into ReadMe.md inside the app folder in OpenInApp.Template project
+Build solution - this will create/populate a folder for the app inside the OpenInApp.Assets project & create (e.g) C:\Users\greg\Source\Repos\OpenInApp.Launcher\src\OpenInGimp\bin\Debug\OpenInAppGimp.vsix for subsequent uploading
 Publish the new project as a vsix in the usual manner
 
 
