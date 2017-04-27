@@ -114,13 +114,9 @@ Add new app to Gulpfile.js - this merges ReadMeHeader.md (which has app specific
 
 Build solution - this will create/populate a folder for the app inside the OpenInApp.Assets project 
 
-
-
-
-
 Publish the new project as a vsix in the usual manner - specify the new vsix as C:\Users\greg\Source\Repos\OpenInApp.Launcher\Src\OpenInGimp\bin\Debug\OpenInAppGimp.vsix
 
-update the VSMP extension description from "https://github.com/GregTrevellick/OpenInApp.Launcher/blob/master/src/OpenInApp.Assets/OpenInGimp/README.md" (not from Visual Studio IDE)
+update the VSMP extension description from "https://github.com/GregTrevellick/OpenInApp.Launcher/blob/master/src/OpenInApp.Assets/OpenInGimp/README.md" (from github not from Visual Studio IDE)
 
 
 
