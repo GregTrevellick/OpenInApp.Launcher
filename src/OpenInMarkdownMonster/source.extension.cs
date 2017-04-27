@@ -11,7 +11,7 @@ namespace OpenInAppMarkdownMonster
         public const string Name = "Open in Markdown Monster";
         public const string Description = @"Open multiple files simultaneously in Markdown Monster directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
-        public const string Version = "1.1.1";
+        public const string Version = "1.1.2";
         public const string Author = "GregTrevellick";
         public const string Tags = "open, open in, MarkdownMonster, Markdown Monster, Markdown";
     }

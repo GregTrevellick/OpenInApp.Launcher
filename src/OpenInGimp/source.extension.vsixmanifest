@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="AE977542-57A6-448A-89FB-A0915C592A6E" Version="1.1.1" Language="en-US" Publisher="GregTrevellick" />
+    <Identity Id="AE977542-57A6-448A-89FB-A0915C592A6E" Version="1.1.2" Language="en-US" Publisher="GregTrevellick" />
     <DisplayName>Open in GIMP - GNU Image Manipulation Program</DisplayName>
     <Description xml:space="preserve">Open multiple files simultaneously in GIMP (GNU Image Manipulation Program) directly from Solution Explorer or Code Editor window.</Description>
-    <MoreInfo>https://github.com/GregTrevellick/OpenInGimp</MoreInfo>
+    <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>
     <License>LICENSE.txt</License>
-    <ReleaseNotes>https://github.com/GregTrevellick/OpenInGimp/blob/master/CHANGELOG.md</ReleaseNotes>
+    <ReleaseNotes>https://github.com/GregTrevellick/OpenInApp.Launcher/blob/master/CHANGELOG.md</ReleaseNotes>
     <Icon>Resources\VsixExtensionIcon_90x90.png</Icon>
     <PreviewImage>Resources\VsixExtensionPreview_175x175.png</PreviewImage>
     <Tags>open, open in, gimp, GNU Image Manipulation Program</Tags>

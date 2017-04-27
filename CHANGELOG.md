@@ -2,6 +2,10 @@
 
 These are the changes to each version that has been released in the Visual Studio Marketplace.
 
+## 1.1.2
+**2017-04-27** 
+- [x] URL updates within VSIX manifest files
+
 ## 1.1.1 
 **2017-04-26** 
 - [x] Add context menu command to Code Editor window
@@ -108,17 +112,18 @@ Copy an existing ReadMeScreenShot_ContextMenu.png (e.g. in OpenInApp.Assets\Open
 
 Add new app to Gulpfile.js - this merges ReadMeHeader.md (which has app specific variables) & ReadMeCommon.md (the generic readme for each vsix, located in OpenInApp.Assets\ReadMeCommon.md) into ReadMe.md inside the app folder in OpenInApp.Template project - this app specific ReadMe.md isn't for the GitHub landing page of OIA.Launcher, but the content is for copy/pasting into the VSMP page for the app itself
 
-Build solution - this will create/populate a folder for the app inside the OpenInApp.Assets project & create (e.g) C:\Users\greg\Source\Repos\OpenInApp.Launcher\src\OpenInGimp\bin\Debug\OpenInAppGimp.vsix for subsequent uploading
+Build solution - this will create/populate a folder for the app inside the OpenInApp.Assets project 
 
-Publish the new project as a vsix in the usual manner - takes a few minutes 
 
-specify the new vsix as C:\Users\greg\Source\Repos\OpenInApp.Launcher\Src\OpenInGimp\bin\Debug\OpenInAppGimp.vsix
 
-ensure vsmp has the repo url as "https://github.com/GregTrevellick/OpenInApp.Launcher" not "https://github.com/GregTrevellick/OpenInGimp"
 
-rename "https://github.com/GregTrevellick/OpenInGimp" to have a "Z" prefix
+
+Publish the new project as a vsix in the usual manner - specify the new vsix as C:\Users\greg\Source\Repos\OpenInApp.Launcher\Src\OpenInGimp\bin\Debug\OpenInAppGimp.vsix
 
 update the VSMP extension description from "https://github.com/GregTrevellick/OpenInApp.Launcher/blob/master/src/OpenInApp.Assets/OpenInGimp/README.md" (not from Visual Studio IDE)
+
+
+
 
 
 FUTURE 
