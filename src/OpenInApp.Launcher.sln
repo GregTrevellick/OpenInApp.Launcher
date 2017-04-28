@@ -38,7 +38,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2017Enterprise", "O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2017Professional", "OpenInVS2017Professional\OpenInVS2017Professional.csproj", "{5E307B73-F302-42C0-945F-C695D6D4FE91}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{7D008998-3D8D-43BA-833C-06586753FD8C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHubAssets", "GitHubAssets", "{7D008998-3D8D-43BA-833C-06586753FD8C}"
 	ProjectSection(SolutionItems) = preProject
 		..\assets\chart.png = ..\assets\chart.png
 		..\assets\zOpenInApp_Generic_175x175.png = ..\assets\zOpenInApp_Generic_175x175.png
