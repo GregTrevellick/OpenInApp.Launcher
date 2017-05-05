@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Common.Helpers;
 using OpenInVivaldi.Commands;
-using OpenInVivaldi.Options.GregtGregt;
+using OpenInVivaldi.Options.Vivaldi;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;

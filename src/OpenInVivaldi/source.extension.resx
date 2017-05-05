@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="110" xml:space="preserve">
-    <value>Open in gregtgregt</value>
+    <value>Open in Vivaldi</value>
   </data>
   <data name="112" xml:space="preserve">
     <value>Open multiple files simultaneously in Vivaldi web browser directly from Solution Explorer or Code Editor window.</value>

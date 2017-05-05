@@ -5,7 +5,7 @@ using OpenInVivaldi.Helpers;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace OpenInVivaldi.Options.GregtGregt
+namespace OpenInVivaldi.Options.Vivaldi
 {
     public class GeneralOptions : DialogPage
     {
