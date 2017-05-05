@@ -43,6 +43,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="OpenInVivaldi\README.md" />
+    <None Include="OpenInVivaldi\ReadMeHeader.md" />
     <None Include="ReadMeCommon.md" />
     <None Include="package.json" />
     <None Include="OpenInAltovaXmlSpy\README.md" />
