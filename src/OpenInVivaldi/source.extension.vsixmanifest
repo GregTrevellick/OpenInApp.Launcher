@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="gregtgregt.AA6B2292-8144-47F4-B559-2178E2B0DE44" Version="1.1.2" Language="en-US" Publisher="GregTrevellick" />
+    <Identity Id="AEAAB1BF-8A84-481B-A113-C823E9EC95BC" Version="1.1.2" Language="en-US" Publisher="GregTrevellick" />
     <DisplayName>Open in Vivaldi</DisplayName>
     <Description xml:space="preserve">Open multiple files simultaneously in Vivaldi web browser directly from Solution Explorer or Code Editor window.</Description>
     <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>

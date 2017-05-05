@@ -7,9 +7,10 @@ namespace OpenInApp.Common.Tests.Helpers
     public class GeneralOptionsHelperTests
     {
         [Test()]
-        [TestCase("Altova", "XMLSpy", "XmlSpy.exe", @"C:\Program Files (x86)\Altova\XMLSpy2016\XMLSpy.exe")]
-        [TestCase("Paint.NET", null, "PaintDotNet.exe", @"C:\Program Files\Paint.NET\PaintDotNet.exe")]
-        [TestCase("Microsoft Visual Studio", @"2017\Community\Common7\IDE", "devenv.exe", @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe")]
+        //[TestCase("Altova", "XMLSpy", "XmlSpy.exe", @"C:\Program Files (x86)\Altova\XMLSpy2016\XMLSpy.exe")]
+        //[TestCase("Paint.NET", null, "PaintDotNet.exe", @"C:\Program Files\Paint.NET\PaintDotNet.exe")]
+        //[TestCase("Microsoft Visual Studio", @"2017\Community\Common7\IDE", "devenv.exe", @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe")]
+        [TestCase("Vivaldi", "Application", "Vivaldi.exe", @"C:\Users\greg\AppData\Local\Vivaldi\Application\Vivaldi.exe")]
         [Category("I")]
         public void GetActualPathToExeTest(string appFolderName, string appSubFolderName, string executableFileToBrowseFor, string expected)
         {

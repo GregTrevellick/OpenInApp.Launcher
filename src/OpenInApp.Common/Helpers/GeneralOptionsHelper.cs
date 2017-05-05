@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 
 namespace OpenInApp.Common.Helpers
 {
@@ -31,7 +32,12 @@ namespace OpenInApp.Common.Helpers
             var programFiles = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));
             var programFilesFolders = programFiles.Parent.GetDirectories(programFiles.Name.Replace(" (x86)", string.Empty) + "*");
 
-            foreach (DirectoryInfo programFilesFolder in programFilesFolders)
+            var userAppData = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+            var userAppDataFolders = userAppData.Parent.GetDirectories("*");
+
+            var programFilesFolders2 = programFilesFolders.Union(userAppDataFolders);
+
+            foreach (DirectoryInfo programFilesFolder in programFilesFolders2)
             {
                 var appParentFolderPaths = programFilesFolder.GetDirectories(appFolderName);
                 foreach (DirectoryInfo appParentFolderPath in appParentFolderPaths)

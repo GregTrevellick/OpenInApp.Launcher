@@ -15,14 +15,14 @@
         <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
-          <ButtonText>Open in Vivaldi GregtGregt code edtor</ButtonText>
+          <ButtonText>Open in Vivaldi</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppFolderExplore" priority="0x100" type="Button">
         <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
-          <ButtonText>Open in Vivaldi GregtGregt soln explr</ButtonText>
+          <ButtonText>Open in Vivaldi</ButtonText>
         </Strings>
       </Button>
     </Buttons>
