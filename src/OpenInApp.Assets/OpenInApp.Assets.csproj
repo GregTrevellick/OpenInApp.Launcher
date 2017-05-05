@@ -92,6 +92,10 @@
     <Content Include="OpenInApp.Template\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInApp.Template\ReadMeScreenShot_OptionsGeneral.png" />
     <Content Include="OpenInApp.Template\ThirdPartyLogoGregtGregt.png" />
+    <Content Include="OpenInVivaldi\chart.png" />
+    <Content Include="OpenInVivaldi\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInVivaldi\ReadMeScreenShot_OptionsGeneral.png" />
+    <Content Include="OpenInVivaldi\ThirdPartyLogo.png" />
     <Content Include="OpenInVS2012\chart.png" />
     <Content Include="OpenInVS2012\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInVS2012\ReadMeScreenShot_OptionsGeneral.png" />
