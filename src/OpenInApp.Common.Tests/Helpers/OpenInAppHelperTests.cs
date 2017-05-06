@@ -57,7 +57,7 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("I")]
-        //HAPPILY OPENS BOTH FILES [TestCase(@"C:\Users\greg\AppData\Local\Vivaldi\Application\vivaldi.exe", null)]
+        //TESTED & LIVE [TestCase(@"C:\Users\greg\AppData\Local\Vivaldi\Application\vivaldi.exe", null)]
         //HAPPILY OPENS BOTH FILES [TestCase(@"C:\Program Files (x86)\Opera\opera.exe", null)]
         //HAPPILY OPENS BOTH FILES [TestCase(@"C:\Program Files\Opera developer\launcher.exe", null)]        
         //HAPPILY OPENS BOTH FILES [TestCase(@"C:\Program Files\Firefox Developer Edition\firefox.exe", null)]//(aurora)
