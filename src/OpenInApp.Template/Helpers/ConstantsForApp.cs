@@ -5,7 +5,6 @@ namespace OpenInGregtGregt.Helpers
 {
     public class ConstantsForApp //gregt convert to an interface
     {
-        // gregtgregt delete this comment - must retain 'AppFolderName' & 'AppSubFolderName' for altova 2009-2016 file system 
         public const string AppFolderName = "Markdown Monster";//@"gregtgregt";
         public const string AppSubFolderName = null;
         public const string ExecutableFileToBrowseFor = "MarkdownMonster.exe";//"gregtgregt";

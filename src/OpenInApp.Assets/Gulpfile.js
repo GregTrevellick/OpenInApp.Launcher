@@ -6,13 +6,13 @@ var replace = require('gulp-replace');
 
 gulp.task('OpenInAltovaXmlSpy',       function () { return OIAConcat('OpenInAltovaXmlSpy'       ,'Altova XMLSpy XML Editor') });
 gulp.task('OpenInApp.Template',       function () { return OIAConcat('OpenInApp.Template'       ,'GregtGregt') });
+gulp.task('OpenInChromeCanary',       function () { return OIAConcat('OpenInChromeCanary'       , 'Chrome Canary') });
+gulp.task('OpenInFirefoxDeveloperEdition', function () { return OIAConcat('OpenInFirefoxDeveloperEdition', 'Firefox Developer Edition') });
 gulp.task('OpenInGimp',               function () { return OIAConcat('OpenInGimp'               ,'GIMP') });
 gulp.task('OpenInMarkdownMonster',    function () { return OIAConcat('OpenInMarkdownMonster'    ,'Markdown Monster') });
-gulp.task('OpenInPaintDotNet', function () { return OIAConcat('OpenInPaintDotNet', 'paint.net') });
-gulp.task('OpenInChromeCanary', function () { return OIAConcat('OpenInChromeCanary', 'Chrome Canary') });
-gulp.task('OpenInFirefoxDeveloperEdition', function () { return OIAConcat('OpenInFirefoxDeveloperEdition', 'Firefox Developer Edition') });
-gulp.task('OpenInOpera', function () { return OIAConcat('OpenInOpera', 'Opera') });
-gulp.task('OpenInOperaDeveloper', function () { return OIAConcat('OpenInOperaDeveloper', 'Opera Developer') });
+gulp.task('OpenInOpera',              function () { return OIAConcat('OpenInOpera'              , 'Opera') });
+gulp.task('OpenInOperaDeveloper',     function () { return OIAConcat('OpenInOperaDeveloper'     , 'Opera Developer') });
+gulp.task('OpenInPaintDotNet',        function () { return OIAConcat('OpenInPaintDotNet'        , 'paint.net') });
 gulp.task('OpenInVivaldi',            function () { return OIAConcat('OpenInVivaldi'            ,'Vivaldi Web Browser') });
 gulp.task('OpenInVS2012',             function () { return OIAConcat('OpenInVS2012'             ,'Visual Studio 2012') });
 gulp.task('OpenInVS2013',             function () { return OIAConcat('OpenInVS2013'             ,'Visual Studio 2013') });
@@ -24,12 +24,12 @@ gulp.task('OpenInVS2017Professional', function () { return OIAConcat('OpenInVS20
 gulp.task('default',
     [ 'OpenInAltovaXmlSpy'
     , 'OpenInApp.Template'
+    , 'OpenInChromeCanary'
+    , 'OpenInFirefoxDeveloperEdition'
     , 'OpenInGimp'
-        , 'OpenInChromeCanary'
-            , 'OpenInFirefoxDeveloperEdition'
-                , 'OpenInOpera'
-                    , 'OpenInOperaDeveloper'
     , 'OpenInMarkdownMonster'
+    , 'OpenInOpera'
+    , 'OpenInOperaDeveloper'
     , 'OpenInPaintDotNet'
     , 'OpenInVivaldi'
     , 'OpenInVS2012'

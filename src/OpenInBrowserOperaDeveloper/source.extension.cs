@@ -7,7 +7,7 @@ namespace OpenInOperaDeveloper
 {
     static class Vsix
     {
-        public const string Id = "gregtgregt.AA6B2292-8144-47F4-B559-2178E2B0DE44";
+        public const string Id = "2580C34C-5E76-458E-8C78-E216117C094A";
         public const string Name = "Open in Opera Developer";
         public const string Description = @"Open multiple files simultaneously in Opera Developer directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";

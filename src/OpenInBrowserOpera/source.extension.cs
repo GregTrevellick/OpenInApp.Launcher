@@ -7,11 +7,11 @@ namespace OpenInOpera
 {
     static class Vsix
     {
-        public const string Id = "gregtgregt.AA6B2292-8144-47F4-B559-2178E2B0DE44";
+        public const string Id = "FD20514F-BAAB-4297-B8E8-7D803456A09A";
         public const string Name = "Open in Opera";
         public const string Description = @"Open multiple files simultaneously in Opera directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
-        public const string Version = "1.1.2";
+        public const string Version = "1.1.4";
         public const string Author = "GregTrevellick";
         public const string Tags = "open, open in, opera";
     }

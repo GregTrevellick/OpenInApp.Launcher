@@ -7,11 +7,11 @@ namespace OpenInChromeCanary
 {
     static class Vsix
     {
-        public const string Id = "gregtgregt.AA6B2292-8144-47F4-B559-2178E2B0DE44";
+        public const string Id = "2B0F2EE6-6EBD-4DF2-A8F7-650D312C6230";
         public const string Name = "Open in Chrome Canary";
         public const string Description = @"Open multiple files simultaneously in Chrome Canary directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
-        public const string Version = "1.1.2";
+        public const string Version = "1.1.4";
         public const string Author = "GregTrevellick";
         public const string Tags = "open, open in, chrome, canary";
     }
