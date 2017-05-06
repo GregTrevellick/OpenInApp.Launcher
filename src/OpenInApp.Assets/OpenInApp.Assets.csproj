@@ -44,9 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="OpenInChromeCanary\README.md" />
+    <None Include="OpenInChromeCanary\ReadMeHeader.md" />
     <None Include="OpenInFirefoxDeveloperEdition\README.md" />
+    <None Include="OpenInFirefoxDeveloperEdition\ReadMeHeader.md" />
     <None Include="OpenInOperaDeveloper\README.md" />
+    <None Include="OpenInOperaDeveloper\ReadMeHeader.md" />
     <None Include="OpenInOpera\README.md" />
+    <None Include="OpenInOpera\ReadMeHeader.md" />
     <None Include="OpenInVivaldi\README.md" />
     <None Include="OpenInVivaldi\ReadMeHeader.md" />
     <None Include="ReadMeCommon.md" />
@@ -80,17 +84,29 @@
     <Content Include="OpenInAltovaXmlSpy\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInAltovaXmlSpy\ThirdPartyLogo.png" />
     <Content Include="OpenInApp.Template\ReadMeScreenShot_CodeEditorWindow.png" />
+    <Content Include="OpenInChromeCanary\ReadMeScreenShot_CodeEditorWindow.png" />
+    <Content Include="OpenInChromeCanary\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInChromeCanary\ThirdPartyLogo.png" />
+    <Content Include="OpenInFirefoxDeveloperEdition\ReadMeScreenShot_CodeEditorWindow.png" />
+    <Content Include="OpenInFirefoxDeveloperEdition\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInFirefoxDeveloperEdition\ThirdPartyLogo.png" />
     <Content Include="OpenInGimp\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInGimp\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInGimp\ThirdPartyLogo.png" />
     <Content Include="OpenInMarkdownMonster\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInMarkdownMonster\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInMarkdownMonster\ThirdPartyLogo.png" />
+    <Content Include="OpenInOperaDeveloper\ReadMeScreenShot_CodeEditorWindow.png" />
+    <Content Include="OpenInOperaDeveloper\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInOperaDeveloper\ThirdPartyLogo.png" />
+    <Content Include="OpenInOpera\ReadMeScreenShot_CodeEditorWindow.png" />
+    <Content Include="OpenInOpera\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInOpera\ThirdPartyLogo.png" />
     <Content Include="OpenInPaintDotNet\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInPaintDotNet\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInPaintDotNet\ThirdPartyLogo.png" />
     <Content Include="OpenInApp.Template\ReadMeScreenShot_ContextMenu.png" />
-    <Content Include="OpenInApp.Template\ThirdPartyLogoGregtGregt.png" />
+    <Content Include="OpenInApp.Template\ThirdPartyLogo.png" />
     <Content Include="OpenInVivaldi\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInVivaldi\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInVivaldi\ThirdPartyLogo.png" />

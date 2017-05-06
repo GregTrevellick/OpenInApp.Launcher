@@ -1,0 +1,1 @@
+﻿https://www.mozilla.org/en-US/styleguide/identity/firefox/wordmarks/

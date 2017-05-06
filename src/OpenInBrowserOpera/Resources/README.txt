@@ -1,0 +1,1 @@
+﻿http://brand.opera.com/brandbook/opera-product-logos
