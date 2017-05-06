@@ -8,8 +8,8 @@ gulp.task('OpenInAltovaXmlSpy',       function () { return OIAConcat('OpenInAlto
 gulp.task('OpenInApp.Template',       function () { return OIAConcat('OpenInApp.Template'       ,'GregtGregt') });
 gulp.task('OpenInGimp',               function () { return OIAConcat('OpenInGimp'               ,'GIMP') });
 gulp.task('OpenInMarkdownMonster',    function () { return OIAConcat('OpenInMarkdownMonster'    ,'Markdown Monster') });
-gulp.task('OpenInPaintDotNet', function () { return OIAConcat('OpenInPaintDotNet', 'paint.net') });
-gulp.task('OpenInVivaldi', function () { return OIAConcat('OpenInVivaldi', 'Vivaldi Web Browser') });
+gulp.task('OpenInPaintDotNet',        function () { return OIAConcat('OpenInPaintDotNet'        ,'paint.net') });
+gulp.task('OpenInVivaldi',            function () { return OIAConcat('OpenInVivaldi'            ,'Vivaldi Web Browser') });
 gulp.task('OpenInVS2012',             function () { return OIAConcat('OpenInVS2012'             ,'Visual Studio 2012') });
 gulp.task('OpenInVS2013',             function () { return OIAConcat('OpenInVS2013'             ,'Visual Studio 2013') });
 gulp.task('OpenInVS2015',             function () { return OIAConcat('OpenInVS2015'             ,'Visual Studio 2015') });

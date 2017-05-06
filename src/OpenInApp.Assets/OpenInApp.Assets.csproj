@@ -93,6 +93,7 @@
     <Content Include="OpenInApp.Template\ReadMeScreenShot_OptionsGeneral.png" />
     <Content Include="OpenInApp.Template\ThirdPartyLogoGregtGregt.png" />
     <Content Include="OpenInVivaldi\chart.png" />
+    <Content Include="OpenInVivaldi\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInVivaldi\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInVivaldi\ReadMeScreenShot_OptionsGeneral.png" />
     <Content Include="OpenInVivaldi\ThirdPartyLogo.png" />
@@ -120,10 +121,10 @@
     <Content Include="OpenInVS2017Professional\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInVS2017Professional\ReadMeScreenShot_OptionsGeneral.png" />
     <Content Include="OpenInVS2017Professional\ThirdPartyLogo.png" />
-    <Content Include="ReadMeAnimatedUsage.gif" />
-    <Content Include="ReadMeScreenShot_OptionsGeneral.png" />
-    <Content Include="ReadMeScreenShot_WarningLargeQuantity.png" />
-    <Content Include="ReadMeScreenShot_WarningNonTypical.png" />
+    <Content Include="Generic_ReadMeAnimatedUsage.gif" />
+    <Content Include="Generic_ReadMeScreenShot_OptionsGeneral.png" />
+    <Content Include="Generic_ReadMeScreenShot_WarningLargeQuantity.png" />
+    <Content Include="Generic_ReadMeScreenShot_WarningNonTypical.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

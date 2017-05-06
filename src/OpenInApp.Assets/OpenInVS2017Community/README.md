@@ -16,7 +16,7 @@ This [Visual Studio][VisualStudioURL] extension is officially available at the [
 
 <!-- COPY START FOR VS GALLERY -->
 
-![](../ReadMeAnimatedUsage.gif)
+![](../Generic_ReadMeAnimatedUsage.gif)
 
 Open multiple files simultaneously in [Visual Studio 2017 Community Edition][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
@@ -34,15 +34,15 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 
 - Warning if attempting to open a large quantity of files. The quantity is configurable in Tools > Options.
 
-  ![](../ReadMeScreenShot_WarningLargeQuantity.png)
+  ![](../Generic_ReadMeScreenShot_WarningLargeQuantity.png)
 
 - Warning if attempting to open one or more file types whose extension is not typically associated with [Visual Studio 2017 Community Edition][ThirdPartyAppHomePage]. The list of typical file extensions is configurable in Tools > Options.
 
-  ![](../ReadMeScreenShot_WarningNonTypical.png)
+  ![](../Generic_ReadMeScreenShot_WarningNonTypical.png)
 
 - Option to supress the warning message if attempting to open a file whose extension is not typically associated with [Visual Studio 2017 Community Edition][ThirdPartyAppHomePage].
 
-  ![](../ReadMeScreenShot_OptionsGeneral.png)
+  ![](../Generic_ReadMeScreenShot_OptionsGeneral.png)
 
 ## Use Cases
 
