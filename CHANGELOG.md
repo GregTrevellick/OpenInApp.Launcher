@@ -2,6 +2,10 @@
 
 These are the changes to each version that has been released in the Visual Studio Marketplace.
 
+## 1.1.3
+**2017-05-06** 
+- [x] Addition of Open In Vivaldi web browser
+
 ## 1.1.2
 **2017-04-27** 
 - [x] URL updates within VSIX manifest files
