@@ -43,6 +43,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="OpenInChromeCanary\README.md" />
+    <None Include="OpenInFirefoxDeveloperEdition\README.md" />
+    <None Include="OpenInOperaDeveloper\README.md" />
+    <None Include="OpenInOpera\README.md" />
     <None Include="OpenInVivaldi\README.md" />
     <None Include="OpenInVivaldi\ReadMeHeader.md" />
     <None Include="ReadMeCommon.md" />
