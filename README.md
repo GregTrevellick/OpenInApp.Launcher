@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Build status][AppVeyorProjectBuildStatusBadgeSvg]][AppVeyorProjectUrl]
 
-A repository containing code for use in a series of [Visual Studio][VisualStudioURL] extensions that allow multiple files to be opened simultaneously in third party applications directly from within the [Visual Studio][VisualStudioURL] Code Editor window and / or Solution Explorer.
+A repository containing code for use in a series of [Visual Studio][VisualStudioURL] extensions that allow multiple files to be opened simultaneously in third party applications directly from within the [Visual Studio IDE][VisualStudioURL] code editor window and / or Solution Explorer.
 
 The [Visual Studio][VisualStudioURL] extensions are officially available at the [Visual Studio Marketplace][VSMarketplaceUrl].
 
@@ -69,7 +69,7 @@ Additional thanks to
 - [Screen To Gif](http://www.screentogif.com/) 
 - [Paint Dot Net](http://www.getpaint.net/)  
 
-[![](assets/chart.png)][GitHubPagesURL]
+[![](chart_github.ioOpenInApp.Launcher.png)][GitHubPagesURL]
 
 
 
