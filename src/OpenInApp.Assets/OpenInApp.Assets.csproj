@@ -72,12 +72,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Gulpfile.js" />
+    <Content Include="OpenInAltovaXmlSpy\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInAltovaXmlSpy\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInAltovaXmlSpy\ThirdPartyLogo.png" />
+    <Content Include="OpenInApp.Template\ReadMeScreenShot_CodeEditorWindow.png" />
+    <Content Include="OpenInGimp\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInGimp\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInGimp\ThirdPartyLogo.png" />
+    <Content Include="OpenInMarkdownMonster\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInMarkdownMonster\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInMarkdownMonster\ThirdPartyLogo.png" />
+    <Content Include="OpenInPaintDotNet\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInPaintDotNet\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInPaintDotNet\ThirdPartyLogo.png" />
     <Content Include="OpenInApp.Template\ReadMeScreenShot_ContextMenu.png" />
@@ -85,16 +90,22 @@
     <Content Include="OpenInVivaldi\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInVivaldi\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInVivaldi\ThirdPartyLogo.png" />
+    <Content Include="OpenInVS2012\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInVS2012\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInVS2012\ThirdPartyLogo.png" />
+    <Content Include="OpenInVS2013\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInVS2013\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInVS2013\ThirdPartyLogo.png" />
+    <Content Include="OpenInVS2015\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInVS2015\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInVS2015\ThirdPartyLogo.png" />
+    <Content Include="OpenInVS2017Community\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInVS2017Community\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInVS2017Community\ThirdPartyLogo.png" />
+    <Content Include="OpenInVS2017Enterprise\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInVS2017Enterprise\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInVS2017Enterprise\ThirdPartyLogo.png" />
+    <Content Include="OpenInVS2017Professional\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInVS2017Professional\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInVS2017Professional\ThirdPartyLogo.png" />
     <Content Include="Generic_ReadMeAnimatedUsage.gif" />

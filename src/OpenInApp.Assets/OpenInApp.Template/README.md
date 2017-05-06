@@ -30,6 +30,10 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 
 - Open multiple files simultaneously in [GregtGregt][ThirdPartyAppHomePage] with VS2012, VS2013 and VS2015.
 
+- Within the code editor window
+  ![](ReadMeScreenShot_CodeEditorWindow.png)
+
+- From solution explorer
   ![](ReadMeScreenShot_ContextMenu.png)
 
 - Warning if attempting to open a large quantity of files. The quantity is configurable in Tools > Options.
