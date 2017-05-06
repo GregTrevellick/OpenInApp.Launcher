@@ -108,8 +108,6 @@ Bugs can be logged [here][GitHubRepoIssuesURL].
 
 [Software License](/LICENSE.txt).
 
-[![](chart.png)][GitHubPagesURL]
-
 [AppVeyorProjectUrl]: https://ci.appveyor.com/project/GregTrevellick/openinapp-launcher
 [AppVeyorProjectBuildStatusBadgeSvg]: https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true
 [GitHubPagesURL]: https://gregtrevellick.github.io/OpenInApp.Launcher/

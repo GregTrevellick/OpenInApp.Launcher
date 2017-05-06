@@ -38,3 +38,4 @@ function OIAConcat (appNam, appDesc) {
         .pipe(replace('[ThirdPartyApp]', '[' + appDesc + ']'))
         .pipe(gulp.dest('.'));
 } 
+ 
