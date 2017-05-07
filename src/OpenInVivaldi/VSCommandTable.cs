@@ -12,9 +12,9 @@ namespace OpenInVivaldi
     /// </summary>
     internal sealed partial class PackageGuids
     {
-        public const string guidOpenInAppPackageString = "111117a9-1607-40e1-81b5-28d1454c1111";
-        public const string guidOpenInVsCmdSetString = "222217a9-1607-40e1-81b5-28d1454c2222";
-        public const string guidImagesString = "333317a9-1607-40e1-81b5-28d1454c3333";
+        public const string guidOpenInAppPackageString = "f590e788-c843-4b26-b9c5-e77dbead1249";
+        public const string guidOpenInVsCmdSetString = "4c775dec-71be-42b3-9837-058001d5fe5e";
+        public const string guidImagesString = "f45b8baf-2f4f-4546-817f-60c7c2abc432";
         public static Guid guidOpenInAppPackage = new Guid(guidOpenInAppPackageString);
         public static Guid guidOpenInVsCmdSet = new Guid(guidOpenInVsCmdSetString);
         public static Guid guidImages = new Guid(guidImagesString);

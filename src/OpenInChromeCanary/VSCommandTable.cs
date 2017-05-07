@@ -12,9 +12,9 @@ namespace OpenInChromeCanary
     /// </summary>
     internal sealed partial class PackageGuids
     {
-        public const string guidOpenInAppPackageString = "111117a9-1607-40e1-81b5-28d1454c1111";
-        public const string guidOpenInVsCmdSetString = "222217a9-1607-40e1-81b5-28d1454c2222";
-        public const string guidImagesString = "333317a9-1607-40e1-81b5-28d1454c3333";
+        public const string guidOpenInAppPackageString = "8eedcb11-7b53-4e1e-8e54-5a03085d8437";
+        public const string guidOpenInVsCmdSetString = "35255362-a9f4-422a-98e2-c192991a56f5";
+        public const string guidImagesString = "08c06c2b-e191-48b0-9c84-36e07434abe4";
         public static Guid guidOpenInAppPackage = new Guid(guidOpenInAppPackageString);
         public static Guid guidOpenInVsCmdSet = new Guid(guidOpenInVsCmdSetString);
         public static Guid guidImages = new Guid(guidImagesString);

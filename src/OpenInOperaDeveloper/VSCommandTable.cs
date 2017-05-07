@@ -12,9 +12,9 @@ namespace OpenInOperaDeveloper
     /// </summary>
     internal sealed partial class PackageGuids
     {
-        public const string guidOpenInAppPackageString = "111117a9-1607-40e1-81b5-28d1454c1111";
-        public const string guidOpenInVsCmdSetString = "222217a9-1607-40e1-81b5-28d1454c2222";
-        public const string guidImagesString = "333317a9-1607-40e1-81b5-28d1454c3333";
+        public const string guidOpenInAppPackageString = "4ebaf7ed-02c8-4afa-8023-a0a995ff3600";
+        public const string guidOpenInVsCmdSetString = "7e4d77ea-f610-4302-89d9-2188b97a2ce9";
+        public const string guidImagesString = "2cd71d9f-0766-4be5-b42b-c918f370ea43";
         public static Guid guidOpenInAppPackage = new Guid(guidOpenInAppPackageString);
         public static Guid guidOpenInVsCmdSet = new Guid(guidOpenInVsCmdSetString);
         public static Guid guidImages = new Guid(guidImagesString);

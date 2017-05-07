@@ -12,9 +12,9 @@ namespace OpenInFirefoxDeveloperEdition
     /// </summary>
     internal sealed partial class PackageGuids
     {
-        public const string guidOpenInAppPackageString = "111117a9-1607-40e1-81b5-28d1454c1111";
-        public const string guidOpenInVsCmdSetString = "222217a9-1607-40e1-81b5-28d1454c2222";
-        public const string guidImagesString = "333317a9-1607-40e1-81b5-28d1454c3333";
+        public const string guidOpenInAppPackageString = "bc91becb-dffc-43e5-bbc7-b2777033bcb4";
+        public const string guidOpenInVsCmdSetString = "01fb05e5-1afc-4989-8c5c-3c9c80ea2fd8";
+        public const string guidImagesString = "19bae533-ee1f-402e-b451-809548972bcf";
         public static Guid guidOpenInAppPackage = new Guid(guidOpenInAppPackageString);
         public static Guid guidOpenInVsCmdSet = new Guid(guidOpenInVsCmdSetString);
         public static Guid guidImages = new Guid(guidImagesString);
