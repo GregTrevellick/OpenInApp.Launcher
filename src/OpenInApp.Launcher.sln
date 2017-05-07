@@ -45,15 +45,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{20A3F2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IndividualVsixAssets", "IndividualVsixAssets", "{C6CA8ECD-D076-4C9E-B5FE-E3CB43ADEB1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVivaldi", "OpenInBrowserVivaldi\OpenInVivaldi.csproj", "{9A1F334D-0308-4ECC-919D-54E25C6B79EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVivaldi", "OpenInVivaldi\OpenInVivaldi.csproj", "{9A1F334D-0308-4ECC-919D-54E25C6B79EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInChromeCanary", "OpenInBrowserChromeCanary\OpenInChromeCanary.csproj", "{F5293D58-40DB-49B8-957C-C8031C3F54D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInChromeCanary", "OpenInChromeCanary\OpenInChromeCanary.csproj", "{F5293D58-40DB-49B8-957C-C8031C3F54D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInFirefoxDeveloperEdition", "OpenInBrowserFirefoxDeveloperEdition\OpenInFirefoxDeveloperEdition.csproj", "{F68080CB-77D1-413E-A8F5-F5EE84D0BD95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInFirefoxDeveloperEdition", "OpenInFirefoxDeveloperEdition\OpenInFirefoxDeveloperEdition.csproj", "{F68080CB-77D1-413E-A8F5-F5EE84D0BD95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInOpera", "OpenInBrowserOpera\OpenInOpera.csproj", "{11909DCB-A821-45E6-8775-845CB3DFBA1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInOpera", "OpenInOpera\OpenInOpera.csproj", "{11909DCB-A821-45E6-8775-845CB3DFBA1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInOperaDeveloper", "OpenInBrowserOperaDeveloper\OpenInOperaDeveloper.csproj", "{08CD8F95-20AB-4274-AFDD-E44031991F48}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInOperaDeveloper", "OpenInOperaDeveloper\OpenInOperaDeveloper.csproj", "{08CD8F95-20AB-4274-AFDD-E44031991F48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
