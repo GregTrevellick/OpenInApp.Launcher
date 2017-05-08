@@ -1,10 +1,10 @@
-[ThirdPartyAppHomePage]: http://www.GregtGregt.net/
+[ThirdPartyAppHomePage]: http://www.opera.com/computer/beta
 <!-- Logo source = TODO -->
-[VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInGregtGregt.svg
-[VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInGregtGregt
-[VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInGregtGregt#review-details
+[VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInOperaDeveloper.svg
+[VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInOperaDeveloper
+[VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInOperaDeveloper#review-details
 
-# Open In ThirdPartyApp
+# Open In Opera Developer
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Build status][AppVeyorProjectBuildStatusBadgeSvg]][AppVeyorProjectUrl]
