@@ -1,7 +1,7 @@
-[ThirdPartyAppHomePage]: http://www.GregtGregt.net/
+[ThirdPartyAppHomePage]: https://www.google.com/chrome/browser/canary.html
 <!-- Logo source = TODO -->
-[VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInGregtGregt.svg
-[VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInGregtGregt
-[VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInGregtGregt#review-details
+[VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInChromeCanary.svg
+[VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInChromeCanary
+[VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInChromeCanary#review-details
 
-# Open In ThirdPartyApp
+# Open In Chrome Canary

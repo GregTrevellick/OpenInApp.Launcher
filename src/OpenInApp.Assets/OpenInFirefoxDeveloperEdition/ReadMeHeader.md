@@ -1,7 +1,7 @@
-[ThirdPartyAppHomePage]: http://www.GregtGregt.net/
+[ThirdPartyAppHomePage]: https://www.mozilla.org/en-GB/firefox/developer/
 <!-- Logo source = TODO -->
-[VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInGregtGregt.svg
-[VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInGregtGregt
-[VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInGregtGregt#review-details
+[VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInFirefoxDeveloperEdition.svg
+[VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInFirefoxDeveloperEdition
+[VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInFirefoxDeveloperEdition#review-details
 
-# Open In ThirdPartyApp
+# Open In Firefox Developer Edition
