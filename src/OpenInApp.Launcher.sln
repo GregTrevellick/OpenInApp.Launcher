@@ -40,7 +40,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2017Enterprise", "O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2017Professional", "OpenInVS2017Professional\OpenInVS2017Professional.csproj", "{5E307B73-F302-42C0-945F-C695D6D4FE91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Assets", "OpenInApp.Assets\OpenInApp.Assets.csproj", "{3FB0055C-325C-40A6-8D60-5AA0B09D58DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualStudioMarketPlaceAssets", "OpenInApp.Assets\VisualStudioMarketPlaceAssets.csproj", "{3FB0055C-325C-40A6-8D60-5AA0B09D58DC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{20A3F2B7-5986-4BE8-A9A7-1E85B57DCBD1}"
 EndProject

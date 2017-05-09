@@ -7,8 +7,8 @@
     <ProjectGuid>{3FB0055C-325C-40A6-8D60-5AA0B09D58DC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenInApp.Assets</RootNamespace>
-    <AssemblyName>OpenInApp.Assets</AssemblyName>
+    <RootNamespace>VisualStudioMarketPlaceAssets</RootNamespace>
+    <AssemblyName>VisualStudioMarketPlaceAssets</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
