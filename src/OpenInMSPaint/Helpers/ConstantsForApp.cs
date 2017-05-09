@@ -3,17 +3,26 @@ using System.Collections.Generic;
 
 namespace OpenInMSPaint.Helpers
 {
-    public class ConstantsForApp //gregt convert to an interface
+    public class ConstantsForApp 
     {
-        public const string AppFolderName = "Markdown Monster";//@"gregtgregt";
-        public const string AppSubFolderName = null;
-        public const string ExecutableFileToBrowseFor = "MarkdownMonster.exe";//"gregtgregt";
+        public const string AppFolderName = "Windows";   
+        public const string AppSubFolderName = "system32";
+        public const string ExecutableFileToBrowseFor = "mspaint.exe";
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
             return new List<string>
             {
-                //Source: gregtgregt 
-                "*"
+                "bmp",
+                "dib",
+                "gif",
+                "ico",
+                "jfif",
+                "jpe",
+                "jpeg",
+                "jpg",
+                "png",
+                "tif",
+                "tiff",
             };
         }
 
@@ -22,6 +31,6 @@ namespace OpenInMSPaint.Helpers
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
         internal static bool SeparateProcessPerFileToBeOpened = true;
-        internal static bool UseShellExecute = true;//typically true for MM/PDN/Altova/Gimp & false for devenv.exe//gregtgregt;
+        internal static bool UseShellExecute = true;
     }
 }
