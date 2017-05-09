@@ -1,4 +1,4 @@
-[ThirdPartyAppHomePage]: http://www.GregtGregt.net/
+[ThirdPartyAppHomePage]: https://www.xamarin.com/studio
 <!-- Logo source = TODO -->
 [VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInGregtGregt.svg
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInGregtGregt
