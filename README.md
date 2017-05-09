@@ -26,15 +26,15 @@ Software License is available [here](/LICENSE.txt).
 ---------------------------------------
 
 [![Altova Xml Spy](src/OpenInApp.Assets/OpenInAltovaXmlSpy/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninAltovaXMLSpy)
-[![Gimp](src/OpenInApp.Assets/OpenInGimp/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninGimp)
-[![Markdown Monster](src/OpenInApp.Assets/OpenInMarkdownMonster/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninMarkdownMonster)
 [![Paint Dot Net](src/OpenInApp.Assets/OpenInPaintDotNet/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninPaintDotNet)
 [![Visual Studio 2017 Community](src/OpenInApp.Assets/OpenInVS2017Community/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/search?term=trevellick%20open%20in%20visual%20studio&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance)
 [![Vivaldi](src/OpenInApp.Assets/OpenInVivaldi/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVivaldi)
 [![Chrome Canary](src/OpenInApp.Assets/OpenInChromeCanary/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninChromeCanary)
+[![Firefox Developer Edition](src/OpenInApp.Assets/OpenInFirefoxDeveloperEdition/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninFirefoxDeveloperEdition)
+[![Gimp](src/OpenInApp.Assets/OpenInGimp/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninGimp)
 [![Opera](src/OpenInApp.Assets/OpenInOpera/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninOpera)
 [![Opera Developer](src/OpenInApp.Assets/OpenInOperaDeveloper/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninOperaDeveloper)
-[![Firefox Developer Edition](src/OpenInApp.Assets/OpenInFirefoxDeveloperEdition/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninFirefoxDeveloperEdition)
+[![Markdown Monster](src/OpenInApp.Assets/OpenInMarkdownMonster/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninMarkdownMonster)
 
 ## Legal
 
