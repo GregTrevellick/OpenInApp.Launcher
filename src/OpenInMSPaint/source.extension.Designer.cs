@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OpenInGregtGregt {
+namespace OpenInMSPaint {
     using System;
     
     

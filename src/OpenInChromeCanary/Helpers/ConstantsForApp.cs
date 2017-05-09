@@ -4,10 +4,7 @@ using System.Collections.Generic;
 namespace OpenInChromeCanary.Helpers
 {
     public class ConstantsForApp 
-    {
-
-        //gregtgregt delete excess comments here
-         
+    {        
         public const string AppFolderName = @"Google\Chrome SxS";//C:\Users\greg\AppData\Local \Google\Chrome SxS  \Application \chrome.exe
                                                                  //C:\Users\greg\AppData\Local \Vivaldi            \Application \vivaldi.exe
         public const string AppSubFolderName = "Application";

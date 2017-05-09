@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Common.Helpers;
-using OpenInGregtGregt.Commands;
-using OpenInGregtGregt.Options.GregtGregt;
+using OpenInMSPaint.Commands;
+using OpenInMSPaint.Options.MSPaint;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
-namespace OpenInGregtGregt
+namespace OpenInMSPaint
 {
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [InstalledProductRegistration(productName: "#110", productDetails: "#112", productId: Vsix.Version, IconResourceID = 400)]

@@ -15,14 +15,14 @@
         <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
-          <ButtonText>Open in GregtGregt code edtor</ButtonText>
+          <ButtonText>Open in Emacs</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppFolderExplore" priority="0x100" type="Button">
         <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
-          <ButtonText>Open in GregtGregt soln explr</ButtonText>
+          <ButtonText>Open in Emacs</ButtonText>
         </Strings>
       </Button>
     </Buttons>
@@ -41,14 +41,14 @@
   </CommandPlacements>
 
   <Symbols>
-    <GuidSymbol name="guidOpenInAppPackage" value="{111117A9-1607-40E1-81B5-28D1454C1111}" />
-    <GuidSymbol name="guidOpenInVsCmdSet" value="{222217A9-1607-40E1-81B5-28D1454C2222}">
+    <GuidSymbol name="guidOpenInAppPackage" value="{338C3988-6CBC-429E-B24C-7A1A2709EC23}" />
+    <GuidSymbol name="guidOpenInVsCmdSet" value="{86571752-9143-4CE0-88E5-1C93DEDF330B}">
       <IDSymbol name="GroupOpenInAppCodeWin" value="0x1030" />
       <IDSymbol name="CmdIdOpenInAppCodeWin" value="0x0100" />
       <IDSymbol name="GroupOpenInAppFolderExplore" value="0x1040" />
       <IDSymbol name="CmdIdOpenInAppFolderExplore" value="0x0110" />
     </GuidSymbol>
-    <GuidSymbol name="guidImages" value="{333317A9-1607-40E1-81B5-28D1454C3333}" >
+    <GuidSymbol name="guidImages" value="{9A9FCCEA-C1FC-4FDA-B80B-2924E571538B}" >
       <IDSymbol name="bmpPic1" value="1" />
     </GuidSymbol>
   </Symbols>

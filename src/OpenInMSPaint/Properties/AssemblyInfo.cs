@@ -1,4 +1,4 @@
-﻿using OpenInGregtGregt;
+﻿using OpenInMSPaint;
 using System.Reflection;
 using System.Runtime.InteropServices;
 

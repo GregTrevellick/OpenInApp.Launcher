@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
-using OpenInGregtGregt.Helpers;
+using OpenInEmacs.Helpers;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace OpenInGregtGregt.Options.GregtGregt
+namespace OpenInEmacs.Options.Emacs
 {
     public class GeneralOptions : DialogPage
     {

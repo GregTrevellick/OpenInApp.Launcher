@@ -24,8 +24,8 @@
     <ProjectGuid>{0C208593-FC8C-4DA8-BC77-F4119A00388B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenInGregtGregt</RootNamespace>
-    <AssemblyName>OpenInGregtGregt</AssemblyName>
+    <RootNamespace>OpenInMSPaint</RootNamespace>
+    <AssemblyName>OpenInMSPaint</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>

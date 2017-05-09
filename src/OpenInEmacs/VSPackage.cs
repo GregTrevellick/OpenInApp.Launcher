@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Common.Helpers;
-using OpenInGregtGregt.Commands;
-using OpenInGregtGregt.Options.GregtGregt;
+using OpenInEmacs.Commands;
+using OpenInEmacs.Options.Emacs;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
-namespace OpenInGregtGregt
+namespace OpenInEmacs
 {
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [InstalledProductRegistration(productName: "#110", productDetails: "#112", productId: Vsix.Version, IconResourceID = 400)]

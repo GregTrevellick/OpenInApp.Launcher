@@ -24,8 +24,8 @@
     <ProjectGuid>{BF269644-8E26-4DB7-8ADC-686A78D4A88D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenInGregtGregt</RootNamespace>
-    <AssemblyName>OpenInGregtGregt</AssemblyName>
+    <RootNamespace>OpenInXamarinStudio</RootNamespace>
+    <AssemblyName>OpenInXamarinStudio</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>

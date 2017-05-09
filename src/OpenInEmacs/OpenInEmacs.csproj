@@ -24,8 +24,8 @@
     <ProjectGuid>{C10C3841-5B55-43E3-921A-2DB15070AEDA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenInGregtGregt</RootNamespace>
-    <AssemblyName>OpenInGregtGregt</AssemblyName>
+    <RootNamespace>OpenInEmacs</RootNamespace>
+    <AssemblyName>OpenInEmacs</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>

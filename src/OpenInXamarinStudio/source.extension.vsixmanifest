@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="gregtgregt.AA6B2292-8144-47F4-B559-2178E2B0DE44" Version="1.1.4" Language="en-US" Publisher="GregTrevellick" />
-    <DisplayName>Open in gregtgregt</DisplayName>
-    <Description xml:space="preserve">Open multiple files simultaneously in gregtgregt directly from Solution Explorer or Code Editor window.</Description>
+    <Identity Id="4ED1099A-F28F-4E06-A2C8-8C3D3277B9A7" Version="1.1.5" Language="en-US" Publisher="GregTrevellick" />
+    <DisplayName>Open in Xamarin Studio</DisplayName>
+    <Description xml:space="preserve">Open multiple files simultaneously in Xamarin Studio directly from Solution Explorer or Code Editor window.</Description>
     <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>
     <License>LICENSE.txt</License>
     <ReleaseNotes>https://github.com/GregTrevellick/OpenInApp.Launcher/blob/master/CHANGELOG.md</ReleaseNotes>
     <Icon>Resources\VsixExtensionIcon_90x90.png</Icon>
     <PreviewImage>Resources\VsixExtensionPreview_175x175.png</PreviewImage>
-    <Tags>open, open in, gregtgregt</Tags>
+    <Tags>open, open in, Xamarin, Xamarin Studio, studio</Tags>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="11.0" />

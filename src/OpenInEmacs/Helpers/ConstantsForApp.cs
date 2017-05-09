@@ -1,7 +1,7 @@
 ﻿using OpenInApp.Common.Helpers;
 using System.Collections.Generic;
 
-namespace OpenInGregtGregt.Helpers
+namespace OpenInEmacs.Helpers
 {
     public class ConstantsForApp //gregt convert to an interface
     {

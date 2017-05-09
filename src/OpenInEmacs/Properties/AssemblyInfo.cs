@@ -1,4 +1,4 @@
-﻿using OpenInGregtGregt;
+﻿using OpenInEmacs;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
