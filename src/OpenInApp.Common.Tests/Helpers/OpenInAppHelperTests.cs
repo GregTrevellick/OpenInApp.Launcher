@@ -15,6 +15,7 @@ namespace OpenInApp.Common.Tests.Helpers
         //webstorm
         //screentogif
         //gvim ?
+        //fresh paint
         //http://www.jedsoft.org/jed/
         //http://texteditors.org/cgi-bin/wiki.pl?ACE
         //http://texteditors.org/cgi-bin/wiki.pl?UltraEdit
