@@ -13,6 +13,6 @@ namespace OpenInOperaDeveloper
         public const string Language = "en-US";
         public const string Version = "1.1.5";
         public const string Author = "GregTrevellick";
-        public const string Tags = "open, open in, opera";
+        public const string Tags = "open, open in, opera, opera developer";
     }
 }
