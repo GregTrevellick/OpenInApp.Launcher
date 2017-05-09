@@ -25,16 +25,21 @@ Software License is available [here](/LICENSE.txt).
 
 ---------------------------------------
 
-[![Altova Xml Spy](src/OpenInAltovaXmlSpy/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInAltovaXmlSpy/README.md)
-[![Gimp](src/OpenInGimp/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInGimp/README.md)
-[![Markdown Monster](src/OpenInMarkdownMonster/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInMarkdownMonster/README.md)
-[![Paint Dot Net](src/OpenInPaintDotNet/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInPaintDotNet/README.md)
-[![Visual Studio 2012](src/OpenInVS2012/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2012/README.md)
-[![Visual Studio 2013](src/OpenInVS2013/Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2013/README.md)
-[![Visual Studio 2015](src/OpenInVS2015//Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2015/README.md)
-[![Visual Studio 2017 Community](src/OpenInVS2017Community//Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2017Community/README.md)
-[![Visual Studio 2017 Enterprise](src/OpenInVS2017Enterprise//Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2017Enterprise/README.md)
-[![Visual Studio 2017 Professional](src/OpenInVS2017Professional//Resources/VsixExtensionIcon_90x90.png)](src/OpenInApp.Assets/OpenInVS2017Professional/README.md)
+[![Altova Xml Spy](src/OpenInApp.Assets/OpenInAltovaXmlSpy/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninAltovaXMLSpy)
+[![Gimp](src/OpenInApp.Assets/OpenInGimp/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninGimp)
+[![Markdown Monster](src/OpenInApp.Assets/OpenInMarkdownMonster/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninMarkdownMonster)
+[![Paint Dot Net](src/OpenInApp.Assets/OpenInPaintDotNet/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninPaintDotNet)
+[![Visual Studio 2012](src/OpenInVS2012/Resources/VsixExtensionIcon_90x90.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVS2012)
+[![Visual Studio 2013](src/OpenInVS2013/Resources/VsixExtensionIcon_90x90.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVS2013)
+[![Visual Studio 2015](src/OpenInVS2015//Resources/VsixExtensionIcon_90x90.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVS2015)
+[![Visual Studio 2017 Community](src/OpenInApp.Assets/OpenInVS2017Community/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVS2017Community)
+[![Visual Studio 2017 Enterprise](src/OpenInVS2017Enterprise//Resources/VsixExtensionIcon_90x90.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVS2017Enterprise)
+[![Visual Studio 2017 Professional](src/OpenInVS2017Professional//Resources/VsixExtensionIcon_90x90.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVS2017Professional)
+[![Vivaldi](src/OpenInApp.Assets/OpenInVivaldi/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVivaldi)
+[![Chrome Canary](src/OpenInApp.Assets/OpenInChromeCanary/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninChromeCanary)
+[![Opera](src/OpenInApp.Assets/OpenInOpera/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninOpera)
+[![Opera Developer](src/OpenInApp.Assets/OpenInOperaDeveloper/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninOperaDeveloper)
+[![Firefox Developer Edition](src/OpenInApp.Assets/OpenInFirefoxDeveloperEdition/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninFirefoxDeveloperEdition)
 
 ## Legal
 

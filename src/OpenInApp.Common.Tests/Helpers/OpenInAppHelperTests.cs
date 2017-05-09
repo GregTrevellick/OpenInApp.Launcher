@@ -58,10 +58,10 @@ namespace OpenInApp.Common.Tests.Helpers
         [Test()]
         [Category("I")]
         //TESTED & LIVE [TestCase(@"C:\Users\greg\AppData\Local\Vivaldi\Application\vivaldi.exe", null)]
-        //HAPPILY OPENS BOTH FILES [TestCase(@"C:\Program Files (x86)\Opera\opera.exe", null)]
-        //HAPPILY OPENS BOTH FILES [TestCase(@"C:\Program Files\Opera developer\launcher.exe", null)]        
-        //HAPPILY OPENS BOTH FILES [TestCase(@"C:\Program Files\Firefox Developer Edition\firefox.exe", null)]//(aurora)
-        //HAPPILY OPENS BOTH FILES [TestCase(@"C:\Users\greg\AppData\Local\Google\Chrome SxS\Application\chrome.exe", null)]//(canary)
+        //TESTED & LIVE  [TestCase(@"C:\Program Files (x86)\Opera\opera.exe", null)]
+        //TESTED & LIVE  [TestCase(@"C:\Program Files\Opera developer\launcher.exe", null)]        
+        //TESTED & LIVE  [TestCase(@"C:\Program Files\Firefox Developer Edition\firefox.exe", null)]//(aurora)
+        //TESTED & LIVE  [TestCase(@"C:\Users\greg\AppData\Local\Google\Chrome SxS\Application\chrome.exe", null)]//(canary)
         //works with 2 files, 1 browser window 2 tabs but opens canary        [TestCase(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", null)]
         //works with 2 files, 1 browser window 2 tabs but opens aurora         [TestCase(@"C:\Program Files (x86)\Mozilla Firefox\firefox.exe", null)]
         //works but ignores the args, when 2 argsat least  [TestCase(@"C:\Program Files (x86)\Internet Explorer\iexplore.exe", null)]
@@ -171,20 +171,6 @@ namespace OpenInApp.Common.Tests.Helpers
             // Act
             Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
         }
-
-        ////////////////////////////////////////////////////private void Act(IEnumerable<string> actualFilesToBeOpened, string executableFullPath, bool? separateProcessPerFileToBeOpened, bool? useShellExecute)
-        ////////////////////////////////////////////////////{
-        ////////////////////////////////////////////////////    if (!separateProcessPerFileToBeOpened.HasValue && !useShellExecute.HasValue)
-        ////////////////////////////////////////////////////    {
-        ////////////////////////////////////////////////////        OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, executableFullPath);
-        ////////////////////////////////////////////////////    }
-        ////////////////////////////////////////////////////    else
-        ////////////////////////////////////////////////////    {
-        ////////////////////////////////////////////////////        OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, executableFullPath,
-        ////////////////////////////////////////////////////            separateProcessPerFileToBeOpened.HasValue ? separateProcessPerFileToBeOpened.Value : false,
-        ////////////////////////////////////////////////////            useShellExecute.HasValue ? useShellExecute.Value : true);
-        ////////////////////////////////////////////////////    }
-        ////////////////////////////////////////////////////}
 
         private void Act(IEnumerable<string> actualFilesToBeOpened, string executableFullPath, bool separateProcessPerFileToBeOpened, bool useShellExecute)
         {
