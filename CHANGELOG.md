@@ -1,6 +1,16 @@
 # Change log
 
 These are the changes to each version that has been released in the Visual Studio Marketplace.
+## 1.1.5
+**2017-05-09** 
+- [x] Addition of Open In Chrome Canary
+- [x] Addition of Open In Firefox Developer Edition
+- [x] Addition of Open In Opera
+- [x] Addition of Open In Opera Developer
+
+## 1.1.4
+**2017-05-07** 
+- [x] Bug fix for cosmetic issue with Vivaldi web browser
 
 ## 1.1.3
 **2017-05-06** 

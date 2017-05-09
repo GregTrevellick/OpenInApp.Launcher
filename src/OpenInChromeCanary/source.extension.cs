@@ -11,7 +11,7 @@ namespace OpenInChromeCanary
         public const string Name = "Open in Chrome Canary";
         public const string Description = @"Open multiple files simultaneously in Chrome Canary directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
-        public const string Version = "1.1.4";
+        public const string Version = "1.1.5";
         public const string Author = "GregTrevellick";
         public const string Tags = "open, open in, chrome, canary";
     }
