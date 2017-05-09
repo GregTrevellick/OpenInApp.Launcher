@@ -53,7 +53,7 @@
     <None Include="OpenInOpera\ReadMeHeader.md" />
     <None Include="OpenInVivaldi\README.md" />
     <None Include="OpenInVivaldi\ReadMeHeader.md" />
-    <None Include="ReadMeCommon.md" />
+    <None Include="VsmpCommonDescription.md" />
     <None Include="package.json" />
     <None Include="OpenInAltovaXmlSpy\README.md" />
     <None Include="OpenInAltovaXmlSpy\ReadMeHeader.md" />
