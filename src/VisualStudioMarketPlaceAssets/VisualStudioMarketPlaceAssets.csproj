@@ -45,14 +45,17 @@
   <ItemGroup>
     <None Include="OpenInChromeCanary\README.md" />
     <None Include="OpenInChromeCanary\ReadMeHeader.md" />
+    <None Include="OpenInEmacs\README.md" />
     <None Include="OpenInFirefoxDeveloperEdition\README.md" />
     <None Include="OpenInFirefoxDeveloperEdition\ReadMeHeader.md" />
+    <None Include="OpenInMSPaint\README.md" />
     <None Include="OpenInOperaDeveloper\README.md" />
     <None Include="OpenInOperaDeveloper\ReadMeHeader.md" />
     <None Include="OpenInOpera\README.md" />
     <None Include="OpenInOpera\ReadMeHeader.md" />
     <None Include="OpenInVivaldi\README.md" />
     <None Include="OpenInVivaldi\ReadMeHeader.md" />
+    <None Include="OpenInXamarinStudio\README.md" />
     <None Include="VsmpCommonDescription.md" />
     <None Include="package.json" />
     <None Include="OpenInAltovaXmlSpy\README.md" />
