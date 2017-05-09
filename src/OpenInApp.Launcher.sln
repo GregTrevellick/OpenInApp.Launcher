@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		..\CHANGELOG.md = ..\CHANGELOG.md
 		..\chart_github.ioOpenInApp.Launcher.png = ..\chart_github.ioOpenInApp.Launcher.png
+		..\Generic_ReadMeAnimatedUsage.gif = ..\Generic_ReadMeAnimatedUsage.gif
 		..\LICENSE.txt = ..\LICENSE.txt
 		..\README.md = ..\README.md
 	EndProjectSection
