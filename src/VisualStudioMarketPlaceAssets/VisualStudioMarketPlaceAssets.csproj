@@ -93,6 +93,7 @@
     <Content Include="OpenInChromeCanary\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInChromeCanary\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInChromeCanary\ThirdPartyLogo.png" />
+    <Content Include="OpenInEmacs\Capture.PNG" />
     <Content Include="OpenInFirefoxDeveloperEdition\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInFirefoxDeveloperEdition\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInFirefoxDeveloperEdition\ThirdPartyLogo.png" />
@@ -137,6 +138,7 @@
     <Content Include="Generic_ReadMeScreenShot_OptionsGeneral.png" />
     <Content Include="Generic_ReadMeScreenShot_WarningLargeQuantity.png" />
     <Content Include="Generic_ReadMeScreenShot_WarningNonTypical.png" />
+    <Content Include="OpenInXamarinStudio\Xamarin logo.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
