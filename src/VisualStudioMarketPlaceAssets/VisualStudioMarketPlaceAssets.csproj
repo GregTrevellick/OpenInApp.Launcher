@@ -93,7 +93,9 @@
     <Content Include="OpenInChromeCanary\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInChromeCanary\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInChromeCanary\ThirdPartyLogo.png" />
-    <Content Include="OpenInEmacs\Capture.PNG" />
+    <Content Include="OpenInEmacs\ReadMeScreenShot_CodeEditorWindow.png" />
+    <Content Include="OpenInEmacs\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInEmacs\ThirdPartyLogo.png" />
     <Content Include="OpenInFirefoxDeveloperEdition\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInFirefoxDeveloperEdition\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInFirefoxDeveloperEdition\ThirdPartyLogo.png" />
@@ -103,6 +105,9 @@
     <Content Include="OpenInMarkdownMonster\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInMarkdownMonster\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInMarkdownMonster\ThirdPartyLogo.png" />
+    <Content Include="OpenInMSPaint\ReadMeScreenShot_CodeEditorWindow.png" />
+    <Content Include="OpenInMSPaint\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInMSPaint\ThirdPartyLogo.png" />
     <Content Include="OpenInOperaDeveloper\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInOperaDeveloper\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInOperaDeveloper\ThirdPartyLogo.png" />
@@ -138,7 +143,9 @@
     <Content Include="Generic_ReadMeScreenShot_OptionsGeneral.png" />
     <Content Include="Generic_ReadMeScreenShot_WarningLargeQuantity.png" />
     <Content Include="Generic_ReadMeScreenShot_WarningNonTypical.png" />
-    <Content Include="OpenInXamarinStudio\Xamarin logo.png" />
+    <Content Include="OpenInXamarinStudio\ReadMeScreenShot_CodeEditorWindow.png" />
+    <Content Include="OpenInXamarinStudio\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInXamarinStudio\ThirdPartyLogo.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
