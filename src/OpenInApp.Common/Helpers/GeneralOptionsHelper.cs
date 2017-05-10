@@ -35,11 +35,11 @@ namespace OpenInApp.Common.Helpers
             var userAppData = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
             var userAppDataFolders = userAppData.Parent.GetDirectories("*");
 
-            var programFilesFolders2 = programFilesFolders.Union(userAppDataFolders);
+            var foldersToSearch = programFilesFolders.Union(userAppDataFolders);
 
-            foreach (DirectoryInfo programFilesFolder in programFilesFolders2)
+            foreach (DirectoryInfo folder in foldersToSearch)
             {
-                var appParentFolderPaths = programFilesFolder.GetDirectories(appFolderName);
+                var appParentFolderPaths = folder.GetDirectories(appFolderName);
                 foreach (DirectoryInfo appParentFolderPath in appParentFolderPaths)
                 {
                     if (string.IsNullOrEmpty(appSubFolderName))
