@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -29,13 +30,7 @@ namespace OpenInApp.Common.Helpers
         /// <returns></returns>
         public static string GetActualPathToExe(string appFolderName, string appSubFolderName, string executableFileToBrowseFor)
         {
-            var programFiles = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));
-            var programFilesFolders = programFiles.Parent.GetDirectories(programFiles.Name.Replace(" (x86)", string.Empty) + "*");
-
-            var userAppData = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
-            var userAppDataFolders = userAppData.Parent.GetDirectories("*");
-
-            var foldersToSearch = programFilesFolders.Union(userAppDataFolders);
+            var foldersToSearch = GetFoldersToSearch();
 
             foreach (DirectoryInfo folder in foldersToSearch)
             {
@@ -74,6 +69,19 @@ namespace OpenInApp.Common.Helpers
             }
 
             return null;
+        }
+
+        private static IEnumerable<DirectoryInfo> GetFoldersToSearch()
+        {
+            var programFiles = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));
+            var programFilesFolders = programFiles.Parent.GetDirectories(programFiles.Name.Replace(" (x86)", string.Empty) + "*");
+
+            var userAppData = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+            var userAppDataFolders = userAppData.Parent.GetDirectories("*");
+
+            var foldersToSearch = programFilesFolders.Union(userAppDataFolders);
+
+            return foldersToSearch;
         }
     }
 }
