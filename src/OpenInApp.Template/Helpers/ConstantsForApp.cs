@@ -22,16 +22,39 @@ namespace OpenInGregtGregt.Helpers
 
 
 
+        ////NEW=============================
+        //public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
+        //{
+        //    ExecutableFileToBrowseFor = "MarkdownMonster.exe",
+        //    InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
+        //    InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
+        //    SecondaryFilePathSegment = @"Markdown Monster",
+        //    SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
+        //};
+        ////NEW=============================
+
+        ////NEW=============================
+        //public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
+        //{
+        //    ExecutableFileToBrowseFor = "vivaldi.exe",
+        //    InitialFolderTypePrimary = InitialFolderType.LocalApplicationData,
+        //    InitialFolderTypeSecondary = InitialFolderType.None,
+        //    SecondaryFilePathSegment = @"Vivaldi\Application",
+        //    SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
+        //};
+        ////NEW=============================
+
         //NEW=============================
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
-            ExecutableFileToBrowseFor = "MarkdownMonster.exe",
-            InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
-            InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
-            SecondaryFilePathSegment = @"Markdown Monster",
+            ExecutableFileToBrowseFor = "mspaint.exe",
+            InitialFolderTypePrimary = InitialFolderType.Windows,
+            InitialFolderTypeSecondary = InitialFolderType.None,
+            SecondaryFilePathSegment = @"system32",
             SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
         };
         //NEW=============================
+
 
 
 

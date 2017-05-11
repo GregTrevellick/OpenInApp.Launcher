@@ -3,7 +3,7 @@
     public enum InitialFolderType
     {
         None = 0,
-        ApplicationData = 26,
+        LocalApplicationData = 28,
         ProgramFiles = 38,
         ProgramFilesX86 = 42,
         Windows = 36,
