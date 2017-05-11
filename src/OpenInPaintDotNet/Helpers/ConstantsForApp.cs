@@ -1,13 +1,24 @@
 ﻿using OpenInApp.Common.Helpers;
+using OpenInApp.Common.Helpers.Dtos;
 using System.Collections.Generic;
 
 namespace OpenInAppPaintDotNet.Helpers
 {
     public class ConstantsForApp 
     {
-        public const string AppFolderName = "Paint.NET";
-        public const string AppSubFolderName = null;
-        public const string ExecutableFileToBrowseFor = "PaintDotNet.exe";
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
+        {
+            ExecutableFileToBrowseFor = "MarkdownMonster.exe",
+            InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
+            InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
+            SecondaryFilePathSegment = @"Markdown Monster",
+            SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
+        };
+
+        //public const string AppFolderName = "Paint.NET";
+        //public const string AppSubFolderName = null;
+        //public const string ExecutableFileToBrowseFor = "PaintDotNet.exe";
+
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
             return new List<string>

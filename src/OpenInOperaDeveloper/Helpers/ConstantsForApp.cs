@@ -1,13 +1,24 @@
 ﻿using OpenInApp.Common.Helpers;
+using OpenInApp.Common.Helpers.Dtos;
 using System.Collections.Generic;
 
 namespace OpenInOperaDeveloper.Helpers
 {
     public class ConstantsForApp 
     {
-        public const string AppFolderName = "Opera developer";
-        public const string AppSubFolderName = null;
-        public const string ExecutableFileToBrowseFor = "launcher.exe";
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
+        {
+            ExecutableFileToBrowseFor = "MarkdownMonster.exe",
+            InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
+            InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
+            SecondaryFilePathSegment = @"Markdown Monster",
+            SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
+        };
+
+        //public const string AppFolderName = "Opera developer";
+        //public const string AppSubFolderName = null;
+        //public const string ExecutableFileToBrowseFor = "launcher.exe";
+
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
             return new List<string>

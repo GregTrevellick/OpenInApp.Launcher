@@ -108,14 +108,13 @@ namespace OpenInGregtGregt.Options.GregtGregt
 
             if (string.IsNullOrEmpty(ActualPathToExe))
             {
-                //gregt to be deleted
-                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(
-                    ConstantsForApp.AppFolderName, 
-                    ConstantsForApp.AppSubFolderName,
-                    ConstantsForApp.ExecutableFileToBrowseFor);
+                ////gregt to be deleted
+                //ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(
+                //    ConstantsForApp.AppFolderName, 
+                //    ConstantsForApp.AppSubFolderName,
+                //    ConstantsForApp.ExecutableFileToBrowseFor);
 
-                //gregt to be implemented
-                var ActualPathToExe2 = GeneralOptionsHelper.GetActualPathToExe_New(ConstantsForApp.ActualPathToExeDto);
+                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.ActualPathToExeDto);
             }
 
             previousActualPathToExe = ActualPathToExe;

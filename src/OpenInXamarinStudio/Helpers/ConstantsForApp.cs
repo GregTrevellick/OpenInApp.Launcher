@@ -1,13 +1,24 @@
 ﻿using OpenInApp.Common.Helpers;
+using OpenInApp.Common.Helpers.Dtos;
 using System.Collections.Generic;
 
 namespace OpenInXamarinStudio.Helpers
 {
     public class ConstantsForApp 
     {
-        public const string AppFolderName = "Xamarin Studio";
-        public const string AppSubFolderName = "bin";
-        public const string ExecutableFileToBrowseFor = "XamarinStudio.exe";
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
+        {
+            ExecutableFileToBrowseFor = "MarkdownMonster.exe",
+            InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
+            InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
+            SecondaryFilePathSegment = @"Markdown Monster",
+            SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
+        };
+
+        //public const string AppFolderName = "Xamarin Studio";
+        //public const string AppSubFolderName = "bin";
+        //public const string ExecutableFileToBrowseFor = "XamarinStudio.exe";
+
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
             return new List<string>
