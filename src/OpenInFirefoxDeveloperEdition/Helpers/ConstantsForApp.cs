@@ -9,14 +9,12 @@ namespace OpenInFirefoxDeveloperEdition.Helpers
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
             ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
-            InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
-            InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
-            SecondaryFilePathSegment = @"Markdown Monster",
+            InitialFolderTypePrimary = InitialFolderType.ProgramFiles,
+            InitialFolderTypeSecondary = InitialFolderType.ProgramFilesX86,
+            SecondaryFilePathSegment = @"Firefox Developer Edition",
             SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
         };
 
-        //public const string AppFolderName = "Firefox Developer Edition";
-        //public const string AppSubFolderName = null;
         public const string ExecutableFileToBrowseFor = "firefox.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
@@ -26,8 +24,6 @@ namespace OpenInFirefoxDeveloperEdition.Helpers
                 "*"
             };
         }
-
-
 
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;
         internal static string Caption = Vsix.Name + " " + Vsix.Version;

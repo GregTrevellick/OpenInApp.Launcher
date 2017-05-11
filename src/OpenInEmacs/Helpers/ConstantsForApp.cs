@@ -9,14 +9,12 @@ namespace OpenInEmacs.Helpers
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
             ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
-            InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
-            InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
-            SecondaryFilePathSegment = @"Markdown Monster",
+            InitialFolderTypePrimary = InitialFolderType.None,
+            InitialFolderTypeSecondary = InitialFolderType.None,
+            SecondaryFilePathSegment = string.Empty,
             SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
         };
 
-        //public const string AppFolderName = "emacs-25.1-2-x86_64-w64-mingw32";
-        //public const string AppSubFolderName = "bin";
         public const string ExecutableFileToBrowseFor = "runemacs.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
@@ -26,8 +24,6 @@ namespace OpenInEmacs.Helpers
                 "*"
             };
         }
-
-
 
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;
         internal static string Caption = Vsix.Name + " " + Vsix.Version;

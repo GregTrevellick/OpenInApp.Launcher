@@ -9,15 +9,12 @@ namespace OpenInChromeCanary.Helpers
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
             ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
-            InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
-            InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
-            SecondaryFilePathSegment = @"Markdown Monster",
+            InitialFolderTypePrimary = InitialFolderType.LocalApplicationData,
+            InitialFolderTypeSecondary = InitialFolderType.None,
+            SecondaryFilePathSegment = @"Google\Chrome SxS\Application",
             SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
         };
 
-        //public const string AppFolderName = @"Google\Chrome SxS";//C:\Users\greg\AppData\Local \Google\Chrome SxS  \Application \chrome.exe
-        //                                                         //C:\Users\greg\AppData\Local \Vivaldi            \Application \vivaldi.exe
-        //public const string AppSubFolderName = "Application";
         public const string ExecutableFileToBrowseFor = "chrome.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
@@ -27,8 +24,6 @@ namespace OpenInChromeCanary.Helpers
                 "*"
             };
         }
-
-
 
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;
         internal static string Caption = Vsix.Name + " " + Vsix.Version;

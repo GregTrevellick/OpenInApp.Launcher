@@ -15,8 +15,6 @@ namespace OpenInMSPaint.Helpers
             SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
         };
 
-        //public const string AppFolderName = "Windows";   
-        //public const string AppSubFolderName = "system32";
         public const string ExecutableFileToBrowseFor = "mspaint.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
@@ -36,8 +34,6 @@ namespace OpenInMSPaint.Helpers
                 "tiff",
             };
         }
-
-
 
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;
         internal static string Caption = Vsix.Name + " " + Vsix.Version;

@@ -11,12 +11,10 @@ namespace OpenInAppGimp.Helpers
             ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
-            SecondaryFilePathSegment = @"Markdown Monster",
+            SecondaryFilePathSegment = @"GIMP 2\bin",
             SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
         };
 
-        //public const string AppFolderName = "GIMP 2";
-        //public const string AppSubFolderName = "bin";
         public const string ExecutableFileToBrowseFor = "gimp-2.8.exe";//good enough for now, update to 3.0 when officially released
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
@@ -68,7 +66,6 @@ namespace OpenInAppGimp.Helpers
 				#endregion
 			};
 		}
-
 
 		internal static string Caption = Vsix.Name + " " + Vsix.Version;
 		internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;

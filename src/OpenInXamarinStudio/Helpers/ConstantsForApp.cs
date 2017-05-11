@@ -11,12 +11,10 @@ namespace OpenInXamarinStudio.Helpers
             ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
-            SecondaryFilePathSegment = @"Markdown Monster",
+            SecondaryFilePathSegment = @"Xamarin Studio\bin",
             SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
         };
 
-        //public const string AppFolderName = "Xamarin Studio";
-        //public const string AppSubFolderName = "bin";
         public const string ExecutableFileToBrowseFor = "XamarinStudio.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
@@ -26,8 +24,6 @@ namespace OpenInXamarinStudio.Helpers
                 "*"
             };
         }
-
-
 
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;
         internal static string Caption = Vsix.Name + " " + Vsix.Version;

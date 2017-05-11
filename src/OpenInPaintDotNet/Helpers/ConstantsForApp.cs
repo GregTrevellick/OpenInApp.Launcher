@@ -11,12 +11,10 @@ namespace OpenInAppPaintDotNet.Helpers
             ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
-            SecondaryFilePathSegment = @"Markdown Monster",
+            SecondaryFilePathSegment = @"Paint.NET",
             SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
         };
 
-        //public const string AppFolderName = "Paint.NET";
-        //public const string AppSubFolderName = null;
         public const string ExecutableFileToBrowseFor = "PaintDotNet.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
@@ -37,7 +35,6 @@ namespace OpenInAppPaintDotNet.Helpers
 	            #endregion
             };
         }
-
 
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;

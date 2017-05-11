@@ -15,8 +15,6 @@ namespace OpenInAppMarkdownMonster.Helpers
 			SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
 		};
 
-		//public const string AppFolderName = "Markdown Monster";
-		//public const string AppSubFolderName = null;
 		public const string ExecutableFileToBrowseFor = "MarkdownMonster.exe";
 		
 		public IEnumerable<string> GetDefaultTypicalFileExtensions()
@@ -28,7 +26,6 @@ namespace OpenInAppMarkdownMonster.Helpers
 				#endregion
 			};
 		}
-
 
 		internal static string Caption = Vsix.Name + " " + Vsix.Version;
 		internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;

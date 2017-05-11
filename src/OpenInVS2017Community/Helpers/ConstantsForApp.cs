@@ -11,12 +11,10 @@ namespace OpenInVS2017Community.Helpers
             ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
-            SecondaryFilePathSegment = @"Markdown Monster",
+            SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Community\Common7\IDE",
             SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
         };
 
-        //public const string AppFolderName = @"Microsoft Visual Studio";
-        //public const string AppSubFolderName = @"2017\Community\Common7\IDE";
         public const string ExecutableFileToBrowseFor = "devenv.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
@@ -26,7 +24,6 @@ namespace OpenInVS2017Community.Helpers
                 "*"
             };
         }
-
 
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;

@@ -15,8 +15,6 @@ namespace OpenInVivaldi.Helpers
             SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
         };
 
-        //public const string AppFolderName = "Vivaldi";//C:\Users\greg\AppData\Local\Vivaldi\Application\vivaldi.exe
-        //public const string AppSubFolderName = "Application";
         public const string ExecutableFileToBrowseFor = "vivaldi.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
@@ -26,8 +24,6 @@ namespace OpenInVivaldi.Helpers
                 "*"
             };
         }
-
-
 
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;
         internal static string Caption = Vsix.Name + " " + Vsix.Version;

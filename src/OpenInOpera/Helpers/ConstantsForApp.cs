@@ -11,12 +11,10 @@ namespace OpenInOpera.Helpers
             ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
-            SecondaryFilePathSegment = @"Markdown Monster",
+            SecondaryFilePathSegment = @"Opera",
             SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
         };
 
-        //public const string AppFolderName = "Opera";
-        //public const string AppSubFolderName = null;
         public const string ExecutableFileToBrowseFor = "opera.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
@@ -26,8 +24,6 @@ namespace OpenInOpera.Helpers
                 "*"
             };
         }
-
-
 
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
