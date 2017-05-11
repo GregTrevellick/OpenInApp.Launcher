@@ -22,7 +22,8 @@ namespace OpenInApp.Command
                 {
                     proceedToExecute = false;
                     var fileHelper = new FilePrompterHelper(dto.Caption, dto.ExecutableFileToBrowseFor);
-                    persistOptionsDto = fileHelper.PromptForActualExeFile(dto.ActualPathToExe);
+                    var badFilePath = string.IsNullOrEmpty(dto.ActualPathToExe) ? dto.ExecutableFileToBrowseFor : dto.ActualPathToExe;
+                    persistOptionsDto = fileHelper.PromptForActualExeFile(badFilePath);
 
                     var newActualPathToExeExists = CommonFileHelper.DoesFileExist(dto.ActualPathToExe);
                     if (newActualPathToExeExists)

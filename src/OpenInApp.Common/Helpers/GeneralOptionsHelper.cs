@@ -17,6 +17,7 @@ namespace OpenInApp.Common.Helpers
         public static string GetActualPathToExe(ActualPathToExeDto actualPathToExeDto)
         {
             var pathPrimary = GetPath(actualPathToExeDto.InitialFolderTypePrimary, actualPathToExeDto.SecondaryFilePathSegment, actualPathToExeDto.ExecutableFileToBrowseFor);
+
             if (File.Exists(pathPrimary))
             {
                 return pathPrimary;
@@ -24,6 +25,7 @@ namespace OpenInApp.Common.Helpers
             else
             {
                 var pathSecondary = GetPath(actualPathToExeDto.InitialFolderTypeSecondary, actualPathToExeDto.SecondaryFilePathSegment, actualPathToExeDto.ExecutableFileToBrowseFor);
+
                 if (File.Exists(pathSecondary))
                 {
                     return pathSecondary;
@@ -35,9 +37,15 @@ namespace OpenInApp.Common.Helpers
 
         private static string GetPath(InitialFolderType initialFolderType, string secondaryFilePathSegment, string executableFileToBrowseFor)
         {
-            var specialFolder = (SpecialFolder)initialFolderType;
-            var initialFolder = GetFolderPath(specialFolder);
-            var path = Path.Combine(initialFolder, secondaryFilePathSegment, executableFileToBrowseFor);
+            string path = null;
+
+            if (initialFolderType != InitialFolderType.None)
+            {
+                var specialFolder = (SpecialFolder)initialFolderType;
+                var initialFolder = GetFolderPath(specialFolder);
+                path = Path.Combine(initialFolder, secondaryFilePathSegment, executableFileToBrowseFor);
+            }
+
             return path;
         }
     }
