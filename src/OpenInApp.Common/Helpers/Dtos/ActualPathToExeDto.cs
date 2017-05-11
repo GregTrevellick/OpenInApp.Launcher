@@ -8,7 +8,7 @@
         /// <summary>
         /// 
         /// </summary>
-        public string ExecutableFileToBrowseFor { get; set; }//gregt rename to ExecutableFileName
+        public string ExecutableFileToBrowseFor { get; set; }
 
         /// <summary>
         /// 

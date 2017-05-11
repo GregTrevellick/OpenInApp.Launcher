@@ -109,9 +109,6 @@ namespace OpenInVS2013.Options.VS2013
             if (string.IsNullOrEmpty(ActualPathToExe))
             {
                 ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.ActualPathToExeDto);
-                    //ConstantsForApp.AppFolderName, 
-                    //ConstantsForApp.AppSubFolderName,
-                  //  ConstantsForApp.ExecutableFileToBrowseFor);
             }
 
             previousActualPathToExe = ActualPathToExe;

@@ -109,9 +109,6 @@ namespace OpenInOperaDeveloper.Options.OperaDeveloper
             if (string.IsNullOrEmpty(ActualPathToExe))
             {
                 ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.ActualPathToExeDto);
-                    //ConstantsForApp.AppFolderName, 
-                    //ConstantsForApp.AppSubFolderName,
-                  //  ConstantsForApp.ExecutableFileToBrowseFor);
             }
 
             previousActualPathToExe = ActualPathToExe;
