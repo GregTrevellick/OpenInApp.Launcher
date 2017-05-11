@@ -1,4 +1,5 @@
 ﻿using OpenInApp.Common.Helpers.Dtos;
+using System.Collections.Generic;
 using System.IO;
 using static System.Environment;
 
@@ -16,11 +17,13 @@ namespace OpenInApp.Common.Helpers
         /// <returns></returns>
         public static string GetActualPathToExe(ActualPathToExeDto actualPathToExeDto)
         {
+            string result = null;
+
             var pathPrimary = GetPath(actualPathToExeDto.InitialFolderTypePrimary, actualPathToExeDto.SecondaryFilePathSegment, actualPathToExeDto.ExecutableFileToBrowseFor);
 
             if (File.Exists(pathPrimary))
             {
-                return pathPrimary;
+                result = pathPrimary;
             }
             else
             {
@@ -28,11 +31,37 @@ namespace OpenInApp.Common.Helpers
 
                 if (File.Exists(pathSecondary))
                 {
-                    return pathSecondary;
+                    result = pathSecondary;
+                }
+                else 
+                {
+                    if (actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions)
+                    {
+                        var paths = GetMultiYearPaths(actualPathToExeDto.SecondaryFilePathSegment);
+                        foreach (var path in paths)
+                        {
+                            if (File.Exists(path))
+                            {
+                                result = path;
+                            }
+                        }
+                    }
                 }
             }
 
-            return null;
+            return result;
+        }
+
+        private static IEnumerable<string> GetMultiYearPaths(string secondaryFilePathSegment)//gregt better name this method
+        {
+            var result = new List<string>();
+
+            for (int i = 2025; i > 1995; i--)
+            {
+                result.Add(secondaryFilePathSegment.Replace("2016", i));
+            }
+
+            return result;
         }
 
         private static string GetPath(InitialFolderType initialFolderType, string secondaryFilePathSegment, string executableFileToBrowseFor)
