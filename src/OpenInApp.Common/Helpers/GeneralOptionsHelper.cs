@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using static System.Environment;
 
 namespace OpenInApp.Common.Helpers
 {
@@ -29,46 +30,19 @@ namespace OpenInApp.Common.Helpers
         /// <param name="appSubFolderName">Name of the application sub folder.</param>
         /// <param name="executableFileToBrowseFor">The executable file to browse for.</param>
         /// <returns></returns>
-        public static string GetActualPathToExe_New(ActualPathToExeDto appFolderName)
+        public static string GetActualPathToExe_New(ActualPathToExeDto actualPathToExeDto)
         {
-            //var foldersToSearch = GetFoldersToSearch();
+            var specialFolder = (SpecialFolder)actualPathToExeDto.InitialFolderTypePrimary;
 
-            //foreach (DirectoryInfo folder in foldersToSearch)
-            //{
-            //    var appParentFolderPaths = folder.GetDirectories(appFolderName);
-            //    foreach (DirectoryInfo appParentFolderPath in appParentFolderPaths)
-            //    {
-            //        if (string.IsNullOrEmpty(appSubFolderName))
-            //        {
-            //            var path = Path.Combine(appParentFolderPath.FullName, executableFileToBrowseFor);
-            //            if (File.Exists(path))
-            //            {
-            //                return path;
-            //            }
-            //        }
-            //        else
-            //        {
-            //            try
-            //            {
-            //                var appFolderPaths = appParentFolderPath.GetDirectories(appSubFolderName + "*");
+            var initialFolder = GetFolderPath(specialFolder);
 
-            //                foreach (DirectoryInfo appFolderPath in appFolderPaths)
-            //                {
-            //                    var path = Path.Combine(appFolderPath.FullName, executableFileToBrowseFor);
-            //                    if (File.Exists(path))
-            //                    {
-            //                        return path;
-            //                    }
-            //                }
-            //            }
-            //            catch (DirectoryNotFoundException)
-            //            {
-            //                return null;
-            //            }
-            //        }
-            //    }
-            //}
+            var path = Path.Combine(initialFolder, actualPathToExeDto.SecondaryFilePathSegment, actualPathToExeDto.ExecutableFileToBrowseFor);
 
+            if (File.Exists(path))
+            {
+                return path;
+            }
+            
             return null;
         }
 
@@ -123,6 +97,8 @@ namespace OpenInApp.Common.Helpers
             return null;
         }
 
+
+        //gregt to be deleted
         private static IEnumerable<DirectoryInfo> GetFoldersToSearch()
         {
             var programFiles = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));

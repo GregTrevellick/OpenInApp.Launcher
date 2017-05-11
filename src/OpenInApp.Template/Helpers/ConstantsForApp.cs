@@ -23,13 +23,13 @@ namespace OpenInGregtGregt.Helpers
 
 
         //NEW=============================
-        public ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
-            ExecutableFileToBrowseFor = "XMLSpy.exe",
+            ExecutableFileToBrowseFor = "MarkdownMonster.exe",
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
-            SecondaryFilePathSegment = @"Altova\XMLSpy2016",
-            SecondaryFilePathSegmentHasMultipleYearNumberVersions = true,
+            SecondaryFilePathSegment = @"Markdown Monster",
+            SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
         };
         //NEW=============================
 
