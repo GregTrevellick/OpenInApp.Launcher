@@ -1,4 +1,5 @@
 ﻿using OpenInApp.Common.Helpers;
+using OpenInApp.Common.Helpers.Dtos;
 using System.Collections.Generic;
 
 namespace OpenInGregtGregt.Helpers
@@ -16,6 +17,24 @@ namespace OpenInGregtGregt.Helpers
                 "*"
             };
         }
+
+
+
+
+
+        //NEW=============================
+        public ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
+        {
+            ExecutableFileToBrowseFor = "XMLSpy.exe",
+            InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
+            InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
+            SecondaryFilePathSegment = @"Altova\XMLSpy2016",
+            SecondaryFilePathSegmentHasMultipleYearNumberVersions = true,
+        };
+        //NEW=============================
+
+
+
 
 
 

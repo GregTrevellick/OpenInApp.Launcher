@@ -80,7 +80,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers\TopLevelFolderTypes.cs" />
+    <Compile Include="Helpers\Dtos\ActualPathToExeDto.cs" />
+    <Compile Include="Helpers\Dtos\InitialFolderType.cs" />
     <Compile Include="Helpers\Dtos\FileBrowseOutcomeDto.cs" />
     <Compile Include="Helpers\OpenInAppHelper.cs" />
     <Compile Include="Helpers\CommonFileHelper.cs" />

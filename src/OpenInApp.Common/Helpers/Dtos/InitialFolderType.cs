@@ -1,7 +1,8 @@
-﻿namespace OpenInApp.Common.Helpers
+﻿namespace OpenInApp.Common.Helpers.Dtos
 {
-    public enum TopLevelFolderTypes
+    public enum InitialFolderType
     {
+        None = 0,
         ApplicationData = 26,
         ProgramFiles = 38,
         ProgramFilesX86 = 42,

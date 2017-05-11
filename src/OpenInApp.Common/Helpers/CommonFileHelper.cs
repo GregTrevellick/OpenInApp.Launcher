@@ -1,6 +1,6 @@
 ﻿using EnvDTE;
 using EnvDTE80;
-using OpenInApp.Common.Dtos;
+using OpenInApp.Common.Helpers.Dtos;
 using System;
 using System.Collections.Generic;
 using System.IO;

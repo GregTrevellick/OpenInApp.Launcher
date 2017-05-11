@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace OpenInApp.Common.Dtos
+namespace OpenInApp.Common.Helpers.Dtos
 {
     /// <summary>
     /// Dto for file browsing in the file system
