@@ -8,7 +8,7 @@ namespace OpenInAppPaintDotNet.Helpers
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
-            ExecutableFileToBrowseFor = "MarkdownMonster.exe",
+            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
             SecondaryFilePathSegment = @"Markdown Monster",
@@ -17,7 +17,7 @@ namespace OpenInAppPaintDotNet.Helpers
 
         //public const string AppFolderName = "Paint.NET";
         //public const string AppSubFolderName = null;
-        //public const string ExecutableFileToBrowseFor = "PaintDotNet.exe";
+        public const string ExecutableFileToBrowseFor = "PaintDotNet.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

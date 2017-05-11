@@ -8,7 +8,7 @@ namespace OpenInAppGimp.Helpers
 	{
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
-            ExecutableFileToBrowseFor = "MarkdownMonster.exe",
+            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
             SecondaryFilePathSegment = @"Markdown Monster",
@@ -17,7 +17,7 @@ namespace OpenInAppGimp.Helpers
 
         //public const string AppFolderName = "GIMP 2";
         //public const string AppSubFolderName = "bin";
-        //public const string ExecutableFileToBrowseFor = "gimp-2.8.exe";//good enough for now, update to 3.0 when officially released
+        public const string ExecutableFileToBrowseFor = "gimp-2.8.exe";//good enough for now, update to 3.0 when officially released
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
 		{

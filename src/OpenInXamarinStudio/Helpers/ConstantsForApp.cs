@@ -8,7 +8,7 @@ namespace OpenInXamarinStudio.Helpers
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
-            ExecutableFileToBrowseFor = "MarkdownMonster.exe",
+            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
             SecondaryFilePathSegment = @"Markdown Monster",
@@ -17,7 +17,7 @@ namespace OpenInXamarinStudio.Helpers
 
         //public const string AppFolderName = "Xamarin Studio";
         //public const string AppSubFolderName = "bin";
-        //public const string ExecutableFileToBrowseFor = "XamarinStudio.exe";
+        public const string ExecutableFileToBrowseFor = "XamarinStudio.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

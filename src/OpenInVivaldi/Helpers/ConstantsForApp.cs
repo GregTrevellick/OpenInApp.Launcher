@@ -8,7 +8,7 @@ namespace OpenInVivaldi.Helpers
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
-            ExecutableFileToBrowseFor = "vivaldi.exe",
+            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.LocalApplicationData,
             InitialFolderTypeSecondary = InitialFolderType.None,
             SecondaryFilePathSegment = @"Vivaldi\Application",
@@ -17,7 +17,7 @@ namespace OpenInVivaldi.Helpers
 
         //public const string AppFolderName = "Vivaldi";//C:\Users\greg\AppData\Local\Vivaldi\Application\vivaldi.exe
         //public const string AppSubFolderName = "Application";
-        //public const string ExecutableFileToBrowseFor = "vivaldi.exe";
+        public const string ExecutableFileToBrowseFor = "vivaldi.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

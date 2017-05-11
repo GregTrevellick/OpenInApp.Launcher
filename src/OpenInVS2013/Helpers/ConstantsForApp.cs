@@ -8,7 +8,7 @@ namespace OpenInVS2013.Helpers
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
-            ExecutableFileToBrowseFor = "MarkdownMonster.exe",
+            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
             SecondaryFilePathSegment = @"Markdown Monster",
@@ -17,7 +17,7 @@ namespace OpenInVS2013.Helpers
 
         //public const string AppFolderName = @"Microsoft Visual Studio 12.0";
         //public const string AppSubFolderName = @"Common7\IDE";
-        //public const string ExecutableFileToBrowseFor = "devenv.exe";
+        public const string ExecutableFileToBrowseFor = "devenv.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

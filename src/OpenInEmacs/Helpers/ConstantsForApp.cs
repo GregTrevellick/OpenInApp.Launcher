@@ -8,7 +8,7 @@ namespace OpenInEmacs.Helpers
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
-            ExecutableFileToBrowseFor = "MarkdownMonster.exe",
+            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
             SecondaryFilePathSegment = @"Markdown Monster",
@@ -17,7 +17,7 @@ namespace OpenInEmacs.Helpers
 
         //public const string AppFolderName = "emacs-25.1-2-x86_64-w64-mingw32";
         //public const string AppSubFolderName = "bin";
-        //public const string ExecutableFileToBrowseFor = "runemacs.exe";
+        public const string ExecutableFileToBrowseFor = "runemacs.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

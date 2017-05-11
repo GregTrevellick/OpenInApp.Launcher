@@ -8,7 +8,7 @@ namespace OpenInGregtGregt.Helpers
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
-            ExecutableFileToBrowseFor = "MarkdownMonster.exe",
+            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor, 
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
             SecondaryFilePathSegment = @"Markdown Monster",
@@ -17,7 +17,7 @@ namespace OpenInGregtGregt.Helpers
 
         //public const string AppFolderName = "Markdown Monster";//@"gregtgregt";
         //public const string AppSubFolderName = null;
-        //public const string ExecutableFileToBrowseFor = "MarkdownMonster.exe";//"gregtgregt";
+        public const string ExecutableFileToBrowseFor = "MarkdownMonster.exe";//"gregtgregt";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

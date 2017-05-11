@@ -8,7 +8,7 @@ namespace OpenInAppAltovaXmlSpy.Helpers
 	{
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
-            ExecutableFileToBrowseFor = "MarkdownMonster.exe",
+            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
             SecondaryFilePathSegment = @"Markdown Monster",
@@ -17,7 +17,7 @@ namespace OpenInAppAltovaXmlSpy.Helpers
 
         //public const string AppFolderName = "Altova";
         //public const string AppSubFolderName = "XMLSpy";
-        //public const string ExecutableFileToBrowseFor = "XmlSpy.exe";
+        public const string ExecutableFileToBrowseFor = "XmlSpy.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
 		{

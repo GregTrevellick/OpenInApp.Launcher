@@ -8,7 +8,7 @@ namespace OpenInMSPaint.Helpers
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
-            ExecutableFileToBrowseFor = "mspaint.exe",
+            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.Windows,
             InitialFolderTypeSecondary = InitialFolderType.None,
             SecondaryFilePathSegment = @"system32",
@@ -17,7 +17,7 @@ namespace OpenInMSPaint.Helpers
 
         //public const string AppFolderName = "Windows";   
         //public const string AppSubFolderName = "system32";
-        //public const string ExecutableFileToBrowseFor = "mspaint.exe";
+        public const string ExecutableFileToBrowseFor = "mspaint.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

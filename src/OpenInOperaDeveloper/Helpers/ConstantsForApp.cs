@@ -8,7 +8,7 @@ namespace OpenInOperaDeveloper.Helpers
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
-            ExecutableFileToBrowseFor = "MarkdownMonster.exe",
+            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
             SecondaryFilePathSegment = @"Markdown Monster",
@@ -17,7 +17,7 @@ namespace OpenInOperaDeveloper.Helpers
 
         //public const string AppFolderName = "Opera developer";
         //public const string AppSubFolderName = null;
-        //public const string ExecutableFileToBrowseFor = "launcher.exe";
+        public const string ExecutableFileToBrowseFor = "launcher.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

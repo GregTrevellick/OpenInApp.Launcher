@@ -8,7 +8,7 @@ namespace OpenInChromeCanary.Helpers
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
-            ExecutableFileToBrowseFor = "MarkdownMonster.exe",
+            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
             SecondaryFilePathSegment = @"Markdown Monster",
@@ -18,7 +18,7 @@ namespace OpenInChromeCanary.Helpers
         //public const string AppFolderName = @"Google\Chrome SxS";//C:\Users\greg\AppData\Local \Google\Chrome SxS  \Application \chrome.exe
         //                                                         //C:\Users\greg\AppData\Local \Vivaldi            \Application \vivaldi.exe
         //public const string AppSubFolderName = "Application";
-        //public const string ExecutableFileToBrowseFor = "chrome.exe";
+        public const string ExecutableFileToBrowseFor = "chrome.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

@@ -8,7 +8,7 @@ namespace OpenInFirefoxDeveloperEdition.Helpers
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
         {
-            ExecutableFileToBrowseFor = "MarkdownMonster.exe",
+            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
             InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
             InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
             SecondaryFilePathSegment = @"Markdown Monster",
@@ -17,7 +17,7 @@ namespace OpenInFirefoxDeveloperEdition.Helpers
 
         //public const string AppFolderName = "Firefox Developer Edition";
         //public const string AppSubFolderName = null;
-        //public const string ExecutableFileToBrowseFor = "firefox.exe";
+        public const string ExecutableFileToBrowseFor = "firefox.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
