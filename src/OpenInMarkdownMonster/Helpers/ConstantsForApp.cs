@@ -9,7 +9,7 @@ namespace OpenInAppMarkdownMonster.Helpers
 		public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
 		{
 			ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
-            InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
+			InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
 			InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
 			SecondaryFilePathSegment = @"Markdown Monster",
 			SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
