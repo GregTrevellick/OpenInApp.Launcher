@@ -6,16 +6,8 @@ namespace OpenInAppMarkdownMonster.Helpers
 {
 	public class ConstantsForApp 
 	{
-		public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
-		{
-			ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
-			InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
-			InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
-			SecondaryFilePathSegment = @"Markdown Monster",
-			SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
-		};
-
-		public const string ExecutableFileToBrowseFor = "MarkdownMonster.exe";
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
+        public const string ExecutableFileToBrowseFor = "MarkdownMonster.exe";
 		
 		public IEnumerable<string> GetDefaultTypicalFileExtensions()
 		{

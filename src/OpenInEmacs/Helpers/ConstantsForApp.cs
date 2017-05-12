@@ -6,15 +6,7 @@ namespace OpenInEmacs.Helpers
 {
     public class ConstantsForApp 
     {
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
-        {
-            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
-            InitialFolderTypePrimary = InitialFolderType.None,
-            InitialFolderTypeSecondary = InitialFolderType.None,
-            SecondaryFilePathSegment = string.Empty,
-            SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
-        };
-
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
         public const string ExecutableFileToBrowseFor = "runemacs.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()

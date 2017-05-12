@@ -6,15 +6,7 @@ namespace OpenInFirefoxDeveloperEdition.Helpers
 {
     public class ConstantsForApp 
     {
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
-        {
-            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
-            InitialFolderTypePrimary = InitialFolderType.ProgramFiles,
-            InitialFolderTypeSecondary = InitialFolderType.ProgramFilesX86,
-            SecondaryFilePathSegment = @"Firefox Developer Edition",
-            SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
-        };
-
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
         public const string ExecutableFileToBrowseFor = "firefox.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()

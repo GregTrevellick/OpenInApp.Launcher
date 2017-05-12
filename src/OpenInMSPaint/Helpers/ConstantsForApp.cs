@@ -6,15 +6,7 @@ namespace OpenInMSPaint.Helpers
 {
     public class ConstantsForApp 
     {
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
-        {
-            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
-            InitialFolderTypePrimary = InitialFolderType.Windows,
-            InitialFolderTypeSecondary = InitialFolderType.None,
-            SecondaryFilePathSegment = @"system32",
-            SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
-        };
-
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
         public const string ExecutableFileToBrowseFor = "mspaint.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()

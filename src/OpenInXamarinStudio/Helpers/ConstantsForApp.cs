@@ -6,15 +6,7 @@ namespace OpenInXamarinStudio.Helpers
 {
     public class ConstantsForApp 
     {
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
-        {
-            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
-            InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
-            InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
-            SecondaryFilePathSegment = @"Xamarin Studio\bin",
-            SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
-        };
-
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
         public const string ExecutableFileToBrowseFor = "XamarinStudio.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()

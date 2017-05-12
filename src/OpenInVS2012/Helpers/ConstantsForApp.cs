@@ -6,15 +6,7 @@ namespace OpenInVS2012.Helpers
 {
     public class ConstantsForApp 
     {
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
-        {
-            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
-            InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
-            InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
-            SecondaryFilePathSegment = @"Microsoft Visual Studio 11.0\Common7\IDE",
-            SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
-        };
-
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
         public const string ExecutableFileToBrowseFor = "devenv.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()

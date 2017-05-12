@@ -6,15 +6,7 @@ namespace OpenInVS2017Professional.Helpers
 {
     public class ConstantsForApp 
     {
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
-        {
-            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
-            InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
-            InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
-            SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Professional\Common7\IDE",
-            SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
-        };
-
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor + "VS2017Professional");
         public const string ExecutableFileToBrowseFor = "devenv.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()

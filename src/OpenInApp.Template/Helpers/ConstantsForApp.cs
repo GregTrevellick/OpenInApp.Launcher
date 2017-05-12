@@ -6,15 +6,7 @@ namespace OpenInGregtGregt.Helpers
 {
     public class ConstantsForApp //gregt convert to an interface
     {
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
-        {
-            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor, 
-            InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,//@"gregtgregt";
-            InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,//@"gregtgregt";
-            SecondaryFilePathSegment = @"Markdown Monster",//@"gregtgregt";
-            SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,//@"gregtgregt";
-        };
-
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
         public const string ExecutableFileToBrowseFor = "MarkdownMonster.exe";//"gregtgregt";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()

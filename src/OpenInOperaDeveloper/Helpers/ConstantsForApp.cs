@@ -6,15 +6,7 @@ namespace OpenInOperaDeveloper.Helpers
 {
     public class ConstantsForApp 
     {
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
-        {
-            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
-            InitialFolderTypePrimary = InitialFolderType.ProgramFiles,
-            InitialFolderTypeSecondary = InitialFolderType.ProgramFilesX86,
-            SecondaryFilePathSegment = @"Opera developer",
-            SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
-        };
-
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
         public const string ExecutableFileToBrowseFor = "launcher.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()

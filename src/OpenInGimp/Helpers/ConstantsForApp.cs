@@ -6,15 +6,7 @@ namespace OpenInAppGimp.Helpers
 {
 	public class ConstantsForApp 
 	{
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
-        {
-            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
-            InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
-            InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
-            SecondaryFilePathSegment = @"GIMP 2\bin",
-            SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
-        };
-
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
         public const string ExecutableFileToBrowseFor = "gimp-2.8.exe";//good enough for now, update to 3.0 when officially released
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()

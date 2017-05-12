@@ -6,15 +6,7 @@ namespace OpenInVivaldi.Helpers
 {
     public class ConstantsForApp 
     {
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeDto
-        {
-            ExecutableFileToBrowseFor = ExecutableFileToBrowseFor,
-            InitialFolderTypePrimary = InitialFolderType.LocalApplicationData,
-            InitialFolderTypeSecondary = InitialFolderType.None,
-            SecondaryFilePathSegment = @"Vivaldi\Application",
-            SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
-        };
-
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
         public const string ExecutableFileToBrowseFor = "vivaldi.exe";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
