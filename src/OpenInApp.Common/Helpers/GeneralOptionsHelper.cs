@@ -58,7 +58,7 @@ namespace OpenInApp.Common.Helpers
 
             for (int i = 2025; i > 1995; i--)
             {
-                result.Add(secondaryFilePathSegment.Replace("2016", i));
+                result.Add(secondaryFilePathSegment.Replace("2016", i.ToString()));
             }
 
             return result;
