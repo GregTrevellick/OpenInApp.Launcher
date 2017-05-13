@@ -52,18 +52,6 @@ namespace OpenInApp.Common.Helpers
             return result;
         }
 
-        private static IEnumerable<string> GetMultiYearPaths(string secondaryFilePathSegment)//gregt better name this method
-        {
-            var result = new List<string>();
-
-            for (int i = 2025; i > 1995; i--)
-            {
-                result.Add(secondaryFilePathSegment.Replace("2016", i.ToString()));
-            }
-
-            return result;
-        }
-
         private static string GetPath(InitialFolderType initialFolderType, string secondaryFilePathSegment, string executableFileToBrowseFor)
         {
             string path = null;
@@ -76,6 +64,18 @@ namespace OpenInApp.Common.Helpers
             }
 
             return path;
+        }
+
+        private static IEnumerable<string> GetMultiYearPaths(string secondaryFilePathSegment)//gregt better name this method
+        {
+            var result = new List<string>();
+
+            for (int i = 2025; i > 1995; i--)
+            {
+                result.Add(secondaryFilePathSegment.Replace("2016", i.ToString()));
+            }
+
+            return result;
         }
     }
 }
