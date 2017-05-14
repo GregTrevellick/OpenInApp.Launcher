@@ -125,7 +125,6 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="Helpers\ActualPathToExeHelperTests.cs" />
     <Compile Include="Helpers\OpenInAppHelperTests.cs" />
     <Compile Include="Helpers\GeneralOptionsHelperTests.cs" />
     <Compile Include="Helpers\FileHelperTests.cs" />
