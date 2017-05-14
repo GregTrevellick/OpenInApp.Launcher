@@ -48,10 +48,10 @@ namespace OpenInApp.Common.Helpers
 
             if (actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions)
             {
-                var paths = GetMultiYearPaths(actualPathToExeDto.SecondaryFilePathSegment);
+                var paths = GetMultipleYearPaths(actualPathToExeDto.SecondaryFilePathSegment);
                 foreach (var path in paths)
                 {
-                        searchPaths.Add(path);
+                    searchPaths.Add(path);
                 }
             }
 
@@ -77,11 +77,11 @@ namespace OpenInApp.Common.Helpers
             return path;
         }
 
-        private static IEnumerable<string> GetMultiYearPaths(string secondaryFilePathSegment)//gregt better name this method
+        public static IEnumerable<string> GetMultipleYearPaths(string secondaryFilePathSegment)
         {
             var result = new List<string>();
 
-            for (int i = 2025; i > 1995; i--)
+            for (int i = 2020; i > 1995; i--)
             {
                 result.Add(secondaryFilePathSegment.Replace("2016", i.ToString()));
             }

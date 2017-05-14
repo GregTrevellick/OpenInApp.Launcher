@@ -35,5 +35,25 @@ namespace OpenInApp.Common.Tests.Helpers
             //Assert
             Assert.IsTrue(actual.Contains(expected));
         }
+
+        [Test()]
+        [Category("U")]
+        public void GetMultipleYearPathsTest()
+        {
+            //Arrange
+            var secondaryFilePathSegment = "abc2016d";
+
+            //Act
+            var actual = GeneralOptionsHelper.GetMultipleYearPaths(secondaryFilePathSegment);
+
+            //Assert
+            Assert.IsFalse(actual.Contains("abc1995d"));
+            Assert.IsTrue(actual.Contains("abc1996d"));
+            Assert.IsTrue(actual.Contains("abc1996d"));
+            Assert.IsTrue(actual.Contains("abc2019d"));
+            Assert.IsTrue(actual.Contains("abc2020d"));
+            Assert.IsFalse(actual.Contains("abc2021d"));
+            Assert.AreEqual(25, actual.Count());
+        }
     }
 }
