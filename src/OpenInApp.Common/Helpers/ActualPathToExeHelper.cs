@@ -9,7 +9,7 @@ namespace OpenInApp.Common.Helpers
             var actualPathToExeDto = new ActualPathToExeDto
             {
                 ExecutableFileToBrowseFor = executableFileToBrowseFor,
-                InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
+                InitialFolderType = InitialFolderType.ProgramFilesX86,
                 SecondaryFilePathSegmentHasMultipleYearNumberVersions = false
             };
 
@@ -66,23 +66,23 @@ namespace OpenInApp.Common.Helpers
                     break;
                 case "chrome.exe":
                     actualPathToExeDto.SecondaryFilePathSegment = @"Google\Chrome SxS\Application";
-                    actualPathToExeDto.InitialFolderTypePrimary = InitialFolderType.LocalApplicationData;
+                    actualPathToExeDto.InitialFolderType = InitialFolderType.LocalApplicationData;
                     break;
                 case "vivaldi.exe":
                     actualPathToExeDto.SecondaryFilePathSegment = @"Vivaldi\Application";
-                    actualPathToExeDto.InitialFolderTypePrimary = InitialFolderType.LocalApplicationData;
+                    actualPathToExeDto.InitialFolderType = InitialFolderType.LocalApplicationData;
                     break;
                 case "runemacs.exe":
                     actualPathToExeDto.SecondaryFilePathSegment = null;
-                    actualPathToExeDto.InitialFolderTypePrimary = InitialFolderType.None;
+                    actualPathToExeDto.InitialFolderType = InitialFolderType.None;
                     break;
                 case "mspaint.exe":
                     actualPathToExeDto.SecondaryFilePathSegment = "system32";
-                    actualPathToExeDto.InitialFolderTypePrimary = InitialFolderType.Windows;
+                    actualPathToExeDto.InitialFolderType = InitialFolderType.Windows;
                     break;
                 default:
                     actualPathToExeDto.SecondaryFilePathSegment = null;
-                    actualPathToExeDto.InitialFolderTypePrimary = InitialFolderType.None;
+                    actualPathToExeDto.InitialFolderType = InitialFolderType.None;
                     break;
             }
 

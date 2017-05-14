@@ -13,7 +13,7 @@
         /// <summary>
         /// 
         /// </summary>
-        public InitialFolderType InitialFolderTypePrimary { get; set; }
+        public InitialFolderType InitialFolderType { get; set; }
 
         /// <summary>
         /// 

@@ -64,7 +64,7 @@ namespace OpenInApp.Common.Helpers
 
             if (!string.IsNullOrEmpty(executableFileToBrowseFor))
             {
-                var initialFolderType = actualPathToExeDto.InitialFolderTypePrimary;
+                var initialFolderType = actualPathToExeDto.InitialFolderType;
 
                 if (initialFolderType != InitialFolderType.None)
                 {
