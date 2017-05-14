@@ -30,6 +30,6 @@ namespace OpenInMSPaint.Helpers
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
         internal static bool SeparateProcessPerFileToBeOpened = true;
-        internal static bool UseShellExecute = true;
+        internal static bool UseShellExecute = false;
     }
 }
