@@ -34,8 +34,9 @@ namespace OpenInApp.Common.Helpers
         {
             var searchPaths  = new List<string>();
             var actualPathToExeHelper = new ActualPathToExeHelper();
+            var actualPathToExeDto = actualPathToExeHelper.GetActualPathToExeDto(executableFileToBrowseFor);
 
-            var pathPrimary = GetPath(executableFileToBrowseFor, actualPathToExeHelper);
+            var pathPrimary = GetPath(executableFileToBrowseFor, actualPathToExeDto);
             searchPaths.Add(pathPrimary);
 
             var x86 = " (x86)";
@@ -44,9 +45,6 @@ namespace OpenInApp.Common.Helpers
                 var pathPrimaryWithoutx86 = pathPrimary.Replace(x86, string.Empty);
                 searchPaths.Add(pathPrimaryWithoutx86);
             }
-
-            //gregt dedupe
-            var actualPathToExeDto = actualPathToExeHelper.GetActualPathToExeDto(executableFileToBrowseFor);
 
             if (actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions)
             {
@@ -60,15 +58,12 @@ namespace OpenInApp.Common.Helpers
             return searchPaths;
         }
 
-        private static string GetPath(string executableFileToBrowseFor, ActualPathToExeHelper actualPathToExeHelper)
+        private static string GetPath(string executableFileToBrowseFor, ActualPathToExeDto actualPathToExeDto)
         {
             string path = null;
 
             if (!string.IsNullOrEmpty(executableFileToBrowseFor))
             {
-                //gregt dedupe
-                var actualPathToExeDto = actualPathToExeHelper.GetActualPathToExeDto(executableFileToBrowseFor);
-
                 var initialFolderType = actualPathToExeDto.InitialFolderTypePrimary;
 
                 if (initialFolderType != InitialFolderType.None)
