@@ -10,7 +10,6 @@ namespace OpenInApp.Common.Helpers
             {
                 ExecutableFileToBrowseFor = executableFileToBrowseFor,
                 InitialFolderTypePrimary = InitialFolderType.ProgramFilesX86,
-                //////InitialFolderTypeSecondary = InitialFolderType.ProgramFiles,
                 SecondaryFilePathSegmentHasMultipleYearNumberVersions = false
             };
 
@@ -60,39 +59,30 @@ namespace OpenInApp.Common.Helpers
                     actualPathToExeDto.SecondaryFilePathSegment = @"Xamarin Studio\bin";
                     break;
                 case "firefox.exe":
-                    actualPathToExeDto.SecondaryFilePathSegment = "Firefox Developer Edition";//C:\Program Files\Firefox Developer Edition\firefox.exe
-                    //////actualPathToExeDto.InitialFolderTypePrimary = InitialFolderType.ProgramFiles;
-                    //////actualPathToExeDto.InitialFolderTypeSecondary = InitialFolderType.ProgramFilesX86;
+                    actualPathToExeDto.SecondaryFilePathSegment = "Firefox Developer Edition";
                     break;
                 case "launcher.exe":
                     actualPathToExeDto.SecondaryFilePathSegment = @"Opera developer";
-                    //////actualPathToExeDto.InitialFolderTypePrimary = InitialFolderType.ProgramFiles;
-                    //////actualPathToExeDto.InitialFolderTypeSecondary = InitialFolderType.ProgramFilesX86;
                     break;
                 case "chrome.exe":
                     actualPathToExeDto.SecondaryFilePathSegment = @"Google\Chrome SxS\Application";
                     actualPathToExeDto.InitialFolderTypePrimary = InitialFolderType.LocalApplicationData;
-                    //////actualPathToExeDto.InitialFolderTypeSecondary = InitialFolderType.None;
                     break;
                 case "vivaldi.exe":
                     actualPathToExeDto.SecondaryFilePathSegment = @"Vivaldi\Application";
                     actualPathToExeDto.InitialFolderTypePrimary = InitialFolderType.LocalApplicationData;
-                    //////actualPathToExeDto.InitialFolderTypeSecondary = InitialFolderType.None;
                     break;
                 case "runemacs.exe":
                     actualPathToExeDto.SecondaryFilePathSegment = null;
                     actualPathToExeDto.InitialFolderTypePrimary = InitialFolderType.None;
-                    //////actualPathToExeDto.InitialFolderTypeSecondary = InitialFolderType.None;
                     break;
                 case "mspaint.exe":
                     actualPathToExeDto.SecondaryFilePathSegment = "system32";
                     actualPathToExeDto.InitialFolderTypePrimary = InitialFolderType.Windows;
-                    //////actualPathToExeDto.InitialFolderTypeSecondary = InitialFolderType.None;
                     break;
                 default:
                     actualPathToExeDto.SecondaryFilePathSegment = null;
                     actualPathToExeDto.InitialFolderTypePrimary = InitialFolderType.None;
-                    //////actualPathToExeDto.InitialFolderTypeSecondary = InitialFolderType.None;
                     break;
             }
 
