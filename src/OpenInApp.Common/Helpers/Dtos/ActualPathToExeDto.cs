@@ -18,7 +18,14 @@
         /// <summary>
         /// 
         /// </summary>
-        public InitialFolderType InitialFolderTypeSecondary { get; set; }
+        //public InitialFolderType InitialFolderTypeSecondary
+        //{
+        //    get
+        //    {
+        //        if (InitialFolderTypePrimary == InitialFolderType.
+        //        return InitialFolderType.ProgramFilesX86;
+        //    }
+        //}
 
         /// <summary>
         /// 

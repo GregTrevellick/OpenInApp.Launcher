@@ -13,54 +13,70 @@ namespace OpenInApp.Common.Helpers
         /// <summary>
         /// Returns path to specified executable file, within the the specified folder and sub-folder names, within Program Files directory.
         /// </summary>
-        /// <param name="actualPathToExeDto">Dto containing segmented names of the file path.</param>
+        /// <param name="executableFileToBrowseFor">Names of the executable file</param>
         /// <returns></returns>
-        public static string GetActualPathToExe(ActualPathToExeDto actualPathToExeDto)
+        public static string GetActualPathToExe(string executableFileToBrowseFor)
         {
-            string result = null;
+            var searchPaths = GetSearchPaths(executableFileToBrowseFor);
 
-            var pathPrimary = GetPath(actualPathToExeDto.InitialFolderTypePrimary, actualPathToExeDto.SecondaryFilePathSegment, actualPathToExeDto.ExecutableFileToBrowseFor);
-
-            if (File.Exists(pathPrimary))
+            foreach (var searchPath in searchPaths)
             {
-                result = pathPrimary;
-            }
-            else
-            {
-                var pathSecondary = GetPath(actualPathToExeDto.InitialFolderTypeSecondary, actualPathToExeDto.SecondaryFilePathSegment, actualPathToExeDto.ExecutableFileToBrowseFor);
-
-                if (File.Exists(pathSecondary))
+                if (File.Exists(searchPath))
                 {
-                    result = pathSecondary;
-                }
-                else 
-                {
-                    if (actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions)
-                    {
-                        var paths = GetMultiYearPaths(actualPathToExeDto.SecondaryFilePathSegment);
-                        foreach (var path in paths)
-                        {
-                            if (File.Exists(path))
-                            {
-                                result = path;
-                            }
-                        }
-                    }
+                    return searchPath;
                 }
             }
 
-            return result;
+            return null;
         }
 
-        private static string GetPath(InitialFolderType initialFolderType, string secondaryFilePathSegment, string executableFileToBrowseFor)
+        public static IEnumerable<string> GetSearchPaths(string executableFileToBrowseFor)
+        {
+            var searchPaths  = new List<string>();
+            var actualPathToExeHelper = new ActualPathToExeHelper();
+
+            var pathPrimary = GetPath(executableFileToBrowseFor, actualPathToExeHelper);
+            searchPaths.Add(pathPrimary);
+
+            var x86 = " (x86)";
+            if (pathPrimary != null && pathPrimary.Contains(x86))
+            {
+                var pathPrimaryWithoutx86 = pathPrimary.Replace(x86, string.Empty);
+                searchPaths.Add(pathPrimaryWithoutx86);
+            }
+
+            //gregt dedupe
+            var actualPathToExeDto = actualPathToExeHelper.GetActualPathToExeDto(executableFileToBrowseFor);
+
+            if (actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions)
+            {
+                var paths = GetMultiYearPaths(actualPathToExeDto.SecondaryFilePathSegment);
+                foreach (var path in paths)
+                {
+                        searchPaths.Add(path);
+                }
+            }
+
+            return searchPaths;
+        }
+
+        private static string GetPath(string executableFileToBrowseFor, ActualPathToExeHelper actualPathToExeHelper)
         {
             string path = null;
 
-            if (initialFolderType != InitialFolderType.None)
+            if (!string.IsNullOrEmpty(executableFileToBrowseFor))
             {
-                var specialFolder = (SpecialFolder)initialFolderType;
-                var initialFolder = GetFolderPath(specialFolder);
-                path = Path.Combine(initialFolder, secondaryFilePathSegment, executableFileToBrowseFor);
+                //gregt dedupe
+                var actualPathToExeDto = actualPathToExeHelper.GetActualPathToExeDto(executableFileToBrowseFor);
+
+                var initialFolderType = actualPathToExeDto.InitialFolderTypePrimary;
+
+                if (initialFolderType != InitialFolderType.None)
+                {
+                    var specialFolder = (SpecialFolder)initialFolderType;
+                    var initialFolder = GetFolderPath(specialFolder);
+                    path = Path.Combine(initialFolder, actualPathToExeDto.SecondaryFilePathSegment, actualPathToExeDto.ExecutableFileToBrowseFor);
+                }
             }
 
             return path;

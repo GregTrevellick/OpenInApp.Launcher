@@ -108,7 +108,7 @@ namespace OpenInVS2015.Options.VS2015
 
             if (string.IsNullOrEmpty(ActualPathToExe))
             {
-                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.ActualPathToExeDto);
+                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.ExecutableFileToBrowseFor);
             }
 
             previousActualPathToExe = ActualPathToExe;

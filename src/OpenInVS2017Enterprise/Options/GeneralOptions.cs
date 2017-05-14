@@ -108,7 +108,7 @@ namespace OpenInVS2017Enterprise.Options.VS2017Enterprise
 
             if (string.IsNullOrEmpty(ActualPathToExe))
             {
-                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.ActualPathToExeDto);
+                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.ExecutableFileToBrowseFor);
             }
 
             previousActualPathToExe = ActualPathToExe;

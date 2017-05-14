@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\ActualPathToExeHelper.cs" />
+    <Compile Include="Helpers\Dtos\zPathToExeHelperDto.cs" />
     <Compile Include="Helpers\Dtos\ActualPathToExeDto.cs" />
     <Compile Include="Helpers\Dtos\InitialFolderType.cs" />
     <Compile Include="Helpers\Dtos\FileBrowseOutcomeDto.cs" />
