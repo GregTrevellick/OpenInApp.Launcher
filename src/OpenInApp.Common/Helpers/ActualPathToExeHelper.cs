@@ -15,68 +15,68 @@ namespace OpenInApp.Common.Helpers
 
             switch (executableFileToBrowseFor)
             {
-                case "XMLSpy.exe":
+                case ExeFileNameConstants.XMLSpy:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Altova\XMLSpy2016";
                     actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;
                     break;
-                case "gimp-2.8.exe":
+                case ExeFileNameConstants.Gimp:
                     actualPathToExeDto.SecondaryFilePathSegment = @"GIMP 2\bin";
                     break;
-                case "MarkdownMonster.exe":
+                case ExeFileNameConstants.MarkdownMonster:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Markdown Monster";
                     break;
-                case "devenv.exeVS2012":
+                case ExeFileNameConstants.VS2012:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 11.0\Common7\IDE";
                     break;
-                case "devenv.exeVS2013":
+                case ExeFileNameConstants.VS2013:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 12.0\Common7\IDE";
                     break;
-                case "devenv.exeVS2015":
+                case ExeFileNameConstants.VS2015:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 14.0\Common7\IDE";
                     break;
-                case "devenv.exeVS2017Community":
+                case ExeFileNameConstants.VS2017Community:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Community\Common7\IDE";
                     break;
-                case "devenv.exeVS2017Enterprise":
+                case ExeFileNameConstants.VS2017Enterprise:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Enterprise\Common7\IDE";
                     break;
-                case "devenv.exeVS2017Professional":
+                case ExeFileNameConstants.VS2017Professional:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Professional\Common7\IDE";
                     break;
-                case "opera.exe":
+                case ExeFileNameConstants.Opera:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Opera";
                     break;
-                case "PaintDotNet.exe":
+                case ExeFileNameConstants.PaintDotNet:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Paint.NET";
                     break;
-                case "XamarinStudio.exe":
+                case ExeFileNameConstants.XamarinStudio:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Xamarin Studio\bin";
                     break;
-                case "firefox.exe":
+                case ExeFileNameConstants.FirefoxDeveloperEdition:
                     actualPathToExeDto.SecondaryFilePathSegment = "Firefox Developer Edition";
                     break;
-                case "launcher.exe":
+                case ExeFileNameConstants.OperaDeveloperEdition:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Opera developer";
                     break;
-                case "chrome.exe":
+                case ExeFileNameConstants.ChromeCanary:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Google\Chrome SxS\Application";
                     actualPathToExeDto.InitialFolderType = InitialFolderType.LocalApplicationData;
                     break;
-                case "vivaldi.exe":
+                case ExeFileNameConstants.Vivaldi:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Vivaldi\Application";
                     actualPathToExeDto.InitialFolderType = InitialFolderType.LocalApplicationData;
                     break;
-                case "runemacs.exe":
+                case ExeFileNameConstants.Emacs:
                     actualPathToExeDto.SecondaryFilePathSegment = null;
                     actualPathToExeDto.InitialFolderType = InitialFolderType.None;
                     break;
-                case "mspaint.exe":
+                case ExeFileNameConstants.MSPaint:
                     actualPathToExeDto.SecondaryFilePathSegment = "system32";
                     actualPathToExeDto.InitialFolderType = InitialFolderType.Windows;
                     break;

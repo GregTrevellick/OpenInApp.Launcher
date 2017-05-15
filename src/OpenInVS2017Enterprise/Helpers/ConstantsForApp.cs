@@ -7,7 +7,7 @@ namespace OpenInVS2017Enterprise.Helpers
     public class ConstantsForApp 
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor + "VS2017Enterprise");
-        public const string ExecutableFileToBrowseFor = "devenv.exe";
+        public const string ExecutableFileToBrowseFor = ExeFileNameConstants.VS2017Enterprise;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

@@ -8,24 +8,24 @@ namespace OpenInApp.Common.Tests.Helpers
     public class GeneralOptionsHelperTests
     {
         [Test()]
-        [TestCase("chrome.exe", @"C:\Users\greg\AppData\Local\Google\Chrome SxS\Application\chrome.exe")]
-        [TestCase("devenv.exeVS2012", @"C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe")]
-        [TestCase("devenv.exeVS2013", @"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe")]
-        [TestCase("devenv.exeVS2015", @"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe")]
-        [TestCase("devenv.exeVS2017Community", @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe")]
-        [TestCase("devenv.exeVS2017Enterprise", @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe")]
-        [TestCase("devenv.exeVS2017Professional", @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe")]
-        [TestCase("firefox.exe", @"C:\Program Files\Firefox Developer Edition\firefox.exe")]
-        [TestCase("gimp-2.8.exe", @"C:\Program Files\GIMP 2\bin\gimp-2.8.exe")]
-        [TestCase("launcher.exe", @"C:\Program Files\Opera developer\launcher.exe")]
-        [TestCase("MarkdownMonster.exe", @"C:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe")]
-        [TestCase("mspaint.exe", @"C:\WINDOWS\system32\mspaint.exe")]
-        [TestCase("opera.exe", @"C:\Program Files (x86)\Opera\opera.exe")]
-        [TestCase("PaintDotNet.exe", @"C:\Program Files\Paint.NET\PaintDotNet.exe")]
-        [TestCase("runemacs.exe", null)]
-        [TestCase("vivaldi.exe", @"C:\Users\greg\AppData\Local\Vivaldi\Application\vivaldi.exe")]
-        [TestCase("XamarinStudio.exe", @"C:\Program Files (x86)\Xamarin Studio\bin\XamarinStudio.exe")]
-        [TestCase("XMLSpy.exe", @"C:\Program Files (x86)\Altova\XMLSpy2016\XMLSpy.exe")]
+        [TestCase(ExeFileNameConstants.ChromeCanary, @"C:\Users\greg\AppData\Local\Google\Chrome SxS\Application\chrome.exe")]
+        [TestCase(ExeFileNameConstants.VS2012, @"C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe")]
+        [TestCase(ExeFileNameConstants.VS2013, @"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe")]
+        [TestCase(ExeFileNameConstants.VS2015, @"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe")]
+        [TestCase(ExeFileNameConstants.VS2017Community, @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe")]
+        [TestCase(ExeFileNameConstants.VS2017Enterprise, @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe")]
+        [TestCase(ExeFileNameConstants.VS2017Professional, @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe")]
+        [TestCase(ExeFileNameConstants.FirefoxDeveloperEdition, @"C:\Program Files\Firefox Developer Edition\firefox.exe")]
+        [TestCase(ExeFileNameConstants.Gimp, @"C:\Program Files\GIMP 2\bin\gimp-2.8.exe")]
+        [TestCase(ExeFileNameConstants.OperaDeveloperEdition, @"C:\Program Files\Opera developer\launcher.exe")]
+        [TestCase(ExeFileNameConstants.MarkdownMonster, @"C:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe")]
+        [TestCase(ExeFileNameConstants.MSPaint, @"C:\WINDOWS\system32\mspaint.exe")]
+        [TestCase(ExeFileNameConstants.Opera, @"C:\Program Files (x86)\Opera\opera.exe")]
+        [TestCase(ExeFileNameConstants.PaintDotNet, @"C:\Program Files\Paint.NET\PaintDotNet.exe")]
+        [TestCase(ExeFileNameConstants.Emacs, null)]
+        [TestCase(ExeFileNameConstants.Vivaldi, @"C:\Users\greg\AppData\Local\Vivaldi\Application\vivaldi.exe")]
+        [TestCase(ExeFileNameConstants.XamarinStudio, @"C:\Program Files (x86)\Xamarin Studio\bin\XamarinStudio.exe")]
+        [TestCase(ExeFileNameConstants.XMLSpy, @"C:\Program Files (x86)\Altova\XMLSpy2016\XMLSpy.exe")]
         [Category("U")]
         public void GetActualPathToExeTest(string executableFileToBrowseFor, string expected)
         {
@@ -35,6 +35,15 @@ namespace OpenInApp.Common.Tests.Helpers
             //Assert
             Assert.IsTrue(actual.Contains(expected));
         }
+
+
+
+//C:\Program Files(x86)\Altova\XMLSpy2016\XMLSpy.exe
+//C:\Program Files\Altova\XMLSpy2016\XMLSpy.exe
+//Altova\XMLSpy2020
+//Altova\XMLSpy2019
+
+
 
         [Test()]
         [Category("U")]
