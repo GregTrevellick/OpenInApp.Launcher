@@ -52,7 +52,7 @@ namespace OpenInApp.Common.Helpers
                 case "opera.exe":
                     actualPathToExeDto.SecondaryFilePathSegment = @"Opera";
                     break;
-                case "PaintDotNet.exe":
+                case ExeFileNameConstants.PaintDotNet:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Paint.NET";
                     break;
                 case "XamarinStudio.exe":
