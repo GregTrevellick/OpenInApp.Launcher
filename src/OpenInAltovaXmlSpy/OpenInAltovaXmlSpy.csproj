@@ -62,7 +62,7 @@
     <Compile Include="source.extension.Designer.cs">
       <DependentUpon>source.extension.cs</DependentUpon>
     </Compile>
-    <Compile Include="Options\Helpers\ConstantsForApp.cs" />
+    <Compile Include="Helpers\ConstantsForApp.cs" />
     <Compile Include="Options\GeneralOptions.cs">
       <SubType>Component</SubType>
     </Compile>
