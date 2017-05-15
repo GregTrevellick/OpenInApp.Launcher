@@ -7,7 +7,7 @@ namespace OpenInVS2012.Helpers
     public class ConstantsForApp 
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
-        public const string ExecutableFileToBrowseFor = "devenv.exe";
+        public const string ExecutableFileToBrowseFor = ExeFileNameConstants.VS2012;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

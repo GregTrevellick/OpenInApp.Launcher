@@ -19,7 +19,7 @@
         public const string VS2013 = "devenv.exeVS2013";
         public const string VS2015 = "devenv.exeVS2015";
         public const string VS2017Community = "devenv.exeVS2017Community";
-        public const string VS2017Enterpris = "devenv.exeVS2017Enterprise";
+        public const string VS2017Enterprise = "devenv.exeVS2017Enterprise";
         public const string VS2017Professional = "devenv.exeVS2017Professional";
         public const string XamarinStudio = "XamarinStudio.exe";
         public const string XMLSpy = "XMLSpy.exe";
