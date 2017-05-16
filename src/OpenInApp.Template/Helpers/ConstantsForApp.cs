@@ -8,6 +8,9 @@ namespace OpenInGregtGregt.Helpers
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutable);
         public const string KeyToExecutable = OpenInApp.Common.Helpers.KeyToExecutable.MarkdownMonster;//"gregtgregt";
+        //public string KeyToExecutable = KeyToExecutableEnum.MarkdownMonster.Description();//"gregtgregt";
+
+        //public KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.MarkdownMonster;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
