@@ -7,7 +7,7 @@ namespace OpenInVivaldi.Helpers
     public class ConstantsForApp 
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
-        public const string ExecutableFileToBrowseFor = ExeFileNameConstants.Vivaldi;
+        public const string ExecutableFileToBrowseFor = KeyToExecutable.Vivaldi;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

@@ -7,7 +7,7 @@ namespace OpenInVS2017Professional.Helpers
     public class ConstantsForApp 
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor + "VS2017Professional");
-        public const string ExecutableFileToBrowseFor = ExeFileNameConstants.VS2017Professional;
+        public const string ExecutableFileToBrowseFor = KeyToExecutable.VS2017Professional;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

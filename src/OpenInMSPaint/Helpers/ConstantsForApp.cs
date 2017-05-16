@@ -7,7 +7,7 @@ namespace OpenInMSPaint.Helpers
     public class ConstantsForApp 
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
-        public const string ExecutableFileToBrowseFor = ExeFileNameConstants.MSPaint;
+        public const string ExecutableFileToBrowseFor = KeyToExecutable.MSPaint;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

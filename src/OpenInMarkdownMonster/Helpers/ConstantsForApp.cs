@@ -7,7 +7,7 @@ namespace OpenInAppMarkdownMonster.Helpers
 	public class ConstantsForApp 
 	{
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
-        public const string ExecutableFileToBrowseFor = ExeFileNameConstants.MarkdownMonster;
+        public const string ExecutableFileToBrowseFor = KeyToExecutable.MarkdownMonster;
 		
 		public IEnumerable<string> GetDefaultTypicalFileExtensions()
 		{

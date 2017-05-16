@@ -7,7 +7,7 @@ namespace OpenInGregtGregt.Helpers
     public class ConstantsForApp //gregt convert to an interface
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
-        public const string ExecutableFileToBrowseFor = ExeFileNameConstants.MarkdownMonster;//"gregtgregt";
+        public const string ExecutableFileToBrowseFor = KeyToExecutable.MarkdownMonster;//"gregtgregt";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

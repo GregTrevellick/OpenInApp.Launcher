@@ -7,7 +7,7 @@ namespace OpenInAppPaintDotNet.Helpers
     public class ConstantsForApp 
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
-        public const string ExecutableFileToBrowseFor = ExeFileNameConstants.PaintDotNet;
+        public const string ExecutableFileToBrowseFor = KeyToExecutable.PaintDotNet;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

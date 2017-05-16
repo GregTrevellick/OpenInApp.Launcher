@@ -3,7 +3,7 @@
     /// <summary>
     /// 
     /// </summary>
-    public static class ExeFileNameConstants
+    public static class KeyToExecutable
     {
         public const string ChromeCanary = "chrome.exe";
         public const string Emacs = "runemacs.exe";

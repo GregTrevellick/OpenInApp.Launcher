@@ -7,7 +7,7 @@ namespace OpenInVS2015.Helpers
     public class ConstantsForApp 
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor + "VS2015");
-        public const string ExecutableFileToBrowseFor = ExeFileNameConstants.VS2015;
+        public const string ExecutableFileToBrowseFor = KeyToExecutable.VS2015;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

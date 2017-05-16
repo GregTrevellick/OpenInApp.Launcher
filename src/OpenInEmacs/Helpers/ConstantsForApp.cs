@@ -7,7 +7,7 @@ namespace OpenInEmacs.Helpers
     public class ConstantsForApp 
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
-        public const string ExecutableFileToBrowseFor = ExeFileNameConstants.Emacs;
+        public const string ExecutableFileToBrowseFor = KeyToExecutable.Emacs;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

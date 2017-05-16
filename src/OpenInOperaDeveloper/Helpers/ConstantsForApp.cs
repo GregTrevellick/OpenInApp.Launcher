@@ -7,7 +7,7 @@ namespace OpenInOperaDeveloper.Helpers
     public class ConstantsForApp 
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
-        public const string ExecutableFileToBrowseFor = ExeFileNameConstants.OperaDeveloperEdition;
+        public const string ExecutableFileToBrowseFor = KeyToExecutable.OperaDeveloperEdition;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

@@ -7,7 +7,7 @@ namespace OpenInAppAltovaXmlSpy.Helpers
 	public class ConstantsForApp 
 	{
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
-        public const string ExecutableFileToBrowseFor = ExeFileNameConstants.XMLSpy;
+        public const string ExecutableFileToBrowseFor = KeyToExecutable.XMLSpy;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
 		{

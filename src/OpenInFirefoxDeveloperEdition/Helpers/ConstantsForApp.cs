@@ -7,7 +7,7 @@ namespace OpenInFirefoxDeveloperEdition.Helpers
     public class ConstantsForApp 
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
-        public const string ExecutableFileToBrowseFor = ExeFileNameConstants.FirefoxDeveloperEdition;
+        public const string ExecutableFileToBrowseFor = KeyToExecutable.FirefoxDeveloperEdition;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

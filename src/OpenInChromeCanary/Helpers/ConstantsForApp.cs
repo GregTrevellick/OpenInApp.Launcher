@@ -7,7 +7,7 @@ namespace OpenInChromeCanary.Helpers
     public class ConstantsForApp 
     {
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
-        public const string ExecutableFileToBrowseFor = ExeFileNameConstants.ChromeCanary;
+        public const string ExecutableFileToBrowseFor = KeyToExecutable.ChromeCanary;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
