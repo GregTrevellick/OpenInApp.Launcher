@@ -58,7 +58,6 @@ namespace OpenInApp.Common.Helpers
             return searchPaths;
         }
 
-        // private static string GetPath(string executableFileToBrowseFor, ActualPathToExeDto actualPathToExeDto)
         private static string GetPath(string executableFileToBrowseFor, InitialFolderType initialFolderType, string secondaryFilePathSegment)
         {
             string path = null;
