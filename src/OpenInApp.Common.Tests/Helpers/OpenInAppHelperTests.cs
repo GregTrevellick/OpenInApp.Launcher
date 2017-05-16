@@ -23,6 +23,9 @@ namespace OpenInApp.Common.Tests.Helpers
         //http://texteditors.org/cgi-bin/wiki.pl?ZendStudio
         //http://texteditors.org/cgi-bin/wiki.pl?Brainfck_Center
         //https://sourceforge.net/projects/e7bfc/
+        //frontpage
+        //homesite
+        //jetbrains webstorm
 
         [Test()]
         [Category("I")]
