@@ -1,4 +1,6 @@
-﻿namespace OpenInApp.Common.Helpers
+﻿using System.ComponentModel;
+
+namespace OpenInApp.Common.Helpers
 {
     //GREGT CONVERT TO ENUM
 
@@ -26,5 +28,63 @@
         public const string VS2017Professional = "devenv.exeVS2017Professional";
         public const string XamarinStudio = "XamarinStudio.exe";
         public const string XMLSpy = "XMLSpy.exe";
+    }
+
+
+    public enum KeyToExecutableEnum
+    {
+        [Description("chrome.exe")]
+        ChromeCanary,
+       
+        [Description("runemacs.exe")]
+        Emacs,
+        
+        [Description("firefox.exe")]
+        FirefoxDeveloperEdition,
+        
+        [Description("gimp-2.8.exe")]
+        Gimp,
+        
+        [Description("MarkdownMonster.exe")]
+        MarkdownMonster,
+        
+        [Description("mspaint.exe")]
+        MSPaint,
+        
+        [Description("opera.exe")]
+        Opera,
+        
+        [Description("launcher.exe")]
+        OperaDeveloperEdition,
+        
+        [Description("PaintDotNet.exe")]
+        PaintDotNet,
+        
+        [Description("vivaldi.exe")]
+        Vivaldi,
+        
+        [Description("devenv.exeVS2012")]
+        VS2012,
+        
+        [Description("devenv.exeVS2013")]
+        VS2013,
+        
+        [Description("devenv.exeVS2015")]
+        VS2015,
+        
+        [Description("devenv.exeVS2017Community")]
+        VS2017Community,
+        
+        [Description("devenv.exeVS2017Enterprise")]
+        VS2017Enterprise,
+        
+        [Description("devenv.exeVS2017Professional")]
+        VS2017Professional,
+        
+        [Description("XamarinStudio.exe")]
+        XamarinStudio,
+        
+        [Description("XMLSpy.exe")]
+        XMLSpy,
     }
 }
