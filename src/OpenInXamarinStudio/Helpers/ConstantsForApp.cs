@@ -8,14 +8,14 @@ namespace OpenInXamarinStudio.Helpers
     {
         public static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.XamarinStudio;
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
-        //public const string KeyToExecutable = OpenInApp.Common.Helpers.KeyToExecutable.XamarinStudio;
+        public const string KeyToExecutableConstant = KeyToExecutableString.XamarinStudio;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
             return ActualPathToExeDto.DefaultTypicalFileExtensions;
         }
 
-        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + "gregtKeyToExecutableEnum.Description()";
+        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableConstant;
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
         internal static bool SeparateProcessPerFileToBeOpened = ActualPathToExeDto.SeparateProcessPerFileToBeOpened;//true;
         internal static bool UseShellExecute = ActualPathToExeDto.UseShellExecute;//true;

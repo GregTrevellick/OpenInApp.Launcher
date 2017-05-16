@@ -8,14 +8,14 @@ namespace OpenInVivaldi.Helpers
     {
         public static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.Vivaldi;
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
-        //public const string KeyToExecutable = OpenInApp.Common.Helpers.KeyToExecutable.Vivaldi;
+        public const string KeyToExecutableConstant = KeyToExecutableString.Vivaldi;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
             return ActualPathToExeDto.DefaultTypicalFileExtensions;
         }
 
-        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + "gregtKeyToExecutableEnum.Description()";
+        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableConstant;
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
         internal static bool SeparateProcessPerFileToBeOpened = ActualPathToExeDto.SeparateProcessPerFileToBeOpened;//true;
         internal static bool UseShellExecute = ActualPathToExeDto.UseShellExecute;//true;

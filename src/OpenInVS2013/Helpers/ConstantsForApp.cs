@@ -8,7 +8,7 @@ namespace OpenInVS2013.Helpers
     {
         public static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.VS2013;
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
-        //public const string KeyToExecutable = OpenInApp.Common.Helpers.KeyToExecutable.VS2013;
+        public const string KeyToExecutableConstant = KeyToExecutableString.VS2013;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
@@ -16,7 +16,7 @@ namespace OpenInVS2013.Helpers
         }
 
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
-        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + "gregtKeyToExecutableEnum.Description()";
+        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableConstant;
         internal static bool SeparateProcessPerFileToBeOpened = ActualPathToExeDto.SeparateProcessPerFileToBeOpened;//true;
         internal static bool UseShellExecute = ActualPathToExeDto.UseShellExecute;//false;
     }

@@ -8,7 +8,7 @@ namespace OpenInAppAltovaXmlSpy.Helpers
 	{
         public static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.XMLSpy;
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
-        //public const string KeyToExecutable = OpenInApp.Common.Helpers.KeyToExecutable.XMLSpy;
+        public const string KeyToExecutableConstant = KeyToExecutableString.XMLSpy;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
 		{
@@ -93,7 +93,7 @@ namespace OpenInAppAltovaXmlSpy.Helpers
 
 
 		internal static string Caption = Vsix.Name + " " + Vsix.Version;
-        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + "gregtKeyToExecutableEnum.Description()";
+        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableConstant;
         internal static bool SeparateProcessPerFileToBeOpened = ActualPathToExeDto.SeparateProcessPerFileToBeOpened;//true;
 		internal static bool UseShellExecute = true;
 	}

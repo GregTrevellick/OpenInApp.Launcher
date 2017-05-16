@@ -8,7 +8,7 @@ namespace OpenInAppMarkdownMonster.Helpers
 	{
         public static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.MarkdownMonster;
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
-        //public const string KeyToExecutable = OpenInApp.Common.Helpers.KeyToExecutable.MarkdownMonster;
+        public const string KeyToExecutableConstant = KeyToExecutableString.MarkdownMonster;
 		
 		public IEnumerable<string> GetDefaultTypicalFileExtensions()
 		{
@@ -22,7 +22,7 @@ namespace OpenInAppMarkdownMonster.Helpers
 		}
 
 		internal static string Caption = Vsix.Name + " " + Vsix.Version;
-		internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + "gregtKeyToExecutableEnum.Description()";
+		internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableConstant;
 		internal static bool SeparateProcessPerFileToBeOpened = true;
 		internal static bool UseShellExecute = true;
 	}
