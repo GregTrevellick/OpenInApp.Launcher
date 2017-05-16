@@ -6,8 +6,9 @@ namespace OpenInFirefoxDeveloperEdition.Helpers
 {
     public class ConstantsForApp 
     {
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutable);
-        public const string KeyToExecutable = OpenInApp.Common.Helpers.KeyToExecutable.FirefoxDeveloperEdition;
+        public static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.FirefoxDeveloperEdition;
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
+        //public const string KeyToExecutable = OpenInApp.Common.Helpers.KeyToExecutable.FirefoxDeveloperEdition;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
@@ -17,7 +18,7 @@ namespace OpenInFirefoxDeveloperEdition.Helpers
             };
         }
 
-        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutable;
+        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + "gregtKeyToExecutableEnum.Description()";
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
         internal static bool SeparateProcessPerFileToBeOpened = true;
         internal static bool UseShellExecute = true;

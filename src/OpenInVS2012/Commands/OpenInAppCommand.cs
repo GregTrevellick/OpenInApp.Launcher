@@ -82,7 +82,7 @@ namespace OpenInVS2012.Commands
             {
                 ActualPathToExe = VSPackage.Options.ActualPathToExe,
                 Caption = ConstantsForApp.Caption,
-                ExecutableFileToBrowseFor = ConstantsForApp.KeyToExecutable,
+                ExecutableFileToBrowseFor = ConstantsForApp.KeyToExecutableEnum.Description(),
                 FileQuantityWarningLimit = VSPackage.Options.FileQuantityWarningLimit,
                 IsFromSolutionExplorer = isFromSolutionExplorer,
                 SeparateProcessPerFileToBeOpened = ConstantsForApp.SeparateProcessPerFileToBeOpened,

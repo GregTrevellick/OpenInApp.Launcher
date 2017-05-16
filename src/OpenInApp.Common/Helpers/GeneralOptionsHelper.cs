@@ -13,11 +13,11 @@ namespace OpenInApp.Common.Helpers
         /// <summary>
         /// Returns path to specified executable file, within the the specified folder and sub-folder names, within Program Files directory.
         /// </summary>
-        /// <param name="keyToExecutable"></param>
+        /// <param name="keyToExecutableEnum"></param>
         /// <returns></returns>
-        public static string GetActualPathToExe(string keyToExecutable)
+        public static string GetActualPathToExe(KeyToExecutableEnum keyToExecutableEnum)
         {
-            var searchPaths = GetSearchPaths(keyToExecutable);
+            var searchPaths = GetSearchPaths(keyToExecutableEnum);
 
             foreach (var searchPath in searchPaths)
             {
@@ -30,11 +30,11 @@ namespace OpenInApp.Common.Helpers
             return null;
         }
 
-        public static IEnumerable<string> GetSearchPaths(string keyToExecutable)
+        public static IEnumerable<string> GetSearchPaths(KeyToExecutableEnum keyToExecutableEnum)
         {
             var searchPaths  = new List<string>();
             var actualPathToExeHelper = new ActualPathToExeHelper();
-            var actualPathToExeDto = actualPathToExeHelper.GetActualPathToExeDto(keyToExecutable);
+            var actualPathToExeDto = actualPathToExeHelper.GetActualPathToExeDto(keyToExecutableEnum);
 
             var pathPrimary = GetPath(actualPathToExeDto.ExecutableFileToBrowseFor, actualPathToExeDto.InitialFolderType, actualPathToExeDto.SecondaryFilePathSegment);
             searchPaths.Add(pathPrimary);

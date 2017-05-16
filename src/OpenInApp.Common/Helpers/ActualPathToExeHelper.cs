@@ -4,79 +4,79 @@ namespace OpenInApp.Common.Helpers
 {
     public class ActualPathToExeHelper
     {
-        public ActualPathToExeDto GetActualPathToExeDto(string keyToExecutable)
+        public ActualPathToExeDto GetActualPathToExeDto(KeyToExecutableEnum keyToExecutable)
         {
             var actualPathToExeDto = new ActualPathToExeDto
             {
-                ExecutableFileToBrowseFor = keyToExecutable,
+                ExecutableFileToBrowseFor = keyToExecutable.Description(),
                 InitialFolderType = InitialFolderType.ProgramFilesX86,
                 SecondaryFilePathSegmentHasMultipleYearNumberVersions = false
             };
 
             switch (keyToExecutable)
             {
-                case KeyToExecutable.XMLSpy:
+                case KeyToExecutableEnum.XMLSpy:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Altova\XMLSpy2016";
                     actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;
                     break;
-                case KeyToExecutable.Gimp:
+                case KeyToExecutableEnum.Gimp:
                     actualPathToExeDto.SecondaryFilePathSegment = @"GIMP 2\bin";
                     break;
-                case KeyToExecutable.MarkdownMonster:
+                case KeyToExecutableEnum.MarkdownMonster:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Markdown Monster";
                     break;
-                case KeyToExecutable.VS2012:
+                case KeyToExecutableEnum.VS2012:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 11.0\Common7\IDE";
                     break;
-                case KeyToExecutable.VS2013:
+                case KeyToExecutableEnum.VS2013:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 12.0\Common7\IDE";
                     break;
-                case KeyToExecutable.VS2015:
+                case KeyToExecutableEnum.VS2015:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 14.0\Common7\IDE";
                     break;
-                case KeyToExecutable.VS2017Community:
+                case KeyToExecutableEnum.VS2017Community:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Community\Common7\IDE";
                     break;
-                case KeyToExecutable.VS2017Enterprise:
+                case KeyToExecutableEnum.VS2017Enterprise:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Enterprise\Common7\IDE";
                     break;
-                case KeyToExecutable.VS2017Professional:
+                case KeyToExecutableEnum.VS2017Professional:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Professional\Common7\IDE";
                     break;
-                case KeyToExecutable.Opera:
+                case KeyToExecutableEnum.Opera:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Opera";
                     break;
-                case KeyToExecutable.PaintDotNet:
+                case KeyToExecutableEnum.PaintDotNet:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Paint.NET";
                     break;
-                case KeyToExecutable.XamarinStudio:
+                case KeyToExecutableEnum.XamarinStudio:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Xamarin Studio\bin";
                     break;
-                case KeyToExecutable.FirefoxDeveloperEdition:
+                case KeyToExecutableEnum.FirefoxDeveloperEdition:
                     actualPathToExeDto.SecondaryFilePathSegment = "Firefox Developer Edition";
                     break;
-                case KeyToExecutable.OperaDeveloperEdition:
+                case KeyToExecutableEnum.OperaDeveloperEdition:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Opera developer";
                     break;
-                case KeyToExecutable.ChromeCanary:
+                case KeyToExecutableEnum.ChromeCanary:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Google\Chrome SxS\Application";
                     actualPathToExeDto.InitialFolderType = InitialFolderType.LocalApplicationData;
                     break;
-                case KeyToExecutable.Vivaldi:
+                case KeyToExecutableEnum.Vivaldi:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Vivaldi\Application";
                     actualPathToExeDto.InitialFolderType = InitialFolderType.LocalApplicationData;
                     break;
-                case KeyToExecutable.Emacs:
+                case KeyToExecutableEnum.Emacs:
                     actualPathToExeDto.SecondaryFilePathSegment = null;
                     actualPathToExeDto.InitialFolderType = InitialFolderType.None;
                     break;
-                case KeyToExecutable.MSPaint:
+                case KeyToExecutableEnum.MSPaint:
                     actualPathToExeDto.SecondaryFilePathSegment = "system32";
                     actualPathToExeDto.InitialFolderType = InitialFolderType.Windows;
                     break;

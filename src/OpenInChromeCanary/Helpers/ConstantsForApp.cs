@@ -6,8 +6,9 @@ namespace OpenInChromeCanary.Helpers
 {
     public class ConstantsForApp 
     {
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutable);
-        public const string KeyToExecutable = OpenInApp.Common.Helpers.KeyToExecutable.ChromeCanary;
+        public static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.ChromeCanary;
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
+        //public const string KeyToExecutable = OpenInApp.Common.Helpers.KeyToExecutable.ChromeCanary;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
@@ -17,7 +18,7 @@ namespace OpenInChromeCanary.Helpers
             };
         }
 
-        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutable;
+        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + "gregtKeyToExecutableEnum.Description()";
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
         internal static bool SeparateProcessPerFileToBeOpened = true;
         internal static bool UseShellExecute = true;
