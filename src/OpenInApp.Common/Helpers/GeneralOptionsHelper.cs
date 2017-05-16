@@ -36,7 +36,7 @@ namespace OpenInApp.Common.Helpers
             var actualPathToExeHelper = new ActualPathToExeHelper();
             var actualPathToExeDto = actualPathToExeHelper.GetActualPathToExeDto(executableFileToBrowseFor);
 
-            var pathPrimary = GetPath(executableFileToBrowseFor, actualPathToExeDto);
+            var pathPrimary = GetPath(executableFileToBrowseFor, actualPathToExeDto.InitialFolderType, actualPathToExeDto.SecondaryFilePathSegment);
             searchPaths.Add(pathPrimary);
 
             var x86 = " (x86)";
@@ -48,7 +48,7 @@ namespace OpenInApp.Common.Helpers
 
             if (actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions)
             {
-                var paths = GetMultipleYearPaths(actualPathToExeDto.SecondaryFilePathSegment);
+                var paths = GetMultipleYearPaths(actualPathToExeDto.ExecutableFileToBrowseFor, actualPathToExeDto.InitialFolderType, actualPathToExeDto.SecondaryFilePathSegment);
                 foreach (var path in paths)
                 {
                     searchPaths.Add(path);
@@ -58,32 +58,33 @@ namespace OpenInApp.Common.Helpers
             return searchPaths;
         }
 
-        private static string GetPath(string executableFileToBrowseFor, ActualPathToExeDto actualPathToExeDto)
+        // private static string GetPath(string executableFileToBrowseFor, ActualPathToExeDto actualPathToExeDto)
+        private static string GetPath(string executableFileToBrowseFor, InitialFolderType initialFolderType, string secondaryFilePathSegment)
         {
             string path = null;
 
             if (!string.IsNullOrEmpty(executableFileToBrowseFor))
             {
-                var initialFolderType = actualPathToExeDto.InitialFolderType;
-
                 if (initialFolderType != InitialFolderType.None)
                 {
                     var specialFolder = (SpecialFolder)initialFolderType;
                     var initialFolder = GetFolderPath(specialFolder);
-                    path = Path.Combine(initialFolder, actualPathToExeDto.SecondaryFilePathSegment, actualPathToExeDto.ExecutableFileToBrowseFor);
+                    path = Path.Combine(initialFolder, secondaryFilePathSegment, executableFileToBrowseFor);
                 }
             }
 
             return path;
         }
 
-        public static IEnumerable<string> GetMultipleYearPaths(string secondaryFilePathSegment)
+        public static IEnumerable<string> GetMultipleYearPaths(string executableFileToBrowseFor, InitialFolderType initialFolderType, string secondaryFilePathSegment)
         {
             var result = new List<string>();
 
             for (int i = 2020; i > 1995; i--)
             {
-                result.Add(secondaryFilePathSegment.Replace("2016", i.ToString()));
+                var segment = secondaryFilePathSegment.Replace("2016", i.ToString());
+                var path = GetPath(executableFileToBrowseFor, initialFolderType, segment);
+                result.Add(path);
             }
 
             return result;
