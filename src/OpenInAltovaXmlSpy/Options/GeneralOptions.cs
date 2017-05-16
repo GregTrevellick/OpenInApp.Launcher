@@ -108,7 +108,7 @@ namespace OpenInAppAltovaXmlSpy.Options.AltovaXmlSpy
 
             if (string.IsNullOrEmpty(ActualPathToExe))
             {
-                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.ExecutableFileToBrowseFor);
+                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.KeyToExecutable);
             }
 
             previousActualPathToExe = ActualPathToExe;
@@ -137,7 +137,7 @@ namespace OpenInAppAltovaXmlSpy.Options.AltovaXmlSpy
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 
-                    var filePrompterHelper = new FilePrompterHelper(ConstantsForApp.Caption, ConstantsForApp.ExecutableFileToBrowseFor);
+                    var filePrompterHelper = new FilePrompterHelper(ConstantsForApp.Caption, ConstantsForApp.KeyToExecutable);
 
                     var persistOptionsDto = filePrompterHelper.PromptForActualExeFile(ActualPathToExe);
 

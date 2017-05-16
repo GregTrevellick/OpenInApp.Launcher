@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 namespace OpenInGregtGregt.Helpers
 {
-    public class ConstantsForApp //gregt convert to an interface
+    public class ConstantsForApp 
     {
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
-        public const string ExecutableFileToBrowseFor = KeyToExecutable.MarkdownMonster;//"gregtgregt";
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutable);
+        public const string KeyToExecutable = OpenInApp.Common.Helpers.KeyToExecutable.MarkdownMonster;//"gregtgregt";
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
@@ -17,7 +17,7 @@ namespace OpenInGregtGregt.Helpers
             };
         }
 
-        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;
+        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutable;
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
         internal static bool SeparateProcessPerFileToBeOpened = true;
         internal static bool UseShellExecute = true;

@@ -108,7 +108,7 @@ namespace OpenInGregtGregt.Options.GregtGregt
 
             if (string.IsNullOrEmpty(ActualPathToExe))
             {
-                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.ExecutableFileToBrowseFor);
+                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.KeyToExecutable);
             }
 
             previousActualPathToExe = ActualPathToExe;
@@ -137,7 +137,7 @@ namespace OpenInGregtGregt.Options.GregtGregt
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 
-                    var filePrompterHelper = new FilePrompterHelper(ConstantsForApp.Caption, ConstantsForApp.ExecutableFileToBrowseFor);
+                    var filePrompterHelper = new FilePrompterHelper(ConstantsForApp.Caption, ConstantsForApp.KeyToExecutable);
 
                     var persistOptionsDto = filePrompterHelper.PromptForActualExeFile(ActualPathToExe);
 
