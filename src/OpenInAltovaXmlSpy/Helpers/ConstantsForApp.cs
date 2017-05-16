@@ -7,7 +7,7 @@ namespace OpenInAppAltovaXmlSpy.Helpers
 	public class ConstantsForApp 
 	{
         internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.XMLSpy;
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
+        private static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
         private const string KeyToExecutableConstant = KeyToExecutableString.XMLSpy;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()

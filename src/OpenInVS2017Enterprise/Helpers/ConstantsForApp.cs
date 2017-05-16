@@ -7,7 +7,7 @@ namespace OpenInVS2017Enterprise.Helpers
     public class ConstantsForApp 
     {
         internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.VS2017Enterprise;
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
+        private static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
         private const string KeyToExecutableConstant = KeyToExecutableString.VS2017Enterprise;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()

@@ -7,7 +7,7 @@ namespace OpenInAppPaintDotNet.Helpers
     public class ConstantsForApp 
     {
         internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.PaintDotNet;
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
+        private static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
         private const string KeyToExecutableConstant = KeyToExecutableString.PaintDotNet;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()

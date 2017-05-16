@@ -7,7 +7,7 @@ namespace OpenInEmacs.Helpers
     public class ConstantsForApp 
     {
         internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.Emacs;
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
+        private static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
         private const string KeyToExecutableConstant = KeyToExecutableString.Emacs;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()

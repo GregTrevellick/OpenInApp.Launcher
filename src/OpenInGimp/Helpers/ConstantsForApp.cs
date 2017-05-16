@@ -7,7 +7,7 @@ namespace OpenInAppGimp.Helpers
 	public class ConstantsForApp 
 	{
         internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.Gimp;
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
+        private static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
         private const string KeyToExecutableConstant = KeyToExecutableString.Gimp;//good enough for now, update to 3.0 when officially released
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
