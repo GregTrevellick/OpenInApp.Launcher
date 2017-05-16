@@ -82,7 +82,7 @@ namespace OpenInVS2017Community.Commands
             {
                 ActualPathToExe = VSPackage.Options.ActualPathToExe,
                 Caption = ConstantsForApp.Caption,
-                ExecutableFileToBrowseFor = ConstantsForApp.ExecutableFileToBrowseFor,
+                ExecutableFileToBrowseFor = ConstantsForApp.KeyToExecutable,
                 FileQuantityWarningLimit = VSPackage.Options.FileQuantityWarningLimit,
                 IsFromSolutionExplorer = isFromSolutionExplorer,
                 SeparateProcessPerFileToBeOpened = ConstantsForApp.SeparateProcessPerFileToBeOpened,

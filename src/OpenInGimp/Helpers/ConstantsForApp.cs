@@ -6,8 +6,8 @@ namespace OpenInAppGimp.Helpers
 {
 	public class ConstantsForApp 
 	{
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
-        public const string ExecutableFileToBrowseFor = KeyToExecutable.Gimp;//good enough for now, update to 3.0 when officially released
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutable);
+        public const string KeyToExecutable = OpenInApp.Common.Helpers.KeyToExecutable.Gimp;//good enough for now, update to 3.0 when officially released
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
 		{
@@ -60,7 +60,7 @@ namespace OpenInAppGimp.Helpers
 		}
 
 		internal static string Caption = Vsix.Name + " " + Vsix.Version;
-		internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;
+		internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutable;
 		internal static bool SeparateProcessPerFileToBeOpened = true;
 		internal static bool UseShellExecute = true;
 	}

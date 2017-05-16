@@ -6,8 +6,8 @@ namespace OpenInMSPaint.Helpers
 {
     public class ConstantsForApp 
     {
-        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(ExecutableFileToBrowseFor);
-        public const string ExecutableFileToBrowseFor = KeyToExecutable.MSPaint;
+        public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutable);
+        public const string KeyToExecutable = OpenInApp.Common.Helpers.KeyToExecutable.MSPaint;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
@@ -27,7 +27,7 @@ namespace OpenInMSPaint.Helpers
             };
         }
 
-        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + ExecutableFileToBrowseFor;
+        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutable;
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
         internal static bool SeparateProcessPerFileToBeOpened = true;
         internal static bool UseShellExecute = false;

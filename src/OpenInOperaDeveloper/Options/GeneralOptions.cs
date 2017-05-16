@@ -108,7 +108,7 @@ namespace OpenInOperaDeveloper.Options.OperaDeveloper
 
             if (string.IsNullOrEmpty(ActualPathToExe))
             {
-                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.ExecutableFileToBrowseFor);
+                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.KeyToExecutable);
             }
 
             previousActualPathToExe = ActualPathToExe;
@@ -137,7 +137,7 @@ namespace OpenInOperaDeveloper.Options.OperaDeveloper
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 
-                    var filePrompterHelper = new FilePrompterHelper(ConstantsForApp.Caption, ConstantsForApp.ExecutableFileToBrowseFor);
+                    var filePrompterHelper = new FilePrompterHelper(ConstantsForApp.Caption, ConstantsForApp.KeyToExecutable);
 
                     var persistOptionsDto = filePrompterHelper.PromptForActualExeFile(ActualPathToExe);
 
