@@ -13,11 +13,11 @@ namespace OpenInApp.Common.Helpers
         /// <summary>
         /// Returns path to specified executable file, within the the specified folder and sub-folder names, within Program Files directory.
         /// </summary>
-        /// <param name="executableFileToBrowseFor">Names of the executable file</param>
+        /// <param name="keyToExecutable"></param>
         /// <returns></returns>
-        public static string GetActualPathToExe(string executableFileToBrowseFor)
+        public static string GetActualPathToExe(string keyToExecutable)
         {
-            var searchPaths = GetSearchPaths(executableFileToBrowseFor);
+            var searchPaths = GetSearchPaths(keyToExecutable);
 
             foreach (var searchPath in searchPaths)
             {
@@ -30,13 +30,13 @@ namespace OpenInApp.Common.Helpers
             return null;
         }
 
-        public static IEnumerable<string> GetSearchPaths(string executableFileToBrowseFor)
+        public static IEnumerable<string> GetSearchPaths(string keyToExecutable)
         {
             var searchPaths  = new List<string>();
             var actualPathToExeHelper = new ActualPathToExeHelper();
-            var actualPathToExeDto = actualPathToExeHelper.GetActualPathToExeDto(executableFileToBrowseFor);
+            var actualPathToExeDto = actualPathToExeHelper.GetActualPathToExeDto(keyToExecutable);
 
-            var pathPrimary = GetPath(executableFileToBrowseFor, actualPathToExeDto.InitialFolderType, actualPathToExeDto.SecondaryFilePathSegment);
+            var pathPrimary = GetPath(actualPathToExeDto.ExecutableFileToBrowseFor, actualPathToExeDto.InitialFolderType, actualPathToExeDto.SecondaryFilePathSegment);
             searchPaths.Add(pathPrimary);
 
             var x86 = " (x86)";

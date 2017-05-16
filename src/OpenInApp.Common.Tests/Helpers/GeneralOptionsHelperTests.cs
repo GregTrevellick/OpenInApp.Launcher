@@ -28,10 +28,10 @@ namespace OpenInApp.Common.Tests.Helpers
         [TestCase(KeyToExecutable.XamarinStudio, @"C:\Program Files (x86)\Xamarin Studio\bin\XamarinStudio.exe")]
         [TestCase(KeyToExecutable.XMLSpy, @"C:\Program Files (x86)\Altova\XMLSpy2016\XMLSpy.exe")]
         [Category("U")]
-        public void GetActualPathToExeTest(string executableFileToBrowseFor, string expected)
+        public void GetActualPathToExeTest(string keyToExecutable, string expected)
         {
             //Act
-            var actual = GeneralOptionsHelper.GetSearchPaths(executableFileToBrowseFor);
+            var actual = GeneralOptionsHelper.GetSearchPaths(keyToExecutable);
 
             //Assert
             Assert.IsTrue(actual.Contains(expected));
