@@ -4,16 +4,16 @@ namespace OpenInApp.Common.Helpers
 {
     public class ActualPathToExeHelper
     {
-        public ActualPathToExeDto GetActualPathToExeDto(string executableFileToBrowseFor)
+        public ActualPathToExeDto GetActualPathToExeDto(string keyToExecutable)
         {
             var actualPathToExeDto = new ActualPathToExeDto
             {
-                ExecutableFileToBrowseFor = executableFileToBrowseFor,
+                ExecutableFileToBrowseFor = keyToExecutable,
                 InitialFolderType = InitialFolderType.ProgramFilesX86,
                 SecondaryFilePathSegmentHasMultipleYearNumberVersions = false
             };
 
-            switch (executableFileToBrowseFor)
+            switch (keyToExecutable)
             {
                 case KeyToExecutable.XMLSpy:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Altova\XMLSpy2016";
