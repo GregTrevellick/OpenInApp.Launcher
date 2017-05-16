@@ -12,7 +12,9 @@ namespace OpenInApp.Common.Helpers
                 DefaultTypicalFileExtensions = new List<string> { "*" },
                 ExecutableFileToBrowseFor = keyToExecutableEnum.Description(),
                 InitialFolderType = InitialFolderType.ProgramFilesX86,
-                SecondaryFilePathSegmentHasMultipleYearNumberVersions = false
+                SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
+                SeparateProcessPerFileToBeOpened = true,
+                UseShellExecute = true
             };
 
             switch (keyToExecutableEnum)
@@ -153,26 +155,32 @@ namespace OpenInApp.Common.Helpers
                 case KeyToExecutableEnum.VS2012:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 11.0\Common7\IDE";
+                    actualPathToExeDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2013:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 12.0\Common7\IDE";
+                    actualPathToExeDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2015:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 14.0\Common7\IDE";
+                    actualPathToExeDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2017Community:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Community\Common7\IDE";
+                    actualPathToExeDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2017Enterprise:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Enterprise\Common7\IDE";
+                    actualPathToExeDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2017Professional:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Professional\Common7\IDE";
+                    actualPathToExeDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.Opera:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Opera";
@@ -219,6 +227,7 @@ namespace OpenInApp.Common.Helpers
                 case KeyToExecutableEnum.MSPaint:
                     actualPathToExeDto.SecondaryFilePathSegment = "system32";
                     actualPathToExeDto.InitialFolderType = InitialFolderType.Windows;
+                    actualPathToExeDto.UseShellExecute = false;
                     actualPathToExeDto.DefaultTypicalFileExtensions = new List<string>
                     {
                                         "bmp",

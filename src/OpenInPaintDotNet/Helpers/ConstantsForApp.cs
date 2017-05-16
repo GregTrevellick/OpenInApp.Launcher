@@ -32,7 +32,7 @@ namespace OpenInAppPaintDotNet.Helpers
 
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + "gregtKeyToExecutableEnum.Description()";
-        internal static bool SeparateProcessPerFileToBeOpened = true;
-        internal static bool UseShellExecute = true;
+        internal static bool SeparateProcessPerFileToBeOpened = ActualPathToExeDto.SeparateProcessPerFileToBeOpened;//true;
+        internal static bool UseShellExecute = ActualPathToExeDto.UseShellExecute;//true;
     }
 }

@@ -31,7 +31,7 @@ namespace OpenInMSPaint.Helpers
 
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + "gregtKeyToExecutableEnum.Description()";
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
-        internal static bool SeparateProcessPerFileToBeOpened = true;
-        internal static bool UseShellExecute = false;
+        internal static bool SeparateProcessPerFileToBeOpened = ActualPathToExeDto.SeparateProcessPerFileToBeOpened;//true;
+        internal static bool UseShellExecute = ActualPathToExeDto.UseShellExecute;//false;
     }
 }
