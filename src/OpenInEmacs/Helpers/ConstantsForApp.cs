@@ -12,10 +12,7 @@ namespace OpenInEmacs.Helpers
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
-            return new List<string>
-            {
-                "*"
-            };
+            return ActualPathToExeDto.DefaultTypicalFileExtensions;
         }
 
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + "gregtKeyToExecutableEnum.Description()";

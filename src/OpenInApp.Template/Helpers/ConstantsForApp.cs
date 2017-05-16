@@ -9,15 +9,10 @@ namespace OpenInGregtGregt.Helpers
         public static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.MarkdownMonster;
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
         //public const string KeyToExecutable = OpenInApp.Common.Helpers.KeyToExecutable.MarkdownMonster;//"gregtgregt";
-        //public string KeyToExecutable = KeyToExecutableEnum.MarkdownMonster..Description();//"gregtgregt";
-        //public KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.MarkdownMonster;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
-            return new List<string>
-            {
-                "*"
-            };
+            return ActualPathToExeDto.DefaultTypicalFileExtensions;
         }
 
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + "gregtKeyToExecutableEnum.Description()";

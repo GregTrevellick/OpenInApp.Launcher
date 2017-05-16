@@ -12,52 +12,53 @@ namespace OpenInAppGimp.Helpers
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
 		{
-			return new List<string>
-			{
-				//Source(s)
-				// https://www.gimp.org/features/
-				// http://www.ftgimp.com/help/C/file_formats.html
-				#region Extensions
-				"aa",
-				"avi",
-				"bmp",
-				"bz2",
-				"c",
-				"cel",
-				"fits",
-				"fli",
-				"gif",
-				"gimp",
-				"gz",
-				"h",
-				"hrz",
-				"html",
-				"jfif",
-				"jpeg",
-				"jpg",
-				"miff",
-				"mng",
-				"mpeg",
-				"pcx",
-				"pix",
-				"png",
-				"pnm",
-				"ppm",
-				"ps",
-				"psd",
-				"psp",
-				"sgi",
-				"sunras",
-				"tga",
-				"tiff",
-				"wmf",
-				"xbm",
-				"xcf",
-				"xpm",
-				"xwd",
-				"zip",
-				#endregion
-			};
+            return ActualPathToExeDto.DefaultTypicalFileExtensions;
+   //         return new List<string>
+			//{
+			//	//Source(s)
+			//	// https://www.gimp.org/features/
+			//	// http://www.ftgimp.com/help/C/file_formats.html
+			//	#region Extensions
+			//	"aa",
+			//	"avi",
+			//	"bmp",
+			//	"bz2",
+			//	"c",
+			//	"cel",
+			//	"fits",
+			//	"fli",
+			//	"gif",
+			//	"gimp",
+			//	"gz",
+			//	"h",
+			//	"hrz",
+			//	"html",
+			//	"jfif",
+			//	"jpeg",
+			//	"jpg",
+			//	"miff",
+			//	"mng",
+			//	"mpeg",
+			//	"pcx",
+			//	"pix",
+			//	"png",
+			//	"pnm",
+			//	"ppm",
+			//	"ps",
+			//	"psd",
+			//	"psp",
+			//	"sgi",
+			//	"sunras",
+			//	"tga",
+			//	"tiff",
+			//	"wmf",
+			//	"xbm",
+			//	"xcf",
+			//	"xpm",
+			//	"xwd",
+			//	"zip",
+			//	#endregion
+			//};
 		}
 
 		internal static string Caption = Vsix.Name + " " + Vsix.Version;

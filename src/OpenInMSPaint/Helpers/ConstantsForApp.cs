@@ -12,20 +12,21 @@ namespace OpenInMSPaint.Helpers
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
-            return new List<string>
-            {
-                "bmp",
-                "dib",
-                "gif",
-                "ico",
-                "jfif",
-                "jpe",
-                "jpeg",
-                "jpg",
-                "png",
-                "tif",
-                "tiff",
-            };
+            return ActualPathToExeDto.DefaultTypicalFileExtensions;
+            //return new List<string>
+            //{
+            //    "bmp",
+            //    "dib",
+            //    "gif",
+            //    "ico",
+            //    "jfif",
+            //    "jpe",
+            //    "jpeg",
+            //    "jpg",
+            //    "png",
+            //    "tif",
+            //    "tiff",
+            //};
         }
 
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + "gregtKeyToExecutableEnum.Description()";

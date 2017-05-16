@@ -1,29 +1,154 @@
 ﻿using OpenInApp.Common.Helpers.Dtos;
+using System.Collections.Generic;
 
 namespace OpenInApp.Common.Helpers
 {
     public class ActualPathToExeHelper
     {
-        public ActualPathToExeDto GetActualPathToExeDto(KeyToExecutableEnum keyToExecutable)
+        public ActualPathToExeDto GetActualPathToExeDto(KeyToExecutableEnum keyToExecutableEnum)
         {
             var actualPathToExeDto = new ActualPathToExeDto
             {
-                ExecutableFileToBrowseFor = keyToExecutable.Description(),
+                DefaultTypicalFileExtensions = new List<string> { "*" },
+                ExecutableFileToBrowseFor = keyToExecutableEnum.Description(),
                 InitialFolderType = InitialFolderType.ProgramFilesX86,
                 SecondaryFilePathSegmentHasMultipleYearNumberVersions = false
             };
 
-            switch (keyToExecutable)
+            switch (keyToExecutableEnum)
             {
                 case KeyToExecutableEnum.XMLSpy:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Altova\XMLSpy2016";
                     actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;
+                    actualPathToExeDto.DefaultTypicalFileExtensions = new List<string>
+                    {
+                        //Source(s) http://manual.altova.com/XMLSpy/spyprofessional/index.html?filetypes.htm
+				#region Extensions
+				"asp",
+                "biz",
+                "cml",
+                "config",
+                "csproj",
+                "css",
+                "dcd",
+                "docm",
+                "docx",
+                "dotm",
+                "dotx",
+                "dtd",
+                "ent",
+                "epub",
+                "fo",
+                "htm",
+                "html",
+                "json",
+                "jsp",
+                "math",
+                "mml",
+                "nuspec",
+                "potm",
+                "potx",
+                "ppam",
+                "ppsm",
+                "ppsx",
+                "pptm",
+                "pptx",
+                "properties",
+                "pxf",
+                "rdf",
+                "runsettings",
+                "settings",
+                "sldm",
+                "sldx",
+                "sln",
+                "smil",
+                "sps",
+                "svg",
+                "testsettings",
+                "thmx",
+                "tld",
+                "txt",
+                "vml",
+                "vsct",
+                "vsix",
+                "vsixmanifest",
+                "vxml",
+                "wml",
+                "wsdl",
+                "xbrl",
+                "xdr",
+                "xhtml",
+                "xlam",
+                "xlsb",
+                "xlsm",
+                "xlsx",
+                "xltm",
+                "xltx",
+                "xml",
+                "xq",
+                "xql",
+                "xqu",
+                "xquery",
+                "xsd",
+                "xsig",
+                "xsl",
+                "xslt",
+                "zip", 
+				#endregion
+	         		};
                     break;
                 case KeyToExecutableEnum.Gimp:
                     actualPathToExeDto.SecondaryFilePathSegment = @"GIMP 2\bin";
+                    actualPathToExeDto.DefaultTypicalFileExtensions = new List<string>
+                    {
+                        				//Source(s)
+				// https://www.gimp.org/features/
+				// http://www.ftgimp.com/help/C/file_formats.html
+				#region Extensions
+				"aa",
+                "avi",
+                "bmp",
+                "bz2",
+                "c",
+                "cel",
+                "fits",
+                "fli",
+                "gif",
+                "gimp",
+                "gz",
+                "h",
+                "hrz",
+                "html",
+                "jfif",
+                "jpeg",
+                "jpg",
+                "miff",
+                "mng",
+                "mpeg",
+                "pcx",
+                "pix",
+                "png",
+                "pnm",
+                "ppm",
+                "ps",
+                "psd",
+                "psp",
+                "sgi",
+                "sunras",
+                "tga",
+                "tiff",
+                "wmf",
+                "xbm",
+                "xcf",
+                "xpm",
+                "xwd",
+                "zip",
+				#endregion
+                    };
                     break;
                 case KeyToExecutableEnum.MarkdownMonster:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Markdown Monster";
+                    actualPathToExeDto.DefaultTypicalFileExtensions = new List<string> { "md" };
                     break;
                 case KeyToExecutableEnum.VS2012:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
@@ -54,6 +179,21 @@ namespace OpenInApp.Common.Helpers
                     break;
                 case KeyToExecutableEnum.PaintDotNet:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Paint.NET";
+                    actualPathToExeDto.DefaultTypicalFileExtensions = new List<string>
+                    {
+                                        //Source(s): http://www.getpaint.net/doc/latest/
+                #region Extensions
+                "BMP",
+                "DDS",
+                "GIF",
+                "JPEG",
+                "JPG",
+                "PDN",
+                "PNG",
+                "TGA",
+                "TIFF",
+	            #endregion
+                    };
                     break;
                 case KeyToExecutableEnum.XamarinStudio:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Xamarin Studio\bin";
@@ -79,6 +219,20 @@ namespace OpenInApp.Common.Helpers
                 case KeyToExecutableEnum.MSPaint:
                     actualPathToExeDto.SecondaryFilePathSegment = "system32";
                     actualPathToExeDto.InitialFolderType = InitialFolderType.Windows;
+                    actualPathToExeDto.DefaultTypicalFileExtensions = new List<string>
+                    {
+                                        "bmp",
+                "dib",
+                "gif",
+                "ico",
+                "jfif",
+                "jpe",
+                "jpeg",
+                "jpg",
+                "png",
+                "tif",
+                "tiff",
+                    };
                     break;
                 default:
                     actualPathToExeDto.SecondaryFilePathSegment = null;

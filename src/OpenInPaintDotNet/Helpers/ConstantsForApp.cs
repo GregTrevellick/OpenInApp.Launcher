@@ -12,21 +12,22 @@ namespace OpenInAppPaintDotNet.Helpers
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
-            return new List<string>
-            {
-                //Source(s): http://www.getpaint.net/doc/latest/
-                #region Extensions
-                "BMP",
-                "DDS",
-                "GIF",
-                "JPEG",
-                "JPG",
-                "PDN",
-                "PNG",
-                "TGA",
-                "TIFF",
-	            #endregion
-            };
+            return ActualPathToExeDto.DefaultTypicalFileExtensions;
+            //  return new List<string>
+            //     {
+            //   //Source(s): http://www.getpaint.net/doc/latest/
+            //   #region Extensions
+            //   "BMP",
+            //   "DDS",
+            //   "GIF",
+            //   "JPEG",
+            //   "JPG",
+            //   "PDN",
+            //   "PNG",
+            //   "TGA",
+            //   "TIFF",
+            //#endregion
+            //   };
         }
 
         internal static string Caption = Vsix.Name + " " + Vsix.Version;

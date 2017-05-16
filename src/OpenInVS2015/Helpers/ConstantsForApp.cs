@@ -12,10 +12,7 @@ namespace OpenInVS2015.Helpers
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
-            return new List<string>
-            {
-                "*"
-            };
+            return ActualPathToExeDto.DefaultTypicalFileExtensions;
         }
 
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
