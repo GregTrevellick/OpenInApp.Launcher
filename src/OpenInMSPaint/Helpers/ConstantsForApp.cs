@@ -13,24 +13,10 @@ namespace OpenInMSPaint.Helpers
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
             return ActualPathToExeDto.DefaultTypicalFileExtensions;
-            //return new List<string>
-            //{
-            //    "bmp",
-            //    "dib",
-            //    "gif",
-            //    "ico",
-            //    "jfif",
-            //    "jpe",
-            //    "jpeg",
-            //    "jpg",
-            //    "png",
-            //    "tif",
-            //    "tiff",
-            //};
         }
 
-        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableConstant;
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
+        internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableConstant;
         internal static bool SeparateProcessPerFileToBeOpened = ActualPathToExeDto.SeparateProcessPerFileToBeOpened;//true;
         internal static bool UseShellExecute = ActualPathToExeDto.UseShellExecute;//false;
     }
