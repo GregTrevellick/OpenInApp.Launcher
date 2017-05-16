@@ -6,9 +6,9 @@ namespace OpenInChromeCanary.Helpers
 {
     public class ConstantsForApp 
     {
-        public static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.ChromeCanary;
+        internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.ChromeCanary;
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
-        public const string KeyToExecutableConstant = KeyToExecutableString.ChromeCanary;
+        private const string KeyToExecutableConstant = KeyToExecutableString.ChromeCanary;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

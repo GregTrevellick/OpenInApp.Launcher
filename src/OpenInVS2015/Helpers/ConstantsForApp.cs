@@ -6,9 +6,9 @@ namespace OpenInVS2015.Helpers
 {
     public class ConstantsForApp 
     {
-        public static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.VS2015;
+        internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.VS2015;
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
-        public const string KeyToExecutableConstant = KeyToExecutableString.VS2015;
+        private const string KeyToExecutableConstant = KeyToExecutableString.VS2015;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

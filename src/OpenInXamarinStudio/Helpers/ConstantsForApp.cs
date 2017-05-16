@@ -6,9 +6,9 @@ namespace OpenInXamarinStudio.Helpers
 {
     public class ConstantsForApp 
     {
-        public static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.XamarinStudio;
+        internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.XamarinStudio;
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
-        public const string KeyToExecutableConstant = KeyToExecutableString.XamarinStudio;
+        private const string KeyToExecutableConstant = KeyToExecutableString.XamarinStudio;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

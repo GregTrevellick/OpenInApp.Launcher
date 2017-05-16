@@ -6,9 +6,9 @@ namespace OpenInMSPaint.Helpers
 {
     public class ConstantsForApp 
     {
-        public static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.MSPaint;
+        internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.MSPaint;
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
-        public const string KeyToExecutableConstant = KeyToExecutableString.MSPaint;
+        private const string KeyToExecutableConstant = KeyToExecutableString.MSPaint;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

@@ -6,9 +6,9 @@ namespace OpenInAppMarkdownMonster.Helpers
 {
 	public class ConstantsForApp 
 	{
-        public static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.MarkdownMonster;
+        internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.MarkdownMonster;
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
-        public const string KeyToExecutableConstant = KeyToExecutableString.MarkdownMonster;
+        private const string KeyToExecutableConstant = KeyToExecutableString.MarkdownMonster;
 		
 		public IEnumerable<string> GetDefaultTypicalFileExtensions()
 		{

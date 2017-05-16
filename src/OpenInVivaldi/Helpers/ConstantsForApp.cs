@@ -6,9 +6,9 @@ namespace OpenInVivaldi.Helpers
 {
     public class ConstantsForApp 
     {
-        public static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.Vivaldi;
+        internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.Vivaldi;
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
-        public const string KeyToExecutableConstant = KeyToExecutableString.Vivaldi;
+        private const string KeyToExecutableConstant = KeyToExecutableString.Vivaldi;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {

@@ -6,9 +6,9 @@ namespace OpenInAppPaintDotNet.Helpers
 {
     public class ConstantsForApp 
     {
-        public static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.PaintDotNet;
+        internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.PaintDotNet;
         public static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
-        public const string KeyToExecutableConstant = KeyToExecutableString.PaintDotNet;
+        private const string KeyToExecutableConstant = KeyToExecutableString.PaintDotNet;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
