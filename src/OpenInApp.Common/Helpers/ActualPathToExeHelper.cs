@@ -13,12 +13,13 @@ namespace OpenInApp.Common.Helpers
                 ExecutableFileToBrowseFor = keyToExecutableEnum.Description(),
                 InitialFolderType = InitialFolderType.ProgramFilesX86,
                 SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
-                SeparateProcessPerFileToBeOpened = true,
+                SeparateProcessPerFileToBeOpened = true,//gregt always true ???
                 UseShellExecute = true
             };
 
             switch (keyToExecutableEnum)
             {
+                //gregt sort alpha
                 case KeyToExecutableEnum.XMLSpy:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Altova\XMLSpy2016";
                     actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;
