@@ -35,6 +35,9 @@ Software License is available [here](/LICENSE.txt).
 [![Vivaldi](src/VisualStudioMarketPlaceAssets/OpenInVivaldi/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVivaldi)
 [![Firefox Developer Edition](src/VisualStudioMarketPlaceAssets/OpenInFirefoxDeveloperEdition/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninFirefoxDeveloperEdition)
 [![Markdown Monster](src/VisualStudioMarketPlaceAssets/OpenInMarkdownMonster/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninMarkdownMonster)
+[![Markdown Monster](src/VisualStudioMarketPlaceAssets/OpenInEmacs/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninEmacs)
+[![Markdown Monster](src/VisualStudioMarketPlaceAssets/OpenInMSPaint/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninMSPaint)
+[![Markdown Monster](src/VisualStudioMarketPlaceAssets/OpenInXamarinStudio/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninXamarinStudio)
 
 ## Legal
 
