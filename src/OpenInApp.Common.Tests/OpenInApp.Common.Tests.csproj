@@ -125,6 +125,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="FileToBeOpenedKind.cs" />
     <Compile Include="Helpers\OpenInAppHelperTests.cs" />
     <Compile Include="Helpers\GeneralOptionsHelperTests.cs" />
     <Compile Include="Helpers\FileHelperTests.cs" />
@@ -132,6 +133,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.txt" />
+    <Content Include="TestFiles\AnyText1.txt" />
+    <Content Include="TestFiles\AnyText2.TXT" />
+    <Content Include="TestFiles\MovingImage1.mpg" />
+    <Content Include="TestFiles\MovingImage2.mpeg" />
+    <Content Include="TestFiles\StillImage1.jpg" />
+    <Content Include="TestFiles\StillImage2.JPG" />
+    <Content Include="TestFiles\z.sql" />
+    <Content Include="TestFiles\z.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OpenInApp.Common\OpenInApp.Common.csproj">
@@ -143,7 +152,9 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="TestFiles\z.linq" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

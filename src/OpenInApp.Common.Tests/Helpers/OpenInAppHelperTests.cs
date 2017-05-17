@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 using OpenInApp.Common.Helpers;
 using System.Collections.Generic;
 
@@ -179,6 +180,77 @@ namespace OpenInApp.Common.Tests.Helpers
         private void Act(IEnumerable<string> actualFilesToBeOpened, string executableFullPath, bool separateProcessPerFileToBeOpened, bool useShellExecute)
         {
                 OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
+        }
+
+
+
+
+
+
+
+
+
+        [Test()]
+        [Category("NonAppVeyor")]
+        [TestCase(KeyToExecutableEnum.ChromeCanary, FileToBeOpenedKind.Any)]
+        [TestCase(KeyToExecutableEnum.Emacs, FileToBeOpenedKind.Code)]
+        [TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, FileToBeOpenedKind.Any)]
+        [TestCase(KeyToExecutableEnum.Gimp, FileToBeOpenedKind.StillImage)]
+        [TestCase(KeyToExecutableEnum.MarkdownMonster, FileToBeOpenedKind.Markdown)]
+        [TestCase(KeyToExecutableEnum.MSPaint, FileToBeOpenedKind.StillImage)]
+        [TestCase(KeyToExecutableEnum.Opera, FileToBeOpenedKind.Any)]
+        [TestCase(KeyToExecutableEnum.OperaDeveloperEdition, FileToBeOpenedKind.Any)]
+        [TestCase(KeyToExecutableEnum.PaintDotNet, FileToBeOpenedKind.StillImage)]
+        [TestCase(KeyToExecutableEnum.Vivaldi, FileToBeOpenedKind.Any)]
+        [TestCase(KeyToExecutableEnum.VS2012, FileToBeOpenedKind.Code)]
+        [TestCase(KeyToExecutableEnum.VS2013, FileToBeOpenedKind.Code)]
+        [TestCase(KeyToExecutableEnum.VS2015, FileToBeOpenedKind.Code)]
+        [TestCase(KeyToExecutableEnum.VS2017Community, FileToBeOpenedKind.Code)]
+        [TestCase(KeyToExecutableEnum.VS2017Enterprise, FileToBeOpenedKind.Code)]
+        [TestCase(KeyToExecutableEnum.VS2017Professional, FileToBeOpenedKind.Code)]
+        [TestCase(KeyToExecutableEnum.XamarinStudio, FileToBeOpenedKind.Any)]
+        [TestCase(KeyToExecutableEnum.XMLSpy, FileToBeOpenedKind.Xml)]
+        public void InvokeCommandTest(KeyToExecutableEnum keyToExecutableEnum, FileToBeOpenedKind fileToBeOpenedKind)
+        {
+            // Arrange
+            List<string> actualFilesToBeOpened;
+
+            switch (fileToBeOpenedKind)
+            {
+                case FileToBeOpenedKind.Any:
+                case FileToBeOpenedKind.Code:
+                case FileToBeOpenedKind.Markdown:
+                case FileToBeOpenedKind.Xml:
+                    actualFilesToBeOpened = new List<string>
+                    {
+                        @"..\TestFiles\AnyText1.txt",
+                        @"..\TestFiles\AnyText2.TXT",
+                    };
+                    break;
+                case FileToBeOpenedKind.MovingImage:
+                    actualFilesToBeOpened = new List<string>
+                    {
+                        @"..\TestFiles\MovingImage1.mpg",
+                        @"..\TestFiles\MovingImage2.mpeg",
+                    };
+                    break;
+                case FileToBeOpenedKind.StillImage:
+                    actualFilesToBeOpened = new List<string>
+                    {
+                        @"..\TestFiles\StillImage1.jpg",
+                        @"..\TestFiles\StillImage2.JPG",
+                    };
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
+
+            var actualPathToExeHelper = new ActualPathToExeHelper();
+            var actualPathToExeDto = actualPathToExeHelper.GetActualPathToExeDto(keyToExecutableEnum);
+            var executableFullPath = GeneralOptionsHelper.GetActualPathToExe(keyToExecutableEnum);
+
+            // Act
+            OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, executableFullPath, actualPathToExeDto.SeparateProcessPerFileToBeOpened, actualPathToExeDto.UseShellExecute);
         }
     }
 }
