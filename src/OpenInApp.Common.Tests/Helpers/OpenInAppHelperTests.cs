@@ -30,11 +30,8 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("I")]
-        //TESTED & LIVE [TestCase(@"C:\Program Files (x86)\Altova\XMLSpy2016\XMLSpy.exe", false, null)]
-        //TESTED & LIVE [TestCase(@"C:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe", false, null)]
         //BEATEN TO IT - HAPPILY OPENS BOTH FILES [TestCase(@"C:\Windows\system32\notepad.exe", true, false)]
         //BEATEN TO IT - HAPPILY OPENS BOTH FILES [TestCase(@"C:\Program Files (x86)\Vim\vim80\gvim.exe", true, null)]//with mouse - graphical vim
-//HAPPILY OPENS BOTH FILES [TestCase(@"C:\Users\greg\Desktop\ZZZ open in\_emacs-25.1-2-x86_64-w64-mingw32\bin\runemacs.exe", true, null)]
         //nothing happens [TestCase(@"C:\Users\greg\AppData\Local\atom\app-1.13.1\atom.exe", false, null)]
         //nothing happens [TestCase(@"C:\Program Files (x86)\LINQPad4\LPRun.exe", false, null)]
         //nothing happens [TestCase(@"C:\Program Files (x86)\Vim\vim80\vim.exe", false, null)]//without mouse
@@ -62,11 +59,6 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("I")]
-        //TESTED & LIVE [TestCase(@"C:\Users\greg\AppData\Local\Vivaldi\Application\vivaldi.exe", null)]
-        //TESTED & LIVE  [TestCase(@"C:\Program Files (x86)\Opera\opera.exe", null)]
-        //TESTED & LIVE  [TestCase(@"C:\Program Files\Opera developer\launcher.exe", null)]        
-        //TESTED & LIVE  [TestCase(@"C:\Program Files\Firefox Developer Edition\firefox.exe", null)]//(aurora)
-        //TESTED & LIVE  [TestCase(@"C:\Users\greg\AppData\Local\Google\Chrome SxS\Application\chrome.exe", null)]//(canary)
         //works with 2 files, 1 browser window 2 tabs but opens canary        [TestCase(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", null)]
         //works with 2 files, 1 browser window 2 tabs but opens aurora         [TestCase(@"C:\Program Files (x86)\Mozilla Firefox\firefox.exe", null)]
         //works but ignores the args, when 2 argsat least  [TestCase(@"C:\Program Files (x86)\Internet Explorer\iexplore.exe", null)]
@@ -90,13 +82,6 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("I")]
-        //TESTED & LIVE [TestCase(@"C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe", false)]
-        //TESTED & LIVE [TestCase(@"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe", false)]
-        //TESTED & LIVE [TestCase(@"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe", false)]
-        //TESTED & LIVE [TestCase(@"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe", false)]
-        //TESTED & LIVE [TestCase(@"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe", false)]
-        //TESTED & LIVE [TestCase(@"C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe", false)]
- //HAPPILY OPENS BOTH FILES [TestCase(@"C:\Program Files (x86)\Xamarin Studio\bin\XamarinStudio.exe", null)]
         //app splash screen shows but app doesnt open [TestCase(@"C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe", null)]
         public void InvokeCommandTest_StudioApps(string executableFullPath, bool useShellExecute)
         {
@@ -114,9 +99,6 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("I")]
-        //TESTED & LIVE [TestCase(@"C:\Program Files (x86)\bin\gimp-2.8.exe", null)]
-        //TESTED & LIVE [TestCase(@"C:\Program Files (x86)\Paint.NET\PaintDotNet.exe", null)]  
- //HAPPILY OPENS BOTH FILES [TestCase(@"C:\Windows\system32\mspaint.exe", true, false)]   
         //works with multiple args, file or folder, but only uses the final argument [TestCase(@"C:\Program Files (x86)\FastStone Image Viewer\FSViewer.exe", true, null)]
         //works but args ignored even if single arg that is a directory [TestCase(@"C:\Program Files (x86)\DeDup\DeDup.exe", false)]
         //works but args ignored even if single arg that is a directory or jpg [TestCase(@"C:\Program Files (x86)\Windows Live\Photo Gallery\WLXPhotoGallery.exe", null)]
@@ -203,7 +185,9 @@ namespace OpenInApp.Common.Tests.Helpers
         //[TestCase(KeyToExecutableEnum.PaintDotNet, FileToBeOpenedKind.StillImage)]
         //[TestCase(KeyToExecutableEnum.Vivaldi, FileToBeOpenedKind.Any)]
         //[TestCase(KeyToExecutableEnum.XamarinStudio, FileToBeOpenedKind.Any)]
-        [TestCase(KeyToExecutableEnum.XMLSpy, FileToBeOpenedKind.Xml)]
+        //[TestCase(KeyToExecutableEnum.XMLSpy, FileToBeOpenedKind.Xml)]
+
+        //TBA
         //[TestCase(KeyToExecutableEnum.VS2012, FileToBeOpenedKind.Code)]
         //[TestCase(KeyToExecutableEnum.VS2013, FileToBeOpenedKind.Code)]
         //[TestCase(KeyToExecutableEnum.VS2015, FileToBeOpenedKind.Code)]
