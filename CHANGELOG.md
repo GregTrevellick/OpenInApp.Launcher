@@ -1,6 +1,13 @@
 # Change log
 
 These are the changes to each version that has been released in the Visual Studio Marketplace.
+
+## 1.1.6
+**2017-05-17** 
+- [x] Addition of Open In Emacs
+- [x] Addition of Open In MS Paint Developer Edition
+- [x] Addition of Open In Xamarin Studio
+
 ## 1.1.5
 **2017-05-09** 
 - [x] Addition of Open In Chrome Canary
