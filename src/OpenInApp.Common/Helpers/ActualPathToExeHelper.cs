@@ -19,6 +19,8 @@ namespace OpenInApp.Common.Helpers
 
             switch (keyToExecutableEnum)
             {
+
+                // emacs, not found message says cannot find file ""
                 //gregt sort alpha
                 case KeyToExecutableEnum.XMLSpy:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Altova\XMLSpy2016";
