@@ -24,7 +24,7 @@ namespace OpenInApp.Common.Helpers
         public const string VS2017Enterprise = "devenv.exeVS2017Enterprise";
         public const string VS2017Professional = "devenv.exeVS2017Professional";
         public const string XamarinStudio = "XamarinStudio.exe";
-        public const string XMLSpy = "XMLSpy.exe";
+        public const string XMLSpy = "XMLSpy.exe";//gregt rename AltovaXmlSpy
     }
 
     public enum KeyToExecutableEnum
@@ -81,6 +81,6 @@ namespace OpenInApp.Common.Helpers
         XamarinStudio,
         
         [Description("XMLSpy.exe")]
-        XMLSpy,
+        XMLSpy,//gregt rename AltovaXmlSpy
     }
 }
