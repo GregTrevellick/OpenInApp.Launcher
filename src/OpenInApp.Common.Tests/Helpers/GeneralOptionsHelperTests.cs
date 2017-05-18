@@ -1,24 +1,28 @@
 ﻿using NUnit.Framework;
 using OpenInApp.Common.Helpers;
 using OpenInApp.Common.Helpers.Dtos;
+using System.IO;
 using System.Linq;
+using static System.Environment;
 
 namespace OpenInApp.Common.Tests.Helpers
 {
     [TestFixture()]
     public class GeneralOptionsHelperTests
     {
+        private const string OverrideAtTestExecutionTime = "OverrideAtTestExecutionTime";
+
         [Test()]
-        [TestCase(KeyToExecutableEnum.ChromeCanary, @"C:\Users\greg\AppData\Local\Google\Chrome SxS\Application\chrome.exe")]
+        [TestCase(KeyToExecutableEnum.ChromeCanary, OverrideAtTestExecutionTime)]
         [TestCase(KeyToExecutableEnum.Emacs, null)]
         [TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, @"C:\Program Files\Firefox Developer Edition\firefox.exe")]
         [TestCase(KeyToExecutableEnum.Gimp, @"C:\Program Files\GIMP 2\bin\gimp-2.8.exe")]
         [TestCase(KeyToExecutableEnum.MarkdownMonster, @"C:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe")]
-        [TestCase(KeyToExecutableEnum.MSPaint, @"C:\WINDOWS\system32\mspaint.exe")]
+        [TestCase(KeyToExecutableEnum.MSPaint, OverrideAtTestExecutionTime)]
         [TestCase(KeyToExecutableEnum.Opera, @"C:\Program Files (x86)\Opera\opera.exe")]
         [TestCase(KeyToExecutableEnum.OperaDeveloperEdition, @"C:\Program Files\Opera developer\launcher.exe")]
         [TestCase(KeyToExecutableEnum.PaintDotNet, @"C:\Program Files\Paint.NET\PaintDotNet.exe")]
-        [TestCase(KeyToExecutableEnum.Vivaldi, @"C:\Users\greg\AppData\Local\Vivaldi\Application\vivaldi.exe")]
+        [TestCase(KeyToExecutableEnum.Vivaldi, OverrideAtTestExecutionTime)]
         [TestCase(KeyToExecutableEnum.VS2012, @"C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe")]
         [TestCase(KeyToExecutableEnum.VS2013, @"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe")]
         [TestCase(KeyToExecutableEnum.VS2015, @"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe")]
@@ -30,6 +34,26 @@ namespace OpenInApp.Common.Tests.Helpers
         [Category("U")]
         public void GetActualPathToExeTest(KeyToExecutableEnum keyToExecutableEnum, string expected)
         {
+            //Arrange
+            if (expected == OverrideAtTestExecutionTime)
+            {
+                var localApplicationData = GetFolderPath(SpecialFolder.LocalApplicationData);
+                var windows = GetFolderPath(SpecialFolder.Windows);
+
+                switch (keyToExecutableEnum)
+                {
+                    case KeyToExecutableEnum.ChromeCanary:
+                        expected = Path.Combine(localApplicationData, @"Google\Chrome SxS\Application\chrome.exe");
+                        break;
+                    case KeyToExecutableEnum.MSPaint:
+                        Path.Combine(windows, @"system32\mspaint.exe");
+                        break;
+                    case KeyToExecutableEnum.Vivaldi:
+                        Path.Combine(localApplicationData, @"AppData\Local\Vivaldi\Application\vivaldi.exe");
+                        break;
+                }
+            }
+
             //Act
             var actual = GeneralOptionsHelper.GetSearchPaths(keyToExecutableEnum);
 
