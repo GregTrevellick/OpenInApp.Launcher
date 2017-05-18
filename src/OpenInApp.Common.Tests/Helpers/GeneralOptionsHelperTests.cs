@@ -46,10 +46,10 @@ namespace OpenInApp.Common.Tests.Helpers
                         expected = Path.Combine(localApplicationData, @"Google\Chrome SxS\Application\chrome.exe");
                         break;
                     case KeyToExecutableEnum.MSPaint:
-                        Path.Combine(windows, @"system32\mspaint.exe");
+                        expected = Path.Combine(windows, @"system32\mspaint.exe");
                         break;
                     case KeyToExecutableEnum.Vivaldi:
-                        Path.Combine(localApplicationData, @"AppData\Local\Vivaldi\Application\vivaldi.exe");
+                        expected = Path.Combine(localApplicationData, @"Vivaldi\Application\vivaldi.exe");
                         break;
                 }
             }
