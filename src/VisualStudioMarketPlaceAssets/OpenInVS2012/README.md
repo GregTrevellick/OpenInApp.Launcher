@@ -16,7 +16,7 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 
 ## Features
 
-- Open multiple files simultaneously in [Visual Studio 2012][ThirdPartyAppHomePage] with VS2012, VS2013 and VS2015.
+- Open multiple files simultaneously in [Visual Studio 2012][ThirdPartyAppHomePage] with VS2012, VS2013, VS2015 and VS2017.
 
 - Within the code editor window
   ![](ReadMeScreenShot_CodeEditorWindow.png)

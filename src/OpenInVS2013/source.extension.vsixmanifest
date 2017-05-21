@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="4EE49344-F83F-40D8-9901-79C6D5673B71" Version="1.1.5" Language="en-US" Publisher="GregTrevellick" />
+    <Identity Id="4EE49344-F83F-40D8-9901-79C6D5673B71" Version="1.1.9" Language="en-US" Publisher="GregTrevellick" />
     <DisplayName>Open in Visual Studio 2013</DisplayName>
     <Description xml:space="preserve">Open multiple files simultaneously in Visual Studio 2013 directly from Solution Explorer or Code Editor window.</Description>
     <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>
