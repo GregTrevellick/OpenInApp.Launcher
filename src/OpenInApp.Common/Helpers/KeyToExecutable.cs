@@ -7,6 +7,7 @@ namespace OpenInApp.Common.Helpers
     /// </summary>
     public static class KeyToExecutableString
     {
+        public const string AltovaXMLSpy = "XMLSpy.exe";
         public const string ChromeCanary = "chrome.exe";
         public const string Emacs = "runemacs.exe";
         public const string FirefoxDeveloperEdition = "firefox.exe";
@@ -24,11 +25,13 @@ namespace OpenInApp.Common.Helpers
         public const string VS2017Enterprise = "devenv.exeVS2017Enterprise";
         public const string VS2017Professional = "devenv.exeVS2017Professional";
         public const string XamarinStudio = "XamarinStudio.exe";
-        public const string XMLSpy = "XMLSpy.exe";//gregt rename AltovaXmlSpy
     }
 
     public enum KeyToExecutableEnum
     {
+        [Description("XMLSpy.exe")]
+        AltovaXMLSpy,
+
         [Description("chrome.exe")]
         ChromeCanary,
        
@@ -79,8 +82,5 @@ namespace OpenInApp.Common.Helpers
         
         [Description("XamarinStudio.exe")]
         XamarinStudio,
-        
-        [Description("XMLSpy.exe")]
-        XMLSpy,//gregt rename AltovaXmlSpy
     }
 }

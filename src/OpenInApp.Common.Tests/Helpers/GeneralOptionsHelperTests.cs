@@ -13,6 +13,7 @@ namespace OpenInApp.Common.Tests.Helpers
         private const string OverrideAtTestExecutionTime = "OverrideAtTestExecutionTime";
 
         [Test()]
+        [TestCase(KeyToExecutableEnum.AltovaXMLSpy, @"C:\Program Files (x86)\Altova\XMLSpy2016\XMLSpy.exe")]
         [TestCase(KeyToExecutableEnum.ChromeCanary, OverrideAtTestExecutionTime)]
         [TestCase(KeyToExecutableEnum.Emacs, null)]
         [TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, @"C:\Program Files\Firefox Developer Edition\firefox.exe")]
@@ -30,7 +31,6 @@ namespace OpenInApp.Common.Tests.Helpers
         [TestCase(KeyToExecutableEnum.VS2017Enterprise, @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe")]
         [TestCase(KeyToExecutableEnum.VS2017Professional, @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe")]
         [TestCase(KeyToExecutableEnum.XamarinStudio, @"C:\Program Files (x86)\Xamarin Studio\bin\XamarinStudio.exe")]
-        [TestCase(KeyToExecutableEnum.XMLSpy, @"C:\Program Files (x86)\Altova\XMLSpy2016\XMLSpy.exe")]
         [Category("U")]
         public void GetActualPathToExeTest(KeyToExecutableEnum keyToExecutableEnum, string expected)
         {

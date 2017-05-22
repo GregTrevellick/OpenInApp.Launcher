@@ -22,7 +22,7 @@ namespace OpenInApp.Common.Helpers
 
                 // emacs, not found message says cannot find file ""
                 //gregt sort alpha
-                case KeyToExecutableEnum.XMLSpy:
+                case KeyToExecutableEnum.AltovaXMLSpy:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Altova\XMLSpy2016";
                     actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;
                     actualPathToExeDto.DefaultTypicalFileExtensions = new List<string>
