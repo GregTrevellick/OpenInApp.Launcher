@@ -2,6 +2,10 @@
 
 These are the changes to each version that has been released in the Visual Studio Marketplace.
 
+## 1.1.10
+**2017-05-22** 
+- [x] Updated logo for "Open in VS2017" apps
+
 ## 1.1.9
 **2017-05-22** 
 - [x] Enable all extensions for use in VS2017
