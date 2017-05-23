@@ -14,7 +14,7 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 
 ## Features
 
-- Open multiple files simultaneously in [MS Paint][ThirdPartyAppHomePage] with VS2012, VS2013, VS2015 and VS2017.
+- Open multiple files simultaneously in [MS Paint][ThirdPartyAppHomePage].
 
 - Within the code editor window
   ![](ReadMeScreenShot_CodeEditorWindow.png)

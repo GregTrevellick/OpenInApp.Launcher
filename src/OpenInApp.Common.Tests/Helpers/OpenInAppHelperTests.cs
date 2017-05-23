@@ -177,7 +177,7 @@ namespace OpenInApp.Common.Tests.Helpers
         //[TestCase(KeyToExecutableEnum.ChromeCanary, FileToBeOpenedKind.Any)]
         //[TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, FileToBeOpenedKind.Any)]
         //[TestCase(KeyToExecutableEnum.Gimp, FileToBeOpenedKind.StillImage)]
-        //[TestCase(KeyToExecutableEnum.MarkdownMonster, FileToBeOpenedKind.Markdown)]
+        [TestCase(KeyToExecutableEnum.MarkdownMonster, FileToBeOpenedKind.Markdown)]
         //[TestCase(KeyToExecutableEnum.MSPaint, FileToBeOpenedKind.StillImage)]
         //[TestCase(KeyToExecutableEnum.Opera, FileToBeOpenedKind.Any)]
         //[TestCase(KeyToExecutableEnum.OperaDeveloperEdition, FileToBeOpenedKind.Any)]

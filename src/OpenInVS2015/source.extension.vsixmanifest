@@ -12,8 +12,6 @@
     <Tags>open, open in, open in VS2015, VS2015, open in Visual Studio 2015, Visual Studio 2015</Tags>
   </Metadata>
   <Installation>
-
-
     <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,16.0)" />
   </Installation>
   <Dependencies>
