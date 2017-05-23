@@ -17,7 +17,7 @@ namespace OpenInVS2017Professional.Helpers
 
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableConstant;
-        internal static bool SeparateProcessPerFileToBeOpened = ActualPathToExeDto.SeparateProcessPerFileToBeOpened;//true;
-        internal static bool UseShellExecute = ActualPathToExeDto.UseShellExecute;//false;
+        internal static bool SeparateProcessPerFileToBeOpened = ActualPathToExeDto.SeparateProcessPerFileToBeOpened;
+        internal static bool UseShellExecute = ActualPathToExeDto.UseShellExecute;
     }
 }

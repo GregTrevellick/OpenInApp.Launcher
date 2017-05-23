@@ -13,12 +13,6 @@ namespace OpenInAppMarkdownMonster.Helpers
 		public IEnumerable<string> GetDefaultTypicalFileExtensions()
 		{
             return ActualPathToExeDto.DefaultTypicalFileExtensions;
-   //         return new List<string>
-			//{
-			//	#region Extensions
-			//	"md",
-			//	#endregion
-			//};
 		}
 
 		internal static string Caption = Vsix.Name + " " + Vsix.Version;
