@@ -71,6 +71,7 @@ Additional thanks to
 - [Visual Studio Toolbox](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Extensions-by-Mads-Kristensen)
 - [Screen To Gif](http://www.screentogif.com/) 
 - [Paint Dot Net](http://www.getpaint.net/)  
+- [Dot Net Curry](https://github.com/dotnetcurry/grunt-gulp-visualstudio/tree/master/Gulp%20files%20for%20VS%202013)   
 
 [![](chart_github.ioOpenInApp.Launcher.png)][GitHubPagesURL]
 
