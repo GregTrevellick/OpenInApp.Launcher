@@ -13,7 +13,7 @@ namespace OpenInApp.Common.Helpers
                 ExecutableFileToBrowseFor = keyToExecutableEnum.Description(),
                 InitialFolderType = InitialFolderType.ProgramFilesX86,
                 SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
-                SeparateProcessPerFileToBeOpened = true,//gregtt always true ???
+                //SeparateProcessPerFileToBeOpened = true,//gregtt always true ???
                 UseShellExecute = true
             };
 
