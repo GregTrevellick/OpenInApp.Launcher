@@ -13,15 +13,14 @@ namespace OpenInApp.Common.Helpers
                 ExecutableFileToBrowseFor = keyToExecutableEnum.Description(),
                 InitialFolderType = InitialFolderType.ProgramFilesX86,
                 SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
-                SeparateProcessPerFileToBeOpened = true,//gregt always true ???
+                SeparateProcessPerFileToBeOpened = true,//gregtt always true ???
                 UseShellExecute = true
             };
 
             switch (keyToExecutableEnum)
             {
-
-                // emacs, not found message says cannot find file ""
-                //gregt sort alpha
+                //gregtt emacs, not found message says cannot find file ""
+                //gregtt sort alpha
                 case KeyToExecutableEnum.AltovaXMLSpy:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Altova\XMLSpy2016";
                     actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;

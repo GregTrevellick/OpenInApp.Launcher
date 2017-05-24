@@ -60,7 +60,7 @@ namespace OpenInApp.Common.Helpers
                     }
                     catch (Exception)
                     {
-                        // ignored - or log as save failed to output window ? gregt
+                        // ignored - or log as save failed to output window ? gregtt
                     }
                     fileNamesToBeOpened.Add(selectedItem.ProjectItem.FileNames[0]);
                 }

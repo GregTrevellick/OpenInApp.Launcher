@@ -199,7 +199,7 @@ namespace OpenInApp.Common.Tests.Helpers
             // Arrange
             List<string> actualFilesToBeOpened;
             #region Set files to be opened
-            //gregt set to relative path
+            //gregtt set to relative path
             var path = @"C:\Users\greg\Source\Repos\OpenInApp.Launcher\src\OpenInApp.Common.Tests";
             switch (fileToBeOpenedKind)
             {
