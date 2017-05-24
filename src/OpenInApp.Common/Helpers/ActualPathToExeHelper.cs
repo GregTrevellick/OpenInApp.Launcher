@@ -20,7 +20,6 @@ namespace OpenInApp.Common.Helpers
             switch (keyToExecutableEnum)
             {
                 //gregtt emacs, not found message says cannot find file ""
-                //gregtt sort alpha
                 case KeyToExecutableEnum.AltovaXMLSpy:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Altova\XMLSpy2016";
                     actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;
@@ -101,6 +100,17 @@ namespace OpenInApp.Common.Helpers
 				        #endregion
 	         		};
                     break;
+                case KeyToExecutableEnum.ChromeCanary:
+                    actualPathToExeDto.SecondaryFilePathSegment = @"Google\Chrome SxS\Application";
+                    actualPathToExeDto.InitialFolderType = InitialFolderType.LocalApplicationData;
+                    break;
+                case KeyToExecutableEnum.Emacs:
+                    actualPathToExeDto.SecondaryFilePathSegment = null;
+                    actualPathToExeDto.InitialFolderType = InitialFolderType.None;
+                    break;
+                case KeyToExecutableEnum.FirefoxDeveloperEdition:
+                    actualPathToExeDto.SecondaryFilePathSegment = "Firefox Developer Edition";
+                    break;
                 case KeyToExecutableEnum.Gimp:
                     actualPathToExeDto.SecondaryFilePathSegment = @"GIMP 2\bin";
                     actualPathToExeDto.DefaultTypicalFileExtensions = new List<string>
@@ -153,6 +163,55 @@ namespace OpenInApp.Common.Helpers
                     actualPathToExeDto.SecondaryFilePathSegment = @"Markdown Monster";
                     actualPathToExeDto.DefaultTypicalFileExtensions = new List<string> { "md" };
                     break;
+                case KeyToExecutableEnum.MSPaint:
+                    actualPathToExeDto.SecondaryFilePathSegment = "system32";
+                    actualPathToExeDto.InitialFolderType = InitialFolderType.Windows;
+                    actualPathToExeDto.UseShellExecute = false;
+                    actualPathToExeDto.DefaultTypicalFileExtensions = new List<string>
+                    {
+                        #region Extensions
+                        "bmp",
+                        "dib",
+                        "gif",
+                        "ico",
+                        "jfif",
+                        "jpe",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "tif",
+                        "tiff",
+                        #endregion
+                    };
+                    break;
+                case KeyToExecutableEnum.Opera:
+                    actualPathToExeDto.SecondaryFilePathSegment = @"Opera";
+                    break;
+                case KeyToExecutableEnum.OperaDeveloperEdition:
+                    actualPathToExeDto.SecondaryFilePathSegment = @"Opera developer";
+                    break;
+                case KeyToExecutableEnum.PaintDotNet:
+                    actualPathToExeDto.SecondaryFilePathSegment = @"Paint.NET";
+                    actualPathToExeDto.DefaultTypicalFileExtensions = new List<string>
+                    {
+                        #region Extensions
+                        //Source(s): http://www.getpaint.net/doc/latest/
+                        "BMP",
+                        "DDS",
+                        "GIF",
+                        "JPEG",
+                        "JPG",
+                        "PDN",
+                        "PNG",
+                        "TGA",
+                        "TIFF",
+	                    #endregion
+                    };
+                    break;
+                case KeyToExecutableEnum.Vivaldi:
+                    actualPathToExeDto.SecondaryFilePathSegment = @"Vivaldi\Application";
+                    actualPathToExeDto.InitialFolderType = InitialFolderType.LocalApplicationData;
+                    break;
                 case KeyToExecutableEnum.VS2012:
                     actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 11.0\Common7\IDE";
@@ -183,68 +242,8 @@ namespace OpenInApp.Common.Helpers
                     actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Professional\Common7\IDE";
                     actualPathToExeDto.UseShellExecute = false;
                     break;
-                case KeyToExecutableEnum.Opera:
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Opera";
-                    break;
-                case KeyToExecutableEnum.PaintDotNet:
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Paint.NET";
-                    actualPathToExeDto.DefaultTypicalFileExtensions = new List<string>
-                    {
-                        #region Extensions
-                        //Source(s): http://www.getpaint.net/doc/latest/
-                        "BMP",
-                        "DDS",
-                        "GIF",
-                        "JPEG",
-                        "JPG",
-                        "PDN",
-                        "PNG",
-                        "TGA",
-                        "TIFF",
-	                    #endregion
-                    };
-                    break;
                 case KeyToExecutableEnum.XamarinStudio:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Xamarin Studio\bin";
-                    break;
-                case KeyToExecutableEnum.FirefoxDeveloperEdition:
-                    actualPathToExeDto.SecondaryFilePathSegment = "Firefox Developer Edition";
-                    break;
-                case KeyToExecutableEnum.OperaDeveloperEdition:
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Opera developer";
-                    break;
-                case KeyToExecutableEnum.ChromeCanary:
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Google\Chrome SxS\Application";
-                    actualPathToExeDto.InitialFolderType = InitialFolderType.LocalApplicationData;
-                    break;
-                case KeyToExecutableEnum.Vivaldi:
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Vivaldi\Application";
-                    actualPathToExeDto.InitialFolderType = InitialFolderType.LocalApplicationData;
-                    break;
-                case KeyToExecutableEnum.Emacs:
-                    actualPathToExeDto.SecondaryFilePathSegment = null;
-                    actualPathToExeDto.InitialFolderType = InitialFolderType.None;
-                    break;
-                case KeyToExecutableEnum.MSPaint:
-                    actualPathToExeDto.SecondaryFilePathSegment = "system32";
-                    actualPathToExeDto.InitialFolderType = InitialFolderType.Windows;
-                    actualPathToExeDto.UseShellExecute = false;
-                    actualPathToExeDto.DefaultTypicalFileExtensions = new List<string>
-                    {
-                        #region Extensions
-                        "bmp",
-                        "dib",
-                        "gif",
-                        "ico",
-                        "jfif",
-                        "jpe",
-                        "jpeg",
-                        "jpg",
-                        "png",
-                        "tif",
-                        "tiff",
-                        #endregion
-                    };
                     break;
                 default:
                     actualPathToExeDto.SecondaryFilePathSegment = null;
