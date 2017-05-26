@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenInApp.Common.Helpers.Dtos;
+using System;
 
 namespace OpenInApp.Command
 {
@@ -9,6 +10,7 @@ namespace OpenInApp.Command
         public string ExecutableFileToBrowseFor { get; set; } //gregtt is this used ? rename to KeyToExecutable ?
         public string FileQuantityWarningLimit { get; set; }
         public bool IsFromSolutionExplorer { get; set; }
+        //public ArtefactToOpen ArtefactToOpen { get; set; }
         public bool SeparateProcessPerFileToBeOpened { get; set; }
         public IServiceProvider ServiceProvider { get; set; }        
         public bool SuppressTypicalFileExtensionsWarning { get; set; }

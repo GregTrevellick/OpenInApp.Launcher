@@ -174,19 +174,20 @@ namespace OpenInApp.Common.Tests.Helpers
         [Test()]
         [Category("NonAppVeyor")]
         //GREEN
+        //[TestCase(KeyToExecutableEnum.AltovaXMLSpy, FileToBeOpenedKind.Xml)]
         //[TestCase(KeyToExecutableEnum.ChromeCanary, FileToBeOpenedKind.Any)]
         //[TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, FileToBeOpenedKind.Any)]
         //[TestCase(KeyToExecutableEnum.Gimp, FileToBeOpenedKind.StillImage)]
-        [TestCase(KeyToExecutableEnum.MarkdownMonster, FileToBeOpenedKind.Markdown)]
+        //[TestCase(KeyToExecutableEnum.MarkdownMonster, FileToBeOpenedKind.Markdown)]
         //[TestCase(KeyToExecutableEnum.MSPaint, FileToBeOpenedKind.StillImage)]
         //[TestCase(KeyToExecutableEnum.Opera, FileToBeOpenedKind.Any)]
         //[TestCase(KeyToExecutableEnum.OperaDeveloperEdition, FileToBeOpenedKind.Any)]
         //[TestCase(KeyToExecutableEnum.PaintDotNet, FileToBeOpenedKind.StillImage)]
         //[TestCase(KeyToExecutableEnum.Vivaldi, FileToBeOpenedKind.Any)]
         //[TestCase(KeyToExecutableEnum.XamarinStudio, FileToBeOpenedKind.Any)]
-        //[TestCase(KeyToExecutableEnum.XMLSpy, FileToBeOpenedKind.Xml)]
 
         //TBA
+        //[TestCase(KeyToExecutableEnum.TreeSizeFree, ArtefactToOpen.Any)]//"C:\Program Files (x86)\JAM Software\TreeSize Free\TreeSizeFree.exe"
         //[TestCase(KeyToExecutableEnum.VS2012, FileToBeOpenedKind.Code)]
         //[TestCase(KeyToExecutableEnum.VS2013, FileToBeOpenedKind.Code)]
         //[TestCase(KeyToExecutableEnum.VS2015, FileToBeOpenedKind.Code)]

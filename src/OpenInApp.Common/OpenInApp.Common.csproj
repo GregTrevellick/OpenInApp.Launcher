@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\ActualPathToExeHelper.cs" />
+    <Compile Include="Helpers\Dtos\ArtefactToOpen.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\KeyToExecutable.cs" />
     <Compile Include="Helpers\Dtos\ActualPathToExeDto.cs" />

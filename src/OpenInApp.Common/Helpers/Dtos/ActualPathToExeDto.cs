@@ -4,6 +4,7 @@ namespace OpenInApp.Common.Helpers.Dtos
 {
     public class ActualPathToExeDto
     {
+        //public ArtefactToOpen ArtefactToOpen { get; set; }
         public IEnumerable<string> DefaultTypicalFileExtensions { get; set; }
         public string ExecutableFileToBrowseFor { get; set; }
         public InitialFolderType InitialFolderType { get; set; }//gregtt do we always look in \ProgFiles anyway, effectively making this redundant ?
