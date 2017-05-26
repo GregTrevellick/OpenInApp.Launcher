@@ -9,7 +9,7 @@ namespace OpenInApp.Common.Helpers
         {
             var actualPathToExeDto = new ActualPathToExeDto
             {
-                //ArtefactToOpen = ArtefactToOpen.File,
+                ArtefactToOpen = ArtefactToOpen.File,
                 DefaultTypicalFileExtensions = new List<string> { "*" },
                 ExecutableFileToBrowseFor = keyToExecutableEnum.Description(),
                 InitialFolderType = InitialFolderType.ProgramFilesX86,
@@ -209,10 +209,10 @@ namespace OpenInApp.Common.Helpers
 	                    #endregion
                     };
                     break;
-                //case KeyToExecutableEnum.TreeSizeFree:
-                //    actualPathToExeDto.ArtefactToOpen = ArtefactToOpen.Folder;
-                //    actualPathToExeDto.SecondaryFilePathSegment = @"TreeSize Free"; //@"JAM Software\TreeSize Free";
-                //    break;
+                case KeyToExecutableEnum.TreeSizeFree:
+                    actualPathToExeDto.ArtefactToOpen = ArtefactToOpen.Folder;
+                    actualPathToExeDto.SecondaryFilePathSegment = @"TreeSize Free"; //@"JAM Software\TreeSize Free";
+                    break;
                 case KeyToExecutableEnum.Vivaldi:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Vivaldi\Application";
                     actualPathToExeDto.InitialFolderType = InitialFolderType.LocalApplicationData;

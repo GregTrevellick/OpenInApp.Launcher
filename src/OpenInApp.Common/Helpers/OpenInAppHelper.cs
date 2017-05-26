@@ -19,9 +19,12 @@ namespace OpenInApp.Common.Helpers
         /// <param name="executableFullPath">The full path to the executable.</param>
         /// <param name="separateProcessPerFileToBeOpened">Whether or not to start a single process or multiple processes for the actual files to be opened.</param> 
         /// <param name="useShellExecute">Whether or not to use shell execution or execute via operating system.</param>
-        public static void InvokeCommand(IEnumerable<string> actualFilesToBeOpened, string executableFullPath, bool separateProcessPerFileToBeOpened, bool useShellExecute
-            //, ArtefactToOpen artefactToOpen
-            )
+        public static void InvokeCommand(
+            IEnumerable<string> actualFilesToBeOpened, 
+            string executableFullPath, 
+            bool separateProcessPerFileToBeOpened, 
+            bool useShellExecute,
+            ArtefactToOpen artefactToOpen)
         {
             string fileName;
             string workingDirectory = string.Empty;
@@ -36,15 +39,16 @@ namespace OpenInApp.Common.Helpers
                 fileName = executableFullPath;
             }
 
-            //if (artefactToOpen == ArtefactToOpen.Folder)
-            //{
-            //    //strip filename from the path
-            //}
-
             if (separateProcessPerFileToBeOpened)
             {
                 foreach (var actualFileToBeOpened in actualFilesToBeOpened)
                 {
+
+                    if (artefactToOpen == ArtefactToOpen.Folder)
+                    {
+                        //actualFileToBeOpened = actualFileToBeOpened.WithoutFileName;
+                    }
+
                     var argument = GetSingleArgument(actualFileToBeOpened);
                     InvokeProcess(argument, fileName, useShellExecute, workingDirectory);
                 }

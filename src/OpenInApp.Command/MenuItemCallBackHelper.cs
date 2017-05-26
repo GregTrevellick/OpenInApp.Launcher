@@ -77,9 +77,11 @@ namespace OpenInApp.Command
                                 }
                                 if (proceedToExecute)
                                 {
-                                    OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, dto.ActualPathToExe, dto.SeparateProcessPerFileToBeOpened, dto.UseShellExecute
-                                        //, dto.ObjectToOpenKind
-                                        );
+                                    OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, 
+                                        dto.ActualPathToExe, 
+                                        dto.SeparateProcessPerFileToBeOpened, 
+                                        dto.UseShellExecute,
+                                        dto.ArtefactToOpen);
                                 }
                             }
                         }

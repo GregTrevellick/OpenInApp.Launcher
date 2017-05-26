@@ -8,9 +8,9 @@ namespace OpenInGregtGregt.Helpers
 {
     public class ConstantsForApp 
     {
-        internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.MarkdownMonster;
+        internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.TreeSizeFree;//gregtgregt
         private static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
-        private const string KeyToExecutableConstant = KeyToExecutableString.MarkdownMonster;//"gregtgregt";
+        private const string KeyToExecutableConstant = KeyToExecutableString.TreeSizeFree;//gregtgregt
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
@@ -33,7 +33,7 @@ namespace OpenInGregtGregt.Helpers
             return new InvokeCommandCallBackDto
             {
                 ActualPathToExe = actualPathToExe,
-                //ArtefactToOpen = ActualPathToExeDto.ArtefactToOpen,
+                ArtefactToOpen = ActualPathToExeDto.ArtefactToOpen,
                 Caption = ConstantsForApp.Caption,
                 ExecutableFileToBrowseFor = ConstantsForApp.KeyToExecutableEnum.Description(),
                 FileQuantityWarningLimit = fileQuantityWarningLimit,

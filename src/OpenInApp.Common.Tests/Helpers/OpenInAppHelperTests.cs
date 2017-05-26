@@ -237,7 +237,12 @@ namespace OpenInApp.Common.Tests.Helpers
             var executableFullPath = GeneralOptionsHelper.GetActualPathToExe(keyToExecutableEnum);
 
             // Act
-            OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, executableFullPath, actualPathToExeDto.SeparateProcessPerFileToBeOpened, actualPathToExeDto.UseShellExecute);
+            OpenInAppHelper.InvokeCommand(
+                actualFilesToBeOpened,
+                executableFullPath, 
+                actualPathToExeDto.SeparateProcessPerFileToBeOpened, 
+                actualPathToExeDto.UseShellExecute,
+                actualPathToExeDto.ArtefactToOpen);
         }
     }
 }

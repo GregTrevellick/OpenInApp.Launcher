@@ -33,7 +33,7 @@ namespace OpenInAppAltovaXmlSpy.Helpers
             return new InvokeCommandCallBackDto
             {
                 ActualPathToExe = actualPathToExe,
-                //ArtefactToOpen = ActualPathToExeDto.ArtefactToOpen,
+                ArtefactToOpen = ActualPathToExeDto.ArtefactToOpen,
                 Caption = ConstantsForApp.Caption,
                 ExecutableFileToBrowseFor = ConstantsForApp.KeyToExecutableEnum.Description(),
                 FileQuantityWarningLimit = fileQuantityWarningLimit,
