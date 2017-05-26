@@ -15,6 +15,7 @@ gulp.task('OpenInMarkdownMonster', function () { return OIAConcat('OpenInMarkdow
 gulp.task('OpenInOpera', function () { return OIAConcat('OpenInOpera', 'Opera') });
 gulp.task('OpenInOperaDeveloper', function () { return OIAConcat('OpenInOperaDeveloper', 'Opera Developer') });
 gulp.task('OpenInPaintDotNet', function () { return OIAConcat('OpenInPaintDotNet', 'paint.net') });
+gulp.task('OpenInTreeSizeFree', function () { return OIAConcat('OpenInTreeSizeFree', 'TreeSize Free') });
 gulp.task('OpenInVivaldi', function () { return OIAConcat('OpenInVivaldi', 'Vivaldi Web Browser') });
 gulp.task('OpenInVS2012', function () { return OIAConcat('OpenInVS2012', 'Visual Studio 2012') });
 gulp.task('OpenInVS2013', function () { return OIAConcat('OpenInVS2013', 'Visual Studio 2013') });
@@ -36,6 +37,7 @@ gulp.task('default',
     , 'OpenInOpera'
     , 'OpenInOperaDeveloper'
     , 'OpenInPaintDotNet'
+    , 'OpenInTreeSizeFree'
     , 'OpenInVivaldi'
     , 'OpenInVS2012'
     , 'OpenInVS2013'
