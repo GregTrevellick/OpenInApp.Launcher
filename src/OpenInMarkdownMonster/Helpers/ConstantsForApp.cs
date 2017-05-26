@@ -19,7 +19,7 @@ namespace OpenInAppMarkdownMonster.Helpers
 		internal static string Caption = Vsix.Name + " " + Vsix.Version;
 		internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableConstant;
 		internal static bool SeparateProcessPerFileToBeOpened = true;
-		internal static bool UseShellExecute = true;
+	    internal static bool UseShellExecute = ActualPathToExeDto.UseShellExecute;
 
         internal InvokeCommandCallBackDto GetInvokeCommandCallBackDto(
            string actualPathToExe,
@@ -41,7 +41,7 @@ namespace OpenInAppMarkdownMonster.Helpers
                 ServiceProvider = serviceProvider,
                 SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,
                 TypicalFileExtensions = typicalFileExtensions,
-                UseShellExecute = ConstantsForApp.UseShellExecute
+                UseShellExecute = UseShellExecute
             };
         }
     }
