@@ -42,7 +42,7 @@ namespace OpenInVS2017Professional.Helpers
                 ServiceProvider = serviceProvider,
                 SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,
                 TypicalFileExtensions = typicalFileExtensions,
-                UseShellExecute = ConstantsForApp.UseShellExecute
+                UseShellExecute = UseShellExecute
             };
         }
     }

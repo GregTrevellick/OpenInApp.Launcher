@@ -42,7 +42,7 @@ namespace OpenInVS2015.Helpers
                 ServiceProvider = serviceProvider,
                 SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,
                 TypicalFileExtensions = typicalFileExtensions,
-                UseShellExecute = ConstantsForApp.UseShellExecute
+                UseShellExecute = UseShellExecute
             };
         }
     }

@@ -42,7 +42,7 @@ namespace OpenInXamarinStudio.Helpers
                 ServiceProvider = serviceProvider,
                 SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,
                 TypicalFileExtensions = typicalFileExtensions,
-                UseShellExecute = ConstantsForApp.UseShellExecute
+                UseShellExecute = UseShellExecute
             };
         }
     }
