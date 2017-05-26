@@ -56,6 +56,8 @@
     <None Include="OpenInOperaDeveloper\ReadMeHeader.md" />
     <None Include="OpenInOpera\README.md" />
     <None Include="OpenInOpera\ReadMeHeader.md" />
+    <None Include="OpenInTreeSizeFree\README.md" />
+    <None Include="OpenInTreeSizeFree\ReadMeHeader.md" />
     <None Include="OpenInVivaldi\README.md" />
     <None Include="OpenInVivaldi\ReadMeHeader.md" />
     <None Include="OpenInXamarinStudio\README.md" />
@@ -120,6 +122,9 @@
     <Content Include="OpenInPaintDotNet\ThirdPartyLogo.png" />
     <Content Include="OpenInAbracadabra\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInAbracadabra\ThirdPartyLogo.png" />
+    <Content Include="OpenInTreeSizeFree\ReadMeScreenShot_CodeEditorWindow.png" />
+    <Content Include="OpenInTreeSizeFree\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInTreeSizeFree\ThirdPartyLogo.png" />
     <Content Include="OpenInVivaldi\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInVivaldi\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInVivaldi\ThirdPartyLogo.png" />
