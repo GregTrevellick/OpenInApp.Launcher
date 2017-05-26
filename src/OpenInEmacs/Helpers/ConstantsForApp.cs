@@ -34,7 +34,7 @@ namespace OpenInEmacs.Helpers
             {
                 ActualPathToExe = actualPathToExe,
                 ArtefactToOpen = ActualPathToExeDto.ArtefactToOpen,
-                Caption = ConstantsForApp.Caption,
+                Caption = Caption,
                 ExecutableFileToBrowseFor = ConstantsForApp.KeyToExecutableEnum.Description(),
                 FileQuantityWarningLimit = fileQuantityWarningLimit,
                 IsFromSolutionExplorer = isFromSolutionExplorer,
