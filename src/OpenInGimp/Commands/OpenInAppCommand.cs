@@ -78,21 +78,17 @@ namespace OpenInAppGimp.Commands
         {
             var menuItemCallBackHelper = new MenuItemCallBackHelper();
 
-            var dto = new InvokeCommandCallBackDto
-            {
-                ActualPathToExe = VSPackage.Options.ActualPathToExe,
-                Caption = ConstantsForApp.Caption,
-                ExecutableFileToBrowseFor = ConstantsForApp.KeyToExecutableEnum.Description(),
-                FileQuantityWarningLimit = VSPackage.Options.FileQuantityWarningLimit,
-                IsFromSolutionExplorer = isFromSolutionExplorer,
-                SeparateProcessPerFileToBeOpened = ConstantsForApp.SeparateProcessPerFileToBeOpened,
-                ServiceProvider = ServiceProvider,
-                SuppressTypicalFileExtensionsWarning = VSPackage.Options.SuppressTypicalFileExtensionsWarning,
-                TypicalFileExtensions = VSPackage.Options.TypicalFileExtensions,
-                UseShellExecute = ConstantsForApp.UseShellExecute
-            };
+            var constantsForApp = new ConstantsForApp();
 
-            var persistOptionsDto = menuItemCallBackHelper.InvokeCommandCallBack(dto);
+            var invokeCommandCallBackDto = constantsForApp.GetInvokeCommandCallBackDto(
+                VSPackage.Options.ActualPathToExe,
+                VSPackage.Options.FileQuantityWarningLimit,
+                isFromSolutionExplorer,
+                ServiceProvider,
+                VSPackage.Options.SuppressTypicalFileExtensionsWarning,
+                VSPackage.Options.TypicalFileExtensions);
+
+            var persistOptionsDto = menuItemCallBackHelper.InvokeCommandCallBack(invokeCommandCallBackDto);
 
             if (persistOptionsDto.Persist)
             {
