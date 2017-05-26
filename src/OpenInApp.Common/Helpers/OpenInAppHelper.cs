@@ -66,8 +66,11 @@ namespace OpenInApp.Common.Helpers
 
             if (artefactToOpen == ArtefactToOpen.Folder)
             {
-                var actualFileNameToBeOpened = actualFileToBeOpened.LastPieceOfThePie;
-                actualArtefactToBeOpened = actualArtefactToBeOpened.Replace(actualFileNameToBeOpened, string.Empty);
+                var fileName = Path.GetFileName(actualFileToBeOpened);
+                if (fileName != null)
+                {
+                    actualArtefactToBeOpened = actualArtefactToBeOpened.Replace(fileName, string.Empty);
+                }
             }
 
             return actualArtefactToBeOpened;
