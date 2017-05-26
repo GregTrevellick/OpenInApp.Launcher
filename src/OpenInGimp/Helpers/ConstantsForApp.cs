@@ -1,5 +1,7 @@
+using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
 using OpenInApp.Common.Helpers.Dtos;
+using System;
 using System.Collections.Generic;
 
 namespace OpenInAppGimp.Helpers
