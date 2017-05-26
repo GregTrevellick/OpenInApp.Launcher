@@ -43,14 +43,7 @@ namespace OpenInApp.Common.Helpers
             {
                 foreach (var actualFileToBeOpened in actualFilesToBeOpened)
                 {
-                    var actualArtefactToBeOpened = actualFileToBeOpened;
-
-                    if (artefactToOpen == ArtefactToOpen.Folder)
-                    {
-                        var actualFileNameToBeOpened = "Class3.cs";
-                        actualArtefactToBeOpened = actualArtefactToBeOpened.TrimEnd(actualFileNameToBeOpened);
-                    }
-
+                    var actualArtefactToBeOpened = GetActualArtefactToBeOpened(artefactToOpen, actualFileToBeOpened);
                     var argument = GetSingleArgument(actualArtefactToBeOpened);
                     InvokeProcess(argument, fileName, useShellExecute, workingDirectory);
                 }
@@ -58,22 +51,26 @@ namespace OpenInApp.Common.Helpers
             else
             {
                 var arguments = " ";
-
                 foreach (var actualFileToBeOpened in actualFilesToBeOpened)
                 {
-                    var actualArtefactToBeOpened = actualFileToBeOpened;
-
-                    if (artefactToOpen == ArtefactToOpen.Folder)
-                    {
-                        var actualFileNameToBeOpened = "Class3.cs";
-                        actualArtefactToBeOpened = actualArtefactToBeOpened.TrimEnd(actualFileNameToBeOpened);
-                    }
-
+                    var actualArtefactToBeOpened = GetActualArtefactToBeOpened(artefactToOpen, actualFileToBeOpened);
                     arguments += GetSingleArgument(actualArtefactToBeOpened);
                 }
-
                 InvokeProcess(arguments, fileName, useShellExecute, workingDirectory);
             }
+        }
+
+        private static string GetActualArtefactToBeOpened(ArtefactToOpen artefactToOpen, string actualFileToBeOpened)
+        {
+            var actualArtefactToBeOpened = actualFileToBeOpened;
+
+            if (artefactToOpen == ArtefactToOpen.Folder)
+            {
+                var actualFileNameToBeOpened = actualFileToBeOpened.LastPieceOfThePie;
+                actualArtefactToBeOpened = actualArtefactToBeOpened.Replace(actualFileNameToBeOpened, string.Empty);
+            }
+
+            return actualArtefactToBeOpened;
         }
 
         private static string GetSingleArgument(string argument)

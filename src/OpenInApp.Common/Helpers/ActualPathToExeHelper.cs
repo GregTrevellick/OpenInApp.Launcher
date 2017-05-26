@@ -21,6 +21,7 @@ namespace OpenInApp.Common.Helpers
             switch (keyToExecutableEnum)
             {
                 //gregtt emacs, not found message says cannot find file ""
+
                 case KeyToExecutableEnum.AltovaXMLSpy:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Altova\XMLSpy2016";
                     actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;
@@ -211,7 +212,7 @@ namespace OpenInApp.Common.Helpers
                     break;
                 case KeyToExecutableEnum.TreeSizeFree:
                     actualPathToExeDto.ArtefactToOpen = ArtefactToOpen.Folder;
-                    actualPathToExeDto.SecondaryFilePathSegment = @"TreeSize Free"; //@"JAM Software\TreeSize Free";
+                    actualPathToExeDto.SecondaryFilePathSegment = @"JAM Software\TreeSize Free";
                     break;
                 case KeyToExecutableEnum.Vivaldi:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Vivaldi\Application";
