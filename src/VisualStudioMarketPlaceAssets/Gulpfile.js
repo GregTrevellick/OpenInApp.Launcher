@@ -6,7 +6,7 @@ var replace = require('gulp-replace');
 
 
 gulp.task('OpenInAltovaXmlSpy', function () { return OIAConcat('OpenInAltovaXmlSpy', 'Altova XMLSpy XML Editor') });
-gulp.task('OpenInApp.Template', function () { return OIAConcat('OpenInApp.Template', 'GregtGregt') });
+gulp.task('OpenInApp.Template', function () { return OIAConcat('OpenInApp.Template', 'Abracadabra') });
 gulp.task('OpenInChromeCanary', function () { return OIAConcat('OpenInChromeCanary', 'Chrome Canary') });
 gulp.task('OpenInEmacs', function () { return OIAConcat('OpenInEmacs', 'Emacs') });
 gulp.task('OpenInFirefoxDeveloperEdition', function () { return OIAConcat('OpenInFirefoxDeveloperEdition', 'Firefox Developer Edition') });

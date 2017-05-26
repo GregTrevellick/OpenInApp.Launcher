@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using OpenInApp.Common.Helpers;
 using System.Collections.Generic;
+using OpenInApp.Common.Helpers.Dtos;
 
 namespace OpenInApp.Common.Tests.Helpers
 {
@@ -160,7 +161,7 @@ namespace OpenInApp.Common.Tests.Helpers
 
         private void Act(IEnumerable<string> actualFilesToBeOpened, string executableFullPath, bool separateProcessPerFileToBeOpened, bool useShellExecute)
         {
-                OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
+                OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute, ArtefactToOpen.File);
         }
 
 

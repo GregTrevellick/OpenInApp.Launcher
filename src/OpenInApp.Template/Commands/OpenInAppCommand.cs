@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
-using OpenInGregtGregt.Helpers;
+using OpenInAbracadabra.Helpers;
 using System;
 using System.ComponentModel.Design;
 
-namespace OpenInGregtGregt.Commands
+namespace OpenInAbracadabra.Commands
 {
     internal sealed class OpenInAppCommand
     {

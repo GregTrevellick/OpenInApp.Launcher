@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
-using OpenInGregtGregt.Helpers;
+using OpenInAbracadabra.Helpers;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace OpenInGregtGregt.Options.GregtGregt
+namespace OpenInAbracadabra.Options.Abracadabra
 {
     public class GeneralOptions : DialogPage
     {

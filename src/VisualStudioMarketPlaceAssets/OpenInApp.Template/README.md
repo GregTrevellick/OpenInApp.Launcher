@@ -1,10 +1,10 @@
-[ThirdPartyAppHomePage]: http://www.GregtGregt.net/
+[ThirdPartyAppHomePage]: http://www.Abracadabra.net/
 <!-- Logo source = TODO -->
-[VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInGregtGregt.svg
-[VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInGregtGregt
-[VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInGregtGregt#review-details
+[VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInAbracadabra.svg
+[VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInAbracadabra
+[VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInAbracadabra#review-details
 
-Open multiple files simultaneously in [GregtGregt][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
+Open multiple files simultaneously in [Abracadabra][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 If you like this ***free*** extension, please give it a [review][VSMarketplaceReviewsUrl].
 
@@ -14,7 +14,7 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 
 ## Features
 
-- Open multiple files simultaneously in [GregtGregt][ThirdPartyAppHomePage].
+- Open multiple files simultaneously in [Abracadabra][ThirdPartyAppHomePage].
 
 - Within the code editor window
   ![](ReadMeScreenShot_CodeEditorWindow.png)
@@ -26,11 +26,11 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 
   ![](../Generic_ReadMeScreenShot_WarningLargeQuantity.png)
 
-- Warning if attempting to open one or more file types whose extension is not typically associated with [GregtGregt][ThirdPartyAppHomePage]. The list of typical file extensions is configurable in Tools > Options.
+- Warning if attempting to open one or more file types whose extension is not typically associated with [Abracadabra][ThirdPartyAppHomePage]. The list of typical file extensions is configurable in Tools > Options.
 
   ![](../Generic_ReadMeScreenShot_WarningNonTypical.png)
 
-- Option to supress the warning message if attempting to open a file whose extension is not typically associated with [GregtGregt][ThirdPartyAppHomePage].
+- Option to supress the warning message if attempting to open a file whose extension is not typically associated with [Abracadabra][ThirdPartyAppHomePage].
 
   ![](../Generic_ReadMeScreenShot_OptionsGeneral.png)
 

@@ -30,8 +30,8 @@
     <ProjectGuid>{ED1F9EAE-6ADA-457E-BD47-650DD5B8304E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenInGregtGregt</RootNamespace>
-    <AssemblyName>OpenInGregtGregt</AssemblyName>
+    <RootNamespace>OpenInAbracadabra</RootNamespace>
+    <AssemblyName>OpenInAbracadabra</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>

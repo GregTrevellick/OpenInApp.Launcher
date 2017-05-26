@@ -4,13 +4,13 @@ using OpenInApp.Common.Helpers.Dtos;
 using System;
 using System.Collections.Generic;
 
-namespace OpenInGregtGregt.Helpers
+namespace OpenInAbracadabra.Helpers
 {
     public class ConstantsForApp 
     {
-        internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.TreeSizeFree;//gregtgregt
+        internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.TreeSizeFree;//Abracadabra
         private static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
-        private const string KeyToExecutableConstant = KeyToExecutableString.TreeSizeFree;//gregtgregt
+        private const string KeyToExecutableConstant = KeyToExecutableString.TreeSizeFree;//Abracadabra
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
