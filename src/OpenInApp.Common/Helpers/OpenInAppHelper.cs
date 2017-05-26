@@ -43,13 +43,15 @@ namespace OpenInApp.Common.Helpers
             {
                 foreach (var actualFileToBeOpened in actualFilesToBeOpened)
                 {
+                    var actualArtefactToBeOpened = actualFileToBeOpened;
 
                     if (artefactToOpen == ArtefactToOpen.Folder)
                     {
-                        //actualFileToBeOpened = actualFileToBeOpened.WithoutFileName;
+                        var actualFileNameToBeOpened = "Class3.cs";
+                        actualArtefactToBeOpened = actualArtefactToBeOpened.TrimEnd(actualFileNameToBeOpened);
                     }
 
-                    var argument = GetSingleArgument(actualFileToBeOpened);
+                    var argument = GetSingleArgument(actualArtefactToBeOpened);
                     InvokeProcess(argument, fileName, useShellExecute, workingDirectory);
                 }
             }
@@ -59,7 +61,15 @@ namespace OpenInApp.Common.Helpers
 
                 foreach (var actualFileToBeOpened in actualFilesToBeOpened)
                 {
-                    arguments += GetSingleArgument(actualFileToBeOpened);
+                    var actualArtefactToBeOpened = actualFileToBeOpened;
+
+                    if (artefactToOpen == ArtefactToOpen.Folder)
+                    {
+                        var actualFileNameToBeOpened = "Class3.cs";
+                        actualArtefactToBeOpened = actualArtefactToBeOpened.TrimEnd(actualFileNameToBeOpened);
+                    }
+
+                    arguments += GetSingleArgument(actualArtefactToBeOpened);
                 }
 
                 InvokeProcess(arguments, fileName, useShellExecute, workingDirectory);
