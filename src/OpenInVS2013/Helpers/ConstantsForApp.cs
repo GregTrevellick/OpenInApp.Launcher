@@ -38,7 +38,7 @@ namespace OpenInVS2013.Helpers
                 ExecutableFileToBrowseFor = ConstantsForApp.KeyToExecutableEnum.Description(),
                 FileQuantityWarningLimit = fileQuantityWarningLimit,
                 IsFromSolutionExplorer = isFromSolutionExplorer,
-                SeparateProcessPerFileToBeOpened = ConstantsForApp.SeparateProcessPerFileToBeOpened,
+                SeparateProcessPerFileToBeOpened = SeparateProcessPerFileToBeOpened,
                 ServiceProvider = serviceProvider,
                 SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,
                 TypicalFileExtensions = typicalFileExtensions,
