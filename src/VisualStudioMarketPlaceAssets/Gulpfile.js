@@ -4,9 +4,8 @@ var bower = require('gulp-bower');
 var concat = require('gulp-concat');
 var replace = require('gulp-replace');
 
-
+gulp.task('OpenInAbracadabra', function () { return OIAConcat('OpenInAbracadabra', 'Abracadabra') });
 gulp.task('OpenInAltovaXmlSpy', function () { return OIAConcat('OpenInAltovaXmlSpy', 'Altova XMLSpy XML Editor') });
-gulp.task('OpenInApp.Template', function () { return OIAConcat('OpenInApp.Template', 'Abracadabra') });
 gulp.task('OpenInChromeCanary', function () { return OIAConcat('OpenInChromeCanary', 'Chrome Canary') });
 gulp.task('OpenInEmacs', function () { return OIAConcat('OpenInEmacs', 'Emacs') });
 gulp.task('OpenInFirefoxDeveloperEdition', function () { return OIAConcat('OpenInFirefoxDeveloperEdition', 'Firefox Developer Edition') });
@@ -26,8 +25,8 @@ gulp.task('OpenInVS2017Professional', function () { return OIAConcat('OpenInVS20
 gulp.task('OpenInXamarinStudio', function () { return OIAConcat('OpenInXamarinStudio', 'Xamarin Studio') });
 
 gulp.task('default',
-    [ 'OpenInAltovaXmlSpy'
-    , 'OpenInApp.Template'
+    [ 'OpenInAbracadabra'
+    , 'OpenInAltovaXmlSpy'
     , 'OpenInChromeCanary'
     , 'OpenInEmacs'
     , 'OpenInFirefoxDeveloperEdition'

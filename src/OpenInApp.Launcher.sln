@@ -28,7 +28,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInMarkdownMonster", "Op
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInPaintDotNet", "OpenInPaintDotNet\OpenInPaintDotNet.csproj", "{0B1434B0-FA30-469C-8E25-BE99F2D6AE01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Template", "OpenInApp.Template\OpenInApp.Template.csproj", "{ED1F9EAE-6ADA-457E-BD47-650DD5B8304E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInAbracadabra", "OpenInAbracadabra\OpenInAbracadabra.csproj", "{ED1F9EAE-6ADA-457E-BD47-650DD5B8304E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2012", "OpenInVS2012\OpenInVS2012.csproj", "{9090BD01-3E3D-4117-B827-B56AF964DBD1}"
 EndProject
