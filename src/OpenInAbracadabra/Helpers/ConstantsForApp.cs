@@ -8,9 +8,9 @@ namespace OpenInAbracadabra.Helpers
 {
     public class ConstantsForApp 
     {
-        internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.TreeSizeFree;//Abracadabra
+        internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.Abracadabra;
         private static ActualPathToExeDto ActualPathToExeDto = new ActualPathToExeHelper().GetActualPathToExeDto(KeyToExecutableEnum);
-        private const string KeyToExecutableConstant = KeyToExecutableString.TreeSizeFree;//Abracadabra
+        private const string KeyToExecutableConstant = KeyToExecutableString.Abracadabra;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
         {
