@@ -21,5 +21,29 @@ namespace OpenInXamarinStudio.Helpers
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableConstant;
         internal static bool SeparateProcessPerFileToBeOpened = ActualPathToExeDto.SeparateProcessPerFileToBeOpened;
         internal static bool UseShellExecute = ActualPathToExeDto.UseShellExecute;
+
+        internal InvokeCommandCallBackDto GetInvokeCommandCallBackDto(
+           string actualPathToExe,
+           string fileQuantityWarningLimit,
+           bool isFromSolutionExplorer,
+           IServiceProvider serviceProvider,
+           bool suppressTypicalFileExtensionsWarning,
+           string typicalFileExtensions)
+        {
+            return new InvokeCommandCallBackDto
+            {
+                ActualPathToExe = actualPathToExe,
+                //ArtefactToOpen = ActualPathToExeDto.ArtefactToOpen,
+                Caption = ConstantsForApp.Caption,
+                ExecutableFileToBrowseFor = ConstantsForApp.KeyToExecutableEnum.Description(),
+                FileQuantityWarningLimit = fileQuantityWarningLimit,
+                IsFromSolutionExplorer = isFromSolutionExplorer,
+                SeparateProcessPerFileToBeOpened = ConstantsForApp.SeparateProcessPerFileToBeOpened,
+                ServiceProvider = serviceProvider,
+                SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,
+                TypicalFileExtensions = typicalFileExtensions,
+                UseShellExecute = ConstantsForApp.UseShellExecute
+            };
+        }
     }
 }
