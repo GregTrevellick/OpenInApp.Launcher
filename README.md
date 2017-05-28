@@ -1,6 +1,5 @@
 [VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInEmacs.svg
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
-[VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
 
 # Open In App Launcher
 
@@ -13,7 +12,7 @@ The [Visual Studio][VisualStudioURL] extensions are officially available at the 
 
 ![](Generic_ReadMeAnimatedUsage.gif)
 
-If you like any of these ***free*** extensions, please give them a [review][VSMarketplaceReviewsUrl].
+If you like any of these ***free*** extensions, please give them a [review][VSMarketplaceUrl].
 
 Contributions to this project are welcome by raising an [Issue][GitHubRepoIssuesURL] or submitting a [Pull Request][GitHubRepoPullRequestsURL].
 
