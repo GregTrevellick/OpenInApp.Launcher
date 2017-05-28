@@ -1,5 +1,4 @@
 [ThirdPartyAppHomePage]: https://www.gimp.org/
-[VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninGIMP-GNUImageManipulationProgram
 
 Open multiple files simultaneously in [GIMP][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 

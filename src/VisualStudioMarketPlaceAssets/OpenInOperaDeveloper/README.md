@@ -1,5 +1,4 @@
 [ThirdPartyAppHomePage]: http://www.opera.com/computer/beta
-[VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInOperaDeveloper
 
 Open multiple files simultaneously in [Opera Developer][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 

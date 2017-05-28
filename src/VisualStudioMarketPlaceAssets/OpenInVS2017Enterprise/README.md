@@ -1,5 +1,4 @@
 [ThirdPartyAppHomePage]: https://www.visualstudio.com/vs/
-[VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVisualStudio2017Enterprise
 
 Open multiple files simultaneously in [Visual Studio 2017 Enterprise Edition][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 

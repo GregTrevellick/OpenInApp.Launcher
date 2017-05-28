@@ -1,5 +1,4 @@
 [ThirdPartyAppHomePage]: https://www.gnu.org/software/emacs/
-[VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInEmacs
 
 Open multiple files simultaneously in [Emacs][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 

@@ -1,5 +1,4 @@
 [ThirdPartyAppHomePage]: https://www.google.com/chrome/browser/canary.html
-[VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInChromeCanary
 
 Open multiple files simultaneously in [Chrome Canary][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 

@@ -1,5 +1,4 @@
 [ThirdPartyAppHomePage]: http://www.altova.com/xml-editor/
-[VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInAltovaXmlSpy
 
 Open multiple files simultaneously in [Altova XMLSpy XML Editor][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 

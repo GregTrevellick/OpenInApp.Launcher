@@ -1,5 +1,4 @@
 [ThirdPartyAppHomePage]: https://vivaldi.com/
-[VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVivaldi
 
 Open multiple files simultaneously in [Vivaldi Web Browser][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
