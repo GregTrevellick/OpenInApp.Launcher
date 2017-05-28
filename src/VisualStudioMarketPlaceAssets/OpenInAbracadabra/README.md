@@ -1,6 +1,5 @@
 [ThirdPartyAppHomePage]: http://www.Abracadabra.net/
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInAbracadabra
-[VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInAbracadabra#review-details
 
 Open multiple files simultaneously in [Abracadabra][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 

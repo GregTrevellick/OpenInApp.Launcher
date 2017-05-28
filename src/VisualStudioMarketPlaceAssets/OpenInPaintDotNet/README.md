@@ -1,6 +1,6 @@
 [ThirdPartyAppHomePage]: http://www.getpaint.net/
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninPaintNET
-[VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninPaintNET#review-details
+
 Open multiple files simultaneously in [paint.net][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 

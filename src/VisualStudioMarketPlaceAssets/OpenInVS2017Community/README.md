@@ -1,6 +1,6 @@
 [ThirdPartyAppHomePage]: https://www.visualstudio.com/vs/
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVisualStudio2017Community
-[VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVisualStudio2017Community#review-details
+
 Open multiple files simultaneously in [Visual Studio 2017 Community Edition][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 

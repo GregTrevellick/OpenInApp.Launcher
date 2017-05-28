@@ -1,6 +1,6 @@
 [ThirdPartyAppHomePage]: https://www.visualstudio.com/vs/
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVisualStudio2012
-[VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVisualStudio2012#review-details
+
 Open multiple files simultaneously in [Visual Studio 2012][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 

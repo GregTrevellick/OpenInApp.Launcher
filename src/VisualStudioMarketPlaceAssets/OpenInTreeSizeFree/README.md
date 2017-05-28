@@ -1,6 +1,6 @@
 [ThirdPartyAppHomePage]: https://www.jam-software.com/treesize_free/
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInTreeSizeFree
-[VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInTreeSizeFree#review-details
+
 Open multiple folders simultaneously in [TreeSize Free][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 
