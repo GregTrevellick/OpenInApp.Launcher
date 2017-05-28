@@ -121,7 +121,7 @@
     <value>Open path in TreeSize Free</value>
   </data>
   <data name="112" xml:space="preserve">
-    <value>Open multiple file paths simultaneously in TreeSize Free directly from Solution Explorer or Code Editor window.</value>
+    <value>Open multiple folders simultaneously in TreeSize Free directly from Solution Explorer or Code Editor window.</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="400" type="System.Resources.ResXFileRef, System.Windows.Forms">
