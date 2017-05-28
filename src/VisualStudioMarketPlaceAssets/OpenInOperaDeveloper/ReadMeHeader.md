@@ -1,5 +1,5 @@
 [ThirdPartyAppHomePage]: http://www.opera.com/computer/beta
-<!-- Logo source = TODO -->
+
 [VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInOperaDeveloper.svg
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInOperaDeveloper
 [VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInOperaDeveloper#review-details
