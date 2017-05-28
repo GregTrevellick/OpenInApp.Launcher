@@ -1,9 +1,6 @@
 [ThirdPartyAppHomePage]: https://www.jam-software.com/treesize_free/
-
-[VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInTreeSizeFree.svg
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInTreeSizeFree
 [VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInTreeSizeFree#review-details
-
 Open multiple files simultaneously in [TreeSize Free][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 If you like this ***free*** extension, please give it a [review][VSMarketplaceReviewsUrl].

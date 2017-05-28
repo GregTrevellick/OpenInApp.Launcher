@@ -1,11 +1,6 @@
 [ThirdPartyAppHomePage]: https://www.google.com/chrome/browser/canary.html
-
-[VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInChromeCanary.svg
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInChromeCanary
 [VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInChromeCanary#review-details
-
-# Open In Chrome Canary
-
 Open multiple files simultaneously in [Chrome Canary][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 If you like this ***free*** extension, please give it a [review][VSMarketplaceReviewsUrl].

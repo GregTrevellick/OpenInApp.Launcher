@@ -1,11 +1,6 @@
 [ThirdPartyAppHomePage]: https://vivaldi.com/
-
-[VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpeninVivaldi.svg
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVivaldi
 [VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVivaldi#review-details
-
-# Open In Vivaldi Web Browser
-
 Open multiple files simultaneously in [Vivaldi Web Browser][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 If you like this ***free*** extension, please give it a [review][VSMarketplaceReviewsUrl].
