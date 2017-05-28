@@ -56,7 +56,6 @@ function OIAConcat (appNam, appDesc) {
                 '1_Introduction_Folders.md',
                 '2_FreeReviews.md',
                 '3_Features_Folders.md',
-                '5_UseCases.md',
                 '6_Links.md'
             );
     }
@@ -66,7 +65,7 @@ function OIAConcat (appNam, appDesc) {
                 '2_FreeReviews.md',
                 '3_Features_Files.md',
                 '4_FileTypeWarnings.md',
-                '5_UseCases.md',
+                '5_UseCases_Files.md',
                 '6_Links.md'
             );
     }

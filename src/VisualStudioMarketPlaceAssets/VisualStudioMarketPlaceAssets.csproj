@@ -50,7 +50,7 @@
     <None Include="3_Features_Files.md" />
     <None Include="3_Features_Folders.md" />
     <None Include="4_FileTypeWarnings.md" />
-    <None Include="5_UseCases.md" />
+    <None Include="5_UseCases_Files.md" />
     <None Include="6_Links.md" />
     <None Include="OpenInChromeCanary\README.md" />
     <None Include="OpenInChromeCanary\ReadMeHeader.md" />
