@@ -17,7 +17,7 @@ namespace OpenInTreeSizeFree.Options.TreeSizeFree
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.TypicalFileExtensionsOptionLabel)]
         [Description(CommonConstants.TypicalFileExtensionsOptionDetailedDescription)]
-        public string TypicalFileExtensions 
+        internal string TypicalFileExtensions 
         {
             get
             {
@@ -40,7 +40,7 @@ namespace OpenInTreeSizeFree.Options.TreeSizeFree
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.SuppressTypicalFileExtensionsWarningOptionLabel)]
         [Description(CommonConstants.SuppressTypicalFileExtensionsWarningDetailedDescription)]
-        public bool SuppressTypicalFileExtensionsWarning { get; set; } = false;
+        internal bool SuppressTypicalFileExtensionsWarning { get; set; } = false;
 
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.FileQuantityWarningLimitOptionLabel)]

@@ -17,6 +17,7 @@ namespace OpenInAbracadabra.Options.Abracadabra
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.TypicalFileExtensionsOptionLabel)]
         [Description(CommonConstants.TypicalFileExtensionsOptionDetailedDescription)]
+        // Set to 'internal' to hide in Tools > Options for folder based apps
         public string TypicalFileExtensions 
         {
             get
@@ -40,6 +41,7 @@ namespace OpenInAbracadabra.Options.Abracadabra
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.SuppressTypicalFileExtensionsWarningOptionLabel)]
         [Description(CommonConstants.SuppressTypicalFileExtensionsWarningDetailedDescription)]
+        // Set to 'internal' to hide in Tools > Options for folder based apps
         public bool SuppressTypicalFileExtensionsWarning { get; set; } = false;
 
         [Category(CommonConstants.CategorySubLevel)]
