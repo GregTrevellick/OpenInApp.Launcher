@@ -48,11 +48,11 @@ gulp.task('default',
     , 'OpenInXamarinStudio']);
 
 function OIAConcat (appNam, appDesc) { 
-    debugger;
-    var abc = [appNam + '/ReadMeHeader.md'];
+
+    var filesToConcat = [appNam + '/ReadMeHeader.md'];
 
     if (appNam == 'OpenInTreeSizeFree') {
-        abc.push(
+        filesToConcat.push(
                 '1_Introduction_Folders.md',
                 '2_FreeReviews.md',
                 '3_Features_Folders.md',
@@ -61,7 +61,7 @@ function OIAConcat (appNam, appDesc) {
             );
     }
     else {
-        abc.push(           
+        filesToConcat.push(           
                 '1_Introduction_Files.md',
                 '2_FreeReviews.md',
                 '3_Features_Files.md',
@@ -72,7 +72,7 @@ function OIAConcat (appNam, appDesc) {
     }
 
     return gulp
-        .src(abc)
+        .src(filesToConcat)
         .pipe(concat(appNam + '/README.md'))
         .pipe(replace('[ThirdPartyApp]', '[' + appDesc + ']'))
         .pipe(gulp.dest('.'));
