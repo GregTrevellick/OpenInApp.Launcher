@@ -44,6 +44,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="1_Introduction_Files.md" />
+    <None Include="1_Introduction_Folders.md" />
+    <None Include="2_FreeReviews.md" />
+    <None Include="3_Features_Files.md" />
+    <None Include="3_Features_Folders.md" />
+    <None Include="4_FileTypeWarnings.md" />
+    <None Include="5_UseCases.md" />
+    <None Include="6_Links.md" />
     <None Include="OpenInChromeCanary\README.md" />
     <None Include="OpenInChromeCanary\ReadMeHeader.md" />
     <None Include="OpenInEmacs\README.md" />
@@ -62,7 +70,6 @@
     <None Include="OpenInVivaldi\ReadMeHeader.md" />
     <None Include="OpenInXamarinStudio\README.md" />
     <None Include="OpenInXamarinStudio\ReadMeHeader.md" />
-    <None Include="VsmpCommonDescription.md" />
     <None Include="package.json" />
     <None Include="OpenInAltovaXmlSpy\README.md" />
     <None Include="OpenInAltovaXmlSpy\ReadMeHeader.md" />

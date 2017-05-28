@@ -3,11 +3,13 @@
 [VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVisualStudio2012#review-details
 Open multiple files simultaneously in [Visual Studio 2012][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
+
 If you like this ***free*** extension, please give it a [review][VSMarketplaceReviewsUrl].
 
 Similar "Open In" VS extensions can be found [here](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
 
 [![][ThirdPartyAppOfficialLogo]][ThirdPartyAppHomePage]
+
 
 ## Features
 
@@ -23,6 +25,7 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 
   ![](../Generic_ReadMeScreenShot_WarningLargeQuantity.png)
 
+
 - Warning if attempting to open one or more file types whose extension is not typically associated with [Visual Studio 2012][ThirdPartyAppHomePage]. The list of typical file extensions is configurable in Tools > Options.
 
   ![](../Generic_ReadMeScreenShot_WarningNonTypical.png)
@@ -30,6 +33,7 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 - Option to supress the warning message if attempting to open a file whose extension is not typically associated with [Visual Studio 2012][ThirdPartyAppHomePage].
 
   ![](../Generic_ReadMeScreenShot_OptionsGeneral.png)
+
 
 ## Use Cases
 
@@ -47,7 +51,6 @@ That said, there may be times when you wish to edit a file in an alternative edi
 
 - You are more familiar with a certain editor's features, or simply have a favourite editor.
 
-<!-- COPY END FOR VS GALLERY -->
 
 [ThirdPartyAppOfficialLogo]: ThirdPartyLogo.png
 [VisualStudioURL]: https://www.visualstudio.com/

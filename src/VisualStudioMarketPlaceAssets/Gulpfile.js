@@ -49,7 +49,14 @@ gulp.task('default',
 
 function OIAConcat (appNam, appDesc) { 
     return gulp
-        .src([appNam + '/ReadMeHeader.md', 'VsmpCommonDescription.md'])
+        .src([appNam + '/ReadMeHeader.md',
+            '1_Introduction_Files.md',
+            '2_FreeReviews.md',
+            '3_Features_Files.md',
+            '4_FileTypeWarnings.md',
+            '5_UseCases.md',
+            '6_Links.md'
+        ])
         .pipe(concat(appNam + '/README.md'))
         .pipe(replace('[ThirdPartyApp]', '[' + appDesc + ']'))
         .pipe(gulp.dest('.'));
