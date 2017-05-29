@@ -24,6 +24,7 @@ namespace OpenInApp.Common.Tests.Helpers
         [TestCase(KeyToExecutableEnum.OperaDeveloperEdition, @"C:\Program Files\Opera developer\launcher.exe")]
         [TestCase(KeyToExecutableEnum.PaintDotNet, @"C:\Program Files\Paint.NET\PaintDotNet.exe")]
         [TestCase(KeyToExecutableEnum.TreeSizeFree, @"C:\Program Files (x86)\JAM Software\TreeSize Free\TreeSizeFree.exe")]
+        [TestCase(KeyToExecutableEnum.TreeSizeProfessional, @"C:\Program Files (x86)\JAM Software\TreeSize\TreeSize.exe")]
         [TestCase(KeyToExecutableEnum.Vivaldi, OverrideAtTestExecutionTime)]
         [TestCase(KeyToExecutableEnum.VS2012, @"C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe")]
         [TestCase(KeyToExecutableEnum.VS2013, @"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe")]
