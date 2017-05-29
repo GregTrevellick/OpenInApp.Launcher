@@ -49,7 +49,7 @@ gulp.task('default',
 
 function OIAConcat (appNam, appDesc) { 
 
-    var filesToConcat = [appNam + '/ReadMeHeader.md'];
+    var filesToConcat = [appNam + '/0_Variables.md'];
 
     if (appNam == 'OpenInTreeSizeFree') {
         filesToConcat.push(
