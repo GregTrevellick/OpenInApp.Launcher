@@ -3,8 +3,9 @@
 These are the changes to each version that has been released in the Visual Studio Marketplace.
 
 ## 1.1.13
-**2017-05-28**
+**2017-05-dd**
 - [x] Addition of Open In TreeSize Free
+- [x] Addition of Open In TreeSize Professional
 
 ## 1.1.10
 **2017-05-22** 

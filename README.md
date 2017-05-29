@@ -38,6 +38,7 @@ Software License is available [here](/LICENSE.txt).
 [![Markdown Monster](src/VisualStudioMarketPlaceAssets/OpenInMSPaint/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninMSPaint)
 [![Markdown Monster](src/VisualStudioMarketPlaceAssets/OpenInXamarinStudio/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninXamarinStudio)
 [![TreeSize Free](src/VisualStudioMarketPlaceAssets/OpenInTreeSizeFree/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninTreeSizeFree)
+[![TreeSize Professional](src/VisualStudioMarketPlaceAssets/OpenInTreeSizeProfessional/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninTreeSizeProfessional)
 
 ## Legal
 

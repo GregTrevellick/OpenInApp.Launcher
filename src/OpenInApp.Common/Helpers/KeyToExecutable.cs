@@ -19,6 +19,7 @@ namespace OpenInApp.Common.Helpers
         public const string OperaDeveloperEdition = "launcher.exe";
         public const string PaintDotNet = "PaintDotNet.exe";
         public const string TreeSizeFree = "TreeSizeFree.exe";
+        public const string TreeSizeProfessional = "TreeSize.exe";
         public const string Vivaldi = "vivaldi.exe";
         public const string VS2012 = "devenv.exeVS2012";
         public const string VS2013 = "devenv.exeVS2013";
@@ -66,6 +67,9 @@ namespace OpenInApp.Common.Helpers
 
         [Description("TreeSizeFree.exe")]
         TreeSizeFree,
+
+        [Description("TreeSize.exe")]
+        TreeSizeProfessional,
 
         [Description("vivaldi.exe")]
         Vivaldi,

@@ -16,6 +16,7 @@ gulp.task('OpenInOpera', function () { return OIAConcat('OpenInOpera', 'Opera') 
 gulp.task('OpenInOperaDeveloper', function () { return OIAConcat('OpenInOperaDeveloper', 'Opera Developer') });
 gulp.task('OpenInPaintDotNet', function () { return OIAConcat('OpenInPaintDotNet', 'paint.net') });
 gulp.task('OpenInTreeSizeFree', function () { return OIAConcat('OpenInTreeSizeFree', 'TreeSize Free') });
+gulp.task('OpenInTreeSizeProfessional', function () { return OIAConcat('OpenInTreeSizeProfessional', 'TreeSize Professional') });
 gulp.task('OpenInVivaldi', function () { return OIAConcat('OpenInVivaldi', 'Vivaldi Web Browser') });
 gulp.task('OpenInVS2012', function () { return OIAConcat('OpenInVS2012', 'Visual Studio 2012') });
 gulp.task('OpenInVS2013', function () { return OIAConcat('OpenInVS2013', 'Visual Studio 2013') });
@@ -38,6 +39,7 @@ gulp.task('default',
     , 'OpenInOperaDeveloper'
     , 'OpenInPaintDotNet'
     , 'OpenInTreeSizeFree'
+    , 'OpenInTreeSizeProfessional'
     , 'OpenInVivaldi'
     , 'OpenInVS2012'
     , 'OpenInVS2013'
@@ -51,7 +53,8 @@ function OIAConcat (appNam, appDesc) {
 
     var filesToConcat = [appNam + '/0_Variables.md'];
 
-    if (appNam == 'OpenInTreeSizeFree') {
+    if (appNam === 'OpenInTreeSizeFree' ||
+        appNam === 'OpenInTreeSizeProfessional') {
         filesToConcat.push(
                 '1_Introduction_Folders.md',
                 '2_FreeReviews.md',

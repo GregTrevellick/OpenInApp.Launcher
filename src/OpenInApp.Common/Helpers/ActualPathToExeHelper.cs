@@ -214,6 +214,10 @@ namespace OpenInApp.Common.Helpers
                     actualPathToExeDto.ArtefactToOpen = ArtefactToOpen.Folder;
                     actualPathToExeDto.SecondaryFilePathSegment = @"JAM Software\TreeSize Free";
                     break;
+                case KeyToExecutableEnum.TreeSizeProfessional:
+                    actualPathToExeDto.ArtefactToOpen = ArtefactToOpen.Folder;
+                    actualPathToExeDto.SecondaryFilePathSegment = @"JAM Software\TreeSize";
+                    break;
                 case KeyToExecutableEnum.Vivaldi:
                     actualPathToExeDto.SecondaryFilePathSegment = @"Vivaldi\Application";
                     actualPathToExeDto.InitialFolderType = InitialFolderType.LocalApplicationData;

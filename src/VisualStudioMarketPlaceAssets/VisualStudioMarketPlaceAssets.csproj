@@ -66,6 +66,8 @@
     <None Include="OpenInOpera\0_Variables.md" />
     <None Include="OpenInTreeSizeFree\README.md" />
     <None Include="OpenInTreeSizeFree\0_Variables.md" />
+    <None Include="OpenInTreeSizeProfessional\0_Variables.md" />
+    <None Include="OpenInTreeSizeProfessional\README.md" />
     <None Include="OpenInVivaldi\README.md" />
     <None Include="OpenInVivaldi\0_Variables.md" />
     <None Include="OpenInXamarinStudio\README.md" />
@@ -132,6 +134,9 @@
     <Content Include="OpenInTreeSizeFree\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInTreeSizeFree\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInTreeSizeFree\ThirdPartyLogo.png" />
+    <Content Include="OpenInTreeSizeProfessional\ReadMeScreenShot_CodeEditorWindow.png" />
+    <Content Include="OpenInTreeSizeProfessional\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInTreeSizeProfessional\ThirdPartyLogo.png" />
     <Content Include="OpenInVivaldi\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInVivaldi\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInVivaldi\ThirdPartyLogo.png" />
