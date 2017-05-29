@@ -8,7 +8,7 @@ namespace OpenInApp.Command
         public string ActualPathToExe { get; set; }
         public ArtefactToOpen ArtefactToOpen { get; set; }
         public string Caption { get; set; }
-        public string ExecutableFileToBrowseFor { get; set; } //gregtt is this used ? rename to KeyToExecutable ?
+        public string ExecutableFileToBrowseFor { get; set; } 
         public string FileQuantityWarningLimit { get; set; }
         public bool IsFromSolutionExplorer { get; set; }
         public bool SeparateProcessPerFileToBeOpened { get; set; }
