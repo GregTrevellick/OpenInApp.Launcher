@@ -32,7 +32,7 @@ namespace OpenInApp.Command
                     }
                     else
                     {
-                        // User somehow managed to browse/select a new location for the exe that doesn't actually exist - virtually impossible, but you never know...
+                        // User somehow managed to browse/select a new location for the exe that doesn't actually exist - impossible you'd think, but can happen if path to exe not found, user prompted to browse, they click "yes" to open the file browse dialog, then click "cancel"
                         OpenInAppHelper.InformUserMissingFile(dto.Caption, badFilePath);
                     }
                 }
