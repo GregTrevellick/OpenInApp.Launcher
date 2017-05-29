@@ -33,7 +33,7 @@ namespace OpenInApp.Command
                     else
                     {
                         // User somehow managed to browse/select a new location for the exe that doesn't actually exist - virtually impossible, but you never know...
-                        OpenInAppHelper.InformUserMissingFile(dto.Caption, dto.ActualPathToExe);
+                        OpenInAppHelper.InformUserMissingFile(dto.Caption, badFilePath);
                     }
                 }
                 if (proceedToExecute)
