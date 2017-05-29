@@ -3,6 +3,8 @@ using NUnit.Framework;
 using OpenInApp.Common.Helpers;
 using System.Collections.Generic;
 using OpenInApp.Common.Helpers.Dtos;
+using System.IO;
+using System.Reflection;
 
 namespace OpenInApp.Common.Tests.Helpers
 {
@@ -179,7 +181,7 @@ namespace OpenInApp.Common.Tests.Helpers
         //[TestCase(KeyToExecutableEnum.ChromeCanary, FileToBeOpenedKind.Any)]
         //[TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, FileToBeOpenedKind.Any)]
         //[TestCase(KeyToExecutableEnum.Gimp, FileToBeOpenedKind.StillImage)]
-        //[TestCase(KeyToExecutableEnum.MarkdownMonster, FileToBeOpenedKind.Markdown)]
+        [TestCase(KeyToExecutableEnum.MarkdownMonster, FileToBeOpenedKind.Markdown)]
         //[TestCase(KeyToExecutableEnum.MSPaint, FileToBeOpenedKind.StillImage)]
         //[TestCase(KeyToExecutableEnum.Opera, FileToBeOpenedKind.Any)]
         //[TestCase(KeyToExecutableEnum.OperaDeveloperEdition, FileToBeOpenedKind.Any)]
@@ -200,9 +202,10 @@ namespace OpenInApp.Common.Tests.Helpers
         {
             // Arrange
             List<string> actualFilesToBeOpened;
+
             #region Set files to be opened
-            //gregtt set to relative path
-            var path = @"C:\Users\greg\Source\Repos\OpenInApp.Launcher\src\OpenInApp.Common.Tests";
+            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
             switch (fileToBeOpenedKind)
             {
                 case FileToBeOpenedKind.Any:
@@ -233,6 +236,7 @@ namespace OpenInApp.Common.Tests.Helpers
                     throw new NotImplementedException();
             }
             #endregion
+
             var actualPathToExeHelper = new ActualPathToExeHelper();
             var actualPathToExeDto = actualPathToExeHelper.GetActualPathToExeDto(keyToExecutableEnum);
             var executableFullPath = GeneralOptionsHelper.GetActualPathToExe(keyToExecutableEnum);

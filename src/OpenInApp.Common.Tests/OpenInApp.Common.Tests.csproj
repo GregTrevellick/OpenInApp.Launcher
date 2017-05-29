@@ -130,12 +130,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.txt" />
-    <Content Include="TestFiles\AnyText1.txt" />
-    <Content Include="TestFiles\AnyText2.TXT" />
-    <Content Include="TestFiles\MovingImage1.mpg" />
-    <Content Include="TestFiles\MovingImage2.mpeg" />
-    <Content Include="TestFiles\StillImage1.jpg" />
-    <Content Include="TestFiles\StillImage2.JPG" />
+    <Content Include="TestFiles\AnyText1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\AnyText2.TXT">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\MovingImage1.mpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\MovingImage2.mpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\StillImage1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\StillImage2.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestFiles\z.sql" />
     <Content Include="TestFiles\z.xml" />
   </ItemGroup>
