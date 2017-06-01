@@ -135,7 +135,7 @@ namespace OpenInAbracadabra.Options.Abracadabra
 
             if (actualPathToExeChanged)
             {
-                if (!CommonFileHelper.DoesFileExist(ActualPathToExe))
+                if (!CommonFileHelper.DoesArtefactExist(ActualPathToExe))
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 

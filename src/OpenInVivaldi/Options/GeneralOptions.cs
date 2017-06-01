@@ -133,7 +133,7 @@ namespace OpenInVivaldi.Options.Vivaldi
 
             if (actualPathToExeChanged)
             {
-                if (!CommonFileHelper.DoesFileExist(ActualPathToExe))
+                if (!CommonFileHelper.DoesArtefactExist(ActualPathToExe))
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 

@@ -133,7 +133,7 @@ namespace OpenInVS2017Professional.Options.VS2017Professional
 
             if (actualPathToExeChanged)
             {
-                if (!CommonFileHelper.DoesFileExist(ActualPathToExe))
+                if (!CommonFileHelper.DoesArtefactExist(ActualPathToExe))
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 

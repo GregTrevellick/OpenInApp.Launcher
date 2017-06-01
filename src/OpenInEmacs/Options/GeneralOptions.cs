@@ -133,7 +133,7 @@ namespace OpenInEmacs.Options.Emacs
 
             if (actualPathToExeChanged)
             {
-                if (!CommonFileHelper.DoesFileExist(ActualPathToExe))
+                if (!CommonFileHelper.DoesArtefactExist(ActualPathToExe))
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 

@@ -15,7 +15,7 @@ namespace OpenInApp.Command
 
             try
             {
-                var actualPathToExeExists = CommonFileHelper.DoesFileExist(dto.ActualPathToExe);
+                var actualPathToExeExists = CommonFileHelper.DoesArtefactExist(dto.ActualPathToExe);
 
                 bool proceedToExecute = true;
                 if (!actualPathToExeExists)
@@ -25,7 +25,7 @@ namespace OpenInApp.Command
                     var badFilePath = string.IsNullOrEmpty(dto.ActualPathToExe) ? dto.ExecutableFileToBrowseFor : dto.ActualPathToExe;
                     persistOptionsDto = fileHelper.PromptForActualExeFile(badFilePath);
 
-                    var newActualPathToExeExists = CommonFileHelper.DoesFileExist(dto.ActualPathToExe);
+                    var newActualPathToExeExists = CommonFileHelper.DoesArtefactExist(dto.ActualPathToExe);
                     if (newActualPathToExeExists)
                     {
                         proceedToExecute = true;
@@ -38,11 +38,13 @@ namespace OpenInApp.Command
                 }
                 if (proceedToExecute)
                 {
-                    var actualFilesToBeOpened = CommonFileHelper.GetFileNamesToBeOpened(dte, dto.CommandPlacement);//dto.IsFromSolutionExplorer);
-                    var actualFilesToBeOpenedExist = CommonFileHelper.DoFilesExist(actualFilesToBeOpened);
-                    if (!actualFilesToBeOpenedExist)
+                    var actualArtefactsToBeOpened = CommonFileHelper.GetArtefactNamesToBeOpened(dte, dto.CommandPlacement);//dto.IsFromSolutionExplorer);
+
+                    var actualArtefactsToBeOpenedExist = CommonFileHelper.DoArtefactsExist(actualArtefactsToBeOpened);
+
+                    if (!actualArtefactsToBeOpenedExist)
                     {
-                        var missingFileName = CommonFileHelper.GetMissingFileName(actualFilesToBeOpened);
+                        var missingFileName = CommonFileHelper.GetMissingFileName(actualArtefactsToBeOpened);
                         OpenInAppHelper.InformUserMissingFile(dto.Caption, missingFileName);
                     }
                     else
@@ -52,7 +54,7 @@ namespace OpenInApp.Command
                         if (isInt)
                         {
                             proceedToExecute = false;
-                            if (actualFilesToBeOpened.Count() > fileQuantityWarningLimitInt)
+                            if (actualArtefactsToBeOpened.Count() > fileQuantityWarningLimitInt)
                             {
                                 proceedToExecute = OpenInAppHelper.ConfirmProceedToExecute(dto.Caption, CommonConstants.ConfirmOpenFileQuantityExceedsWarningLimit);
                             }
@@ -63,7 +65,7 @@ namespace OpenInApp.Command
                             if (proceedToExecute)
                             {
                                 var typicalFileExtensionAsList = CommonFileHelper.GetTypicalFileExtensionAsList(dto.TypicalFileExtensions);
-                                var areTypicalFileExtensions = CommonFileHelper.AreTypicalFileExtensions(actualFilesToBeOpened, typicalFileExtensionAsList);
+                                var areTypicalFileExtensions = CommonFileHelper.AreTypicalFileExtensions(actualArtefactsToBeOpened, typicalFileExtensionAsList);
                                 if (!areTypicalFileExtensions)
                                 {
                                     if (dto.SuppressTypicalFileExtensionsWarning)
@@ -77,7 +79,7 @@ namespace OpenInApp.Command
                                 }
                                 if (proceedToExecute)
                                 {
-                                    OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, 
+                                    OpenInAppHelper.InvokeCommand(actualArtefactsToBeOpened, 
                                         dto.ActualPathToExe, 
                                         dto.SeparateProcessPerFileToBeOpened, 
                                         dto.UseShellExecute,

@@ -100,7 +100,7 @@ namespace OpenInApp.Common.Tests.Helpers
         public void DoesFileExistTest()
         {
             //Act
-            var actual = CommonFileHelper.DoesFileExist(null);
+            var actual = CommonFileHelper.DoesArtefactExist(null);
 
             //Assert
             Assert.IsFalse(actual);

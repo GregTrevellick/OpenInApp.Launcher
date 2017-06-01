@@ -45,9 +45,9 @@ namespace OpenInApp.Common.Helpers
         /// <param name="dte">The DTE.</param>
         /// <param name="isFromSolutionExplorer">gregt Differentiator for solution explorer versus code editor window.</param>
         /// <returns></returns>
-        public static IEnumerable<string> GetFileNamesToBeOpened(DTE2 dte, CommandPlacement commandPlacement)//bool isFromSolutionExplorer = true)
+        public static IEnumerable<string> GetArtefactNamesToBeOpened(DTE2 dte, CommandPlacement commandPlacement)//bool isFromSolutionExplorer = true)
         {
-            var fileNamesToBeOpened = new List<string>();
+            var artefactNamesToBeOpened = new List<string>();
 
             if (commandPlacement == CommandPlacement.IDM_VS_CTXT_FOLDERNODE ||
                 commandPlacement == CommandPlacement.IDM_VS_CTXT_ITEMNODE)
@@ -63,16 +63,16 @@ namespace OpenInApp.Common.Helpers
                     {
                         // ignored - or log as save failed to output window ? gregtt
                     }
-                    fileNamesToBeOpened.Add(selectedItem.ProjectItem.FileNames[0]);
+                    artefactNamesToBeOpened.Add(selectedItem.ProjectItem.FileNames[0]);
                 }
             }
             else
             {
                 dte.ActiveDocument.Save();
-                fileNamesToBeOpened.Add(dte.ActiveDocument.FullName);
+                artefactNamesToBeOpened.Add(dte.ActiveDocument.FullName);
             }
 
-            return fileNamesToBeOpened;
+            return artefactNamesToBeOpened;
         }
 
         /// <summary>
@@ -169,36 +169,46 @@ namespace OpenInApp.Common.Helpers
         }
 
         /// <summary>
-        /// Checks if a specified file exists on disc.
+        /// Checks if a specified artefact exists on disc.
         /// </summary>
-        /// <param name="fullFileName">Full name of the file.</param>
+        /// <param name="fullArtefactName">Full name of the artefact.</param>
         /// <returns></returns>
-        public static bool DoesFileExist(string fullFileName)
+        public static bool DoesArtefactExist(string fullArtefactName)
         {
-            return DoFilesExist(new List<string> { fullFileName });
+            return DoArtefactsExist(new List<string> { fullArtefactName });
         }
 
         /// <summary>
-        /// Checks if all specified files exists on disc.
+        /// Checks if all specified artefacts exists on disc.
         /// </summary>
-        /// <param name="fullFileNames">The full file names.</param>
+        /// <param name="fullArtefactNames">The full artefact names.</param>
         /// <returns></returns>
-        public static bool DoFilesExist(IEnumerable<string> fullFileNames)
+        public static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames)
         {
             var result = true;
 
-            foreach (var fullFileName in fullFileNames)
+            foreach (var fullArtefactName in fullArtefactNames)
             {
-                if (string.IsNullOrEmpty(fullFileName))
+                if (string.IsNullOrEmpty(fullArtefactName))
                 {
                     result = false;
                 }
                 else
                 {
-                    if (!File.Exists(fullFileName))
+
+
+                    //gregtgregt
+                    if (!File.Exists(fullArtefactName))
                     {
                         result = false;
                     }
+                    //gregtgregt
+                    if (!Directory.Exists(fullArtefactName))
+                    {
+                        result = false;
+                    }
+
+
                 }
             }
 
