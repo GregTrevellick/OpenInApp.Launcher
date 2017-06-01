@@ -43,13 +43,14 @@ namespace OpenInApp.Common.Helpers
         /// Gets the selected files to be opened, as chosen in Solution Explorer.
         /// </summary>
         /// <param name="dte">The DTE.</param>
-        /// <param name="isFromSolutionExplorer">Differentiator for solution explorer versus code editor window.</param>
+        /// <param name="isFromSolutionExplorer">gregt Differentiator for solution explorer versus code editor window.</param>
         /// <returns></returns>
-        public static IEnumerable<string> GetFileNamesToBeOpened(DTE2 dte, bool isFromSolutionExplorer = true)
+        public static IEnumerable<string> GetFileNamesToBeOpened(DTE2 dte, CommandPlacement commandPlacement)//bool isFromSolutionExplorer = true)
         {
             var fileNamesToBeOpened = new List<string>();
 
-            if (isFromSolutionExplorer)
+            if (commandPlacement == CommandPlacement.IDM_VS_CTXT_FOLDERNODE ||
+                commandPlacement == CommandPlacement.IDM_VS_CTXT_ITEMNODE)
             {
                 var selectedItems = dte.SelectedItems;
                 foreach (SelectedItem selectedItem in selectedItems)

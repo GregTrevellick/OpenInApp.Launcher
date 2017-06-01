@@ -38,7 +38,7 @@ namespace OpenInApp.Command
                 }
                 if (proceedToExecute)
                 {
-                    var actualFilesToBeOpened = CommonFileHelper.GetFileNamesToBeOpened(dte, dto.IsFromSolutionExplorer);
+                    var actualFilesToBeOpened = CommonFileHelper.GetFileNamesToBeOpened(dte, dto.CommandPlacement);//dto.IsFromSolutionExplorer);
                     var actualFilesToBeOpenedExist = CommonFileHelper.DoFilesExist(actualFilesToBeOpened);
                     if (!actualFilesToBeOpenedExist)
                     {

@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
+using OpenInApp.Common.Helpers.Dtos;
 using OpenInAppAltovaXmlSpy.Helpers;
 using System;
 using System.ComponentModel.Design;
@@ -82,8 +83,8 @@ namespace OpenInAppAltovaXmlSpy.Commands
 
             var invokeCommandCallBackDto = constantsForApp.GetInvokeCommandCallBackDto(
                 VSPackage.Options.ActualPathToExe, 
-                VSPackage.Options.FileQuantityWarningLimit, 
-                isFromSolutionExplorer, 
+                VSPackage.Options.FileQuantityWarningLimit,
+                isFromSolutionExplorer ? CommandPlacement.IDM_VS_CTXT_ITEMNODE : CommandPlacement.IDM_VS_CTXT_CODEWIN, 
                 ServiceProvider,
                 VSPackage.Options.SuppressTypicalFileExtensionsWarning,
                 VSPackage.Options.TypicalFileExtensions);

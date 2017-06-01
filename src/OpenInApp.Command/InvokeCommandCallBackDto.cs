@@ -8,9 +8,9 @@ namespace OpenInApp.Command
         public string ActualPathToExe { get; set; }
         public ArtefactToOpen ArtefactToOpen { get; set; }
         public string Caption { get; set; }
+        public CommandPlacement CommandPlacement { get; set; }
         public string ExecutableFileToBrowseFor { get; set; } 
         public string FileQuantityWarningLimit { get; set; }
-        public bool IsFromSolutionExplorer { get; set; }
         public bool SeparateProcessPerFileToBeOpened { get; set; }
         public IServiceProvider ServiceProvider { get; set; }        
         public bool SuppressTypicalFileExtensionsWarning { get; set; }

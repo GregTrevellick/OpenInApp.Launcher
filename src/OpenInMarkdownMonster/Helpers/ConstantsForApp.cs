@@ -24,7 +24,7 @@ namespace OpenInAppMarkdownMonster.Helpers
         internal InvokeCommandCallBackDto GetInvokeCommandCallBackDto(
            string actualPathToExe,
            string fileQuantityWarningLimit,
-           bool isFromSolutionExplorer,
+           CommandPlacement commandPlacement,//bool isFromSolutionExplorer,
            IServiceProvider serviceProvider,
            bool suppressTypicalFileExtensionsWarning,
            string typicalFileExtensions)
@@ -36,7 +36,7 @@ namespace OpenInAppMarkdownMonster.Helpers
                 Caption = Caption,
                 ExecutableFileToBrowseFor = KeyToExecutableEnum.Description(),
                 FileQuantityWarningLimit = fileQuantityWarningLimit,
-                IsFromSolutionExplorer = isFromSolutionExplorer,
+                CommandPlacement = commandPlacement,//IsFromSolutionExplorer = isFromSolutionExplorer,
                 SeparateProcessPerFileToBeOpened = SeparateProcessPerFileToBeOpened,
                 ServiceProvider = serviceProvider,
                 SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,
