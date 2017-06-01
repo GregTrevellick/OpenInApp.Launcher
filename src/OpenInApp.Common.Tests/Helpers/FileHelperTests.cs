@@ -97,10 +97,10 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("I")]
-        public void DoesFileExistTest()
+        public void DoesActualPathToExeExistTest()
         {
             //Act
-            var actual = CommonFileHelper.DoesArtefactExist(null);
+            var actual = CommonFileHelper.DoesActualPathToExeExist(null);
 
             //Assert
             Assert.IsFalse(actual);
