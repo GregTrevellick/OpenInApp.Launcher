@@ -24,7 +24,7 @@ namespace OpenInApp.Common.Helpers
             string executableFullPath, 
             bool separateProcessPerFileToBeOpened, 
             bool useShellExecute,
-            ArtefactToOpen artefactToOpen)
+            ArtefactTypeToOpen artefactTypeToOpen)
         {
             string fileName;
             string workingDirectory = string.Empty;
@@ -43,7 +43,7 @@ namespace OpenInApp.Common.Helpers
             {
                 foreach (var actualFileToBeOpened in actualFilesToBeOpened)
                 {
-                    var actualArtefactToBeOpened = GetActualArtefactToBeOpened(artefactToOpen, actualFileToBeOpened);
+                    var actualArtefactToBeOpened = GetActualArtefactToBeOpened(artefactTypeToOpen, actualFileToBeOpened);
                     var argument = GetSingleArgument(actualArtefactToBeOpened);
                     InvokeProcess(argument, fileName, useShellExecute, workingDirectory);
                 }
@@ -53,27 +53,27 @@ namespace OpenInApp.Common.Helpers
                 var arguments = " ";
                 foreach (var actualFileToBeOpened in actualFilesToBeOpened)
                 {
-                    var actualArtefactToBeOpened = GetActualArtefactToBeOpened(artefactToOpen, actualFileToBeOpened);
+                    var actualArtefactToBeOpened = GetActualArtefactToBeOpened(artefactTypeToOpen, actualFileToBeOpened);
                     arguments += GetSingleArgument(actualArtefactToBeOpened);
                 }
                 InvokeProcess(arguments, fileName, useShellExecute, workingDirectory);
             }
         }
 
-        private static string GetActualArtefactToBeOpened(ArtefactToOpen artefactToOpen, string actualFileToBeOpened)
+        private static string GetActualArtefactToBeOpened(ArtefactTypeToOpen artefactTypeToOpen, string actualArtefactToBeOpened)
         {
-            var actualArtefactToBeOpened = actualFileToBeOpened;
+            var result = actualArtefactToBeOpened;
 
-            if (artefactToOpen == ArtefactToOpen.Folder)
+            if (artefactTypeToOpen == ArtefactTypeToOpen.Folder)
             {
-                var fileName = Path.GetFileName(actualFileToBeOpened);
-                if (fileName != null)
+                var fileName = Path.GetFileName(actualArtefactToBeOpened);
+                if (!string.IsNullOrEmpty(fileName))
                 {
-                    actualArtefactToBeOpened = actualArtefactToBeOpened.Replace(fileName, string.Empty);
+                    result = result.Replace(fileName, string.Empty);
                 }
             }
 
-            return actualArtefactToBeOpened;
+            return result;
         }
 
         private static string GetSingleArgument(string argument)

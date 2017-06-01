@@ -33,7 +33,7 @@ namespace OpenInOperaDeveloper.Helpers
             return new InvokeCommandCallBackDto
             {
                 ActualPathToExe = actualPathToExe,
-                ArtefactToOpen = ActualPathToExeDto.ArtefactToOpen,
+                ArtefactTypeToOpen = ActualPathToExeDto.ArtefactTypeToOpen,
                 Caption = Caption,
                 ExecutableFileToBrowseFor = KeyToExecutableEnum.Description(),
                 FileQuantityWarningLimit = fileQuantityWarningLimit,

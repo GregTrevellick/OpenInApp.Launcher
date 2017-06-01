@@ -1,6 +1,7 @@
 ﻿using EnvDTE;
 using EnvDTE80;
 using OpenInApp.Common.Helpers;
+using OpenInApp.Common.Helpers.Dtos;
 using System;
 using System.Linq;
 
@@ -15,7 +16,7 @@ namespace OpenInApp.Command
 
             try
             {
-                var actualPathToExeExists = CommonFileHelper.DoesArtefactExist(dto.ActualPathToExe);
+                var actualPathToExeExists = CommonFileHelper.DoesActualPathToExeExist(dto.ActualPathToExe);
 
                 bool proceedToExecute = true;
                 if (!actualPathToExeExists)
@@ -25,7 +26,7 @@ namespace OpenInApp.Command
                     var badFilePath = string.IsNullOrEmpty(dto.ActualPathToExe) ? dto.ExecutableFileToBrowseFor : dto.ActualPathToExe;
                     persistOptionsDto = fileHelper.PromptForActualExeFile(badFilePath);
 
-                    var newActualPathToExeExists = CommonFileHelper.DoesArtefactExist(dto.ActualPathToExe);
+                    var newActualPathToExeExists = CommonFileHelper.DoesActualPathToExeExist(dto.ActualPathToExe);
                     if (newActualPathToExeExists)
                     {
                         proceedToExecute = true;
@@ -40,7 +41,7 @@ namespace OpenInApp.Command
                 {
                     var actualArtefactsToBeOpened = CommonFileHelper.GetArtefactNamesToBeOpened(dte, dto.CommandPlacement);//dto.IsFromSolutionExplorer);
 
-                    var actualArtefactsToBeOpenedExist = CommonFileHelper.DoArtefactsExist(actualArtefactsToBeOpened);
+                    var actualArtefactsToBeOpenedExist = CommonFileHelper.DoArtefactsExist(actualArtefactsToBeOpened, dto.CommandPlacement);
 
                     if (!actualArtefactsToBeOpenedExist)
                     {
@@ -83,7 +84,7 @@ namespace OpenInApp.Command
                                         dto.ActualPathToExe, 
                                         dto.SeparateProcessPerFileToBeOpened, 
                                         dto.UseShellExecute,
-                                        dto.ArtefactToOpen);
+                                        dto.ArtefactTypeToOpen);
                                 }
                             }
                         }

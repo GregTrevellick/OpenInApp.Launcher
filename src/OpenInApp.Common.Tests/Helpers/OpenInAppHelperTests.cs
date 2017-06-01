@@ -163,7 +163,7 @@ namespace OpenInApp.Common.Tests.Helpers
 
         private void Act(IEnumerable<string> actualFilesToBeOpened, string executableFullPath, bool separateProcessPerFileToBeOpened, bool useShellExecute)
         {
-                OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute, ArtefactToOpen.File);
+                OpenInAppHelper.InvokeCommand(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute, ArtefactTypeToOpen.File);
         }
 
 
@@ -190,7 +190,7 @@ namespace OpenInApp.Common.Tests.Helpers
         //[TestCase(KeyToExecutableEnum.XamarinStudio, FileToBeOpenedKind.Any)]
 
         //TBA
-        //[TestCase(KeyToExecutableEnum.TreeSizeFree, ArtefactToOpen.Any)]//"C:\Program Files (x86)\JAM Software\TreeSize Free\TreeSizeFree.exe"
+        //[TestCase(KeyToExecutableEnum.TreeSizeFree, ArtefactTypeToOpen.Any)]//"C:\Program Files (x86)\JAM Software\TreeSize Free\TreeSizeFree.exe"
         //[TestCase(KeyToExecutableEnum.VS2012, FileToBeOpenedKind.Code)]
         //[TestCase(KeyToExecutableEnum.VS2013, FileToBeOpenedKind.Code)]
         //[TestCase(KeyToExecutableEnum.VS2015, FileToBeOpenedKind.Code)]
@@ -247,7 +247,7 @@ namespace OpenInApp.Common.Tests.Helpers
                 executableFullPath, 
                 actualPathToExeDto.SeparateProcessPerFileToBeOpened, 
                 actualPathToExeDto.UseShellExecute,
-                actualPathToExeDto.ArtefactToOpen);
+                actualPathToExeDto.ArtefactTypeToOpen);
         }
     }
 }

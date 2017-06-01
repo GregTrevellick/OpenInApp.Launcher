@@ -6,7 +6,7 @@ namespace OpenInApp.Command
     public class InvokeCommandCallBackDto
     {
         public string ActualPathToExe { get; set; }
-        public ArtefactToOpen ArtefactToOpen { get; set; }
+        public ArtefactTypeToOpen ArtefactTypeToOpen { get; set; }
         public string Caption { get; set; }
         public CommandPlacement CommandPlacement { get; set; }
         public string ExecutableFileToBrowseFor { get; set; } 

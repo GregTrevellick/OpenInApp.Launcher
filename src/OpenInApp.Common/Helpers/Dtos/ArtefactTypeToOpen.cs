@@ -1,6 +1,6 @@
 ﻿namespace OpenInApp.Common.Helpers.Dtos
 {
-    public enum ArtefactToOpen
+    public enum ArtefactTypeToOpen
     {
         Undefined = 0,
         File,

@@ -133,7 +133,7 @@ namespace OpenInTreeSizeFree.Options.TreeSizeFree
 
             if (actualPathToExeChanged)
             {
-                if (!CommonFileHelper.DoesArtefactExist(ActualPathToExe))
+                if (!CommonFileHelper.DoesActualPathToExeExist(ActualPathToExe))
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 

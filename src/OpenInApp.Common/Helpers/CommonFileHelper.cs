@@ -171,11 +171,21 @@ namespace OpenInApp.Common.Helpers
         /// <summary>
         /// Checks if a specified artefact exists on disc.
         /// </summary>
+        /// <param name="fullExecutableFileName">Full name of the artefact.</param>
+        /// <returns></returns>
+        public static bool DoesActualPathToExeExist(string fullExecutableFileName)
+        {
+            return DoArtefactsExist(new List<string> { fullExecutableFileName });
+        }
+
+        /// <summary>
+        /// Checks if a specified artefact exists on disc.
+        /// </summary>
         /// <param name="fullArtefactName">Full name of the artefact.</param>
         /// <returns></returns>
-        public static bool DoesArtefactExist(string fullArtefactName)
+        public static bool DoesArtefactExist(string fullArtefactName, CommandPlacement commandPlacement)
         {
-            return DoArtefactsExist(new List<string> { fullArtefactName });
+            return DoArtefactsExist(new List<string> { fullArtefactName }, commandPlacement);
         }
 
         /// <summary>
@@ -183,7 +193,24 @@ namespace OpenInApp.Common.Helpers
         /// </summary>
         /// <param name="fullArtefactNames">The full artefact names.</param>
         /// <returns></returns>
-        public static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames)
+        public static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement)
+        {
+            var checkFileRatherThanDirectory = true;
+
+            if (commandPlacement == CommandPlacement.IDM_VS_CTXT_FOLDERNODE)
+            {
+                checkFileRatherThanDirectory = false;
+            }
+
+            return DoArtefactsExist(fullArtefactNames, checkFileRatherThanDirectory);
+        }
+
+        /// <summary>
+        /// Checks if all specified artefacts exists on disc.
+        /// </summary>
+        /// <param name="fullArtefactNames">The full artefact names.</param>
+        /// <returns></returns>
+        private static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, bool checkFileRatherThanDirectory = true)
         {
             var result = true;
 
@@ -195,20 +222,20 @@ namespace OpenInApp.Common.Helpers
                 }
                 else
                 {
-
-
-                    //gregtgregt
-                    if (!File.Exists(fullArtefactName))
+                    if (checkFileRatherThanDirectory)
                     {
-                        result = false;
+                        if (!File.Exists(fullArtefactName))
+                        {
+                            result = false;
+                        }
                     }
-                    //gregtgregt
-                    if (!Directory.Exists(fullArtefactName))
+                    else
                     {
-                        result = false;
+                        if (!Directory.Exists(fullArtefactName))
+                        {
+                            result = false;
+                        }
                     }
-
-
                 }
             }
 

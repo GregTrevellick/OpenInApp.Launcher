@@ -133,7 +133,7 @@ namespace OpenInOperaDeveloper.Options.OperaDeveloper
 
             if (actualPathToExeChanged)
             {
-                if (!CommonFileHelper.DoesArtefactExist(ActualPathToExe))
+                if (!CommonFileHelper.DoesActualPathToExeExist(ActualPathToExe))
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 
