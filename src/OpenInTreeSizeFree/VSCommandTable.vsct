@@ -17,21 +17,21 @@
         <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
-          <ButtonText>Open folder in TreeSize Free</ButtonText>
+          <ButtonText>Open Folder in TreeSize Free</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppFolderExplore" priority="0x100" type="Button">
         <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
-          <ButtonText>Open folder in TreeSize Free</ButtonText>
+          <ButtonText>Open Folder in TreeSize Free</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppFolderNode" priority="0x100" type="Button">
         <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderNode" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
-          <ButtonText>Open folder in TreeSize Free</ButtonText>
+          <ButtonText>Open Folder in TreeSize Free</ButtonText>
         </Strings>
       </Button>
     </Buttons>
