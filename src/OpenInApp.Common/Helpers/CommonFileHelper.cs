@@ -195,14 +195,21 @@ namespace OpenInApp.Common.Helpers
         /// <returns></returns>
         public static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement)
         {
-            var checkFileRatherThanDirectory = true;
+            ArtefactTypeToOpen artefactTypeToOpen = ArtefactTypeToOpen.File;
 
-            if (commandPlacement == CommandPlacement.IDM_VS_CTXT_FOLDERNODE)
+            switch (commandPlacement)
             {
-                checkFileRatherThanDirectory = false;
+                case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
+                    artefactTypeToOpen = ArtefactTypeToOpen.Folder;
+                    break;
+                case CommandPlacement.IDM_VS_CTXT_CODEWIN:
+                case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
+                default:
+                    artefactTypeToOpen = ArtefactTypeToOpen.File;
+                    break;
             }
 
-            return DoArtefactsExist(fullArtefactNames, checkFileRatherThanDirectory);
+            return DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);
         }
 
         /// <summary>
@@ -210,7 +217,7 @@ namespace OpenInApp.Common.Helpers
         /// </summary>
         /// <param name="fullArtefactNames">The full artefact names.</param>
         /// <returns></returns>
-        private static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, bool checkFileRatherThanDirectory = true)
+        private static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, ArtefactTypeToOpen artefactTypeToOpen = ArtefactTypeToOpen.File)
         {
             var result = true;
 
@@ -222,19 +229,20 @@ namespace OpenInApp.Common.Helpers
                 }
                 else
                 {
-                    if (checkFileRatherThanDirectory)
+                    switch (artefactTypeToOpen)
                     {
-                        if (!File.Exists(fullArtefactName))
-                        {
-                            result = false;
-                        }
-                    }
-                    else
-                    {
-                        if (!Directory.Exists(fullArtefactName))
-                        {
-                            result = false;
-                        }
+                        case ArtefactTypeToOpen.File:
+                            if (!File.Exists(fullArtefactName))
+                            {
+                                result = false;
+                            }
+                            break;
+                        case ArtefactTypeToOpen.Folder:
+                            if (!Directory.Exists(fullArtefactName))
+                            {
+                                result = false;
+                            }
+                            break;
                     }
                 }
             }
