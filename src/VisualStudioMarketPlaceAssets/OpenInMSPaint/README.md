@@ -5,6 +5,12 @@ Open multiple files simultaneously in [MS Paint][ThirdPartyAppHomePage] directly
 
 If you like this ***free*** extension, please give it a review below.
 
+[`x => x.ILikeThisCompletelyFreeExtension &&  x.ICanVoteOrReviewInSeconds`](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVisualStudio2015#review-details)
+
+
+[`x => x.ILikeThisCompletelyFreeExtension &&  x.ICanVoteOrReviewInSeconds`](#review-details)
+
+
 Similar "Open In" VS extensions can be found [here](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
 
 [![][ThirdPartyAppOfficialLogo]][ThirdPartyAppHomePage]
