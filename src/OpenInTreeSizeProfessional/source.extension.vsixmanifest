@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="a1b88397-2308-43ac-a471-6c1936720a6f" Version="1.1.15" Language="en-US" Publisher="GregTrevellick" />
-    <DisplayName>TreeSize Professional</DisplayName>
+    <Identity Id="a1b88397-2308-43ac-a471-6c1936720a6f" Version="1.1.16" Language="en-US" Publisher="GregTrevellick" />
+    <DisplayName>Open in TreeSize Professional</DisplayName>
     <Description xml:space="preserve">Open multiple folders simultaneously in TreeSize Professional directly from Solution Explorer or Code Editor window.</Description>
     <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>
     <License>LICENSE.txt</License>
