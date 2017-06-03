@@ -3,7 +3,7 @@
 Open multiple files simultaneously in [Visual Studio 2013][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 
- - ***If you like this FREE tool please take a few seconds out to give a STAR RATING below***.
+ - *If you like this ***free*** tool please take a few seconds out to give a star rating below*.
 
 Similar "Open In" VS extensions can be found [here](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
 
