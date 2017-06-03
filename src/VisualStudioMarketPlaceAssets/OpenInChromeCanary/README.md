@@ -3,12 +3,11 @@
 Open multiple files simultaneously in [Chrome Canary][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 
-If you like this ***free*** extension, please give it a review below.
+ - ***If you like this FREE tool please take a few seconds out to give a STAR RATING below***.
 
 Similar "Open In" VS extensions can be found [here](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
 
 [![][ThirdPartyAppOfficialLogo]][ThirdPartyAppHomePage]
-
 
 ## Features
 
