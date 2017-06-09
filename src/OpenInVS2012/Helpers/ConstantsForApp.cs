@@ -9,7 +9,7 @@ namespace OpenInVS2012.Helpers
     public class ConstantsForApp 
     {
         internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.VS2012;
-        private static ApplicationToOpenDto ApplicationToOpenDto = new ActualPathToExeHelper().GetApplicationToOpenDto(KeyToExecutableEnum);
+        private static ApplicationToOpenDto ApplicationToOpenDto = new ApplicationToOpenHelper().GetApplicationToOpenDto(KeyToExecutableEnum);
         private const string KeyToExecutableConstant = KeyToExecutableString.VS2012;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()

@@ -9,7 +9,7 @@ namespace OpenInOperaDeveloper.Helpers
     public class ConstantsForApp 
     {
         internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.OperaDeveloperEdition;
-        private static ApplicationToOpenDto ApplicationToOpenDto = new ActualPathToExeHelper().GetApplicationToOpenDto(KeyToExecutableEnum);
+        private static ApplicationToOpenDto ApplicationToOpenDto = new ApplicationToOpenHelper().GetApplicationToOpenDto(KeyToExecutableEnum);
         private const string KeyToExecutableConstant = KeyToExecutableString.OperaDeveloperEdition;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()

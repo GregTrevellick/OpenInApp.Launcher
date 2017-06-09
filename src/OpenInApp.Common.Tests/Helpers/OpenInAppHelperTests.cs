@@ -237,7 +237,7 @@ namespace OpenInApp.Common.Tests.Helpers
             }
             #endregion
 
-            var actualPathToExeHelper = new ActualPathToExeHelper();
+            var actualPathToExeHelper = new ApplicationToOpenHelper();
             var applicationToOpenDto = actualPathToExeHelper.GetApplicationToOpenDto(keyToExecutableEnum);
             var executableFullPath = GeneralOptionsHelper.GetActualPathToExe(keyToExecutableEnum);
 

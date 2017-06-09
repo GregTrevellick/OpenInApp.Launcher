@@ -8,7 +8,7 @@ namespace OpenInAppMarkdownMonster.Helpers
 	public class ConstantsForApp 
 	{
         internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.MarkdownMonster;
-        private static ApplicationToOpenDto ApplicationToOpenDto = new ActualPathToExeHelper().GetApplicationToOpenDto(KeyToExecutableEnum);
+        private static ApplicationToOpenDto ApplicationToOpenDto = new ApplicationToOpenHelper().GetApplicationToOpenDto(KeyToExecutableEnum);
         private const string KeyToExecutableConstant = KeyToExecutableString.MarkdownMonster;
 		
 		public IEnumerable<string> GetDefaultTypicalFileExtensions()

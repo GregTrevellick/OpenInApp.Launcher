@@ -9,7 +9,7 @@ namespace OpenInFirefoxDeveloperEdition.Helpers
     public class ConstantsForApp 
     {
         internal static KeyToExecutableEnum KeyToExecutableEnum = KeyToExecutableEnum.FirefoxDeveloperEdition;
-        private static ApplicationToOpenDto ApplicationToOpenDto = new ActualPathToExeHelper().GetApplicationToOpenDto(KeyToExecutableEnum);
+        private static ApplicationToOpenDto ApplicationToOpenDto = new ApplicationToOpenHelper().GetApplicationToOpenDto(KeyToExecutableEnum);
         private const string KeyToExecutableConstant = KeyToExecutableString.FirefoxDeveloperEdition;
 
         public IEnumerable<string> GetDefaultTypicalFileExtensions()
