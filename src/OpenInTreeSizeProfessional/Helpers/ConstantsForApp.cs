@@ -19,8 +19,8 @@ namespace OpenInTreeSizeProfessional.Helpers
 
         internal static string Caption = Vsix.Name + " " + Vsix.Version;
         internal const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableConstant;
-        internal static bool SeparateProcessPerFileToBeOpened = ApplicationToOpenDto.SeparateProcessPerFileToBeOpened;
-        internal static bool UseShellExecute = ApplicationToOpenDto.UseShellExecute;
+        //internal static bool SeparateProcessPerFileToBeOpened = ApplicationToOpenDto.SeparateProcessPerFileToBeOpened;
+        //internal static bool UseShellExecute = ApplicationToOpenDto.UseShellExecute;
 
         internal InvokeCommandCallBackDto GetInvokeCommandCallBackDto(
            string actualPathToExe,
@@ -38,11 +38,11 @@ namespace OpenInTreeSizeProfessional.Helpers
                 ExecutableFileToBrowseFor = KeyToExecutableEnum.Description(),
                 FileQuantityWarningLimit = fileQuantityWarningLimit,
                 CommandPlacement = commandPlacement,
-                SeparateProcessPerFileToBeOpened = SeparateProcessPerFileToBeOpened,
+                SeparateProcessPerFileToBeOpened = ApplicationToOpenDto.SeparateProcessPerFileToBeOpened,
                 ServiceProvider = serviceProvider,
                 SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,
                 TypicalFileExtensions = typicalFileExtensions,
-                UseShellExecute = UseShellExecute
+                UseShellExecute = ApplicationToOpenDto.UseShellExecute
             };
         }
     }
