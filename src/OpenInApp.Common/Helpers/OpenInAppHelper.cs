@@ -88,7 +88,7 @@ namespace OpenInApp.Common.Helpers
                 Arguments = arguments,
                 CreateNoWindow = true,
                 FileName = fileName,
-                UseShellExecute = ApplicationToOpenDto.UseShellExecute,
+                UseShellExecute = useShellExecute,
                 WindowStyle = ProcessWindowStyle.Hidden,
                 WorkingDirectory = workingDirectory
             };
