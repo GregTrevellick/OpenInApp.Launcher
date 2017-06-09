@@ -33,10 +33,10 @@ namespace OpenInApp.Common.Helpers
         public static IEnumerable<string> GetSearchPaths(KeyToExecutableEnum keyToExecutableEnum)
         {
             var searchPaths  = new List<string>();
-            var actualPathToExeHelper = new ActualPathToExeHelper();
-            var actualPathToExeDto = actualPathToExeHelper.GetActualPathToExeDto(keyToExecutableEnum);
+            var actualPathToExeHelper = new ApplicationToOpenHelper();
+            var applicationToOpenDto = actualPathToExeHelper.GetApplicationToOpenDto(keyToExecutableEnum);
 
-            var pathPrimary = GetPath(actualPathToExeDto.ExecutableFileToBrowseFor, actualPathToExeDto.InitialFolderType, actualPathToExeDto.SecondaryFilePathSegment);
+            var pathPrimary = GetPath(applicationToOpenDto.ExecutableFileToBrowseFor, applicationToOpenDto.InitialFolderType, applicationToOpenDto.SecondaryFilePathSegment);
             searchPaths.Add(pathPrimary);
 
             var x86 = " (x86)";
@@ -46,9 +46,9 @@ namespace OpenInApp.Common.Helpers
                 searchPaths.Add(pathPrimaryWithoutx86);
             }
 
-            if (actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions)
+            if (applicationToOpenDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions)
             {
-                var paths = GetMultipleYearPaths(actualPathToExeDto.ExecutableFileToBrowseFor, actualPathToExeDto.InitialFolderType, actualPathToExeDto.SecondaryFilePathSegment);
+                var paths = GetMultipleYearPaths(applicationToOpenDto.ExecutableFileToBrowseFor, applicationToOpenDto.InitialFolderType, applicationToOpenDto.SecondaryFilePathSegment);
                 foreach (var path in paths)
                 {
                     searchPaths.Add(path);

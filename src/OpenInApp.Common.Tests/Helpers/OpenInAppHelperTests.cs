@@ -238,16 +238,16 @@ namespace OpenInApp.Common.Tests.Helpers
             #endregion
 
             var actualPathToExeHelper = new ActualPathToExeHelper();
-            var actualPathToExeDto = actualPathToExeHelper.GetActualPathToExeDto(keyToExecutableEnum);
+            var applicationToOpenDto = actualPathToExeHelper.GetApplicationToOpenDto(keyToExecutableEnum);
             var executableFullPath = GeneralOptionsHelper.GetActualPathToExe(keyToExecutableEnum);
 
             // Act
             OpenInAppHelper.InvokeCommand(
                 actualFilesToBeOpened,
-                executableFullPath, 
-                actualPathToExeDto.SeparateProcessPerFileToBeOpened, 
-                actualPathToExeDto.UseShellExecute,
-                actualPathToExeDto.ArtefactTypeToOpen);
+                executableFullPath,
+                applicationToOpenDto.SeparateProcessPerFileToBeOpened,
+                applicationToOpenDto.UseShellExecute,
+                applicationToOpenDto.ArtefactTypeToOpen);
         }
     }
 }

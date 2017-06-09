@@ -2,7 +2,7 @@
     
 namespace OpenInApp.Common.Helpers.Dtos
 {
-    public class ActualPathToExeDto
+    public class ApplicationToOpenDto
     {
         public ArtefactTypeToOpen ArtefactTypeToOpen { get; set; }
         public IEnumerable<string> DefaultTypicalFileExtensions { get; set; }

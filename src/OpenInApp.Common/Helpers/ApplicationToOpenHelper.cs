@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace OpenInApp.Common.Helpers
 {
-    public class ActualPathToExeHelper
+    public class ApplicationToOpenHelper
     {
-        public ActualPathToExeDto GetActualPathToExeDto(KeyToExecutableEnum keyToExecutableEnum)
+        public ApplicationToOpenDto GetApplicationToOpenDto(KeyToExecutableEnum keyToExecutableEnum)
         {
-            var actualPathToExeDto = new ActualPathToExeDto
+            var applicationToOpenDto = new ApplicationToOpenDto
             {
                 ArtefactTypeToOpen = ArtefactTypeToOpen.File,
                 DefaultTypicalFileExtensions = new List<string> { "*" },
@@ -21,9 +21,9 @@ namespace OpenInApp.Common.Helpers
             switch (keyToExecutableEnum)
             {
                 case KeyToExecutableEnum.AltovaXMLSpy:
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Altova\XMLSpy2016";
-                    actualPathToExeDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;
-                    actualPathToExeDto.DefaultTypicalFileExtensions = new List<string>
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Altova\XMLSpy2016";
+                    applicationToOpenDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;
+                    applicationToOpenDto.DefaultTypicalFileExtensions = new List<string>
                     {
                         #region Extensions
                         //Source(s) http://manual.altova.com/XMLSpy/spyprofessional/index.html?filetypes.htm
@@ -101,19 +101,19 @@ namespace OpenInApp.Common.Helpers
 	         		};
                     break;
                 case KeyToExecutableEnum.ChromeCanary:
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Google\Chrome SxS\Application";
-                    actualPathToExeDto.InitialFolderType = InitialFolderType.LocalApplicationData;
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Google\Chrome SxS\Application";
+                    applicationToOpenDto.InitialFolderType = InitialFolderType.LocalApplicationData;
                     break;
                 case KeyToExecutableEnum.Emacs:
-                    actualPathToExeDto.SecondaryFilePathSegment = null;
-                    actualPathToExeDto.InitialFolderType = InitialFolderType.None;
+                    applicationToOpenDto.SecondaryFilePathSegment = null;
+                    applicationToOpenDto.InitialFolderType = InitialFolderType.None;
                     break;
                 case KeyToExecutableEnum.FirefoxDeveloperEdition:
-                    actualPathToExeDto.SecondaryFilePathSegment = "Firefox Developer Edition";
+                    applicationToOpenDto.SecondaryFilePathSegment = "Firefox Developer Edition";
                     break;
                 case KeyToExecutableEnum.Gimp:
-                    actualPathToExeDto.SecondaryFilePathSegment = @"GIMP 2\bin";
-                    actualPathToExeDto.DefaultTypicalFileExtensions = new List<string>
+                    applicationToOpenDto.SecondaryFilePathSegment = @"GIMP 2\bin";
+                    applicationToOpenDto.DefaultTypicalFileExtensions = new List<string>
                     {
                         #region Extensions
                         // https://www.gimp.org/features/
@@ -160,14 +160,14 @@ namespace OpenInApp.Common.Helpers
                     };
                     break;
                 case KeyToExecutableEnum.MarkdownMonster:
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Markdown Monster";
-                    actualPathToExeDto.DefaultTypicalFileExtensions = new List<string> { "md" };
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Markdown Monster";
+                    applicationToOpenDto.DefaultTypicalFileExtensions = new List<string> { "md" };
                     break;
                 case KeyToExecutableEnum.MSPaint:
-                    actualPathToExeDto.SecondaryFilePathSegment = "system32";
-                    actualPathToExeDto.InitialFolderType = InitialFolderType.Windows;
-                    actualPathToExeDto.UseShellExecute = false;
-                    actualPathToExeDto.DefaultTypicalFileExtensions = new List<string>
+                    applicationToOpenDto.SecondaryFilePathSegment = "system32";
+                    applicationToOpenDto.InitialFolderType = InitialFolderType.Windows;
+                    applicationToOpenDto.UseShellExecute = false;
+                    applicationToOpenDto.DefaultTypicalFileExtensions = new List<string>
                     {
                         #region Extensions
                         "bmp",
@@ -185,14 +185,14 @@ namespace OpenInApp.Common.Helpers
                     };
                     break;
                 case KeyToExecutableEnum.Opera:
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Opera";
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Opera";
                     break;
                 case KeyToExecutableEnum.OperaDeveloperEdition:
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Opera developer";
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Opera developer";
                     break;
                 case KeyToExecutableEnum.PaintDotNet:
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Paint.NET";
-                    actualPathToExeDto.DefaultTypicalFileExtensions = new List<string>
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Paint.NET";
+                    applicationToOpenDto.DefaultTypicalFileExtensions = new List<string>
                     {
                         #region Extensions
                         //Source(s): http://www.getpaint.net/doc/latest/
@@ -209,57 +209,57 @@ namespace OpenInApp.Common.Helpers
                     };
                     break;
                 case KeyToExecutableEnum.TreeSizeFree:
-                    actualPathToExeDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
-                    actualPathToExeDto.SecondaryFilePathSegment = @"JAM Software\TreeSize Free";
+                    applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
+                    applicationToOpenDto.SecondaryFilePathSegment = @"JAM Software\TreeSize Free";
                     break;
                 case KeyToExecutableEnum.TreeSizeProfessional:
-                    actualPathToExeDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
-                    actualPathToExeDto.SecondaryFilePathSegment = @"JAM Software\TreeSize";
+                    applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
+                    applicationToOpenDto.SecondaryFilePathSegment = @"JAM Software\TreeSize";
                     break;
                 case KeyToExecutableEnum.Vivaldi:
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Vivaldi\Application";
-                    actualPathToExeDto.InitialFolderType = InitialFolderType.LocalApplicationData;
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Vivaldi\Application";
+                    applicationToOpenDto.InitialFolderType = InitialFolderType.LocalApplicationData;
                     break;
                 case KeyToExecutableEnum.VS2012:
-                    actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 11.0\Common7\IDE";
-                    actualPathToExeDto.UseShellExecute = false;
+                    applicationToOpenDto.ExecutableFileToBrowseFor = "devenv.exe";
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 11.0\Common7\IDE";
+                    applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2013:
-                    actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 12.0\Common7\IDE";
-                    actualPathToExeDto.UseShellExecute = false;
+                    applicationToOpenDto.ExecutableFileToBrowseFor = "devenv.exe";
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 12.0\Common7\IDE";
+                    applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2015:
-                    actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 14.0\Common7\IDE";
-                    actualPathToExeDto.UseShellExecute = false;
+                    applicationToOpenDto.ExecutableFileToBrowseFor = "devenv.exe";
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 14.0\Common7\IDE";
+                    applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2017Community:
-                    actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Community\Common7\IDE";
-                    actualPathToExeDto.UseShellExecute = false;
+                    applicationToOpenDto.ExecutableFileToBrowseFor = "devenv.exe";
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Community\Common7\IDE";
+                    applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2017Enterprise:
-                    actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Enterprise\Common7\IDE";
-                    actualPathToExeDto.UseShellExecute = false;
+                    applicationToOpenDto.ExecutableFileToBrowseFor = "devenv.exe";
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Enterprise\Common7\IDE";
+                    applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2017Professional:
-                    actualPathToExeDto.ExecutableFileToBrowseFor = "devenv.exe";
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Professional\Common7\IDE";
-                    actualPathToExeDto.UseShellExecute = false;
+                    applicationToOpenDto.ExecutableFileToBrowseFor = "devenv.exe";
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Professional\Common7\IDE";
+                    applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.XamarinStudio:
-                    actualPathToExeDto.SecondaryFilePathSegment = @"Xamarin Studio\bin";
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Xamarin Studio\bin";
                     break;
                 default:
-                    actualPathToExeDto.SecondaryFilePathSegment = null;
-                    actualPathToExeDto.InitialFolderType = InitialFolderType.None;
+                    applicationToOpenDto.SecondaryFilePathSegment = null;
+                    applicationToOpenDto.InitialFolderType = InitialFolderType.None;
                     break;
             }
 
-            return actualPathToExeDto;
+            return applicationToOpenDto;
         }
     }
 }
