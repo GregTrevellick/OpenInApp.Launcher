@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
-using OpenInAbracadabra.Helpers;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
 
@@ -9,8 +9,12 @@ namespace OpenInAbracadabra.Options.Abracadabra
 {
     public class GeneralOptions : DialogPage
     {
+        internal static KeyToExecutableEnum keyToExecutableEnum = KeyToExecutableEnum.Abracadabra;
+        private IEnumerable<string> defaultTypicalFileExtensions = new ConstantsForAppCommon().GetDefaultTypicalFileExtensions(keyToExecutableEnum);
+        private const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableString.Abracadabra;
+
         [Category(CommonConstants.CategorySubLevel)]
-        [DisplayName(ConstantsForApp.CommonActualPathToExeOptionLabel)]
+        [DisplayName(CommonActualPathToExeOptionLabel)]
         [Description(CommonConstants.ActualPathToExeOptionDetailedDescription)]
         public string ActualPathToExe { get; set; }
 
@@ -24,7 +28,6 @@ namespace OpenInAbracadabra.Options.Abracadabra
             {
                 if (string.IsNullOrEmpty(typicalFileExtensions))
                 {
-                    var defaultTypicalFileExtensions = new ConstantsForApp().GetDefaultTypicalFileExtensions();
                     return CommonFileHelper.GetDefaultTypicalFileExtensionsAsCsv(defaultTypicalFileExtensions);
                 }
                 else
@@ -68,7 +71,7 @@ namespace OpenInAbracadabra.Options.Abracadabra
                 {
                     MessageBox.Show(
                         CommonConstants.FileQuantityWarningLimitInvalid,
-                        ConstantsForApp.Caption,
+                        new ConstantsForAppCommon().Caption,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
@@ -105,20 +108,15 @@ namespace OpenInAbracadabra.Options.Abracadabra
 
             if (string.IsNullOrEmpty(TypicalFileExtensions))
             {
-                TypicalFileExtensions = GetTypicalFileExtensions();
+                TypicalFileExtensions = CommonFileHelper.GetDefaultTypicalFileExtensionsAsCsv(defaultTypicalFileExtensions);
             }
 
             if (string.IsNullOrEmpty(ActualPathToExe))
             {
-                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.KeyToExecutableEnum);
+                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(keyToExecutableEnum);
             }
 
             previousActualPathToExe = ActualPathToExe;
-        }
-
-        private string GetTypicalFileExtensions()
-        {
-            return CommonFileHelper.GetDefaultTypicalFileExtensionsAsCsv(new ConstantsForApp().GetDefaultTypicalFileExtensions());
         }
 
         private string previousActualPathToExe { get; set; }
@@ -139,7 +137,9 @@ namespace OpenInAbracadabra.Options.Abracadabra
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 
-                    var filePrompterHelper = new FilePrompterHelper(ConstantsForApp.Caption, ConstantsForApp.KeyToExecutableEnum.Description());
+                    var caption = new ConstantsForAppCommon().Caption;
+
+                    var filePrompterHelper = new FilePrompterHelper(caption, keyToExecutableEnum.Description());
 
                     var persistOptionsDto = filePrompterHelper.PromptForActualExeFile(ActualPathToExe);
 

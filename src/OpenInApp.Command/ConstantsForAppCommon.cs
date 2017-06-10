@@ -1,25 +1,36 @@
-﻿using OpenInApp.Common.Helpers.Dtos;
+﻿using OpenInApp.Common.Helpers;
+using OpenInApp.Common.Helpers.Dtos;
 using System;
+using System.Collections.Generic;
 
 namespace OpenInApp.Command
 {
     public class ConstantsForAppCommon
     {
-        private string vsixName;
-        private string vsixVersion;
+        private string _vsixName;
+        private string _vsixVersion;
+
+        public ConstantsForAppCommon()
+        {
+        }
 
         public ConstantsForAppCommon(string vsixName, string vsixVersion)
         {
-            this.vsixName = vsixName;
-            this.vsixVersion = vsixVersion;
+            _vsixName = vsixName;
+            _vsixVersion = vsixVersion;
         }
 
         public string Caption 
         { 
             get 
                 { 
-                    return vsixName + " " + vsixVersion;
+                    return _vsixName + " " + _vsixVersion;
                 }
+        }
+
+        public IEnumerable<string> GetDefaultTypicalFileExtensions(KeyToExecutableEnum keyToExecutableEnum)
+        {
+            return new ApplicationToOpenHelper().GetApplicationToOpenDto(keyToExecutableEnum).DefaultTypicalFileExtensions;
         }
 
         public InvokeCommandCallBackDto GetInvokeCommandCallBackDto(
