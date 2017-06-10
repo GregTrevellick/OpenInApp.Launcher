@@ -95,6 +95,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConstantsForAppCommon.cs" />
     <Compile Include="MenuItemCallBackHelper.cs" />
     <Compile Include="InvokeCommandCallBackDto.cs" />
     <Compile Include="PersistOptionsDto.cs" />
