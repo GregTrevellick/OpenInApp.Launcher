@@ -5,4 +5,7 @@
     <StartProgram>C:\Program Files %28x86%29\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe</StartProgram>
     <StartArguments>/rootSuffix Exp</StartArguments>
   </PropertyGroup>
+  <PropertyGroup>
+    <ProjectView>ShowAllFiles</ProjectView>
+  </PropertyGroup>
 </Project>

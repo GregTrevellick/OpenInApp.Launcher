@@ -95,7 +95,7 @@ namespace OpenInVS2017Enterprise.Commands
         {
             var menuItemCallBackHelper = new MenuItemCallBackHelper();
 
-            var keyToExecutableEnum = GeneralOptions.keyToExecutableEnum;//KeyToExecutableEnum.Abracadabra;
+            var keyToExecutableEnum = GeneralOptions.keyToExecutableEnum;
 
             var applicationToOpenDto = new ApplicationToOpenHelper().GetApplicationToOpenDto(keyToExecutableEnum);
 
