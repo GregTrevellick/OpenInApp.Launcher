@@ -2,7 +2,7 @@
 using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
 using OpenInApp.Common.Helpers.Dtos;
-using OpenInAppGimp.Helpers;
+using OpenInAppGimp.Options.Gimp;
 using System;
 using System.ComponentModel.Design;
 
@@ -10,12 +10,13 @@ namespace OpenInAppGimp.Commands
 {
     internal sealed class OpenInAppCommand
     {
-        private string Caption { get { return ConstantsForApp.Caption; } }
+        private string Caption { get { return constantsForAppCommon.Caption; } }
         public readonly Guid CommandSet = new Guid(PackageGuids.guidOpenInVsCmdSetString);
         public OpenInAppCommand Instance { get; private set; }
 
         private readonly Package _package;
         private IServiceProvider ServiceProvider => _package;
+        private ConstantsForAppCommon constantsForAppCommon = new ConstantsForAppCommon(Vsix.Name, Vsix.Version);
 
         public OpenInAppCommand()
         {
@@ -41,25 +42,35 @@ namespace OpenInAppGimp.Commands
                 var commandService = ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
                 if (commandService != null)
                 {
-                    AddMenuCommand(commandService, PackageIds.CmdIdOpenInAppFolderExplore, true);
-                    AddMenuCommand(commandService, PackageIds.CmdIdOpenInAppCodeWin, false);
+                    AddMenuCommand(commandService, PackageIds.CmdIdOpenInAppFolderExplore, CommandPlacement.IDM_VS_CTXT_ITEMNODE);
+                    AddMenuCommand(commandService, PackageIds.CmdIdOpenInAppCodeWin, CommandPlacement.IDM_VS_CTXT_CODEWIN);
+                    //Comment out to exclude folders / un-comment to include folders 
+                    //AddMenuCommand(commandService, PackageIds.CmdIdOpenInAppFolderNode, CommandPlacement.IDM_VS_CTXT_FOLDERNODE);
                 }
             }
         }
 
-        private void AddMenuCommand(OleMenuCommandService commandService, int packageId, bool isFromSolutionExplorer)
+        private void AddMenuCommand(OleMenuCommandService commandService, int packageId, CommandPlacement commandPlacement)
         {
             var menuCommandID = new CommandID(CommandSet, packageId);
 
             MenuCommand menuCommand;
 
-            if (isFromSolutionExplorer)
+            switch (commandPlacement)
             {
-                menuCommand = new MenuCommand(MenuItemCallback_FolderExplore, menuCommandID);
-            }
-            else
-            {
-                menuCommand = new MenuCommand(MenuItemCallback_CodeWin, menuCommandID);
+                case CommandPlacement.IDM_VS_CTXT_CODEWIN:
+                    menuCommand = new MenuCommand(MenuItemCallback_CodeWin, menuCommandID);
+                    break;
+                case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
+                    menuCommand = new MenuCommand(MenuItemCallback_FolderExplore, menuCommandID);
+                    break;
+                case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
+                    menuCommand = new MenuCommand(MenuItemCallback_FolderNode, menuCommandID);
+                    break;
+                default:
+                    Logger.Log(new ArgumentException("Invalid menuCommandType=" + commandPlacement));
+                    menuCommand = null;
+                    break;
             }
 
             commandService.AddCommand(menuCommand);
@@ -67,27 +78,37 @@ namespace OpenInAppGimp.Commands
 
         private void MenuItemCallback_FolderExplore(object sender, EventArgs e)
         {
-            MenuItemCallback(true);
+            MenuItemCallback(CommandPlacement.IDM_VS_CTXT_ITEMNODE);
         }
 
         private void MenuItemCallback_CodeWin(object sender, EventArgs e)
         {
-            MenuItemCallback(false);
+            MenuItemCallback(CommandPlacement.IDM_VS_CTXT_CODEWIN);
         }
 
-        private void MenuItemCallback(bool isFromSolutionExplorer)
+        private void MenuItemCallback_FolderNode(object sender, EventArgs e)
+        {
+            MenuItemCallback(CommandPlacement.IDM_VS_CTXT_FOLDERNODE);
+        }
+
+        private void MenuItemCallback(CommandPlacement commandPlacement)
         {
             var menuItemCallBackHelper = new MenuItemCallBackHelper();
 
-            var constantsForApp = new ConstantsForApp();
+            var keyToExecutableEnum = GeneralOptions.keyToExecutableEnum;//KeyToExecutableEnum.Abracadabra;
 
-            var invokeCommandCallBackDto = constantsForApp.GetInvokeCommandCallBackDto(
+            var applicationToOpenDto = new ApplicationToOpenHelper().GetApplicationToOpenDto(keyToExecutableEnum);
+
+            var invokeCommandCallBackDto = constantsForAppCommon.GetInvokeCommandCallBackDto(
                 VSPackage.Options.ActualPathToExe,
                 VSPackage.Options.FileQuantityWarningLimit,
-                isFromSolutionExplorer ? CommandPlacement.IDM_VS_CTXT_ITEMNODE : CommandPlacement.IDM_VS_CTXT_CODEWIN, 
+                commandPlacement,
                 ServiceProvider,
                 VSPackage.Options.SuppressTypicalFileExtensionsWarning,
-                VSPackage.Options.TypicalFileExtensions);
+                VSPackage.Options.TypicalFileExtensions,
+                constantsForAppCommon.Caption,
+                applicationToOpenDto,
+                GeneralOptions.keyToExecutableEnum.Description());
 
             var persistOptionsDto = menuItemCallBackHelper.InvokeCommandCallBack(invokeCommandCallBackDto);
 

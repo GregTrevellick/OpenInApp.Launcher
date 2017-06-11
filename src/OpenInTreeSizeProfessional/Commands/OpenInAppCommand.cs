@@ -2,7 +2,7 @@
 using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
 using OpenInApp.Common.Helpers.Dtos;
-using OpenInTreeSizeProfessional.Helpers;
+using OpenInTreeSizeProfessional.Options.TreeSizeProfessional;
 using System;
 using System.ComponentModel.Design;
 
@@ -10,12 +10,13 @@ namespace OpenInTreeSizeProfessional.Commands
 {
     internal sealed class OpenInAppCommand
     {
-        private string Caption { get { return ConstantsForApp.Caption; } }
+        private string Caption { get { return constantsForAppCommon.Caption; } }
         public readonly Guid CommandSet = new Guid(PackageGuids.guidOpenInVsCmdSetString);
         public OpenInAppCommand Instance { get; private set; }
 
         private readonly Package _package;
         private IServiceProvider ServiceProvider => _package;
+        private ConstantsForAppCommon constantsForAppCommon = new ConstantsForAppCommon(Vsix.Name, Vsix.Version);
 
         public OpenInAppCommand()
         {
@@ -43,6 +44,7 @@ namespace OpenInTreeSizeProfessional.Commands
                 {
                     AddMenuCommand(commandService, PackageIds.CmdIdOpenInAppFolderExplore, CommandPlacement.IDM_VS_CTXT_ITEMNODE);
                     AddMenuCommand(commandService, PackageIds.CmdIdOpenInAppCodeWin, CommandPlacement.IDM_VS_CTXT_CODEWIN);
+                    //Comment out to exclude folders / un-comment to include folders 
                     AddMenuCommand(commandService, PackageIds.CmdIdOpenInAppFolderNode, CommandPlacement.IDM_VS_CTXT_FOLDERNODE);
                 }
             }
@@ -93,15 +95,20 @@ namespace OpenInTreeSizeProfessional.Commands
         {
             var menuItemCallBackHelper = new MenuItemCallBackHelper();
 
-            var constantsForApp = new ConstantsForApp();
+            var keyToExecutableEnum = GeneralOptions.keyToExecutableEnum;//KeyToExecutableEnum.Abracadabra;
 
-            var invokeCommandCallBackDto = constantsForApp.GetInvokeCommandCallBackDto(
+            var applicationToOpenDto = new ApplicationToOpenHelper().GetApplicationToOpenDto(keyToExecutableEnum);
+
+            var invokeCommandCallBackDto = constantsForAppCommon.GetInvokeCommandCallBackDto(
                 VSPackage.Options.ActualPathToExe,
                 VSPackage.Options.FileQuantityWarningLimit,
                 commandPlacement,
                 ServiceProvider,
                 VSPackage.Options.SuppressTypicalFileExtensionsWarning,
-                VSPackage.Options.TypicalFileExtensions);
+                VSPackage.Options.TypicalFileExtensions,
+                constantsForAppCommon.Caption,
+                applicationToOpenDto,
+                GeneralOptions.keyToExecutableEnum.Description());
 
             var persistOptionsDto = menuItemCallBackHelper.InvokeCommandCallBack(invokeCommandCallBackDto);
 

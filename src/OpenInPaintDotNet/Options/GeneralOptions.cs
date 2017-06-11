@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
-using OpenInAppPaintDotNet.Helpers;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
 
@@ -9,21 +9,25 @@ namespace OpenInAppPaintDotNet.Options.PaintDotNet
 {
     public class GeneralOptions : DialogPage
     {
+        internal static KeyToExecutableEnum keyToExecutableEnum = KeyToExecutableEnum.PaintDotNet;
+        private IEnumerable<string> defaultTypicalFileExtensions = new ConstantsForAppCommon().GetDefaultTypicalFileExtensions(keyToExecutableEnum);
+        private const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableString.PaintDotNet;
+
         [Category(CommonConstants.CategorySubLevel)]
-        [DisplayName(ConstantsForApp.CommonActualPathToExeOptionLabel)]
+        [DisplayName(CommonActualPathToExeOptionLabel)]
         [Description(CommonConstants.ActualPathToExeOptionDetailedDescription)]
         public string ActualPathToExe { get; set; }
 
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.TypicalFileExtensionsOptionLabel)]
         [Description(CommonConstants.TypicalFileExtensionsOptionDetailedDescription)]
-        public string TypicalFileExtensions 
+        // Set to 'internal' to hide in Tools > Options for folder based apps
+        public string TypicalFileExtensions
         {
             get
             {
                 if (string.IsNullOrEmpty(typicalFileExtensions))
                 {
-                    var defaultTypicalFileExtensions = new ConstantsForApp().GetDefaultTypicalFileExtensions();
                     return CommonFileHelper.GetDefaultTypicalFileExtensionsAsCsv(defaultTypicalFileExtensions);
                 }
                 else
@@ -40,6 +44,7 @@ namespace OpenInAppPaintDotNet.Options.PaintDotNet
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.SuppressTypicalFileExtensionsWarningOptionLabel)]
         [Description(CommonConstants.SuppressTypicalFileExtensionsWarningDetailedDescription)]
+        // Set to 'internal' to hide in Tools > Options for folder based apps
         public bool SuppressTypicalFileExtensionsWarning { get; set; } = false;
 
         [Category(CommonConstants.CategorySubLevel)]
@@ -66,7 +71,7 @@ namespace OpenInAppPaintDotNet.Options.PaintDotNet
                 {
                     MessageBox.Show(
                         CommonConstants.FileQuantityWarningLimitInvalid,
-                        ConstantsForApp.Caption,
+                        new ConstantsForAppCommon().Caption,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
@@ -103,20 +108,15 @@ namespace OpenInAppPaintDotNet.Options.PaintDotNet
 
             if (string.IsNullOrEmpty(TypicalFileExtensions))
             {
-                TypicalFileExtensions = GetTypicalFileExtensions();
+                TypicalFileExtensions = CommonFileHelper.GetDefaultTypicalFileExtensionsAsCsv(defaultTypicalFileExtensions);
             }
 
             if (string.IsNullOrEmpty(ActualPathToExe))
             {
-                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.KeyToExecutableEnum);
+                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(keyToExecutableEnum);
             }
 
             previousActualPathToExe = ActualPathToExe;
-        }
-
-        private string GetTypicalFileExtensions()
-        {
-            return CommonFileHelper.GetDefaultTypicalFileExtensionsAsCsv(new ConstantsForApp().GetDefaultTypicalFileExtensions());
         }
 
         private string previousActualPathToExe { get; set; }
@@ -137,7 +137,9 @@ namespace OpenInAppPaintDotNet.Options.PaintDotNet
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 
-                    var filePrompterHelper = new FilePrompterHelper(ConstantsForApp.Caption, ConstantsForApp.KeyToExecutableEnum.Description());
+                    var caption = new ConstantsForAppCommon().Caption;
+
+                    var filePrompterHelper = new FilePrompterHelper(caption, keyToExecutableEnum.Description());
 
                     var persistOptionsDto = filePrompterHelper.PromptForActualExeFile(ActualPathToExe);
 

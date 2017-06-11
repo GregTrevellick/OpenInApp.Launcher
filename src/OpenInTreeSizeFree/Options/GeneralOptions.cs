@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
-using OpenInTreeSizeFree.Helpers;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
 
@@ -9,21 +9,25 @@ namespace OpenInTreeSizeFree.Options.TreeSizeFree
 {
     public class GeneralOptions : DialogPage
     {
+        internal static KeyToExecutableEnum keyToExecutableEnum = KeyToExecutableEnum.TreeSizeFree;
+        private IEnumerable<string> defaultTypicalFileExtensions = new ConstantsForAppCommon().GetDefaultTypicalFileExtensions(keyToExecutableEnum);
+        private const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableString.TreeSizeFree;
+
         [Category(CommonConstants.CategorySubLevel)]
-        [DisplayName(ConstantsForApp.CommonActualPathToExeOptionLabel)]
+        [DisplayName(CommonActualPathToExeOptionLabel)]
         [Description(CommonConstants.ActualPathToExeOptionDetailedDescription)]
         public string ActualPathToExe { get; set; }
 
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.TypicalFileExtensionsOptionLabel)]
         [Description(CommonConstants.TypicalFileExtensionsOptionDetailedDescription)]
-        internal string TypicalFileExtensions 
+        // Set to 'internal' to hide in Tools > Options for folder based apps
+        internal string TypicalFileExtensions
         {
             get
             {
                 if (string.IsNullOrEmpty(typicalFileExtensions))
                 {
-                    var defaultTypicalFileExtensions = new ConstantsForApp().GetDefaultTypicalFileExtensions();
                     return CommonFileHelper.GetDefaultTypicalFileExtensionsAsCsv(defaultTypicalFileExtensions);
                 }
                 else
@@ -40,7 +44,8 @@ namespace OpenInTreeSizeFree.Options.TreeSizeFree
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.SuppressTypicalFileExtensionsWarningOptionLabel)]
         [Description(CommonConstants.SuppressTypicalFileExtensionsWarningDetailedDescription)]
-        internal bool SuppressTypicalFileExtensionsWarning { get; set; } = false;
+        // Set to 'internal' to hide in Tools > Options for folder based apps
+        public bool SuppressTypicalFileExtensionsWarning { get; set; } = false;
 
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.FileQuantityWarningLimitOptionLabel)]
@@ -66,7 +71,7 @@ namespace OpenInTreeSizeFree.Options.TreeSizeFree
                 {
                     MessageBox.Show(
                         CommonConstants.FileQuantityWarningLimitInvalid,
-                        ConstantsForApp.Caption,
+                        new ConstantsForAppCommon().Caption,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
@@ -103,20 +108,15 @@ namespace OpenInTreeSizeFree.Options.TreeSizeFree
 
             if (string.IsNullOrEmpty(TypicalFileExtensions))
             {
-                TypicalFileExtensions = GetTypicalFileExtensions();
+                TypicalFileExtensions = CommonFileHelper.GetDefaultTypicalFileExtensionsAsCsv(defaultTypicalFileExtensions);
             }
 
             if (string.IsNullOrEmpty(ActualPathToExe))
             {
-                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(ConstantsForApp.KeyToExecutableEnum);
+                ActualPathToExe = GeneralOptionsHelper.GetActualPathToExe(keyToExecutableEnum);
             }
 
             previousActualPathToExe = ActualPathToExe;
-        }
-
-        private string GetTypicalFileExtensions()
-        {
-            return CommonFileHelper.GetDefaultTypicalFileExtensionsAsCsv(new ConstantsForApp().GetDefaultTypicalFileExtensions());
         }
 
         private string previousActualPathToExe { get; set; }
@@ -128,7 +128,7 @@ namespace OpenInTreeSizeFree.Options.TreeSizeFree
             if (ActualPathToExe != previousActualPathToExe)
             {
                 actualPathToExeChanged = true;
-                previousActualPathToExe = ActualPathToExe; 
+                previousActualPathToExe = ActualPathToExe;
             }
 
             if (actualPathToExeChanged)
@@ -137,7 +137,9 @@ namespace OpenInTreeSizeFree.Options.TreeSizeFree
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 
-                    var filePrompterHelper = new FilePrompterHelper(ConstantsForApp.Caption, ConstantsForApp.KeyToExecutableEnum.Description());
+                    var caption = new ConstantsForAppCommon().Caption;
+
+                    var filePrompterHelper = new FilePrompterHelper(caption, keyToExecutableEnum.Description());
 
                     var persistOptionsDto = filePrompterHelper.PromptForActualExeFile(ActualPathToExe);
 

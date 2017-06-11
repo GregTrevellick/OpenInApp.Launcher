@@ -95,7 +95,7 @@ namespace OpenInAbracadabra.Commands
         {
             var menuItemCallBackHelper = new MenuItemCallBackHelper();
 
-            var keyToExecutableEnum = KeyToExecutableEnum.Abracadabra;
+            var keyToExecutableEnum = GeneralOptions.keyToExecutableEnum;//KeyToExecutableEnum.Abracadabra;
 
             var applicationToOpenDto = new ApplicationToOpenHelper().GetApplicationToOpenDto(keyToExecutableEnum);
 
