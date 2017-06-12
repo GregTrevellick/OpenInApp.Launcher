@@ -110,12 +110,23 @@
       <HintPath>..\packages\Microsoft.VisualStudio.Validation.14.1.111\lib\net45\Microsoft.VisualStudio.Validation.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System" />
     <Reference Include="VsixLogger, Version=1.1.44.0, Culture=neutral, PublicKeyToken=29d32695dc822296, processorArchitecture=MSIL">
       <HintPath>..\packages\VsixLogger.1.1.44.0\lib\net45\VsixLogger.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenInApp.Command\OpenInApp.Command.csproj">
+      <Project>{fb454d10-d473-4e49-a289-9bb8713da1a1}</Project>
+      <Name>OpenInApp.Command</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenInApp.Common\OpenInApp.Common.csproj">
+      <Project>{78680fb3-22e5-4200-9756-2c2cec66161d}</Project>
+      <Name>OpenInApp.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />

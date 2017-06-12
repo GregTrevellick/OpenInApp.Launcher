@@ -1,15 +1,33 @@
 ﻿using Microsoft.VisualStudio.Shell;
+using OpenInApp.Command;
+using OpenInApp.Common.Helpers;
+using OpenInApp.Common.Helpers.Dtos;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.Design;
 
 namespace OpenInApp.Menu.Core
 {
     public class MenuCore
     {
-        public OpenInAppCommand(Package package)
+        private string Caption { get { return constantsForAppCommon.Caption; } }
+        public readonly Guid CommandSet;
+        public OpenInAppCommand Instance { get; private set; }
+
+        private readonly Package _package;
+        private IServiceProvider ServiceProvider => _package;
+        private ConstantsForAppCommon constantsForAppCommon;
+        private string _vsixName;
+        private string _vsixVersion;
+
+        public MenuCore(string vsixName, string vsixVersion, string packageGuidsDotGuidOpenInVsCmdSetString)
+        {
+            _vsixName = vsixName;
+            _vsixVersion = vsixVersion;
+            constantsForAppCommon = new ConstantsForAppCommon(_vsixName, _vsixVersion);
+            CommandSet = new Guid(packageGuidsDotGuidOpenInVsCmdSetString);
+        }
+
+        private void OpenInAppCommand(Package package)
         {
             Logger.Initialize(ServiceProvider, Caption);
 
