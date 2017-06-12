@@ -27,17 +27,21 @@ namespace OpenInAbracadabra.Commands
         {
             Instance = new OpenInAppCommand(package);
 
-            //var menuCore = new MenuCore(
-            //    Vsix.Name, Vsix.Version,
-            //    PackageGuids.guidOpenInVsCmdSetString,
-            //    PackageIds.CmdIdOpenInAppFolderExplore, PackageIds.CmdIdOpenInAppCodeWin, 
-            //    PackageIds.CmdIdOpenInAppFolderNode,
-            //    GeneralOptions.keyToExecutableEnum,
-            //    VSPackage.Options.ActualPathToExe,
-            //    VSPackage.Options.FileQuantityWarningLimit,
-            //    VSPackage.Options.SuppressTypicalFileExtensionsWarning,
-            //    VSPackage.Options.TypicalFileExtensions);
-            //menuCore.MenuCoreOpenInAppCommand(package);
+            var menuCore = new MenuCore(
+                Vsix.Name, Vsix.Version,
+                PackageGuids.guidOpenInVsCmdSetString,
+                PackageIds.CmdIdOpenInAppFolderExplore, 
+                PackageIds.CmdIdOpenInAppCodeWin,
+                null,//PackageIds.CmdIdOpenInAppFolderNode,
+                GeneralOptions.keyToExecutableEnum,
+                VSPackage.Options.ActualPathToExe,
+                VSPackage.Options.FileQuantityWarningLimit,
+                VSPackage.Options.SuppressTypicalFileExtensionsWarning,
+                VSPackage.Options.TypicalFileExtensions,
+                GeneralOptions.keyToExecutableEnum.Description(),
+                ServiceProvider);
+
+            menuCore.MenuCoreOpenInAppCommand(package);
         }
 
         private OpenInAppCommand(Package package)

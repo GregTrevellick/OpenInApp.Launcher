@@ -11,10 +11,10 @@ namespace OpenInApp.Menu.Core
     {
         private string Caption { get { return constantsForAppCommon.Caption; } }
         public readonly Guid CommandSet;
-        //public OpenInAppCommand Instance { get; private set; }
+        ////////////////////////////////////////////////////////////////public OpenInAppCommand Instance { get; private set; }
 
         private Package _package;
-        private IServiceProvider ServiceProvider => _package;
+        private IServiceProvider _ServiceProvider;/////////////////////////////////////////////////////////////// => _package;
         private ConstantsForAppCommon constantsForAppCommon;
         private string _vsixName;
         private string _vsixVersion;
@@ -26,20 +26,23 @@ namespace OpenInApp.Menu.Core
         private string _VSPackageDotOptionsDotFileQuantityWarningLimit;
         private bool _VSPackageDotOptionsDotSuppressTypicalFileExtensionsWarning;
         private string _VSPackageDotOptionsDotTypicalFileExtensions;
+        private string _GeneralOptionsDotKeyToExecutableEnumDotDescription;
 
         //ctor
         public MenuCore
             (
                 string vsixName, string vsixVersion, 
                 string packageGuidsDotGuidOpenInVsCmdSetString,
-                int packageIdsDotCmdIdOpenInAppFolderExplore, int packageIdsDotCmdIdOpenInAppCodeWin, 
+                int packageIdsDotCmdIdOpenInAppFolderExplore, 
+                int packageIdsDotCmdIdOpenInAppCodeWin, 
                 int? packageIdsDotCmdIdOpenInAppFolderNode,
                 KeyToExecutableEnum keyToExecutableEnum,
                 string VSPackageDotOptionsDotActualPathToExe,
                 string VSPackageDotOptionsDotFileQuantityWarningLimit,
                 bool VSPackageDotOptionsDotSuppressTypicalFileExtensionsWarning,
-                string VSPackageDotOptionsDotTypicalFileExtensions
-            )
+                string VSPackageDotOptionsDotTypicalFileExtensions,
+                string GeneralOptionsDotKeyToExecutableEnumDotDescription,
+                IServiceProvider ServiceProvider)
         {
             _vsixName = vsixName;
             _vsixVersion = vsixVersion;
@@ -53,11 +56,13 @@ namespace OpenInApp.Menu.Core
             _VSPackageDotOptionsDotFileQuantityWarningLimit = VSPackageDotOptionsDotFileQuantityWarningLimit;
             _VSPackageDotOptionsDotSuppressTypicalFileExtensionsWarning = VSPackageDotOptionsDotSuppressTypicalFileExtensionsWarning;
             _VSPackageDotOptionsDotTypicalFileExtensions = VSPackageDotOptionsDotTypicalFileExtensions;
+            _GeneralOptionsDotKeyToExecutableEnumDotDescription = GeneralOptionsDotKeyToExecutableEnumDotDescription;
+            _ServiceProvider = ServiceProvider;
         }
 
         public void MenuCoreOpenInAppCommand(Package package)
         {
-            Logger.Initialize(ServiceProvider, Caption);
+            Logger.Initialize(_ServiceProvider, Caption);
 
             if (package == null)
             {
@@ -67,7 +72,7 @@ namespace OpenInApp.Menu.Core
             else
             {
                 _package = package;
-                var commandService = ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
+                var commandService = _ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
                 if (commandService != null)
                 {
                     AddMenuCommand(commandService, _packageIdsDotCmdIdOpenInAppFolderExplore, CommandPlacement.IDM_VS_CTXT_ITEMNODE);
@@ -134,17 +139,18 @@ namespace OpenInApp.Menu.Core
                 _VSPackageDotOptionsDotActualPathToExe,
                 _VSPackageDotOptionsDotFileQuantityWarningLimit,
                 commandPlacement,
-                ServiceProvider,
+                _ServiceProvider,
                 _VSPackageDotOptionsDotSuppressTypicalFileExtensionsWarning,
                 _VSPackageDotOptionsDotTypicalFileExtensions,
                 constantsForAppCommon.Caption,
                 applicationToOpenDto,
-                GeneralOptions.keyToExecutableEnum.Description());
+                _GeneralOptionsDotKeyToExecutableEnumDotDescription);
 
             var persistOptionsDto = menuItemCallBackHelper.InvokeCommandCallBack(invokeCommandCallBackDto);
 
             if (persistOptionsDto.Persist)
             {
+                //gregt extract an interface for GeneralOptions that all projects use, then pass that interface around
                 VSPackage.Options.PersistVSToolOptions(persistOptionsDto.ValueToPersist);
             }
         }
