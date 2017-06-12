@@ -111,6 +111,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Design" />
     <Reference Include="VsixLogger, Version=1.1.44.0, Culture=neutral, PublicKeyToken=29d32695dc822296, processorArchitecture=MSIL">
       <HintPath>..\packages\VsixLogger.1.1.44.0\lib\net45\VsixLogger.dll</HintPath>
     </Reference>

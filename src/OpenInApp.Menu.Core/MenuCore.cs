@@ -18,13 +18,28 @@ namespace OpenInApp.Menu.Core
         private ConstantsForAppCommon constantsForAppCommon;
         private string _vsixName;
         private string _vsixVersion;
+        private int _packageIdsDotCmdIdOpenInAppFolderExplore;
+        private int _packageIdsDotCmdIdOpenInAppCodeWin;
+        private int _packageIdsDotCmdIdOpenInAppFolderNode;
+        private KeyToExecutableEnum _keyToExecutableEnum;
 
-        public MenuCore(string vsixName, string vsixVersion, string packageGuidsDotGuidOpenInVsCmdSetString)
+        //ctor
+        public MenuCore
+            (
+                string vsixName, string vsixVersion, 
+                string packageGuidsDotGuidOpenInVsCmdSetString,
+                int packageIdsDotCmdIdOpenInAppFolderExplore, int packageIdsDotCmdIdOpenInAppCodeWin, int packageIdsDotCmdIdOpenInAppFolderNode,
+                KeyToExecutableEnum keyToExecutableEnum
+            )
         {
             _vsixName = vsixName;
             _vsixVersion = vsixVersion;
             constantsForAppCommon = new ConstantsForAppCommon(_vsixName, _vsixVersion);
             CommandSet = new Guid(packageGuidsDotGuidOpenInVsCmdSetString);
+            _packageIdsDotCmdIdOpenInAppFolderExplore = packageIdsDotCmdIdOpenInAppFolderExplore;
+            _packageIdsDotCmdIdOpenInAppCodeWin = packageIdsDotCmdIdOpenInAppCodeWin;
+            _packageIdsDotCmdIdOpenInAppFolderNode = packageIdsDotCmdIdOpenInAppFolderNode;
+            _keyToExecutableEnum = keyToExecutableEnum;
         }
 
         private void OpenInAppCommand(Package package)
@@ -42,10 +57,10 @@ namespace OpenInApp.Menu.Core
                 var commandService = ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
                 if (commandService != null)
                 {
-                    AddMenuCommand(commandService, PackageIds.CmdIdOpenInAppFolderExplore, CommandPlacement.IDM_VS_CTXT_ITEMNODE);
-                    AddMenuCommand(commandService, PackageIds.CmdIdOpenInAppCodeWin, CommandPlacement.IDM_VS_CTXT_CODEWIN);
+                    AddMenuCommand(commandService, _packageIdsDotCmdIdOpenInAppFolderExplore, CommandPlacement.IDM_VS_CTXT_ITEMNODE);
+                    AddMenuCommand(commandService, _packageIdsDotCmdIdOpenInAppCodeWin, CommandPlacement.IDM_VS_CTXT_CODEWIN);
                     //Comment out to exclude folders / un-comment to include folders 
-                    //AddMenuCommand(commandService, PackageIds.CmdIdOpenInAppFolderNode, CommandPlacement.IDM_VS_CTXT_FOLDERNODE);
+                    AddMenuCommand(commandService, _packageIdsDotCmdIdOpenInAppFolderNode, CommandPlacement.IDM_VS_CTXT_FOLDERNODE);
                 }
             }
         }
@@ -95,7 +110,7 @@ namespace OpenInApp.Menu.Core
         {
             var menuItemCallBackHelper = new MenuItemCallBackHelper();
 
-            var keyToExecutableEnum = GeneralOptions.keyToExecutableEnum;
+            var keyToExecutableEnum = _keyToExecutableEnum;
 
             var applicationToOpenDto = new ApplicationToOpenHelper().GetApplicationToOpenDto(keyToExecutableEnum);
 

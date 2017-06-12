@@ -20,7 +20,13 @@ namespace OpenInAbracadabra.Commands
 
         public OpenInAppCommand()
         {
-            //var menuCore = new MenuCore(Vsix.Name, Vsix.Version, PackageGuids.guidOpenInVsCmdSetString);
+            //var menuCore = new MenuCore
+            //(
+            //  Vsix.Name, Vsix.Version, 
+            //  PackageGuids.guidOpenInVsCmdSetString, 
+            //  PackageIds.CmdIdOpenInAppFolderExplore, PackageIds.CmdIdOpenInAppCodeWin,PackageIds.CmdIdOpenInAppFolderNode,
+            //  GeneralOptions.keyToExecutableEnum
+            //);
         }
 
         public void Initialize(Package package)
