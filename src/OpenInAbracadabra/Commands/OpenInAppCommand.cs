@@ -3,6 +3,7 @@ using OpenInAbracadabra.Options.Abracadabra;
 using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
 using OpenInApp.Common.Helpers.Dtos;
+using OpenInApp.Menu.Core;
 using System;
 using System.ComponentModel.Design;
 
@@ -20,18 +21,23 @@ namespace OpenInAbracadabra.Commands
 
         public OpenInAppCommand()
         {
-            //var menuCore = new MenuCore
-            //(
-            //  Vsix.Name, Vsix.Version, 
-            //  PackageGuids.guidOpenInVsCmdSetString, 
-            //  PackageIds.CmdIdOpenInAppFolderExplore, PackageIds.CmdIdOpenInAppCodeWin,PackageIds.CmdIdOpenInAppFolderNode,
-            //  GeneralOptions.keyToExecutableEnum
-            //);
         }
 
         public void Initialize(Package package)
         {
             Instance = new OpenInAppCommand(package);
+
+            //var menuCore = new MenuCore(
+            //    Vsix.Name, Vsix.Version,
+            //    PackageGuids.guidOpenInVsCmdSetString,
+            //    PackageIds.CmdIdOpenInAppFolderExplore, PackageIds.CmdIdOpenInAppCodeWin, 
+            //    PackageIds.CmdIdOpenInAppFolderNode,
+            //    GeneralOptions.keyToExecutableEnum,
+            //    VSPackage.Options.ActualPathToExe,
+            //    VSPackage.Options.FileQuantityWarningLimit,
+            //    VSPackage.Options.SuppressTypicalFileExtensionsWarning,
+            //    VSPackage.Options.TypicalFileExtensions);
+            //menuCore.MenuCoreOpenInAppCommand(package);
         }
 
         private OpenInAppCommand(Package package)

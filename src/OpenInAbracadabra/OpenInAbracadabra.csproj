@@ -172,6 +172,10 @@
       <Project>{78680fb3-22e5-4200-9756-2c2cec66161d}</Project>
       <Name>OpenInApp.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OpenInApp.Menu.Core\OpenInApp.Menu.csproj">
+      <Project>{11121ef6-3549-40c2-ae73-bb24f7d6c824}</Project>
+      <Name>OpenInApp.Menu</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

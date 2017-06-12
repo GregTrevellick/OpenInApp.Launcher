@@ -11,25 +11,34 @@ namespace OpenInApp.Menu.Core
     {
         private string Caption { get { return constantsForAppCommon.Caption; } }
         public readonly Guid CommandSet;
-        public OpenInAppCommand Instance { get; private set; }
+        //public OpenInAppCommand Instance { get; private set; }
 
-        private readonly Package _package;
+        private Package _package;
         private IServiceProvider ServiceProvider => _package;
         private ConstantsForAppCommon constantsForAppCommon;
         private string _vsixName;
         private string _vsixVersion;
         private int _packageIdsDotCmdIdOpenInAppFolderExplore;
         private int _packageIdsDotCmdIdOpenInAppCodeWin;
-        private int _packageIdsDotCmdIdOpenInAppFolderNode;
+        private int? _packageIdsDotCmdIdOpenInAppFolderNode;
         private KeyToExecutableEnum _keyToExecutableEnum;
+        private string _VSPackageDotOptionsDotActualPathToExe;
+        private string _VSPackageDotOptionsDotFileQuantityWarningLimit;
+        private bool _VSPackageDotOptionsDotSuppressTypicalFileExtensionsWarning;
+        private string _VSPackageDotOptionsDotTypicalFileExtensions;
 
         //ctor
         public MenuCore
             (
                 string vsixName, string vsixVersion, 
                 string packageGuidsDotGuidOpenInVsCmdSetString,
-                int packageIdsDotCmdIdOpenInAppFolderExplore, int packageIdsDotCmdIdOpenInAppCodeWin, int packageIdsDotCmdIdOpenInAppFolderNode,
-                KeyToExecutableEnum keyToExecutableEnum
+                int packageIdsDotCmdIdOpenInAppFolderExplore, int packageIdsDotCmdIdOpenInAppCodeWin, 
+                int? packageIdsDotCmdIdOpenInAppFolderNode,
+                KeyToExecutableEnum keyToExecutableEnum,
+                string VSPackageDotOptionsDotActualPathToExe,
+                string VSPackageDotOptionsDotFileQuantityWarningLimit,
+                bool VSPackageDotOptionsDotSuppressTypicalFileExtensionsWarning,
+                string VSPackageDotOptionsDotTypicalFileExtensions
             )
         {
             _vsixName = vsixName;
@@ -40,9 +49,13 @@ namespace OpenInApp.Menu.Core
             _packageIdsDotCmdIdOpenInAppCodeWin = packageIdsDotCmdIdOpenInAppCodeWin;
             _packageIdsDotCmdIdOpenInAppFolderNode = packageIdsDotCmdIdOpenInAppFolderNode;
             _keyToExecutableEnum = keyToExecutableEnum;
+            _VSPackageDotOptionsDotActualPathToExe = VSPackageDotOptionsDotActualPathToExe;
+            _VSPackageDotOptionsDotFileQuantityWarningLimit = VSPackageDotOptionsDotFileQuantityWarningLimit;
+            _VSPackageDotOptionsDotSuppressTypicalFileExtensionsWarning = VSPackageDotOptionsDotSuppressTypicalFileExtensionsWarning;
+            _VSPackageDotOptionsDotTypicalFileExtensions = VSPackageDotOptionsDotTypicalFileExtensions;
         }
 
-        private void OpenInAppCommand(Package package)
+        public void MenuCoreOpenInAppCommand(Package package)
         {
             Logger.Initialize(ServiceProvider, Caption);
 
@@ -60,7 +73,10 @@ namespace OpenInApp.Menu.Core
                     AddMenuCommand(commandService, _packageIdsDotCmdIdOpenInAppFolderExplore, CommandPlacement.IDM_VS_CTXT_ITEMNODE);
                     AddMenuCommand(commandService, _packageIdsDotCmdIdOpenInAppCodeWin, CommandPlacement.IDM_VS_CTXT_CODEWIN);
                     //Comment out to exclude folders / un-comment to include folders 
-                    AddMenuCommand(commandService, _packageIdsDotCmdIdOpenInAppFolderNode, CommandPlacement.IDM_VS_CTXT_FOLDERNODE);
+                    if (_packageIdsDotCmdIdOpenInAppFolderNode.HasValue)
+                    {
+                        AddMenuCommand(commandService, _packageIdsDotCmdIdOpenInAppFolderNode.Value, CommandPlacement.IDM_VS_CTXT_FOLDERNODE);
+                    }
                 }
             }
         }
@@ -115,12 +131,12 @@ namespace OpenInApp.Menu.Core
             var applicationToOpenDto = new ApplicationToOpenHelper().GetApplicationToOpenDto(keyToExecutableEnum);
 
             var invokeCommandCallBackDto = constantsForAppCommon.GetInvokeCommandCallBackDto(
-                VSPackage.Options.ActualPathToExe,
-                VSPackage.Options.FileQuantityWarningLimit,
+                _VSPackageDotOptionsDotActualPathToExe,
+                _VSPackageDotOptionsDotFileQuantityWarningLimit,
                 commandPlacement,
                 ServiceProvider,
-                VSPackage.Options.SuppressTypicalFileExtensionsWarning,
-                VSPackage.Options.TypicalFileExtensions,
+                _VSPackageDotOptionsDotSuppressTypicalFileExtensionsWarning,
+                _VSPackageDotOptionsDotTypicalFileExtensions,
                 constantsForAppCommon.Caption,
                 applicationToOpenDto,
                 GeneralOptions.keyToExecutableEnum.Description());
