@@ -11,10 +11,9 @@ namespace OpenInApp.Menu.Core
     {
         private string Caption { get { return constantsForAppCommon.Caption; } }
         public readonly Guid CommandSet;
-        ////////////////////////////////////////////////////////////////public OpenInAppCommand Instance { get; private set; }
 
         private Package _package;
-        private IServiceProvider _ServiceProvider;/////////////////////////////////////////////////////////////// => _package;
+        private IServiceProvider _ServiceProvider;
         private ConstantsForAppCommon constantsForAppCommon;
         private string _vsixName;
         private string _vsixVersion;
