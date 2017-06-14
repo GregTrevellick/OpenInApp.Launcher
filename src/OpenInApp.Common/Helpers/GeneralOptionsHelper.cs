@@ -68,7 +68,14 @@ namespace OpenInApp.Common.Helpers
                 {
                     var specialFolder = (SpecialFolder)initialFolderType;
                     var initialFolder = GetFolderPath(specialFolder);
-                    path = Path.Combine(initialFolder, secondaryFilePathSegment, executableFileToBrowseFor);
+                    if (string.IsNullOrEmpty(secondaryFilePathSegment))
+                    {
+                        path = Path.Combine(initialFolder, executableFileToBrowseFor);
+                    }
+                    else
+                    {
+                        path = Path.Combine(initialFolder, secondaryFilePathSegment, executableFileToBrowseFor);
+                    }
                 }
             }
 
