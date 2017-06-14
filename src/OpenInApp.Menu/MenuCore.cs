@@ -152,7 +152,7 @@ namespace OpenInApp.Menu.Core
 
             if (persistOptionsDto.Persist)
             {
-                //VSPackage.Options.PersistVSToolOptions(persistOptionsDto.ValueToPersist);
+                //////////////////VSPackage.Options.PersistVSToolOptions(persistOptionsDto.ValueToPersist);
                 _GeneralOptions.PersistVSToolOptions(persistOptionsDto.ValueToPersist);
             }
         }
