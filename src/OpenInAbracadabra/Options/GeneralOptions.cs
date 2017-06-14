@@ -1,13 +1,14 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
+using OpenInApp.Menu;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace OpenInAbracadabra.Options.Abracadabra
 {
-    public class GeneralOptions : DialogPage
+    public class GeneralOptions : DialogPage, IGeneralOptions
     {
         internal static KeyToExecutableEnum keyToExecutableEnum = KeyToExecutableEnum.Abracadabra;
         private IEnumerable<string> defaultTypicalFileExtensions = new ConstantsForAppCommon().GetDefaultTypicalFileExtensions(keyToExecutableEnum);
@@ -153,7 +154,8 @@ namespace OpenInAbracadabra.Options.Abracadabra
             base.OnApply(e);
         }
 
-        internal void PersistVSToolOptions(string fileName)
+        ///////////////////////////internal void PersistVSToolOptions(string fileName)
+        public void PersistVSToolOptions(string fileName)
         {
             VSPackage.Options.ActualPathToExe = fileName;
             VSPackage.Options.SaveSettingsToStorage();
