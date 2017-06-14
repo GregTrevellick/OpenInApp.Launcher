@@ -20,6 +20,10 @@ namespace OpenInApp.Common.Helpers
 
             switch (keyToExecutableEnum)
             {
+                case KeyToExecutableEnum.Abracadabra:
+                    applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
+                    applicationToOpenDto.SecondaryFilePathSegment = @"JAM Software\TreeSize Free";
+                    break;
                 case KeyToExecutableEnum.AltovaXMLSpy:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Altova\XMLSpy2016";
                     applicationToOpenDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;

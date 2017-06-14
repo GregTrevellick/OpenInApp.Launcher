@@ -7,7 +7,7 @@ namespace OpenInApp.Common.Helpers
     /// </summary>
     public static class KeyToExecutableString
     {
-        public const string Abracadabra = "notepad.exe"; 
+        public const string Abracadabra = "TreeSizeFree.exe"; 
         public const string AltovaXMLSpy = "XMLSpy.exe";
         public const string ChromeCanary = "chrome.exe";
         public const string Emacs = "runemacs.exe";
@@ -32,7 +32,7 @@ namespace OpenInApp.Common.Helpers
 
     public enum KeyToExecutableEnum
     {
-        [Description("notepad.exe")]
+        [Description("TreeSizeFree.exe")]
         Abracadabra,
 
         [Description("XMLSpy.exe")]
