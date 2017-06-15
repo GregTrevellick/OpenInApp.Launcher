@@ -5,7 +5,7 @@ using OpenInApp.Common.Helpers.Dtos;
 using System;
 using System.ComponentModel.Design;
 
-namespace OpenInApp.Menu.Core
+namespace OpenInApp.Menu
 {
     public class MenuCore
     {
