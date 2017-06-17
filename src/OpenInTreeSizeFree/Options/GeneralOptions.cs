@@ -1,13 +1,14 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
+using OpenInApp.Menu;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace OpenInTreeSizeFree.Options.TreeSizeFree
 {
-    public class GeneralOptions : DialogPage
+    public class GeneralOptions : DialogPage, IGeneralOptionsFolder
     {
         internal static KeyToExecutableEnum keyToExecutableEnum = KeyToExecutableEnum.TreeSizeFree;
         private IEnumerable<string> defaultTypicalFileExtensions = new ConstantsForAppCommon().GetDefaultTypicalFileExtensions(keyToExecutableEnum);
@@ -45,7 +46,7 @@ namespace OpenInTreeSizeFree.Options.TreeSizeFree
         [DisplayName(CommonConstants.SuppressTypicalFileExtensionsWarningOptionLabel)]
         [Description(CommonConstants.SuppressTypicalFileExtensionsWarningDetailedDescription)]
         // Set to 'internal' to hide in Tools > Options for folder based apps
-        public bool SuppressTypicalFileExtensionsWarning { get; set; } = false;
+        internal bool SuppressTypicalFileExtensionsWarning { get; set; } = false;
 
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.FileQuantityWarningLimitOptionLabel)]
@@ -153,7 +154,7 @@ namespace OpenInTreeSizeFree.Options.TreeSizeFree
             base.OnApply(e);
         }
 
-        internal void PersistVSToolOptions(string fileName)
+        public void PersistVSToolOptions(string fileName)
         {
             VSPackage.Options.ActualPathToExe = fileName;
             VSPackage.Options.SaveSettingsToStorage();

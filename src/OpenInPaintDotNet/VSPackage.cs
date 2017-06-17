@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Common.Helpers;
 using OpenInAppPaintDotNet.Commands;
-using OpenInAppPaintDotNet.Options.PaintDotNet;
+using OpenInPaintDotNet.Options.PaintDotNet;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
@@ -22,7 +22,7 @@ namespace OpenInAppPaintDotNet
         {
             Options = (GeneralOptions)GetDialogPage(typeof(GeneralOptions));
 
-            new OpenInAppCommand().Initialize(this);
+            new OpenInAppCommand(this).Initialize();
             base.Initialize();
         }
     }

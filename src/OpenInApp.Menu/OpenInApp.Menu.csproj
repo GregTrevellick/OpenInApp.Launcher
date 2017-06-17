@@ -106,7 +106,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IGeneralOptions.cs" />
+    <Compile Include="IGeneralOptionsBase.cs" />
+    <Compile Include="IGeneralOptionsFolder.cs" />
+    <Compile Include="IGeneralOptionsFile.cs" />
     <Compile Include="MenuCore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

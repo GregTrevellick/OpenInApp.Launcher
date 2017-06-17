@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace OpenInAbracadabra.Options.Abracadabra
 {
-    public class GeneralOptions : DialogPage, IGeneralOptions
+    public class GeneralOptions : DialogPage, IGeneralOptionsFile
     {
         internal static KeyToExecutableEnum keyToExecutableEnum = KeyToExecutableEnum.Abracadabra;
         private IEnumerable<string> defaultTypicalFileExtensions = new ConstantsForAppCommon().GetDefaultTypicalFileExtensions(keyToExecutableEnum);
@@ -154,7 +154,6 @@ namespace OpenInAbracadabra.Options.Abracadabra
             base.OnApply(e);
         }
 
-        ///////////////////////////internal void PersistVSToolOptions(string fileName)
         public void PersistVSToolOptions(string fileName)
         {
             VSPackage.Options.ActualPathToExe = fileName;

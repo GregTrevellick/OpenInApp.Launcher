@@ -26,7 +26,7 @@ namespace OpenInApp.Menu
         private bool _VSPackageDotOptionsDotSuppressTypicalFileExtensionsWarning;
         private string _VSPackageDotOptionsDotTypicalFileExtensions;
         private string _GeneralOptionsDotKeyToExecutableEnumDotDescription;
-        private IGeneralOptions _GeneralOptions;
+        private IGeneralOptionsBase _GeneralOptions;
 
         //ctor
         public MenuCore
@@ -43,7 +43,7 @@ namespace OpenInApp.Menu
                 string VSPackageDotOptionsDotTypicalFileExtensions,
                 string GeneralOptionsDotKeyToExecutableEnumDotDescription,
                 IServiceProvider ServiceProvider,
-                IGeneralOptions GeneralOptions)
+                IGeneralOptionsBase GeneralOptions)
         {
             _vsixName = vsixName;
             _vsixVersion = vsixVersion;

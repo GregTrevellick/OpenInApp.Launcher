@@ -1,13 +1,14 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
+using OpenInApp.Menu;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace OpenInAppAltovaXmlSpy.Options.AltovaXmlSpy
 {
-    public class GeneralOptions : DialogPage
+    public class GeneralOptions : DialogPage, IGeneralOptionsFile
     {
         internal static KeyToExecutableEnum keyToExecutableEnum = KeyToExecutableEnum.AltovaXMLSpy;
         private IEnumerable<string> defaultTypicalFileExtensions = new ConstantsForAppCommon().GetDefaultTypicalFileExtensions(keyToExecutableEnum);
@@ -153,7 +154,7 @@ namespace OpenInAppAltovaXmlSpy.Options.AltovaXmlSpy
             base.OnApply(e);
         }
 
-        internal void PersistVSToolOptions(string fileName)
+        public void PersistVSToolOptions(string fileName)
         {
             VSPackage.Options.ActualPathToExe = fileName;
             VSPackage.Options.SaveSettingsToStorage();

@@ -45,7 +45,7 @@ namespace OpenInTreeSizeProfessional.Options.TreeSizeProfessional
         [DisplayName(CommonConstants.SuppressTypicalFileExtensionsWarningOptionLabel)]
         [Description(CommonConstants.SuppressTypicalFileExtensionsWarningDetailedDescription)]
         // Set to 'internal' to hide in Tools > Options for folder based apps
-        public bool SuppressTypicalFileExtensionsWarning { get; set; } = false;
+        internal bool SuppressTypicalFileExtensionsWarning { get; set; } = false;
 
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.FileQuantityWarningLimitOptionLabel)]
