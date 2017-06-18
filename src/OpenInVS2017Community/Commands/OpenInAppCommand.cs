@@ -1,11 +1,8 @@
 ﻿using Microsoft.VisualStudio.Shell;
-using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
-using OpenInApp.Common.Helpers.Dtos;
 using OpenInApp.Menu;
 using OpenInVS2017Community.Options.VS2017Community;
 using System;
-using System.ComponentModel.Design;
 
 namespace OpenInVS2017Community.Commands
 {

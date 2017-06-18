@@ -1,11 +1,8 @@
 ﻿using Microsoft.VisualStudio.Shell;
-using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
-using OpenInApp.Common.Helpers.Dtos;
+using OpenInApp.Menu;
 using OpenInChromeCanary.Options.ChromeCanary;
 using System;
-using System.ComponentModel.Design;
-using OpenInApp.Menu;
 
 namespace OpenInChromeCanary.Commands
 {

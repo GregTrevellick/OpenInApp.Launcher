@@ -1,11 +1,8 @@
 ﻿using Microsoft.VisualStudio.Shell;
-using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
-using OpenInApp.Common.Helpers.Dtos;
+using OpenInApp.Menu;
 using OpenInVS2012.Options.VS2012;
 using System;
-using System.ComponentModel.Design;
-using OpenInApp.Menu;
 
 namespace OpenInVS2012.Commands
 {

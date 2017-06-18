@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Command;
 using OpenInApp.Common.Helpers;
+using OpenInApp.Menu;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
-using OpenInApp.Menu;
 
 namespace OpenInXamarinStudio.Options.XamarinStudio
 {
