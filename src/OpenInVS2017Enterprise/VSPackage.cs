@@ -22,7 +22,7 @@ namespace OpenInVS2017Enterprise
         {
             Options = (GeneralOptions)GetDialogPage(typeof(GeneralOptions));
 
-            new OpenInAppCommand().Initialize(this);
+            new OpenInAppCommand(this).Initialize();
             base.Initialize();
         }
     }

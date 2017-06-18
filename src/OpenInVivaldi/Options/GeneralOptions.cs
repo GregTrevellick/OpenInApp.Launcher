@@ -4,10 +4,11 @@ using OpenInApp.Common.Helpers;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
+using OpenInApp.Menu;
 
 namespace OpenInVivaldi.Options.Vivaldi
 {
-    public class GeneralOptions : DialogPage
+    public class GeneralOptions : DialogPage, IGeneralOptionsFile
     {
         internal static KeyToExecutableEnum keyToExecutableEnum = KeyToExecutableEnum.Vivaldi;
         private IEnumerable<string> defaultTypicalFileExtensions = new ConstantsForAppCommon().GetDefaultTypicalFileExtensions(keyToExecutableEnum);
@@ -153,7 +154,7 @@ namespace OpenInVivaldi.Options.Vivaldi
             base.OnApply(e);
         }
 
-        internal void PersistVSToolOptions(string fileName)
+        public void PersistVSToolOptions(string fileName)
         {
             VSPackage.Options.ActualPathToExe = fileName;
             VSPackage.Options.SaveSettingsToStorage();
