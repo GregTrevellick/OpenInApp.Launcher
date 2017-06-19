@@ -14,11 +14,11 @@ namespace OpenInApp.Menu
 
         private bool _suppressTypicalFileExtensionsWarning;
         private ConstantsForAppCommon constantsForAppCommon;
-        private IGeneralOptionsBase _GeneralOptions;
+        private IGeneralOptionsBase _generalOptions;
         private int _cmdIdOpenInAppCodeWin;
         private int _cmdIdOpenInAppFolderExplore;
         private int? _cmdIdOpenInAppFolderNode;
-        private IServiceProvider _ServiceProvider;
+        private IServiceProvider _serviceProvider;
         private KeyToExecutableEnum _keyToExecutableEnum;
         private string _actualPathToExe;
         private string _fileQuantityWarningLimit;
@@ -49,10 +49,10 @@ namespace OpenInApp.Menu
             _cmdIdOpenInAppFolderExplore = cmdIdOpenInAppFolderExplore;
             _cmdIdOpenInAppFolderNode = cmdIdOpenInAppFolderNode;
             _fileQuantityWarningLimit = fileQuantityWarningLimit;
-            _GeneralOptions = generalOptions;
+            _generalOptions = generalOptions;
             _keyToExecutableEnum = keyToExecutableEnum;
             _keyToExecutableEnumDotDescription = keyToExecutableEnumDotDescription;
-            _ServiceProvider = serviceProvider;
+            _serviceProvider = serviceProvider;
             _suppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning;
             _typicalFileExtensions = typicalFileExtensions;
             _vsixName = vsixName;
@@ -63,7 +63,7 @@ namespace OpenInApp.Menu
 
         public void MenuCoreOpenInAppCommand(Package package)
         {
-            Logger.Initialize(_ServiceProvider, Caption);
+            Logger.Initialize(_serviceProvider, Caption);
 
             if (package == null)
             {
@@ -72,7 +72,7 @@ namespace OpenInApp.Menu
             }
             else
             {
-                var commandService = _ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
+                var commandService = _serviceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
                 if (commandService != null)
                 {
                     AddMenuCommand(commandService, _cmdIdOpenInAppFolderExplore, CommandPlacement.IDM_VS_CTXT_ITEMNODE);
@@ -135,11 +135,12 @@ namespace OpenInApp.Menu
 
             var applicationToOpenDto = new ApplicationToOpenHelper().GetApplicationToOpenDto(keyToExecutableEnum);
 
-            var invokeCommandCallBackDto = constantsForAppCommon.GetInvokeCommandCallBackDto(
+            //////var invokeCommandCallBackDto = constantsForAppCommon.GetInvokeCommandCallBackDto(
+            var invokeCommandCallBackDto = GetInvokeCommandCallBackDto(
                 _actualPathToExe,
                 _fileQuantityWarningLimit,
                 commandPlacement,
-                _ServiceProvider,
+                _serviceProvider,
                 _suppressTypicalFileExtensionsWarning,
                 _typicalFileExtensions,
                 constantsForAppCommon.Caption,
@@ -150,8 +151,37 @@ namespace OpenInApp.Menu
 
             if (persistOptionsDto.Persist)
             {
-                _GeneralOptions.PersistVSToolOptions(persistOptionsDto.ValueToPersist);
+                _generalOptions.PersistVSToolOptions(persistOptionsDto.ValueToPersist);
             }
+        }
+
+        private InvokeCommandCallBackDto GetInvokeCommandCallBackDto(
+            string actualPathToExe,
+            string fileQuantityWarningLimit,
+            CommandPlacement commandPlacement,
+            IServiceProvider serviceProvider,
+            bool suppressTypicalFileExtensionsWarning,
+            string typicalFileExtensions,
+            string caption,
+            ApplicationToOpenDto applicationToOpenDto,
+            string keyToExecutableEnumDescription)
+        {
+            return new InvokeCommandCallBackDto
+            {
+                ActualPathToExe = actualPathToExe,
+                FileQuantityWarningLimit = fileQuantityWarningLimit,
+                CommandPlacement = commandPlacement,
+                ServiceProvider = serviceProvider,
+                SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,
+                TypicalFileExtensions = typicalFileExtensions,
+                Caption = caption,
+
+                ArtefactTypeToOpen = applicationToOpenDto.ArtefactTypeToOpen,
+                SeparateProcessPerFileToBeOpened = applicationToOpenDto.SeparateProcessPerFileToBeOpened,
+                UseShellExecute = applicationToOpenDto.UseShellExecute,
+
+                ExecutableFileToBrowseFor = keyToExecutableEnumDescription
+            };
         }
     }
 }

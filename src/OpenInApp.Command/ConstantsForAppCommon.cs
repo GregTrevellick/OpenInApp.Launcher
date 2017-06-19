@@ -33,31 +33,33 @@ namespace OpenInApp.Command
             return new ApplicationToOpenHelper().GetApplicationToOpenDto(keyToExecutableEnum).DefaultTypicalFileExtensions;
         }
 
-        public InvokeCommandCallBackDto GetInvokeCommandCallBackDto(
-           string actualPathToExe,
-           string fileQuantityWarningLimit,
-           CommandPlacement commandPlacement,
-           IServiceProvider serviceProvider,
-           bool suppressTypicalFileExtensionsWarning,
-           string typicalFileExtensions,
-           string Caption,
-           ApplicationToOpenDto ApplicationToOpenDto,
-           string KeyToExecutableEnumDescription)
-        {
-            return new InvokeCommandCallBackDto
-            {
-                ActualPathToExe = actualPathToExe,
-                ArtefactTypeToOpen = ApplicationToOpenDto.ArtefactTypeToOpen,
-                Caption = Caption,
-                ExecutableFileToBrowseFor = KeyToExecutableEnumDescription,
-                FileQuantityWarningLimit = fileQuantityWarningLimit,
-                CommandPlacement = commandPlacement,
-                SeparateProcessPerFileToBeOpened = ApplicationToOpenDto.SeparateProcessPerFileToBeOpened,
-                ServiceProvider = serviceProvider,
-                SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,
-                TypicalFileExtensions = typicalFileExtensions,
-                UseShellExecute = ApplicationToOpenDto.UseShellExecute
-            };
-        }
+        //////public InvokeCommandCallBackDto GetInvokeCommandCallBackDto(
+        //////   string actualPathToExe,
+        //////   string fileQuantityWarningLimit,
+        //////   CommandPlacement commandPlacement,
+        //////   IServiceProvider serviceProvider,
+        //////   bool suppressTypicalFileExtensionsWarning,
+        //////   string typicalFileExtensions,
+        //////   string caption,
+        //////   ApplicationToOpenDto applicationToOpenDto,
+        //////   string keyToExecutableEnumDescription)
+        //////{
+        //////    return new InvokeCommandCallBackDto
+        //////    {
+        //////        ActualPathToExe = actualPathToExe,
+        //////        FileQuantityWarningLimit = fileQuantityWarningLimit,
+        //////        CommandPlacement = commandPlacement,
+        //////        ServiceProvider = serviceProvider,
+        //////        SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,
+        //////        TypicalFileExtensions = typicalFileExtensions,
+        //////        Caption = caption,
+
+        //////        ArtefactTypeToOpen = applicationToOpenDto.ArtefactTypeToOpen,
+        //////        SeparateProcessPerFileToBeOpened = applicationToOpenDto.SeparateProcessPerFileToBeOpened,
+        //////        UseShellExecute = applicationToOpenDto.UseShellExecute,
+
+        //////        ExecutableFileToBrowseFor = keyToExecutableEnumDescription
+        //////    };
+        //////}
     }
 }
