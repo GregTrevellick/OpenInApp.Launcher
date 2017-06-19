@@ -12,7 +12,6 @@ namespace OpenInApp.Menu
         private string Caption { get { return constantsForAppCommon.Caption; } }
         public readonly Guid CommandSet;
 
-        //////////////////////////////////////////private Package _package;///////////////////////unused ?
         private bool _suppressTypicalFileExtensionsWarning;
         private ConstantsForAppCommon constantsForAppCommon;
         private IGeneralOptionsBase _GeneralOptions;
@@ -73,7 +72,6 @@ namespace OpenInApp.Menu
             }
             else
             {
-                ///////////////////////////////////////////_package = package;
                 var commandService = _ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
                 if (commandService != null)
                 {
@@ -99,11 +97,11 @@ namespace OpenInApp.Menu
                 case CommandPlacement.IDM_VS_CTXT_CODEWIN:
                     menuCommand = new MenuCommand(MenuItemCallback_CodeWin, menuCommandID);
                     break;
-                case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
-                    menuCommand = new MenuCommand(MenuItemCallback_FolderExplore, menuCommandID);
-                    break;
                 case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
                     menuCommand = new MenuCommand(MenuItemCallback_FolderNode, menuCommandID);
+                    break;
+                case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
+                    menuCommand = new MenuCommand(MenuItemCallback_ItemNode, menuCommandID);
                     break;
                 default:
                     Logger.Log(new ArgumentException("Invalid menuCommandType=" + commandPlacement));
@@ -114,11 +112,6 @@ namespace OpenInApp.Menu
             commandService.AddCommand(menuCommand);
         }
 
-        private void MenuItemCallback_FolderExplore(object sender, EventArgs e)
-        {
-            MenuItemCallback(CommandPlacement.IDM_VS_CTXT_ITEMNODE);
-        }
-
         private void MenuItemCallback_CodeWin(object sender, EventArgs e)
         {
             MenuItemCallback(CommandPlacement.IDM_VS_CTXT_CODEWIN);
@@ -127,6 +120,11 @@ namespace OpenInApp.Menu
         private void MenuItemCallback_FolderNode(object sender, EventArgs e)
         {
             MenuItemCallback(CommandPlacement.IDM_VS_CTXT_FOLDERNODE);
+        }
+
+        private void MenuItemCallback_ItemNode(object sender, EventArgs e)
+        {
+            MenuItemCallback(CommandPlacement.IDM_VS_CTXT_ITEMNODE);
         }
 
         private void MenuItemCallback(CommandPlacement commandPlacement)
