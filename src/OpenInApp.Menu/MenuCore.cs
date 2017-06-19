@@ -9,23 +9,23 @@ namespace OpenInApp.Menu
 {
     public class MenuCore
     {
-        private string Caption { get { return constantsForAppCommon.Caption; } }
+        private string Caption { get { return _constantsForAppCommon.Caption; } }
         public readonly Guid CommandSet;
 
-        private bool _suppressTypicalFileExtensionsWarning;
-        private ConstantsForAppCommon constantsForAppCommon;
-        private IGeneralOptionsBase _generalOptions;
-        private int _cmdIdOpenInAppCodeWin;
-        private int _cmdIdOpenInAppFolderExplore;
-        private int? _cmdIdOpenInAppFolderNode;
-        private IServiceProvider _serviceProvider;
-        private KeyToExecutableEnum _keyToExecutableEnum;
-        private string _actualPathToExe;
-        private string _fileQuantityWarningLimit;
-        private string _keyToExecutableEnumDotDescription;
-        private string _typicalFileExtensions;
-        private string _vsixName;
-        private string _vsixVersion;
+        private readonly bool _suppressTypicalFileExtensionsWarning;
+        private readonly ConstantsForAppCommon _constantsForAppCommon;
+        private readonly IGeneralOptionsBase _generalOptions;
+        private readonly int _cmdIdOpenInAppCodeWin;
+        private readonly int _cmdIdOpenInAppFolderExplore;
+        private readonly int? _cmdIdOpenInAppFolderNode;
+        private readonly IServiceProvider _serviceProvider;
+        private readonly KeyToExecutableEnum _keyToExecutableEnum;
+        private readonly string _actualPathToExe;
+        private readonly string _fileQuantityWarningLimit;
+        private readonly string _keyToExecutableEnumDotDescription;
+        private readonly string _typicalFileExtensions;
+        private readonly string _vsixName;
+        private readonly string _vsixVersion;
 
         //ctor
         public MenuCore(
@@ -58,7 +58,7 @@ namespace OpenInApp.Menu
             _vsixName = vsixName;
             _vsixVersion = vsixVersion;
             CommandSet = new Guid(packageGuidsDotGuidOpenInVsCmdSetString);
-            constantsForAppCommon = new ConstantsForAppCommon(_vsixName, _vsixVersion);
+            _constantsForAppCommon = new ConstantsForAppCommon(_vsixName, _vsixVersion);
         }
 
         public void MenuCoreOpenInAppCommand(Package package)
@@ -142,7 +142,7 @@ namespace OpenInApp.Menu
                 _serviceProvider,
                 _suppressTypicalFileExtensionsWarning,
                 _typicalFileExtensions,
-                constantsForAppCommon.Caption,
+                _constantsForAppCommon.Caption,
                 applicationToOpenDto,
                 _keyToExecutableEnumDotDescription);
 
