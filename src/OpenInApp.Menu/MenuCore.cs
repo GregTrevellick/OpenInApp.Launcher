@@ -135,7 +135,6 @@ namespace OpenInApp.Menu
 
             var applicationToOpenDto = new ApplicationToOpenHelper().GetApplicationToOpenDto(keyToExecutableEnum);
 
-            //////var invokeCommandCallBackDto = constantsForAppCommon.GetInvokeCommandCallBackDto(
             var invokeCommandCallBackDto = GetInvokeCommandCallBackDto(
                 _actualPathToExe,
                 _fileQuantityWarningLimit,
