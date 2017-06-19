@@ -88,20 +88,20 @@ namespace OpenInApp.Menu
 
         private void AddMenuCommand(OleMenuCommandService commandService, int packageId, CommandPlacement commandPlacement)
         {
-            var menuCommandID = new CommandID(CommandSet, packageId);
+            var menuCommandId = new CommandID(CommandSet, packageId);
 
             MenuCommand menuCommand;
 
             switch (commandPlacement)
             {
                 case CommandPlacement.IDM_VS_CTXT_CODEWIN:
-                    menuCommand = new MenuCommand(MenuItemCallback_CodeWin, menuCommandID);
+                    menuCommand = new MenuCommand(MenuItemCallback_CodeWin, menuCommandId);
                     break;
                 case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
-                    menuCommand = new MenuCommand(MenuItemCallback_FolderNode, menuCommandID);
+                    menuCommand = new MenuCommand(MenuItemCallback_FolderNode, menuCommandId);
                     break;
                 case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
-                    menuCommand = new MenuCommand(MenuItemCallback_ItemNode, menuCommandID);
+                    menuCommand = new MenuCommand(MenuItemCallback_ItemNode, menuCommandId);
                     break;
                 default:
                     Logger.Log(new ArgumentException("Invalid menuCommandType=" + commandPlacement));
