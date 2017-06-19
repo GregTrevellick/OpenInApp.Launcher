@@ -22,7 +22,7 @@ namespace OpenInApp.Menu
         private readonly KeyToExecutableEnum _keyToExecutableEnum;
         private readonly string _actualPathToExe;
         private readonly string _fileQuantityWarningLimit;
-        private readonly string _keyToExecutableEnumDotDescription;
+        private readonly string _keyToExecutableEnumDescription;
         private readonly string _typicalFileExtensions;
         private readonly string _vsixName;
         private readonly string _vsixVersion;
@@ -30,7 +30,7 @@ namespace OpenInApp.Menu
         public MenuCore(
                 string vsixName,
                 string vsixVersion, 
-                string packageGuidsDotGuidOpenInVsCmdSetString,
+                string guidOpenInVsCmdSetString,
                 int cmdIdOpenInAppFolderExplore, 
                 int cmdIdOpenInAppCodeWin, 
                 int? cmdIdOpenInAppFolderNode,
@@ -39,7 +39,7 @@ namespace OpenInApp.Menu
                 string fileQuantityWarningLimit,
                 bool suppressTypicalFileExtensionsWarning,
                 string typicalFileExtensions,
-                string keyToExecutableEnumDotDescription,
+                string keyToExecutableEnumDescription,
                 IServiceProvider serviceProvider,
                 IGeneralOptionsBase generalOptions)
         {
@@ -51,13 +51,13 @@ namespace OpenInApp.Menu
             _fileQuantityWarningLimit = fileQuantityWarningLimit;
             _generalOptions = generalOptions;
             _keyToExecutableEnum = keyToExecutableEnum;
-            _keyToExecutableEnumDotDescription = keyToExecutableEnumDotDescription;
+            _keyToExecutableEnumDescription = keyToExecutableEnumDescription;
             _serviceProvider = serviceProvider;
             _suppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning;
             _typicalFileExtensions = typicalFileExtensions;
             _vsixName = vsixName;
             _vsixVersion = vsixVersion;
-            CommandSet = new Guid(packageGuidsDotGuidOpenInVsCmdSetString);
+            CommandSet = new Guid(guidOpenInVsCmdSetString);
         }
 
         public void MenuCoreOpenInAppCommand(Package package)
@@ -143,7 +143,7 @@ namespace OpenInApp.Menu
                 _typicalFileExtensions,
                 _constantsForAppCommon.Caption,
                 applicationToOpenDto,
-                _keyToExecutableEnumDotDescription);
+                _keyToExecutableEnumDescription);
 
             var persistOptionsDto = menuItemCallBackHelper.InvokeCommandCallBack(invokeCommandCallBackDto);
 
