@@ -32,7 +32,7 @@ namespace OpenInAppAltovaXmlSpy.Commands
                 PackageGuids.guidOpenInVsCmdSetString,
                 PackageIds.CmdIdOpenInAppFolderExplore,
                 PackageIds.CmdIdOpenInAppCodeWin,
-                packageIdCmdIdOpenInAppFolderNode,
+                cmdIdOpenInAppFolderNode,
                 GeneralOptions.keyToExecutableEnum,
                 VSPackage.Options.ActualPathToExe,
                 VSPackage.Options.FileQuantityWarningLimit,
