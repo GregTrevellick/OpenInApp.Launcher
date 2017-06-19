@@ -12,7 +12,7 @@ namespace OpenInApp.Menu
         private string Caption { get { return constantsForAppCommon.Caption; } }
         public readonly Guid CommandSet;
 
-        private Package _package;
+        private Package _package;///////////////////////unused ?
         private IServiceProvider _ServiceProvider;
         private ConstantsForAppCommon constantsForAppCommon;
         private string _vsixName;
@@ -152,7 +152,6 @@ namespace OpenInApp.Menu
 
             if (persistOptionsDto.Persist)
             {
-                //////////////////VSPackage.Options.PersistVSToolOptions(persistOptionsDto.ValueToPersist);
                 _GeneralOptions.PersistVSToolOptions(persistOptionsDto.ValueToPersist);
             }
         }

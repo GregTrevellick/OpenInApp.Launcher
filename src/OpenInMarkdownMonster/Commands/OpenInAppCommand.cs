@@ -9,11 +9,7 @@ namespace OpenInAppMarkdownMonster.Commands
     internal sealed class OpenInAppCommand
     {
         private readonly Package _package;
-
-        private IServiceProvider serviceProvider
-        {
-            get { return _package; }
-        }
+        private IServiceProvider serviceProvider { get { return _package; } }
 
         public OpenInAppCommand(Package package)
         {
@@ -22,9 +18,7 @@ namespace OpenInAppMarkdownMonster.Commands
 
         public void Initialize()
         {
-            var packageIdCmdIdOpenInAppFolderNode = PackageIds.CmdIdOpenInAppFolderNode == int.MinValue
-                ? null
-                : (int?) PackageIds.CmdIdOpenInAppFolderNode;
+            var packageIdCmdIdOpenInAppFolderNode = PackageIds.CmdIdOpenInAppFolderNode == int.MinValue ? null : (int?) PackageIds.CmdIdOpenInAppFolderNode;
 
             var menuCore = new MenuCore(
                 Vsix.Name,
