@@ -22,7 +22,7 @@ namespace OpenInAppPaintDotNet.Commands
 
         public void Initialize()
         {
-            var packageIdCmdIdOpenInAppFolderNode = PackageIds.CmdIdOpenInAppFolderNode == int.MinValue
+            var cmdIdOpenInAppFolderNode = PackageIds.CmdIdOpenInAppFolderNode == int.MinValue
                 ? null
                 : (int?) PackageIds.CmdIdOpenInAppFolderNode;
 

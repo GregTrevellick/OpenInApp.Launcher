@@ -18,7 +18,7 @@ namespace OpenInOperaDeveloper.Commands
 
         public void Initialize()
         {
-            var packageIdCmdIdOpenInAppFolderNode = PackageIds.CmdIdOpenInAppFolderNode == int.MinValue ? null : (int?)PackageIds.CmdIdOpenInAppFolderNode;
+            var cmdIdOpenInAppFolderNode = PackageIds.CmdIdOpenInAppFolderNode == int.MinValue ? null : (int?)PackageIds.CmdIdOpenInAppFolderNode;
 
             var menuCore = new MenuCore(
                 Vsix.Name,

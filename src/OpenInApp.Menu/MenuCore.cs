@@ -27,7 +27,6 @@ namespace OpenInApp.Menu
         private readonly string _vsixName;
         private readonly string _vsixVersion;
 
-        //ctor
         public MenuCore(
                 string vsixName,
                 string vsixVersion, 
@@ -48,6 +47,7 @@ namespace OpenInApp.Menu
             _cmdIdOpenInAppCodeWin = cmdIdOpenInAppCodeWin;
             _cmdIdOpenInAppFolderExplore = cmdIdOpenInAppFolderExplore;
             _cmdIdOpenInAppFolderNode = cmdIdOpenInAppFolderNode;
+            _constantsForAppCommon = new ConstantsForAppCommon(_vsixName, _vsixVersion);
             _fileQuantityWarningLimit = fileQuantityWarningLimit;
             _generalOptions = generalOptions;
             _keyToExecutableEnum = keyToExecutableEnum;
@@ -58,7 +58,6 @@ namespace OpenInApp.Menu
             _vsixName = vsixName;
             _vsixVersion = vsixVersion;
             CommandSet = new Guid(packageGuidsDotGuidOpenInVsCmdSetString);
-            _constantsForAppCommon = new ConstantsForAppCommon(_vsixName, _vsixVersion);
         }
 
         public void MenuCoreOpenInAppCommand(Package package)
