@@ -12,9 +12,9 @@ namespace OpenInTreeSizeFree
     /// </summary>
     internal sealed partial class PackageGuids
     {
-        public const string guidOpenInAppPackageString = "111117a9-1607-40e1-81b5-28d1454c1111";
-        public const string guidOpenInVsCmdSetString = "222217a9-1607-40e1-81b5-28d1454c2222";
-        public const string guidImagesString = "333317a9-1607-40e1-81b5-28d1454c3333";
+        public const string guidOpenInAppPackageString = "c1c5be2c-78ba-4594-b950-b9a6230092d7";
+        public const string guidOpenInVsCmdSetString = "16c818a1-a9f3-4809-b448-79f520e14928";
+        public const string guidImagesString = "2e60b392-13d8-4897-9d35-7f83c6e13700";
         public static Guid guidOpenInAppPackage = new Guid(guidOpenInAppPackageString);
         public static Guid guidOpenInVsCmdSet = new Guid(guidOpenInVsCmdSetString);
         public static Guid guidImages = new Guid(guidImagesString);

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
 	<Metadata>
-		<Identity Id="0597a0d5-0bfc-44a5-924c-b556c5047018" Version="1.1.22" Language="en-US" Publisher="GregTrevellick" />
+		<Identity Id="0597a0d5-0bfc-44a5-924c-b556c5047018" Version="1.1.25" Language="en-US" Publisher="GregTrevellick" />
 		<DisplayName>Open in TreeSize Free</DisplayName>
 		<Description xml:space="preserve">Open multiple folders simultaneously in TreeSize Free directly from Solution Explorer or Code Editor window.</Description>
 		<MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>

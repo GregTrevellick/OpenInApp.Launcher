@@ -53,8 +53,8 @@
   </CommandPlacements>
 
   <Symbols>
-    <GuidSymbol name="guidOpenInAppPackage" value="{111117A9-1607-40E1-81B5-28D1454C1111}" />
-    <GuidSymbol name="guidOpenInVsCmdSet" value="{222217A9-1607-40E1-81B5-28D1454C2222}">
+    <GuidSymbol name="guidOpenInAppPackage" value="{82aedca6-9734-4dab-aa7e-1eb6c2ea6014}" />
+    <GuidSymbol name="guidOpenInVsCmdSet" value="{51cc1362-450a-4cb1-91dd-6b550918a201}">
       <IDSymbol name="GroupOpenInAppCodeWin" value="0x1030" />
       <IDSymbol name="CmdIdOpenInAppCodeWin" value="0x0100" />
       <IDSymbol name="GroupOpenInAppItemNode" value="0x1040" />
@@ -62,7 +62,7 @@
       <IDSymbol name="GroupOpenInAppFolderNode" value="0x1050" />
       <IDSymbol name="CmdIdOpenInAppFolderNode" value="0x0120" />
     </GuidSymbol>
-    <GuidSymbol name="guidImages" value="{333317A9-1607-40E1-81B5-28D1454C3333}" >
+    <GuidSymbol name="guidImages" value="{b7908f9b-bb36-4de5-84db-2e456918e11b}" >
       <IDSymbol name="bmpPic1" value="1" />
     </GuidSymbol>
   </Symbols>
