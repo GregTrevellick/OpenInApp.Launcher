@@ -6,7 +6,7 @@
     <Groups>
       <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
       </Group>
-      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x0100">
+      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" priority="0x0100">
       </Group>
       <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderNode" priority="0x0100">
       </Group>
@@ -20,8 +20,8 @@
           <ButtonText>Open Folder in TreeSize Free</ButtonText>
         </Strings>
       </Button>
-      <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppFolderExplore" priority="0x100" type="Button">
-        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" />
+      <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppItemNode" priority="0x100" type="Button">
+        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
           <ButtonText>Open Folder in TreeSize Free</ButtonText>
@@ -41,7 +41,7 @@
   </Commands>
 
   <CommandPlacements>
-    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x0100">
+    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" priority="0x0100">
       <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE" />
     </CommandPlacement>
     <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
@@ -57,8 +57,8 @@
     <GuidSymbol name="guidOpenInVsCmdSet" value="{222217A9-1607-40E1-81B5-28D1454C2222}">
       <IDSymbol name="GroupOpenInAppCodeWin" value="0x1030" />
       <IDSymbol name="CmdIdOpenInAppCodeWin" value="0x0100" />
-      <IDSymbol name="GroupOpenInAppFolderExplore" value="0x1040" />
-      <IDSymbol name="CmdIdOpenInAppFolderExplore" value="0x0110" />
+      <IDSymbol name="GroupOpenInAppItemNode" value="0x1040" />
+      <IDSymbol name="CmdIdOpenInAppItemNode" value="0x0110" />
       <IDSymbol name="GroupOpenInAppFolderNode" value="0x1050" />
       <IDSymbol name="CmdIdOpenInAppFolderNode" value="0x0120" />      
     </GuidSymbol>

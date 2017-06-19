@@ -8,7 +8,7 @@
     <Groups>
       <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
       </Group>
-      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x0100">
+      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" priority="0x0100">
       </Group>
     </Groups>
     <Buttons>    
@@ -19,8 +19,8 @@
           <ButtonText>Open in Visual Studio 2017 Professional</ButtonText>
         </Strings>
       </Button>
-      <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppFolderExplore" priority="0x100" type="Button">
-        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" />
+      <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppItemNode" priority="0x100" type="Button">
+        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
           <ButtonText>Open in Visual Studio 2017 Professional</ButtonText>
@@ -33,7 +33,7 @@
   </Commands>
   
   <CommandPlacements>
-    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x0100">
+    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" priority="0x0100">
       <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE" />
     </CommandPlacement>
     <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
@@ -46,8 +46,8 @@
     <GuidSymbol name="guidOpenInVsCmdSet" value="{90DAB6AD-0BDE-4DD5-B84D-A0DA46180E1C}">
       <IDSymbol name="GroupOpenInAppCodeWin" value="0x1030" />
       <IDSymbol name="CmdIdOpenInAppCodeWin" value="0x0100" />
-      <IDSymbol name="GroupOpenInAppFolderExplore" value="0x1040" />
-      <IDSymbol name="CmdIdOpenInAppFolderExplore" value="0x0110" />
+      <IDSymbol name="GroupOpenInAppItemNode" value="0x1040" />
+      <IDSymbol name="CmdIdOpenInAppItemNode" value="0x0110" />
     </GuidSymbol>
     <GuidSymbol name="guidImages" value="{FCCF8183-D712-4F44-B365-680BA2444EF4}" >
       <IDSymbol name="bmpPic1" value="1" />

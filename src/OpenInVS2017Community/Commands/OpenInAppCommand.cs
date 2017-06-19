@@ -24,7 +24,7 @@ namespace OpenInVS2017Community.Commands
                 Vsix.Name,
                 Vsix.Version,
                 PackageGuids.guidOpenInVsCmdSetString,
-                PackageIds.CmdIdOpenInAppFolderExplore,
+                PackageIds.CmdIdOpenInAppItemNode,
                 PackageIds.CmdIdOpenInAppCodeWin,
                 cmdIdOpenInAppFolderNode,
                 GeneralOptions.keyToExecutableEnum,

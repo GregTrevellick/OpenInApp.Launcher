@@ -26,8 +26,8 @@ namespace OpenInVS2015
     {
         public const int GroupOpenInAppCodeWin = 0x1030;
         public const int CmdIdOpenInAppCodeWin = 0x0100;
-        public const int GroupOpenInAppFolderExplore = 0x1040;
-        public const int CmdIdOpenInAppFolderExplore = 0x0110;
+        public const int GroupOpenInAppItemNode = 0x1040;
+        public const int CmdIdOpenInAppItemNode = 0x0110;
         public const int bmpPic1 = 0x0001;
     }
 }

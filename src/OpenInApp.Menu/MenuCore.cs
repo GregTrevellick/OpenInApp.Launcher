@@ -16,7 +16,7 @@ namespace OpenInApp.Menu
         private readonly ConstantsForAppCommon _constantsForAppCommon;
         private readonly IGeneralOptionsBase _generalOptions;
         private readonly int _cmdIdOpenInAppCodeWin;
-        private readonly int _cmdIdOpenInAppFolderExplore;
+        private readonly int _cmdIdOpenInAppItemNode;
         private readonly int? _cmdIdOpenInAppFolderNode;
         private readonly IServiceProvider _serviceProvider;
         private readonly KeyToExecutableEnum _keyToExecutableEnum;
@@ -31,7 +31,7 @@ namespace OpenInApp.Menu
                 string vsixName,
                 string vsixVersion, 
                 string guidOpenInVsCmdSetString,
-                int cmdIdOpenInAppFolderExplore, 
+                int cmdIdOpenInAppItemNode, 
                 int cmdIdOpenInAppCodeWin, 
                 int? cmdIdOpenInAppFolderNode,
                 KeyToExecutableEnum keyToExecutableEnum,
@@ -45,7 +45,7 @@ namespace OpenInApp.Menu
         {
             _actualPathToExe = actualPathToExe;
             _cmdIdOpenInAppCodeWin = cmdIdOpenInAppCodeWin;
-            _cmdIdOpenInAppFolderExplore = cmdIdOpenInAppFolderExplore;
+            _cmdIdOpenInAppItemNode = cmdIdOpenInAppItemNode;
             _cmdIdOpenInAppFolderNode = cmdIdOpenInAppFolderNode;
             _constantsForAppCommon = new ConstantsForAppCommon(_vsixName, _vsixVersion);
             _fileQuantityWarningLimit = fileQuantityWarningLimit;
@@ -74,7 +74,7 @@ namespace OpenInApp.Menu
                 var commandService = _serviceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
                 if (commandService != null)
                 {
-                    AddMenuCommand(commandService, _cmdIdOpenInAppFolderExplore, CommandPlacement.IDM_VS_CTXT_ITEMNODE);
+                    AddMenuCommand(commandService, _cmdIdOpenInAppItemNode, CommandPlacement.IDM_VS_CTXT_ITEMNODE);
                     AddMenuCommand(commandService, _cmdIdOpenInAppCodeWin, CommandPlacement.IDM_VS_CTXT_CODEWIN);
                     //Comment out to exclude folders / un-comment to include folders 
                     if (_cmdIdOpenInAppFolderNode.HasValue)

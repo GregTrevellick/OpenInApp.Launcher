@@ -8,7 +8,7 @@
     <Groups>
       <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
       </Group>
-      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x0100">
+      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" priority="0x0100">
       </Group>
     </Groups>
     <Buttons>    
@@ -19,8 +19,8 @@
           <ButtonText>Open in Altova XmlSpy</ButtonText>
         </Strings>
       </Button>
-      <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppFolderExplore" priority="0x0100" type="Button">
-        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" />
+      <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppItemNode" priority="0x0100" type="Button">
+        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
           <ButtonText>Open in Altova XmlSpy</ButtonText>
@@ -33,7 +33,7 @@
   </Commands>
   
   <CommandPlacements>
-    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderExplore" priority="0x0100">
+    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" priority="0x0100">
       <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE" />
     </CommandPlacement>
     <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
@@ -46,8 +46,8 @@
     <GuidSymbol name="guidOpenInVsCmdSet" value="{82afac2b-5d6f-43f7-8c37-c575653bc07c}">
       <IDSymbol name="GroupOpenInAppCodeWin" value="0x1030" />
       <IDSymbol name="CmdIdOpenInAppCodeWin" value="0x0100" />
-      <IDSymbol name="GroupOpenInAppFolderExplore" value="0x1040" />
-      <IDSymbol name="CmdIdOpenInAppFolderExplore" value="0x0110" />
+      <IDSymbol name="GroupOpenInAppItemNode" value="0x1040" />
+      <IDSymbol name="CmdIdOpenInAppItemNode" value="0x0110" />
     </GuidSymbol>
     <GuidSymbol name="guidImages" value="{90ece3e2-9811-460b-a9c1-0d9ec151cf74}" >
       <IDSymbol name="bmpPic1" value="1" />
