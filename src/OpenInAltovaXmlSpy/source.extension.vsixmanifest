@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="AE643C9F-EA6E-4A88-A122-34696D103F82" Version="1.1.26" Language="en-US" Publisher="GregTrevellick" />
+    <Identity Id="AE643C9F-EA6E-4A88-A122-34696D103F82" Version="1.1.27" Language="en-US" Publisher="GregTrevellick" />
     <DisplayName>Open in Altova XMLSpy</DisplayName>
     <Description xml:space="preserve">Open multiple files simultaneously in Altova XMLSpy XML Editor directly from Solution Explorer or Code Editor window.</Description>
     <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>
