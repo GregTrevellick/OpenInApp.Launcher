@@ -254,6 +254,10 @@ namespace OpenInApp.Common.Helpers
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Professional\Common7\IDE";
                     applicationToOpenDto.UseShellExecute = false;
                     break;
+                case KeyToExecutableEnum.WinDirStat:
+                    applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
+                    applicationToOpenDto.SecondaryFilePathSegment = @"WinDirStat";
+                    break;
                 case KeyToExecutableEnum.XamarinStudio:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Xamarin Studio\bin";
                     break;

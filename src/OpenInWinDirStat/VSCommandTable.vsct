@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<Extern href="stdidcmd.h"/>
+	<Extern href="vsshlids.h"/>
+	<Commands package="guidOpenInAppPackage">
+		<Groups>
+			<Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
+			</Group>
+			<Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" priority="0x0100">
+			</Group>
+			<Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderNode" priority="0x0100">
+			</Group>
+		</Groups>
+
+		<Buttons>
+			<Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppCodeWin" priority="0x0100" type="Button">
+				<Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" />
+				<Icon guid="guidImages" id="bmpPic1" />
+				<Strings>
+					<ButtonText>Open Folder in WinDirStat</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppItemNode" priority="0x100" type="Button">
+				<Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" />
+				<Icon guid="guidImages" id="bmpPic1" />
+				<Strings>
+					<ButtonText>Open Folder in WinDirStat</ButtonText>
+				</Strings>
+			</Button>
+			<Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppFolderNode" priority="0x100" type="Button">
+				<Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderNode" />
+				<Icon guid="guidImages" id="bmpPic1" />
+				<Strings>
+					<ButtonText>Open Folder in WinDirStat</ButtonText>
+				</Strings>
+			</Button>
+		</Buttons>
+		<Bitmaps>
+			<Bitmap guid="guidImages" href="Resources\VsixCommandIcon_16x16.png" usedList="bmpPic1"/>
+		</Bitmaps>
+	</Commands>
+
+	<CommandPlacements>
+		<CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" priority="0x0100">
+			<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE" />
+		</CommandPlacement>
+		<CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
+			<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN" />
+		</CommandPlacement>
+		<CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderNode" priority="0x0100">
+			<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_FOLDERNODE" />
+		</CommandPlacement>
+	</CommandPlacements>
+
+	<Symbols>
+		<GuidSymbol name="guidOpenInAppPackage" value="{3cb00f23-d843-4dc5-8dbc-0f0bd0c68b09}" />
+		<GuidSymbol name="guidOpenInVsCmdSet" value="{a391248c-eea8-401b-91a2-bbc79a96d2c9}">
+			<IDSymbol name="GroupOpenInAppCodeWin" value="0x1030" />
+			<IDSymbol name="CmdIdOpenInAppCodeWin" value="0x0100" />
+			<IDSymbol name="GroupOpenInAppItemNode" value="0x1040" />
+			<IDSymbol name="CmdIdOpenInAppItemNode" value="0x0110" />
+			<IDSymbol name="GroupOpenInAppFolderNode" value="0x1050" />
+			<IDSymbol name="CmdIdOpenInAppFolderNode" value="0x0120" />
+		</GuidSymbol>
+		<GuidSymbol name="guidImages" value="{40f390a4-eea5-48a8-b00b-2f188c3c9ddc}" >
+			<IDSymbol name="bmpPic1" value="1" />
+		</GuidSymbol>
+	</Symbols>
+</CommandTable>
