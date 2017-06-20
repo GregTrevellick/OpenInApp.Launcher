@@ -24,6 +24,7 @@ gulp.task('OpenInVS2015', function () { return OIAConcat('OpenInVS2015', 'Visual
 gulp.task('OpenInVS2017Community', function () { return OIAConcat('OpenInVS2017Community', 'Visual Studio 2017 Community Edition') });
 gulp.task('OpenInVS2017Enterprise', function () { return OIAConcat('OpenInVS2017Enterprise', 'Visual Studio 2017 Enterprise Edition') });
 gulp.task('OpenInVS2017Professional', function () { return OIAConcat('OpenInVS2017Professional', 'Visual Studio 2017 Professional Edition') });
+gulp.task('OpenInWinDirStat', function () { return OIAConcat('OpenInWinDirStat', 'WinDirStat') });
 gulp.task('OpenInXamarinStudio', function () { return OIAConcat('OpenInXamarinStudio', 'Xamarin Studio') });
 
 gulp.task('default',
@@ -46,7 +47,8 @@ gulp.task('default',
     , 'OpenInVS2015'
     , 'OpenInVS2017Community'
     , 'OpenInVS2017Enterprise'
-    , 'OpenInVS2017Professional'
+	, 'OpenInVS2017Professional'
+	, 'OpenInWinDirStat'
     , 'OpenInXamarinStudio']);
 
 function OIAConcat (appNam, appDesc) { 
@@ -54,7 +56,8 @@ function OIAConcat (appNam, appDesc) {
     var filesToConcat = [appNam + '/0_Variables.md'];
 
     if (appNam === 'OpenInTreeSizeFree' ||
-        appNam === 'OpenInTreeSizeProfessional') {
+		appNam === 'OpenInTreeSizeProfessional' ||
+		appNam === 'OpenInWinDirStat') {
         filesToConcat.push(
                 '1_Introduction_Folders.md',
                 '2_FreeReviews.md',

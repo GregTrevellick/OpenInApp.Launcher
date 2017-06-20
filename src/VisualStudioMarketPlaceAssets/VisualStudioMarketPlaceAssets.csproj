@@ -70,6 +70,8 @@
     <None Include="OpenInTreeSizeProfessional\README.md" />
     <None Include="OpenInVivaldi\README.md" />
     <None Include="OpenInVivaldi\0_Variables.md" />
+    <None Include="OpenInWinDirStat\0_Variables.md" />
+    <None Include="OpenInWinDirStat\README.md" />
     <None Include="OpenInXamarinStudio\README.md" />
     <None Include="OpenInXamarinStudio\0_Variables.md" />
     <None Include="package.json" />
@@ -161,6 +163,9 @@
     <Content Include="Generic_ReadMeScreenShot_OptionsGeneral.png" />
     <Content Include="Generic_ReadMeScreenShot_WarningLargeQuantity.png" />
     <Content Include="Generic_ReadMeScreenShot_WarningNonTypical.png" />
+    <Content Include="OpenInWinDirStat\ReadMeScreenShot_CodeEditorWindow.png" />
+    <Content Include="OpenInWinDirStat\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInWinDirStat\ThirdPartyLogo.png" />
     <Content Include="OpenInXamarinStudio\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInXamarinStudio\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInXamarinStudio\ThirdPartyLogo.png" />
