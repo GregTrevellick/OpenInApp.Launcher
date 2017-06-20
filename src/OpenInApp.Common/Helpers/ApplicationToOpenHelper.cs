@@ -22,7 +22,7 @@ namespace OpenInApp.Common.Helpers
             {
                 case KeyToExecutableEnum.Abracadabra:
                     applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
-                    applicationToOpenDto.SecondaryFilePathSegment = @"JAM Software\TreeSize Free";
+                    applicationToOpenDto.SecondaryFilePathSegment = @"WinDirStat";
                     break;
                 case KeyToExecutableEnum.AltovaXMLSpy:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Altova\XMLSpy2016";
