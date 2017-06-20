@@ -122,7 +122,7 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("I")]
-        [TestCase(@"C:\Program Files (x86)\WinDirStat\windirstat.exe", null)]//works for first entry in list, file or directory 
+        //[TestCase(@"C:\Program Files (x86)\WinDirStat\windirstat.exe", null)]//works for first entry in list, file or directory 
         public void InvokeCommandTest_FolderSizes(string executableFullPath, bool useShellExecute)
         {
             // Arrange
