@@ -8,7 +8,7 @@ using OpenInApp.Menu;
 
 namespace OpenInFirefoxDeveloperEdition.Options.FirefoxDeveloperEdition
 {
-    public class GeneralOptions : DialogPage, IGeneralOptionsFile
+    public class GeneralOptions : DialogPage, IGeneralOptionsFile // or set to IGeneralOptionsFolder
     {
         internal static KeyToExecutableEnum keyToExecutableEnum = KeyToExecutableEnum.FirefoxDeveloperEdition;
         private IEnumerable<string> defaultTypicalFileExtensions = new ConstantsForAppCommon().GetDefaultTypicalFileExtensions(keyToExecutableEnum);
@@ -22,7 +22,7 @@ namespace OpenInFirefoxDeveloperEdition.Options.FirefoxDeveloperEdition
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.TypicalFileExtensionsOptionLabel)]
         [Description(CommonConstants.TypicalFileExtensionsOptionDetailedDescription)]
-        // Set to 'internal' to hide in Tools > Options for folder based apps
+        // Set to 'internal' to hide in IDE Options (e.g. TreeSizeFree)
         public string TypicalFileExtensions
         {
             get
@@ -45,7 +45,7 @@ namespace OpenInFirefoxDeveloperEdition.Options.FirefoxDeveloperEdition
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.SuppressTypicalFileExtensionsWarningOptionLabel)]
         [Description(CommonConstants.SuppressTypicalFileExtensionsWarningDetailedDescription)]
-        // Set to 'internal' to hide in Tools > Options for folder based apps
+        // Set to 'internal' to hide in IDE Options (e.g. TreeSizeFree)
         public bool SuppressTypicalFileExtensionsWarning { get; set; } = false;
 
         [Category(CommonConstants.CategorySubLevel)]

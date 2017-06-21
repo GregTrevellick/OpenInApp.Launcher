@@ -22,7 +22,7 @@ namespace OpenInTreeSizeFree.Options.TreeSizeFree
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.TypicalFileExtensionsOptionLabel)]
         [Description(CommonConstants.TypicalFileExtensionsOptionDetailedDescription)]
-        // Set to 'internal' to hide in Tools > Options for folder based apps
+        // Set to 'internal' to hide in IDE Options (e.g. TreeSizeFree)
         internal string TypicalFileExtensions
         {
             get
@@ -45,7 +45,7 @@ namespace OpenInTreeSizeFree.Options.TreeSizeFree
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonConstants.SuppressTypicalFileExtensionsWarningOptionLabel)]
         [Description(CommonConstants.SuppressTypicalFileExtensionsWarningDetailedDescription)]
-        // Set to 'internal' to hide in Tools > Options for folder based apps
+        // Set to 'internal' to hide in IDE Options (e.g. TreeSizeFree)
         internal bool SuppressTypicalFileExtensionsWarning { get; set; } = false;
 
         [Category(CommonConstants.CategorySubLevel)]
