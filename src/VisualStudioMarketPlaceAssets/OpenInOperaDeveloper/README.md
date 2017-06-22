@@ -9,7 +9,7 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 
 [![][ThirdPartyAppOfficialLogo]][ThirdPartyAppHomePage]
 
-![](ThirdPartyAppHomePage.png)
+![](ThirdPartyScreenShot.jpg)
 
 ## Features
 
