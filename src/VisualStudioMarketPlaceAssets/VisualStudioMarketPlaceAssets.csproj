@@ -133,6 +133,7 @@
     <Content Include="OpenInOperaDeveloper\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInOperaDeveloper\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInOperaDeveloper\ThirdPartyLogo.png" />
+    <Content Include="OpenInOperaDeveloper\ThirdPartyScreenShot.png" />
     <Content Include="OpenInOpera\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInOpera\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInOpera\ThirdPartyLogo.png" />
