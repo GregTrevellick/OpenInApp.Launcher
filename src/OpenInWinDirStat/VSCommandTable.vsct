@@ -60,7 +60,7 @@
 			<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_FOLDERNODE" />
 		</CommandPlacement>
 		<CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppProject" priority="0x0100">
-			<Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_PROJECT" />
+			<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE" />
 		</CommandPlacement>
 	</CommandPlacements>
 
