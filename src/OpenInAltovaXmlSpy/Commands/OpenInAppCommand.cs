@@ -22,15 +22,12 @@ namespace OpenInAppAltovaXmlSpy.Commands
 
         public void Initialize()
         {
-            //var cmdIdOpenInAppFolderNode = PackageIds.CmdIdOpenInAppFolderNode == int.MinValue? null: (int?) PackageIds.CmdIdOpenInAppFolderNode;
-
             var menuCore = new MenuCore(
                 Vsix.Name,
                 Vsix.Version,
                 PackageGuids.guidOpenInVsCmdSetString,
                 PackageIds.CmdIdOpenInAppItemNode,
                 PackageIds.CmdIdOpenInAppCodeWin,
-              //  cmdIdOpenInAppFolderNode,
                 GeneralOptions.keyToExecutableEnum,
                 VSPackage.Options.ActualPathToExe,
                 VSPackage.Options.FileQuantityWarningLimit,

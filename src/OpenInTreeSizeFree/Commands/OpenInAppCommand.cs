@@ -22,9 +22,6 @@ namespace OpenInTreeSizeFree.Commands
 
         public void Initialize()
         {
-            ////var cmdIdOpenInAppFolderNode = PackageIds.CmdIdOpenInAppFolderNode == int.MinValue ? null : (int?)PackageIds.CmdIdOpenInAppFolderNode;
-            //var cmdIdOpenInAppProject = PackageIds.CmdIdOpenInAppProject == int.MinValue ? null : (int?)PackageIds.CmdIdOpenInAppProject;
-
             var menuCore = new MenuCore(
                 Vsix.Name,
                 Vsix.Version,

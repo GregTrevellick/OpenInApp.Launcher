@@ -10,23 +10,23 @@ namespace OpenInApp.Menu
     public class MenuCore
     {
         private string Caption { get { return _constantsForAppCommon.Caption; } }
-        public readonly Guid CommandSet;
+        public Guid CommandSet;
 
-        private readonly bool _suppressTypicalFileExtensionsWarning;
-        private readonly ConstantsForAppCommon _constantsForAppCommon;
-        private readonly IGeneralOptionsBase _generalOptions;
-        private readonly int _cmdIdOpenInAppCodeWin;
-        private readonly int _cmdIdOpenInAppItemNode;
+        private bool _suppressTypicalFileExtensionsWarning;
+        private ConstantsForAppCommon _constantsForAppCommon;
+        private IGeneralOptionsBase _generalOptions;
+        private int _cmdIdOpenInAppCodeWin;
+        private int _cmdIdOpenInAppItemNode;
         private readonly int? _cmdIdOpenInAppFolderNode;
         private readonly int? _cmdIdOpenInAppProject;
-        private readonly IServiceProvider _serviceProvider;
-        private readonly KeyToExecutableEnum _keyToExecutableEnum;
-        private readonly string _actualPathToExe;
-        private readonly string _fileQuantityWarningLimit;
-        private readonly string _keyToExecutableEnumDescription;
-        private readonly string _typicalFileExtensions;
-        private readonly string _vsixName;
-        private readonly string _vsixVersion;
+        private IServiceProvider _serviceProvider;
+        private KeyToExecutableEnum _keyToExecutableEnum;
+        private string _actualPathToExe;
+        private string _fileQuantityWarningLimit;
+        private string _keyToExecutableEnumDescription;
+        private string _typicalFileExtensions;
+        private string _vsixName;
+        private string _vsixVersion;
 
         public MenuCore(
                 string vsixName,
@@ -34,7 +34,6 @@ namespace OpenInApp.Menu
                 string guidOpenInVsCmdSetString,
                 int cmdIdOpenInAppItemNode, 
                 int cmdIdOpenInAppCodeWin, 
-                //int? cmdIdOpenInAppFolderNode,
                 KeyToExecutableEnum keyToExecutableEnum,
                 string actualPathToExe,
                 string fileQuantityWarningLimit,
@@ -44,22 +43,9 @@ namespace OpenInApp.Menu
                 IServiceProvider serviceProvider,
                 IGeneralOptionsBase generalOptions)
         {
-            _actualPathToExe = actualPathToExe;
-            _cmdIdOpenInAppCodeWin = cmdIdOpenInAppCodeWin;
-            _cmdIdOpenInAppItemNode = cmdIdOpenInAppItemNode;
+            Initialize(vsixName, vsixVersion, guidOpenInVsCmdSetString, cmdIdOpenInAppItemNode, cmdIdOpenInAppCodeWin, keyToExecutableEnum, actualPathToExe, fileQuantityWarningLimit, suppressTypicalFileExtensionsWarning, typicalFileExtensions, keyToExecutableEnumDescription, serviceProvider, generalOptions);
             _cmdIdOpenInAppFolderNode = null;
             _cmdIdOpenInAppProject = null;
-            _constantsForAppCommon = new ConstantsForAppCommon(_vsixName, _vsixVersion);
-            _fileQuantityWarningLimit = fileQuantityWarningLimit;
-            _generalOptions = generalOptions;
-            _keyToExecutableEnum = keyToExecutableEnum;
-            _keyToExecutableEnumDescription = keyToExecutableEnumDescription;
-            _serviceProvider = serviceProvider;
-            _suppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning;
-            _typicalFileExtensions = typicalFileExtensions;
-            _vsixName = vsixName;
-            _vsixVersion = vsixVersion;
-            CommandSet = new Guid(guidOpenInVsCmdSetString);
         }
 
         public MenuCore(
@@ -79,11 +65,19 @@ namespace OpenInApp.Menu
             IServiceProvider serviceProvider,
             IGeneralOptionsBase generalOptions)
         {
+            Initialize(vsixName, vsixVersion, guidOpenInVsCmdSetString, cmdIdOpenInAppItemNode, cmdIdOpenInAppCodeWin, keyToExecutableEnum, actualPathToExe, fileQuantityWarningLimit, suppressTypicalFileExtensionsWarning, typicalFileExtensions, keyToExecutableEnumDescription, serviceProvider, generalOptions);
+            _cmdIdOpenInAppFolderNode = cmdIdOpenInAppFolderNode;
+            _cmdIdOpenInAppProject = cmdIdOpenInAppProject;
+        }
+
+        private void Initialize(string vsixName, string vsixVersion, string guidOpenInVsCmdSetString, int cmdIdOpenInAppItemNode,
+            int cmdIdOpenInAppCodeWin, KeyToExecutableEnum keyToExecutableEnum, string actualPathToExe,
+            string fileQuantityWarningLimit, bool suppressTypicalFileExtensionsWarning, string typicalFileExtensions,
+            string keyToExecutableEnumDescription, IServiceProvider serviceProvider, IGeneralOptionsBase generalOptions)
+        {
             _actualPathToExe = actualPathToExe;
             _cmdIdOpenInAppCodeWin = cmdIdOpenInAppCodeWin;
             _cmdIdOpenInAppItemNode = cmdIdOpenInAppItemNode;
-            _cmdIdOpenInAppFolderNode = cmdIdOpenInAppFolderNode;
-            _cmdIdOpenInAppProject = cmdIdOpenInAppProject;
             _constantsForAppCommon = new ConstantsForAppCommon(_vsixName, _vsixVersion);
             _fileQuantityWarningLimit = fileQuantityWarningLimit;
             _generalOptions = generalOptions;
@@ -112,13 +106,14 @@ namespace OpenInApp.Menu
                 if (commandService != null)
                 {
                     AddMenuCommand(commandService, _cmdIdOpenInAppItemNode, CommandPlacement.IDM_VS_CTXT_ITEMNODE);
+
                     AddMenuCommand(commandService, _cmdIdOpenInAppCodeWin, CommandPlacement.IDM_VS_CTXT_CODEWIN);
-                    //Comment out to exclude folders / un-comment to include folders 
+                    
                     if (_cmdIdOpenInAppFolderNode.HasValue)
                     {
                         AddMenuCommand(commandService, _cmdIdOpenInAppFolderNode.Value, CommandPlacement.IDM_VS_CTXT_FOLDERNODE);
                     }
-                    //Comment out to exclude folders / un-comment to include folders 
+                    
                     if (_cmdIdOpenInAppProject.HasValue)
                     {
                         AddMenuCommand(commandService, _cmdIdOpenInAppProject.Value, CommandPlacement.IDM_VS_CTXT_PROJECT);
@@ -223,11 +218,9 @@ namespace OpenInApp.Menu
                 SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,
                 TypicalFileExtensions = typicalFileExtensions,
                 Caption = caption,
-
                 ArtefactTypeToOpen = applicationToOpenDto.ArtefactTypeToOpen,
                 SeparateProcessPerFileToBeOpened = applicationToOpenDto.SeparateProcessPerFileToBeOpened,
                 UseShellExecute = applicationToOpenDto.UseShellExecute,
-
                 ExecutableFileToBrowseFor = keyToExecutableEnumDescription
             };
         }
