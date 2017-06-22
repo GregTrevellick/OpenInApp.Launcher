@@ -18,7 +18,7 @@ namespace OpenInApp.Menu
         private int _cmdIdOpenInAppCodeWin;
         private int _cmdIdOpenInAppItemNode;
         private readonly int? _cmdIdOpenInAppFolderNode;
-        private readonly int? _cmdIdOpenInAppProject;
+        private readonly int? _cmdIdOpenInAppProjNode;
         private IServiceProvider _serviceProvider;
         private KeyToExecutableEnum _keyToExecutableEnum;
         private string _actualPathToExe;
@@ -45,7 +45,7 @@ namespace OpenInApp.Menu
         {
             Initialize(vsixName, vsixVersion, guidOpenInVsCmdSetString, cmdIdOpenInAppItemNode, cmdIdOpenInAppCodeWin, keyToExecutableEnum, actualPathToExe, fileQuantityWarningLimit, suppressTypicalFileExtensionsWarning, typicalFileExtensions, keyToExecutableEnumDescription, serviceProvider, generalOptions);
             _cmdIdOpenInAppFolderNode = null;
-            _cmdIdOpenInAppProject = null;
+            _cmdIdOpenInAppProjNode = null;
         }
 
         public MenuCore(
@@ -55,7 +55,7 @@ namespace OpenInApp.Menu
             int cmdIdOpenInAppItemNode,
             int cmdIdOpenInAppCodeWin,
             int cmdIdOpenInAppFolderNode,
-            int cmdIdOpenInAppProject,
+            int cmdIdOpenInAppProjNode,
             KeyToExecutableEnum keyToExecutableEnum,
             string actualPathToExe,
             string fileQuantityWarningLimit,
@@ -67,7 +67,7 @@ namespace OpenInApp.Menu
         {
             Initialize(vsixName, vsixVersion, guidOpenInVsCmdSetString, cmdIdOpenInAppItemNode, cmdIdOpenInAppCodeWin, keyToExecutableEnum, actualPathToExe, fileQuantityWarningLimit, suppressTypicalFileExtensionsWarning, typicalFileExtensions, keyToExecutableEnumDescription, serviceProvider, generalOptions);
             _cmdIdOpenInAppFolderNode = cmdIdOpenInAppFolderNode;
-            _cmdIdOpenInAppProject = cmdIdOpenInAppProject;
+            _cmdIdOpenInAppProjNode = cmdIdOpenInAppProjNode;
         }
 
         private void Initialize(string vsixName, string vsixVersion, string guidOpenInVsCmdSetString, int cmdIdOpenInAppItemNode,
@@ -114,9 +114,9 @@ namespace OpenInApp.Menu
                         AddMenuCommand(commandService, _cmdIdOpenInAppFolderNode.Value, CommandPlacement.IDM_VS_CTXT_FOLDERNODE);
                     }
                     
-                    if (_cmdIdOpenInAppProject.HasValue)
+                    if (_cmdIdOpenInAppProjNode.HasValue)
                     {
-                        AddMenuCommand(commandService, _cmdIdOpenInAppProject.Value, CommandPlacement.IDM_VS_CTXT_PROJECT);
+                        AddMenuCommand(commandService, _cmdIdOpenInAppProjNode.Value, CommandPlacement.IDM_VS_CTXT_PROJNODE);
                     }
                 }
             }
@@ -139,8 +139,8 @@ namespace OpenInApp.Menu
                 case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
                     menuCommand = new MenuCommand(MenuItemCallback_ItemNode, menuCommandId);
                     break;
-                case CommandPlacement.IDM_VS_CTXT_PROJECT:
-                    menuCommand = new MenuCommand(MenuItemCallback_Project, menuCommandId);
+                case CommandPlacement.IDM_VS_CTXT_PROJNODE:
+                    menuCommand = new MenuCommand(MenuItemCallback_ProjNode, menuCommandId);
                     break;
                 default:
                     Logger.Log(new ArgumentException("Invalid menuCommandType=" + commandPlacement));
@@ -166,9 +166,9 @@ namespace OpenInApp.Menu
             MenuItemCallback(CommandPlacement.IDM_VS_CTXT_ITEMNODE);
         }
 
-        private void MenuItemCallback_Project(object sender, EventArgs e)
+        private void MenuItemCallback_ProjNode(object sender, EventArgs e)
         {
-            MenuItemCallback(CommandPlacement.IDM_VS_CTXT_PROJECT);
+            MenuItemCallback(CommandPlacement.IDM_VS_CTXT_PROJNODE);
         }
 
         private void MenuItemCallback(CommandPlacement commandPlacement)

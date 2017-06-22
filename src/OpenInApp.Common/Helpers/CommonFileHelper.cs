@@ -51,7 +51,7 @@ namespace OpenInApp.Common.Helpers
 
             if (commandPlacement == CommandPlacement.IDM_VS_CTXT_FOLDERNODE ||
                 commandPlacement == CommandPlacement.IDM_VS_CTXT_ITEMNODE ||
-                commandPlacement == CommandPlacement.IDM_VS_CTXT_PROJECT)
+                commandPlacement == CommandPlacement.IDM_VS_CTXT_PROJNODE)
             {
                 var selectedItems = dte.SelectedItems;
                 foreach (SelectedItem selectedItem in selectedItems)
@@ -201,7 +201,7 @@ namespace OpenInApp.Common.Helpers
             switch (commandPlacement)
             {
                 case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
-                case CommandPlacement.IDM_VS_CTXT_PROJECT:
+                case CommandPlacement.IDM_VS_CTXT_PROJNODE:
                     artefactTypeToOpen = ArtefactTypeToOpen.Folder;
                     break;
                 case CommandPlacement.IDM_VS_CTXT_CODEWIN:

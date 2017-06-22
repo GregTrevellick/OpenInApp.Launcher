@@ -29,7 +29,7 @@ namespace OpenInTreeSizeFree.Commands
                 PackageIds.CmdIdOpenInAppItemNode,
                 PackageIds.CmdIdOpenInAppCodeWin,
                 PackageIds.CmdIdOpenInAppFolderNode,
-                PackageIds.CmdIdOpenInAppProject,
+                PackageIds.CmdIdOpenInAppProjNode,
                 GeneralOptions.keyToExecutableEnum,
                 VSPackage.Options.ActualPathToExe,
                 VSPackage.Options.FileQuantityWarningLimit,
