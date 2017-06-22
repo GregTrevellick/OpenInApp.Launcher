@@ -18,7 +18,7 @@ namespace OpenInEmacs.Commands
 
         public void Initialize()
         {
-            var cmdIdOpenInAppFolderNode = PackageIds.CmdIdOpenInAppFolderNode == int.MinValue ? null : (int?)PackageIds.CmdIdOpenInAppFolderNode;
+            //var cmdIdOpenInAppFolderNode = PackageIds.CmdIdOpenInAppFolderNode == int.MinValue ? null : (int?)PackageIds.CmdIdOpenInAppFolderNode;
 
             var menuCore = new MenuCore(
                 Vsix.Name,
@@ -26,7 +26,7 @@ namespace OpenInEmacs.Commands
                 PackageGuids.guidOpenInVsCmdSetString,
                 PackageIds.CmdIdOpenInAppItemNode,
                 PackageIds.CmdIdOpenInAppCodeWin,
-                cmdIdOpenInAppFolderNode,
+                //cmdIdOpenInAppFolderNode,
                 GeneralOptions.keyToExecutableEnum,
                 VSPackage.Options.ActualPathToExe,
                 VSPackage.Options.FileQuantityWarningLimit,

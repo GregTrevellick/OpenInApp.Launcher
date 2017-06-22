@@ -6,5 +6,6 @@
     internal sealed partial class PackageIds
     {
         //public const int CmdIdOpenInAppFolderNode = int.MinValue;
+        //public const int CmdIdOpenInAppProject = int.MinValue;
     }
 }

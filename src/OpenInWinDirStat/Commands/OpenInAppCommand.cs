@@ -18,8 +18,8 @@ namespace OpenInWinDirStat.Commands
 
         public void Initialize()
         {
-            var cmdIdOpenInAppFolderNode = PackageIds.CmdIdOpenInAppFolderNode == int.MinValue ? null : (int?)PackageIds.CmdIdOpenInAppFolderNode;
-            var cmdIdOpenInAppProject = PackageIds.CmdIdOpenInAppProject == int.MinValue ? null : (int?)PackageIds.CmdIdOpenInAppProject;
+            //var cmdIdOpenInAppFolderNode = PackageIds.CmdIdOpenInAppFolderNode == int.MinValue ? null : (int?)PackageIds.CmdIdOpenInAppFolderNode;
+            //var cmdIdOpenInAppProject = PackageIds.CmdIdOpenInAppProject == int.MinValue ? null : (int?)PackageIds.CmdIdOpenInAppProject;
 
             var menuCore = new MenuCore(
                 Vsix.Name, 
@@ -27,8 +27,8 @@ namespace OpenInWinDirStat.Commands
                 PackageGuids.guidOpenInVsCmdSetString,
                 PackageIds.CmdIdOpenInAppItemNode,
                 PackageIds.CmdIdOpenInAppCodeWin,
-                cmdIdOpenInAppFolderNode,
-                cmdIdOpenInAppProject,
+                PackageIds.CmdIdOpenInAppFolderNode,
+                PackageIds.CmdIdOpenInAppProject,
                 GeneralOptions.keyToExecutableEnum,
                 VSPackage.Options.ActualPathToExe,
                 VSPackage.Options.FileQuantityWarningLimit,

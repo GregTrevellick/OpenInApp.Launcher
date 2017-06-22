@@ -18,6 +18,7 @@ namespace OpenInApp.Menu
         private readonly int _cmdIdOpenInAppCodeWin;
         private readonly int _cmdIdOpenInAppItemNode;
         private readonly int? _cmdIdOpenInAppFolderNode;
+        private readonly int? _cmdIdOpenInAppProject;
         private readonly IServiceProvider _serviceProvider;
         private readonly KeyToExecutableEnum _keyToExecutableEnum;
         private readonly string _actualPathToExe;
@@ -33,7 +34,7 @@ namespace OpenInApp.Menu
                 string guidOpenInVsCmdSetString,
                 int cmdIdOpenInAppItemNode, 
                 int cmdIdOpenInAppCodeWin, 
-                int? cmdIdOpenInAppFolderNode,
+                //int? cmdIdOpenInAppFolderNode,
                 KeyToExecutableEnum keyToExecutableEnum,
                 string actualPathToExe,
                 string fileQuantityWarningLimit,
@@ -46,7 +47,43 @@ namespace OpenInApp.Menu
             _actualPathToExe = actualPathToExe;
             _cmdIdOpenInAppCodeWin = cmdIdOpenInAppCodeWin;
             _cmdIdOpenInAppItemNode = cmdIdOpenInAppItemNode;
+            _cmdIdOpenInAppFolderNode = null;
+            _cmdIdOpenInAppProject = null;
+            _constantsForAppCommon = new ConstantsForAppCommon(_vsixName, _vsixVersion);
+            _fileQuantityWarningLimit = fileQuantityWarningLimit;
+            _generalOptions = generalOptions;
+            _keyToExecutableEnum = keyToExecutableEnum;
+            _keyToExecutableEnumDescription = keyToExecutableEnumDescription;
+            _serviceProvider = serviceProvider;
+            _suppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning;
+            _typicalFileExtensions = typicalFileExtensions;
+            _vsixName = vsixName;
+            _vsixVersion = vsixVersion;
+            CommandSet = new Guid(guidOpenInVsCmdSetString);
+        }
+
+        public MenuCore(
+            string vsixName,
+            string vsixVersion,
+            string guidOpenInVsCmdSetString,
+            int cmdIdOpenInAppItemNode,
+            int cmdIdOpenInAppCodeWin,
+            int cmdIdOpenInAppFolderNode,
+            int cmdIdOpenInAppProject,
+            KeyToExecutableEnum keyToExecutableEnum,
+            string actualPathToExe,
+            string fileQuantityWarningLimit,
+            bool suppressTypicalFileExtensionsWarning,
+            string typicalFileExtensions,
+            string keyToExecutableEnumDescription,
+            IServiceProvider serviceProvider,
+            IGeneralOptionsBase generalOptions)
+        {
+            _actualPathToExe = actualPathToExe;
+            _cmdIdOpenInAppCodeWin = cmdIdOpenInAppCodeWin;
+            _cmdIdOpenInAppItemNode = cmdIdOpenInAppItemNode;
             _cmdIdOpenInAppFolderNode = cmdIdOpenInAppFolderNode;
+            _cmdIdOpenInAppProject = cmdIdOpenInAppProject;
             _constantsForAppCommon = new ConstantsForAppCommon(_vsixName, _vsixVersion);
             _fileQuantityWarningLimit = fileQuantityWarningLimit;
             _generalOptions = generalOptions;
@@ -80,6 +117,11 @@ namespace OpenInApp.Menu
                     if (_cmdIdOpenInAppFolderNode.HasValue)
                     {
                         AddMenuCommand(commandService, _cmdIdOpenInAppFolderNode.Value, CommandPlacement.IDM_VS_CTXT_FOLDERNODE);
+                    }
+                    //Comment out to exclude folders / un-comment to include folders 
+                    if (_cmdIdOpenInAppProject.HasValue)
+                    {
+                        AddMenuCommand(commandService, _cmdIdOpenInAppProject.Value, CommandPlacement.IDM_VS_CTXT_PROJECT);
                     }
                 }
             }
