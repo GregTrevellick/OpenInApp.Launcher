@@ -109,6 +109,7 @@
     <Content Include="OpenInChromeCanary\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInChromeCanary\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInChromeCanary\ThirdPartyLogo.png" />
+    <Content Include="OpenInChromeCanary\ThirdPartyScreenShot.png" />
     <Content Include="OpenInEmacs\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInEmacs\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInEmacs\ThirdPartyLogo.png" />
@@ -116,6 +117,7 @@
     <Content Include="OpenInFirefoxDeveloperEdition\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInFirefoxDeveloperEdition\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInFirefoxDeveloperEdition\ThirdPartyLogo.png" />
+    <Content Include="OpenInFirefoxDeveloperEdition\ThirdPartyScreenShot.png" />
     <Content Include="OpenInGimp\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInGimp\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInGimp\ThirdPartyLogo.png" />
@@ -123,6 +125,7 @@
     <Content Include="OpenInMarkdownMonster\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInMarkdownMonster\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInMarkdownMonster\ThirdPartyLogo.png" />
+    <Content Include="OpenInMarkdownMonster\ThirdPartyScreenShot.png" />
     <Content Include="OpenInMSPaint\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInMSPaint\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInMSPaint\ThirdPartyLogo.png" />
