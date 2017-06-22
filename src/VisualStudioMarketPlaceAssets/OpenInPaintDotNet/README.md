@@ -9,6 +9,8 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 
 [![][ThirdPartyAppOfficialLogo]][ThirdPartyAppHomePage]
 
+![](ThirdPartyAppHomePage.png)
+
 ## Features
 
 - Open multiple files simultaneously in [paint.net][ThirdPartyAppHomePage].

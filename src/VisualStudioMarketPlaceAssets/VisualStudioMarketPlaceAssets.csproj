@@ -165,6 +165,7 @@
     <Content Include="Generic_ReadMeScreenShot_WarningNonTypical.png" />
     <Content Include="OpenInWinDirStat\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInWinDirStat\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInWinDirStat\ThirdPartyScreenShot.png" />
     <Content Include="OpenInWinDirStat\ThirdPartyLogo.png" />
     <Content Include="OpenInXamarinStudio\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInXamarinStudio\ReadMeScreenShot_ContextMenu.png" />
