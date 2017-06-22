@@ -10,6 +10,8 @@
 			</Group>
 			<Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderNode" priority="0x0100">
 			</Group>
+			<Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppProject" priority="0x0100">
+			</Group>
 		</Groups>
 
 		<Buttons>
@@ -34,6 +36,13 @@
 					<ButtonText>Open Folder in WinDirStat</ButtonText>
 				</Strings>
 			</Button>
+			<Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppProject" priority="0x100" type="Button">
+				<Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppProject" />
+				<Icon guid="guidImages" id="bmpPic1" />
+				<Strings>
+					<ButtonText>Open Folder in WinDirStat</ButtonText>
+				</Strings>
+			</Button>			
 		</Buttons>
 		<Bitmaps>
 			<Bitmap guid="guidImages" href="Resources\VsixCommandIcon_16x16.png" usedList="bmpPic1"/>
@@ -50,6 +59,9 @@
 		<CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderNode" priority="0x0100">
 			<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_FOLDERNODE" />
 		</CommandPlacement>
+		<CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppProject" priority="0x0100">
+			<Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_PROJECT" />
+		</CommandPlacement>
 	</CommandPlacements>
 
 	<Symbols>
@@ -61,6 +73,8 @@
 			<IDSymbol name="CmdIdOpenInAppItemNode" value="0x0110" />
 			<IDSymbol name="GroupOpenInAppFolderNode" value="0x1050" />
 			<IDSymbol name="CmdIdOpenInAppFolderNode" value="0x0120" />
+			<IDSymbol name="GroupOpenInAppProject" value="0x1060" />
+			<IDSymbol name="CmdIdOpenInAppProject" value="0x0130" />
 		</GuidSymbol>
 		<GuidSymbol name="guidImages" value="{40f390a4-eea5-48a8-b00b-2f188c3c9ddc}" >
 			<IDSymbol name="bmpPic1" value="1" />

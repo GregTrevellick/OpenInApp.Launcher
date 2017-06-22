@@ -45,12 +45,13 @@ namespace OpenInApp.Common.Helpers
         /// <param name="dte">The DTE.</param>
         /// <param name="isFromSolutionExplorer">gregt Differentiator for solution explorer versus code editor window.</param>
         /// <returns></returns>
-        public static IEnumerable<string> GetArtefactNamesToBeOpened(DTE2 dte, CommandPlacement commandPlacement)//bool isFromSolutionExplorer = true)
+        public static IEnumerable<string> GetArtefactNamesToBeOpened(DTE2 dte, CommandPlacement commandPlacement)
         {
             var artefactNamesToBeOpened = new List<string>();
 
             if (commandPlacement == CommandPlacement.IDM_VS_CTXT_FOLDERNODE ||
-                commandPlacement == CommandPlacement.IDM_VS_CTXT_ITEMNODE)
+                commandPlacement == CommandPlacement.IDM_VS_CTXT_ITEMNODE ||
+                commandPlacement == CommandPlacement.IDM_VS_CTXT_PROJECT)
             {
                 var selectedItems = dte.SelectedItems;
                 foreach (SelectedItem selectedItem in selectedItems)
@@ -200,6 +201,7 @@ namespace OpenInApp.Common.Helpers
             switch (commandPlacement)
             {
                 case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
+                case CommandPlacement.IDM_VS_CTXT_PROJECT:
                     artefactTypeToOpen = ArtefactTypeToOpen.Folder;
                     break;
                 case CommandPlacement.IDM_VS_CTXT_CODEWIN:

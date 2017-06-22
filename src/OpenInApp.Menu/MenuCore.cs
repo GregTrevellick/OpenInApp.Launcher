@@ -102,6 +102,9 @@ namespace OpenInApp.Menu
                 case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
                     menuCommand = new MenuCommand(MenuItemCallback_ItemNode, menuCommandId);
                     break;
+                case CommandPlacement.IDM_VS_CTXT_PROJECT:
+                    menuCommand = new MenuCommand(MenuItemCallback_Project, menuCommandId);
+                    break;
                 default:
                     Logger.Log(new ArgumentException("Invalid menuCommandType=" + commandPlacement));
                     menuCommand = null;
@@ -124,6 +127,11 @@ namespace OpenInApp.Menu
         private void MenuItemCallback_ItemNode(object sender, EventArgs e)
         {
             MenuItemCallback(CommandPlacement.IDM_VS_CTXT_ITEMNODE);
+        }
+
+        private void MenuItemCallback_Project(object sender, EventArgs e)
+        {
+            MenuItemCallback(CommandPlacement.IDM_VS_CTXT_PROJECT);
         }
 
         private void MenuItemCallback(CommandPlacement commandPlacement)
