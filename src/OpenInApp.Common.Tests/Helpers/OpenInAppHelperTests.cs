@@ -122,24 +122,6 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("I")]
-        //[TestCase(@"C:\Program Files (x86)\WinDirStat\windirstat.exe", null)]//works for first entry in list, file or directory 
-        public void InvokeCommandTest_FolderSizes(string executableFullPath, bool useShellExecute)
-        {
-            // Arrange
-            bool separateProcessPerFileToBeOpened = false;
-            var actualFilesToBeOpened = new List<string>
-            {
-                @"C:\Temp\a.txt",
-                @"C:\Temp\b.txt",
-                @"C:\Temp",
-            };
-
-            // Act
-            Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
-        }
-
-        [Test()]
-        [Category("I")]
         //works, but needs testing with files actually locked [TestCase(@"C:\Program Files\Unlocker\Unlocker.exe", null)]
         //opens app but even with just 1 arg containing folder name the app doesnt use the argument [TestCase(@"C:\Program Files (x86)\File Renamer\FileRenamer.exe", null)]
         //nothing happens even just 1 file [TestCase(@"C:\Program Files (x86)\Windows Media Player\wmplayer.exe", null)]
@@ -194,6 +176,7 @@ namespace OpenInApp.Common.Tests.Helpers
         //[TestCase(KeyToExecutableEnum.VS2017Enterprise, FileToBeOpenedKind.Code)]
         //[TestCase(KeyToExecutableEnum.VS2017Professional, FileToBeOpenedKind.Code)]
         //[TestCase(KeyToExecutableEnum.Emacs, FileToBeOpenedKind.Code)]
+        //[TestCase(@"C:\Program Files (x86)\WinDirStat\windirstat.exe", null)]
         public void InvokeCommandTest(KeyToExecutableEnum keyToExecutableEnum, FileToBeOpenedKind fileToBeOpenedKind)
         {
             // Arrange
