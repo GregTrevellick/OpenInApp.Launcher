@@ -121,7 +121,7 @@
     <Content Include="OpenInGimp\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInGimp\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInGimp\ThirdPartyLogo.png" />
-    <Content Include="OpenInGimp\ThirdPartyScreenShot.jpg" />
+    <Content Include="OpenInGimp\ThirdPartyScreenShot.png" />
     <Content Include="OpenInMarkdownMonster\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInMarkdownMonster\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInMarkdownMonster\ThirdPartyLogo.png" />
@@ -129,7 +129,7 @@
     <Content Include="OpenInMSPaint\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInMSPaint\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInMSPaint\ThirdPartyLogo.png" />
-    <Content Include="OpenInMSPaint\ThirdPartyScreenShot.gif" />
+    <Content Include="OpenInMSPaint\ThirdPartyScreenShot.png" />
     <Content Include="OpenInOperaDeveloper\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInOperaDeveloper\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInOperaDeveloper\ThirdPartyLogo.png" />
@@ -143,7 +143,7 @@
     <Content Include="OpenInPaintDotNet\ThirdPartyLogo.png" />
     <Content Include="OpenInAbracadabra\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInAbracadabra\ThirdPartyLogo.png" />
-    <Content Include="OpenInPaintDotNet\ThirdPartyScreenShot.jpg" />
+    <Content Include="OpenInPaintDotNet\ThirdPartyScreenShot.png" />
     <Content Include="OpenInTreeSizeFree\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInTreeSizeFree\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInTreeSizeFree\ThirdPartyLogo.png" />
@@ -186,7 +186,7 @@
     <Content Include="OpenInWinDirStat\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInWinDirStat\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInWinDirStat\ThirdPartyLogo.png" />
-    <Content Include="OpenInWinDirStat\ThirdPartyScreenShot.jpg" />
+    <Content Include="OpenInWinDirStat\ThirdPartyScreenShot.png" />
     <Content Include="OpenInXamarinStudio\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInXamarinStudio\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInXamarinStudio\ThirdPartyLogo.png" />
