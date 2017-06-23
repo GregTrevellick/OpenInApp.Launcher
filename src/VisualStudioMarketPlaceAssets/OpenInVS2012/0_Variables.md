@@ -1,1 +1,1 @@
-[ThirdPartyAppHomePage]: https://www.visualstudio.com/vs/
+[ThirdPartyAppHomePage]: https://www.visualstudio.com/vs/older-downloads/
