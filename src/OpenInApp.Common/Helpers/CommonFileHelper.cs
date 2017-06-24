@@ -49,30 +49,6 @@ namespace OpenInApp.Common.Helpers
         {
             var artefactNamesToBeOpened = new List<string>();
 
-            //////////////////////////////if (commandPlacement == CommandPlacement.IDM_VS_CTXT_FOLDERNODE ||
-            //////////////////////////////    commandPlacement == CommandPlacement.IDM_VS_CTXT_ITEMNODE ||
-            //////////////////////////////    commandPlacement == CommandPlacement.IDM_VS_CTXT_PROJNODE)
-            //////////////////////////////{
-            //////////////////////////////    var selectedItems = dte.SelectedItems;
-            //////////////////////////////    foreach (SelectedItem selectedItem in selectedItems)
-            //////////////////////////////    {
-            //////////////////////////////        try
-            //////////////////////////////        {
-            //////////////////////////////            selectedItem.ProjectItem.Save();
-            //////////////////////////////        }
-            //////////////////////////////        catch (Exception)
-            //////////////////////////////        {
-            //////////////////////////////            // ignored - or log as save failed to output window ? gregtt
-            //////////////////////////////        }
-            //////////////////////////////        artefactNamesToBeOpened.Add(selectedItem.ProjectItem.FileNames[0]);
-            //////////////////////////////    }
-            //////////////////////////////}
-            //////////////////////////////else //CODEWIN
-            //////////////////////////////{
-            //////////////////////////////    dte.ActiveDocument.Save();
-            //////////////////////////////    artefactNamesToBeOpened.Add(dte.ActiveDocument.FullName);
-            //////////////////////////////}
-
             switch (commandPlacement)
             {
                 case CommandPlacement.IDM_VS_CTXT_CODEWIN:
@@ -99,7 +75,6 @@ namespace OpenInApp.Common.Helpers
         {
             dte.ActiveDocument.Save();
 
-            ///////////////////////////////artefactNamesToBeOpened.Add(dte.ActiveDocument.FullName);
             AddArtefactToArtefactNamesToBeOpened(artefactNamesToBeOpened.ToList(), dte.ActiveDocument.FullName);
         }
 
@@ -133,7 +108,6 @@ namespace OpenInApp.Common.Helpers
                     // ignore ? log as a failed save (to the output window) ? gregtt
                 }
 
-                /////////////////////////////artefactNamesToBeOpened.Add(selectedItem.ProjectItem.FileNames[0]);
                 AddArtefactToArtefactNamesToBeOpened(artefactNamesToBeOpened.ToList(), selectedItem.ProjectItem.FileNames[0]);
             }
         }
