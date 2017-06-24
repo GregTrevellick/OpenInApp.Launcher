@@ -76,16 +76,16 @@ namespace OpenInApp.Common.Helpers
             switch (commandPlacement)
             {
                 case CommandPlacement.IDM_VS_CTXT_CODEWIN:
-                    SaveArtefactsAndAddToList_CodeWin(dte, artefactNamesToBeOpened);
+                    SetArtefactNamesToBeOpened_CodeWin(dte, artefactNamesToBeOpened);
                     break;
                 case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
-                    SaveArtefactsAndAddToList_FolderNode(dte, artefactNamesToBeOpened);
+                    SetArtefactNamesToBeOpened_FolderNode(dte, artefactNamesToBeOpened);
                     break;
                 case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
-                    SaveArtefactsAndAddToList_ItemNode(dte, artefactNamesToBeOpened);
+                    SetArtefactNamesToBeOpened_ItemNode(dte, artefactNamesToBeOpened);
                     break;
                 case CommandPlacement.IDM_VS_CTXT_PROJNODE:
-                    SaveArtefactsAndAddToList_ProjNode(dte, artefactNamesToBeOpened);
+                    SetArtefactNamesToBeOpened_ProjNode(dte, artefactNamesToBeOpened);
                     break;
                 default:
                     // ignore ? log as a failed save (to the output window) ? gregtt
@@ -95,24 +95,25 @@ namespace OpenInApp.Common.Helpers
             return artefactNamesToBeOpened;
         }
 
-        private static void SaveArtefactsAndAddToList_CodeWin(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
+        private static void SetArtefactNamesToBeOpened_CodeWin(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
         {
             dte.ActiveDocument.Save();
+
             ///////////////////////////////artefactNamesToBeOpened.Add(dte.ActiveDocument.FullName);
             AddArtefactToArtefactNamesToBeOpened(artefactNamesToBeOpened.ToList(), dte.ActiveDocument.FullName);
         }
 
-        private static void SaveArtefactsAndAddToList_FolderNode(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
+        private static void SetArtefactNamesToBeOpened_FolderNode(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
         {
             SaveArtefactsAndAddToList(dte, artefactNamesToBeOpened);
         }
 
-        private static void SaveArtefactsAndAddToList_ItemNode(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
+        private static void SetArtefactNamesToBeOpened_ItemNode(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
         {
             SaveArtefactsAndAddToList(dte, artefactNamesToBeOpened);
         }
 
-        private static void SaveArtefactsAndAddToList_ProjNode(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
+        private static void SetArtefactNamesToBeOpened_ProjNode(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
         {
             SaveArtefactsAndAddToList(dte, artefactNamesToBeOpened);
         }
@@ -131,6 +132,7 @@ namespace OpenInApp.Common.Helpers
                 {
                     // ignore ? log as a failed save (to the output window) ? gregtt
                 }
+
                 /////////////////////////////artefactNamesToBeOpened.Add(selectedItem.ProjectItem.FileNames[0]);
                 AddArtefactToArtefactNamesToBeOpened(artefactNamesToBeOpened.ToList(), selectedItem.ProjectItem.FileNames[0]);
             }
