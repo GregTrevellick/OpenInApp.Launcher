@@ -64,6 +64,8 @@
     <None Include="OpenInOperaDeveloper\0_Variables.md" />
     <None Include="OpenInOpera\README.md" />
     <None Include="OpenInOpera\0_Variables.md" />
+    <None Include="OpenInSQLServerManagementStudio\0_Variables.md" />
+    <None Include="OpenInSQLServerManagementStudio\README.md" />
     <None Include="OpenInTreeSizeFree\README.md" />
     <None Include="OpenInTreeSizeFree\0_Variables.md" />
     <None Include="OpenInTreeSizeProfessional\0_Variables.md" />
@@ -100,7 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Gulpfile.js" />
-    <Content Include="Logo sources.txt" />
+    <Content Include="sources.txt" />
     <Content Include="OpenInAbracadabra\ReadMeScreenShot_FolderNode.png" />
     <Content Include="OpenInAbracadabra\ReadMeScreenShot_ProjNode.png" />
     <Content Include="OpenInAbracadabra\ThirdPartyScreenShot.png" />
@@ -147,6 +149,10 @@
     <Content Include="OpenInAbracadabra\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInAbracadabra\ThirdPartyLogo.png" />
     <Content Include="OpenInPaintDotNet\ThirdPartyScreenShot.png" />
+    <Content Include="OpenInSQLServerManagementStudio\ReadMeScreenShot_CodeEditorWindow.png" />
+    <Content Include="OpenInSQLServerManagementStudio\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInSQLServerManagementStudio\ThirdPartyLogo.png" />
+    <Content Include="OpenInSQLServerManagementStudio\ThirdPartyScreenShot.png" />
     <Content Include="OpenInTreeSizeFree\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInTreeSizeFree\ReadMeScreenShot_ContextMenu.png" />
     <Content Include="OpenInTreeSizeFree\ReadMeScreenShot_FolderNode.png" />

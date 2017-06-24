@@ -68,7 +68,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Menu", "OpenInApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInWinDirStat", "OpenInWinDirStat\OpenInWinDirStat.csproj", "{49325BDB-1A35-4A42-B133-8FBD2774D39F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInSequelServerManagementStudio", "OpenInSequelServerManagementStudio\OpenInSequelServerManagementStudio.csproj", "{E0CCBB8F-7CCB-4876-A031-D6600CBB3E34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInSQLServerManagementStudio", "OpenInSQLServerManagementStudio\OpenInSQLServerManagementStudio.csproj", "{E0CCBB8F-7CCB-4876-A031-D6600CBB3E34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

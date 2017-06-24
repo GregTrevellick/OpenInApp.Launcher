@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Common.Helpers;
-using OpenInSequelServerManagementStudio.Commands;
-using OpenInSequelServerManagementStudio.Options.SequelServerManagementStudio;
+using OpenInSQLServerManagementStudio.Commands;
+using OpenInSQLServerManagementStudio.Options.SQLServerManagementStudio;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
-namespace OpenInSequelServerManagementStudio
+namespace OpenInSQLServerManagementStudio
 {
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [InstalledProductRegistration(productName: "#110", productDetails: "#112", productId: Vsix.Version, IconResourceID = 400)]

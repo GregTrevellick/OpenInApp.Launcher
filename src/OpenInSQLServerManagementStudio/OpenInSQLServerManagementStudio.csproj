@@ -30,8 +30,8 @@
     <ProjectGuid>{E0CCBB8F-7CCB-4876-A031-D6600CBB3E34}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenInSequelServerManagementStudio</RootNamespace>
-    <AssemblyName>OpenInSequelServerManagementStudio</AssemblyName>
+    <RootNamespace>OpenInSQLServerManagementStudio</RootNamespace>
+    <AssemblyName>OpenInSQLServerManagementStudio</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>

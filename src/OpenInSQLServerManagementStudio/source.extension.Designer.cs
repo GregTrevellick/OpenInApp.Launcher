@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OpenInSequelServerManagementStudio {
+namespace OpenInSQLServerManagementStudio {
     using System;
     
     

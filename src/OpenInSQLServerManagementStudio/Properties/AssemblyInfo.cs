@@ -1,4 +1,4 @@
-﻿using OpenInSequelServerManagementStudio;
+﻿using OpenInSQLServerManagementStudio;
 using System.Reflection;
 using System.Runtime.InteropServices;
 

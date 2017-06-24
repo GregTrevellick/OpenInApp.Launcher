@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.Shell;
-using OpenInSequelServerManagementStudio.Options.SequelServerManagementStudio;
+using OpenInSQLServerManagementStudio.Options.SQLServerManagementStudio;
 using OpenInApp.Common.Helpers;
 using OpenInApp.Menu;
 using System;
 
-namespace OpenInSequelServerManagementStudio.Commands
+namespace OpenInSQLServerManagementStudio.Commands
 {
     internal sealed class OpenInAppCommand
     {

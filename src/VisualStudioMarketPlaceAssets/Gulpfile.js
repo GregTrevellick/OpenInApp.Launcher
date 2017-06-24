@@ -15,6 +15,7 @@ gulp.task('OpenInMarkdownMonster', function () { return OIAConcat('OpenInMarkdow
 gulp.task('OpenInOpera', function () { return OIAConcat('OpenInOpera', 'Opera') });
 gulp.task('OpenInOperaDeveloper', function () { return OIAConcat('OpenInOperaDeveloper', 'Opera Developer') });
 gulp.task('OpenInPaintDotNet', function () { return OIAConcat('OpenInPaintDotNet', 'paint.net') });
+gulp.task('OpenInSQLServerManagementStudio', function () { return OIAConcat('OpenInSQLServerManagementStudio', 'Sequel Server Management Studio') });
 gulp.task('OpenInTreeSizeFree', function () { return OIAConcat('OpenInTreeSizeFree', 'TreeSize Free') });
 gulp.task('OpenInTreeSizeProfessional', function () { return OIAConcat('OpenInTreeSizeProfessional', 'TreeSize Professional') });
 gulp.task('OpenInVivaldi', function () { return OIAConcat('OpenInVivaldi', 'Vivaldi Web Browser') });
@@ -28,28 +29,29 @@ gulp.task('OpenInWinDirStat', function () { return OIAConcat('OpenInWinDirStat',
 gulp.task('OpenInXamarinStudio', function () { return OIAConcat('OpenInXamarinStudio', 'Xamarin Studio') });
 
 gulp.task('default',
-    [ 'OpenInAbracadabra'
-    , 'OpenInAltovaXmlSpy'
-    , 'OpenInChromeCanary'
-    , 'OpenInEmacs'
-    , 'OpenInFirefoxDeveloperEdition'
-    , 'OpenInGimp'
-    , 'OpenInMarkdownMonster'
-    , 'OpenInMSPaint'
-    , 'OpenInOpera'
-    , 'OpenInOperaDeveloper'
-    , 'OpenInPaintDotNet'
-    , 'OpenInTreeSizeFree'
-    , 'OpenInTreeSizeProfessional'
-    , 'OpenInVivaldi'
-    , 'OpenInVS2012'
-    , 'OpenInVS2013'
-    , 'OpenInVS2015'
-    , 'OpenInVS2017Community'
-    , 'OpenInVS2017Enterprise'
-	, 'OpenInVS2017Professional'
-	, 'OpenInWinDirStat'
-    , 'OpenInXamarinStudio']);
+    ['OpenInAbracadabra'
+        , 'OpenInAltovaXmlSpy'
+        , 'OpenInChromeCanary'
+        , 'OpenInEmacs'
+        , 'OpenInFirefoxDeveloperEdition'
+        , 'OpenInGimp'
+        , 'OpenInMarkdownMonster'
+        , 'OpenInMSPaint'
+        , 'OpenInOpera'
+        , 'OpenInOperaDeveloper'
+        , 'OpenInPaintDotNet'
+        , 'OpenInSQLServerManagementStudio'
+        , 'OpenInTreeSizeFree'
+        , 'OpenInTreeSizeProfessional'
+        , 'OpenInVivaldi'
+        , 'OpenInVS2012'
+        , 'OpenInVS2013'
+        , 'OpenInVS2015'
+        , 'OpenInVS2017Community'
+        , 'OpenInVS2017Enterprise'
+        , 'OpenInVS2017Professional'
+        , 'OpenInWinDirStat'
+        , 'OpenInXamarinStudio']);
 
 function OIAConcat (appNam, appDesc) { 
 

@@ -6,13 +6,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace OpenInSequelServerManagementStudio.Options.SequelServerManagementStudio
+namespace OpenInSQLServerManagementStudio.Options.SQLServerManagementStudio
 {
     public class GeneralOptions : DialogPage, IGeneralOptionsFile // or set to IGeneralOptionsFolder // or set to IGeneralOptionsFolder
     {
-        internal static KeyToExecutableEnum keyToExecutableEnum = KeyToExecutableEnum.SequelServerManagementStudio;
+        internal static KeyToExecutableEnum keyToExecutableEnum = KeyToExecutableEnum.SQLServerManagementStudio;
         private IEnumerable<string> defaultTypicalFileExtensions = new ConstantsForAppCommon().GetDefaultTypicalFileExtensions(keyToExecutableEnum);
-        private const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableString.SequelServerManagementStudio;
+        private const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableString.SQLServerManagementStudio;
 
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonActualPathToExeOptionLabel)]
