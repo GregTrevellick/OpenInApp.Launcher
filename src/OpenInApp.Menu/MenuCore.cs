@@ -108,12 +108,12 @@ namespace OpenInApp.Menu
                 {
                     AddMenuCommand(commandService, _cmdIdOpenInAppCodeWin, CommandPlacement.IDM_VS_CTXT_CODEWIN);
 
-                    AddMenuCommand(commandService, _cmdIdOpenInAppItemNode, CommandPlacement.IDM_VS_CTXT_ITEMNODE);
-                    
                     if (_cmdIdOpenInAppFolderNode.HasValue)
                     {
                         AddMenuCommand(commandService, _cmdIdOpenInAppFolderNode.Value, CommandPlacement.IDM_VS_CTXT_FOLDERNODE);
                     }
+
+                    AddMenuCommand(commandService, _cmdIdOpenInAppItemNode, CommandPlacement.IDM_VS_CTXT_ITEMNODE);
                     
                     if (_cmdIdOpenInAppProjNode.HasValue)
                     {
