@@ -49,31 +49,96 @@ namespace OpenInApp.Common.Helpers
         {
             var artefactNamesToBeOpened = new List<string>();
 
-            if (commandPlacement == CommandPlacement.IDM_VS_CTXT_FOLDERNODE ||
-                commandPlacement == CommandPlacement.IDM_VS_CTXT_ITEMNODE ||
-                commandPlacement == CommandPlacement.IDM_VS_CTXT_PROJNODE)
+            //////////////////////////////if (commandPlacement == CommandPlacement.IDM_VS_CTXT_FOLDERNODE ||
+            //////////////////////////////    commandPlacement == CommandPlacement.IDM_VS_CTXT_ITEMNODE ||
+            //////////////////////////////    commandPlacement == CommandPlacement.IDM_VS_CTXT_PROJNODE)
+            //////////////////////////////{
+            //////////////////////////////    var selectedItems = dte.SelectedItems;
+            //////////////////////////////    foreach (SelectedItem selectedItem in selectedItems)
+            //////////////////////////////    {
+            //////////////////////////////        try
+            //////////////////////////////        {
+            //////////////////////////////            selectedItem.ProjectItem.Save();
+            //////////////////////////////        }
+            //////////////////////////////        catch (Exception)
+            //////////////////////////////        {
+            //////////////////////////////            // ignored - or log as save failed to output window ? gregtt
+            //////////////////////////////        }
+            //////////////////////////////        artefactNamesToBeOpened.Add(selectedItem.ProjectItem.FileNames[0]);
+            //////////////////////////////    }
+            //////////////////////////////}
+            //////////////////////////////else //CODEWIN
+            //////////////////////////////{
+            //////////////////////////////    dte.ActiveDocument.Save();
+            //////////////////////////////    artefactNamesToBeOpened.Add(dte.ActiveDocument.FullName);
+            //////////////////////////////}
+
+            switch (commandPlacement)
             {
-                var selectedItems = dte.SelectedItems;
-                foreach (SelectedItem selectedItem in selectedItems)
-                {
-                    try
-                    {
-                        selectedItem.ProjectItem.Save();
-                    }
-                    catch (Exception)
-                    {
-                        // ignored - or log as save failed to output window ? gregtt
-                    }
-                    artefactNamesToBeOpened.Add(selectedItem.ProjectItem.FileNames[0]);
-                }
-            }
-            else
-            {
-                dte.ActiveDocument.Save();
-                artefactNamesToBeOpened.Add(dte.ActiveDocument.FullName);
+                case CommandPlacement.IDM_VS_CTXT_CODEWIN:
+                    SaveArtefactsAndAddToList_CodeWin(dte, artefactNamesToBeOpened);
+                    break;
+                case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
+                    SaveArtefactsAndAddToList_FolderNode(dte, artefactNamesToBeOpened);
+                    break;
+                case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
+                    SaveArtefactsAndAddToList_ItemNode(dte, artefactNamesToBeOpened);
+                    break;
+                case CommandPlacement.IDM_VS_CTXT_PROJNODE:
+                    SaveArtefactsAndAddToList_ProjectNode(dte, artefactNamesToBeOpened);
+                    break;
+                default:
+                    // ignore ? log as a failed save (to the output window) ? gregtt
+                    break;
             }
 
             return artefactNamesToBeOpened;
+        }
+
+        private static void SaveArtefactsAndAddToList_CodeWin(DTE2 dte, List<string> artefactNamesToBeOpened)
+        {
+            dte.ActiveDocument.Save();
+            ///////////////////////////////artefactNamesToBeOpened.Add(dte.ActiveDocument.FullName);
+            AddArtefactToArtefactNamesToBeOpened(artefactNamesToBeOpened, dte.ActiveDocument.FullName);
+        }
+
+        private static void SaveArtefactsAndAddToList_FolderNode(DTE2 dte, List<string> artefactNamesToBeOpened)
+        {
+            SaveArtefactsAndAddToList(dte, artefactNamesToBeOpened);
+        }
+
+        private static void SaveArtefactsAndAddToList_ItemNode(DTE2 dte, List<string> artefactNamesToBeOpened)
+        {
+            SaveArtefactsAndAddToList(dte, artefactNamesToBeOpened);
+        }
+
+        private static void SaveArtefactsAndAddToList_ProjectNode(DTE2 dte, List<string> artefactNamesToBeOpened)
+        {
+            SaveArtefactsAndAddToList(dte, artefactNamesToBeOpened);
+        }
+
+        private static void SaveArtefactsAndAddToList(DTE2 dte, List<string> artefactNamesToBeOpened)
+        {
+            var selectedItems = dte.SelectedItems;
+
+            foreach (SelectedItem selectedItem in selectedItems)
+            {
+                try
+                {
+                    selectedItem.ProjectItem.Save();
+                }
+                catch (Exception)
+                {
+                    // ignore ? log as a failed save (to the output window) ? gregtt
+                }
+                /////////////////////////////artefactNamesToBeOpened.Add(selectedItem.ProjectItem.FileNames[0]);
+                AddArtefactToArtefactNamesToBeOpened(artefactNamesToBeOpened, selectedItem.ProjectItem.FileNames[0]);
+            }
+        }
+
+        private static void AddArtefactToArtefactNamesToBeOpened(List<string> artefactNamesToBeOpened, string artefactToAdd)
+        {
+            artefactNamesToBeOpened.Add(artefactToAdd);
         }
 
         /// <summary>
