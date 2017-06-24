@@ -38,7 +38,7 @@ namespace OpenInApp.Command
                 }
                 if (proceedToExecute)
                 {
-                    var actualArtefactsToBeOpened = CommonFileHelper.GetArtefactNamesToBeOpened(dte, dto.CommandPlacement);//dto.IsFromSolutionExplorer);
+                    var actualArtefactsToBeOpened = CommonFileHelper.GetArtefactNamesToBeOpened(dte, dto.CommandPlacement);
 
                     var actualArtefactsToBeOpenedExist = CommonFileHelper.DoArtefactsExist(actualArtefactsToBeOpened, dto.CommandPlacement);
 
