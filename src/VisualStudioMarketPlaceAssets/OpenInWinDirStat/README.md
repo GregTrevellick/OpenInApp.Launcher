@@ -19,11 +19,15 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 
   ![](ReadMeScreenShot_CodeEditorWindow.png)
 
-- From solution explorer
+- From solution explorer at item level
 
   ![](ReadMeScreenShot_ContextMenu.png)
 
+- From solution explorer at folder level
+ 
   ![](ReadMeScreenShot_FolderNode.png)
+
+- From solution explorer at project level
 
   ![](ReadMeScreenShot_ProjNode.png)
 
