@@ -85,7 +85,7 @@ namespace OpenInApp.Common.Helpers
                     SaveArtefactsAndAddToList_ItemNode(dte, artefactNamesToBeOpened);
                     break;
                 case CommandPlacement.IDM_VS_CTXT_PROJNODE:
-                    SaveArtefactsAndAddToList_ProjectNode(dte, artefactNamesToBeOpened);
+                    SaveArtefactsAndAddToList_ProjNode(dte, artefactNamesToBeOpened);
                     break;
                 default:
                     // ignore ? log as a failed save (to the output window) ? gregtt
@@ -112,7 +112,7 @@ namespace OpenInApp.Common.Helpers
             SaveArtefactsAndAddToList(dte, artefactNamesToBeOpened);
         }
 
-        private static void SaveArtefactsAndAddToList_ProjectNode(DTE2 dte, List<string> artefactNamesToBeOpened)
+        private static void SaveArtefactsAndAddToList_ProjNode(DTE2 dte, List<string> artefactNamesToBeOpened)
         {
             SaveArtefactsAndAddToList(dte, artefactNamesToBeOpened);
         }
