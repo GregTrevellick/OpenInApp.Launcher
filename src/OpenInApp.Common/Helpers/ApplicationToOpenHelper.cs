@@ -212,6 +212,27 @@ namespace OpenInApp.Common.Helpers
 	                    #endregion
                     };
                     break;
+
+                case KeyToExecutableEnum.SequelServerManagementStudio:
+                    //C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE";
+                    applicationToOpenDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;
+                    applicationToOpenDto.DefaultTypicalFileExtensions = new List<string>
+                    {
+                        #region Extensions
+				        "asp",
+                        "biz",
+                        "cml",
+                        "config",
+                        "math",
+                        "xsig",
+                        "xsl",
+                        "xslt",
+                        "zip", 
+				        #endregion
+	         		};
+                    break;
+
                 case KeyToExecutableEnum.TreeSizeFree:
                     applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
                     applicationToOpenDto.SecondaryFilePathSegment = @"JAM Software\TreeSize Free";

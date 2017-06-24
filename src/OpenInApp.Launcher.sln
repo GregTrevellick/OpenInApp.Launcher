@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHubAssets", "GitHubAssets", "{D0240FDC-C28B-406B-A2B3-D664C41A7517}"
 	ProjectSection(SolutionItems) = preProject
@@ -67,6 +67,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInApp.Menu", "OpenInApp.Menu\OpenInApp.Menu.csproj", "{89623B25-AF78-475C-819F-1C5990199F87}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInWinDirStat", "OpenInWinDirStat\OpenInWinDirStat.csproj", "{49325BDB-1A35-4A42-B133-8FBD2774D39F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInSequelServerManagementStudio", "OpenInSequelServerManagementStudio\OpenInSequelServerManagementStudio.csproj", "{E0CCBB8F-7CCB-4876-A031-D6600CBB3E34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -182,6 +184,10 @@ Global
 		{49325BDB-1A35-4A42-B133-8FBD2774D39F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49325BDB-1A35-4A42-B133-8FBD2774D39F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49325BDB-1A35-4A42-B133-8FBD2774D39F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0CCBB8F-7CCB-4876-A031-D6600CBB3E34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0CCBB8F-7CCB-4876-A031-D6600CBB3E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0CCBB8F-7CCB-4876-A031-D6600CBB3E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0CCBB8F-7CCB-4876-A031-D6600CBB3E34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

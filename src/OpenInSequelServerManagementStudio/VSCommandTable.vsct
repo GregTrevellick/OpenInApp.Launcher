@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>    
+  <Commands package="guidOpenInAppPackage">
+    <Groups>
+      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
+      </Group>
+      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" priority="0x0100">
+      </Group>
+    </Groups>
+
+    <Buttons>    
+      <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppCodeWin" priority="0x0100" type="Button">
+        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Open in Sequel Server Management Studio</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppItemNode" priority="0x100" type="Button">
+        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Open in Sequel Server Management Studio</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\VsixCommandIcon_16x16.png" usedList="bmpPic1"/>
+    </Bitmaps>
+  </Commands>
+
+  <CommandPlacements>
+    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" priority="0x0100">
+      <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
+      <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN" />
+    </CommandPlacement>
+  </CommandPlacements>
+
+  <Symbols>
+	<GuidSymbol name="guidOpenInAppPackage" value="{64c26fd0-fca3-47f0-a17a-6694b3fad7bb}" />
+	<GuidSymbol name="guidOpenInVsCmdSet" value="{d79a984d-0ec0-4f2a-bb9f-58e3d9f2cdf4}">
+      <IDSymbol name="GroupOpenInAppCodeWin" value="0x1030" />
+      <IDSymbol name="CmdIdOpenInAppCodeWin" value="0x0100" />
+      <IDSymbol name="GroupOpenInAppItemNode" value="0x1040" />
+      <IDSymbol name="CmdIdOpenInAppItemNode" value="0x0110" />
+    </GuidSymbol>
+    <GuidSymbol name="guidImages" value="{7ede666c-8a2f-4867-8983-a12b7c981ac3}" >
+      <IDSymbol name="bmpPic1" value="1" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
