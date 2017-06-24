@@ -95,29 +95,29 @@ namespace OpenInApp.Common.Helpers
             return artefactNamesToBeOpened;
         }
 
-        private static void SaveArtefactsAndAddToList_CodeWin(DTE2 dte, List<string> artefactNamesToBeOpened)
+        private static void SaveArtefactsAndAddToList_CodeWin(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
         {
             dte.ActiveDocument.Save();
             ///////////////////////////////artefactNamesToBeOpened.Add(dte.ActiveDocument.FullName);
             AddArtefactToArtefactNamesToBeOpened(artefactNamesToBeOpened, dte.ActiveDocument.FullName);
         }
 
-        private static void SaveArtefactsAndAddToList_FolderNode(DTE2 dte, List<string> artefactNamesToBeOpened)
+        private static void SaveArtefactsAndAddToList_FolderNode(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
         {
             SaveArtefactsAndAddToList(dte, artefactNamesToBeOpened);
         }
 
-        private static void SaveArtefactsAndAddToList_ItemNode(DTE2 dte, List<string> artefactNamesToBeOpened)
+        private static void SaveArtefactsAndAddToList_ItemNode(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
         {
             SaveArtefactsAndAddToList(dte, artefactNamesToBeOpened);
         }
 
-        private static void SaveArtefactsAndAddToList_ProjNode(DTE2 dte, List<string> artefactNamesToBeOpened)
+        private static void SaveArtefactsAndAddToList_ProjNode(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
         {
             SaveArtefactsAndAddToList(dte, artefactNamesToBeOpened);
         }
 
-        private static void SaveArtefactsAndAddToList(DTE2 dte, List<string> artefactNamesToBeOpened)
+        private static void SaveArtefactsAndAddToList(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
         {
             var selectedItems = dte.SelectedItems;
 
@@ -136,7 +136,7 @@ namespace OpenInApp.Common.Helpers
             }
         }
 
-        private static void AddArtefactToArtefactNamesToBeOpened(List<string> artefactNamesToBeOpened, string artefactToAdd)
+        private static void AddArtefactToArtefactNamesToBeOpened(IEnumerable<string> artefactNamesToBeOpened, string artefactToAdd)
         {
             artefactNamesToBeOpened.Add(artefactToAdd);
         }
