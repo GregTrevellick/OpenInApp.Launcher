@@ -1,7 +1,6 @@
 ﻿using EnvDTE;
 using EnvDTE80;
 using OpenInApp.Common.Helpers;
-using OpenInApp.Common.Helpers.Dtos;
 using System;
 using System.Linq;
 
