@@ -2,6 +2,14 @@
 
 These are the changes to each version that has been released in the Visual Studio Marketplace.
 
+## 1.1.x
+**2017-07-xx**
+- [x] Addition of Open In SQL Server Management Studio
+
+## 1.1.x
+**2017-07-xx**
+- [x] Addition of project nodes to TreeSize & WinDirStat
+
 ## 1.1.27
 **2017-06-21**
 - [x] Addition of Open In WinDirStat
