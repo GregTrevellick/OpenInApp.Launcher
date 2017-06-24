@@ -100,6 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Gulpfile.js" />
+    <Content Include="Logo sources.txt" />
+    <Content Include="OpenInAbracadabra\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInAbracadabra\ReadMeScreenShot_ProjNode.png" />
     <Content Include="OpenInAbracadabra\ThirdPartyScreenShot.png" />
     <Content Include="OpenInAltovaXmlSpy\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInAltovaXmlSpy\ReadMeScreenShot_ContextMenu.png" />
@@ -146,10 +149,14 @@
     <Content Include="OpenInPaintDotNet\ThirdPartyScreenShot.png" />
     <Content Include="OpenInTreeSizeFree\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInTreeSizeFree\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInTreeSizeFree\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInTreeSizeFree\ReadMeScreenShot_ProjNode.png" />
     <Content Include="OpenInTreeSizeFree\ThirdPartyLogo.png" />
     <Content Include="OpenInTreeSizeFree\ThirdPartyScreenShot.png" />
     <Content Include="OpenInTreeSizeProfessional\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInTreeSizeProfessional\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInTreeSizeProfessional\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInTreeSizeProfessional\ReadMeScreenShot_ProjNode.png" />
     <Content Include="OpenInTreeSizeProfessional\ThirdPartyLogo.png" />
     <Content Include="OpenInTreeSizeProfessional\ThirdPartyScreenShot.png" />
     <Content Include="OpenInVivaldi\ReadMeScreenShot_CodeEditorWindow.png" />
@@ -185,6 +192,8 @@
     <Content Include="OpenInVS2017Professional\ThirdPartyScreenShot.png" />
     <Content Include="OpenInWinDirStat\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInWinDirStat\ReadMeScreenShot_ContextMenu.png" />
+    <Content Include="OpenInWinDirStat\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInWinDirStat\ReadMeScreenShot_ProjNode.png" />
     <Content Include="OpenInWinDirStat\ThirdPartyLogo.png" />
     <Content Include="OpenInWinDirStat\ThirdPartyScreenShot.png" />
     <Content Include="OpenInXamarinStudio\ReadMeScreenShot_CodeEditorWindow.png" />

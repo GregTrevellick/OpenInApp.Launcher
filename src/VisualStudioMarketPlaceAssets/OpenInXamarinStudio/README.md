@@ -16,9 +16,11 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 - Open multiple files simultaneously in [Xamarin Studio][ThirdPartyAppHomePage].
 
 - Within the code editor window
+
   ![](ReadMeScreenShot_CodeEditorWindow.png)
 
-- From solution explorer
+- From solution explorer at item level
+ 
   ![](ReadMeScreenShot_ContextMenu.png)
 
 - Warning if attempting to open a large quantity of files. The quantity is configurable in Tools > Options.

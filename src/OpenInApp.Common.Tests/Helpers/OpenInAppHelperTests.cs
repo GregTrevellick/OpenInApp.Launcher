@@ -15,7 +15,7 @@ namespace OpenInApp.Common.Tests.Helpers
         //Open in IE 11 – check at spur
         //open in sublime text vs2012/vs2013?
         //examdiff
-        //webstorm
+        //jetbrains webstorm
         //screentogif
         //gvim ?
         //fresh paint
@@ -28,7 +28,7 @@ namespace OpenInApp.Common.Tests.Helpers
         //https://sourceforge.net/projects/e7bfc/
         //frontpage
         //homesite
-        //jetbrains webstorm
+
 
         [Test()]
         [Category("I")]
@@ -174,7 +174,7 @@ namespace OpenInApp.Common.Tests.Helpers
         //[TestCase(KeyToExecutableEnum.VS2017Enterprise, FileToBeOpenedKind.Code)]
         //[TestCase(KeyToExecutableEnum.VS2017Professional, FileToBeOpenedKind.Code)]
         //[TestCase(KeyToExecutableEnum.Emacs, FileToBeOpenedKind.Code)]
-        //[TestCase(@"C:\Program Files (x86)\WinDirStat\windirstat.exe", null)]
+        //[TestCase(KeyToExecutableEnum.WinDirStat, ArtefactTypeToOpen.Folder)]
         public void InvokeCommandTest(KeyToExecutableEnum keyToExecutableEnum, FileToBeOpenedKind fileToBeOpenedKind)
         {
             // Arrange

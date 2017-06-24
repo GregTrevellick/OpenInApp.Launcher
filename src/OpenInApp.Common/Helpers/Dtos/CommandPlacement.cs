@@ -9,6 +9,5 @@
         IDM_VS_CTXT_FOLDERNODE,//Folder selected
         IDM_VS_CTXT_ITEMNODE,//File selected
         IDM_VS_CTXT_PROJNODE,//Project selected
-
     }
 }

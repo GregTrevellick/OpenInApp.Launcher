@@ -82,4 +82,7 @@ function OIAConcat (appNam, appDesc) {
         .pipe(replace('[ThirdPartyApp]', '[' + appDesc + ']'))
         .pipe(gulp.dest('.'));
 } 
- 
+
+
+//TODO gregtt rename ReadMeScreenShot_CodeEditorWindow.png TO ReadMeScreenShot_CodeWin.png
+//TODO gregtt rename ReadMeScreenShot_ContextMenu.png TO ReadMeScreenShot_ItemNode.png
