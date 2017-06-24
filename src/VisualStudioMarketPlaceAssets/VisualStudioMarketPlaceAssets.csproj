@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Gulpfile.js" />
+    <Content Include="OpenInXamarinStudio\ThirdPartyScreenShot.png" />
     <Content Include="sources.txt" />
     <Content Include="OpenInAbracadabra\ReadMeScreenShot_FolderNode.png" />
     <Content Include="OpenInAbracadabra\ReadMeScreenShot_ProjNode.png" />
