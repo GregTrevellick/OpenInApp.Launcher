@@ -82,22 +82,21 @@ namespace OpenInApp.Common.Tests.Helpers
             Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
         }
 
-        [Test()]
-        [Category("I")]
-        //app splash screen shows but app doesnt open [TestCase(@"C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe", null)]
-        public void InvokeCommandTest_StudioApps(string executableFullPath, bool useShellExecute)
-        {
-            // Arrange
-            bool separateProcessPerFileToBeOpened = false;
-            var actualFilesToBeOpened = new List<string>
-            {
-                @"C:\Temp\a.txt",
-                @"C:\Temp\b.txt"
-            };
-
-            // Act
-            Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
-        }
+        //[Test()]
+        //[Category("I")]
+        //[TestCase(@"C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe", null)]
+        //public void InvokeCommandTest_StudioApps(string executableFullPath, bool useShellExecute)
+        //{
+        //    // Arrange
+        //    bool separateProcessPerFileToBeOpened = false;
+        //    var actualFilesToBeOpened = new List<string>
+        //    {
+        //        @"C:\Temp\a.txt",
+        //        @"C:\Temp\b.txt"
+        //    };
+        //    // Act
+        //    Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
+        //}
 
         [Test()]
         [Category("I")]

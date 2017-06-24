@@ -1,5 +1,4 @@
-[ThirdPartyAppHomePage]: https://www.visualstudio.com/vs/
-
+[ThirdPartyAppHomePage]: https://www.visualstudio.com/vs/older-downloads/
 Open multiple files simultaneously in [Visual Studio 2015][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 
