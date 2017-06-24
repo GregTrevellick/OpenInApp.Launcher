@@ -103,11 +103,12 @@ namespace OpenInApp.Menu
             else
             {
                 var commandService = _serviceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
+
                 if (commandService != null)
                 {
-                    AddMenuCommand(commandService, _cmdIdOpenInAppItemNode, CommandPlacement.IDM_VS_CTXT_ITEMNODE);
-
                     AddMenuCommand(commandService, _cmdIdOpenInAppCodeWin, CommandPlacement.IDM_VS_CTXT_CODEWIN);
+
+                    AddMenuCommand(commandService, _cmdIdOpenInAppItemNode, CommandPlacement.IDM_VS_CTXT_ITEMNODE);
                     
                     if (_cmdIdOpenInAppFolderNode.HasValue)
                     {
