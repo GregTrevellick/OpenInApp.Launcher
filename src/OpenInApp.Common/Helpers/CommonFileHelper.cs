@@ -99,7 +99,7 @@ namespace OpenInApp.Common.Helpers
         {
             dte.ActiveDocument.Save();
             ///////////////////////////////artefactNamesToBeOpened.Add(dte.ActiveDocument.FullName);
-            AddArtefactToArtefactNamesToBeOpened(artefactNamesToBeOpened, dte.ActiveDocument.FullName);
+            AddArtefactToArtefactNamesToBeOpened(artefactNamesToBeOpened.ToList(), dte.ActiveDocument.FullName);
         }
 
         private static void SaveArtefactsAndAddToList_FolderNode(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
@@ -132,11 +132,11 @@ namespace OpenInApp.Common.Helpers
                     // ignore ? log as a failed save (to the output window) ? gregtt
                 }
                 /////////////////////////////artefactNamesToBeOpened.Add(selectedItem.ProjectItem.FileNames[0]);
-                AddArtefactToArtefactNamesToBeOpened(artefactNamesToBeOpened, selectedItem.ProjectItem.FileNames[0]);
+                AddArtefactToArtefactNamesToBeOpened(artefactNamesToBeOpened.ToList(), selectedItem.ProjectItem.FileNames[0]);
             }
         }
 
-        private static void AddArtefactToArtefactNamesToBeOpened(IEnumerable<string> artefactNamesToBeOpened, string artefactToAdd)
+        private static void AddArtefactToArtefactNamesToBeOpened(IList<string> artefactNamesToBeOpened, string artefactToAdd)
         {
             artefactNamesToBeOpened.Add(artefactToAdd);
         }
