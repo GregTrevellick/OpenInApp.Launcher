@@ -100,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Gulpfile.js" />
+    <Content Include="Logo sources.txt" />
     <Content Include="OpenInAbracadabra\ThirdPartyScreenShot.png" />
     <Content Include="OpenInAltovaXmlSpy\ReadMeScreenShot_CodeEditorWindow.png" />
     <Content Include="OpenInAltovaXmlSpy\ReadMeScreenShot_ContextMenu.png" />
