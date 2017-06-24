@@ -64,7 +64,6 @@
     <VsixCompressTargets Condition=" '$(VsixCompressTargets)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\..\packages\VsixCompress.1.0.1\tools\vsix-compress.targets ))</VsixCompressTargets>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="VSCommandTable_OpenInApp.cs" />
     <Compile Include="Commands\OpenInAppCommand.cs" />
     <Compile Include="source.extension.Designer.cs">
       <DependentUpon>source.extension.cs</DependentUpon>
