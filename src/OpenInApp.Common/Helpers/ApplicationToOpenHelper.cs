@@ -213,7 +213,7 @@ namespace OpenInApp.Common.Helpers
                     };
                     break;
                 //C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
-                case KeyToExecutableEnum.SequelServerManagementStudio:
+                case KeyToExecutableEnum.SQLServerManagementStudio:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE";
                     applicationToOpenDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;
                     break;

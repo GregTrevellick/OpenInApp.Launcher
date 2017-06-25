@@ -18,7 +18,7 @@ namespace OpenInApp.Common.Helpers
         public const string Opera = "opera.exe";
         public const string OperaDeveloperEdition = "launcher.exe";
         public const string PaintDotNet = "PaintDotNet.exe";
-        public const string SequelServerManagementStudio = "ssmsee.exe";
+        public const string SQLServerManagementStudio = "ssmsee.exe";
         public const string TreeSizeFree = "TreeSizeFree.exe";
         public const string TreeSizeProfessional = "TreeSize.exe";
         public const string Vivaldi = "vivaldi.exe";
@@ -68,7 +68,7 @@ namespace OpenInApp.Common.Helpers
         PaintDotNet,
 
         [Description("ssmsee.exe")]
-        SequelServerManagementStudio,
+        SQLServerManagementStudio,
 
         [Description("TreeSizeFree.exe")]
         TreeSizeFree,
