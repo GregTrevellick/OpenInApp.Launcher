@@ -34,14 +34,10 @@ namespace OpenInApp.Common.Tests.Helpers
         [Category("I")]
         //////////BEATEN TO IT - HAPPILY OPENS BOTH FILES [TestCase(@"C:\Windows\system32\notepad.exe", true, false)]
         //////////BEATEN TO IT - HAPPILY OPENS BOTH FILES [TestCase(@"C:\Program Files (x86)\Vim\vim80\gvim.exe", true, null)]//with mouse - graphical vim
-//nothing happens 
 [TestCase(@"C:\Users\gtrev\AppData\Local\atom\app-1.18.0\atom.exe", false, null)]
-//nothing happens 
-//[TestCase(@"C:\Program Files (x86)\LINQPad4\LPRun.exe", false, null)]
-//fails with 1 arg prob 2 args also
-//[TestCase(@"C:\Program Files (x86)\LINQPad4\LINQPad.exe", false, null)]
-//fails with 1 and 2 arguments
-//[TestCase(@"C:\Program Files (x86)\LINQPad5\LINQPad.exe", false, null)]
+        //nothing happens [TestCase(@"C:\Program Files (x86)\LINQPad4\LPRun.exe", false, null)]
+        //fails with 1 arg prob 2 args also [TestCase(@"C:\Program Files (x86)\LINQPad4\LINQPad.exe", false, null)]
+        //fails with 1 and 2 arguments [TestCase(@"C:\Program Files (x86)\LINQPad5\LINQPad.exe", false, null)]
         //fails with 1 and 2 arguments [TestCase(@"C:\Program Files\Windows NT\Accessories\wordpad.exe", false, null)]
         //nothing happens [TestCase(@"C:\Program Files (x86)\Vim\vim80\vim.exe", false, null)]//without mouse
         //todo C:\Users\greg\Desktop\ZZZ open in\eclipse-cpp-neon-2-win32-x86_64\eclipse\eclipse.exe
@@ -85,22 +81,6 @@ namespace OpenInApp.Common.Tests.Helpers
             // Act
             Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
         }
-
-        ////////////////////////////////[Test()]
-        ////////////////////////////////[Category("I")]
-        ////////////////////////////////[TestCase(@"C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe", null)]
-        ////////////////////////////////public void InvokeCommandTest_StudioApps(string executableFullPath, bool useShellExecute)
-        ////////////////////////////////{
-        ////////////////////////////////    // Arrange
-        ////////////////////////////////    bool separateProcessPerFileToBeOpened = false;
-        ////////////////////////////////    var actualFilesToBeOpened = new List<string>
-        ////////////////////////////////    {
-        ////////////////////////////////        @"C:\Temp\a.txt",
-        ////////////////////////////////        @"C:\Temp\b.txt"
-        ////////////////////////////////    };
-        ////////////////////////////////    // Act
-        ////////////////////////////////    Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
-        ////////////////////////////////}
 
         [Test()]
         [Category("I")]
@@ -158,7 +138,7 @@ namespace OpenInApp.Common.Tests.Helpers
 
 
         [Test()]
-        [Category("NonAppVeyor")]
+        [Category("I")]
         //[TestCase(KeyToExecutableEnum.AltovaXMLSpy, FileToBeOpenedKind.Xml)]
         //[TestCase(KeyToExecutableEnum.ChromeCanary, FileToBeOpenedKind.Any)]
         //[TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, FileToBeOpenedKind.Any)]
@@ -179,6 +159,17 @@ namespace OpenInApp.Common.Tests.Helpers
         //[TestCase(KeyToExecutableEnum.VS2017Professional, FileToBeOpenedKind.Code)]
         //[TestCase(KeyToExecutableEnum.Emacs, FileToBeOpenedKind.Code)]
         //[TestCase(KeyToExecutableEnum.WinDirStat, ArtefactTypeToOpen.Folder)]
+        //[TestCase(KeyToExecutableEnum.SQLServerManagementStudio, ArtefactTypeToOpen.File)]
+
+        //                              C:\Program Files (x86)\Microsoft SQL Server\70\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
+        //                              C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
+        //                              C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
+        //                             C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
+        //                             C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\Ssms.exe
+        //                             C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\Ssms.exe
+        //                             C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio\Ssms.exe
+        //                             C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Ssms.exe
+
         public void InvokeCommandTest(KeyToExecutableEnum keyToExecutableEnum, FileToBeOpenedKind fileToBeOpenedKind)
         {
             // Arrange

@@ -65,22 +65,22 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("U")]
-        public void GetMultipleYearPathsTest()
+        public void GetMultipleVersionPathsTest()
         {
             //Arrange
-            var secondaryFilePathSegment = "abc2016d";
+            var secondaryFilePathSegment = "abc9999d";
 
             //Act
-            var actual = GeneralOptionsHelper.GetMultipleYearPaths("app.exe", InitialFolderType.ProgramFilesX86, secondaryFilePathSegment);
+            var actual = GeneralOptionsHelper.GetMultipleVersionPaths("XMlsPY.exe", InitialFolderType.ProgramFilesX86, secondaryFilePathSegment);
 
             //Assert
             
-            Assert.IsFalse(actual.Contains(@"C:\Program Files (x86)\abc1995d\app.exe"));
-            Assert.IsTrue(actual.Contains(@"C:\Program Files (x86)\abc1996d\app.exe"));
-            Assert.IsTrue(actual.Contains(@"C:\Program Files (x86)\abc1996d\app.exe"));
-            Assert.IsTrue(actual.Contains(@"C:\Program Files (x86)\abc2019d\app.exe"));
-            Assert.IsTrue(actual.Contains(@"C:\Program Files (x86)\abc2020d\app.exe"));
-            Assert.IsFalse(actual.Contains(@"C:\Program Files (x86)\abc2021d\app.exe"));
+            Assert.IsFalse(actual.Contains(@"C:\Program Files (x86)\abc1995d\XMlsPY.exe"));
+            Assert.IsTrue(actual.Contains(@"C:\Program Files (x86)\abc1996d\XMlsPY.exe"));
+            Assert.IsTrue(actual.Contains(@"C:\Program Files (x86)\abc1996d\XMlsPY.exe"));
+            Assert.IsTrue(actual.Contains(@"C:\Program Files (x86)\abc2019d\XMlsPY.exe"));
+            Assert.IsTrue(actual.Contains(@"C:\Program Files (x86)\abc2020d\XMlsPY.exe"));
+            Assert.IsFalse(actual.Contains(@"C:\Program Files (x86)\abc2021d\XMlsPY.exe"));
             Assert.AreEqual(25, actual.Count());
         }
     }

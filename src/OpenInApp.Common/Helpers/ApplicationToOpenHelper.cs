@@ -13,7 +13,7 @@ namespace OpenInApp.Common.Helpers
                 DefaultTypicalFileExtensions = new List<string> { "*" },
                 ExecutableFileToBrowseFor = keyToExecutableEnum.Description(),
                 InitialFolderType = InitialFolderType.ProgramFilesX86,
-                SecondaryFilePathSegmentHasMultipleYearNumberVersions = false,
+                SecondaryFilePathSegmentHasMultipleVersions = false,
                 SeparateProcessPerFileToBeOpened = true,
                 UseShellExecute = true,
             };
@@ -25,8 +25,8 @@ namespace OpenInApp.Common.Helpers
                     applicationToOpenDto.SecondaryFilePathSegment = @"WinDirStat";
                     break;
                 case KeyToExecutableEnum.AltovaXMLSpy:
-                    applicationToOpenDto.SecondaryFilePathSegment = @"Altova\XMLSpy2016";
-                    applicationToOpenDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Altova\XMLSpy9999";
+                    applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions = true;
                     applicationToOpenDto.DefaultTypicalFileExtensions = new List<string>
                     {
                         #region Extensions
@@ -212,13 +212,10 @@ namespace OpenInApp.Common.Helpers
 	                    #endregion
                     };
                     break;
-                //2005 C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
-                //     C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
-                //     C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\Ssms.exe
-                //2016 C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Ssms.exe
                 case KeyToExecutableEnum.SQLServerManagementStudio:
-                    applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE";
-                    applicationToOpenDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft SQL Server\9999\Tools\Binn\ManagementStudio";
+                    //gregtt                                        @"Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE";
+                    applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions = true;
                     break;
                 case KeyToExecutableEnum.TreeSizeFree:
                     applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;

@@ -30,7 +30,7 @@ namespace OpenInApp.Common.Helpers
             return null;
         }
 
-        public static IEnumerable<string> GetSearchPaths(KeyToExecutableEnum keyToExecutableEnum)
+        internal static IEnumerable<string> GetSearchPaths(KeyToExecutableEnum keyToExecutableEnum)
         {
             var searchPaths  = new List<string>();
             var actualPathToExeHelper = new ApplicationToOpenHelper();
@@ -46,9 +46,9 @@ namespace OpenInApp.Common.Helpers
                 searchPaths.Add(pathPrimaryWithoutx86);
             }
 
-            if (applicationToOpenDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions)
+            if (applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions)
             {
-                var paths = GetMultipleYearPaths(applicationToOpenDto.ExecutableFileToBrowseFor, applicationToOpenDto.InitialFolderType, applicationToOpenDto.SecondaryFilePathSegment);
+                var paths = GetMultipleVersionPaths(applicationToOpenDto.ExecutableFileToBrowseFor, applicationToOpenDto.InitialFolderType, applicationToOpenDto.SecondaryFilePathSegment);
                 foreach (var path in paths)
                 {
                     searchPaths.Add(path);
@@ -82,18 +82,45 @@ namespace OpenInApp.Common.Helpers
             return path;
         }
 
-        public static IEnumerable<string> GetMultipleYearPaths(string executableFileToBrowseFor, InitialFolderType initialFolderType, string secondaryFilePathSegment)
+        public static IEnumerable<string> GetMultipleVersionPaths(string executableFileToBrowseFor, InitialFolderType initialFolderType, string secondaryFilePathSegment)
         {
             var result = new List<string>();
 
-            for (int i = 2020; i > 1995; i--)
+            int endVersionNumber;
+            var startVersionNumber = GetVersionNumberRange(executableFileToBrowseFor, out endVersionNumber);
+
+            for (int i = startVersionNumber; i > endVersionNumber; i--)//gregtt set the decrement value within GetVersionNumberRange()
             {
-                var segment = secondaryFilePathSegment.Replace("2016", i.ToString());
+                var segment = secondaryFilePathSegment.Replace("9999", i.ToString());
                 var path = GetPath(executableFileToBrowseFor, initialFolderType, segment);
                 result.Add(path);
             }
 
             return result;
+        }
+
+        private static int GetVersionNumberRange(string executableFileToBrowseFor, out int endVersionNumber)//gregtt receive an enum param not a string //gregtt write unit test for this method
+        {
+            int startVersionNumber;
+
+            switch (executableFileToBrowseFor.ToLower())
+            {
+                case "xmlspy.exe":
+                    startVersionNumber = 2020;
+                    endVersionNumber = 1995;
+                    break;
+                case "ssms.exe":
+                case "ssmsee.exe":
+                    startVersionNumber = 150;
+                    endVersionNumber = 60;
+                    break;
+                default:
+                    startVersionNumber = int.MinValue;
+                    endVersionNumber = int.MinValue;
+                    break;
+            }
+
+            return startVersionNumber;
         }
     }
 }

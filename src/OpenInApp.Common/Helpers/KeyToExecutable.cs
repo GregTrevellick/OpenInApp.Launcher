@@ -18,7 +18,8 @@ namespace OpenInApp.Common.Helpers
         public const string Opera = "opera.exe";
         public const string OperaDeveloperEdition = "launcher.exe";
         public const string PaintDotNet = "PaintDotNet.exe";
-        public const string SQLServerManagementStudio = "ssmsee.exe";
+        public const string SQLServerManagementStudio = "ssms.exe";
+        //gregtt                                        "ssmsee.exe";
         public const string TreeSizeFree = "TreeSizeFree.exe";
         public const string TreeSizeProfessional = "TreeSize.exe";
         public const string Vivaldi = "vivaldi.exe";
@@ -32,7 +33,7 @@ namespace OpenInApp.Common.Helpers
         public const string XamarinStudio = "XamarinStudio.exe";
     }
 
-    public enum KeyToExecutableEnum//gregtt auto sync the class above to this
+    public enum KeyToExecutableEnum//gregtt auto sync the class above to this enum
     {
         [Description("windirstat.exe")]
         Abracadabra,
@@ -67,7 +68,8 @@ namespace OpenInApp.Common.Helpers
         [Description("PaintDotNet.exe")]
         PaintDotNet,
 
-        [Description("ssmsee.exe")]
+        [Description("ssms.exe")]
+        //gregt      "ssmsee.exe"
         SQLServerManagementStudio,
 
         [Description("TreeSizeFree.exe")]
