@@ -37,11 +37,11 @@ namespace OpenInApp.Common.Tests.Helpers
 //nothing happens 
 [TestCase(@"C:\Users\gtrev\AppData\Local\atom\app-1.18.0\atom.exe", false, null)]
 //nothing happens 
-[TestCase(@"C:\Program Files (x86)\LINQPad4\LPRun.exe", false, null)]
+//[TestCase(@"C:\Program Files (x86)\LINQPad4\LPRun.exe", false, null)]
 //fails with 1 arg prob 2 args also
-[TestCase(@"C:\Program Files (x86)\LINQPad4\LINQPad.exe", false, null)]
+//[TestCase(@"C:\Program Files (x86)\LINQPad4\LINQPad.exe", false, null)]
 //fails with 1 and 2 arguments
-[TestCase(@"C:\Program Files (x86)\LINQPad5\LINQPad.exe", false, null)]
+//[TestCase(@"C:\Program Files (x86)\LINQPad5\LINQPad.exe", false, null)]
         //fails with 1 and 2 arguments [TestCase(@"C:\Program Files\Windows NT\Accessories\wordpad.exe", false, null)]
         //nothing happens [TestCase(@"C:\Program Files (x86)\Vim\vim80\vim.exe", false, null)]//without mouse
         //todo C:\Users\greg\Desktop\ZZZ open in\eclipse-cpp-neon-2-win32-x86_64\eclipse\eclipse.exe

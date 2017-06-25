@@ -212,7 +212,10 @@ namespace OpenInApp.Common.Helpers
 	                    #endregion
                     };
                     break;
-                //C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
+                //2005 C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
+                //     C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
+                //     C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\Ssms.exe
+                //2016 C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Ssms.exe
                 case KeyToExecutableEnum.SQLServerManagementStudio:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE";
                     applicationToOpenDto.SecondaryFilePathSegmentHasMultipleYearNumberVersions = true;
