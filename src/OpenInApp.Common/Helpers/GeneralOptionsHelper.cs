@@ -1,6 +1,7 @@
 ﻿using OpenInApp.Common.Helpers.Dtos;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using static System.Environment;
 
 namespace OpenInApp.Common.Helpers
@@ -19,6 +20,8 @@ namespace OpenInApp.Common.Helpers
         {
             var searchPaths = GetSearchPaths(keyToExecutableEnum);
 
+            searchPaths = X86Method(searchPaths);
+
             foreach (var searchPath in searchPaths)
             {
                 if (File.Exists(searchPath))
@@ -30,6 +33,25 @@ namespace OpenInApp.Common.Helpers
             return null;
         }
 
+        private static IEnumerable<string> X86Method(IEnumerable<string> searchPaths)//gregtt unit test this
+        {
+            var result = new List<string>();
+
+            var x86 = " (x86)";
+
+            foreach (var path in searchPaths)
+            {
+                result.Add(path);
+                if (path != null && path.Contains(x86))
+                {
+                    var pathWithoutx86 = path.Replace(x86, string.Empty);
+                    result.Add(pathWithoutx86);
+                }
+            }
+
+            return result;
+        }
+
         internal static IEnumerable<string> GetSearchPaths(KeyToExecutableEnum keyToExecutableEnum)
         {
             var searchPaths  = new List<string>();
@@ -39,22 +61,17 @@ namespace OpenInApp.Common.Helpers
             var pathPrimary = GetPath(applicationToOpenDto.ExecutableFileToBrowseFor, applicationToOpenDto.InitialFolderType, applicationToOpenDto.SecondaryFilePathSegment);
             searchPaths.Add(pathPrimary);
 
-            var x86 = " (x86)";
-
             if (applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions)
             {
                 var paths = GetMultipleVersionPaths(applicationToOpenDto.ExecutableFileToBrowseFor, applicationToOpenDto.InitialFolderType, applicationToOpenDto.SecondaryFilePathSegment);
+
                 foreach (var path in paths)
                 {
                     searchPaths.Add(path);
-                    
-                    if (path != null && path.Contains(x86))
-                    {
-                        var pathWithoutx86 = path.Replace(x86, string.Empty);
-                        searchPaths.Add(pathWithoutx86);
-                    }
                 }
-            }           
+            }
+
+            searchPaths = X86Method(searchPaths).ToList();
 
             return searchPaths;
         }
