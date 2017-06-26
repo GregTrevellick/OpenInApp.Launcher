@@ -8,8 +8,8 @@ namespace OpenInSQLServerManagementStudio
     static class Vsix
     {
         public const string Id = "ae571a7d-4421-40a0-bf5d-e58baf00a57d";
-        public const string Name = "Open in Sequel Server Management Studio";
-        public const string Description = @"Open multiple files simultaneously in Sequel Server Management Studio directly from Solution Explorer or Code Editor window.";
+        public const string Name = "Open in SQL Server Management Studio";
+        public const string Description = @"Open multiple files simultaneously in SQL Server Management Studio directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
         public const string Version = "1.1.30";
         public const string Author = "GregTrevellick";
