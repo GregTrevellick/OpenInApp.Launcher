@@ -1,6 +1,7 @@
 ﻿namespace OpenInApp.Common.Helpers.Dtos
 {
     /// <summary>
+    /// https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.vsmenus.idm_vs_ctxt_projnode.aspx
     /// https://blogs.msdn.microsoft.com/martintracy/2006/05/16/common-context-menu-constants/
     /// </summary>
     public enum CommandPlacement
