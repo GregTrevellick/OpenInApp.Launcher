@@ -40,11 +40,6 @@ namespace OpenInApp.Common.Helpers
             searchPaths.Add(pathPrimary);
 
             var x86 = " (x86)";
-            if (pathPrimary != null && pathPrimary.Contains(x86))
-            {
-                var pathPrimaryWithoutx86 = pathPrimary.Replace(x86, string.Empty);
-                searchPaths.Add(pathPrimaryWithoutx86);
-            }
 
             if (applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions)
             {
@@ -52,8 +47,14 @@ namespace OpenInApp.Common.Helpers
                 foreach (var path in paths)
                 {
                     searchPaths.Add(path);
+                    
+                    if (path != null && path.Contains(x86))
+                    {
+                        var pathWithoutx86 = path.Replace(x86, string.Empty);
+                        searchPaths.Add(pathWithoutx86);
+                    }
                 }
-            }
+            }           
 
             return searchPaths;
         }
