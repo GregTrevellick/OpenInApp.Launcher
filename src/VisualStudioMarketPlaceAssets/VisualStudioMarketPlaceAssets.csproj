@@ -52,6 +52,7 @@
     <None Include="4_FileTypeWarnings.md" />
     <None Include="5_UseCases_Files.md" />
     <None Include="6_Links.md" />
+    <None Include="notes.xlsx" />
     <None Include="OpenInChromeCanary\README.md" />
     <None Include="OpenInChromeCanary\0_Variables.md" />
     <None Include="OpenInEmacs\README.md" />
@@ -103,7 +104,7 @@
   <ItemGroup>
     <Content Include="Gulpfile.js" />
     <Content Include="OpenInXamarinStudio\ThirdPartyScreenShot.png" />
-    <Content Include="sources.txt" />
+    <Content Include="notes.txt" />
     <Content Include="OpenInAbracadabra\ReadMeScreenShot_FolderNode.png" />
     <Content Include="OpenInAbracadabra\ReadMeScreenShot_ProjNode.png" />
     <Content Include="OpenInAbracadabra\ThirdPartyScreenShot.png" />
