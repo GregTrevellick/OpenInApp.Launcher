@@ -1,10 +1,16 @@
-﻿
-https://www.google.co.uk/chrome/assets/common/images/chrome_canary_logo_2x.png
-
-
-                        //Source(s) http://manual.altova.com/XMLSpy/spyprofessional/index.html?filetypes.htm
-						https://blogs.msdn.microsoft.com/cdndevs/2015/03/11/python-and-data-sql-server-as-a-data-source-for-python-applications/
-
-						http://rorymon.com/blog/wp-content/uploads/2014/06/SQL.jpg
-
+﻿http://manual.altova.com/XMLSpy/spyprofessional/index.html?filetypes.htm
+http://rorymon.com/blog/wp-content/uploads/2014/06/SQL.jpg
+http://www.altova.com/images/linktoaltova/xmlspy.png
+http://www.altova.com/xml-editor/
+http://www.ftgimp.com/help/C/file_formats.html
+http://www.getpaint.net/
+http://www.getpaint.net/doc/latest/
+http://www.getpaint.net/images/Logo4.png
+https://blogs.msdn.microsoft.com/cdndevs/2015/03/11/python-and-data-sql-server-as-a-data-source-for-python-applications/
 https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
+https://markdownmonster.west-wind.com/
+https://msdnshared.blob.core.windows.net/media/2015/05/8814.VisualStudioClean1.png
+https://raw.githubusercontent.com/RickStrahl/MarkdownMonster/master/Art/MarkdownMonster.png
+https://www.gimp.org/
+https://www.gimp.org/features/
+https://www.google.co.uk/chrome/assets/common/images/chrome_canary_logo_2x.png
