@@ -15,6 +15,8 @@ namespace OpenInApp.Common.Helpers
     /// </summary>
     public class CommonFileHelper
     {
+        private static IList<string> artefactNamesToBeOpened = new List<string>();
+
         /// <summary>
         /// Prompts the user to browses for a file on disc and returns details.
         /// </summary>
@@ -43,25 +45,23 @@ namespace OpenInApp.Common.Helpers
         /// Gets the selected files to be opened, as chosen in Solution Explorer.
         /// </summary>
         /// <param name="dte">The DTE.</param>
-        /// <param name="isFromSolutionExplorer">gregt Differentiator for solution explorer versus code editor window.</param>
+        /// <param name="isFromSolutionExplorer">gregtt Differentiator for solution explorer versus code editor window.</param>
         /// <returns></returns>
         public static IEnumerable<string> GetArtefactNamesToBeOpened(DTE2 dte, CommandPlacement commandPlacement)
         {
-            var artefactNamesToBeOpened = new List<string>();
-
             switch (commandPlacement)
             {
                 case CommandPlacement.IDM_VS_CTXT_CODEWIN:
-                    SetArtefactNamesToBeOpened_CodeWin(dte, artefactNamesToBeOpened);
+                    SetArtefactNamesToBeOpened_CodeWin(dte);
                     break;
                 case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
-                    SetArtefactNamesToBeOpened_FolderNode(dte, artefactNamesToBeOpened);
+                    SetArtefactNamesToBeOpened_FolderNode(dte);
                     break;
                 case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
-                    SetArtefactNamesToBeOpened_ItemNode(dte, artefactNamesToBeOpened);
+                    SetArtefactNamesToBeOpened_ItemNode(dte);
                     break;
                 case CommandPlacement.IDM_VS_CTXT_PROJNODE:
-                    SetArtefactNamesToBeOpened_ProjNode(dte, artefactNamesToBeOpened);
+                    SetArtefactNamesToBeOpened_ProjNode(dte);
                     break;
                 default:
                     // ignore ? log as a failed save (to the output window) ? gregtt
@@ -71,29 +71,29 @@ namespace OpenInApp.Common.Helpers
             return artefactNamesToBeOpened;
         }
 
-        private static void SetArtefactNamesToBeOpened_CodeWin(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
+        private static void SetArtefactNamesToBeOpened_CodeWin(DTE2 dte)
         {
             dte.ActiveDocument.Save();
 
-            AddArtefactToArtefactNamesToBeOpened(artefactNamesToBeOpened.ToList(), dte.ActiveDocument.FullName);
+            AddArtefactToArtefactNamesToBeOpened(dte.ActiveDocument.FullName);
         }
 
-        private static void SetArtefactNamesToBeOpened_FolderNode(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
+        private static void SetArtefactNamesToBeOpened_FolderNode(DTE2 dte)
         {
-            SaveArtefactsAndAddToList(dte, artefactNamesToBeOpened);
+            SaveArtefactsAndAddToList(dte);
         }
 
-        private static void SetArtefactNamesToBeOpened_ItemNode(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
+        private static void SetArtefactNamesToBeOpened_ItemNode(DTE2 dte)
         {
-            SaveArtefactsAndAddToList(dte, artefactNamesToBeOpened);
+            SaveArtefactsAndAddToList(dte);
         }
 
-        private static void SetArtefactNamesToBeOpened_ProjNode(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
+        private static void SetArtefactNamesToBeOpened_ProjNode(DTE2 dte)
         {
-            SaveArtefactsAndAddToList(dte, artefactNamesToBeOpened);
+            SaveArtefactsAndAddToList(dte);
         }
 
-        private static void SaveArtefactsAndAddToList(DTE2 dte, IEnumerable<string> artefactNamesToBeOpened)
+        private static void SaveArtefactsAndAddToList(DTE2 dte)
         {
             var selectedItems = dte.SelectedItems;
 
@@ -108,11 +108,11 @@ namespace OpenInApp.Common.Helpers
                     // ignore ? log as a failed save (to the output window) ? gregtt
                 }
 
-                AddArtefactToArtefactNamesToBeOpened(artefactNamesToBeOpened.ToList(), selectedItem.ProjectItem.FileNames[0]);
+                AddArtefactToArtefactNamesToBeOpened(selectedItem.ProjectItem.FileNames[0]);
             }
         }
 
-        private static void AddArtefactToArtefactNamesToBeOpened(IList<string> artefactNamesToBeOpened, string artefactToAdd)
+        private static void AddArtefactToArtefactNamesToBeOpened(string artefactToAdd)
         {
             artefactNamesToBeOpened.Add(artefactToAdd);
         }
