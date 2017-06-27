@@ -163,7 +163,7 @@ namespace OpenInApp.Common.Helpers
                         "zip",
 				        #endregion
                     };
-                    //TODO applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
+                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
                     break;
                 case KeyToExecutableEnum.MarkdownMonster:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Markdown Monster";
@@ -189,7 +189,7 @@ namespace OpenInApp.Common.Helpers
                         "tiff",
                         #endregion
                     };
-                    //TODO applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
+                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
                     break;
                 case KeyToExecutableEnum.Opera:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Opera";

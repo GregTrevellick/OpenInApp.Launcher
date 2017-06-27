@@ -11,7 +11,7 @@ namespace OpenInAppPaintDotNet
         public const string Name = "Open in Paint.NET";
         public const string Description = @"Open multiple files simultaneously in Paint.NET directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
-        public const string Version = "1.1.34";
+        public const string Version = "1.1.35";
         public const string Author = "GregTrevellick";
         public const string Tags = "open, open in, Paint.NET, Paint, PaintDotNet";
     }

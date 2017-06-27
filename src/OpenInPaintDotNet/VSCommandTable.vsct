@@ -33,14 +33,14 @@
         <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderNode" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
-          <ButtonText>Open Folder Image Files in Paint.NET</ButtonText>
+          <ButtonText>Open Folder Images in Paint.NET</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppProjNode" priority="0x100" type="Button">
         <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppProjNode" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
-          <ButtonText>Open Folder Image Files in Paint.NET</ButtonText>
+          <ButtonText>Open Folder Images in Paint.NET</ButtonText>
         </Strings>
       </Button>      
     </Buttons>
@@ -60,7 +60,7 @@
       <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_FOLDERNODE" />
     </CommandPlacement>
     <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppProjNode" priority="0x0100">
-      <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_PROJECT" />
+      <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE" />
     </CommandPlacement>
   </CommandPlacements>
    
