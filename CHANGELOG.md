@@ -7,6 +7,7 @@ These are the changes to each version that has been released in the Visual Studi
 - [x] Addition of Open In Atom ?????
 - [x] Addition of Open In SQL Server Management Studio 2005/8/10/12/14/16/17,etc NEED TO SORT OUT PATH TO SSMS !!!!!!
 - [x] Addition of project nodes to TreeSize Free/Pro & WinDirStat
+- [x] Addition of project nodes & folder nodes to Gimp, MSPaint, Paint.Net (open all files in the folder of correct suffix)
 - [x] Better VSMM descriptions for all apps 
 
 ## 1.1.27
