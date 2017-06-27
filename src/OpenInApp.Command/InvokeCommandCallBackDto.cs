@@ -1,4 +1,5 @@
-﻿using OpenInApp.Common.Helpers.Dtos;
+﻿using OpenInApp.Common.Helpers;
+using OpenInApp.Common.Helpers.Dtos;
 using System;
 
 namespace OpenInApp.Command
@@ -11,6 +12,7 @@ namespace OpenInApp.Command
         public CommandPlacement CommandPlacement { get; set; }
         public string ExecutableFileToBrowseFor { get; set; } 
         public string FileQuantityWarningLimit { get; set; }
+        public KeyToExecutableEnum KeyToExecutableEnum { get; set; }
         public bool SeparateProcessPerFileToBeOpened { get; set; }
         public IServiceProvider ServiceProvider { get; set; }        
         public bool SuppressTypicalFileExtensionsWarning { get; set; }

@@ -47,21 +47,27 @@ namespace OpenInApp.Common.Helpers
         /// <param name="dte">The DTE.</param>
         /// <param name="isFromSolutionExplorer">gregtt Differentiator for solution explorer versus code editor window.</param>
         /// <returns></returns>
-        public static IEnumerable<string> GetArtefactNamesToBeOpened(DTE2 dte, CommandPlacement commandPlacement)
+        public static IEnumerable<string> GetArtefactNamesToBeOpened(DTE2 dte, CommandPlacement commandPlacement, string typicalFileExtensions, KeyToExecutableEnum keyToExecutableEnum)
         {
+            var artefactNamesToBeOpened = new List<string>();
+
+            var actualPathToExeHelper = new ApplicationToOpenHelper();
+            var applicationToOpenDto = actualPathToExeHelper.GetApplicationToOpenDto(keyToExecutableEnum);
+            bool? openIndividualFilesInFolderRatherThanFolderItself = applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself;
+
             switch (commandPlacement)
             {
                 case CommandPlacement.IDM_VS_CTXT_CODEWIN:
-                    SetArtefactNamesToBeOpened_CodeWin(dte);
+                    artefactNamesToBeOpened = SetArtefactNamesToBeOpened_CodeWin(dte).ToList();
                     break;
                 case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
-                    SetArtefactNamesToBeOpened_FolderNode(dte);
+                    artefactNamesToBeOpened = SetArtefactNamesToBeOpened_FolderNode_ProjNode(dte, typicalFileExtensions, openIndividualFilesInFolderRatherThanFolderItself).ToList();
                     break;
                 case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
-                    SetArtefactNamesToBeOpened_ItemNode(dte);
+                    artefactNamesToBeOpened = SetArtefactNamesToBeOpened_ItemNode(dte).ToList();
                     break;
                 case CommandPlacement.IDM_VS_CTXT_PROJNODE:
-                    SetArtefactNamesToBeOpened_ProjNode(dte);
+                    artefactNamesToBeOpened = SetArtefactNamesToBeOpened_FolderNode_ProjNode(dte, typicalFileExtensions, openIndividualFilesInFolderRatherThanFolderItself).ToList();
                     break;
                 default:
                     // ignore ? log as a failed save (to the output window) ? gregtt
@@ -71,51 +77,138 @@ namespace OpenInApp.Common.Helpers
             return artefactNamesToBeOpened;
         }
 
-        private static void SetArtefactNamesToBeOpened_CodeWin(DTE2 dte)
+        private static IEnumerable<string> SetArtefactNamesToBeOpened_CodeWin(DTE2 dte)
         {
             dte.ActiveDocument.Save();
 
-            AddArtefactToArtefactNamesToBeOpened(dte.ActiveDocument.FullName);
+            var result = new List<string>();
+            result.Add(dte.ActiveDocument.FullName);
+
+            return result;
         }
 
-        private static void SetArtefactNamesToBeOpened_FolderNode(DTE2 dte)
+        private static IEnumerable<string> SetArtefactNamesToBeOpened_ItemNode(DTE2 dte)
         {
-            SaveArtefactsAndAddToList(dte);
-        }
+            var result = new List<string>();
 
-        private static void SetArtefactNamesToBeOpened_ItemNode(DTE2 dte)
-        {
-            SaveArtefactsAndAddToList(dte);
-        }
-
-        private static void SetArtefactNamesToBeOpened_ProjNode(DTE2 dte)
-        {
-            SaveArtefactsAndAddToList(dte);
-        }
-
-        private static void SaveArtefactsAndAddToList(DTE2 dte)
-        {
             var selectedItems = dte.SelectedItems;
 
             foreach (SelectedItem selectedItem in selectedItems)
             {
-                try
-                {
-                    selectedItem.ProjectItem.Save();
-                }
-                catch (Exception)
-                {
-                    // ignore ? log as a failed save (to the output window) ? gregtt
-                }
-
-                AddArtefactToArtefactNamesToBeOpened(selectedItem.ProjectItem.FileNames[0]);
+                result.Add(selectedItem.ProjectItem.FileNames[0]);//gregtt dedupe
             }
+
+            return result;
         }
 
-        private static void AddArtefactToArtefactNamesToBeOpened(string artefactToAdd)
+        private static IEnumerable<string> SetArtefactNamesToBeOpened_FolderNode_ProjNode(DTE2 dte, string typicalFileExtensions, bool? openIndividualFilesInFolderRatherThanFolderItself)
         {
-            artefactNamesToBeOpened.Add(artefactToAdd);
+            var result = new List<string>();
+
+            if (openIndividualFilesInFolderRatherThanFolderItself.HasValue && openIndividualFilesInFolderRatherThanFolderItself.Value)
+            {
+                var fileFullPathNamesOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffix(dte, typicalFileExtensions);
+                result = AddArtefactsToList(fileFullPathNamesOfCorrectSuffix).ToList();
+            }
+            else
+            {
+                result = AddArtefactsToList(dte).ToList();
+            }
+
+            return result;
         }
+
+        private static IEnumerable<string> GetFileFullPathNamesOfCorrectSuffix(DTE2 dte, string typicalFileExtensions)//gregtt unit test required
+        {
+            var fileFullPathNamesOfCorrectSuffix = new List<string>();
+
+            var selectedItems = dte.SelectedItems;
+
+            foreach (SelectedItem selectedItem in selectedItems)
+            {
+                var folderSelectedFullPath = selectedItem.ProjectItem.FileNames[0];//gregtt dedupe
+                fileFullPathNamesOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffixInFolder(folderSelectedFullPath, typicalFileExtensions).ToList();
+            }
+
+            return fileFullPathNamesOfCorrectSuffix;
+        }
+
+        private static IEnumerable<string> GetFileFullPathNamesOfCorrectSuffixInFolder(string folderSelectedFullPath, string typicalFileExtensions)//gregtt unit test required
+        {
+            var fileFullPathNamesOfCorrectSuffix = new List<string>();
+
+            var typicalFileExtensionAsList = GetTypicalFileExtensionAsList(typicalFileExtensions);
+
+            var filesInFolderFullPathNames = Directory.EnumerateFiles(folderSelectedFullPath);
+
+            foreach (var fileInFolderFullPathName in filesInFolderFullPathNames)
+            {
+                var isTypicalFileExtension = AreTypicalFileExtensions(new List<string> { fileInFolderFullPathName }, typicalFileExtensionAsList);
+                if (isTypicalFileExtension)
+                {
+                    fileFullPathNamesOfCorrectSuffix.Add(fileInFolderFullPathName);
+                }
+            }
+
+            return fileFullPathNamesOfCorrectSuffix;
+        }
+
+        private static IEnumerable<string> AddArtefactsToList(IEnumerable<string> artefacts)//gregtt unit test required
+        {
+            var result = new List<string>();
+
+            foreach (var artefact in artefacts)
+            {
+                result.Add(artefact);
+            }
+
+            return result;
+        }
+
+        //////////////////////////////////////////////////private static IEnumerable<string> SaveArtefactsAndAddToList(DTE2 dte)
+        //////////////////////////////////////////////////{
+        //////////////////////////////////////////////////    var selectedItems = dte.SelectedItems;
+
+        //////////////////////////////////////////////////    var result = new List<string>();
+
+        //////////////////////////////////////////////////    foreach (SelectedItem selectedItem in selectedItems)
+        //////////////////////////////////////////////////    {
+        //////////////////////////////////////////////////        try
+        //////////////////////////////////////////////////        {
+        //////////////////////////////////////////////////            selectedItem.ProjectItem.Save();
+        //////////////////////////////////////////////////        }
+        //////////////////////////////////////////////////        catch (Exception)
+        //////////////////////////////////////////////////        {
+        //////////////////////////////////////////////////            // ignore ? log as a failed save (to the output window) ? gregtt
+        //////////////////////////////////////////////////        }
+
+        //////////////////////////////////////////////////        result.Add(selectedItem.ProjectItem.FileNames[0]);//gregtt dedupe
+        //////////////////////////////////////////////////    }
+
+        //////////////////////////////////////////////////    return result;
+        //////////////////////////////////////////////////}
+
+        private static IEnumerable<string> AddArtefactsToList(DTE2 dte)
+        {
+            var selectedItems = dte.SelectedItems;
+
+            var result = new List<string>();
+
+            foreach (SelectedItem selectedItem in selectedItems)
+            {
+                ////////////////////////////////////////////////////AddArtefactToArtefactNamesToBeOpened(selectedItem.ProjectItem.FileNames[0]);//gregtt dedupe
+                result.Add(selectedItem.ProjectItem.FileNames[0]);//gregtt dedupe
+            }
+
+            return result;
+        }
+
+        ////////////////////////////////////////////////////private static IEnumerable<string> AddArtefactToArtefactNamesToBeOpened(string artefactToAdd)//gregtt unit test required
+        ////////////////////////////////////////////////////{
+        ////////////////////////////////////////////////////var result = artefactNamesToBeOpened.Add(artefactToAdd);
+        ////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////return result;
+        ////////////////////////////////////////////////////}
 
         /// <summary>
         /// Checks if a file extension(s) is a typical file extension for the app, as defined in Tools | Options.
@@ -237,7 +330,7 @@ namespace OpenInApp.Common.Helpers
         /// <returns></returns>
         public static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement)
         {
-            ArtefactTypeToOpen artefactTypeToOpen = ArtefactTypeToOpen.File;
+            ArtefactTypeToOpen artefactTypeToOpen;
 
             switch (commandPlacement)
             {
@@ -250,6 +343,22 @@ namespace OpenInApp.Common.Helpers
                 default:
                     artefactTypeToOpen = ArtefactTypeToOpen.File;
                     break;
+            }
+
+            return DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);
+        }
+
+        public static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement, ArtefactTypeToOpen artefactTypeToOpen)
+        {
+            if ((commandPlacement == CommandPlacement.IDM_VS_CTXT_FOLDERNODE ||
+                 commandPlacement == CommandPlacement.IDM_VS_CTXT_PROJNODE) &&
+                artefactTypeToOpen == ArtefactTypeToOpen.Folder)
+            {
+                artefactTypeToOpen = ArtefactTypeToOpen.Folder;
+            }
+            else
+            {
+                artefactTypeToOpen = ArtefactTypeToOpen.File;
             }
 
             return DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);

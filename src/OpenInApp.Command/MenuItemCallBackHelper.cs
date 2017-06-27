@@ -38,9 +38,9 @@ namespace OpenInApp.Command
                 }
                 if (proceedToExecute)
                 {
-                    var actualArtefactsToBeOpened = CommonFileHelper.GetArtefactNamesToBeOpened(dte, dto.CommandPlacement);
+                    var actualArtefactsToBeOpened = CommonFileHelper.GetArtefactNamesToBeOpened(dte, dto.CommandPlacement, dto.TypicalFileExtensions, dto.KeyToExecutableEnum);
 
-                    var actualArtefactsToBeOpenedExist = CommonFileHelper.DoArtefactsExist(actualArtefactsToBeOpened, dto.CommandPlacement);
+                    var actualArtefactsToBeOpenedExist = CommonFileHelper.DoArtefactsExist(actualArtefactsToBeOpened, dto.CommandPlacement, dto.ArtefactTypeToOpen);
 
                     if (!actualArtefactsToBeOpenedExist)
                     {

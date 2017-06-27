@@ -13,6 +13,7 @@ namespace OpenInApp.Common.Helpers
                 DefaultTypicalFileExtensions = new List<string> { "*" },
                 ExecutableFileToBrowseFor = keyToExecutableEnum.Description(),
                 InitialFolderType = InitialFolderType.ProgramFilesX86,
+                OpenIndividualFilesInFolderRatherThanFolderItself = null,
                 SecondaryFilePathSegmentHasMultipleVersions = false,
                 SeparateProcessPerFileToBeOpened = true,
                 UseShellExecute = true,
@@ -162,6 +163,7 @@ namespace OpenInApp.Common.Helpers
                         "zip",
 				        #endregion
                     };
+                    //TODO applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
                     break;
                 case KeyToExecutableEnum.MarkdownMonster:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Markdown Monster";
@@ -187,6 +189,7 @@ namespace OpenInApp.Common.Helpers
                         "tiff",
                         #endregion
                     };
+                    //TODO applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
                     break;
                 case KeyToExecutableEnum.Opera:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Opera";
@@ -211,19 +214,22 @@ namespace OpenInApp.Common.Helpers
                         "TIFF",
 	                    #endregion
                     };
+                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
                     break;
                 case KeyToExecutableEnum.SQLServerManagementStudio:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft SQL Server\9999\Tools\Binn\ManagementStudio";
-                    //gregtt                                        @"Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE";
+                    //gregtt TODO ssms 2005                         @"Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE";
                     applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions = true;
                     break;
                 case KeyToExecutableEnum.TreeSizeFree:
                     applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
                     applicationToOpenDto.SecondaryFilePathSegment = @"JAM Software\TreeSize Free";
+                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = false;
                     break;
                 case KeyToExecutableEnum.TreeSizeProfessional:
                     applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
                     applicationToOpenDto.SecondaryFilePathSegment = @"JAM Software\TreeSize";
+                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = false;
                     break;
                 case KeyToExecutableEnum.Vivaldi:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Vivaldi\Application";
@@ -262,6 +268,7 @@ namespace OpenInApp.Common.Helpers
                 case KeyToExecutableEnum.WinDirStat:
                     applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
                     applicationToOpenDto.SecondaryFilePathSegment = @"WinDirStat";
+                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = false;
                     break;
                 case KeyToExecutableEnum.XamarinStudio:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Xamarin Studio\bin";

@@ -189,7 +189,8 @@ namespace OpenInApp.Menu
                 _typicalFileExtensions,
                 _constantsForAppCommon.Caption,
                 applicationToOpenDto,
-                _keyToExecutableEnumDescription);
+                _keyToExecutableEnumDescription,
+                keyToExecutableEnum);
 
             var persistOptionsDto = menuItemCallBackHelper.InvokeCommandCallBack(invokeCommandCallBackDto);
 
@@ -208,21 +209,23 @@ namespace OpenInApp.Menu
             string typicalFileExtensions,
             string caption,
             ApplicationToOpenDto applicationToOpenDto,
-            string keyToExecutableEnumDescription)
+            string keyToExecutableEnumDescription,
+            KeyToExecutableEnum keyToExecutableEnum)
         {
             return new InvokeCommandCallBackDto
             {
                 ActualPathToExe = actualPathToExe,
-                FileQuantityWarningLimit = fileQuantityWarningLimit,
+                ArtefactTypeToOpen = applicationToOpenDto.ArtefactTypeToOpen,
+                Caption = caption,
                 CommandPlacement = commandPlacement,
+                ExecutableFileToBrowseFor = keyToExecutableEnumDescription,
+                FileQuantityWarningLimit = fileQuantityWarningLimit,
+                KeyToExecutableEnum = keyToExecutableEnum,
+                SeparateProcessPerFileToBeOpened = applicationToOpenDto.SeparateProcessPerFileToBeOpened,
                 ServiceProvider = serviceProvider,
                 SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,
                 TypicalFileExtensions = typicalFileExtensions,
-                Caption = caption,
-                ArtefactTypeToOpen = applicationToOpenDto.ArtefactTypeToOpen,
-                SeparateProcessPerFileToBeOpened = applicationToOpenDto.SeparateProcessPerFileToBeOpened,
                 UseShellExecute = applicationToOpenDto.UseShellExecute,
-                ExecutableFileToBrowseFor = keyToExecutableEnumDescription
             };
         }
     }
