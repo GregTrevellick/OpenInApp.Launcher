@@ -100,7 +100,7 @@ namespace OpenInApp.Common.Helpers
             return path;
         }
 
-        private static IEnumerable<string> GetMultipleVersionPaths(string executableFileToBrowseFor, InitialFolderType initialFolderType, string secondaryFilePathSegment, KeyToExecutableEnum keyToExecutableEnum)//gregtt write unit test for this method
+        internal static IEnumerable<string> GetMultipleVersionPaths(string executableFileToBrowseFor, InitialFolderType initialFolderType, string secondaryFilePathSegment, KeyToExecutableEnum keyToExecutableEnum)//gregtt write unit test for this method
         {
             var result = new List<string>();
 

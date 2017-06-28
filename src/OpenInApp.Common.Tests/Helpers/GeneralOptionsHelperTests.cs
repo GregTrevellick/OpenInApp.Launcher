@@ -71,7 +71,7 @@ namespace OpenInApp.Common.Tests.Helpers
             var secondaryFilePathSegment = "abc9999d";
 
             //Act
-            var actual = GeneralOptionsHelper.GetMultipleVersionPaths("XMlsPY.exe", InitialFolderType.ProgramFilesX86, secondaryFilePathSegment);
+            var actual = GeneralOptionsHelper.GetMultipleVersionPaths("XMlsPY.exe", InitialFolderType.ProgramFilesX86, secondaryFilePathSegment, KeyToExecutableEnum.AltovaXMLSpy);
 
             //Assert
             
