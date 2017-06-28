@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\ApplicationToOpenHelper.cs" />
+    <Compile Include="Helpers\Dtos\VersionNumberRangeDto.cs" />
     <Compile Include="Helpers\Dtos\ArtefactTypeToOpen.cs" />
     <Compile Include="Helpers\Dtos\CommandPlacement.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />

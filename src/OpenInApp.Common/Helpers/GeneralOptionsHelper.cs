@@ -104,10 +104,9 @@ namespace OpenInApp.Common.Helpers
         {
             var result = new List<string>();
 
-            int endVersionNumber;
-            var startVersionNumber = GetVersionNumberRange(executableFileToBrowseFor, out endVersionNumber);
+            var dto = GetVersionNumberRange(executableFileToBrowseFor);
 
-            for (int i = startVersionNumber; i > endVersionNumber; i--)//gregtt set the decrement value within GetVersionNumberRange()
+            for (int i = dto.StartVersionNumber; i > dto.EndVersionNumber; i--)//gregtt set the decrement value within GetVersionNumberRange()
             {
                 var segment = secondaryFilePathSegment.Replace("9999", i.ToString());
                 var path = GetPath(executableFileToBrowseFor, initialFolderType, segment);
@@ -117,28 +116,31 @@ namespace OpenInApp.Common.Helpers
             return result;
         }
 
-        private static int GetVersionNumberRange(string executableFileToBrowseFor, out int endVersionNumber)//gregtt receive an enum param not a string //gregtt write unit test for this method
+        private static VersionNumberRangeDto GetVersionNumberRange(string executableFileToBrowseFor)//gregtt receive an enum param not a string //gregtt write unit test for this method
         {
-            int startVersionNumber;
+            var result = new VersionNumberRangeDto();
 
             switch (executableFileToBrowseFor.ToLower())
             {
                 case "xmlspy.exe":
-                    startVersionNumber = 2020;
-                    endVersionNumber = 1995;
+                    result.StartVersionNumber = 2020;
+                    result.EndVersionNumber = 1995;
+                    result.DecrementValue = 1;
                     break;
                 case "ssms.exe":
                 case "ssmsee.exe":
-                    startVersionNumber = 150;
-                    endVersionNumber = 60;
+                    result.StartVersionNumber = 150;
+                    result.EndVersionNumber = 60;
+                    result.DecrementValue = 10;
                     break;
                 default:
-                    startVersionNumber = int.MinValue;
-                    endVersionNumber = int.MinValue;
+                    result.StartVersionNumber = int.MinValue;
+                    result.EndVersionNumber = int.MinValue;
+                    result.DecrementValue = int.MinValue;
                     break;
             }
 
-            return startVersionNumber;
+            return result;
         }
     }
 }
