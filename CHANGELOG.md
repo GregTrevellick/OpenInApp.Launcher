@@ -3,12 +3,12 @@
 These are the changes to each version that has been released in the Visual Studio Marketplace.
 
 ## 1.1.x
-**2017-07-xx**
-- [x] Addition of Open In Atom ?????
-- [x] Addition of Open In SQL Server Management Studio 2005/8/10/12/14/16/17,etc NEED TO SORT OUT PATH TO SSMS !!!!!!
+**Coming soon**
+- [x] Addition of Open In Atom (tbc)
+- [x] Addition of Open In SQL Server Management Studio 2005/8/10/12/14/16/17 (todo: sort out ssmsee.exe paths)
 - [x] Addition of project nodes to TreeSize Free/Pro & WinDirStat
-- [x] Addition of project nodes & folder nodes to Gimp, MSPaint, Paint.Net (open all files in the folder of correct suffix)
-- [x] Better VSMM descriptions for all apps 
+- [x] Addition of project nodes & folder nodes to Gimp, MS Paint, Paint.Net 
+- [x] Screenshots for all applications 
 
 ## 1.1.27
 **2017-06-21**
