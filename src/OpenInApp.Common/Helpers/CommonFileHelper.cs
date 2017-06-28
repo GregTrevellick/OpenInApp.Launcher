@@ -44,8 +44,6 @@ namespace OpenInApp.Common.Helpers
         /// <summary>
         /// Gets the selected files to be opened, as chosen in Solution Explorer.
         /// </summary>
-        /// <param name="dte">The DTE.</param>
-        /// <param name="isFromSolutionExplorer">gregtt Differentiator for solution explorer versus code editor window.</param>
         /// <returns></returns>
         public static IEnumerable<string> GetArtefactNamesToBeOpened(DTE2 dte, CommandPlacement commandPlacement, string typicalFileExtensions, KeyToExecutableEnum keyToExecutableEnum)
         {
