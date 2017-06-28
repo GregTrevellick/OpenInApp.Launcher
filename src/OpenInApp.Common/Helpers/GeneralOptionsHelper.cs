@@ -115,16 +115,16 @@ namespace OpenInApp.Common.Helpers
 
             if (keyToExecutableEnum == KeyToExecutableEnum.SQLServerManagementStudio)
             {
-                var ssmsDotExeAdditionalPaths = GetSsmsDotExeAdditionalPaths("ssms.exe", initialFolderType);
-                result.AddRange(ssmsDotExeAdditionalPaths);
-                var ssmseeDotExeAdditionalPaths = GetSsmsDotExeAdditionalPaths("ssmsee.exe", initialFolderType);
-                result.AddRange(ssmseeDotExeAdditionalPaths);
+                var ssmsAdditionalPaths = GetSsmsAdditionalPaths("ssms.exe", initialFolderType);
+                result.AddRange(ssmsAdditionalPaths);
+                var ssmseeAdditionalPaths = GetSsmsAdditionalPaths("ssmsee.exe", initialFolderType);
+                result.AddRange(ssmseeAdditionalPaths);
             }
 
             return result;
         }
 
-        private static IEnumerable<string> GetSsmsDotExeAdditionalPaths(string executableFileToBrowseFor, InitialFolderType initialFolderType)//gregtt write unit test for this method
+        private static IEnumerable<string> GetSsmsAdditionalPaths(string executableFileToBrowseFor, InitialFolderType initialFolderType)//gregtt write unit test for this method
         {
             var secondaryFilePathSegment = @"Microsoft SQL Server\9999\Tools\Binn\VSShell\Common7\IDE";
             var result = new List<string>();
@@ -139,7 +139,6 @@ namespace OpenInApp.Common.Helpers
             return result;
         }
 
-
         private static VersionNumberRangeDto GetVersionNumberRange(KeyToExecutableEnum keyToExecutableEnum)//gregtt write unit test for this method
         {
             var result = new VersionNumberRangeDto();
@@ -153,8 +152,8 @@ namespace OpenInApp.Common.Helpers
                     break;
                 case KeyToExecutableEnum.SQLServerManagementStudio:
                     result.DecrementValue = 10;
-                    result.EndVersionNumber = 60;
-                    result.StartVersionNumber = 150;
+                    result.EndVersionNumber = 80;
+                    result.StartVersionNumber = 170;
                     break;
                 default:
                     result.DecrementValue = int.MinValue;
