@@ -63,7 +63,7 @@ namespace OpenInApp.Common.Helpers
 
             if (applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions)
             {
-                var paths = GetMultipleVersionPaths(applicationToOpenDto.ExecutableFileToBrowseFor, applicationToOpenDto.InitialFolderType, applicationToOpenDto.SecondaryFilePathSegment);
+                var paths = GetMultipleVersionPaths(applicationToOpenDto.ExecutableFileToBrowseFor, applicationToOpenDto.InitialFolderType, applicationToOpenDto.SecondaryFilePathSegment, keyToExecutableEnum);
 
                 foreach (var path in paths)
                 {
@@ -100,13 +100,13 @@ namespace OpenInApp.Common.Helpers
             return path;
         }
 
-        public static IEnumerable<string> GetMultipleVersionPaths(string executableFileToBrowseFor, InitialFolderType initialFolderType, string secondaryFilePathSegment)
+        private static IEnumerable<string> GetMultipleVersionPaths(string executableFileToBrowseFor, InitialFolderType initialFolderType, string secondaryFilePathSegment, KeyToExecutableEnum keyToExecutableEnum)//gregtt write unit test for this method
         {
             var result = new List<string>();
 
-            var dto = GetVersionNumberRange(executableFileToBrowseFor);
+            var dto = GetVersionNumberRange(keyToExecutableEnum);
 
-            for (int i = dto.StartVersionNumber; i > dto.EndVersionNumber; i--)//gregtt set the decrement value within GetVersionNumberRange()
+            for (int i = dto.StartVersionNumber; i > dto.EndVersionNumber; i = i - dto.DecrementValue)
             {
                 var segment = secondaryFilePathSegment.Replace("9999", i.ToString());
                 var path = GetPath(executableFileToBrowseFor, initialFolderType, segment);
@@ -116,27 +116,26 @@ namespace OpenInApp.Common.Helpers
             return result;
         }
 
-        private static VersionNumberRangeDto GetVersionNumberRange(string executableFileToBrowseFor)//gregtt receive an enum param not a string //gregtt write unit test for this method
+        private static VersionNumberRangeDto GetVersionNumberRange(KeyToExecutableEnum keyToExecutableEnum)//gregtt write unit test for this method
         {
             var result = new VersionNumberRangeDto();
 
-            switch (executableFileToBrowseFor.ToLower())
+            switch (keyToExecutableEnum)
             {
-                case "xmlspy.exe":
-                    result.StartVersionNumber = 2020;
-                    result.EndVersionNumber = 1995;
+                case KeyToExecutableEnum.AltovaXMLSpy:
                     result.DecrementValue = 1;
+                    result.EndVersionNumber = 1995;
+                    result.StartVersionNumber = 2020;
                     break;
-                case "ssms.exe":
-                case "ssmsee.exe":
-                    result.StartVersionNumber = 150;
-                    result.EndVersionNumber = 60;
+                case KeyToExecutableEnum.SQLServerManagementStudio:
                     result.DecrementValue = 10;
+                    result.EndVersionNumber = 60;
+                    result.StartVersionNumber = 150;
                     break;
                 default:
-                    result.StartVersionNumber = int.MinValue;
-                    result.EndVersionNumber = int.MinValue;
                     result.DecrementValue = int.MinValue;
+                    result.EndVersionNumber = int.MinValue;
+                    result.StartVersionNumber = int.MinValue;
                     break;
             }
 
