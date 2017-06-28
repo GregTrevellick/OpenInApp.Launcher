@@ -11,6 +11,8 @@ namespace OpenInApp.Common.Tests.Helpers
     [TestFixture()]
     public class OpenInAppHelperTests
     {
+        //Open in intellij
+        //open in rider
         //Open in “My Exe”
         //Open in IE 11 – check at spur
         //open in sublime text vs2012/vs2013?
