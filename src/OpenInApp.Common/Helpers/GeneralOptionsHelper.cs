@@ -108,13 +108,37 @@ namespace OpenInApp.Common.Helpers
 
             for (int i = dto.StartVersionNumber; i > dto.EndVersionNumber; i = i - dto.DecrementValue)
             {
-                var segment = secondaryFilePathSegment.Replace("9999", i.ToString());
+                var segment = secondaryFilePathSegment.Replace("9999", i.ToString());//gregtt dedupe
+                var path = GetPath(executableFileToBrowseFor, initialFolderType, segment);
+                result.Add(path);
+            }
+
+            if (keyToExecutableEnum == KeyToExecutableEnum.SQLServerManagementStudio)
+            {
+                var ssmsDotExeAdditionalPaths = GetSsmsDotExeAdditionalPaths("ssms.exe", initialFolderType);
+                result.AddRange(ssmsDotExeAdditionalPaths);
+                var ssmseeDotExeAdditionalPaths = GetSsmsDotExeAdditionalPaths("ssmsee.exe", initialFolderType);
+                result.AddRange(ssmseeDotExeAdditionalPaths);
+            }
+
+            return result;
+        }
+
+        private static IEnumerable<string> GetSsmsDotExeAdditionalPaths(string executableFileToBrowseFor, InitialFolderType initialFolderType)//gregtt write unit test for this method
+        {
+            var secondaryFilePathSegment = @"Microsoft SQL Server\9999\Tools\Binn\VSShell\Common7\IDE";
+            var result = new List<string>();
+
+            for (int i = 110; i > 20; i = i - 10)
+            {
+                var segment = secondaryFilePathSegment.Replace("9999", i.ToString());//gregtt dedupe
                 var path = GetPath(executableFileToBrowseFor, initialFolderType, segment);
                 result.Add(path);
             }
 
             return result;
         }
+
 
         private static VersionNumberRangeDto GetVersionNumberRange(KeyToExecutableEnum keyToExecutableEnum)//gregtt write unit test for this method
         {

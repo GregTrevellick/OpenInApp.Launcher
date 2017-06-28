@@ -218,7 +218,6 @@ namespace OpenInApp.Common.Helpers
                     break;
                 case KeyToExecutableEnum.SQLServerManagementStudio:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft SQL Server\9999\Tools\Binn\ManagementStudio";
-                    //gregtt TODO ssms 2005                         @"Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE";
                     applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions = true;
                     break;
                 case KeyToExecutableEnum.TreeSizeFree:
