@@ -61,13 +61,13 @@ namespace OpenInApp.Common.Helpers
                     artefactNamesToBeOpened = SetArtefactNamesToBeOpened_CodeWin(dte).ToList();
                     break;
                 case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
-                    artefactNamesToBeOpened = SetArtefactNamesToBeOpened_FolderNode(dte, typicalFileExtensions, openIndividualFilesInFolderRatherThanFolderItself).ToList();
+                    artefactNamesToBeOpened = SetArtefactNamesToBeOpened_FolderNode_ProjNode(dte, typicalFileExtensions, openIndividualFilesInFolderRatherThanFolderItself, "ProjNode").ToList();
                     break;
                 case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
                     artefactNamesToBeOpened = SetArtefactNamesToBeOpened_ItemNode(dte).ToList();
                     break;
                 case CommandPlacement.IDM_VS_CTXT_PROJNODE:
-                    artefactNamesToBeOpened = SetArtefactNamesToBeOpened_ProjNode(dte, typicalFileExtensions, openIndividualFilesInFolderRatherThanFolderItself).ToList();
+                    artefactNamesToBeOpened = SetArtefactNamesToBeOpened_FolderNode_ProjNode(dte, typicalFileExtensions, openIndividualFilesInFolderRatherThanFolderItself, "FolderNode").ToList();
                     break;
                 default:
                     // ignore ? log as a failed save (to the output window) ? gregtt
@@ -95,20 +95,31 @@ namespace OpenInApp.Common.Helpers
 
             foreach (SelectedItem selectedItem in selectedItems)
             {
-                result.Add(selectedItem.ProjectItem.FileNames[0]);//gregtt dedupe
+                result.Add(GetFolderSelectedFullPath(selectedItem));
             }
 
             return result;
         }
 
-        private static IEnumerable<string> SetArtefactNamesToBeOpened_FolderNode(DTE2 dte, string typicalFileExtensions, bool? openIndividualFilesInFolderRatherThanFolderItself)//gregtt dedupe
+        private static IEnumerable<string> SetArtefactNamesToBeOpened_FolderNode_ProjNode(DTE2 dte, string typicalFileExtensions, bool? openIndividualFilesInFolderRatherThanFolderItself, string mode)//gregtt replace 'mode' with an enum 
         {
             var result = new List<string>();
 
             if (openIndividualFilesInFolderRatherThanFolderItself.HasValue && openIndividualFilesInFolderRatherThanFolderItself.Value)
             {
+                var fileFullPathNamesOfCorrectSuffix = new List<string>();
+
                 //Paint.Net etc
-                var fileFullPathNamesOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffix_FolderNode(dte, typicalFileExtensions);
+                if (mode == "FolderNode")
+                {
+                    fileFullPathNamesOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffix_FolderNode_ProjNode(dte, typicalFileExtensions, "FolderNode").ToList();
+                }
+
+                if (mode == "ProjNode")
+                {
+                    fileFullPathNamesOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffix_FolderNode_ProjNode(dte, typicalFileExtensions, "ProjNode").ToList();
+                }
+
                 result = AddArtefactsToList(fileFullPathNamesOfCorrectSuffix).ToList();
             }
             else
@@ -120,52 +131,32 @@ namespace OpenInApp.Common.Helpers
             return result;
         }
 
-        private static IEnumerable<string> SetArtefactNamesToBeOpened_ProjNode(DTE2 dte, string typicalFileExtensions, bool? openIndividualFilesInFolderRatherThanFolderItself)//gregtt dedupe
+        private static IEnumerable<string> GetFileFullPathNamesOfCorrectSuffix_FolderNode_ProjNode(DTE2 dte, string typicalFileExtensions, string mode)//gregtt replace 'mode' with an enum //gregtt unit test required
         {
-            var result = new List<string>();
+            var fileFullPathNamesOfCorrectSuffix = new List<string>();
 
-            if (openIndividualFilesInFolderRatherThanFolderItself.HasValue && openIndividualFilesInFolderRatherThanFolderItself.Value)
+            foreach (SelectedItem selectedItem in dte.SelectedItems)
             {
-                //Paint.Net etc
-                var fileFullPathNamesOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffix_ProjNode(dte, typicalFileExtensions);
-                result = AddArtefactsToList(fileFullPathNamesOfCorrectSuffix).ToList();
-            }
-            else
-            {
-                //WinDirStat etc
-                result = AddArtefactsToList(dte).ToList();
-            }
+                if (mode == "FolderNode")
+                {
+                    var folderSelectedFullPath = GetFolderSelectedFullPath(selectedItem);
+                    fileFullPathNamesOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffixInFolder(folderSelectedFullPath, typicalFileExtensions).ToList();
+                }
 
-            return result;
-        }
-
-        private static IEnumerable<string> GetFileFullPathNamesOfCorrectSuffix_FolderNode(DTE2 dte, string typicalFileExtensions)//gregtt unit test required
-        {
-            var fileFullPathNamesOfCorrectSuffix = new List<string>();//gregtt dedupe
-            var selectedItems = dte.SelectedItems;//gregtt dedupe
-
-            foreach (SelectedItem selectedItem in selectedItems)//gregtt dedupe
-            {
-                var folderSelectedFullPath = selectedItem.ProjectItem.FileNames[0];//gregtt dedupe
-                fileFullPathNamesOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffixInFolder(folderSelectedFullPath, typicalFileExtensions).ToList();
+                if (mode == "ProjNode")
+                {
+                    var projectFileFullPath = selectedItem.Project.FileName;
+                    var projectFolderFullPath = Path.GetDirectoryName(projectFileFullPath);
+                    fileFullPathNamesOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffixInFolder(projectFolderFullPath, typicalFileExtensions).ToList();
+                }
             }
 
             return fileFullPathNamesOfCorrectSuffix;
         }
 
-        private static IEnumerable<string> GetFileFullPathNamesOfCorrectSuffix_ProjNode(DTE2 dte, string typicalFileExtensions)//gregtt unit test required
+        private static string GetFolderSelectedFullPath(SelectedItem selectedItem)
         {
-            var fileFullPathNamesOfCorrectSuffix = new List<string>();//gregtt dedupe
-            var selectedItems = dte.SelectedItems;//gregtt dedupe
-
-            foreach (SelectedItem selectedItem in selectedItems)//gregtt dedupe
-            {
-                var projectFileFullPath = selectedItem.Project.FileName;
-                var projectFolderFullPath = Path.GetDirectoryName(projectFileFullPath);
-                fileFullPathNamesOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffixInFolder(projectFolderFullPath, typicalFileExtensions).ToList();
-            }
-
-            return fileFullPathNamesOfCorrectSuffix;
+            return GetFolderSelectedFullPath(selectedItem);
         }
 
         private static IEnumerable<string> GetFileFullPathNamesOfCorrectSuffixInFolder(string folderSelectedFullPath, string typicalFileExtensions)//gregtt unit test required
@@ -208,7 +199,7 @@ namespace OpenInApp.Common.Helpers
 
             foreach (SelectedItem selectedItem in selectedItems)
             {
-                result.Add(selectedItem.ProjectItem.FileNames[0]);//gregtt dedupe
+                result.Add(GetFolderSelectedFullPath(selectedItem));
             }
 
             return result;
