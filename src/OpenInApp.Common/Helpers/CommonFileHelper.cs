@@ -15,7 +15,7 @@ namespace OpenInApp.Common.Helpers
     /// </summary>
     public class CommonFileHelper
     {
-        private static IList<string> artefactNamesToBeOpened = new List<string>();
+        private static IList<string> artefactNamesToBeOpened = new List<string>();//gregtt unused ???
 
         /// <summary>
         /// Prompts the user to browses for a file on disc and returns details.
@@ -47,7 +47,7 @@ namespace OpenInApp.Common.Helpers
         /// <returns></returns>
         public static IEnumerable<string> GetArtefactNamesToBeOpened(DTE2 dte, CommandPlacement commandPlacement, string typicalFileExtensions, KeyToExecutableEnum keyToExecutableEnum)
         {
-            var artefactNamesToBeOpened = new List<string>();
+            List<string> artefactNamesToBeOpened;
 
             var actualPathToExeHelper = new ApplicationToOpenHelper();
             var applicationToOpenDto = actualPathToExeHelper.GetApplicationToOpenDto(keyToExecutableEnum);
@@ -68,6 +68,7 @@ namespace OpenInApp.Common.Helpers
                     artefactNamesToBeOpened = SetArtefactNamesToBeOpened_FolderNode_ProjNode(dte, typicalFileExtensions, openIndividualFilesInFolderRatherThanFolderItself, commandPlacement).ToList();
                     break;
                 default:
+                    artefactNamesToBeOpened = new List<string>();
                     // ignore ? log as a failed save (to the output window) ? gregtt
                     break;
             }
@@ -101,55 +102,55 @@ namespace OpenInApp.Common.Helpers
 
         private static IEnumerable<string> SetArtefactNamesToBeOpened_FolderNode_ProjNode(DTE2 dte, string typicalFileExtensions, bool? openIndividualFilesInFolderRatherThanFolderItself, CommandPlacement commandPlacement)
         {
-            var result = new List<string>();
+            List<string> result;
 
-            //Paint.Net etc
+            //Paint.Net etc (e.g. open all image files within the folder or project folder)
             if (openIndividualFilesInFolderRatherThanFolderItself.HasValue && openIndividualFilesInFolderRatherThanFolderItself.Value)
             {
-                var fileFullPathNamesOfCorrectSuffix = new List<string>();
-                fileFullPathNamesOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffix_FolderNode_ProjNode(dte, typicalFileExtensions, commandPlacement).ToList();
+                var fileFullPathNamesOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffix(dte, typicalFileExtensions).ToList();
                 result = AddArtefactsToList(fileFullPathNamesOfCorrectSuffix).ToList();
             }
-            //WinDirStat etc
+            //WinDirStat etc (e.g. open the folder or project folder only within the target app)
             else
             {
-                result = AddArtefactsToList(dte).ToList();
+                var projectFolderFullPaths = GetProjectFolderFullPathNames(dte).ToList();
+                result = AddArtefactsToList(projectFolderFullPaths).ToList();
             }
 
             return result;
         }
 
-        private static IEnumerable<string> GetFileFullPathNamesOfCorrectSuffix_FolderNode_ProjNode(DTE2 dte, string typicalFileExtensions, CommandPlacement commandPlacement) //gregtt unit test required
+        private static IEnumerable<string> GetFileFullPathNamesOfCorrectSuffix(DTE2 dte, string typicalFileExtensions) //gregtt unit test required
         {
             var fileFullPathNamesOfCorrectSuffix = new List<string>();
-            string folderFullPath;
 
             foreach (SelectedItem selectedItem in dte.SelectedItems)
             {
-                switch (commandPlacement)
-                {
-                    case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
-                        folderFullPath = GetFolderSelectedFullPath(selectedItem);
-                        break;
-                    case CommandPlacement.IDM_VS_CTXT_PROJNODE:
-                        var projectFileFullPath = selectedItem.Project.FileName;
-                        folderFullPath = Path.GetDirectoryName(projectFileFullPath);
-                        break;
-                    case CommandPlacement.IDM_VS_CTXT_CODEWIN:
-                    case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
-                    default:
-                        throw new Exception("Oops should never have reached here - should be FolderNode and ProjNode only");
-                }
-
-                fileFullPathNamesOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffixInFolder(folderFullPath, typicalFileExtensions).ToList();
+                var folderFullPath = GetFolderSelectedFullPath(selectedItem);
+                var filePathsOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffixInFolder(folderFullPath, typicalFileExtensions).ToList();
+                fileFullPathNamesOfCorrectSuffix.AddRange(filePathsOfCorrectSuffix);
             }
 
             return fileFullPathNamesOfCorrectSuffix;
         }
 
+        private static IEnumerable<string> GetProjectFolderFullPathNames(DTE2 dte) //gregtt unit test required
+        {
+            var projectFolderFullPaths = new List<string>();
+
+            foreach (SelectedItem selectedItem in dte.SelectedItems)
+            {
+                var projectFileNameFullPath = selectedItem.Project.FileName;
+                var projectFolderFullPath = Path.GetDirectoryName(projectFileNameFullPath);
+                projectFolderFullPaths.Add(projectFolderFullPath);
+            }
+
+            return projectFolderFullPaths;
+        }
+
         private static string GetFolderSelectedFullPath(SelectedItem selectedItem)
         {
-            return GetFolderSelectedFullPath(selectedItem);
+            return selectedItem.ProjectItem.FileNames[0];
         }
 
         private static IEnumerable<string> GetFileFullPathNamesOfCorrectSuffixInFolder(string folderSelectedFullPath, string typicalFileExtensions)//gregtt unit test required
@@ -184,7 +185,7 @@ namespace OpenInApp.Common.Helpers
             return result;
         }
 
-        private static IEnumerable<string> AddArtefactsToList(DTE2 dte)
+        private static IEnumerable<string> AddArtefactsToList(DTE2 dte)//gregtt never used ???
         {
             var selectedItems = dte.SelectedItems;
 
@@ -305,6 +306,7 @@ namespace OpenInApp.Common.Helpers
         /// Checks if a specified artefact exists on disc.
         /// </summary>
         /// <param name="fullArtefactName">Full name of the artefact.</param>
+        /// <param name="commandPlacement"></param>
         /// <returns></returns>
         public static bool DoesArtefactExist(string fullArtefactName, CommandPlacement commandPlacement)
         {
@@ -315,6 +317,7 @@ namespace OpenInApp.Common.Helpers
         /// Checks if all specified artefacts exists on disc.
         /// </summary>
         /// <param name="fullArtefactNames">The full artefact names.</param>
+        /// /// <param name="commandPlacement"></param>
         /// <returns></returns>
         public static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement)
         {
