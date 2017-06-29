@@ -115,10 +115,12 @@ namespace OpenInApp.Common.Helpers
 
             if (keyToExecutableEnum == KeyToExecutableEnum.SQLServerManagementStudio)
             {
-                var ssmsAdditionalPaths = GetSsmsAdditionalPaths("ssms.exe", initialFolderType);
-                result.AddRange(ssmsAdditionalPaths);
-                var ssmseeAdditionalPaths = GetSsmsAdditionalPaths("ssmsee.exe", initialFolderType);
-                result.AddRange(ssmseeAdditionalPaths);
+                var additionalPaths = GetSsmsAdditionalPaths("ssms.exe", initialFolderType);
+                result.AddRange(additionalPaths);
+                additionalPaths = GetSsmsAdditionalPaths("ssmsee.exe", initialFolderType);
+                result.AddRange(additionalPaths);
+                additionalPaths = GetSsmsAdditionalPaths("SqlWb.exe", initialFolderType);
+                result.AddRange(additionalPaths);  
             }
 
             return result;
