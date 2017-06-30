@@ -9,9 +9,6 @@ using System.Windows.Forms;
 
 namespace OpenInApp.Common.Helpers
 {
-    /// <summary>
-    /// Helper class containing generic file-related methods for 'OpenInApp' VS packages
-    /// </summary>
     public class CommonFileHelper
     {
         /// <summary>
@@ -38,10 +35,6 @@ namespace OpenInApp.Common.Helpers
             };
         }
 
-        /// <summary>
-        /// Gets the selected files to be opened, as chosen in Solution Explorer.
-        /// </summary>
-        /// <returns></returns>
         public static IEnumerable<string> GetArtefactNamesToBeOpened(DTE2 dte, CommandPlacement commandPlacement, string typicalFileExtensions, KeyToExecutableEnum keyToExecutableEnum)
         {
             List<string> artefactNamesToBeOpened;
