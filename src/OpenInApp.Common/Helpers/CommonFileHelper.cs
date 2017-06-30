@@ -184,23 +184,11 @@ namespace OpenInApp.Common.Helpers
             return result;
         }
 
-        /// <summary>
-        /// Checks if a specified artefact exists on disc.
-        /// </summary>
-        /// <param name="fullArtefactName">Full name of the artefact.</param>
-        /// <param name="commandPlacement"></param>
-        /// <returns></returns>
         private static bool DoesArtefactExist(string fullArtefactName, CommandPlacement commandPlacement)
         {
             return DoArtefactsExist(new List<string> { fullArtefactName }, commandPlacement);
         }
 
-        /// <summary>
-        /// Checks if all specified artefacts exists on disc.
-        /// </summary>
-        /// <param name="fullArtefactNames">The full artefact names.</param>
-        /// /// <param name="commandPlacement"></param>
-        /// <returns></returns>
         private static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement)
         {
             ArtefactTypeToOpen artefactTypeToOpen;
@@ -218,45 +206,7 @@ namespace OpenInApp.Common.Helpers
                     break;
             }
 
-            return DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);
-        }
-
-        /// <summary>
-        /// Checks if all specified artefacts exists on disc.
-        /// </summary>
-        /// <param name="fullArtefactNames">The full artefact names.</param>
-        /// <returns></returns>
-        public static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, ArtefactTypeToOpen artefactTypeToOpen = ArtefactTypeToOpen.File)
-        {
-            var result = true;
-
-            foreach (var fullArtefactName in fullArtefactNames)
-            {
-                if (string.IsNullOrEmpty(fullArtefactName))
-                {
-                    result = false;
-                }
-                else
-                {
-                    switch (artefactTypeToOpen)
-                    {
-                        case ArtefactTypeToOpen.File:
-                            if (!File.Exists(fullArtefactName))
-                            {
-                                result = false;
-                            }
-                            break;
-                        case ArtefactTypeToOpen.Folder:
-                            if (!Directory.Exists(fullArtefactName))
-                            {
-                                result = false;
-                            }
-                            break;
-                    }
-                }
-            }
-
-            return result;
+            return ArtefactsHelper.DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);
         }
     }
 }

@@ -81,6 +81,7 @@
   <ItemGroup>
     <Compile Include="Helpers\AllAppsHelper.cs" />
     <Compile Include="Helpers\ApplicationToOpenHelper.cs" />
+    <Compile Include="Helpers\ArtefactsHelper.cs" />
     <Compile Include="Helpers\CsvHelper.cs" />
     <Compile Include="Helpers\Dtos\VersionNumberRangeDto.cs" />
     <Compile Include="Helpers\Dtos\ArtefactTypeToOpen.cs" />

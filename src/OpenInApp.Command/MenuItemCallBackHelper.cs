@@ -120,7 +120,7 @@ namespace OpenInApp.Command
                 artefactTypeToOpen = ArtefactTypeToOpen.File;
             }
 
-            return CommonFileHelper.DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);
+            return ArtefactsHelper.DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);
         }
 
         /// <summary>
