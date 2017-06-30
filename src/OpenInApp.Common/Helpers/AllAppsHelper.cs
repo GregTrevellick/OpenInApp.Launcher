@@ -12,7 +12,7 @@ namespace OpenInApp.Common.Helpers
         /// <returns></returns>
         public static bool DoesActualPathToExeExist(string fullExecutableFileName)
         {
-            return CommonFileHelper.DoArtefactsExist(new List<string> { fullExecutableFileName });
+            return ArtefactsHelper.DoArtefactsExist(new List<string> { fullExecutableFileName });
         }
 
         /// <summary>
