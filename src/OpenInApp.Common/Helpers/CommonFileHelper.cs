@@ -177,11 +177,6 @@ namespace OpenInApp.Common.Helpers
             return result;
         }
 
-   //     private static bool DoesArtefactExist(string fullArtefactName, CommandPlacement commandPlacement)
-     //   {
-        //    return DoArtefactsExist(new List<string> { fullArtefactName }, commandPlacement);
-     //   }
-
         private static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement)
         {
             ArtefactTypeToOpen artefactTypeToOpen;
