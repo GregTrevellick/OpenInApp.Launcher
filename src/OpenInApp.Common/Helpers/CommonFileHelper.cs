@@ -104,13 +104,15 @@ namespace OpenInApp.Common.Helpers
         {
             List<string> result;
 
-            //Paint.Net etc (e.g. open all image files within the folder or project folder)
+            // Open selected individual file(s) OR all individual files within a selected folder OR all individual files within a selected project's folder
+            // i.e. Paint.Net etc 
             if (openIndividualFilesInFolderRatherThanFolderItself.HasValue && openIndividualFilesInFolderRatherThanFolderItself.Value)
             {
                 var fileFullPathNamesOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffix(dte, typicalFileExtensions).ToList();
                 result = AddArtefactsToList(fileFullPathNamesOfCorrectSuffix).ToList();
             }
-            //WinDirStat etc (e.g. open the folder or project folder only within the target app)
+            // Open selected individual file(s) folders OR the selected folder OR the selected project's folder
+            // i.e. WinDirStat etc
             else
             {
                 var projectFolderFullPaths = GetProjectFolderFullPathNames(dte).ToList();
