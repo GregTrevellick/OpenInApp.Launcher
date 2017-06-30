@@ -185,23 +185,6 @@ namespace OpenInApp.Common.Helpers
         }
 
         /// <summary>
-        /// Gets a collection of file type extensions, from a collection of file names.
-        /// </summary>
-        /// <param name="fullFileNames">The full file names.</param>
-        /// <returns></returns>
-        internal static IEnumerable<string> GetFileTypeExtensions(IEnumerable<string> fullFileNames)
-        {
-            var result = new List<string>();
-
-            foreach (var fullFileName in fullFileNames)
-            {
-                result.Add(Path.GetExtension(fullFileName));
-            }
-
-            return result;
-        }
-
-        /// <summary>
         /// Checks if a specified artefact exists on disc.
         /// </summary>
         /// <param name="fullArtefactName">Full name of the artefact.</param>

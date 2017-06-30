@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace OpenInApp.Common.Helpers
 {
@@ -39,6 +42,23 @@ namespace OpenInApp.Common.Helpers
                         result = typicalFileExtensions.Contains(fileTypeExtension.TrimStart('.'), StringComparer.CurrentCultureIgnoreCase);
                     }
                 }
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// Gets a collection of file type extensions, from a collection of file names.
+        /// </summary>
+        /// <param name="fullFileNames">The full file names.</param>
+        /// <returns></returns>
+        private static IEnumerable<string> GetFileTypeExtensions(IEnumerable<string> fullFileNames)
+        {
+            var result = new List<string>();
+
+            foreach (var fullFileName in fullFileNames)
+            {
+                result.Add(Path.GetExtension(fullFileName));
             }
 
             return result;
