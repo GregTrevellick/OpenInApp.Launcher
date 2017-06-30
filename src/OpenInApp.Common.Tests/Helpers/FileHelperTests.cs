@@ -48,7 +48,7 @@ namespace OpenInApp.Common.Tests.Helpers
             var fullFileNames = new List<string> { fileName };
 
             //Act
-            var actual = CommonFileHelper.AreTypicalFileExtensions(fullFileNames, typicalFileExtensions);
+            var actual = CsvHelper.AreTypicalFileExtensions(fullFileNames, typicalFileExtensions);
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -59,7 +59,7 @@ namespace OpenInApp.Common.Tests.Helpers
         public void AreTypicalFileExtensionsGenericTest()
         {
             //Act
-            var actual = CommonFileHelper.AreTypicalFileExtensions(
+            var actual = CsvHelper.AreTypicalFileExtensions(
                 new List<string> { ".", "txt", ".txt", "any.txt", "any.cs" },
                 new List<string> { "*" });
 
@@ -89,7 +89,7 @@ namespace OpenInApp.Common.Tests.Helpers
             var expected = new List<string> { "a", "b", "c" };
 
             //Act
-            var actual = CommonFileHelper.GetTypicalFileExtensionAsList(csvString);
+            var actual = CsvHelper.GetTypicalFileExtensionAsList(csvString);
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -100,7 +100,7 @@ namespace OpenInApp.Common.Tests.Helpers
         public void DoesActualPathToExeExistTest()
         {
             //Act
-            var actual = CommonFileHelper.DoesActualPathToExeExist(null);
+            var actual = AllAppsHelper.DoesActualPathToExeExist(null);
 
             //Assert
             Assert.IsFalse(actual);
