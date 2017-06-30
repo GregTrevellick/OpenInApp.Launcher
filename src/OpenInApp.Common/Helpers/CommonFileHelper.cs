@@ -207,7 +207,7 @@ namespace OpenInApp.Common.Helpers
         /// <param name="fullFileNames">The full file names.</param>
         /// <param name="typicalFileExtensions">The typical file extensions.</param>
         /// <returns></returns>
-        private static bool AreTypicalFileExtensions(IEnumerable<string> fullFileNames, IEnumerable<string> typicalFileExtensions)
+        public static bool AreTypicalFileExtensions(IEnumerable<string> fullFileNames, IEnumerable<string> typicalFileExtensions)
         {
             var result = false;
 
@@ -321,7 +321,7 @@ namespace OpenInApp.Common.Helpers
         /// <param name="fullArtefactNames">The full artefact names.</param>
         /// /// <param name="commandPlacement"></param>
         /// <returns></returns>
-        public static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement)
+        private static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement)
         {
             ArtefactTypeToOpen artefactTypeToOpen;
 
