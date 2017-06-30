@@ -1,7 +1,9 @@
 ﻿using EnvDTE;
 using EnvDTE80;
 using OpenInApp.Common.Helpers;
+using OpenInApp.Common.Helpers.Dtos;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace OpenInApp.Command
@@ -40,7 +42,7 @@ namespace OpenInApp.Command
                 {
                     var actualArtefactsToBeOpened = CommonFileHelper.GetArtefactNamesToBeOpened(dte, dto.CommandPlacement, dto.TypicalFileExtensions, dto.KeyToExecutableEnum);
 
-                    var actualArtefactsToBeOpenedExist = CommonFileHelper.DoArtefactsExist(actualArtefactsToBeOpened, dto.CommandPlacement, dto.ArtefactTypeToOpen);
+                    var actualArtefactsToBeOpenedExist = DoArtefactsExist(actualArtefactsToBeOpened, dto.CommandPlacement, dto.ArtefactTypeToOpen);
 
                     if (!actualArtefactsToBeOpenedExist)
                     {
@@ -64,7 +66,7 @@ namespace OpenInApp.Command
                             }
                             if (proceedToExecute)
                             {
-                                var typicalFileExtensionAsList = CommonFileHelper.GetTypicalFileExtensionAsList(dto.TypicalFileExtensions);
+                                var typicalFileExtensionAsList = CsvHelper.GetTypicalFileExtensionAsList(dto.TypicalFileExtensions);
                                 var areTypicalFileExtensions = CommonFileHelper.AreTypicalFileExtensions(actualArtefactsToBeOpened, typicalFileExtensionAsList);
                                 if (!areTypicalFileExtensions)
                                 {
@@ -102,6 +104,22 @@ namespace OpenInApp.Command
             }
 
             return persistOptionsDto;
+        }
+
+        private static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement, ArtefactTypeToOpen artefactTypeToOpen)
+        {
+            if ((commandPlacement == CommandPlacement.IDM_VS_CTXT_FOLDERNODE ||
+                 commandPlacement == CommandPlacement.IDM_VS_CTXT_PROJNODE) &&
+                artefactTypeToOpen == ArtefactTypeToOpen.Folder)
+            {
+                artefactTypeToOpen = ArtefactTypeToOpen.Folder;
+            }
+            else
+            {
+                artefactTypeToOpen = ArtefactTypeToOpen.File;
+            }
+
+            return CommonFileHelper.DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);
         }
     }
 }

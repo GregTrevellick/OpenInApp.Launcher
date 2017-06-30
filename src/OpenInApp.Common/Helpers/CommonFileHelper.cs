@@ -159,7 +159,7 @@ namespace OpenInApp.Common.Helpers
         {
             var fileFullPathNamesOfCorrectSuffix = new List<string>();
 
-            var typicalFileExtensionAsList = GetTypicalFileExtensionAsList(typicalFileExtensions);
+            var typicalFileExtensionAsList = CsvHelper.GetTypicalFileExtensionAsList(typicalFileExtensions);
 
             var filesInFolderFullPathNames = Directory.GetFiles(folderSelectedFullPath, "*.*", SearchOption.AllDirectories);
 
@@ -270,41 +270,6 @@ namespace OpenInApp.Common.Helpers
         }
 
         /// <summary>
-        /// Gets the typical file extensions as a CSV string.
-        /// </summary>
-        /// <param name="defaultExts">The default exts.</param>
-        /// <returns></returns>
-        public static string GetDefaultTypicalFileExtensionsAsCsv(IEnumerable<string> defaultExts)
-        {
-            var stringBuilder = new StringBuilder();
-            foreach (var defaultExt in defaultExts)
-            {
-                stringBuilder.Append(defaultExt).Append(',');
-            }
-            return stringBuilder.ToString().TrimEnd(',');
-        }
-
-        /// <summary>
-        /// Gets the typical file extension as list, from a CSV string.
-        /// </summary>
-        /// <param name="typicalFileExtensionsAsCsv">The typical file extensions as CSV.</param>
-        /// <returns></returns>
-        public static IEnumerable<string> GetTypicalFileExtensionAsList(string typicalFileExtensionsAsCsv)
-        {
-            return typicalFileExtensionsAsCsv.Split(',');
-        }
-
-        /// <summary>
-        /// Checks if a specified artefact exists on disc.
-        /// </summary>
-        /// <param name="fullExecutableFileName">Full name of the artefact.</param>
-        /// <returns></returns>
-        public static bool DoesActualPathToExeExist(string fullExecutableFileName)
-        {
-            return DoArtefactsExist(new List<string> { fullExecutableFileName });
-        }
-
-        /// <summary>
         /// Checks if a specified artefact exists on disc.
         /// </summary>
         /// <param name="fullArtefactName">Full name of the artefact.</param>
@@ -341,28 +306,12 @@ namespace OpenInApp.Common.Helpers
             return DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);
         }
 
-        public static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement, ArtefactTypeToOpen artefactTypeToOpen)
-        {
-            if ((commandPlacement == CommandPlacement.IDM_VS_CTXT_FOLDERNODE ||
-                 commandPlacement == CommandPlacement.IDM_VS_CTXT_PROJNODE) &&
-                artefactTypeToOpen == ArtefactTypeToOpen.Folder)
-            {
-                artefactTypeToOpen = ArtefactTypeToOpen.Folder;
-            }
-            else
-            {
-                artefactTypeToOpen = ArtefactTypeToOpen.File;
-            }
-
-            return DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);
-        }
-
         /// <summary>
         /// Checks if all specified artefacts exists on disc.
         /// </summary>
         /// <param name="fullArtefactNames">The full artefact names.</param>
         /// <returns></returns>
-        private static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, ArtefactTypeToOpen artefactTypeToOpen = ArtefactTypeToOpen.File)
+        public static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, ArtefactTypeToOpen artefactTypeToOpen = ArtefactTypeToOpen.File)
         {
             var result = true;
 
@@ -393,6 +342,38 @@ namespace OpenInApp.Common.Helpers
             }
 
             return result;
+        }
+
+
+
+
+
+
+        // CALLED BY ALL THE APPS
+
+        /// <summary>
+        /// Checks if a specified artefact exists on disc.
+        /// </summary>
+        /// <param name="fullExecutableFileName">Full name of the artefact.</param>
+        /// <returns></returns>
+        public static bool DoesActualPathToExeExist(string fullExecutableFileName)
+        {
+            return DoArtefactsExist(new List<string> { fullExecutableFileName });
+        }
+
+        /// <summary>
+        /// Gets the typical file extensions as a CSV string.
+        /// </summary>
+        /// <param name="defaultExts">The default exts.</param>
+        /// <returns></returns>
+        public static string GetDefaultTypicalFileExtensionsAsCsv(IEnumerable<string> defaultExts)
+        {
+            var stringBuilder = new StringBuilder();
+            foreach (var defaultExt in defaultExts)
+            {
+                stringBuilder.Append(defaultExt).Append(',');
+            }
+            return stringBuilder.ToString().TrimEnd(',');
         }
     }
 }
