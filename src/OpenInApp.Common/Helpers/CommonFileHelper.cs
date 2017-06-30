@@ -258,19 +258,5 @@ namespace OpenInApp.Common.Helpers
 
             return result;
         }
-
-
-        //private static IList<string> artefactNamesToBeOpened = new List<string>();//gregtt unused ???
-
-        //private static IEnumerable<string> AddArtefactsToList(DTE2 dte)//gregtt never used ???
-        //{
-        //    var selectedItems = dte.SelectedItems;
-        //    var result = new List<string>();
-        //    foreach (SelectedItem selectedItem in selectedItems)
-        //    {
-        //        result.Add(GetFolderSelectedFullPath(selectedItem));
-        //    }
-        //    return result;
-        //}
     }
 }
