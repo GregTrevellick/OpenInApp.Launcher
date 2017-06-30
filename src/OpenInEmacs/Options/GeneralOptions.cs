@@ -29,7 +29,7 @@ namespace OpenInEmacs.Options.Emacs
             {
                 if (string.IsNullOrEmpty(typicalFileExtensions))
                 {
-                    return CommonFileHelper.GetDefaultTypicalFileExtensionsAsCsv(defaultTypicalFileExtensions);
+                    return AllAppsHelper.GetDefaultTypicalFileExtensionsAsCsv(defaultTypicalFileExtensions);
                 }
                 else
                 {
@@ -109,7 +109,7 @@ namespace OpenInEmacs.Options.Emacs
 
             if (string.IsNullOrEmpty(TypicalFileExtensions))
             {
-                TypicalFileExtensions = CommonFileHelper.GetDefaultTypicalFileExtensionsAsCsv(defaultTypicalFileExtensions);
+                TypicalFileExtensions = AllAppsHelper.GetDefaultTypicalFileExtensionsAsCsv(defaultTypicalFileExtensions);
             }
 
             if (string.IsNullOrEmpty(ActualPathToExe))
@@ -134,7 +134,7 @@ namespace OpenInEmacs.Options.Emacs
 
             if (actualPathToExeChanged)
             {
-                if (!CommonFileHelper.DoesActualPathToExeExist(ActualPathToExe))
+                if (!AllAppsHelper.DoesActualPathToExeExist(ActualPathToExe))
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 

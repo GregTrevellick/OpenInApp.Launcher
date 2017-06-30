@@ -30,7 +30,7 @@ namespace OpenInPaintDotNet.Options.PaintDotNet
             {
                 if (string.IsNullOrEmpty(typicalFileExtensions))
                 {
-                    return CommonFileHelper.GetDefaultTypicalFileExtensionsAsCsv(defaultTypicalFileExtensions);
+                    return AllAppsHelper.GetDefaultTypicalFileExtensionsAsCsv(defaultTypicalFileExtensions);
                 }
                 else
                 {
@@ -110,7 +110,7 @@ namespace OpenInPaintDotNet.Options.PaintDotNet
 
             if (string.IsNullOrEmpty(TypicalFileExtensions))
             {
-                TypicalFileExtensions = CommonFileHelper.GetDefaultTypicalFileExtensionsAsCsv(defaultTypicalFileExtensions);
+                TypicalFileExtensions = AllAppsHelper.GetDefaultTypicalFileExtensionsAsCsv(defaultTypicalFileExtensions);
             }
 
             if (string.IsNullOrEmpty(ActualPathToExe))
@@ -135,7 +135,7 @@ namespace OpenInPaintDotNet.Options.PaintDotNet
 
             if (actualPathToExeChanged)
             {
-                if (!CommonFileHelper.DoesActualPathToExeExist(ActualPathToExe))
+                if (!AllAppsHelper.DoesActualPathToExeExist(ActualPathToExe))
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 

@@ -75,7 +75,7 @@ namespace OpenInApp.Common.Tests.Helpers
             var testList = new List<string> { "a", "b", "c" };
 
             //Act
-            var actual = CommonFileHelper.GetDefaultTypicalFileExtensionsAsCsv(testList);
+            var actual = AllAppsHelper.GetDefaultTypicalFileExtensionsAsCsv(testList);
 
             //Assert
             Assert.AreEqual("a,b,c", actual);
