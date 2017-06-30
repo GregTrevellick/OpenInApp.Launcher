@@ -207,7 +207,7 @@ namespace OpenInApp.Common.Helpers
         /// <param name="fullFileNames">The full file names.</param>
         /// <param name="typicalFileExtensions">The typical file extensions.</param>
         /// <returns></returns>
-        public static bool AreTypicalFileExtensions(IEnumerable<string> fullFileNames, IEnumerable<string> typicalFileExtensions)
+        private static bool AreTypicalFileExtensions(IEnumerable<string> fullFileNames, IEnumerable<string> typicalFileExtensions)
         {
             var result = false;
 
