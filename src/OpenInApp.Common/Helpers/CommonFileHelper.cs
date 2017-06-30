@@ -310,7 +310,7 @@ namespace OpenInApp.Common.Helpers
         /// <param name="fullArtefactName">Full name of the artefact.</param>
         /// <param name="commandPlacement"></param>
         /// <returns></returns>
-        public static bool DoesArtefactExist(string fullArtefactName, CommandPlacement commandPlacement)
+        private static bool DoesArtefactExist(string fullArtefactName, CommandPlacement commandPlacement)
         {
             return DoArtefactsExist(new List<string> { fullArtefactName }, commandPlacement);
         }
