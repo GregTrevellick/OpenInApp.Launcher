@@ -27,7 +27,7 @@ namespace OpenInApp.Command
             switch (box)
             {
                 case DialogResult.Yes:
-                    var resultAndNamePicked = CommonFileHelper.BrowseToFileLocation(executableFileToBrowseFor);
+                    var resultAndNamePicked = BrowseFileHelper.BrowseToFileLocation(executableFileToBrowseFor);
                     if (resultAndNamePicked.DialogResult == DialogResult.OK)
                     {
                         SetSaveSettingsDto(saveSettingsDto, resultAndNamePicked.FileNameChosen);
