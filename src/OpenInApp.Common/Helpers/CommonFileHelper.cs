@@ -14,8 +14,6 @@ namespace OpenInApp.Common.Helpers
     /// </summary>
     public class CommonFileHelper
     {
-        private static IList<string> artefactNamesToBeOpened = new List<string>();//gregtt unused ???
-
         /// <summary>
         /// Prompts the user to browses for a file on disc and returns details.
         /// </summary>
@@ -164,7 +162,7 @@ namespace OpenInApp.Common.Helpers
 
             foreach (var fileInFolderFullPathName in filesInFolderFullPathNames)
             {
-                var isTypicalFileExtension = AreTypicalFileExtensions(new List<string> { fileInFolderFullPathName }, typicalFileExtensionAsList);
+                var isTypicalFileExtension = CsvHelper.AreTypicalFileExtensions(new List<string> { fileInFolderFullPathName }, typicalFileExtensionAsList);
                 if (isTypicalFileExtension)
                 {
                     fileFullPathNamesOfCorrectSuffix.Add(fileInFolderFullPathName);
@@ -186,50 +184,6 @@ namespace OpenInApp.Common.Helpers
             return result;
         }
 
-        private static IEnumerable<string> AddArtefactsToList(DTE2 dte)//gregtt never used ???
-        {
-            var selectedItems = dte.SelectedItems;
-
-            var result = new List<string>();
-
-            foreach (SelectedItem selectedItem in selectedItems)
-            {
-                result.Add(GetFolderSelectedFullPath(selectedItem));
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        /// Checks if a file extension(s) is a typical file extension for the app, as defined in Tools | Options.
-        /// </summary>
-        /// <param name="fullFileNames">The full file names.</param>
-        /// <param name="typicalFileExtensions">The typical file extensions.</param>
-        /// <returns></returns>
-        public static bool AreTypicalFileExtensions(IEnumerable<string> fullFileNames, IEnumerable<string> typicalFileExtensions)
-        {
-            var result = false;
-
-            if (typicalFileExtensions.First() == "*")
-            {
-                result = true;
-            }
-            else
-            {
-                var fileTypeExtensions = GetFileTypeExtensions(fullFileNames);
-
-                foreach (var fileTypeExtension in fileTypeExtensions)
-                {
-                    if (!string.IsNullOrEmpty(fileTypeExtension))
-                    {
-                        result = typicalFileExtensions.Contains(fileTypeExtension.TrimStart('.'), StringComparer.CurrentCultureIgnoreCase);
-                    }
-                }
-            }
-
-            return result;
-        }
-
         /// <summary>
         /// Gets a collection of file type extensions, from a collection of file names.
         /// </summary>
@@ -242,27 +196,6 @@ namespace OpenInApp.Common.Helpers
             foreach (var fullFileName in fullFileNames)
             {
                 result.Add(Path.GetExtension(fullFileName));
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        /// Gets the name of the first physically non-existant file, from a collection of file names.
-        /// </summary>
-        /// <param name="fullFileNames">The full file names.</param>
-        /// <returns></returns>
-        public static string GetMissingFileName(IEnumerable<string> fullFileNames)
-        {
-            var result = string.Empty;
-
-            foreach (var fullFileName in fullFileNames)
-            {
-                if (!File.Exists(fullFileName))
-                {
-                    result = fullFileName;
-                    break;
-                }
             }
 
             return result;
@@ -342,5 +275,19 @@ namespace OpenInApp.Common.Helpers
 
             return result;
         }
+
+
+        //private static IList<string> artefactNamesToBeOpened = new List<string>();//gregtt unused ???
+
+        //private static IEnumerable<string> AddArtefactsToList(DTE2 dte)//gregtt never used ???
+        //{
+        //    var selectedItems = dte.SelectedItems;
+        //    var result = new List<string>();
+        //    foreach (SelectedItem selectedItem in selectedItems)
+        //    {
+        //        result.Add(GetFolderSelectedFullPath(selectedItem));
+        //    }
+        //    return result;
+        //}
     }
 }

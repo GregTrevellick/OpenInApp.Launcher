@@ -4,6 +4,7 @@ using OpenInApp.Common.Helpers;
 using OpenInApp.Common.Helpers.Dtos;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace OpenInApp.Command
@@ -17,7 +18,7 @@ namespace OpenInApp.Command
 
             try
             {
-                var actualPathToExeExists = CommonFileHelper.DoesActualPathToExeExist(dto.ActualPathToExe);
+                var actualPathToExeExists = AllAppsHelper.DoesActualPathToExeExist(dto.ActualPathToExe);
 
                 bool proceedToExecute = true;
                 if (!actualPathToExeExists)
@@ -27,7 +28,7 @@ namespace OpenInApp.Command
                     var badFilePath = string.IsNullOrEmpty(dto.ActualPathToExe) ? dto.ExecutableFileToBrowseFor : dto.ActualPathToExe;
                     persistOptionsDto = fileHelper.PromptForActualExeFile(badFilePath);
 
-                    var newActualPathToExeExists = CommonFileHelper.DoesActualPathToExeExist(dto.ActualPathToExe);
+                    var newActualPathToExeExists = AllAppsHelper.DoesActualPathToExeExist(dto.ActualPathToExe);
                     if (newActualPathToExeExists)
                     {
                         proceedToExecute = true;
@@ -46,7 +47,7 @@ namespace OpenInApp.Command
 
                     if (!actualArtefactsToBeOpenedExist)
                     {
-                        var missingFileName = CommonFileHelper.GetMissingFileName(actualArtefactsToBeOpened);
+                        var missingFileName = GetMissingFileName(actualArtefactsToBeOpened);
                         OpenInAppHelper.InformUserMissingFile(dto.Caption, missingFileName);
                     }
                     else
@@ -67,7 +68,7 @@ namespace OpenInApp.Command
                             if (proceedToExecute)
                             {
                                 var typicalFileExtensionAsList = CsvHelper.GetTypicalFileExtensionAsList(dto.TypicalFileExtensions);
-                                var areTypicalFileExtensions = CommonFileHelper.AreTypicalFileExtensions(actualArtefactsToBeOpened, typicalFileExtensionAsList);
+                                var areTypicalFileExtensions = CsvHelper.AreTypicalFileExtensions(actualArtefactsToBeOpened, typicalFileExtensionAsList);
                                 if (!areTypicalFileExtensions)
                                 {
                                     if (dto.SuppressTypicalFileExtensionsWarning)
@@ -120,6 +121,27 @@ namespace OpenInApp.Command
             }
 
             return CommonFileHelper.DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);
+        }
+
+        /// <summary>
+        /// Gets the name of the first physically non-existant file, from a collection of file names.
+        /// </summary>
+        /// <param name="fullFileNames">The full file names.</param>
+        /// <returns></returns>
+        private static string GetMissingFileName(IEnumerable<string> fullFileNames)
+        {
+            var result = string.Empty;
+
+            foreach (var fullFileName in fullFileNames)
+            {
+                if (!File.Exists(fullFileName))
+                {
+                    result = fullFileName;
+                    break;
+                }
+            }
+
+            return result;
         }
     }
 }
