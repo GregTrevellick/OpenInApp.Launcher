@@ -58,7 +58,7 @@ namespace OpenInApp.Common.Helpers
 
             foreach (SelectedItem selectedItem in selectedItems)
             {
-                result.Add(GetFolderSelectedFullPath(selectedItem));
+                result.Add(SelectedItemHelper.GetFolderSelectedFullPath(selectedItem));
             }
 
             return result;
@@ -92,7 +92,7 @@ namespace OpenInApp.Common.Helpers
 
             foreach (SelectedItem selectedItem in dte.SelectedItems)
             {
-                var folderFullPath = GetFolderSelectedFullPath(selectedItem);
+                var folderFullPath = SelectedItemHelper.GetFolderSelectedFullPath(selectedItem);
                 var filePathsOfCorrectSuffix = GetFileFullPathNamesOfCorrectSuffixInFolder(folderFullPath, typicalFileExtensions).ToList();
                 fileFullPathNamesOfCorrectSuffix.AddRange(filePathsOfCorrectSuffix);
             }
@@ -113,12 +113,7 @@ namespace OpenInApp.Common.Helpers
 
             return projectFolderFullPaths;
         }
-
-        private static string GetFolderSelectedFullPath(SelectedItem selectedItem)
-        {
-            return selectedItem.ProjectItem.FileNames[0];
-        }
-
+      
         private static IEnumerable<string> GetFileFullPathNamesOfCorrectSuffixInFolder(string folderSelectedFullPath, string typicalFileExtensions)//gregtt unit test required
         {
             var fileFullPathNamesOfCorrectSuffix = new List<string>();
