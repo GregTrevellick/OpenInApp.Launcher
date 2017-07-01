@@ -146,7 +146,7 @@ namespace OpenInApp.Common.Helpers
             return result;
         }
 
-        private static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement)
+        private static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement, IArtefactsHelper artefactsHelper)
         {
             ArtefactTypeToOpen artefactTypeToOpen;
 
@@ -162,8 +162,8 @@ namespace OpenInApp.Common.Helpers
                     artefactTypeToOpen = ArtefactTypeToOpen.File;
                     break;
             }
-
-            return ArtefactsHelper.DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);
+            
+            return artefactsHelper.DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Text;
 
 namespace OpenInApp.Common.Helpers
 {
-    public class AllAppsHelper
+    public static class AllAppsHelper
     {
         /// <summary>
         /// Checks if a specified artefact exists on disc.

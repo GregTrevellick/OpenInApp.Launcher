@@ -4,7 +4,7 @@ using System.IO;
 
 namespace OpenInApp.Common.Helpers
 {
-    public class ArtefactsHelper
+    public static class ArtefactsHelper //: IArtefactsHelper
     {
         /// <summary>
         /// Checks if all specified artefacts exists on disc.
