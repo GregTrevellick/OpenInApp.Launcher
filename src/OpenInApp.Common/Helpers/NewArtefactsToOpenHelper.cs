@@ -9,21 +9,26 @@ namespace OpenInApp.Common.Helpers
     {
         public static ArtefactsToBeOpened GetArtefactsToBeOpened(DTE2 dte, IEnumerable<string> allowedFileExtensions, CommandPlacement commandPlacement,  ArtefactTypeToOpen artefactTypeToOpen)
         {
-            var result = new ArtefactsToBeOpened();
+            var result = new ArtefactsToBeOpened
+            {
+                FilesToBeOpened = new List<string>(),
+                FoldersToBeOpened = new List<string>()
+            };
 
             switch (commandPlacement)
             {
                 case CommandPlacement.IDM_VS_CTXT_CODEWIN:
-                    result.FilesToBeOpened = GetActiveDocumentArtefactName(dte);
+                    var fileName = GetActiveDocumentArtefactName(dte);
+                    result.FilesToBeOpened.Add(fileName);
                     break;
                 case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
-                    //do stuuf
+                    //do stuff
                     break;
                 case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
                     result.FilesToBeOpened = GetSelectedItemsArtefactNames(dte);
                     break;
                 case CommandPlacement.IDM_VS_CTXT_PROJNODE:
-                    //do stuuf
+                    //do stuff
                     break;
                 default:
                     // ignore ? log as a failed save (to the output window) ? gregtt
@@ -40,7 +45,7 @@ namespace OpenInApp.Common.Helpers
             return dte.ActiveDocument.FullName;
         }
 
-        private static IEnumerable<string> GetSelectedItemsArtefactNames(DTE2 dte)
+        private static IList<string> GetSelectedItemsArtefactNames(DTE2 dte)
         {
             var result = new List<string>();
             foreach (SelectedItem selectedItem in dte.SelectedItems)

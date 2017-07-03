@@ -4,7 +4,7 @@ namespace OpenInApp.Common.Helpers.Dtos
 {
     public class ArtefactsToBeOpened 
     {
-        public IEnumerable<string> FilesToBeOpened { get; set; }
-        public IEnumerable<string> FoldersToBeOpened { get; set; }
+        public IList<string> FilesToBeOpened { get; set; }
+        public IList<string> FoldersToBeOpened { get; set; }
     }
 }
