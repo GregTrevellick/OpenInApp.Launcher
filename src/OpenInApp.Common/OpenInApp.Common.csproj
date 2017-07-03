@@ -88,7 +88,6 @@
     <Compile Include="Helpers\Dtos\ArtefactTypeToOpen.cs" />
     <Compile Include="Helpers\Dtos\CommandPlacement.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />
-    <Compile Include="Helpers\zIArtefactsHelper.cs" />
     <Compile Include="Helpers\KeyToExecutable.cs" />
     <Compile Include="Helpers\Dtos\ApplicationToOpenDto.cs" />
     <Compile Include="Helpers\Dtos\InitialFolderType.cs" />
