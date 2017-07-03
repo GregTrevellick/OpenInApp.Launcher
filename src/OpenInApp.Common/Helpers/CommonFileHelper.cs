@@ -146,24 +146,24 @@ namespace OpenInApp.Common.Helpers
             return result;
         }
 
-        private static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement, IArtefactsHelper artefactsHelper)
-        {
-            ArtefactTypeToOpen artefactTypeToOpen;
+        //private static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement)
+        //{
+        //    ArtefactTypeToOpen artefactTypeToOpen;
 
-            switch (commandPlacement)
-            {
-                case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
-                case CommandPlacement.IDM_VS_CTXT_PROJNODE:
-                    artefactTypeToOpen = ArtefactTypeToOpen.Folder;
-                    break;
-                case CommandPlacement.IDM_VS_CTXT_CODEWIN:
-                case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
-                default:
-                    artefactTypeToOpen = ArtefactTypeToOpen.File;
-                    break;
-            }
+        //    switch (commandPlacement)
+        //    {
+        //        case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
+        //        case CommandPlacement.IDM_VS_CTXT_PROJNODE:
+        //            artefactTypeToOpen = ArtefactTypeToOpen.Folder;
+        //            break;
+        //        case CommandPlacement.IDM_VS_CTXT_CODEWIN:
+        //        case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
+        //        default:
+        //            artefactTypeToOpen = ArtefactTypeToOpen.File;
+        //            break;
+        //    }
             
-            return artefactsHelper.DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);
-        }
+        //    return ArtefactsHelper.DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);
+        //}
     }
 }
