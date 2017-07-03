@@ -54,9 +54,9 @@ namespace OpenInApp.Common.Helpers
         {
             var result = new List<string>();
 
-            var selectedItems = dte.SelectedItems;
+            //////////////////////////////////////////////var selectedItems = dte.SelectedItems;
 
-            foreach (SelectedItem selectedItem in selectedItems)
+            foreach (SelectedItem selectedItem in dte.SelectedItems)
             {
                 result.Add(SelectedItemHelper.GetFolderSelectedFullPath(selectedItem));
             }

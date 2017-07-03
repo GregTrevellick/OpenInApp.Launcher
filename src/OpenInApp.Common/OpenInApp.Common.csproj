@@ -82,8 +82,11 @@
     <Compile Include="Helpers\AllAppsHelper.cs" />
     <Compile Include="Helpers\ApplicationToOpenHelper.cs" />
     <Compile Include="Helpers\ArtefactsHelper.cs" />
+    <Compile Include="Helpers\ArtefactsToOpenHelper.cs" />
+    <Compile Include="Helpers\BehaviourHelper.cs" />
     <Compile Include="Helpers\BrowseFileHelper.cs" />
     <Compile Include="Helpers\CsvHelper.cs" />
+    <Compile Include="Helpers\Dtos\ArtefactsToBeOpened.cs" />
     <Compile Include="Helpers\Dtos\VersionNumberRangeDto.cs" />
     <Compile Include="Helpers\Dtos\ArtefactTypeToOpen.cs" />
     <Compile Include="Helpers\Dtos\CommandPlacement.cs" />
