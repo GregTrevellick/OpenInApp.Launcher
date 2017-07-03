@@ -14,13 +14,13 @@ namespace OpenInApp.Common.Helpers
             switch (commandPlacement)
             {
                 case CommandPlacement.IDM_VS_CTXT_CODEWIN:
-                    result = GetActiveDocumentArtefactName(dte);
+                    result.FilesToBeOpened = GetActiveDocumentArtefactName(dte);
                     break;
                 case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
                     //do stuuf
                     break;
                 case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
-                    result = GetSelectedItemsArtefactNames(dte);
+                    result.FilesToBeOpened = GetSelectedItemsArtefactNames(dte);
                     break;
                 case CommandPlacement.IDM_VS_CTXT_PROJNODE:
                     //do stuuf
@@ -34,21 +34,19 @@ namespace OpenInApp.Common.Helpers
             return result;
         }
 
-        private static string GetActiveDocumentArtefactName(DTE2 dte)//SetArtefactNamesToBeOpened_CodeWin
+        private static string GetActiveDocumentArtefactName(DTE2 dte)
         {
             //////dte.ActiveDocument.Save();
             return dte.ActiveDocument.FullName;
         }
 
-        private static IEnumerable<string> GetSelectedItemsArtefactNames(DTE2 dte)//SetArtefactNamesToBeOpened_ItemNode
+        private static IEnumerable<string> GetSelectedItemsArtefactNames(DTE2 dte)
         {
             var result = new List<string>();
-
             foreach (SelectedItem selectedItem in dte.SelectedItems)
             {
                 result.Add(SelectedItemHelper.GetFolderSelectedFullPath(selectedItem));
             }
-
             return result;
         }
 
