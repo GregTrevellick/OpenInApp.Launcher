@@ -5,13 +5,30 @@ using System.Collections.Generic;
 
 namespace OpenInApp.Common.Helpers
 {
-    public class ArtefactsToOpenHelper
+    public class NewArtefactsToOpenHelper
     {
         public static ArtefactsToBeOpened GetArtefactsToBeOpened(DTE2 dte, IEnumerable<string> allowedFileExtensions, CommandPlacement commandPlacement,  ArtefactTypeToOpen artefactTypeToOpen)
         {
             var result = new ArtefactsToBeOpened();
 
-            //do stuff
+            switch (commandPlacement)
+            {
+                case CommandPlacement.IDM_VS_CTXT_CODEWIN:
+                    result = GetActiveDocumentArtefactName(dte);
+                    break;
+                case CommandPlacement.IDM_VS_CTXT_FOLDERNODE:
+                    //do stuuf
+                    break;
+                case CommandPlacement.IDM_VS_CTXT_ITEMNODE:
+                    result = GetSelectedItemsArtefactNames(dte);
+                    break;
+                case CommandPlacement.IDM_VS_CTXT_PROJNODE:
+                    //do stuuf
+                    break;
+                default:
+                    // ignore ? log as a failed save (to the output window) ? gregtt
+                    break;
+            }
 
             RemoveAnyFilesOfIncorrectType(result.FilesToBeOpened, allowedFileExtensions);
             return result;
