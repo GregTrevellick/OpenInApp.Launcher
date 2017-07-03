@@ -41,13 +41,18 @@ namespace OpenInApp.Command
                 }
                 if (proceedToExecute)
                 {
-                    var actualArtefactsToBeOpened = CommonFileHelper.GetArtefactNamesToBeOpened(dte, dto.CommandPlacement, dto.TypicalFileExtensions, dto.KeyToExecutableEnum);
+                    var actualArtefactsToBeOpened = NewArtefactsToOpenHelper.GetArtefactsToBeOpened(dte, dto.TypicalFileExtensions, dto.CommandPlacement, dto.KeyToExecutableEnum);
 
-                    var actualArtefactsToBeOpenedExist = DoArtefactsExist(actualArtefactsToBeOpened, dto.CommandPlacement, dto.ArtefactTypeToOpen);
+                    var actualArtefactsToBeOpenedExistFiles = DoArtefactsExist(actualArtefactsToBeOpened.FilesToBeOpened, dto.CommandPlacement, ArtefactTypeToOpen.File);
+                    var actualArtefactsToBeOpenedExistFolders = DoArtefactsExist(actualArtefactsToBeOpened.FoldersToBeOpened, dto.CommandPlacement, ArtefactTypeToOpen.Folder);
 
-                    if (!actualArtefactsToBeOpenedExist)
+                    if (!actualArtefactsToBeOpenedExistFiles || !actualArtefactsToBeOpenedExistFolders)
                     {
-                        var missingFileName = GetMissingFileName(actualArtefactsToBeOpened);
+                        var missingFileName = GetMissingFileName(actualArtefactsToBeOpened.FilesToBeOpened);
+                        if (string.IsNullOrEmpty(missingFileName))
+                        {
+                            missingFileName = GetMissingFileName(actualArtefactsToBeOpened.FoldersToBeOpened);
+                        }
                         OpenInAppHelper.InformUserMissingFile(dto.Caption, missingFileName);
                     }
                     else
@@ -57,7 +62,8 @@ namespace OpenInApp.Command
                         if (isInt)
                         {
                             proceedToExecute = false;
-                            if (actualArtefactsToBeOpened.Count() > fileQuantityWarningLimitInt)
+                            var actualArtefactsToBeOpenedCount = actualArtefactsToBeOpened.FilesToBeOpened.Count + actualArtefactsToBeOpened.FoldersToBeOpened.Count;
+                            if (actualArtefactsToBeOpenedCount > fileQuantityWarningLimitInt)
                             {
                                 proceedToExecute = OpenInAppHelper.ConfirmProceedToExecute(dto.Caption, CommonConstants.ConfirmOpenFileQuantityExceedsWarningLimit);
                             }
@@ -68,7 +74,7 @@ namespace OpenInApp.Command
                             if (proceedToExecute)
                             {
                                 var typicalFileExtensionAsList = CsvHelper.GetTypicalFileExtensionAsList(dto.TypicalFileExtensions);
-                                var areTypicalFileExtensions = CsvHelper.AreTypicalFileExtensions(actualArtefactsToBeOpened, typicalFileExtensionAsList);
+                                var areTypicalFileExtensions = CsvHelper.AreTypicalFileExtensions(actualArtefactsToBeOpened.FilesToBeOpened, typicalFileExtensionAsList);
                                 if (!areTypicalFileExtensions)
                                 {
                                     if (dto.SuppressTypicalFileExtensionsWarning)
@@ -82,7 +88,20 @@ namespace OpenInApp.Command
                                 }
                                 if (proceedToExecute)
                                 {
-                                    OpenInAppHelper.InvokeCommand(actualArtefactsToBeOpened, 
+                                    var actualArtefacts = new List<string>();
+                                    if (actualArtefactsToBeOpened.FilesToBeOpened != null && actualArtefactsToBeOpened.FilesToBeOpened.Any())
+                                    {
+                                        actualArtefacts = actualArtefactsToBeOpened.FilesToBeOpened.ToList();
+                                    }
+                                    else
+                                    {
+                                        if (actualArtefactsToBeOpened.FoldersToBeOpened != null && actualArtefactsToBeOpened.FoldersToBeOpened.Any())
+                                        {
+                                            actualArtefacts = actualArtefactsToBeOpened.FoldersToBeOpened.ToList();
+                                        }
+                                    }
+
+                                    OpenInAppHelper.InvokeCommand(actualArtefacts, 
                                         dto.ActualPathToExe, 
                                         dto.SeparateProcessPerFileToBeOpened, 
                                         dto.UseShellExecute,
@@ -109,9 +128,7 @@ namespace OpenInApp.Command
 
         private static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement, ArtefactTypeToOpen artefactTypeToOpen)
         {
-            if ((commandPlacement == CommandPlacement.IDM_VS_CTXT_FOLDERNODE ||
-                 commandPlacement == CommandPlacement.IDM_VS_CTXT_PROJNODE) &&
-                artefactTypeToOpen == ArtefactTypeToOpen.Folder)
+            if (artefactTypeToOpen == ArtefactTypeToOpen.Folder)
             {
                 artefactTypeToOpen = ArtefactTypeToOpen.Folder;
             }
@@ -120,7 +137,6 @@ namespace OpenInApp.Command
                 artefactTypeToOpen = ArtefactTypeToOpen.File;
             }
 
-           /////////////////////////////////// var artefactsHelper = new ArtefactsHelper();
             return ArtefactsHelper.DoArtefactsExist(fullArtefactNames, artefactTypeToOpen);
         }
 

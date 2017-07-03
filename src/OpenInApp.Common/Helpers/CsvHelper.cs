@@ -27,7 +27,9 @@ namespace OpenInApp.Common.Helpers
         {
             var result = false;
 
-            if (typicalFileExtensions.First() == "*")
+            if (typicalFileExtensions.First() == "*" ||
+                fullFileNames == null ||
+                fullFileNames.Count() == 0)
             {
                 result = true;
             }

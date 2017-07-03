@@ -15,12 +15,12 @@ namespace OpenInApp.Common.Helpers
         /// <summary>
         /// Invokes the specified executable file, passing the file(s) to be opened as arguments.
         /// </summary>
-        /// <param name="actualFilesToBeOpened">The actual files to be opened.</param>
+        /// <param name="actualArtefactsToBeOpened">The actual files to be opened.</param>
         /// <param name="executableFullPath">The full path to the executable.</param>
         /// <param name="separateProcessPerFileToBeOpened">Whether or not to start a single process or multiple processes for the actual files to be opened.</param> 
         /// <param name="useShellExecute">Whether or not to use shell execution or execute via operating system.</param>
         public static void InvokeCommand(
-            IEnumerable<string> actualFilesToBeOpened, 
+            IEnumerable<string> actualArtefactsToBeOpened, 
             string executableFullPath, 
             bool separateProcessPerFileToBeOpened, 
             bool useShellExecute,
@@ -41,39 +41,21 @@ namespace OpenInApp.Common.Helpers
 
             if (separateProcessPerFileToBeOpened)
             {
-                foreach (var actualFileToBeOpened in actualFilesToBeOpened)
+                foreach (var actualArtefactToBeOpened in actualArtefactsToBeOpened)
                 {
-                    var actualArtefactToBeOpened = GetActualArtefactToBeOpened(artefactTypeToOpen, actualFileToBeOpened);
-                    var argument = GetSingleArgument(actualArtefactToBeOpened);
+                    var argument = GetSingleArgument(actualArtefactToBeOpened);/////////////////// (artefactToBeOpened);
                     InvokeProcess(argument, fileName, useShellExecute, workingDirectory);
                 }
             }
             else
             {
                 var arguments = " ";
-                foreach (var actualFileToBeOpened in actualFilesToBeOpened)
+                foreach (var actualArtefactToBeOpened in actualArtefactsToBeOpened)
                 {
-                    var actualArtefactToBeOpened = GetActualArtefactToBeOpened(artefactTypeToOpen, actualFileToBeOpened);
-                    arguments += GetSingleArgument(actualArtefactToBeOpened);
+                    arguments += GetSingleArgument(actualArtefactToBeOpened);///////////////////// (actualFileToBeOpened);
                 }
                 InvokeProcess(arguments, fileName, useShellExecute, workingDirectory);
             }
-        }
-
-        private static string GetActualArtefactToBeOpened(ArtefactTypeToOpen artefactTypeToOpen, string actualArtefactToBeOpened)
-        {
-            var result = actualArtefactToBeOpened;
-
-            if (artefactTypeToOpen == ArtefactTypeToOpen.Folder)
-            {
-                var fileName = Path.GetFileName(actualArtefactToBeOpened);
-                if (!string.IsNullOrEmpty(fileName))
-                {
-                    result = result.Replace(fileName, string.Empty);
-                }
-            }
-
-            return result;
         }
 
         private static string GetSingleArgument(string argument)

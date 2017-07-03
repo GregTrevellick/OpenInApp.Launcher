@@ -5,6 +5,11 @@ namespace OpenInApp.Common.Helpers
 {
     public class ApplicationToOpenHelper
     {
+        public bool? GetOpenIndividualFilesInFolderRatherThanFolderItself(KeyToExecutableEnum keyToExecutableEnum)
+        {
+            return GetApplicationToOpenDto(keyToExecutableEnum).OpenIndividualFilesInFolderRatherThanFolderItself;
+        }
+
         public ApplicationToOpenDto GetApplicationToOpenDto(KeyToExecutableEnum keyToExecutableEnum)
         {
             var applicationToOpenDto = new ApplicationToOpenDto
