@@ -97,7 +97,7 @@
     <Compile Include="Helpers\Dtos\InitialFolderType.cs" />
     <Compile Include="Helpers\Dtos\FileBrowseOutcomeDto.cs" />
     <Compile Include="Helpers\OpenInAppHelper.cs" />
-    <Compile Include="Helpers\CommonFileHelper.cs" />
+    <Compile Include="Helpers\zCommonFileHelper.cs" />
     <Compile Include="Helpers\CommonConstants.cs" />
     <Compile Include="Helpers\GeneralOptionsHelper.cs" />
     <Compile Include="Helpers\SelectedItemHelper.cs" />
