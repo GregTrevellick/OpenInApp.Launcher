@@ -19,7 +19,6 @@ namespace OpenInApp.Common.Helpers
         public const string OperaDeveloperEdition = "launcher.exe";
         public const string PaintDotNet = "PaintDotNet.exe";
         public const string SQLServerManagementStudio = "ssms.exe";
-        //gregtt                                        "ssmsee.exe";
         public const string TreeSizeFree = "TreeSizeFree.exe";
         public const string TreeSizeProfessional = "TreeSize.exe";
         public const string Vivaldi = "vivaldi.exe";
@@ -69,7 +68,6 @@ namespace OpenInApp.Common.Helpers
         PaintDotNet,
 
         [Description("ssms.exe")]
-        //gregt      "ssmsee.exe"
         SQLServerManagementStudio,
 
         [Description("TreeSizeFree.exe")]

@@ -113,6 +113,12 @@ namespace OpenInApp.Common.Helpers
                 result.Add(path);
             }
 
+            if (keyToExecutableEnum == KeyToExecutableEnum.Opera)
+            {
+                var additionalPaths = GetSsmsAdditionalPaths("launcher.exe", initialFolderType);
+                result.AddRange(additionalPaths);
+            }
+
             if (keyToExecutableEnum == KeyToExecutableEnum.SQLServerManagementStudio)
             {
                 var additionalPaths = GetSsmsAdditionalPaths("ssms.exe", initialFolderType);
@@ -120,7 +126,7 @@ namespace OpenInApp.Common.Helpers
                 additionalPaths = GetSsmsAdditionalPaths("ssmsee.exe", initialFolderType);
                 result.AddRange(additionalPaths);
                 additionalPaths = GetSsmsAdditionalPaths("SqlWb.exe", initialFolderType);
-                result.AddRange(additionalPaths);  
+                result.AddRange(additionalPaths);
             }
 
             return result;
