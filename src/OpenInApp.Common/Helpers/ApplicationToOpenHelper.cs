@@ -197,7 +197,8 @@ namespace OpenInApp.Common.Helpers
                     applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
                     break;
                 case KeyToExecutableEnum.Opera:
-                    applicationToOpenDto.SecondaryFilePathSegment = @"Opera";
+                    applicationToOpenDto.InitialFolderType = InitialFolderType.LocalApplicationData;
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Programs\Opera";
                     break;
                 case KeyToExecutableEnum.OperaDeveloperEdition:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Opera developer";

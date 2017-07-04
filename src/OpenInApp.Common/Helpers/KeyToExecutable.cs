@@ -15,7 +15,7 @@ namespace OpenInApp.Common.Helpers
         public const string Gimp = "gimp-2.8.exe";
         public const string MarkdownMonster = "MarkdownMonster.exe";
         public const string MSPaint = "mspaint.exe";
-        public const string Opera = "opera.exe";
+        public const string Opera = "launcher.exe";
         public const string OperaDeveloperEdition = "launcher.exe";
         public const string PaintDotNet = "PaintDotNet.exe";
         public const string SQLServerManagementStudio = "ssms.exe";
@@ -58,7 +58,7 @@ namespace OpenInApp.Common.Helpers
         [Description("mspaint.exe")]
         MSPaint,
         
-        [Description("opera.exe")]
+        [Description("launcher.exe")]
         Opera,
         
         [Description("launcher.exe")]
