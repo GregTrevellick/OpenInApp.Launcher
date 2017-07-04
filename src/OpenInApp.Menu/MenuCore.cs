@@ -178,14 +178,7 @@ namespace OpenInApp.Menu
 
             var keyToExecutableEnum = _keyToExecutableEnum;
             
-            //var actualPathToExe2 = GeneralOptionsHelper.GetActualPathToExe(keyToExecutableEnum);
-
             var applicationToOpenDto = new ApplicationToOpenHelper().GetApplicationToOpenDto(keyToExecutableEnum);
-
-            //if (!string.IsNullOrEmpty(actualPathToExe2))
-            //{
-                //overwrite applicationToOpenDto._actualPathToExe with actualPathToExe2
-            //}
 
             var invokeCommandCallBackDto = GetInvokeCommandCallBackDto(
                 _actualPathToExe,
