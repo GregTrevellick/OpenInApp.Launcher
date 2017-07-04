@@ -61,13 +61,6 @@ namespace OpenInApp.Common.Helpers
             var pathPrimary = GetPath(applicationToOpenDto.ExecutableFileToBrowseFor, applicationToOpenDto.InitialFolderType, applicationToOpenDto.SecondaryFilePathSegment);
             searchPaths.Add(pathPrimary);
 
-            ////gregtt needs more testing
-            //if (keyToExecutableEnum == KeyToExecutableEnum.Opera)
-            //{
-            //    var additionalExePath = GetPath("Launcher.exe", applicationToOpenDto.InitialFolderType, applicationToOpenDto.SecondaryFilePathSegment); ///////////////GetAdditionalExePath("launcher.exe", initialFolderType);
-            //    searchPaths.Add(additionalExePath);
-            //}
-
             if (applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions)
             {
                 var paths = GetMultipleVersionPaths(applicationToOpenDto.ExecutableFileToBrowseFor, applicationToOpenDto.InitialFolderType, applicationToOpenDto.SecondaryFilePathSegment, keyToExecutableEnum);
