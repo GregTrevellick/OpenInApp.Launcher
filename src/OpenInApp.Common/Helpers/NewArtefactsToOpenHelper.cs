@@ -158,7 +158,11 @@ namespace OpenInApp.Common.Helpers
             bool itemsNotFolder = true;
             var applicationToOpenHelper = new ApplicationToOpenHelper();
             var openIndividualFilesInFolderRatherThanFolderItself = applicationToOpenHelper.GetOpenIndividualFilesInFolderRatherThanFolderItself(keyToExecutableEnum);
-            itemsNotFolder = openIndividualFilesInFolderRatherThanFolderItself.HasValue && openIndividualFilesInFolderRatherThanFolderItself.Value;
+            itemsNotFolder = 
+                (
+                    (!openIndividualFilesInFolderRatherThanFolderItself.HasValue) ||
+                    (openIndividualFilesInFolderRatherThanFolderItself.HasValue && openIndividualFilesInFolderRatherThanFolderItself.Value)
+                );
             return itemsNotFolder;
         }
 
