@@ -10,7 +10,7 @@ namespace OpenInApp.Command
         public ArtefactTypeToOpen ArtefactTypeToOpen { get; set; }
         public string Caption { get; set; }
         public CommandPlacement CommandPlacement { get; set; }
-        public string ExecutableFileToBrowseFor { get; set; } 
+        public string ExecutableFileToBrowseFor { get; set; } //gregtt is this now dead ???
         public string FileQuantityWarningLimit { get; set; }
         public KeyToExecutableEnum KeyToExecutableEnum { get; set; }
         public bool SeparateProcessPerFileToBeOpened { get; set; }
