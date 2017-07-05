@@ -84,7 +84,7 @@
     <Compile Include="Helpers\ArtefactsHelper.cs" />
     <Compile Include="Helpers\Dtos\BehaviourType.cs" />
     <Compile Include="Helpers\NewArtefactsToOpenHelper.cs" />
-    <Compile Include="Helpers\NewBehaviourHelper.cs" />
+    <Compile Include="Helpers\zNewBehaviourHelper.cs" />
     <Compile Include="Helpers\BrowseFileHelper.cs" />
     <Compile Include="Helpers\CsvHelper.cs" />
     <Compile Include="Helpers\Dtos\ArtefactsToBeOpened.cs" />
@@ -100,7 +100,7 @@
     <Compile Include="Helpers\zCommonFileHelper.cs" />
     <Compile Include="Helpers\CommonConstants.cs" />
     <Compile Include="Helpers\GeneralOptionsHelper.cs" />
-    <Compile Include="Helpers\SelectedItemHelper.cs" />
+    <Compile Include="Helpers\zSelectedItemHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
