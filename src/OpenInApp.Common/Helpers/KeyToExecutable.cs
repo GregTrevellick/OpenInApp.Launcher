@@ -3,7 +3,7 @@
 namespace OpenInApp.Common.Helpers
 {
     /// <summary>
-    /// 
+    /// Used for a label in Tools | Options
     /// </summary>
     public static class KeyToExecutableString
     {

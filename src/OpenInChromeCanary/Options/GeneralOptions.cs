@@ -103,6 +103,7 @@ namespace OpenInChromeCanary.Options.ChromeCanary
             }
         }
 
+
         public override void LoadSettingsFromStorage()
         {
             base.LoadSettingsFromStorage();

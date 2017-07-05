@@ -166,7 +166,7 @@ namespace OpenInApp.Common.Helpers
             return itemsNotFolder;
         }
 
-        public static IList<string> RemoveDisallowedSuffixes(IList<string> filesToBeOpened, IEnumerable<string> allowedFileExtensions)
+        private static IList<string> RemoveDisallowedSuffixes(IList<string> filesToBeOpened, IEnumerable<string> allowedFileExtensions)
         {
             var result = filesToBeOpened.ToList();
 

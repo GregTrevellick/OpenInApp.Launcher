@@ -6,8 +6,9 @@ namespace OpenInApp.Common.Helpers.Dtos
     {
         public ArtefactTypeToOpen ArtefactTypeToOpen { get; set; }
         public IEnumerable<string> DefaultTypicalFileExtensions { get; set; }
-        public string ExecutableFileToBrowseFor { get; set; }
-        public InitialFolderType InitialFolderType { get; set; }//gregtt do we always look in \ProgFiles anyway, effectively making this redundant ?
+        /////////////////////////////public string ExecutableFileToBrowseFor { get; set; }//gregtt kill off
+        public IEnumerable<string> ExecutableFilesToBrowseFor { get; set; }
+        /////////////////////////////public InitialFolderType InitialFolderType { get; set; }//gregtt kill off    do we always look in \ProgFiles anyway, effectively making this redundant ?
         public bool? OpenIndividualFilesInFolderRatherThanFolderItself { get; set; }
         public string SecondaryFilePathSegment { get; set; }
         public bool SecondaryFilePathSegmentHasMultipleVersions { get; set; }

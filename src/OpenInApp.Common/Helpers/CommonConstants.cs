@@ -20,7 +20,8 @@ namespace OpenInApp.Common.Helpers
      
         public static string InformUserMissingFile(string missingFileName)
         {
-            return $"The file \"{missingFileName}\" does not exist.";
+            // return $"The file \"{missingFileName}\" does not exist.";
+            return $"The executable file for {missingFileName} does not exist.";
         }
 
         public static string PromptForActualExeFile(string dodgyPathToFile)

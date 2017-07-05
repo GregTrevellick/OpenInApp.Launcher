@@ -25,7 +25,8 @@ namespace OpenInApp.Command
                 {
                     proceedToExecute = false;
                     var fileHelper = new FilePrompterHelper(dto.Caption, dto.ExecutableFileToBrowseFor);
-                    var badFilePath = string.IsNullOrEmpty(dto.ActualPathToExe) ? dto.ExecutableFileToBrowseFor : dto.ActualPathToExe;
+                    ////////var badFilePath = string.IsNullOrEmpty(dto.ActualPathToExe) ? dto.ExecutableFileToBrowseFor : dto.ActualPathToExe;
+                    var badFilePath = dto.KeyToExecutableEnum.ToString();
                     persistOptionsDto = fileHelper.PromptForActualExeFile(badFilePath);
 
                     var newActualPathToExeExists = AllAppsHelper.DoesActualPathToExeExist(dto.ActualPathToExe);
@@ -41,7 +42,7 @@ namespace OpenInApp.Command
                 }
                 if (proceedToExecute)
                 {
-                    var actualArtefactsToBeOpened = NewArtefactsToOpenHelper.GetArtefactsToBeOpened(dte, dto.TypicalFileExtensions, dto.CommandPlacement, dto.KeyToExecutableEnum);
+                    var actualArtefactsToBeOpened = ArtefactsToOpenHelper.GetArtefactsToBeOpened(dte, dto.TypicalFileExtensions, dto.CommandPlacement, dto.KeyToExecutableEnum);
 
                     var actualArtefactsToBeOpenedExistFiles = DoArtefactsExist(actualArtefactsToBeOpened.FilesToBeOpened, dto.CommandPlacement, ArtefactTypeToOpen.File);
                     var actualArtefactsToBeOpenedExistFolders = DoArtefactsExist(actualArtefactsToBeOpened.FoldersToBeOpened, dto.CommandPlacement, ArtefactTypeToOpen.Folder);
