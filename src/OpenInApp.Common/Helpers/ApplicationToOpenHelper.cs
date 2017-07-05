@@ -20,11 +20,6 @@ namespace OpenInApp.Common.Helpers
             return GetApplicationToOpenDto(keyToExecutableEnum).SecondaryFilePathSegmentHasMultipleVersions;
         }
         
-        //////////////public string GetExecutableFileToBrowseFor(KeyToExecutableEnum keyToExecutableEnum)
-        //////////////{
-        //////////////    return GetApplicationToOpenDto(keyToExecutableEnum).ExecutableFileToBrowseFor;
-        //////////////}
-
         public IEnumerable<string> GetExecutableFilesToBrowseFor(KeyToExecutableEnum keyToExecutableEnum)
         {
             return GetApplicationToOpenDto(keyToExecutableEnum).ExecutableFilesToBrowseFor;
@@ -36,7 +31,6 @@ namespace OpenInApp.Common.Helpers
             {
                 ArtefactTypeToOpen = ArtefactTypeToOpen.File,
                 DefaultTypicalFileExtensions = new List<string> { "*" },
-                ///////////////////////////////ExecutableFileToBrowseFor = keyToExecutableEnum.Description(),
                 ExecutableFilesToBrowseFor = new List<string> { keyToExecutableEnum.Description() },
                 ///////////////////////////////InitialFolderType = InitialFolderType.ProgramFilesX86,
                 OpenIndividualFilesInFolderRatherThanFolderItself = null,
@@ -219,7 +213,6 @@ namespace OpenInApp.Common.Helpers
                     break;
                 case KeyToExecutableEnum.Opera:
                     ///////////////////////////////applicationToOpenDto.InitialFolderType = InitialFolderType.LocalApplicationData;
-                    ///////////////////////////////////////////////////////////////////////////////////////////////////applicationToOpenDto.SecondaryFilePathSegment = @"Programs\Opera";
                     applicationToOpenDto.SecondaryFilePathSegment = @"Opera";
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "launcher.exe", "opera.exe" };
                     break;
@@ -265,37 +258,31 @@ namespace OpenInApp.Common.Helpers
                     ///////////////////////////////applicationToOpenDto.InitialFolderType = InitialFolderType.LocalApplicationData;
                     break;
                 case KeyToExecutableEnum.VS2012:
-                    ////////////////////////////////////applicationToOpenDto.ExecutableFileToBrowseFor = "devenv.exe";
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 11.0\Common7\IDE";
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2013:
-                    //////////////////////////////////applicationToOpenDto.ExecutableFileToBrowseFor = "devenv.exe";
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 12.0\Common7\IDE";
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2015:
-                    //////////////////////////////////applicationToOpenDto.ExecutableFileToBrowseFor = "devenv.exe";
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 14.0\Common7\IDE";
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2017Community:
-                    //////////////////////////////////applicationToOpenDto.ExecutableFileToBrowseFor = "devenv.exe";
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Community\Common7\IDE";
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2017Enterprise:
-                    //////////////////////////////////applicationToOpenDto.ExecutableFileToBrowseFor = "devenv.exe";
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Enterprise\Common7\IDE";
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2017Professional:
-                    //////////////////////////////////applicationToOpenDto.ExecutableFileToBrowseFor = "devenv.exe";
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Professional\Common7\IDE";
                     applicationToOpenDto.UseShellExecute = false;

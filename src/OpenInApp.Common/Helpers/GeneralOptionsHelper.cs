@@ -18,7 +18,7 @@ namespace OpenInApp.Common.Helpers
         /// <returns></returns>
         public static string GetActualPathToExe(KeyToExecutableEnum keyToExecutableEnum)
         {
-            var searchPaths = GetSearchPathsForThirdPartyExe(keyToExecutableEnum);////////////////////////////////////////////////var searchPaths = GetSearchPaths(keyToExecutableEnum);
+            var searchPaths = GetSearchPathsForThirdPartyExe(keyToExecutableEnum);
 
             foreach (var searchPath in searchPaths)
             {
@@ -37,7 +37,6 @@ namespace OpenInApp.Common.Helpers
             var actualPathToExeHelper = new ApplicationToOpenHelper();
 
             var secondaryFilePathSegment = actualPathToExeHelper.GetSecondaryFilePathSegment(keyToExecutableEnum);
-            ////////////////////////////////////////////////var executableFileToBrowseFor = actualPathToExeHelper.GetExecutableFileToBrowseFor(keyToExecutableEnum);
             var executableFilesToBrowseFor = actualPathToExeHelper.GetExecutableFilesToBrowseFor(keyToExecutableEnum);
             var secondaryFilePathSegmentHasMultipleVersions = actualPathToExeHelper.GetSecondaryFilePathSegmentHasMultipleVersions(keyToExecutableEnum);
 
@@ -87,7 +86,6 @@ namespace OpenInApp.Common.Helpers
                     }
                 }
 
-                //foreach special folder, merge in the secondaryFilePathSegment (if exists) + 3rd party exe name
                 foreach (var folderPath in initialFolderPaths)
                 {
                     string path;
@@ -106,7 +104,6 @@ namespace OpenInApp.Common.Helpers
             return paths;
         }
 
-        ////////////////////////////////////////internal static IEnumerable<string> GetMultipleVersionPaths(string executableFileToBrowseFor, InitialFolderType initialFolderType, string secondaryFilePathSegment, KeyToExecutableEnum keyToExecutableEnum)//gregtt write unit test for this method
         private static IEnumerable<string> GetMultipleVersionPaths(IEnumerable<string> searchPaths, KeyToExecutableEnum keyToExecutableEnum)
         {
             var searchPathVersions = new List<string>();
@@ -115,9 +112,6 @@ namespace OpenInApp.Common.Helpers
 
             for (int i = dto.StartVersionNumber; i > dto.EndVersionNumber; i = i - dto.DecrementValue)
             {
-                //////////////var segment = secondaryFilePathSegment.Replace("9999", i.ToString());
-                //////////////var path = GetPath(executableFileToBrowseFor, initialFolderType, segment);
-                //////////////result.Add(path);
                 foreach (var searchPath in searchPaths)
                 {
                     var searchPathVersioned = searchPath.Replace("9999", i.ToString());
@@ -125,33 +119,8 @@ namespace OpenInApp.Common.Helpers
                 }
             }
 
-            //////////////////if (keyToExecutableEnum == KeyToExecutableEnum.SQLServerManagementStudio)
-            //////////////////{
-            //////////////////    var additionalPaths = GetSsmsAdditionalPaths("ssms.exe", initialFolderType);
-            //////////////////    result.AddRange(additionalPaths);
-            //////////////////    additionalPaths = GetSsmsAdditionalPaths("ssmsee.exe", initialFolderType);
-            //////////////////    result.AddRange(additionalPaths);
-            //////////////////    additionalPaths = GetSsmsAdditionalPaths("SqlWb.exe", initialFolderType);
-            //////////////////    result.AddRange(additionalPaths);
-            //////////////////}
-
             return searchPathVersions;
         }
-
-        //private static IEnumerable<string> GetSsmsAdditionalPaths(string executableFileToBrowseFor, InitialFolderType initialFolderType)//gregtt write unit test for this method
-        //{
-        //    var secondaryFilePathSegment = @"Microsoft SQL Server\9999\Tools\Binn\VSShell\Common7\IDE";
-        //    var result = new List<string>();
-
-        //    for (int i = 110; i > 20; i = i - 10)
-        //    {
-        //        var segment = secondaryFilePathSegment.Replace("9999", i.ToString());//gregtt dedupe
-        //        var path = GetPath(executableFileToBrowseFor, initialFolderType, segment);
-        //        result.Add(path);
-        //    }
-
-        //    return result;
-        //}
 
         private static string GetPath(string executableFileToBrowseFor, InitialFolderType initialFolderType, string secondaryFilePathSegment)
         {
@@ -216,44 +185,5 @@ namespace OpenInApp.Common.Helpers
             var result = searchPaths.Union(dPaths);
             return result;
         }
-
-        //////////////////////////////private static IEnumerable<string> X86Method(IEnumerable<string> searchPaths)//gregtt unit test this
-        //////////////////////////////{
-        //////////////////////////////    var result = new List<string>();
-
-        //////////////////////////////    var x86 = " (x86)";
-
-        //////////////////////////////    foreach (var path in searchPaths)
-        //////////////////////////////    {
-        //////////////////////////////        result.Add(path);
-        //////////////////////////////        if (path != null && path.Contains(x86))
-        //////////////////////////////        {
-        //////////////////////////////            var pathWithoutx86 = path.Replace(x86, string.Empty);
-        //////////////////////////////            result.Add(pathWithoutx86);
-        //////////////////////////////        }
-        //////////////////////////////    }
-
-        //////////////////////////////    return result;
-        //////////////////////////////}
-
-        //////////////////////////////internal static IEnumerable<string> GetSearchPaths(KeyToExecutableEnum keyToExecutableEnum)
-        //////////////////////////////{
-        //////////////////////////////    var searchPaths = new List<string>();
-        //////////////////////////////    var actualPathToExeHelper = new ApplicationToOpenHelper();
-        //////////////////////////////    var applicationToOpenDto = actualPathToExeHelper.GetApplicationToOpenDto(keyToExecutableEnum);
-        //////////////////////////////    var pathPrimary = GetPath(applicationToOpenDto.ExecutableFileToBrowseFor, applicationToOpenDto.InitialFolderType, applicationToOpenDto.SecondaryFilePathSegment);
-        //////////////////////////////    searchPaths.Add(pathPrimary);
-        //////////////////////////////    if (applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions)
-        //////////////////////////////    {
-        //////////////////////////////        var paths = GetMultipleVersionPaths(applicationToOpenDto.ExecutableFileToBrowseFor, applicationToOpenDto.InitialFolderType, applicationToOpenDto.SecondaryFilePathSegment, keyToExecutableEnum);
-
-        //////////////////////////////        foreach (var path in paths)
-        //////////////////////////////        {
-        //////////////////////////////            searchPaths.Add(path);
-        //////////////////////////////        }
-        //////////////////////////////    }
-        //////////////////////////////    searchPaths = X86Method(searchPaths).ToList();
-        //////////////////////////////    return searchPaths;
-        //////////////////////////////}
     }
 }
