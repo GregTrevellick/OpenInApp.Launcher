@@ -83,7 +83,7 @@
     <Compile Include="Helpers\ApplicationToOpenHelper.cs" />
     <Compile Include="Helpers\ArtefactsHelper.cs" />
     <Compile Include="Helpers\Dtos\BehaviourType.cs" />
-    <Compile Include="Helpers\NewArtefactsToOpenHelper.cs" />
+    <Compile Include="Helpers\ArtefactsToOpenHelper.cs" />
     <Compile Include="Helpers\zNewBehaviourHelper.cs" />
     <Compile Include="Helpers\BrowseFileHelper.cs" />
     <Compile Include="Helpers\CsvHelper.cs" />

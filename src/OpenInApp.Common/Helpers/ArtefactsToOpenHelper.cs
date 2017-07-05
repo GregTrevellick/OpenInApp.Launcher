@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace OpenInApp.Common.Helpers
 {
-    public class NewArtefactsToOpenHelper
+    public class ArtefactsToOpenHelper
     {
         public static ArtefactsToBeOpened GetArtefactsToBeOpened(DTE2 dte, string typicalFileExtensions, CommandPlacement commandPlacement, KeyToExecutableEnum keyToExecutableEnum)
         {
