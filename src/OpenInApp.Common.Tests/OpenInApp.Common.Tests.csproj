@@ -150,6 +150,9 @@
     </Content>
     <Content Include="TestFiles\z.sql" />
     <Content Include="TestFiles\z.xml" />
+    <None Include="_RunCodeCoverageInOutput.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OpenInApp.Common\OpenInApp.Common.csproj">
@@ -158,7 +161,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
