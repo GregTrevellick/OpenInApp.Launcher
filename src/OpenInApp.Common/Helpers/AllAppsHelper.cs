@@ -5,27 +5,17 @@ namespace OpenInApp.Common.Helpers
 {
     public static class AllAppsHelper
     {
-        ///// <summary>
-        ///// Checks if a specified artefact exists on disc.
-        ///// </summary>
-        ///// <param name="fullExecutableFileName">Full name of the artefact.</param>
-        ///// <returns></returns>
-        //public static bool DoesActualPathToExeExist(string fullExecutableFileName)
-        //{
-        //    return ArtefactsHelper.DoArtefactsExist(new List<string> { fullExecutableFileName });
-        //}
-
-        /// <summary>
+         /// <summary>
         /// Gets the typical file extensions as a CSV string.
         /// </summary>
-        /// <param name="defaultExts">The default exts.</param>
+        /// <param name="defaultExtensions">The default exts.</param>
         /// <returns></returns>
-        public static string GetDefaultTypicalFileExtensionsAsCsv(IEnumerable<string> defaultExts)
+        public static string GetDefaultTypicalFileExtensionsAsCsv(IEnumerable<string> defaultExtensions)
         {
             var stringBuilder = new StringBuilder();
-            foreach (var defaultExt in defaultExts)
+            foreach (var defaultExtension in defaultExtensions)
             {
-                stringBuilder.Append(defaultExt).Append(',');
+                stringBuilder.Append(defaultExtension).Append(',');
             }
             return stringBuilder.ToString().TrimEnd(',');
         }
