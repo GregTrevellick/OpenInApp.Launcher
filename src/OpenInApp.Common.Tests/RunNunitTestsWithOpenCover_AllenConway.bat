@@ -30,16 +30,16 @@ exit /b %errorlevel%
 -filter:"+[OpenInApp.Common.Tests]OpenInApp.Common.Tests*" ^
 -mergebyhash ^
 -skipautoprops ^
--output:"%~dp0\GeneratedReports\_CodeCoverageReport.xml"
+-output:"%~dp0\GeneratedReports\CodeCoverageReport.xml"
 exit /b %errorlevel%
  
 :RunReportGeneratorOutput
 "%~dp0..\packages\ReportGenerator.2.5.9\tools\ReportGenerator.exe" ^
--reports:"%~dp0\GeneratedReports\_CodeCoverageReport.xml" ^
--targetdir:"%~dp0\GeneratedReports\ReportGenerator Output"
+-reports:"%~dp0\GeneratedReports\CodeCoverageReport.xml" ^
+-targetdir:"%~dp0\GeneratedReports\ReportGeneratorOutput"
 exit /b %errorlevel%
  
 :RunLaunchReport
-start "report" "%~dp0\GeneratedReports\ReportGenerator Output\index.htm"
+start "report" "%~dp0\GeneratedReports\ReportGeneratorOutput\index.htm"
 exit /b %errorlevel%
 
