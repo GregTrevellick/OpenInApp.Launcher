@@ -25,11 +25,14 @@ if %errorlevel% equ 0 (
 exit /b %errorlevel%
  
 :RunOpenCoverUnitTestMetrics
+REM -filter:"+[BowlingSPAService*]* -[BowlingSPAService.Tests]* -[*]BowlingSPAService.RouteConfig" ^  will add anything in the 'BowlingSPAService' namespace, but also removing code in the 'BowlingSPAService.Tests' namespace 
+REM Use 'mergebyhash' to merge results loaded from multiple assemblies
+REM Use 'skipautoprops' to skip .NET 'AutoProperties' from being analyzed (basic getters and setters don't require unit tests and thus shouldn't be reported on the output)
 "%~dp0..\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe" ^
 -register:user ^
 -target:"..\..\..\packages\NUnit.Runners.2.6.3\tools\nunit-console.exe" ^
 -targetargs:"/nologo \"%~dp0..\OpenInApp.Common.Tests\bin\Debug\OpenInApp.Common.Tests.dll\" /noshadow"  ^
--filter:"+[OpenInApp.Common.Tests]OpenInApp.Common.Tests*" ^
+-filter:"+[OpenInApp.Common*]* -[OpenInApp.Common.Tests]*" ^
 -mergebyhash ^
 -skipautoprops ^
 -excludebyattribute:"System.CodeDom.Compiler.GeneratedCodeAttribute" ^
@@ -45,4 +48,8 @@ exit /b %errorlevel%
 :RunLaunchReport
 start "report" "%~dp0\CodeCoverageReports\ReportGeneratorOutput\index.htm"
 exit /b %errorlevel%
+
+
+
+
 
