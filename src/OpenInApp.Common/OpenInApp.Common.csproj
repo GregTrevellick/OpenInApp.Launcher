@@ -82,9 +82,7 @@
     <Compile Include="Helpers\AllAppsHelper.cs" />
     <Compile Include="Helpers\ApplicationToOpenHelper.cs" />
     <Compile Include="Helpers\ArtefactsHelper.cs" />
-    <Compile Include="Helpers\Dtos\BehaviourType.cs" />
     <Compile Include="Helpers\ArtefactsToOpenHelper.cs" />
-    <Compile Include="Helpers\zNewBehaviourHelper.cs" />
     <Compile Include="Helpers\BrowseFileHelper.cs" />
     <Compile Include="Helpers\CsvHelper.cs" />
     <Compile Include="Helpers\Dtos\ArtefactsToBeOpened.cs" />
@@ -97,10 +95,8 @@
     <Compile Include="Helpers\Dtos\InitialFolderType.cs" />
     <Compile Include="Helpers\Dtos\FileBrowseOutcomeDto.cs" />
     <Compile Include="Helpers\OpenInAppHelper.cs" />
-    <Compile Include="Helpers\zCommonFileHelper.cs" />
     <Compile Include="Helpers\CommonConstants.cs" />
     <Compile Include="Helpers\GeneralOptionsHelper.cs" />
-    <Compile Include="Helpers\zSelectedItemHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

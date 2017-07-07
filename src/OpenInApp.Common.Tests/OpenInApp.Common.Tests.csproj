@@ -162,7 +162,11 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="_RunNunitTestsWithOpenCover_CopyToOutputDirAlways.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="TestFiles\z.linq" />
+    <None Include="_RunNunitTestsWithOpenCover_CopyToOutputDirAlways_AllenConway.bat" />
   </ItemGroup>
   <ItemGroup />
   <Choose>
