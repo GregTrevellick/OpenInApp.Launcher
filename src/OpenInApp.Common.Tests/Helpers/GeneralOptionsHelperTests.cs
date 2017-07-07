@@ -37,16 +37,6 @@ namespace OpenInApp.Common.Tests.Helpers
         //[TestCase(KeyToExecutableEnum.Emacs, FileToBeOpenedKind.Code)]
         //[TestCase(KeyToExecutableEnum.WinDirStat, ArtefactTypeToOpen.Folder)]
         //[TestCase(KeyToExecutableEnum.SQLServerManagementStudio, ArtefactTypeToOpen.File)]
-
-        //                              C:\Program Files (x86)\Microsoft SQL Server\70\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
-        //                              C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
-        //                              C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
-        //                             C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
-        //                             C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\Ssms.exe
-        //                             C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\Ssms.exe
-        //                             C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio\Ssms.exe
-        //                             C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Ssms.exe
-
         public void InvokeCommandTest(KeyToExecutableEnum keyToExecutableEnum, FileToBeOpenedKind fileToBeOpenedKind)
         {
             // Arrange

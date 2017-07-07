@@ -1,10 +1,7 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using OpenInApp.Common.Helpers;
-using System.Collections.Generic;
 using OpenInApp.Common.Helpers.Dtos;
-using System.IO;
-using System.Reflection;
+using System.Collections.Generic;
 
 namespace OpenInApp.Common.Tests.Helpers
 {

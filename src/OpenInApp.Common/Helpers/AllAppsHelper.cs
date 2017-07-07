@@ -5,15 +5,15 @@ namespace OpenInApp.Common.Helpers
 {
     public static class AllAppsHelper
     {
-        /// <summary>
-        /// Checks if a specified artefact exists on disc.
-        /// </summary>
-        /// <param name="fullExecutableFileName">Full name of the artefact.</param>
-        /// <returns></returns>
-        public static bool DoesActualPathToExeExist(string fullExecutableFileName)
-        {
-            return ArtefactsHelper.DoArtefactsExist(new List<string> { fullExecutableFileName });
-        }
+        ///// <summary>
+        ///// Checks if a specified artefact exists on disc.
+        ///// </summary>
+        ///// <param name="fullExecutableFileName">Full name of the artefact.</param>
+        ///// <returns></returns>
+        //public static bool DoesActualPathToExeExist(string fullExecutableFileName)
+        //{
+        //    return ArtefactsHelper.DoArtefactsExist(new List<string> { fullExecutableFileName });
+        //}
 
         /// <summary>
         /// Gets the typical file extensions as a CSV string.

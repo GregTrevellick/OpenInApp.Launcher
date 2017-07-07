@@ -20,16 +20,5 @@ namespace OpenInApp.Common.Tests.Helpers
             //Assert
             Assert.AreEqual("a,b,c", actual);
         }
-
-        [Test()]
-        [Category("I")]
-        public void DoesActualPathToExeExistTest()
-        {
-            //Act
-            var actual = AllAppsHelper.DoesActualPathToExeExist(null);
-
-            //Assert
-            Assert.IsFalse(actual);
-        }
     }
 }

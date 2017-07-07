@@ -18,7 +18,7 @@ namespace OpenInApp.Command
 
             try
             {
-                var actualPathToExeExists = AllAppsHelper.DoesActualPathToExeExist(dto.ActualPathToExe);
+                var actualPathToExeExists = ArtefactsHelper.DoesActualPathToExeExist(dto.ActualPathToExe);
 
                 bool proceedToExecute = true;
                 if (!actualPathToExeExists)
@@ -28,7 +28,7 @@ namespace OpenInApp.Command
                     var badFilePath = dto.KeyToExecutableEnum.ToString();
                     persistOptionsDto = fileHelper.PromptForActualExeFile(badFilePath);
 
-                    var newActualPathToExeExists = AllAppsHelper.DoesActualPathToExeExist(dto.ActualPathToExe);
+                    var newActualPathToExeExists = ArtefactsHelper.DoesActualPathToExeExist(dto.ActualPathToExe);
                     if (newActualPathToExeExists)
                     {
                         proceedToExecute = true;
