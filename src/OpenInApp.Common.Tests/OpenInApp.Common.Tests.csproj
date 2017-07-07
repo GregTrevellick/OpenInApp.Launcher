@@ -162,6 +162,9 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="_RunCodeCoverageInOutput.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="TestFiles\z.linq" />
   </ItemGroup>
   <ItemGroup />
