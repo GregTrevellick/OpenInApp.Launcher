@@ -14,16 +14,16 @@
       <ModuleName>mscorlib</ModuleName>
       <Classes />
     </Module>
-    <Module skippedDueTo="Filter" hash="6E-30-2E-50-36-FB-60-2C-8E-50-C0-83-54-8B-CC-EA-A8-91-B6-CC">
-      <ModulePath>C:\Windows\assembly\GAC_64\mscorlib\2.0.0.0__b77a5c561934e089\sortkey.nlp</ModulePath>
-      <ModuleTime>2009-06-10T20:40:02.2886909Z</ModuleTime>
-      <ModuleName>mscorlib</ModuleName>
-      <Classes />
-    </Module>
     <Module skippedDueTo="Filter" hash="F9-CA-B6-79-63-CB-31-8A-0D-DC-C3-D0-43-F8-28-C3-F0-95-F9-E7">
       <ModulePath>C:\Users\GregoryT\Source\Repos\OpenInApp.Launcher\src\packages\NUnit.Runners.2.6.3\tools\nunit-console.exe</ModulePath>
       <ModuleTime>2013-10-10T16:39:24Z</ModuleTime>
       <ModuleName>nunit-console</ModuleName>
+      <Classes />
+    </Module>
+    <Module skippedDueTo="Filter" hash="6E-30-2E-50-36-FB-60-2C-8E-50-C0-83-54-8B-CC-EA-A8-91-B6-CC">
+      <ModulePath>C:\Windows\assembly\GAC_64\mscorlib\2.0.0.0__b77a5c561934e089\sortkey.nlp</ModulePath>
+      <ModuleTime>2009-06-10T20:40:02.2886909Z</ModuleTime>
+      <ModuleName>mscorlib</ModuleName>
       <Classes />
     </Module>
     <Module skippedDueTo="Filter" hash="2A-C4-E5-DE-F3-EE-AD-84-E1-65-84-CC-15-90-76-96-E7-01-44-4E">

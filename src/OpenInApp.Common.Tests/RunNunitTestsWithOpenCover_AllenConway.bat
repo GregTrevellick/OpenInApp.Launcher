@@ -1,8 +1,8 @@
 ﻿REM Create a 'CodeCoverageReports' folder if it does not exist
 if not exist "%~dp0CodeCoverageReports" mkdir "%~dp0CodeCoverageReports"
  
-REM Remove any previous test execution files to prevent issues overwriting
-IF EXIST "%~dp0BowlingSPAService.trx" del "%~dp0BowlingSPAService.trx%"
+REM Remove any previous test execution files to prevent issues overwriting (ms test)
+REM IF EXIST "%~dp0BowlingSPAService.trx" del "%~dp0BowlingSPAService.trx%"
  
 REM Remove any previously created test output directories
 CD %~dp0
