@@ -30,7 +30,7 @@ REM Use 'mergebyhash' to merge results loaded from multiple assemblies
 REM Use 'skipautoprops' to skip .NET 'AutoProperties' from being analyzed (basic getters and setters don't require unit tests and thus shouldn't be reported on the output)
 "%~dp0..\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe" ^
 -register:user ^
--target:"..\..\..\packages\NUnit.Runners.2.6.3\tools\nunit-console.exe" ^
+-target:"%~dp0..\packages\NUnit.Runners.2.6.3\tools\nunit-console.exe" ^
 -targetargs:"/nologo \"%~dp0..\OpenInApp.Common.Tests\bin\Debug\OpenInApp.Common.Tests.dll\" /noshadow"  ^
 -filter:"+[OpenInApp.Common*]* -[OpenInApp.Common.Tests]*" ^
 -mergebyhash ^
