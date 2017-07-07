@@ -314,9 +314,9 @@ var assemblies = [
   {
     "name" : "OpenInApp.Common.Tests",
     "classes" : [
-    {  "name" : "OpenInApp.Common.Tests.Helpers.FileHelperTests", "reportPath" : "OpenInApp.Common.Tests_FileHelperTests.htm", "coveredLines" : 0, "uncoveredLines" : 39, "coverableLines" : 39, "totalLines" : 109, "coverageType" : "LineCoverage", "methodCoverage" : "-", "coveredBranches" : 0, "totalBranches" : 0, "lineCoverageHistory" : [], "branchCoverageHistory" : [] },
-    {  "name" : "OpenInApp.Common.Tests.Helpers.GeneralOptionsHelperTests", "reportPath" : "OpenInApp.Common.Tests_GeneralOptionsHelperTests.htm", "coveredLines" : 0, "uncoveredLines" : 16, "coverableLines" : 16, "totalLines" : 87, "coverageType" : "LineCoverage", "methodCoverage" : "-", "coveredBranches" : 0, "totalBranches" : 8, "lineCoverageHistory" : [], "branchCoverageHistory" : [] },
-    {  "name" : "OpenInApp.Common.Tests.Helpers.OpenInAppHelperTests", "reportPath" : "OpenInApp.Common.Tests_OpenInAppHelperTests.htm", "coveredLines" : 0, "uncoveredLines" : 74, "coverableLines" : 74, "totalLines" : 227, "coverageType" : "LineCoverage", "methodCoverage" : "-", "coveredBranches" : 0, "totalBranches" : 7, "lineCoverageHistory" : [], "branchCoverageHistory" : [] },
+    {  "name" : "OpenInApp.Common.Tests.Helpers.FileHelperTests", "reportPath" : "OpenInApp.Common.Tests_FileHelperTests.htm", "coveredLines" : 39, "uncoveredLines" : 0, "coverableLines" : 39, "totalLines" : 109, "coverageType" : "LineCoverage", "methodCoverage" : "-", "coveredBranches" : 0, "totalBranches" : 0, "lineCoverageHistory" : [], "branchCoverageHistory" : [] },
+    {  "name" : "OpenInApp.Common.Tests.Helpers.GeneralOptionsHelperTests", "reportPath" : "OpenInApp.Common.Tests_GeneralOptionsHelperTests.htm", "coveredLines" : 16, "uncoveredLines" : 0, "coverableLines" : 16, "totalLines" : 87, "coverageType" : "LineCoverage", "methodCoverage" : "-", "coveredBranches" : 7, "totalBranches" : 8, "lineCoverageHistory" : [], "branchCoverageHistory" : [] },
+    {  "name" : "OpenInApp.Common.Tests.Helpers.OpenInAppHelperTests", "reportPath" : "OpenInApp.Common.Tests_OpenInAppHelperTests.htm", "coveredLines" : 11, "uncoveredLines" : 63, "coverableLines" : 74, "totalLines" : 227, "coverageType" : "LineCoverage", "methodCoverage" : "-", "coveredBranches" : 0, "totalBranches" : 7, "lineCoverageHistory" : [], "branchCoverageHistory" : [] },
   ]},
 ];
 

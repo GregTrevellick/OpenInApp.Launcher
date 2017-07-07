@@ -25,8 +25,8 @@ exit /b %errorlevel%
 :RunOpenCoverUnitTestMetrics
 "%~dp0..\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe" ^
 -register:user ^
--target:"%VS120COMNTOOLS%\..\IDE\mstest.exe" ^
--targetargs:"/testcontainer:\"%~dp0..\OpenInApp.Common.Tests\bin\Debug\OpenInApp.Common.Tests.dll\" /resultsfile:\"%~dp0BowlingSPAService.trx\"" ^
+-target:"..\..\..\packages\NUnit.Runners.2.6.3\tools\nunit-console.exe" ^
+-targetargs:"/nologo \"%~dp0..\OpenInApp.Common.Tests\bin\Debug\OpenInApp.Common.Tests.dll\" /noshadow"  ^
 -filter:"+[OpenInApp.Common.Tests]OpenInApp.Common.Tests*" ^
 -mergebyhash ^
 -skipautoprops ^
