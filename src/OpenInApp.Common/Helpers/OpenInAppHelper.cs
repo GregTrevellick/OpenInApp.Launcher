@@ -43,7 +43,7 @@ namespace OpenInApp.Common.Helpers
             {
                 foreach (var actualArtefactToBeOpened in actualArtefactsToBeOpened)
                 {
-                    var argument = GetSingleArgument(actualArtefactToBeOpened);/////////////////// (artefactToBeOpened);
+                    var argument = GetSingleArgument(actualArtefactToBeOpened);
                     InvokeProcess(argument, fileName, useShellExecute, workingDirectory);
                 }
             }
@@ -52,7 +52,7 @@ namespace OpenInApp.Common.Helpers
                 var arguments = " ";
                 foreach (var actualArtefactToBeOpened in actualArtefactsToBeOpened)
                 {
-                    arguments += GetSingleArgument(actualArtefactToBeOpened);///////////////////// (actualFileToBeOpened);
+                    arguments += GetSingleArgument(actualArtefactToBeOpened);
                 }
                 InvokeProcess(arguments, fileName, useShellExecute, workingDirectory);
             }
