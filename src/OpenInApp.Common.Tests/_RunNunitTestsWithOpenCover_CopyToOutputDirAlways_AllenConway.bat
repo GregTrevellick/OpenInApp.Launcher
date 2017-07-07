@@ -43,18 +43,3 @@ exit /b %errorlevel%
 start "report" "%~dp0\GeneratedReports\ReportGenerator Output\index.htm"
 exit /b %errorlevel%
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
