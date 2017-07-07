@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace OpenInApp.Common.Tests.Helpers
 {
     [TestFixture()]
-    public class FileHelperTests
+    public class CsvHelperTests
     {
         private IEnumerable<string> typicalFileExtensions = new List<string>
         {
@@ -67,20 +67,6 @@ namespace OpenInApp.Common.Tests.Helpers
             Assert.AreEqual(true, actual);
         }
 
-        [Test()]
-        [Category("U")]
-        public void GetDefaultTypicalFileExtensionsAsCsvTest()
-        {
-            //Arrange
-            var testList = new List<string> { "a", "b", "c" };
-
-            //Act
-            var actual = AllAppsHelper.GetDefaultTypicalFileExtensionsAsCsv(testList);
-
-            //Assert
-            Assert.AreEqual("a,b,c", actual);
-        }
-
         [TestCase("a,b,c")]
         [Category("U")]
         public void GetTypicalFileExtensionAsListTest(string csvString)
@@ -93,17 +79,6 @@ namespace OpenInApp.Common.Tests.Helpers
 
             //Assert
             Assert.AreEqual(expected, actual);
-        }
-
-        [Test()]
-        [Category("I")]
-        public void DoesActualPathToExeExistTest()
-        {
-            //Act
-            var actual = AllAppsHelper.DoesActualPathToExeExist(null);
-
-            //Assert
-            Assert.IsFalse(actual);
         }
     }
 }

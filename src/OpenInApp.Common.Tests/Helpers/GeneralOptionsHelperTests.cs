@@ -1,8 +1,10 @@
-﻿using NUnit.Framework;
+﻿using System;
+using System.Collections.Generic;
+using NUnit.Framework;
 using OpenInApp.Common.Helpers;
-using OpenInApp.Common.Helpers.Dtos;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using static System.Environment;
 
 namespace OpenInApp.Common.Tests.Helpers
@@ -11,6 +13,91 @@ namespace OpenInApp.Common.Tests.Helpers
     public class GeneralOptionsHelperTests
     {
         private const string OverrideAtTestExecutionTime = "OverrideAtTestExecutionTime";
+
+        [Test()]
+        [Category("I")]
+        //[TestCase(KeyToExecutableEnum.AltovaXMLSpy, FileToBeOpenedKind.Xml)]
+        //[TestCase(KeyToExecutableEnum.ChromeCanary, FileToBeOpenedKind.Any)]
+        //[TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, FileToBeOpenedKind.Any)]
+        //[TestCase(KeyToExecutableEnum.Gimp, FileToBeOpenedKind.StillImage)]
+        //[TestCase(KeyToExecutableEnum.MarkdownMonster, FileToBeOpenedKind.Markdown)]
+        //[TestCase(KeyToExecutableEnum.MSPaint, FileToBeOpenedKind.StillImage)]
+        //[TestCase(KeyToExecutableEnum.Opera, FileToBeOpenedKind.Any)]
+        //[TestCase(KeyToExecutableEnum.OperaDeveloperEdition, FileToBeOpenedKind.Any)]
+        //[TestCase(KeyToExecutableEnum.PaintDotNet, FileToBeOpenedKind.StillImage)]
+        //[TestCase(KeyToExecutableEnum.Vivaldi, FileToBeOpenedKind.Any)]
+        //[TestCase(KeyToExecutableEnum.XamarinStudio, FileToBeOpenedKind.Any)]
+        //[TestCase(KeyToExecutableEnum.TreeSizeFree, ArtefactTypeToOpen.Folder)]
+        //[TestCase(KeyToExecutableEnum.VS2012, FileToBeOpenedKind.Code)]
+        //[TestCase(KeyToExecutableEnum.VS2013, FileToBeOpenedKind.Code)]
+        //[TestCase(KeyToExecutableEnum.VS2015, FileToBeOpenedKind.Code)]
+        //[TestCase(KeyToExecutableEnum.VS2017Community, FileToBeOpenedKind.Code)]
+        //[TestCase(KeyToExecutableEnum.VS2017Enterprise, FileToBeOpenedKind.Code)]
+        //[TestCase(KeyToExecutableEnum.VS2017Professional, FileToBeOpenedKind.Code)]
+        //[TestCase(KeyToExecutableEnum.Emacs, FileToBeOpenedKind.Code)]
+        //[TestCase(KeyToExecutableEnum.WinDirStat, ArtefactTypeToOpen.Folder)]
+        //[TestCase(KeyToExecutableEnum.SQLServerManagementStudio, ArtefactTypeToOpen.File)]
+
+        //                              C:\Program Files (x86)\Microsoft SQL Server\70\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
+        //                              C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
+        //                              C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
+        //                             C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\ssmsee.exe
+        //                             C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\Ssms.exe
+        //                             C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\Ssms.exe
+        //                             C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio\Ssms.exe
+        //                             C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Ssms.exe
+
+        public void InvokeCommandTest(KeyToExecutableEnum keyToExecutableEnum, FileToBeOpenedKind fileToBeOpenedKind)
+        {
+            // Arrange
+            List<string> actualFilesToBeOpened;
+
+            #region Set files to be opened
+            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+            switch (fileToBeOpenedKind)
+            {
+                case FileToBeOpenedKind.Any:
+                case FileToBeOpenedKind.Code:
+                case FileToBeOpenedKind.Markdown:
+                case FileToBeOpenedKind.Xml:
+                    actualFilesToBeOpened = new List<string>
+                    {
+                        path + @"\TestFiles\AnyText1.txt",
+                        path + @"\TestFiles\AnyText2.TXT",
+                    };
+                    break;
+                case FileToBeOpenedKind.MovingImage:
+                    actualFilesToBeOpened = new List<string>
+                    {
+                        path + @"\TestFiles\MovingImage1.mpg",
+                        path + @"\TestFiles\MovingImage2.mpeg",
+                    };
+                    break;
+                case FileToBeOpenedKind.StillImage:
+                    actualFilesToBeOpened = new List<string>
+                    {
+                        path + @"\TestFiles\StillImage1.jpg",
+                        path + @"\TestFiles\StillImage2.JPG",
+                    };
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
+            #endregion
+
+            var actualPathToExeHelper = new ApplicationToOpenHelper();
+            var applicationToOpenDto = actualPathToExeHelper.GetApplicationToOpenDto(keyToExecutableEnum);
+            var executableFullPath = GeneralOptionsHelper.GetActualPathToExe(keyToExecutableEnum);
+
+            // Act
+            OpenInAppHelper.InvokeCommand(
+                actualFilesToBeOpened,
+                executableFullPath,
+                applicationToOpenDto.SeparateProcessPerFileToBeOpened,
+                applicationToOpenDto.UseShellExecute,
+                applicationToOpenDto.ArtefactTypeToOpen);
+        }
 
         [Test()]
         [TestCase(KeyToExecutableEnum.AltovaXMLSpy, @"C:\Program Files (x86)\Altova\XMLSpy2016\XMLSpy.exe")]
@@ -62,26 +149,5 @@ namespace OpenInApp.Common.Tests.Helpers
             //Assert
             Assert.IsTrue(actual.Contains(expected));
         }
-
-        //[Test()]
-        //[Category("U")]
-        //public void GetMultipleVersionPathsTest()
-        //{
-        //    //Arrange
-        //    var secondaryFilePathSegment = "abc9999d";
-
-        //    //Act
-        //    var actual = GeneralOptionsHelper.GetMultipleVersionPaths("XMlsPY.exe", InitialFolderType.ProgramFilesX86, secondaryFilePathSegment, KeyToExecutableEnum.AltovaXMLSpy);
-
-        //    //Assert
-            
-        //    Assert.IsFalse(actual.Contains(@"C:\Program Files (x86)\abc1995d\XMlsPY.exe"));
-        //    Assert.IsTrue(actual.Contains(@"C:\Program Files (x86)\abc1996d\XMlsPY.exe"));
-        //    Assert.IsTrue(actual.Contains(@"C:\Program Files (x86)\abc1996d\XMlsPY.exe"));
-        //    Assert.IsTrue(actual.Contains(@"C:\Program Files (x86)\abc2019d\XMlsPY.exe"));
-        //    Assert.IsTrue(actual.Contains(@"C:\Program Files (x86)\abc2020d\XMlsPY.exe"));
-        //    Assert.IsFalse(actual.Contains(@"C:\Program Files (x86)\abc2021d\XMlsPY.exe"));
-        //    Assert.AreEqual(25, actual.Count());
-        //}
     }
 }

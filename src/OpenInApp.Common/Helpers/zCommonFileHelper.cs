@@ -5,7 +5,7 @@
 //using System.IO;
 //using System.Linq;
 
-//namespace OpenInApp.Common.Helpers
+//namespace OpenInApp.ommon.Helpers
 //{
 //    public class CommonFileHelper
 //    {

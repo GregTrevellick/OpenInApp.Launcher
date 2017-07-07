@@ -123,9 +123,10 @@
   </Choose>
   <ItemGroup>
     <Compile Include="FileToBeOpenedKind.cs" />
+    <Compile Include="Helpers\CsvHelperTests.cs" />
     <Compile Include="Helpers\OpenInAppHelperTests.cs" />
     <Compile Include="Helpers\GeneralOptionsHelperTests.cs" />
-    <Compile Include="Helpers\FileHelperTests.cs" />
+    <Compile Include="Helpers\AllAppsHelperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
