@@ -30,6 +30,7 @@ exit /b %errorlevel%
 -filter:"+[OpenInApp.Common.Tests]OpenInApp.Common.Tests*" ^
 -mergebyhash ^
 -skipautoprops ^
+-excludebyattribute:"System.CodeDom.Compiler.GeneratedCodeAttribute" ^
 -output:"%~dp0\CodeCoverageReports\CodeCoverageReport.xml"
 exit /b %errorlevel%
  
