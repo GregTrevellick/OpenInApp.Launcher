@@ -134,7 +134,7 @@ namespace OpenInSQLServerManagementStudio.Options.SQLServerManagementStudio
 
             if (actualPathToExeChanged)
             {
-                if (!AllAppsHelper.DoesActualPathToExeExist(ActualPathToExe))
+                if (!ArtefactsHelper.DoesActualPathToExeExist(ActualPathToExe))
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 

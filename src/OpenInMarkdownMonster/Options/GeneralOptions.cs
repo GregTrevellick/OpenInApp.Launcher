@@ -134,7 +134,7 @@ namespace OpenInAppMarkdownMonster.Options.MarkdownMonster
 
             if (actualPathToExeChanged)
             {
-                if (!AllAppsHelper.DoesActualPathToExeExist(ActualPathToExe))
+                if (!ArtefactsHelper.DoesActualPathToExeExist(ActualPathToExe))
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 

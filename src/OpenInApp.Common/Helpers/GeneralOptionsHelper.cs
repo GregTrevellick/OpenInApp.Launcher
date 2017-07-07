@@ -146,7 +146,7 @@ namespace OpenInApp.Common.Helpers
             return path;
         }
 
-        private static VersionNumberRangeDto GetVersionNumberRange(KeyToExecutableEnum keyToExecutableEnum)//gregtt write unit test for this method
+        private static VersionNumberRangeDto GetVersionNumberRange(KeyToExecutableEnum keyToExecutableEnum)
         {
             var result = new VersionNumberRangeDto();
 
@@ -172,7 +172,7 @@ namespace OpenInApp.Common.Helpers
             return result;
         }
 
-        private static IEnumerable<string> DoubleUpForDDrive(IEnumerable<string> searchPaths)//gregtt unit test this
+        private static IEnumerable<string> DoubleUpForDDrive(IEnumerable<string> searchPaths)
         {
             var dPaths = new List<string>();
 

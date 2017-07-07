@@ -134,7 +134,7 @@ namespace OpenInVS2013.Options.VS2013
 
             if (actualPathToExeChanged)
             {
-                if (!AllAppsHelper.DoesActualPathToExeExist(ActualPathToExe))
+                if (!ArtefactsHelper.DoesActualPathToExeExist(ActualPathToExe))
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 

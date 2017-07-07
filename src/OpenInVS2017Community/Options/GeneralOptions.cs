@@ -134,7 +134,7 @@ namespace OpenInVS2017Community.Options.VS2017Community
 
             if (actualPathToExeChanged)
             {
-                if (!AllAppsHelper.DoesActualPathToExeExist(ActualPathToExe))
+                if (!ArtefactsHelper.DoesActualPathToExeExist(ActualPathToExe))
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 

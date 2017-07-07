@@ -218,7 +218,7 @@ namespace OpenInApp.Menu
                 ArtefactTypeToOpen = applicationToOpenDto.ArtefactTypeToOpen,
                 Caption = caption,
                 CommandPlacement = commandPlacement,
-                ExecutableFileToBrowseFor = keyToExecutableEnumDescription,
+                KeyToExecutableEnumDescription = keyToExecutableEnumDescription,
                 FileQuantityWarningLimit = fileQuantityWarningLimit,
                 KeyToExecutableEnum = keyToExecutableEnum,
                 SeparateProcessPerFileToBeOpened = applicationToOpenDto.SeparateProcessPerFileToBeOpened,
