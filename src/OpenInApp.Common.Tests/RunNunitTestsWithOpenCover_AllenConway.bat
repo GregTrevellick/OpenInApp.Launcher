@@ -1,5 +1,5 @@
-﻿REM Create a 'GeneratedReports' folder if it does not exist
-if not exist "%~dp0GeneratedReports" mkdir "%~dp0GeneratedReports"
+﻿REM Create a 'CodeCoverageReports' folder if it does not exist
+if not exist "%~dp0CodeCoverageReports" mkdir "%~dp0CodeCoverageReports"
  
 REM Remove any previous test execution files to prevent issues overwriting
 IF EXIST "%~dp0BowlingSPAService.trx" del "%~dp0BowlingSPAService.trx%"
@@ -30,16 +30,16 @@ exit /b %errorlevel%
 -filter:"+[OpenInApp.Common.Tests]OpenInApp.Common.Tests*" ^
 -mergebyhash ^
 -skipautoprops ^
--output:"%~dp0\GeneratedReports\CodeCoverageReport.xml"
+-output:"%~dp0\CodeCoverageReports\CodeCoverageReport.xml"
 exit /b %errorlevel%
  
 :RunReportGeneratorOutput
 "%~dp0..\packages\ReportGenerator.2.5.9\tools\ReportGenerator.exe" ^
--reports:"%~dp0\GeneratedReports\CodeCoverageReport.xml" ^
--targetdir:"%~dp0\GeneratedReports\ReportGeneratorOutput"
+-reports:"%~dp0\CodeCoverageReports\CodeCoverageReport.xml" ^
+-targetdir:"%~dp0\CodeCoverageReports\ReportGeneratorOutput"
 exit /b %errorlevel%
  
 :RunLaunchReport
-start "report" "%~dp0\GeneratedReports\ReportGeneratorOutput\index.htm"
+start "report" "%~dp0\CodeCoverageReports\ReportGeneratorOutput\index.htm"
 exit /b %errorlevel%
 

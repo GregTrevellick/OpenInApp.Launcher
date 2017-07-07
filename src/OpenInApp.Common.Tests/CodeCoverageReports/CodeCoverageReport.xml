@@ -116,10 +116,10 @@
       <ModuleName>Microsoft.VisualStudio.TeamSystem.Licensing</ModuleName>
       <Classes />
     </Module>
-    <Module hash="71-47-E3-CF-3F-E6-91-CB-C2-61-7A-15-B6-31-8D-0E-3A-A6-F1-BF">
+    <Module hash="82-ED-18-CB-F6-34-B0-FF-A2-DF-B3-E4-D6-B5-C4-19-B1-47-9E-EF">
       <Summary numSequencePoints="76" visitedSequencePoints="0" numBranchPoints="28" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="5" minCyclomaticComplexity="1" visitedClasses="0" numClasses="3" visitedMethods="0" numMethods="13" />
       <ModulePath>C:\Users\GregoryT\Source\Repos\OpenInApp.Launcher\src\OpenInApp.Common.Tests\bin\Debug\OpenInApp.Common.Tests.dll</ModulePath>
-      <ModuleTime>2017-07-07T12:15:50.0561561Z</ModuleTime>
+      <ModuleTime>2017-07-07T12:24:35.1910769Z</ModuleTime>
       <ModuleName>OpenInApp.Common.Tests</ModuleName>
       <Files>
         <File uid="1" fullPath="C:\Users\GregoryT\Source\Repos\OpenInApp.Launcher\src\OpenInApp.Common.Tests\Helpers\OpenInAppHelperTests.cs" />
