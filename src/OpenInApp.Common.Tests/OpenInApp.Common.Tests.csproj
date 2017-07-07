@@ -166,7 +166,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="TestFiles\z.linq" />
-    <None Include="_RunNunitTestsWithOpenCover_CopyToOutputDirAlways_AllenConway.bat" />
+    <None Include="_RunNunitTestsWithOpenCover_CopyToOutputDirAlways_AllenConway.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <Choose>

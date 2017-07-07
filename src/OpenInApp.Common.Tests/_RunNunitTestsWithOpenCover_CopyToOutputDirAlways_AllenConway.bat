@@ -26,16 +26,16 @@ exit /b %errorlevel%
 "%~dp0..\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe" ^
 -register:user ^
 -target:"%VS120COMNTOOLS%\..\IDE\mstest.exe" ^
--targetargs:"/testcontainer:\"%~dp0..\BowlingSPAService.Tests\bin\Debug\BowlingSPAService.Tests.dll\" /resultsfile:\"%~dp0BowlingSPAService.trx\"" ^
--filter:"+[BowlingSPAService*]* -[BowlingSPAService.Tests]* -[*]BowlingSPAService.RouteConfig" ^
+-targetargs:"/testcontainer:\"%~dp0..\OpenInApp.Common.Tests\bin\Debug\OpenInApp.Common.Tests.dll\" /resultsfile:\"%~dp0BowlingSPAService.trx\"" ^
+-filter:"+[OpenInApp.Common.Tests]OpenInApp.Common.Tests*" ^
 -mergebyhash ^
 -skipautoprops ^
--output:"%~dp0\GeneratedReports\BowlingSPAServiceReport.xml"
+-output:"%~dp0\GeneratedReports\_CodeCoverageReport.xml"
 exit /b %errorlevel%
  
 :RunReportGeneratorOutput
-"%~dp0..\packages\ReportGenerator.2.1.5.0\ReportGenerator.exe" ^
--reports:"%~dp0\GeneratedReports\BowlingSPAServiceReport.xml" ^
+"%~dp0..\packages\ReportGenerator.2.5.9\tools\ReportGenerator.exe" ^
+-reports:"%~dp0\GeneratedReports\_CodeCoverageReport.xml" ^
 -targetdir:"%~dp0\GeneratedReports\ReportGenerator Output"
 exit /b %errorlevel%
  
