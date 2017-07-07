@@ -1,2 +1,0 @@
-﻿"..\..\..\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe" -target:"..\..\..\packages\NUnit.ConsoleRunner.3.6.1\tools\nunit3-console.exe" -targetargs:"/nologo OpenInApp.Common.Tests.dll /noshadow" -filter:"+[OpenInApp.Common]OpenInApp.Common*" -excludebyattribute:"System.CodeDom.Compiler.GeneratedCodeAttribute" -register:user -output:"_CodeCoverageResult2a.xml"
-"..\..\..\packages\ReportGenerator.2.5.9\tools\ReportGenerator.exe" "-reports:_CodeCoverageResult2a.xml" "-targetdir:_CodeCoverageReport2b"
