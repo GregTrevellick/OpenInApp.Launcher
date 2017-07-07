@@ -1,4 +1,6 @@
-﻿REM Create a 'CodeCoverageReports' folder if it does not exist
+﻿REM http://www.allenconway.net/2015/06/using-opencover-and-reportgenerator-to.html
+
+REM Create a 'CodeCoverageReports' folder if it does not exist
 if not exist "%~dp0CodeCoverageReports" mkdir "%~dp0CodeCoverageReports"
  
 REM Remove any previous test execution files to prevent issues overwriting (ms test)
