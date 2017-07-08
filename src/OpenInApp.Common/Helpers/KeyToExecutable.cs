@@ -34,7 +34,7 @@ namespace OpenInApp.Common.Helpers
 
     public enum KeyToExecutableEnum//gregtt auto sync the class above to this enum
     {
-        [Description("windirstat.exe")]
+        //intentionally no description [Description("windirstat.exe")]
         Abracadabra,
 
         [Description("XMLSpy.exe")]

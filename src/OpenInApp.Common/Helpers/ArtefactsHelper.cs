@@ -6,22 +6,12 @@ namespace OpenInApp.Common.Helpers
 {
     public static class ArtefactsHelper 
     {
-        /// <summary>
-        /// Checks if a specified artefact exists on disc.
-        /// </summary>
-        /// <param name="fullExecutableFileName">Full name of the artefact.</param>
-        /// <returns></returns>
         public static bool DoesActualPathToExeExist(string fullExecutableFileName)
         {
-            return DoArtefactsExist(new List<string> { fullExecutableFileName });
+            return DoArtefactsExist(new List<string> { fullExecutableFileName }, ArtefactTypeToOpen.File);
         }
 
-        /// <summary>
-        /// Checks if all specified artefacts exists on disc.
-        /// </summary>
-        /// <param name="fullArtefactNames">The full artefact names.</param>
-        /// <returns></returns>
-        public static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, ArtefactTypeToOpen artefactTypeToOpen = ArtefactTypeToOpen.File)
+        public static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, ArtefactTypeToOpen artefactTypeToOpen)
         {
             var result = true;
 

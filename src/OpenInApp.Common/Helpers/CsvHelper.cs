@@ -7,22 +7,11 @@ namespace OpenInApp.Common.Helpers
 {
     public static class CsvHelper
     {
-        /// <summary>
-        /// Gets the typical file extension as list, from a CSV string.
-        /// </summary>
-        /// <param name="typicalFileExtensionsAsCsv">The typical file extensions as CSV.</param>
-        /// <returns></returns>
         public static IEnumerable<string> GetTypicalFileExtensionAsList(string typicalFileExtensionsAsCsv)
         {
             return typicalFileExtensionsAsCsv.Split(',');
         }
 
-        /// <summary>
-        /// Checks if a file extension(s) is a typical file extension for the app, as defined in Tools | Options.
-        /// </summary>
-        /// <param name="fullFileNames">The full file names.</param>
-        /// <param name="typicalFileExtensions">The typical file extensions.</param>
-        /// <returns></returns>
         public static bool AreTypicalFileExtensions(IEnumerable<string> fullFileNames, IEnumerable<string> typicalFileExtensions)
         {
             var result = false;
@@ -49,12 +38,7 @@ namespace OpenInApp.Common.Helpers
             return result;
         }
 
-        /// <summary>
-        /// Gets a collection of file type extensions, from a collection of file names.
-        /// </summary>
-        /// <param name="fullFileNames">The full file names.</param>
-        /// <returns></returns>
-        private static IEnumerable<string> GetFileTypeExtensions(IEnumerable<string> fullFileNames)
+        internal static IEnumerable<string> GetFileTypeExtensions(IEnumerable<string> fullFileNames)
         {
             var result = new List<string>();
 

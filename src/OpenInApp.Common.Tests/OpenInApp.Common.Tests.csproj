@@ -123,16 +123,16 @@
   </Choose>
   <ItemGroup>
     <Compile Include="FileToBeOpenedKind.cs" />
-    <Compile Include="Helpers\ApplicationToOpenHelperTests.cs" />
-    <Compile Include="Helpers\BrowseFileHelperTests.cs" />
-    <Compile Include="Helpers\CommonConstantsTests.cs" />
-    <Compile Include="Helpers\EnumHelperTests.cs" />
-    <Compile Include="Helpers\ArtefactsHelperTests.cs" />
-    <Compile Include="Helpers\CsvHelperTests.cs" />
-    <Compile Include="Helpers\KeyToExecutableTests.cs" />
+    <Compile Include="Helpers\ApplicationToOpenHelperTests100.cs" />
+    <Compile Include="Helpers\BrowseFileHelperTests100.cs" />
+    <Compile Include="Helpers\CommonConstantsTests100.cs" />
+    <Compile Include="Helpers\EnumHelperTests100.cs" />
+    <Compile Include="Helpers\ArtefactsHelperTests100.cs" />
+    <Compile Include="Helpers\CsvHelperTests100.cs" />
+    <Compile Include="Helpers\KeyToExecutableTests100.cs" />
     <Compile Include="Helpers\OpenInAppHelperTests.cs" />
     <Compile Include="Helpers\GeneralOptionsHelperTests.cs" />
-    <Compile Include="Helpers\AllAppsHelperTests.cs" />
+    <Compile Include="Helpers\AllAppsHelperTests100.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

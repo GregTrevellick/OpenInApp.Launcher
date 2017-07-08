@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace OpenInApp.Common.Tests.Helpers
 {
     [TestFixture()]
-    public class CommonConstantsTests
+    public class BrowseFileHelperTests100
     {
     }
 }
