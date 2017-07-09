@@ -29,34 +29,34 @@ namespace OpenInApp.Common.Tests.Helpers
         //homesite
 
 
-        [Test()]
-        [Category("I")]
-        //////////BEATEN TO IT - HAPPILY OPENS BOTH FILES [TestCase(@"C:\Windows\system32\notepad.exe", true, false)]
-        //////////BEATEN TO IT - HAPPILY OPENS BOTH FILES [TestCase(@"C:\Program Files (x86)\Vim\vim80\gvim.exe", true, null)]//with mouse - graphical vim
-//[TestCase(@"C:\Users\gtrev\AppData\Local\atom\app-1.18.0\atom.exe", false, null)]
-        //nothing happens [TestCase(@"C:\Program Files (x86)\LINQPad4\LPRun.exe", false, null)]
-        //fails with 1 arg prob 2 args also [TestCase(@"C:\Program Files (x86)\LINQPad4\LINQPad.exe", false, null)]
-        //fails with 1 and 2 arguments [TestCase(@"C:\Program Files (x86)\LINQPad5\LINQPad.exe", false, null)]
-        //fails with 1 and 2 arguments [TestCase(@"C:\Program Files\Windows NT\Accessories\wordpad.exe", false, null)]
-        //nothing happens [TestCase(@"C:\Program Files (x86)\Vim\vim80\vim.exe", false, null)]//without mouse
-        //todo C:\Users\greg\Desktop\ZZZ open in\eclipse-cpp-neon-2-win32-x86_64\eclipse\eclipse.exe
-        //todo C:\Users\greg\Desktop\ZZZ open in\eclipse-java-neon-2-win32-x86_64\eclipse\eclipse.exe
-        //todo C:\Users\greg\Desktop\ZZZ open in\eclipse-jee-neon-2-win32-x86_64\eclipse\eclipse.exe
-        //todo C:\Users\greg\Desktop\ZZZ open in\Z this is emacs _ eclipse-php-neon-2-win32-x86_64\eclipse\eclipse.exe
-        public void InvokeCommandTest_TextApps(string executableFullPath, bool separateProcessPerFileToBeOpened, bool useShellExecute)
-        {
-            // Arrange
-            var actualFilesToBeOpened = new List<string>
-            {
-                @"C:\Temp\a.txt",
-                @"C:\Temp\b.txt",
-                //@"C:\Temp\a.linq",
-                //@"C:\Temp\b.sql",
-            };
+//        [Test()]
+//        [Category("I")]
+//        //////////BEATEN TO IT - HAPPILY OPENS BOTH FILES [TestCase(@"C:\Windows\system32\notepad.exe", true, false)]
+//        //////////BEATEN TO IT - HAPPILY OPENS BOTH FILES [TestCase(@"C:\Program Files (x86)\Vim\vim80\gvim.exe", true, null)]//with mouse - graphical vim
+////[TestCase(@"C:\Users\gtrev\AppData\Local\atom\app-1.18.0\atom.exe", false, null)]
+//        //nothing happens [TestCase(@"C:\Program Files (x86)\LINQPad4\LPRun.exe", false, null)]
+//        //fails with 1 arg prob 2 args also [TestCase(@"C:\Program Files (x86)\LINQPad4\LINQPad.exe", false, null)]
+//        //fails with 1 and 2 arguments [TestCase(@"C:\Program Files (x86)\LINQPad5\LINQPad.exe", false, null)]
+//        //fails with 1 and 2 arguments [TestCase(@"C:\Program Files\Windows NT\Accessories\wordpad.exe", false, null)]
+//        //nothing happens [TestCase(@"C:\Program Files (x86)\Vim\vim80\vim.exe", false, null)]//without mouse
+//        //todo C:\Users\greg\Desktop\ZZZ open in\eclipse-cpp-neon-2-win32-x86_64\eclipse\eclipse.exe
+//        //todo C:\Users\greg\Desktop\ZZZ open in\eclipse-java-neon-2-win32-x86_64\eclipse\eclipse.exe
+//        //todo C:\Users\greg\Desktop\ZZZ open in\eclipse-jee-neon-2-win32-x86_64\eclipse\eclipse.exe
+//        //todo C:\Users\greg\Desktop\ZZZ open in\Z this is emacs _ eclipse-php-neon-2-win32-x86_64\eclipse\eclipse.exe
+//        public void InvokeCommandTest_TextApps(string executableFullPath, bool separateProcessPerFileToBeOpened, bool useShellExecute)
+//        {
+//            // Arrange
+//            var actualFilesToBeOpened = new List<string>
+//            {
+//                @"C:\Temp\a.txt",
+//                @"C:\Temp\b.txt",
+//                //@"C:\Temp\a.linq",
+//                //@"C:\Temp\b.sql",
+//            };
 
-            // Act
-            Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
-        }
+//            // Act
+//            Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
+//        }
 
         //[Test()]
         //[Category("I")]
