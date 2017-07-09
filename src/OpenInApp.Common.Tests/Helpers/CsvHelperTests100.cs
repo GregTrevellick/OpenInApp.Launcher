@@ -102,7 +102,7 @@ namespace OpenInApp.Common.Tests.Helpers
         public void GetTypicalFileExtensionAsListTest_Empty()
         {
             //Arrange
-            var expected = new List<string> { "" };
+            var expected = new List<string>();
             var csvString = "";
 
             //Act
@@ -117,7 +117,7 @@ namespace OpenInApp.Common.Tests.Helpers
         public void GetTypicalFileExtensionAsListTest_Null()
         {
             //Arrange
-            var expected = new List<string> { "" };
+            var expected = new List<string>();
 
             //Act
             var actual = CsvHelper.GetTypicalFileExtensionAsList(null);
@@ -160,7 +160,7 @@ namespace OpenInApp.Common.Tests.Helpers
         public void GetFileTypeExtensionsTest_PopulatedList()
         {
             //Arrange
-            var expected = new List<string> { "exe", "doc" };
+            var expected = new List<string> { ".exe", ".doc" };
             var fullFileNames = new List<string> { "a.exe", "b.doc", "c" };
 
             //Act

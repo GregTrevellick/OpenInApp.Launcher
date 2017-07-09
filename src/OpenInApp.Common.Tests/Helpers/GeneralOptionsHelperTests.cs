@@ -14,85 +14,85 @@ namespace OpenInApp.Common.Tests.Helpers
     {
         private const string OverrideAtTestExecutionTime = "OverrideAtTestExecutionTime";
 
-        [Test()]
-        [Category("I")]
-        //[TestCase(KeyToExecutableEnum.AltovaXMLSpy, FileToBeOpenedKind.Xml)]
-        //[TestCase(KeyToExecutableEnum.ChromeCanary, FileToBeOpenedKind.Any)]
-        //[TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, FileToBeOpenedKind.Any)]
-        //[TestCase(KeyToExecutableEnum.Gimp, FileToBeOpenedKind.StillImage)]
-        //[TestCase(KeyToExecutableEnum.MarkdownMonster, FileToBeOpenedKind.Markdown)]
-        //[TestCase(KeyToExecutableEnum.MSPaint, FileToBeOpenedKind.StillImage)]
-        //[TestCase(KeyToExecutableEnum.Opera, FileToBeOpenedKind.Any)]
-        //[TestCase(KeyToExecutableEnum.OperaDeveloperEdition, FileToBeOpenedKind.Any)]
-        //[TestCase(KeyToExecutableEnum.PaintDotNet, FileToBeOpenedKind.StillImage)]
-        //[TestCase(KeyToExecutableEnum.Vivaldi, FileToBeOpenedKind.Any)]
-        //[TestCase(KeyToExecutableEnum.XamarinStudio, FileToBeOpenedKind.Any)]
-        //[TestCase(KeyToExecutableEnum.TreeSizeFree, ArtefactTypeToOpen.Folder)]
-        //[TestCase(KeyToExecutableEnum.VS2012, FileToBeOpenedKind.Code)]
-        //[TestCase(KeyToExecutableEnum.VS2013, FileToBeOpenedKind.Code)]
-        //[TestCase(KeyToExecutableEnum.VS2015, FileToBeOpenedKind.Code)]
-        //[TestCase(KeyToExecutableEnum.VS2017Community, FileToBeOpenedKind.Code)]
-        //[TestCase(KeyToExecutableEnum.VS2017Enterprise, FileToBeOpenedKind.Code)]
-        //[TestCase(KeyToExecutableEnum.VS2017Professional, FileToBeOpenedKind.Code)]
-        //[TestCase(KeyToExecutableEnum.Emacs, FileToBeOpenedKind.Code)]
-        //[TestCase(KeyToExecutableEnum.WinDirStat, ArtefactTypeToOpen.Folder)]
-        //[TestCase(KeyToExecutableEnum.SQLServerManagementStudio, ArtefactTypeToOpen.File)]
-        public void InvokeCommandTest(KeyToExecutableEnum keyToExecutableEnum, FileToBeOpenedKind fileToBeOpenedKind)
-        {
-            // Arrange
-            List<string> actualFilesToBeOpened;
+        //[Test()]
+        //[Category("I")]
+        ////[TestCase(KeyToExecutableEnum.AltovaXMLSpy, FileToBeOpenedKind.Xml)]
+        ////[TestCase(KeyToExecutableEnum.ChromeCanary, FileToBeOpenedKind.Any)]
+        ////[TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, FileToBeOpenedKind.Any)]
+        ////[TestCase(KeyToExecutableEnum.Gimp, FileToBeOpenedKind.StillImage)]
+        ////[TestCase(KeyToExecutableEnum.MarkdownMonster, FileToBeOpenedKind.Markdown)]
+        ////[TestCase(KeyToExecutableEnum.MSPaint, FileToBeOpenedKind.StillImage)]
+        ////[TestCase(KeyToExecutableEnum.Opera, FileToBeOpenedKind.Any)]
+        ////[TestCase(KeyToExecutableEnum.OperaDeveloperEdition, FileToBeOpenedKind.Any)]
+        ////[TestCase(KeyToExecutableEnum.PaintDotNet, FileToBeOpenedKind.StillImage)]
+        ////[TestCase(KeyToExecutableEnum.Vivaldi, FileToBeOpenedKind.Any)]
+        ////[TestCase(KeyToExecutableEnum.XamarinStudio, FileToBeOpenedKind.Any)]
+        ////[TestCase(KeyToExecutableEnum.TreeSizeFree, ArtefactTypeToOpen.Folder)]
+        ////[TestCase(KeyToExecutableEnum.VS2012, FileToBeOpenedKind.Code)]
+        ////[TestCase(KeyToExecutableEnum.VS2013, FileToBeOpenedKind.Code)]
+        ////[TestCase(KeyToExecutableEnum.VS2015, FileToBeOpenedKind.Code)]
+        ////[TestCase(KeyToExecutableEnum.VS2017Community, FileToBeOpenedKind.Code)]
+        ////[TestCase(KeyToExecutableEnum.VS2017Enterprise, FileToBeOpenedKind.Code)]
+        ////[TestCase(KeyToExecutableEnum.VS2017Professional, FileToBeOpenedKind.Code)]
+        ////[TestCase(KeyToExecutableEnum.Emacs, FileToBeOpenedKind.Code)]
+        ////[TestCase(KeyToExecutableEnum.WinDirStat, ArtefactTypeToOpen.Folder)]
+        ////[TestCase(KeyToExecutableEnum.SQLServerManagementStudio, ArtefactTypeToOpen.File)]
+        //public void InvokeCommandTest(KeyToExecutableEnum keyToExecutableEnum, FileToBeOpenedKind fileToBeOpenedKind)
+        //{
+        //    // Arrange
+        //    List<string> actualFilesToBeOpened;
 
-            #region Set files to be opened
-            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        //    #region Set files to be opened
+        //    var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-            switch (fileToBeOpenedKind)
-            {
-                case FileToBeOpenedKind.Any:
-                case FileToBeOpenedKind.Code:
-                case FileToBeOpenedKind.Markdown:
-                case FileToBeOpenedKind.Xml:
-                    actualFilesToBeOpened = new List<string>
-                    {
-                        path + @"\TestFiles\AnyText1.txt",
-                        path + @"\TestFiles\AnyText2.TXT",
-                    };
-                    break;
-                case FileToBeOpenedKind.MovingImage:
-                    actualFilesToBeOpened = new List<string>
-                    {
-                        path + @"\TestFiles\MovingImage1.mpg",
-                        path + @"\TestFiles\MovingImage2.mpeg",
-                    };
-                    break;
-                case FileToBeOpenedKind.StillImage:
-                    actualFilesToBeOpened = new List<string>
-                    {
-                        path + @"\TestFiles\StillImage1.jpg",
-                        path + @"\TestFiles\StillImage2.JPG",
-                    };
-                    break;
-                default:
-                    throw new NotImplementedException();
-            }
-            #endregion
+        //    switch (fileToBeOpenedKind)
+        //    {
+        //        case FileToBeOpenedKind.Any:
+        //        case FileToBeOpenedKind.Code:
+        //        case FileToBeOpenedKind.Markdown:
+        //        case FileToBeOpenedKind.Xml:
+        //            actualFilesToBeOpened = new List<string>
+        //            {
+        //                path + @"\TestFiles\AnyText1.txt",
+        //                path + @"\TestFiles\AnyText2.TXT",
+        //            };
+        //            break;
+        //        case FileToBeOpenedKind.MovingImage:
+        //            actualFilesToBeOpened = new List<string>
+        //            {
+        //                path + @"\TestFiles\MovingImage1.mpg",
+        //                path + @"\TestFiles\MovingImage2.mpeg",
+        //            };
+        //            break;
+        //        case FileToBeOpenedKind.StillImage:
+        //            actualFilesToBeOpened = new List<string>
+        //            {
+        //                path + @"\TestFiles\StillImage1.jpg",
+        //                path + @"\TestFiles\StillImage2.JPG",
+        //            };
+        //            break;
+        //        default:
+        //            throw new NotImplementedException();
+        //    }
+        //    #endregion
 
-            var actualPathToExeHelper = new ApplicationToOpenHelper();
-            var applicationToOpenDto = actualPathToExeHelper.GetApplicationToOpenDto(keyToExecutableEnum);
-            var executableFullPath = GeneralOptionsHelper.GetActualPathToExe(keyToExecutableEnum);
+        //    var actualPathToExeHelper = new ApplicationToOpenHelper();
+        //    var applicationToOpenDto = actualPathToExeHelper.GetApplicationToOpenDto(keyToExecutableEnum);
+        //    var executableFullPath = GeneralOptionsHelper.GetActualPathToExe(keyToExecutableEnum);
 
-            // Act
-            OpenInAppHelper.InvokeCommand(
-                actualFilesToBeOpened,
-                executableFullPath,
-                applicationToOpenDto.SeparateProcessPerFileToBeOpened,
-                applicationToOpenDto.UseShellExecute,
-                applicationToOpenDto.ArtefactTypeToOpen);
-        }
+        //    // Act
+        //    OpenInAppHelper.InvokeCommand(
+        //        actualFilesToBeOpened,
+        //        executableFullPath,
+        //        applicationToOpenDto.SeparateProcessPerFileToBeOpened,
+        //        applicationToOpenDto.UseShellExecute,
+        //        applicationToOpenDto.ArtefactTypeToOpen);
+        //}
 
         [Test()]
         [TestCase(KeyToExecutableEnum.AltovaXMLSpy, @"C:\Program Files (x86)\Altova\XMLSpy2016\XMLSpy.exe")]
         [TestCase(KeyToExecutableEnum.ChromeCanary, OverrideAtTestExecutionTime)]
-        [TestCase(KeyToExecutableEnum.Emacs, null)]
+        //[TestCase(KeyToExecutableEnum.Emacs, null)]
         [TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, @"C:\Program Files\Firefox Developer Edition\firefox.exe")]
         [TestCase(KeyToExecutableEnum.Gimp, @"C:\Program Files\GIMP 2\bin\gimp-2.8.exe")]
         [TestCase(KeyToExecutableEnum.MarkdownMonster, @"C:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe")]

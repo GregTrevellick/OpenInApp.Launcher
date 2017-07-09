@@ -58,70 +58,70 @@ namespace OpenInApp.Common.Tests.Helpers
             Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
         }
 
-        [Test()]
-        [Category("I")]
-        //works with 2 files, 1 browser window 2 tabs but opens canary        [TestCase(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", null)]
-        //works with 2 files, 1 browser window 2 tabs but opens aurora         [TestCase(@"C:\Program Files (x86)\Mozilla Firefox\firefox.exe", null)]
-        //works but ignores the args, when 2 argsat least  [TestCase(@"C:\Program Files (x86)\Internet Explorer\iexplore.exe", null)]
-        //nothing happens [TestCase(@"C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdge.exe", null)]
-        //nothing happens [TestCase(@"C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdge.exe", false)]
-        //nothing happens [TestCase(@"C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe", null)]// cp = content process
-        //nothing happens [TestCase(@"C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe", false)]// cp = content process
-        public void InvokeCommandTest_BrowserApps(string executableFullPath, bool useShellExecute)
-        {
-            // Arrange
-            bool separateProcessPerFileToBeOpened = false;
-            var actualFilesToBeOpened = new List<string>
-            {
-                @"C:\Temp\a.txt",
-                @"C:\Temp\b.txt"
-            };
+        //[Test()]
+        //[Category("I")]
+        ////works with 2 files, 1 browser window 2 tabs but opens canary        [TestCase(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", null)]
+        ////works with 2 files, 1 browser window 2 tabs but opens aurora         [TestCase(@"C:\Program Files (x86)\Mozilla Firefox\firefox.exe", null)]
+        ////works but ignores the args, when 2 argsat least  [TestCase(@"C:\Program Files (x86)\Internet Explorer\iexplore.exe", null)]
+        ////nothing happens [TestCase(@"C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdge.exe", null)]
+        ////nothing happens [TestCase(@"C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdge.exe", false)]
+        ////nothing happens [TestCase(@"C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe", null)]// cp = content process
+        ////nothing happens [TestCase(@"C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe", false)]// cp = content process
+        //public void InvokeCommandTest_BrowserApps(string executableFullPath, bool useShellExecute)
+        //{
+        //    // Arrange
+        //    bool separateProcessPerFileToBeOpened = false;
+        //    var actualFilesToBeOpened = new List<string>
+        //    {
+        //        @"C:\Temp\a.txt",
+        //        @"C:\Temp\b.txt"
+        //    };
 
-            // Act
-            Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
-        }
+        //    // Act
+        //    Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
+        //}
 
-        [Test()]
-        [Category("I")]
-        //works with multiple args, file or folder, but only uses the final argument [TestCase(@"C:\Program Files (x86)\FastStone Image Viewer\FSViewer.exe", true, null)]
-        //works but args ignored even if single arg that is a directory [TestCase(@"C:\Program Files (x86)\DeDup\DeDup.exe", false)]
-        //works but args ignored even if single arg that is a directory or jpg [TestCase(@"C:\Program Files (x86)\Windows Live\Photo Gallery\WLXPhotoGallery.exe", null)]
-        //nothing happens [TestCase(@"C:\Program Files (x86)\DeDup\DeDup.exe", null)]
-        public void InvokeCommandTest_ImageApps(string executableFullPath, bool separateProcessPerFileToBeOpened, bool useShellExecute)
-        {
-            // Arrange
-            var actualFilesToBeOpened = new List<string>
-            {
-                  @"C:\Temp\a.jpg",
-                  @"C:\Temp\b.jpg",
-                  //@"C:\Temp",
-            };
+        //[Test()]
+        //[Category("I")]
+        ////works with multiple args, file or folder, but only uses the final argument [TestCase(@"C:\Program Files (x86)\FastStone Image Viewer\FSViewer.exe", true, null)]
+        ////works but args ignored even if single arg that is a directory [TestCase(@"C:\Program Files (x86)\DeDup\DeDup.exe", false)]
+        ////works but args ignored even if single arg that is a directory or jpg [TestCase(@"C:\Program Files (x86)\Windows Live\Photo Gallery\WLXPhotoGallery.exe", null)]
+        ////nothing happens [TestCase(@"C:\Program Files (x86)\DeDup\DeDup.exe", null)]
+        //public void InvokeCommandTest_ImageApps(string executableFullPath, bool separateProcessPerFileToBeOpened, bool useShellExecute)
+        //{
+        //    // Arrange
+        //    var actualFilesToBeOpened = new List<string>
+        //    {
+        //          @"C:\Temp\a.jpg",
+        //          @"C:\Temp\b.jpg",
+        //          //@"C:\Temp",
+        //    };
 
-            // Act
-            Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
-        }
+        //    // Act
+        //    Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
+        //}
 
-        [Test()]
-        [Category("I")]
-        //works, but needs testing with files actually locked [TestCase(@"C:\Program Files\Unlocker\Unlocker.exe", null)]
-        //opens app but even with just 1 arg containing folder name the app doesnt use the argument [TestCase(@"C:\Program Files (x86)\File Renamer\FileRenamer.exe", null)]
-        //nothing happens even just 1 file [TestCase(@"C:\Program Files (x86)\Windows Media Player\wmplayer.exe", null)]
-        //works, with 1 file at least, but video is black! [TestCase(@"C:\Program Files (x86)\Windows Media Player\wmplayer.exe", false)]
-        public void InvokeCommandTest_TODOCategory(string executableFullPath, bool useShellExecute)
-        {
-            // Arrange
-            bool separateProcessPerFileToBeOpened = false;
-            var actualFilesToBeOpened = new List<string>
-            {
-                @"C:\Temp\a.mpg",
-                //@"C:\Temp\b.mpeg",
-                //@"C:\Temp\b.txt",
-                //@"C:\Temp",
-            };
+        //[Test()]
+        //[Category("I")]
+        ////works, but needs testing with files actually locked [TestCase(@"C:\Program Files\Unlocker\Unlocker.exe", null)]
+        ////opens app but even with just 1 arg containing folder name the app doesnt use the argument [TestCase(@"C:\Program Files (x86)\File Renamer\FileRenamer.exe", null)]
+        ////nothing happens even just 1 file [TestCase(@"C:\Program Files (x86)\Windows Media Player\wmplayer.exe", null)]
+        ////works, with 1 file at least, but video is black! [TestCase(@"C:\Program Files (x86)\Windows Media Player\wmplayer.exe", false)]
+        //public void InvokeCommandTest_TODOCategory(string executableFullPath, bool useShellExecute)
+        //{
+        //    // Arrange
+        //    bool separateProcessPerFileToBeOpened = false;
+        //    var actualFilesToBeOpened = new List<string>
+        //    {
+        //        @"C:\Temp\a.mpg",
+        //        //@"C:\Temp\b.mpeg",
+        //        //@"C:\Temp\b.txt",
+        //        //@"C:\Temp",
+        //    };
 
-            // Act
-            Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
-        }
+        //    // Act
+        //    Act(actualFilesToBeOpened, executableFullPath, separateProcessPerFileToBeOpened, useShellExecute);
+        //}
 
         private void Act(IEnumerable<string> actualFilesToBeOpened, string executableFullPath, bool separateProcessPerFileToBeOpened, bool useShellExecute)
         {

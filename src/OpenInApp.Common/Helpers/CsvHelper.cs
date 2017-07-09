@@ -9,7 +9,14 @@ namespace OpenInApp.Common.Helpers
     {
         public static IEnumerable<string> GetTypicalFileExtensionAsList(string typicalFileExtensionsAsCsv)
         {
-            return typicalFileExtensionsAsCsv.Split(',');
+            if (string.IsNullOrEmpty(typicalFileExtensionsAsCsv))
+            {
+                return new List<string>();
+            }
+            else
+            {
+                return typicalFileExtensionsAsCsv.Split(',');
+            }
         }
 
         public static bool AreTypicalFileExtensions(IEnumerable<string> fullFileNames, IEnumerable<string> typicalFileExtensions)
@@ -42,9 +49,17 @@ namespace OpenInApp.Common.Helpers
         {
             var result = new List<string>();
 
-            foreach (var fullFileName in fullFileNames)
+            if (fullFileNames != null)
             {
-                result.Add(Path.GetExtension(fullFileName));
+                foreach (var fullFileName in fullFileNames)
+                {
+                    var ext = Path.GetExtension(fullFileName);
+
+                    if (!string.IsNullOrEmpty(ext))
+                    {
+                        result.Add(ext);
+                    }
+                }
             }
 
             return result;

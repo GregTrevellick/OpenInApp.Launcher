@@ -32,7 +32,7 @@ namespace OpenInApp.Common.Tests.Helpers
             var actual = AllAppsHelper.GetDefaultTypicalFileExtensionsAsCsv(testList);
 
             //Assert
-            Assert.AreEqual("a,b,c", actual);
+            Assert.AreEqual("", actual);
         }
 
         [Test()]
