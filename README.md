@@ -64,6 +64,7 @@ Inspired and adapted from these original code repositories
   - [Open in NotePad++](https://github.com/CalvinAllen/OpenInNotepadPlusPlus  "Open in NotePad++") 
 - [Cem Yabansu](https://github.com/cemyabansu) 
   - [Publish In Crm](https://github.com/cemyabansu/PublishInCrm "Publish In Crm")
+- [Allen Conway](http://www.allenconway.net/2015/06/using-opencover-and-reportgenerator-to.html) 
 
 Additional thanks to
 

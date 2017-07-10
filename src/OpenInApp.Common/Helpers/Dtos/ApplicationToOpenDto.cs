@@ -10,7 +10,7 @@ namespace OpenInApp.Common.Helpers.Dtos
         public bool? OpenIndividualFilesInFolderRatherThanFolderItself { get; set; }
         public string SecondaryFilePathSegment { get; set; }
         public bool SecondaryFilePathSegmentHasMultipleVersions { get; set; }
-        public bool SeparateProcessPerFileToBeOpened { get; set; } //always true, ergo can delete this property ?
+        public bool SeparateProcessPerFileToBeOpened { get; set; } 
         public bool UseShellExecute { get; set; }
     }
 }

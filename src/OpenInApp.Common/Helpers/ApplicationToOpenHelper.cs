@@ -48,6 +48,7 @@ namespace OpenInApp.Common.Helpers
                 case KeyToExecutableEnum.AltovaXMLSpy:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Altova\XMLSpy9999";
                     applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions = true;
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.DefaultTypicalFileExtensions = new List<string>
                     {
                         #region Extensions
@@ -135,6 +136,7 @@ namespace OpenInApp.Common.Helpers
                     break;
                 case KeyToExecutableEnum.FirefoxDeveloperEdition:
                     applicationToOpenDto.SecondaryFilePathSegment = "Firefox Developer Edition";
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     break;
                 case KeyToExecutableEnum.Gimp:
                     applicationToOpenDto.SecondaryFilePathSegment = @"GIMP 2\bin";
@@ -260,31 +262,37 @@ namespace OpenInApp.Common.Helpers
                 case KeyToExecutableEnum.VS2012:
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 11.0\Common7\IDE";
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2013:
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 12.0\Common7\IDE";
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2015:
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 14.0\Common7\IDE";
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2017Community:
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Community\Common7\IDE";
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2017Enterprise:
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Enterprise\Common7\IDE";
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2017Professional:
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Professional\Common7\IDE";
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.WinDirStat:

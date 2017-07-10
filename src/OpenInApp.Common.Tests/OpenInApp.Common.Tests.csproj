@@ -130,7 +130,6 @@
     <Compile Include="Helpers\ArtefactsHelperTests100.cs" />
     <Compile Include="Helpers\CsvHelperTests100.cs" />
     <Compile Include="Helpers\KeyToExecutableTests100.cs" />
-    <Compile Include="Helpers\OpenInAppHelperTestsORIG.cs" />
     <Compile Include="Helpers\OpenInAppHelperTestsTODO.cs" />
     <Compile Include="Helpers\GeneralOptionsHelperTests.cs" />
     <Compile Include="Helpers\AllAppsHelperTests100.cs" />
@@ -197,7 +196,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="TestFiles\z.linq" />
-    <None Include="RunNunitTestsWithOpenCover_AllenConway.bat" />
+    <None Include="GetCodeCoverageUsingOpenCover.bat" />
   </ItemGroup>
   <ItemGroup />
   <Choose>
