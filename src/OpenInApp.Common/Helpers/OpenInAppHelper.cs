@@ -67,6 +67,19 @@ namespace OpenInApp.Common.Helpers
 
         private static void InvokeProcess(string arguments, string fileName, bool useShellExecute, string workingDirectory)
         {
+            //if (fileName.ToLower() == "vivaldi.exe")
+            //{
+            //    var startVivaldi = new ProcessStartInfo()
+            //    {
+            //        CreateNoWindow = true,
+            //        FileName = fileName,
+            //        UseShellExecute = useShellExecute,
+            //        WindowStyle = ProcessWindowStyle.Hidden,
+            //        WorkingDirectory = workingDirectory
+            //    };
+            //    Process.Start(startVivaldi);
+            //}
+
             var start = new ProcessStartInfo()
             {
                 Arguments = arguments,
