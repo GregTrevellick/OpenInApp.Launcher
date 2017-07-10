@@ -11,7 +11,8 @@ namespace OpenInApp.Common.Tests.Helpers
         private const string altovaXMLSpy = @"D:\Program Files (x86)\Altova\XMLSpy2017\XMLSpy.exe";
         private const string firefoxDeveloperEdition = @"C:\Program Files\Firefox Developer Edition\firefox.exe";
         private const string gimp = @"D:\Program Files\GIMP 2\bin\gimp-2.8.exe";
-        private const string markdownMonster = @"D:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
+        //private const string markdownMonster = @"D:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
+        private const string markdownMonster = @"C:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
         private const string msPaint = @"C:\Windows\system32\mspaint.exe";
         private const string opera = @"D:\Program Files\Opera\launcher.exe";
         private const string operaDeveloperEdition = @"D:\Program Files\Opera developer\launcher.exe";
@@ -22,38 +23,38 @@ namespace OpenInApp.Common.Tests.Helpers
         private const string vs2017Community = @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe";
         private const string winDirStat = @"D:\Program Files (x86)\WinDirStat\windirstat.exe";
 
-        [Test()]
-        [Category("E2E")]
+//        [Test()]
+//        [Category("E2E")]
         //[TestCase(KeyToExecutableEnum.AltovaXMLSpy, altovaXMLSpy)]//opens a single jpg fine
         //[TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, firefoxDeveloperEdition)]//opens a single jpg fine
         //[TestCase(KeyToExecutableEnum.Gimp, gimp)]//opens a single jpg fine
-        [TestCase(KeyToExecutableEnum.MarkdownMonster, markdownMonster)]
+        //[TestCase(KeyToExecutableEnum.MarkdownMonster, markdownMonster)]//opens a single text file fine (in the office at least)
         //[TestCase(KeyToExecutableEnum.MSPaint, msPaint)]//opens a single jpg fine
         //[TestCase(KeyToExecutableEnum.Opera, opera)]//opens a single jpg fine
         //[TestCase(KeyToExecutableEnum.OperaDeveloperEdition, operaDeveloperEdition)]//opens a single jpg fine
-        [TestCase(KeyToExecutableEnum.PaintDotNet, paintDotNet)]
+        //[TestCase(KeyToExecutableEnum.PaintDotNet, paintDotNet)]//opens a single jpg fine
         //[TestCase(KeyToExecutableEnum.TreeSizeFree, treeSizeFree)]//opens a single jpg's folder fine
-        [TestCase(KeyToExecutableEnum.Vivaldi, vivaldi)]
+//        [TestCase(KeyToExecutableEnum.Vivaldi, vivaldi)]
         //[TestCase(KeyToExecutableEnum.VS2015, vs2015)]//opens a single jpg fine
         //[TestCase(KeyToExecutableEnum.VS2017Community, vs2017Community)]//opens a single jpg fine (albeit in vs2017's default app of MSPaint in my case)
         //[TestCase(KeyToExecutableEnum.WinDirStat, winDirStat)]//opens a single jpg's folder fine
-        public void InvokeCommandTest_SingleArtefact(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath)
-        {
-            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single");
-        }
+//        public void InvokeCommandTest_SingleArtefact(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath)
+//        {
+//            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single");
+//        }
 
         [Test()]
         [Category("E2E")]
         //[TestCase(KeyToExecutableEnum.AltovaXMLSpy, altovaXMLSpy)]//yes opens both in a single xmpspy
         //[TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, firefoxDeveloperEdition)]//yes opens both in a single browser
         //[TestCase(KeyToExecutableEnum.Gimp, gimp)]//yes opens a single app for both images
-        [TestCase(KeyToExecutableEnum.MarkdownMonster, markdownMonster)]
+        //[TestCase(KeyToExecutableEnum.MarkdownMonster, markdownMonster)]//yes opens both in a single IDE
         //[TestCase(KeyToExecutableEnum.MSPaint, msPaint)]//yes opens both images fine
         //[TestCase(KeyToExecutableEnum.Opera, opera)]//yes opens both in 1 browser
         //[TestCase(KeyToExecutableEnum.OperaDeveloperEdition, operaDeveloperEdition)]//yes opens both in 1 browser
         //[TestCase(KeyToExecutableEnum.PaintDotNet, paintDotNet)]//yes opens a single app for both images
         //[TestCase(KeyToExecutableEnum.TreeSizeFree, treeSizeFree)]//yes opens both folders
-        [TestCase(KeyToExecutableEnum.Vivaldi, vivaldi)]
+//        [TestCase(KeyToExecutableEnum.Vivaldi, vivaldi)]
         //[TestCase(KeyToExecutableEnum.VS2015, vs2015)]//yes opens both in a single IDE
         //[TestCase(KeyToExecutableEnum.VS2017Community, vs2017Community)]//yes opens both in a single IDE
         //[TestCase(KeyToExecutableEnum.WinDirStat, winDirStat)]//yes opens both folders
@@ -86,15 +87,18 @@ namespace OpenInApp.Common.Tests.Helpers
                             case KeyToExecutableEnum.VS2015:
                             case KeyToExecutableEnum.VS2017Community:
                             case KeyToExecutableEnum.WinDirStat:
-                                artefactsToBeOpened = new List<string> { @"D:\Temp\1.jpg" };
+                                //artefactsToBeOpened = new List<string> { @"D:\Temp\1.jpg" };
+                                artefactsToBeOpened = new List<string> { @"C:\Temp\1.jpg" };
                                 break;
                             default:
-                                artefactsToBeOpened = new List<string> { @"D:\Temp\a.txt" };
+                                //artefactsToBeOpened = new List<string> { @"D:\Temp\a.txt" };
+                                artefactsToBeOpened = new List<string> { @"C:\Temp\a.txt" };
                                 break;
                         }
                         break;
                     case ArtefactTypeToOpen.Folder:
-                        artefactsToBeOpened = new List<string> { @"D:\Temp\" };
+                        //artefactsToBeOpened = new List<string> { @"D:\Temp\" };
+                        artefactsToBeOpened = new List<string> { @"C:\Temp\" };
                         break;
                 }
             }
@@ -127,20 +131,26 @@ namespace OpenInApp.Common.Tests.Helpers
 
         private List<string> artefactsToBeOpened_TextFiles = new List<string>
                     {
-                        @"D:\Temp\a.txt",
-                        @"D:\Temp\b.txt",
+                        //@"D:\Temp\a.txt",
+                        //@"D:\Temp\b.txt",
+                        @"C:\Temp\a.txt",
+                        @"C:\Temp\b.txt",
                     };
 
         private List<string> artefactsToBeOpened_ImageFiles = new List<string>
                     {
-                        @"D:\Temp\1.jpg",
-                        @"D:\Temp\2.jpg",
+                        //@"D:\Temp\1.jpg",
+                        //@"D:\Temp\2.jpg",
+                        @"C:\Temp\1.jpg",
+                        @"C:\Temp\2.jpg",
                     };
 
         private List<string> artefactsToBeOpened_Folders = new List<string>
                     {
-                        @"D:\Temp\",
-                        @"D:\Temp\Test",
+                        //@"D:\Temp\",
+                        //@"D:\Temp\Test",
+                        @"C:\Temp\",
+                        @"C:\Temp\Test",
                     };
 
         //Open in intellij
