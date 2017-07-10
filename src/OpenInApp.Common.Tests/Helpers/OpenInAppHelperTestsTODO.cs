@@ -11,7 +11,8 @@ namespace OpenInApp.Common.Tests.Helpers
         private const string altovaXMLSpy = @"D:\Program Files (x86)\Altova\XMLSpy2017\XMLSpy.exe";
         private const string firefoxDeveloperEdition = @"C:\Program Files\Firefox Developer Edition\firefox.exe";
         private const string gimp = @"D:\Program Files\GIMP 2\bin\gimp-2.8.exe";
-        private const string markdownMonster = @"C:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";//@"D:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
+        //private const string markdownMonster = @"C:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
+        private const string markdownMonster = @"D:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
         private const string msPaint = @"C:\Windows\system32\mspaint.exe";
         private const string opera = @"D:\Program Files\Opera\launcher.exe";
         private const string operaDeveloperEdition = @"D:\Program Files\Opera developer\launcher.exe";
