@@ -33,6 +33,7 @@ namespace OpenInApp.Common.Helpers
                 DefaultTypicalFileExtensions = new List<string> { "*" },
                 ExecutableFilesToBrowseFor = new List<string> { keyToExecutableEnum.Description() },
                 ///////////////////////////////InitialFolderType = InitialFolderType.ProgramFilesX86,
+                ProcessWithinProcess = false,
                 OpenIndividualFilesInFolderRatherThanFolderItself = null,
                 SecondaryFilePathSegmentHasMultipleVersions = false,
                 SeparateProcessPerFileToBeOpened = true,
@@ -257,6 +258,8 @@ namespace OpenInApp.Common.Helpers
                     break;
                 case KeyToExecutableEnum.Vivaldi:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Vivaldi\Application";
+                    applicationToOpenDto.ProcessWithinProcess = true;
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     ///////////////////////////////applicationToOpenDto.InitialFolderType = InitialFolderType.LocalApplicationData;
                     break;
                 case KeyToExecutableEnum.VS2012:

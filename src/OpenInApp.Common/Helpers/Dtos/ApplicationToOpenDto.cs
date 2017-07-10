@@ -8,6 +8,7 @@ namespace OpenInApp.Common.Helpers.Dtos
         public IEnumerable<string> DefaultTypicalFileExtensions { get; set; }
         public IEnumerable<string> ExecutableFilesToBrowseFor { get; set; }
         public bool? OpenIndividualFilesInFolderRatherThanFolderItself { get; set; }
+        public bool ProcessWithinProcess { get; set; }
         public string SecondaryFilePathSegment { get; set; }
         public bool SecondaryFilePathSegmentHasMultipleVersions { get; set; }
         public bool SeparateProcessPerFileToBeOpened { get; set; } 

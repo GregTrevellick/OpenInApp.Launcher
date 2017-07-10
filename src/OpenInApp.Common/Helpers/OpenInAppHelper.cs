@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace OpenInApp.Common.Helpers
@@ -24,7 +25,8 @@ namespace OpenInApp.Common.Helpers
             string executableFullPath, 
             bool separateProcessPerFileToBeOpened, 
             bool useShellExecute,
-            ArtefactTypeToOpen artefactTypeToOpen)
+            ArtefactTypeToOpen artefactTypeToOpen,
+            bool processWithinProcess)
         {
             string fileName;
             string workingDirectory = string.Empty;
@@ -44,7 +46,7 @@ namespace OpenInApp.Common.Helpers
                 foreach (var actualArtefactToBeOpened in actualArtefactsToBeOpened)
                 {
                     var argument = GetSingleArgument(actualArtefactToBeOpened);
-                    InvokeProcess(argument, fileName, useShellExecute, workingDirectory);
+                    InvokeProcess(argument, fileName, useShellExecute, workingDirectory, processWithinProcess);
                 }
             }
             else
@@ -55,7 +57,7 @@ namespace OpenInApp.Common.Helpers
                     arguments += GetSingleArgument(actualArtefactToBeOpened) + " ";
                 }
                 arguments.TrimEnd(' ');
-                InvokeProcess(arguments, fileName, useShellExecute, workingDirectory);
+                InvokeProcess(arguments, fileName, useShellExecute, workingDirectory, processWithinProcess);
             }
         }
 
@@ -65,21 +67,8 @@ namespace OpenInApp.Common.Helpers
             return "\"" + argument + "\"";
         }
 
-        private static void InvokeProcess(string arguments, string fileName, bool useShellExecute, string workingDirectory)
+        private static void InvokeProcess(string arguments, string fileName, bool useShellExecute, string workingDirectory, bool processWithinProcess)
         {
-            //if (fileName.ToLower() == "vivaldi.exe")
-            //{
-            //    var startVivaldi = new ProcessStartInfo()
-            //    {
-            //        CreateNoWindow = true,
-            //        FileName = fileName,
-            //        UseShellExecute = useShellExecute,
-            //        WindowStyle = ProcessWindowStyle.Hidden,
-            //        WorkingDirectory = workingDirectory
-            //    };
-            //    Process.Start(startVivaldi);
-            //}
-
             var start = new ProcessStartInfo()
             {
                 Arguments = arguments,
@@ -92,7 +81,29 @@ namespace OpenInApp.Common.Helpers
 
             try
             {
-                using (Process.Start(start)) { }
+                if (processWithinProcess)
+                {
+                    var startNoArgs = new ProcessStartInfo()
+                    {
+                        CreateNoWindow = true,
+                        FileName = fileName,
+                        UseShellExecute = useShellExecute,
+                        WindowStyle = ProcessWindowStyle.Hidden,
+                        WorkingDirectory = workingDirectory
+                    };
+
+                    using (var proc = Process.Start(startNoArgs))
+                    {
+                        ///////////////////////////////////////////////////////////////////////////////////////////proc.WaitForInputIdle();
+                        ///////////////////////////////////////////////////////////////////////////////////////////proc.WaitForInputIdle(-1);
+                        Thread.Sleep(3000);
+                        using (Process.Start(start)) { }
+                    }
+                }
+                else
+                {
+                    using (Process.Start(start)) { }
+                }
             }
             catch (Exception ex)
             {

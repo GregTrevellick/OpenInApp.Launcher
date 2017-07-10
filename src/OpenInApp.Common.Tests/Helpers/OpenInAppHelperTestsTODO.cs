@@ -17,7 +17,8 @@ namespace OpenInApp.Common.Tests.Helpers
         private const string operaDeveloperEdition = @"D:\Program Files\Opera developer\launcher.exe";
         private const string paintDotNet = @"C:\Program Files\paint.net\PaintDotNet.exe";
         private const string treeSizeFree = @"D:\Program Files (x86)\JAM Software\TreeSize Free\TreeSizeFree.exe";
-        private const string vivaldi = @"C:\Users\GregoryT\AppData\Local\Vivaldi\Application\vivaldi.exe";//@"D:\Users\gtrev\AppData\Local\Vivaldi\Application\vivaldi.exe";
+        //private const string vivaldi = @"C:\Users\GregoryT\AppData\Local\Vivaldi\Application\vivaldi.exe";
+        private const string vivaldi = @"D:\Users\gtrev\AppData\Local\Vivaldi\Application\vivaldi.exe";
         private const string vs2015 = @"D:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe";
         private const string vs2017Community = @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe";
         private const string winDirStat = @"D:\Program Files (x86)\WinDirStat\windirstat.exe";
@@ -33,7 +34,7 @@ namespace OpenInApp.Common.Tests.Helpers
         //[TestCase(KeyToExecutableEnum.OperaDeveloperEdition, operaDeveloperEdition)]//opens a single jpg fine
         //[TestCase(KeyToExecutableEnum.PaintDotNet, paintDotNet)]//opens a single jpg fine
         //[TestCase(KeyToExecutableEnum.TreeSizeFree, treeSizeFree)]//opens a single jpg's folder fine
-        [TestCase(KeyToExecutableEnum.Vivaldi, vivaldi)]
+        //[TestCase(KeyToExecutableEnum.Vivaldi, vivaldi)]//opens a single jpg fine
         //[TestCase(KeyToExecutableEnum.VS2015, vs2015)]//opens a single jpg fine
         //[TestCase(KeyToExecutableEnum.VS2017Community, vs2017Community)]//opens a single jpg fine (albeit in vs2017's default app of MSPaint in my case)
         //[TestCase(KeyToExecutableEnum.WinDirStat, winDirStat)]//opens a single jpg's folder fine
@@ -41,9 +42,9 @@ namespace OpenInApp.Common.Tests.Helpers
         {
             InvokeApplication(keyToExecutableEnum, executableFullPath, "Single");
         }
-
-//        [Test()]
-//        [Category("E2E")]
+ 
+        [Test()]
+        [Category("E2E")]
         //[TestCase(KeyToExecutableEnum.AltovaXMLSpy, altovaXMLSpy)]//yes opens both in a single xmpspy
         //[TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, firefoxDeveloperEdition)]//yes opens both in a single browser
         //[TestCase(KeyToExecutableEnum.Gimp, gimp)]//yes opens a single app for both images
@@ -53,14 +54,14 @@ namespace OpenInApp.Common.Tests.Helpers
         //[TestCase(KeyToExecutableEnum.OperaDeveloperEdition, operaDeveloperEdition)]//yes opens both in 1 browser
         //[TestCase(KeyToExecutableEnum.PaintDotNet, paintDotNet)]//yes opens a single app for both images
         //[TestCase(KeyToExecutableEnum.TreeSizeFree, treeSizeFree)]//yes opens both folders
-//        [TestCase(KeyToExecutableEnum.Vivaldi, vivaldi)]
+        //[TestCase(KeyToExecutableEnum.Vivaldi, vivaldi)]//yes opens both in 1 browser
         //[TestCase(KeyToExecutableEnum.VS2015, vs2015)]//yes opens both in a single IDE
         //[TestCase(KeyToExecutableEnum.VS2017Community, vs2017Community)]//yes opens both in a single IDE
         //[TestCase(KeyToExecutableEnum.WinDirStat, winDirStat)]//yes opens both folders
-//        public void InvokeCommandTest_MultipleArtefacts(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath)
-//        {
-//            InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple");
-//        }
+        public void InvokeCommandTest_MultipleArtefacts(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath)
+        {
+            InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple");
+        }
 
         private void InvokeApplication(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath, string singleOrMultipleArtefacts)
         {
@@ -86,18 +87,18 @@ namespace OpenInApp.Common.Tests.Helpers
                             case KeyToExecutableEnum.VS2015:
                             case KeyToExecutableEnum.VS2017Community:
                             case KeyToExecutableEnum.WinDirStat:
-                                //artefactsToBeOpened = new List<string> { @"D:\Temp\1.jpg" };
-                                artefactsToBeOpened = new List<string> { @"C:\Temp\1.jpg" };
+                                artefactsToBeOpened = new List<string> { @"D:\Temp\2.jpg" };
+                                //artefactsToBeOpened = new List<string> { @"C:\Temp\1.jpg" };
                                 break;
                             default:
-                                //artefactsToBeOpened = new List<string> { @"D:\Temp\a.txt" };
-                                artefactsToBeOpened = new List<string> { @"C:\Temp\a.txt" };
+                                artefactsToBeOpened = new List<string> { @"D:\Temp\a.txt" };
+                                //artefactsToBeOpened = new List<string> { @"C:\Temp\a.txt" };
                                 break;
                         }
                         break;
                     case ArtefactTypeToOpen.Folder:
-                        //artefactsToBeOpened = new List<string> { @"D:\Temp\" };
-                        artefactsToBeOpened = new List<string> { @"C:\Temp\" };
+                        artefactsToBeOpened = new List<string> { @"D:\Temp\" };
+                        //artefactsToBeOpened = new List<string> { @"C:\Temp\" };
                         break;
                 }
             }
@@ -125,31 +126,31 @@ namespace OpenInApp.Common.Tests.Helpers
             }
 
             // Act
-            OpenInAppHelper.InvokeCommand(artefactsToBeOpened, executableFullPath, dto.SeparateProcessPerFileToBeOpened, dto.UseShellExecute, dto.ArtefactTypeToOpen);
+            OpenInAppHelper.InvokeCommand(artefactsToBeOpened, executableFullPath, dto.SeparateProcessPerFileToBeOpened, dto.UseShellExecute, dto.ArtefactTypeToOpen, dto.ProcessWithinProcess);
         }
 
         private List<string> artefactsToBeOpened_TextFiles = new List<string>
                     {
-                        //@"D:\Temp\a.txt",
-                        //@"D:\Temp\b.txt",
-                        @"C:\Temp\a.txt",
-                        @"C:\Temp\b.txt",
+                        @"D:\Temp\a.txt",
+                        @"D:\Temp\b.txt",
+                        //@"C:\Temp\a.txt",
+                        //@"C:\Temp\b.txt",
                     };
 
         private List<string> artefactsToBeOpened_ImageFiles = new List<string>
                     {
-                        //@"D:\Temp\1.jpg",
-                        //@"D:\Temp\2.jpg",
-                        @"C:\Temp\1.jpg",
-                        @"C:\Temp\2.jpg",
+                        @"D:\Temp\1.jpg",
+                        @"D:\Temp\2.jpg",
+                        //@"C:\Temp\1.jpg",
+                        //@"C:\Temp\2.jpg",
                     };
 
         private List<string> artefactsToBeOpened_Folders = new List<string>
                     {
-                        //@"D:\Temp\",
-                        //@"D:\Temp\Test",
-                        @"C:\Temp\",
-                        @"C:\Temp\Test",
+                        @"D:\Temp\",
+                        @"D:\Temp\Test",
+                        //@"C:\Temp\",
+                        //@"C:\Temp\Test",
                     };
 
         //Open in intellij
