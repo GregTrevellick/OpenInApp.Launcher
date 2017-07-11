@@ -221,6 +221,7 @@ namespace OpenInApp.Menu
                 KeyToExecutableEnumDescription = keyToExecutableEnumDescription,
                 FileQuantityWarningLimit = fileQuantityWarningLimit,
                 KeyToExecutableEnum = keyToExecutableEnum,
+                ProcessWithinProcess = applicationToOpenDto.ProcessWithinProcess,
                 SeparateProcessPerFileToBeOpened = applicationToOpenDto.SeparateProcessPerFileToBeOpened,
                 ServiceProvider = serviceProvider,
                 SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,

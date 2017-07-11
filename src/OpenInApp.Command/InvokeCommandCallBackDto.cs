@@ -13,6 +13,7 @@ namespace OpenInApp.Command
         public string KeyToExecutableEnumDescription { get; set; } 
         public string FileQuantityWarningLimit { get; set; }
         public KeyToExecutableEnum KeyToExecutableEnum { get; set; }
+        public bool ProcessWithinProcess { get; set; }
         public bool SeparateProcessPerFileToBeOpened { get; set; }
         public IServiceProvider ServiceProvider { get; set; }        
         public bool SuppressTypicalFileExtensionsWarning { get; set; }

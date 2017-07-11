@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace OpenInApp.Common.Tests.Helpers
 {
     [TestFixture()]
-    public class OpenInAppHelperTestsTODO
+    public class OpenInAppHelperTests100
     {
         private const string altovaXMLSpy = @"D:\Program Files (x86)\Altova\XMLSpy2017\XMLSpy.exe";
         private const string firefoxDeveloperEdition = @"C:\Program Files\Firefox Developer Edition\firefox.exe";
@@ -26,19 +26,19 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("E2E")]
-        //[TestCase(KeyToExecutableEnum.AltovaXMLSpy, altovaXMLSpy)]//opens a single jpg fine
-        //[TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, firefoxDeveloperEdition)]//opens a single jpg fine
-        //[TestCase(KeyToExecutableEnum.Gimp, gimp)]//opens a single jpg fine
-        //[TestCase(KeyToExecutableEnum.MarkdownMonster, markdownMonster)]//opens a single text file fine (in the office at least)
-        //[TestCase(KeyToExecutableEnum.MSPaint, msPaint)]//opens a single jpg fine
-        //[TestCase(KeyToExecutableEnum.Opera, opera)]//opens a single jpg fine
-        //[TestCase(KeyToExecutableEnum.OperaDeveloperEdition, operaDeveloperEdition)]//opens a single jpg fine
-        //[TestCase(KeyToExecutableEnum.PaintDotNet, paintDotNet)]//opens a single jpg fine
-        //[TestCase(KeyToExecutableEnum.TreeSizeFree, treeSizeFree)]//opens a single jpg's folder fine
-        //[TestCase(KeyToExecutableEnum.Vivaldi, vivaldi)]//opens a single jpg fine
-        //[TestCase(KeyToExecutableEnum.VS2015, vs2015)]//opens a single jpg fine
-        //[TestCase(KeyToExecutableEnum.VS2017Community, vs2017Community)]//opens a single jpg fine (albeit in vs2017's default app of MSPaint in my case)
-        //[TestCase(KeyToExecutableEnum.WinDirStat, winDirStat)]//opens a single jpg's folder fine
+        [TestCase(KeyToExecutableEnum.AltovaXMLSpy, altovaXMLSpy)]//opens a single jpg fine
+        [TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, firefoxDeveloperEdition)]//opens a single jpg fine
+        [TestCase(KeyToExecutableEnum.Gimp, gimp)]//opens a single jpg fine
+        [TestCase(KeyToExecutableEnum.MarkdownMonster, markdownMonster)]//opens a single text file fine (in the office at least)
+        [TestCase(KeyToExecutableEnum.MSPaint, msPaint)]//opens a single jpg fine
+        [TestCase(KeyToExecutableEnum.Opera, opera)]//opens a single jpg fine
+        [TestCase(KeyToExecutableEnum.OperaDeveloperEdition, operaDeveloperEdition)]//opens a single jpg fine
+        [TestCase(KeyToExecutableEnum.PaintDotNet, paintDotNet)]//opens a single jpg fine
+        [TestCase(KeyToExecutableEnum.TreeSizeFree, treeSizeFree)]//opens a single jpg's folder fine
+        [TestCase(KeyToExecutableEnum.Vivaldi, vivaldi)]//opens a single jpg fine
+        [TestCase(KeyToExecutableEnum.VS2015, vs2015)]//opens a single jpg fine
+        [TestCase(KeyToExecutableEnum.VS2017Community, vs2017Community)]//opens a single jpg fine (albeit in vs2017's default app of MSPaint in my case)
+        [TestCase(KeyToExecutableEnum.WinDirStat, winDirStat)]//opens a single jpg's folder fine
         public void InvokeCommandTest_SingleArtefact(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath)
         {
             InvokeApplication(keyToExecutableEnum, executableFullPath, "Single");
@@ -46,19 +46,19 @@ namespace OpenInApp.Common.Tests.Helpers
  
         [Test()]
         [Category("E2E")]
-        //[TestCase(KeyToExecutableEnum.AltovaXMLSpy, altovaXMLSpy)]//yes opens both in a single xmpspy
-        //[TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, firefoxDeveloperEdition)]//yes opens both in a single browser
-        //[TestCase(KeyToExecutableEnum.Gimp, gimp)]//yes opens a single app for both images
-        //[TestCase(KeyToExecutableEnum.MarkdownMonster, markdownMonster)]//yes opens both in a single IDE
-        //[TestCase(KeyToExecutableEnum.MSPaint, msPaint)]//yes opens both images fine
-        //[TestCase(KeyToExecutableEnum.Opera, opera)]//yes opens both in 1 browser
-        //[TestCase(KeyToExecutableEnum.OperaDeveloperEdition, operaDeveloperEdition)]//yes opens both in 1 browser
-        //[TestCase(KeyToExecutableEnum.PaintDotNet, paintDotNet)]//yes opens a single app for both images
-        //[TestCase(KeyToExecutableEnum.TreeSizeFree, treeSizeFree)]//yes opens both folders
-        //[TestCase(KeyToExecutableEnum.Vivaldi, vivaldi)]//yes opens both in 1 browser
-        //[TestCase(KeyToExecutableEnum.VS2015, vs2015)]//yes opens both in a single IDE
-        //[TestCase(KeyToExecutableEnum.VS2017Community, vs2017Community)]//yes opens both in a single IDE
-        //[TestCase(KeyToExecutableEnum.WinDirStat, winDirStat)]//yes opens both folders
+        [TestCase(KeyToExecutableEnum.AltovaXMLSpy, altovaXMLSpy)]//yes opens both in a single xmpspy
+        [TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, firefoxDeveloperEdition)]//yes opens both in a single browser
+        [TestCase(KeyToExecutableEnum.Gimp, gimp)]//yes opens a single app for both images
+        [TestCase(KeyToExecutableEnum.MarkdownMonster, markdownMonster)]//yes opens both in a single IDE
+        [TestCase(KeyToExecutableEnum.MSPaint, msPaint)]//yes opens both images fine
+        [TestCase(KeyToExecutableEnum.Opera, opera)]//yes opens both in 1 browser
+        [TestCase(KeyToExecutableEnum.OperaDeveloperEdition, operaDeveloperEdition)]//yes opens both in 1 browser
+        [TestCase(KeyToExecutableEnum.PaintDotNet, paintDotNet)]//yes opens a single app for both images
+        [TestCase(KeyToExecutableEnum.TreeSizeFree, treeSizeFree)]//yes opens both folders
+        [TestCase(KeyToExecutableEnum.Vivaldi, vivaldi)]//yes opens both in 1 browser
+        [TestCase(KeyToExecutableEnum.VS2015, vs2015)]//yes opens both in a single IDE
+        [TestCase(KeyToExecutableEnum.VS2017Community, vs2017Community)]//yes opens both in a single IDE
+        [TestCase(KeyToExecutableEnum.WinDirStat, winDirStat)]//yes opens both folders
         public void InvokeCommandTest_MultipleArtefacts(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath)
         {
             InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple");

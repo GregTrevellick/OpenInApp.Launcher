@@ -105,7 +105,8 @@ namespace OpenInApp.Command
                                         dto.ActualPathToExe, 
                                         dto.SeparateProcessPerFileToBeOpened, 
                                         dto.UseShellExecute,
-                                        dto.ArtefactTypeToOpen);
+                                        dto.ArtefactTypeToOpen,
+                                        dto.ProcessWithinProcess);
                                 }
                             }
                         }
