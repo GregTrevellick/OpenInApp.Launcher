@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenInApp.Common.Helpers;
 using OpenInApp.Common.Helpers.Dtos;
+using System;
 using System.Collections.Generic;
 
 namespace OpenInApp.Common.Tests.Helpers
@@ -78,19 +79,19 @@ namespace OpenInApp.Common.Tests.Helpers
             InvokeApplication(KeyToExecutableEnum.MSPaint, msPaint, "Multiple");
         }
 
-        [Test()]
-        [Category("E2E")]
-        public void Opera_Single()
-        {
-            InvokeApplication(KeyToExecutableEnum.Opera, opera, "Single");
-        }
+        //[Test()]
+        //[Category("E2E")]
+        //public void Opera_Single()
+        //{
+        //    InvokeApplication(KeyToExecutableEnum.Opera, opera, "Single");
+        //}
 
-        [Test()]
-        [Category("E2E")]
-        public void Opera_Multiple()
-        {
-            InvokeApplication(KeyToExecutableEnum.Opera, opera, "Multiple");
-        }
+        //[Test()]
+        //[Category("E2E")]
+        //public void Opera_Multiple()
+        //{
+        //    InvokeApplication(KeyToExecutableEnum.Opera, opera, "Multiple");
+        //}
 
         [Test()]
         [Category("E2E")]
@@ -176,35 +177,144 @@ namespace OpenInApp.Common.Tests.Helpers
             InvokeApplication(KeyToExecutableEnum.VS2017Community, vs2017Community, "Multiple");
         }
 
+        //[Test()]
+        //[Category("E2E")]
+        //public void WinDirStat_Single()
+        //{
+        //    InvokeApplication(KeyToExecutableEnum.WinDirStat, winDirStat, "Single");
+        //}
+
+        //[Test()]
+        //[Category("E2E")]
+        //public void WinDirStat_Multiple()
+        //{
+        //    InvokeApplication(KeyToExecutableEnum.WinDirStat, winDirStat, "Multiple");
+        //}
+
         [Test()]
         [Category("E2E")]
-        public void WinDirStat_Single()
+        public void Opera_2()
         {
-            InvokeApplication(KeyToExecutableEnum.WinDirStat, winDirStat, "Single");
+            InvokeApplication3(KeyToExecutableEnum.Opera, opera);
         }
 
         [Test()]
         [Category("E2E")]
-        public void WinDirStat_Multiple()
+        public void WinDirStat_2()
         {
-            InvokeApplication(KeyToExecutableEnum.WinDirStat, winDirStat, "Multiple");
+            InvokeApplication3(KeyToExecutableEnum.WinDirStat, winDirStat);
         }
 
-        private const string altovaXMLSpy = @"D:\Program Files (x86)\Altova\XMLSpy2017\XMLSpy.exe";
-        private const string firefoxDeveloperEdition = @"C:\Program Files\Firefox Developer Edition\firefox.exe";
-        private const string gimp = @"D:\Program Files\GIMP 2\bin\gimp-2.8.exe";
-        //private const string markdownMonster = @"C:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
-        private const string markdownMonster = @"D:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
-        private const string msPaint = @"C:\Windows\system32\mspaint.exe";
-        private const string opera = @"D:\Program Files\Opera\launcher.exe";
-        private const string operaDeveloperEdition = @"D:\Program Files\Opera developer\launcher.exe";
-        private const string paintDotNet = @"C:\Program Files\paint.net\PaintDotNet.exe";
-        private const string treeSizeFree = @"D:\Program Files (x86)\JAM Software\TreeSize Free\TreeSizeFree.exe";
-        //private const string vivaldi = @"C:\Users\GregoryT\AppData\Local\Vivaldi\Application\vivaldi.exe";
-        private const string vivaldi = @"D:\Users\gtrev\AppData\Local\Vivaldi\Application\vivaldi.exe";
-        private const string vs2015 = @"D:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe";
-        private const string vs2017Community = @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe";
-        private const string winDirStat = @"D:\Program Files (x86)\WinDirStat\windirstat.exe";
+        private void InvokeApplication3(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath)
+        {
+            InvokeApplication4(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, "Text");
+            InvokeApplication4(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, "Image");
+            InvokeApplication4(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.Folder, null);
+            InvokeApplication4(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.File, "Text");
+            InvokeApplication4(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.File, "Image");
+            InvokeApplication4(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.Folder, null);
+        }
+
+        private void InvokeApplication4(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath, string singleOrMultipleArtefacts, ArtefactTypeToOpen artefactTypeToOpen, string typ)
+        {
+            // Arrange
+            var dto = new ApplicationToOpenHelper().GetApplicationToOpenDto(keyToExecutableEnum);
+            var artefactsToBeOpened = new List<string>();
+
+            artefactsToBeOpened = GetTestArtefactsToBeOpened(singleOrMultipleArtefacts, typ, dto, artefactsToBeOpened);
+
+            // Act
+            OpenInAppHelper.InvokeCommand(artefactsToBeOpened, executableFullPath, dto.SeparateProcessPerFileToBeOpened, dto.UseShellExecute, dto.ArtefactTypeToOpen, dto.ProcessWithinProcess);
+        }
+
+        private List<string> GetTestArtefactsToBeOpened(string singleOrMultipleArtefacts, string typ, ApplicationToOpenDto dto, List<string> artefactsToBeOpened)
+        {
+            if (singleOrMultipleArtefacts == "Single")
+            {
+                switch (dto.ArtefactTypeToOpen)
+                {
+                    case ArtefactTypeToOpen.File:
+                        if (typ == "Text")
+                        {
+                            artefactsToBeOpened = GetArtefactTypeToOpen_File_Text();
+                        }
+                        else
+                        {
+                            artefactsToBeOpened = GetArtefactTypeToOpen_File_Image();
+                        }
+                        break;
+                    case ArtefactTypeToOpen.Folder:
+                        artefactsToBeOpened = GetArtefactTypeToOpen_Folder();
+                        break;
+                }
+            }
+            else
+            {
+                switch (dto.ArtefactTypeToOpen)
+                {
+                    case ArtefactTypeToOpen.File:
+                        if (typ == "Text")
+                        {
+                            artefactsToBeOpened = artefactsToBeOpened_TextFiles;
+                        }
+                        else
+                        {
+                            artefactsToBeOpened = artefactsToBeOpened_ImageFiles;
+                        }
+                        break;
+                    case ArtefactTypeToOpen.Folder:
+                        artefactsToBeOpened = artefactsToBeOpened_Folders;
+                        break;
+                }
+            }
+
+            return artefactsToBeOpened;
+        }
+
+        private static List<string> GetArtefactTypeToOpen_File_Image()
+        {
+            List<string> artefactsToBeOpened;
+            if (Environment.MachineName == "SIS050")
+            {
+                artefactsToBeOpened = new List<string> { @"C:\Temp\1.jpg" };
+            }
+            else
+            {
+                artefactsToBeOpened = new List<string> { @"D:\Temp\2.jpg" };
+            }
+
+            return artefactsToBeOpened;
+        }
+
+        private static List<string> GetArtefactTypeToOpen_File_Text()
+        {
+            List<string> artefactsToBeOpened;
+            if (Environment.MachineName == "SIS050")
+            {
+                artefactsToBeOpened = new List<string> { @"C:\Temp\a.txt" };
+            }
+            else
+            {
+                artefactsToBeOpened = new List<string> { @"D:\Temp\a.txt" };
+            }
+
+            return artefactsToBeOpened;
+        }
+
+        private static List<string> GetArtefactTypeToOpen_Folder()
+        {
+            List<string> artefactsToBeOpened;
+            if (Environment.MachineName == "SIS050")
+            {
+                artefactsToBeOpened = new List<string> { @"C:\Temp\" };
+            }
+            else
+            {
+                artefactsToBeOpened = new List<string> { @"D:\Temp\" };
+            }
+
+            return artefactsToBeOpened;
+        }
 
         private void InvokeApplication(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath, string singleOrMultipleArtefacts)
         {
@@ -225,23 +335,39 @@ namespace OpenInApp.Common.Tests.Helpers
                             case KeyToExecutableEnum.Opera:
                             case KeyToExecutableEnum.OperaDeveloperEdition:
                             case KeyToExecutableEnum.PaintDotNet:
-                            case KeyToExecutableEnum.TreeSizeFree:
                             case KeyToExecutableEnum.Vivaldi:
                             case KeyToExecutableEnum.VS2015:
                             case KeyToExecutableEnum.VS2017Community:
-                            case KeyToExecutableEnum.WinDirStat:
-                                artefactsToBeOpened = new List<string> { @"D:\Temp\2.jpg" };
-                                //artefactsToBeOpened = new List<string> { @"C:\Temp\1.jpg" };
+                                if (Environment.MachineName == "SIS050")
+                                {
+                                    artefactsToBeOpened = new List<string> { @"C:\Temp\1.jpg" };
+                                }
+                                else
+                                {
+                                    artefactsToBeOpened = new List<string> { @"D:\Temp\2.jpg" };
+                                }
                                 break;
                             default:
-                                artefactsToBeOpened = new List<string> { @"D:\Temp\a.txt" };
-                                //artefactsToBeOpened = new List<string> { @"C:\Temp\a.txt" };
+                                if (Environment.MachineName == "SIS050")
+                                {
+                                    artefactsToBeOpened = new List<string> { @"C:\Temp\a.txt" };
+                                }
+                                else
+                                {
+                                    artefactsToBeOpened = new List<string> { @"D:\Temp\a.txt" };
+                                }
                                 break;
                         }
                         break;
                     case ArtefactTypeToOpen.Folder:
-                        artefactsToBeOpened = new List<string> { @"D:\Temp\" };
-                        //artefactsToBeOpened = new List<string> { @"C:\Temp\" };
+                        if (Environment.MachineName == "SIS050")
+                        {
+                            artefactsToBeOpened = new List<string> { @"C:\Temp\" };
+                        }
+                        else
+                        {
+                            artefactsToBeOpened = new List<string> { @"D:\Temp\" };
+                        }
                         break;
                 }
             }
@@ -271,6 +397,22 @@ namespace OpenInApp.Common.Tests.Helpers
             // Act
             OpenInAppHelper.InvokeCommand(artefactsToBeOpened, executableFullPath, dto.SeparateProcessPerFileToBeOpened, dto.UseShellExecute, dto.ArtefactTypeToOpen, dto.ProcessWithinProcess);
         }
+
+        private const string altovaXMLSpy = @"D:\Program Files (x86)\Altova\XMLSpy2017\XMLSpy.exe";
+        private const string firefoxDeveloperEdition = @"C:\Program Files\Firefox Developer Edition\firefox.exe";
+        private const string gimp = @"D:\Program Files\GIMP 2\bin\gimp-2.8.exe";
+        //private const string markdownMonster = @"C:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
+        private const string markdownMonster = @"D:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
+        private const string msPaint = @"C:\Windows\system32\mspaint.exe";
+        private const string opera = @"D:\Program Files\Opera\launcher.exe";
+        private const string operaDeveloperEdition = @"D:\Program Files\Opera developer\launcher.exe";
+        private const string paintDotNet = @"C:\Program Files\paint.net\PaintDotNet.exe";
+        private const string treeSizeFree = @"D:\Program Files (x86)\JAM Software\TreeSize Free\TreeSizeFree.exe";
+        //private const string vivaldi = @"C:\Users\GregoryT\AppData\Local\Vivaldi\Application\vivaldi.exe";
+        private const string vivaldi = @"D:\Users\gtrev\AppData\Local\Vivaldi\Application\vivaldi.exe";
+        private const string vs2015 = @"D:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe";
+        private const string vs2017Community = @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe";
+        private const string winDirStat = @"D:\Program Files (x86)\WinDirStat\windirstat.exe";
 
         private List<string> artefactsToBeOpened_TextFiles = new List<string>
                     {
