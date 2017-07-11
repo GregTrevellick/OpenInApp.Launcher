@@ -10,32 +10,185 @@ namespace OpenInApp.Common.Tests.Helpers
     {
         [Test()]
         [Category("E2E")]
-        public void VS2017Community_Single(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath)
+        public void AltovaXMLSpy_Single()
+        {
+            InvokeApplication(KeyToExecutableEnum.AltovaXMLSpy, altovaXMLSpy, "Single");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void AltovaXMLSpy_Multiple()
+        {
+            InvokeApplication(KeyToExecutableEnum.AltovaXMLSpy, altovaXMLSpy, "Multiple");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void FirefoxDeveloperEdition_Single()
+        {
+            InvokeApplication(KeyToExecutableEnum.FirefoxDeveloperEdition, firefoxDeveloperEdition, "Single");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void FirefoxDeveloperEdition_Multiple()
+        {
+            InvokeApplication(KeyToExecutableEnum.FirefoxDeveloperEdition, firefoxDeveloperEdition, "Multiple");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void Gimp_Single()
+        {
+            InvokeApplication(KeyToExecutableEnum.Gimp, gimp, "Single");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void Gimp_Multiple()
+        {
+            InvokeApplication(KeyToExecutableEnum.Gimp, gimp, "Multiple");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void MarkdownMonster_Single()
+        {
+            InvokeApplication(KeyToExecutableEnum.MarkdownMonster, markdownMonster, "Single");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void MarkdownMonster_Multiple()
+        {
+            InvokeApplication(KeyToExecutableEnum.MarkdownMonster, markdownMonster, "Multiple");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void MSPaint_Single()
+        {
+            InvokeApplication(KeyToExecutableEnum.MSPaint, msPaint, "Single");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void MSPaint_Multiple()
+        {
+            InvokeApplication(KeyToExecutableEnum.MSPaint, msPaint, "Multiple");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void Opera_Single()
+        {
+            InvokeApplication(KeyToExecutableEnum.Opera, opera, "Single");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void Opera_Multiple()
+        {
+            InvokeApplication(KeyToExecutableEnum.Opera, opera, "Multiple");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void OperaDeveloperEdition_Single()
+        {
+            InvokeApplication(KeyToExecutableEnum.OperaDeveloperEdition, operaDeveloperEdition, "Single");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void OperaDeveloperEdition_Multiple()
+        {
+            InvokeApplication(KeyToExecutableEnum.OperaDeveloperEdition, operaDeveloperEdition, "Multiple");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void PaintDotNet_Single()
+        {
+            InvokeApplication(KeyToExecutableEnum.PaintDotNet, paintDotNet, "Single");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void PaintDotNet_Multiple()
+        {
+            InvokeApplication(KeyToExecutableEnum.PaintDotNet, paintDotNet, "Multiple");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void TreeSizeFree_Single()
+        {
+            InvokeApplication(KeyToExecutableEnum.TreeSizeFree, treeSizeFree, "Single");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void TreeSizeFree_Multiple()
+        {
+            InvokeApplication(KeyToExecutableEnum.TreeSizeFree, treeSizeFree, "Multiple");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void Vivaldi_Single()
+        {
+            InvokeApplication(KeyToExecutableEnum.Vivaldi, vivaldi, "Single");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void Vivaldi_Multiple()
+        {
+            InvokeApplication(KeyToExecutableEnum.Vivaldi, vivaldi, "Multiple");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void VS2015_Single()
+        {
+            InvokeApplication(KeyToExecutableEnum.VS2015, vs2015, "Single");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void VS2015_Multiple()
+        {
+            InvokeApplication(KeyToExecutableEnum.VS2015, vs2015, "Multiple");
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void VS2017Community_Single()
         {
             InvokeApplication(KeyToExecutableEnum.VS2017Community, vs2017Community, "Single");
         }
 
         [Test()]
         [Category("E2E")]
-        public void VS2017Community_Multiple(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath)
+        public void VS2017Community_Multiple()
         {
             InvokeApplication(KeyToExecutableEnum.VS2017Community, vs2017Community, "Multiple");
         }
 
         [Test()]
         [Category("E2E")]
-        public void WinDirStat_Single(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath)
+        public void WinDirStat_Single()
         {
             InvokeApplication(KeyToExecutableEnum.WinDirStat, winDirStat, "Single");
         }
 
         [Test()]
         [Category("E2E")]
-        public void WinDirStat_Multiple(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath)
+        public void WinDirStat_Multiple()
         {
             InvokeApplication(KeyToExecutableEnum.WinDirStat, winDirStat, "Multiple");
         }
-
 
         private const string altovaXMLSpy = @"D:\Program Files (x86)\Altova\XMLSpy2017\XMLSpy.exe";
         private const string firefoxDeveloperEdition = @"C:\Program Files\Firefox Developer Edition\firefox.exe";
@@ -52,47 +205,6 @@ namespace OpenInApp.Common.Tests.Helpers
         private const string vs2015 = @"D:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe";
         private const string vs2017Community = @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe";
         private const string winDirStat = @"D:\Program Files (x86)\WinDirStat\windirstat.exe";
-
-        [Test()]
-        [Category("E2E")]
-        [TestCase(KeyToExecutableEnum.AltovaXMLSpy, altovaXMLSpy)]//opens a single jpg fine
-        [TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, firefoxDeveloperEdition)]//opens a single jpg fine
-        [TestCase(KeyToExecutableEnum.Gimp, gimp)]//opens a single jpg fine
-        [TestCase(KeyToExecutableEnum.MarkdownMonster, markdownMonster)]//opens a single text file fine (in the office at least)
-        [TestCase(KeyToExecutableEnum.MSPaint, msPaint)]//opens a single jpg fine
-        [TestCase(KeyToExecutableEnum.Opera, opera)]//opens a single jpg fine
-        [TestCase(KeyToExecutableEnum.OperaDeveloperEdition, operaDeveloperEdition)]//opens a single jpg fine
-        [TestCase(KeyToExecutableEnum.PaintDotNet, paintDotNet)]//opens a single jpg fine
-        [TestCase(KeyToExecutableEnum.TreeSizeFree, treeSizeFree)]//opens a single jpg's folder fine
-        [TestCase(KeyToExecutableEnum.Vivaldi, vivaldi)]//opens a single jpg fine
-        [TestCase(KeyToExecutableEnum.VS2015, vs2015)]//opens a single jpg fine
-        ////////////////////////////[TestCase(KeyToExecutableEnum.VS2017Community, vs2017Community)]//opens a single jpg fine (albeit in vs2017's default app of MSPaint in my case)
-        ////////////////////////////[TestCase(KeyToExecutableEnum.WinDirStat, winDirStat)]//opens a single jpg's folder fine
-        public void InvokeCommandTest_SingleArtefact(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath)
-        {
-            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single");
-        }
-
-
-        [Test()]
-        [Category("E2E")]
-        [TestCase(KeyToExecutableEnum.AltovaXMLSpy, altovaXMLSpy)]//yes opens both in a single xmpspy
-        [TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, firefoxDeveloperEdition)]//yes opens both in a single browser
-        [TestCase(KeyToExecutableEnum.Gimp, gimp)]//yes opens a single app for both images
-        [TestCase(KeyToExecutableEnum.MarkdownMonster, markdownMonster)]//yes opens both in a single IDE
-        [TestCase(KeyToExecutableEnum.MSPaint, msPaint)]//yes opens both images fine
-        [TestCase(KeyToExecutableEnum.Opera, opera)]//yes opens both in 1 browser
-        [TestCase(KeyToExecutableEnum.OperaDeveloperEdition, operaDeveloperEdition)]//yes opens both in 1 browser
-        [TestCase(KeyToExecutableEnum.PaintDotNet, paintDotNet)]//yes opens a single app for both images
-        [TestCase(KeyToExecutableEnum.TreeSizeFree, treeSizeFree)]//yes opens both folders
-        [TestCase(KeyToExecutableEnum.Vivaldi, vivaldi)]//yes opens both in 1 browser
-        [TestCase(KeyToExecutableEnum.VS2015, vs2015)]//yes opens both in a single IDE
-        ////////////////////////////[TestCase(KeyToExecutableEnum.VS2017Community, vs2017Community)]//yes opens both in a single IDE
-        ////////////////////////////[TestCase(KeyToExecutableEnum.WinDirStat, winDirStat)]//yes opens both folders
-        public void InvokeCommandTest_MultipleArtefacts(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath)
-        {
-            InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple");
-        }
 
         private void InvokeApplication(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath, string singleOrMultipleArtefacts)
         {
