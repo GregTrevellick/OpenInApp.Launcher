@@ -130,8 +130,7 @@
     <Compile Include="Helpers\ArtefactsHelperTests100.cs" />
     <Compile Include="Helpers\CsvHelperTests100.cs" />
     <Compile Include="Helpers\KeyToExecutableTests100.cs" />
-    <Compile Include="Helpers\OpenInAppHelperTests100NEW.cs" />
-    <Compile Include="Helpers\zOpenInAppHelperTests100.cs" />
+    <Compile Include="Helpers\OpenInAppHelperTests100.cs" />
     <Compile Include="Helpers\GeneralOptionsHelperTests.cs" />
     <Compile Include="Helpers\AllAppsHelperTests100.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -164,6 +163,21 @@
     <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_sortinactive.png" />
     <Content Include="CodeCoverageReports\ReportGeneratorOutput\report.css" />
     <Content Include="README.txt" />
+    <Content Include="TestFiles\OIA\Single_ImageFile1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\OIA\Multiple_ImageFiles2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\OIA\Multiple_TextFilesb.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\OIA\Single_TextFilea.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\OIA\Multiple_TextFilesa.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestFiles\AnyText1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -176,14 +190,9 @@
     <Content Include="TestFiles\MovingImage2.mpeg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="TestFiles\StillImage1.jpg">
+    <Content Include="TestFiles\OIA\Multiple_ImageFiles1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="TestFiles\StillImage2.JPG">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestFiles\z.sql" />
-    <Content Include="TestFiles\z.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OpenInApp.Common\OpenInApp.Common.csproj">
@@ -196,7 +205,6 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="TestFiles\z.linq" />
     <None Include="GetCodeCoverageUsingOpenCover.bat" />
   </ItemGroup>
   <ItemGroup />
