@@ -109,7 +109,6 @@ namespace OpenInApp.Common.Tests.Helpers
             InvokeApplication(KeyToExecutableEnum.WinDirStat);
         }
 
-        /////////////////////////////////private void InvokeApplication(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath)
         private void InvokeApplication(KeyToExecutableEnum keyToExecutableEnum)
         {
             SetExecutableFullPath(keyToExecutableEnum);
@@ -266,125 +265,53 @@ namespace OpenInApp.Common.Tests.Helpers
 
         private List<string> GetTestArtefactsToBeOpened_Single_ImageFile()
         {
-            List<string> artefactsToBeOpened;
-            //if (Environment.MachineName == "SIS050")
-            //{
-                artefactsToBeOpened = new List<string>
-                {
-                   testFilesPath + @"\OIA\Single_ImageFile1.jpg"
-                };
-            //}
-            //else
-            //{
-            //    artefactsToBeOpened = new List<string>
-            //    {
-            //        testFilesPath + @"D:\Temp\OIA\Single_ImageFile2.jpg"
-            //    };
-            //}
-
-            return artefactsToBeOpened;
+            return new List<string>
+            {
+                testFilesPath + @"\OIA\Single_ImageFile1.jpg"
+            };
         }
 
         private List<string> GetTestArtefactsToBeOpened_Single_TextFile()
         {
-            List<string> artefactsToBeOpened;
-            //if (Environment.MachineName == "SIS050")
-            //{
-                artefactsToBeOpened = new List<string>
-                {
-                    testFilesPath + @"\OIA\Single_TextFilea.txt"
-                };
-            //}
-            //else
-            //{
-            //    artefactsToBeOpened = new List<string>
-            //    {
-            //        testFilesPath +@"D:\Temp\OIA\Single_TextFilea.txt"
-            //    };
-            //}
-
-            return artefactsToBeOpened;
+            return new List<string>
+            {
+                testFilesPath + @"\OIA\Single_TextFilea.txt"
+            };
         }
 
         private List<string> GetTestArtefactsToBeOpened_Single_Folder()
         {
-            List<string> artefactsToBeOpened;
-            //if (Environment.MachineName == "SIS050")
-            //{
-                artefactsToBeOpened = new List<string>
-                {
-                    testFilesPath + @"\OIA\Single_Folder"
-                };
-            //}
-            //else
-            //{
-            //    artefactsToBeOpened = new List<string>
-            //    {
-            //        testFilesPath + @"D:\Temp\OIA\Single_Folder"
-            //    };
-            //}
-
-            return artefactsToBeOpened;
+            return new List<string>
+            {
+                testFilesPath + @"\OIA\Single_Folder"
+            };
         }
 
         private List<string> GetTestArtefactsToBeOpened_Multiple_TextFiles()
         {
-            //if (Environment.MachineName == "SIS050")
-            //{
-                return new List<string>
-                    {
-                        testFilesPath + @"\OIA\Multiple_TextFilesa.txt",
-                        testFilesPath + @"\OIA\Multiple_TextFilesb.txt",
-                    };
-            //}
-            //else
-            //{
-            //    return new List<string>
-            //        {
-            //            testFilesPath + @"D:\Temp\OIA\Multiple_TextFilesa.txt",
-            //            testFilesPath + @"D:\Temp\OIA\Multiple_TextFilesb.txt",
-            //        };
-            //}
+            return new List<string>
+            {
+                testFilesPath + @"\OIA\Multiple_TextFilesa.txt",
+                testFilesPath + @"\OIA\Multiple_TextFilesb.txt",
+            };
         }
 
         private List<string> GetTestArtefactsToBeOpened_Multiple_ImageFiles()
         {
-            //if (Environment.MachineName == "SIS050")
-            //{
-                return new List<string>
-                    {
-                        testFilesPath + @"C:\Temp\OIA\Multiple_ImageFiles1.jpg",
-                        testFilesPath + @"C:\Temp\OIA\Multiple_ImageFiles2.jpg",
-                    };
-            //}
-            //else
-            //{
-            //    return new List<string>
-            //        {
-            //            testFilesPath + @"D:\Temp\OIA\Multiple_ImageFiles1.jpg",
-            //            testFilesPath + @"D:\Temp\OIA\Multiple_ImageFiles2.jpg",
-            //        };
-            //}
+            return new List<string>
+            {
+                testFilesPath + @"C:\Temp\OIA\Multiple_ImageFiles1.jpg",
+                testFilesPath + @"C:\Temp\OIA\Multiple_ImageFiles2.jpg",
+            };
         }
 
         private List<string> GetTestArtefactsToBeOpened_Multiple_Folders()
         {
-            //if (Environment.MachineName == "SIS050")
-            //{
-                return new List<string>
-                    {
-                        testFilesPath + @"\OIA\Multiple_Folders",
-                        testFilesPath + @"\OIA\Multiple_Folders\Test",
-                    };
-            //}
-            //else
-            //{
-            //    return new List<string>
-            //        {
-            //            testFilesPath + @"D:\Temp\OIA\Multiple_Folders",
-            //            testFilesPath + @"D:\Temp\OIA\Multiple_Folders\Test",
-            //        };
-            //}
+            return new List<string>
+            {
+                testFilesPath + @"\OIA\Multiple_Folders",
+                testFilesPath + @"\OIA\Multiple_Folders\Test",
+            };
         }
 
         //Open in intellij

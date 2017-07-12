@@ -163,6 +163,15 @@
     <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_sortinactive.png" />
     <Content Include="CodeCoverageReports\ReportGeneratorOutput\report.css" />
     <Content Include="README.txt" />
+    <Content Include="TestFiles\OIA\Multiple_Folders\dummy multiple folders file.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\OIA\Multiple_Folders\Test\dummy multiple folders test sub-folder file.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\OIA\Single_Folder\dummy single folder file.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestFiles\OIA\Single_ImageFile1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
