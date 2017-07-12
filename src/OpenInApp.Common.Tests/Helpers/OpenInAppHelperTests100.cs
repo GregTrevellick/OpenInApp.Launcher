@@ -267,7 +267,7 @@ namespace OpenInApp.Common.Tests.Helpers
         {
             return new List<string>
             {
-                testFilesPath + @"\OIA\Single_ImageFile1.jpg"
+                testFilesPath + @"\TestFiles\OIA\Single_ImageFile1.jpg"
             };
         }
 
@@ -275,7 +275,7 @@ namespace OpenInApp.Common.Tests.Helpers
         {
             return new List<string>
             {
-                testFilesPath + @"\OIA\Single_TextFilea.txt"
+                testFilesPath + @"\TestFiles\OIA\Single_TextFilea.txt"
             };
         }
 
@@ -283,7 +283,7 @@ namespace OpenInApp.Common.Tests.Helpers
         {
             return new List<string>
             {
-                testFilesPath + @"\OIA\Single_Folder"
+                testFilesPath + @"\TestFiles\OIA\Single_Folder"
             };
         }
 
@@ -291,8 +291,8 @@ namespace OpenInApp.Common.Tests.Helpers
         {
             return new List<string>
             {
-                testFilesPath + @"\OIA\Multiple_TextFilesa.txt",
-                testFilesPath + @"\OIA\Multiple_TextFilesb.txt",
+                testFilesPath + @"\TestFiles\OIA\Multiple_TextFilesa.txt",
+                testFilesPath + @"\TestFiles\OIA\Multiple_TextFilesb.txt",
             };
         }
 
@@ -300,8 +300,8 @@ namespace OpenInApp.Common.Tests.Helpers
         {
             return new List<string>
             {
-                testFilesPath + @"C:\Temp\OIA\Multiple_ImageFiles1.jpg",
-                testFilesPath + @"C:\Temp\OIA\Multiple_ImageFiles2.jpg",
+                testFilesPath + @"\TestFiles\OIA\Multiple_ImageFiles1.jpg",
+                testFilesPath + @"\TestFiles\OIA\Multiple_ImageFiles2.jpg",
             };
         }
 
@@ -309,8 +309,8 @@ namespace OpenInApp.Common.Tests.Helpers
         {
             return new List<string>
             {
-                testFilesPath + @"\OIA\Multiple_Folders",
-                testFilesPath + @"\OIA\Multiple_Folders\Test",
+                testFilesPath + @"\TestFiles\OIA\Multiple_Folders",
+                testFilesPath + @"\TestFiles\OIA\Multiple_Folders\Test",
             };
         }
 
