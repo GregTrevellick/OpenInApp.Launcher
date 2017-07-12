@@ -131,7 +131,7 @@
     <Compile Include="Helpers\CsvHelperTests100.cs" />
     <Compile Include="Helpers\KeyToExecutableTests100.cs" />
     <Compile Include="Helpers\OpenInAppHelperTests100NEW.cs" />
-    <Compile Include="Helpers\OpenInAppHelperTests100.cs" />
+    <Compile Include="Helpers\zOpenInAppHelperTests100.cs" />
     <Compile Include="Helpers\GeneralOptionsHelperTests.cs" />
     <Compile Include="Helpers\AllAppsHelperTests100.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
