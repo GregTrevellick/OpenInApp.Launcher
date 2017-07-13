@@ -170,9 +170,9 @@ namespace OpenInApp.Common.Tests.Helpers
                 case KeyToExecutableEnum.PaintDotNet:
                     executableFullPath = @"C:\Program Files\paint.net\PaintDotNet.exe";
                     break;
-                //case KeyToExecutableEnum.SQLServerManagementStudio:
-                //    executableFullPath =
-                //    break;
+                case KeyToExecutableEnum.SQLServerManagementStudio:
+                    executableFullPath = @"C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Ssms.exe";
+                    break;
                 case KeyToExecutableEnum.TreeSizeFree:
                     if (Environment.MachineName == "SIS050")
                     {
