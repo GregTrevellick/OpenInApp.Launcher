@@ -8,18 +8,8 @@ using System.Windows.Forms;
 
 namespace OpenInApp.Common.Helpers
 {
-    /// <summary>
-    /// Helper class containing generic methods for 'OpenInApp' VS packages
-    /// </summary>
     public class OpenInAppHelper
     {
-        /// <summary>
-        /// Invokes the specified executable file, passing the file(s) to be opened as arguments.
-        /// </summary>
-        /// <param name="actualArtefactsToBeOpened">The actual files to be opened.</param>
-        /// <param name="executableFullPath">The full path to the executable.</param>
-        /// <param name="separateProcessPerFileToBeOpened">Whether or not to start a single process or multiple processes for the actual files to be opened.</param> 
-        /// <param name="useShellExecute">Whether or not to use shell execution or execute via operating system.</param>
         public static void InvokeCommand(
             IEnumerable<string> actualArtefactsToBeOpened, 
             string executableFullPath, 
@@ -63,7 +53,6 @@ namespace OpenInApp.Common.Helpers
 
         private static string GetSingleArgument(string argument)
         {
-            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////return "\"" + argument + "\"" + " ";
             return "\"" + argument + "\"";
         }
 
@@ -94,8 +83,6 @@ namespace OpenInApp.Common.Helpers
 
                     using (var proc = Process.Start(startNoArgs))
                     {
-                        ///////////////////////////////////////////////////////////////////////////////////////////proc.WaitForInputIdle();
-                        ///////////////////////////////////////////////////////////////////////////////////////////proc.WaitForInputIdle(-1);
                         Thread.Sleep(3000);
                         using (Process.Start(start)) { }
                     }
@@ -111,12 +98,6 @@ namespace OpenInApp.Common.Helpers
             }
         }
 
-        /// <summary>
-        /// Displays a simple message box prompting the user to proceed with action or cancel.
-        /// </summary>
-        /// <param name="caption">The caption.</param>
-        /// <param name="messageText">The message text.</param>
-        /// <returns></returns>
         public static bool ConfirmProceedToExecute(string caption, string messageText)
         {
             bool proceedToExecute = false;
@@ -141,11 +122,6 @@ namespace OpenInApp.Common.Helpers
             return proceedToExecute;
         }
 
-        /// <summary>
-        /// Displays a simple message box informing the user of a missing file.
-        /// </summary>
-        /// <param name="caption">The caption.</param>
-        /// <param name="missingFileName">Name of the missing file.</param>
         public static void InformUserMissingFile(string caption, string missingFileName)
         {
             MessageBox.Show(
@@ -155,10 +131,6 @@ namespace OpenInApp.Common.Helpers
                 MessageBoxIcon.Stop);
         }
 
-        /// <summary>
-        /// Displays a simple message box informing the user of an unexpected error.
-        /// </summary>
-        /// <param name="caption">The caption.</param>
         public static void ShowUnexpectedError(string caption)
         {
             MessageBox.Show(
