@@ -7,53 +7,6 @@ namespace OpenInApp.Common.Tests.Helpers
     [TestFixture()]
     public class CsvHelperTests100
     {
-        private IEnumerable<string> typicalFileExtensions = new List<string>
-        {
-                "config",
-                "csproj",
-                "docx",
-                "properties",
-                "runsettings",
-                "settings",
-                "vsixmanifest",
-                "wsdl",
-                "xml",
-                "xsd",
-                "xslt",
-        };
-
-        [Test()]
-        [TestCase("", false)]
-        [TestCase(".", false)]
-        [TestCase(".properties", true)]
-        [TestCase(".propertis", false)]
-        [TestCase(".xml", true)]
-        [TestCase(".xsd", true)]
-        [TestCase(".xslt", true)]
-        [TestCase("a.properties", true)]
-        [TestCase("BartSimpson.fest,wsd", false)]
-        [TestCase("FredBloggs.x.ml", false)]
-        [TestCase("HillsTrump.vs.DonnieClinton", false)]
-        [TestCase("JaneDoe.xslt", true)]
-        [TestCase("JoePublic.cs", false)]
-        [TestCase("JohnDoe.Xml", true)]
-        [TestCase("MadsKristensen.", false)]
-        [TestCase("a.xs", false)]
-        [TestCase("a.xsd", true)]
-        [TestCase("a.xsdd", false)]
-        [TestCase(null, false)]
-        [Category("I")]
-        public void AreTypicalFileExtensionsTest(string fileName, bool expected)
-        {
-            var fullFileNames = new List<string> { fileName };
-
-            //Act
-            var actual = CsvHelper.AreTypicalFileExtensions(fullFileNames, typicalFileExtensions);
-
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
-
         [Test()]
         [Category("I")]
         public void AreTypicalFileExtensionsGenericTest()
@@ -169,6 +122,53 @@ namespace OpenInApp.Common.Tests.Helpers
             //Assert
             Assert.AreEqual(expected, actual);
         }
-       
+
+        [Test()]
+        [TestCase("", false)]
+        [TestCase(".", false)]
+        [TestCase(".properties", true)]
+        [TestCase(".propertis", false)]
+        [TestCase(".xml", true)]
+        [TestCase(".xsd", true)]
+        [TestCase(".xslt", true)]
+        [TestCase("a.properties", true)]
+        [TestCase("BartSimpson.fest,wsd", false)]
+        [TestCase("FredBloggs.x.ml", false)]
+        [TestCase("HillsTrump.vs.DonnieClinton", false)]
+        [TestCase("JaneDoe.xslt", true)]
+        [TestCase("JoePublic.cs", false)]
+        [TestCase("JohnDoe.Xml", true)]
+        [TestCase("MadsKristensen.", false)]
+        [TestCase("a.xs", false)]
+        [TestCase("a.xsd", true)]
+        [TestCase("a.xsdd", false)]
+        [TestCase(null, false)]
+        [Category("I")]
+        public void AreTypicalFileExtensionsTest(string fileName, bool expected)
+        {
+            var fullFileNames = new List<string> { fileName };
+
+            //Act
+            var actual = CsvHelper.AreTypicalFileExtensions(fullFileNames, typicalFileExtensions);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        private IEnumerable<string> typicalFileExtensions = new List<string>
+        {
+                "config",
+                "csproj",
+                "docx",
+                "properties",
+                "runsettings",
+                "settings",
+                "vsixmanifest",
+                "wsdl",
+                "xml",
+                "xsd",
+                "xslt",
+        };
+
     }
 }
