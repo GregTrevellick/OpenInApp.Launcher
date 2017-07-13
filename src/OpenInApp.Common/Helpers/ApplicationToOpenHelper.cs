@@ -245,6 +245,7 @@ namespace OpenInApp.Common.Helpers
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft SQL Server\9999\Tools\Binn\ManagementStudio";
                     applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions = true;
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "ssms.exe", "ssmsee.exe", "SqlWb.exe" };
+                    applicationToOpenDto.UseShellExecute = true;
                     break;
                 case KeyToExecutableEnum.TreeSizeFree:
                     applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
