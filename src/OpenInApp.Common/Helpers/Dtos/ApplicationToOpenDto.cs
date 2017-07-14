@@ -6,6 +6,7 @@ namespace OpenInApp.Common.Helpers.Dtos
     {
         public ArtefactTypeToOpen ArtefactTypeToOpen { get; set; }
         public IEnumerable<string> DefaultTypicalFileExtensions { get; set; }
+        public bool ExcludeBinAndObjFoldersWhenOpeningProjectNode { get; set; }
         public IEnumerable<string> ExecutableFilesToBrowseFor { get; set; }
         public bool? OpenIndividualFilesInFolderRatherThanFolderItself { get; set; }
         public bool ProcessWithinProcess { get; set; }

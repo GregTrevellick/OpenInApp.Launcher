@@ -31,6 +31,7 @@ namespace OpenInApp.Common.Helpers
             {
                 ArtefactTypeToOpen = ArtefactTypeToOpen.File,
                 DefaultTypicalFileExtensions = new List<string> { "*" },
+                ExcludeBinAndObjFoldersWhenOpeningProjectNode = false,
                 ExecutableFilesToBrowseFor = new List<string> { keyToExecutableEnum.Description() },
                 ///////////////////////////////InitialFolderType = InitialFolderType.ProgramFilesX86,
                 ProcessWithinProcess = false,
@@ -47,6 +48,7 @@ namespace OpenInApp.Common.Helpers
                     applicationToOpenDto.SecondaryFilePathSegment = @"WinDirStat";
                     break;
                 case KeyToExecutableEnum.AltovaXMLSpy:
+                    applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
                     applicationToOpenDto.SecondaryFilePathSegment = @"Altova\XMLSpy9999";
                     applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions = true;
                     applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
@@ -132,6 +134,7 @@ namespace OpenInApp.Common.Helpers
                     ///////////////////////////////applicationToOpenDto.InitialFolderType = InitialFolderType.LocalApplicationData;
                     break;
                 case KeyToExecutableEnum.Emacs:
+                    applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
                     applicationToOpenDto.SecondaryFilePathSegment = null;
                     ///////////////////////////////applicationToOpenDto.InitialFolderType = InitialFolderType.None;
                     break;
@@ -243,6 +246,7 @@ namespace OpenInApp.Common.Helpers
                     };
                     break;
                 case KeyToExecutableEnum.SQLServerManagementStudio:
+                    applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "ssms.exe", "ssmsee.exe", "SqlWb.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft SQL Server\9999\Tools\Binn\ManagementStudio";
                     applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions = true;
@@ -266,36 +270,42 @@ namespace OpenInApp.Common.Helpers
                     ///////////////////////////////applicationToOpenDto.InitialFolderType = InitialFolderType.LocalApplicationData;
                     break;
                 case KeyToExecutableEnum.VS2012:
+                    applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 11.0\Common7\IDE";
                     applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2013:
+                    applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 12.0\Common7\IDE";
                     applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2015:
+                    applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio 14.0\Common7\IDE";
                     applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2017Community:
+                    applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Community\Common7\IDE";
                     applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2017Enterprise:
+                    applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Enterprise\Common7\IDE";
                     applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.UseShellExecute = false;
                     break;
                 case KeyToExecutableEnum.VS2017Professional:
+                    applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2017\Professional\Common7\IDE";
                     applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
