@@ -11,7 +11,7 @@ namespace OpenInXamarinStudio
         public const string Name = "Open in Xamarin Studio";
         public const string Description = @"Open multiple files simultaneously in Xamarin Studio directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
-        public const string Version = "1.1.40";
+        public const string Version = "1.1.41";
         public const string Author = "GregTrevellick";
         public const string Tags = "open, open in, Xamarin, Xamarin Studio, studio";
     }

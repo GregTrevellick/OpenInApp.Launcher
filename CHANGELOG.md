@@ -2,13 +2,15 @@
 
 These are the changes to each version that has been released in the Visual Studio Marketplace.
 
-## 1.1.x
-**Coming soon**
-- [x] Addition of Open In Atom (tbc)
-- [x] Addition of Open In SQL Server Management Studio 2005/8/10/12/14/16/17 (todo: sort out ssmsee.exe paths)
-- [x] Addition of project nodes to TreeSize Free/Pro & WinDirStat
-- [x] Addition of project nodes & folder nodes to Gimp, MS Paint, Paint.Net 
-- [x] Screenshots for all applications 
+## 1.1.41
+**2017-07-15**
+- [x] Addition of 'Open In ...' when folder node selected for to all appropriate applications
+- [x] Addition of 'Open In ...' when project node selected for to all appropriate applications
+- [x] Exclusion of \bin and \obj directories when 'Open In ...' project node selected
+- [x] Added screenshots for all applications 
+- [x] Robust refactoring of code
+- [x] Open Cover and Report Generator incorporatedusing [this](http://www.allenconway.net/2015/06/using-opencover-and-reportgenerator-to.html)
+- [x] Image optimization using [this](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ImageOptimizer)
 
 ## 1.1.27
 **2017-06-21**
