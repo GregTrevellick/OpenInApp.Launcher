@@ -324,6 +324,7 @@ namespace OpenInApp.Common.Helpers
                 case KeyToExecutableEnum.XamarinStudio:
                     applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
                     applicationToOpenDto.SecondaryFilePathSegment = @"Xamarin Studio\bin";
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     break;
                 default:
                     applicationToOpenDto.SecondaryFilePathSegment = null;
