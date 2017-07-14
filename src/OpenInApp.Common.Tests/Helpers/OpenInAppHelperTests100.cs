@@ -127,9 +127,9 @@ namespace OpenInApp.Common.Tests.Helpers
             SetExecutableFullPath(keyToExecutableEnum);
 
             InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, typ);
-            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.Folder, null);
+            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.Folder, typ);// null);
             InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.File, typ);
-            InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.Folder, null);
+            InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.Folder, typ);//null);
         }
 
         private void InvokeApplication(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath, string singleOrMultipleArtefacts, ArtefactTypeToOpen artefactTypeToOpen, string typ)
@@ -187,11 +187,11 @@ namespace OpenInApp.Common.Tests.Helpers
                 case KeyToExecutableEnum.TreeSizeFree:
                     if (Environment.MachineName == "SIS050")
                     {
-                        executableFullPath = @"D:\Program Files (x86)\JAM Software\TreeSize Free\TreeSizeFree.exe";
+                        executableFullPath = @"C:\Program Files (x86)\JAM Software\TreeSize Free\TreeSizeFree.exe";
                     }
                     else
                     {
-                        executableFullPath = @"C:\Program Files (x86)\JAM Software\TreeSize Free\TreeSizeFree.exe";
+                        executableFullPath = @"D:\Program Files (x86)\JAM Software\TreeSize Free\TreeSizeFree.exe";
                     }
                     break;
                 case KeyToExecutableEnum.Vivaldi:
