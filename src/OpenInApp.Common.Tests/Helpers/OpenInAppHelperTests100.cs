@@ -126,10 +126,10 @@ namespace OpenInApp.Common.Tests.Helpers
         {
             SetExecutableFullPath(keyToExecutableEnum);
 
-            //InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, typ);
-            //InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.Folder, null);
+            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, typ);
+            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.Folder, null);
             InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.File, typ);
-            //InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.Folder, null);
+            InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.Folder, null);
         }
 
         private void InvokeApplication(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath, string singleOrMultipleArtefacts, ArtefactTypeToOpen artefactTypeToOpen, string typ)
@@ -166,8 +166,7 @@ namespace OpenInApp.Common.Tests.Helpers
                     }
                     else
                     {
-                        //executableFullPath = @"D:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
-                        executableFullPath = @"D:\Users\gtrev\AppData\Local\Markdown Monster\MarkdownMonster.exe";
+                        executableFullPath = @"D:\Users\gtrev\AppData\Local\Markdown Monster\MarkdownMonster.exe";//pre 1.4.8 D:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe
                     }
                     break;
                 case KeyToExecutableEnum.MSPaint:
@@ -391,19 +390,3 @@ namespace OpenInApp.Common.Tests.Helpers
         //works, with 1 file at least, but video is black! [TestCase(@"C:\Program Files (x86)\Windows Media Player\wmplayer.exe", false)]
     }
 }
-
-
-//////////////////////private const string altovaXMLSpyExePath = @"D:\Program Files (x86)\Altova\XMLSpy2017\XMLSpy.exe";
-//////////////////////private const string firefoxDeveloperEditionExePath = @"C:\Program Files\Firefox Developer Edition\firefox.exe";
-//////////////////////private const string gimpExePath = @"D:\Program Files\GIMP 2\bin\gimp-2.8.exe";
-//////////////////////private const string markdownMonsterExePath = @"D:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";//private const string markdownMonsterExePath = @"C:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
-//////////////////////private const string msPaintExePath = @"C:\Windows\system32\mspaint.exe";
-//////////////////////private const string operaExePath = @"D:\Program Files\Opera\launcher.exe";
-//////////////////////private const string operaDeveloperEditionExePath = @"D:\Program Files\Opera developer\launcher.exe";
-//////////////////////private const string paintDotNetExePath = @"C:\Program Files\paint.net\PaintDotNet.exe";
-//////////////////////private const string sqlServerManagementStudio = @"C:\Program Files\ssms.exe";
-//////////////////////private const string treeSizeFreeExePath = @"D:\Program Files (x86)\JAM Software\TreeSize Free\TreeSizeFree.exe";//private const string vivaldiExePath = @"C:\Users\GregoryT\AppData\Local\Vivaldi\Application\vivaldi.exe";
-//////////////////////private const string vivaldiExePath = @"D:\Users\gtrev\AppData\Local\Vivaldi\Application\vivaldi.exe";
-//////////////////////private const string vs2015ExePath = @"D:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe";
-//////////////////////private const string vs2017CommunityExePath = @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe";
-//////////////////////private const string winDirStatExePath = @"D:\Program Files (x86)\WinDirStat\windirstat.exe";
