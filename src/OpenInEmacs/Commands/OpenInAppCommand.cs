@@ -24,6 +24,8 @@ namespace OpenInEmacs.Commands
                 PackageGuids.guidOpenInVsCmdSetString,
                 PackageIds.CmdIdOpenInAppItemNode,
                 PackageIds.CmdIdOpenInAppCodeWin,
+                PackageIds.CmdIdOpenInAppFolderNode,
+                PackageIds.CmdIdOpenInAppProjNode,
                 GeneralOptions.keyToExecutableEnum,
                 VSPackage.Options.ActualPathToExe,
                 VSPackage.Options.FileQuantityWarningLimit,
