@@ -53,7 +53,7 @@ namespace OpenInApp.Common.Helpers
                 searchPaths = GetMultipleVersionPaths(searchPaths, keyToExecutableEnum).ToList();
             }
 
-            var debuggingSortedList = searchPaths; debuggingSortedList.Sort();
+            //var debuggingSortedList = searchPaths; debuggingSortedList.Sort();
 
             return searchPaths;
         }

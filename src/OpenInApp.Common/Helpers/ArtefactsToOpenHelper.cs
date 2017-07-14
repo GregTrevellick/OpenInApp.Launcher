@@ -53,6 +53,10 @@ namespace OpenInApp.Common.Helpers
                     { 
                         result.FilesToBeOpened = GetProjectFolderItems(dte);
                         result.FilesToBeOpened = RemoveDisallowedSuffixes(result.FilesToBeOpened, allowedFileExtensions);
+                        //if (excludeBinAndObjFoldersWhenOpeningProjectNode)
+                        //{
+                        //    remove bin and obj from result.FilesToBeOpened
+                        //}
                     }
                     else
                     {
