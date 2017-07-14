@@ -45,10 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="1_Introduction_Files.md" />
+    <None Include="1_Introduction_FilesAndFolders.md" />
     <None Include="1_Introduction_Folders.md" />
     <None Include="2_FreeReviews.md" />
+    <None Include="3_Features_FilesAndFolders.md" />
     <None Include="3_Features_Files.md" />
-    <None Include="3_Features_Folders.md" />
+    <None Include="4b_FileQuantityWarnings.md" />
     <None Include="4_FileTypeWarnings.md" />
     <None Include="5_UseCases_Files.md" />
     <None Include="6_Links.md" />
@@ -103,6 +105,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Gulpfile.js" />
+    <Content Include="OpenInAltovaXmlSpy\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInAltovaXmlSpy\ReadMeScreenShot_ProjNode.png" />
+    <Content Include="OpenInEmacs\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInEmacs\ReadMeScreenShot_ProjNode.png" />
+    <Content Include="OpenInGimp\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInGimp\ReadMeScreenShot_ProjNode.png" />
+    <Content Include="OpenInMarkdownMonster\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInMarkdownMonster\ReadMeScreenShot_ProjNode.png" />
+    <Content Include="OpenInMSPaint\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInMSPaint\ReadMeScreenShot_ProjNode.png" />
+    <Content Include="OpenInPaintDotNet\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInPaintDotNet\ReadMeScreenShot_ProjNode.png" />
+    <Content Include="OpenInVS2012\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInVS2012\ReadMeScreenShot_ProjNode.png" />
+    <Content Include="OpenInVS2013\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInVS2013\ReadMeScreenShot_ProjNode.png" />
+    <Content Include="OpenInVS2015\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInVS2015\ReadMeScreenShot_ProjNode.png" />
+    <Content Include="OpenInVS2017Community\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInVS2017Community\ReadMeScreenShot_ProjNode.png" />
+    <Content Include="OpenInVS2017Enterprise\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInVS2017Enterprise\ReadMeScreenShot_ProjNode.png" />
+    <Content Include="OpenInVS2017Professional\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInVS2017Professional\ReadMeScreenShot_ProjNode.png" />
     <Content Include="OpenInXamarinStudio\ThirdPartyScreenShot.png" />
     <Content Include="notes.txt" />
     <Content Include="OpenInAbracadabra\ReadMeScreenShot_FolderNode.png" />

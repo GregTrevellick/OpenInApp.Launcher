@@ -57,26 +57,40 @@ function OIAConcat (appNam, appDesc) {
 
     var filesToConcat = [appNam + '/0_Variables.md'];
 
-    if (appNam === 'OpenInTreeSizeFree' ||
-		appNam === 'OpenInTreeSizeProfessional' ||
-		appNam === 'OpenInWinDirStat') {
+    var appType = GetAppType(appNam);
+    
+    if (appType === 'FilesOnly') {
         filesToConcat.push(
-                '1_Introduction_Folders.md',
-                '2_FreeReviews.md',
-                '3_Features_Folders.md',
-                '6_Links.md'
-            );
+            '1_Introduction_Files.md',
+            '2_FreeReviews.md',
+            '3_Features_Files.md',
+            '4_FileTypeWarnings.md',
+            '4b_FileQuantityWarnings.md',
+            '5_UseCases_Files.md',
+            '6_Links.md'
+        );
     }
-    else {
-        filesToConcat.push(           
-                '1_Introduction_Files.md',
-                '2_FreeReviews.md',
-                '3_Features_Files.md',
-                '4_FileTypeWarnings.md',
-                '5_UseCases_Files.md',
-                '6_Links.md'
-            );
+
+    if (appType === 'FilesAndFolders') {
+        filesToConcat.push(
+            '1_Introduction_FilesAndFolders.md',
+            '2_FreeReviews.md',
+            '3_Features_FilesAndFolders.md',
+            '4_FileTypeWarnings.md',
+            '4b_FileQuantityWarnings.md',
+            '5_UseCases_Files.md',
+            '6_Links.md'
+        );
     }
+
+    //if (appType === 'FoldersOnly') {
+    //    filesToConcat.push(
+    //        '1_Introduction_Folders.md',
+    //        '2_FreeReviews.md',
+    //        '3_Features_Folders.md',
+    //        '6_Links.md'
+    //    );
+    //}
 
     return gulp
         .src(filesToConcat)
@@ -84,6 +98,47 @@ function OIAConcat (appNam, appDesc) {
         .pipe(replace('[ThirdPartyApp]', '[' + appDesc + ']'))
         .pipe(gulp.dest('.'));
 } 
+
+function GetAppType(appNam) {
+
+    //gregtt add qunit tests here
+
+    var appType = "Undefined";
+
+    if (appNam === 'OpenInChromeCanary' ||
+        appNam === 'OpenInFirefoxDeveloperEdition' ||
+        appNam === 'OpenInOpera' ||
+        appNam === 'OpenInOperaDeveloper' ||
+        appNam === 'OpenInSQLServerManagementStudio' ||
+        appNam === 'OpenInVivaldi' ||
+        appNam === 'OpenInXamarinStudio') {
+            appType = 'FilesOnly'
+    }
+
+    if (appNam === 'OpenInAltovaXmlSpy' ||
+        appNam === 'OpenInEmacs' ||
+        appNam === 'OpenInGimp' ||
+        appNam === 'OpenInMarkdownMonster' ||
+        appNam === 'OpenInMSPaint' ||
+        appNam === 'OpenInPaintDotNet' ||
+        appNam === 'OpenInTreeSizeFree' ||
+        appNam === 'OpenInTreeSizeProfessional' ||
+        appNam === 'OpenInVS2012' ||
+        appNam === 'OpenInVS2013' ||
+        appNam === 'OpenInVS2015' ||
+        appNam === 'OpenInVS2017Community' ||
+        appNam === 'OpenInVS2017Enterprise' ||
+        appNam === 'OpenInVS2017Professional' ||
+        appNam === 'OpenInWinDirStat') {
+            appType = 'FilesAndFolders'
+    }
+
+    //if (appNam === 'OpenInAbracadabra') {
+    //        appType = 'FoldersOnly'
+    //}
+
+    return appType;
+}
 
 
 //TODO gregtt rename ReadMeScreenShot_CodeEditorWindow.png TO ReadMeScreenShot_CodeWin.png

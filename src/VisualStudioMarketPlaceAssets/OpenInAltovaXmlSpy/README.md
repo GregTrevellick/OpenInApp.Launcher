@@ -1,6 +1,6 @@
 [ThirdPartyAppHomePage]: http://www.altova.com/xml-editor/
 
-Open multiple files simultaneously in [Altova XMLSpy XML Editor][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
+Open multiple files and/or folders simultaneously in [Altova XMLSpy XML Editor][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 
  - *If you like this ***free*** tool please take a few seconds out to give a star rating below*.
@@ -13,7 +13,7 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 
 ## Features
 
-- Open multiple files simultaneously in [Altova XMLSpy XML Editor][ThirdPartyAppHomePage].
+- Open multiple files and/or folders simultaneously in [Altova XMLSpy XML Editor][ThirdPartyAppHomePage].
 
 - Within the code editor window
 
@@ -23,9 +23,13 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
  
   ![](ReadMeScreenShot_ContextMenu.png)
 
-- Warning if attempting to open a large quantity of files. The quantity is configurable in Tools > Options.
+- From solution explorer at folder level
+ 
+  ![](ReadMeScreenShot_FolderNode.png)
 
-  ![](../Generic_ReadMeScreenShot_WarningLargeQuantity.png)
+- From solution explorer at project level
+
+  ![](ReadMeScreenShot_ProjNode.png)
 
 
 - Warning if attempting to open one or more file types whose extension is not typically associated with [Altova XMLSpy XML Editor][ThirdPartyAppHomePage]. The list of typical file extensions is configurable in Tools > Options.
@@ -36,6 +40,10 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 
   ![](../Generic_ReadMeScreenShot_OptionsGeneral.png)
 
+
+- Warning if attempting to open a large quantity of artefacts. The quantity is configurable in Tools > Options.
+
+  ![](../Generic_ReadMeScreenShot_WarningLargeQuantity.png)
 
 ## Use Cases
 
