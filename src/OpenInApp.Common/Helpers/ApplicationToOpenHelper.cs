@@ -190,6 +190,7 @@ namespace OpenInApp.Common.Helpers
                     break;
                 case KeyToExecutableEnum.MarkdownMonster:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Markdown Monster";
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.DefaultTypicalFileExtensions = new List<string> { "md" };
                     break;
                 case KeyToExecutableEnum.MSPaint:

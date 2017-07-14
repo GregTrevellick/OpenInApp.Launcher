@@ -121,7 +121,7 @@ namespace OpenInApp.Common.Tests.Helpers
 
             InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, typ);
             //InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.Folder, null);
-            //InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.File, typ);
+            InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.File, typ);
             //InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.Folder, null);
         }
 
@@ -159,7 +159,8 @@ namespace OpenInApp.Common.Tests.Helpers
                     }
                     else
                     {
-                        executableFullPath = @"D:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
+                        //executableFullPath = @"D:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
+                        executableFullPath = @"D:\Users\gtrev\AppData\Local\Markdown Monster\MarkdownMonster.exe";
                     }
                     break;
                 case KeyToExecutableEnum.MSPaint:
