@@ -13,14 +13,14 @@ namespace OpenInApp.Common.Tests.Helpers
     {
         [Test()]
         [Category("E2E")]
-        public void AltovaXMLSpy()
+        public void Test_AltovaXMLSpy()
         {
             InvokeApplication(KeyToExecutableEnum.AltovaXMLSpy, "Text");
         }   
 
         [Test()]
         [Category("E2E")]
-        public void FirefoxDeveloperEdition()
+        public void Test_FirefoxDeveloperEdition()
         {
             InvokeApplication(KeyToExecutableEnum.FirefoxDeveloperEdition, "Image");
             InvokeApplication(KeyToExecutableEnum.FirefoxDeveloperEdition, "Text");
@@ -28,28 +28,28 @@ namespace OpenInApp.Common.Tests.Helpers
    
         [Test()]
         [Category("E2E")]
-        public void Gimp()
+        public void Test_Gimp()
         {
             InvokeApplication(KeyToExecutableEnum.Gimp, "Image");
         }     
 
         [Test()]
         [Category("E2E")]
-        public void MarkdownMonster()
+        public void Test_MarkdownMonster()
         {
             InvokeApplication(KeyToExecutableEnum.MarkdownMonster, "Text");
         }
      
         [Test()]
         [Category("E2E")]
-        public void MSPaint()
+        public void Test_MSPaint()
         {
             InvokeApplication(KeyToExecutableEnum.MSPaint, "Image");
         }
 
         [Test()]
         [Category("E2E")]
-        public void Opera()
+        public void Test_Opera()
         {
             InvokeApplication(KeyToExecutableEnum.Opera, "Image");
             InvokeApplication(KeyToExecutableEnum.Opera, "Text");
@@ -57,7 +57,7 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("E2E")]
-        public void OperaDeveloperEdition()
+        public void Test_OperaDeveloperEdition()
         {
             InvokeApplication(KeyToExecutableEnum.OperaDeveloperEdition, "Image");
             InvokeApplication(KeyToExecutableEnum.OperaDeveloperEdition, "Text");
@@ -65,28 +65,28 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("E2E")]
-        public void PaintDotNet()
+        public void Test_PaintDotNet()
         {
             InvokeApplication(KeyToExecutableEnum.PaintDotNet, "Image");
         }
 
         [Test()]
         [Category("E2E")]
-        public void SQLServerManagementStudio()
+        public void Test_SQLServerManagementStudio()
         {
             InvokeApplication(KeyToExecutableEnum.SQLServerManagementStudio, "Sequel");
         }
 
         [Test()]
         [Category("E2E")]
-        public void TreeSizeFree()
+        public void Test_TreeSizeFree()
         {
             InvokeApplication(KeyToExecutableEnum.TreeSizeFree, "Text");
         }
 
         [Test()]
         [Category("E2E")]
-        public void Vivaldi()
+        public void Test_Vivaldi()
         {
             InvokeApplication(KeyToExecutableEnum.Vivaldi, "Image");
             InvokeApplication(KeyToExecutableEnum.Vivaldi, "Text");
@@ -94,7 +94,7 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("E2E")]
-        public void VS2015()
+        public void Test_VS2015()
         {
             InvokeApplication(KeyToExecutableEnum.VS2015, "Image");
             InvokeApplication(KeyToExecutableEnum.VS2015, "Text");
@@ -102,7 +102,7 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("E2E")]
-        public void VS2017Community()
+        public void Test_VS2017Community()
         {
             InvokeApplication(KeyToExecutableEnum.VS2017Community, "Image");
             InvokeApplication(KeyToExecutableEnum.VS2017Community, "Text");
@@ -110,7 +110,7 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("E2E")]
-        public void WinDirStat()
+        public void Test_WinDirStat()
         {
             InvokeApplication(KeyToExecutableEnum.WinDirStat, "Text");
         }
