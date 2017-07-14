@@ -165,10 +165,18 @@
     <Content Include="TestFiles\OIA\Multiple_Folders\Test\dummy multiple folders test sub-folder file.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="TestFiles\OIA\Multiple_ImageFilesA.jpg" />
-    <Content Include="TestFiles\OIA\Multiple_ImageFilesB.jpg" />
-    <Content Include="TestFiles\OIA\Multiple_SequelFilesA.sql" />
-    <Content Include="TestFiles\OIA\Multiple_SequelFilesB.sql" />
+    <Content Include="TestFiles\OIA\Multiple_ImageFilesA.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\OIA\Multiple_ImageFilesB.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\OIA\Multiple_SequelFilesA.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\OIA\Multiple_SequelFilesB.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestFiles\OIA\Single_Folder\dummy single folder file.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
