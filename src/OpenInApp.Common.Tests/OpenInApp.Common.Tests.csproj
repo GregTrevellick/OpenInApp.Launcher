@@ -123,13 +123,9 @@
   </Choose>
   <ItemGroup>
     <Compile Include="FileToBeOpenedKind.cs" />
-    <Compile Include="Helpers\zApplicationToOpenHelperTests100.cs" />
-    <Compile Include="Helpers\zBrowseFileHelperTests100.cs" />
-    <Compile Include="Helpers\zCommonConstantsTests100.cs" />
     <Compile Include="Helpers\EnumHelperTests100.cs" />
     <Compile Include="Helpers\ArtefactsHelperTests100.cs" />
     <Compile Include="Helpers\CsvHelperTests100.cs" />
-    <Compile Include="Helpers\zKeyToExecutableTests100.cs" />
     <Compile Include="Helpers\OpenInAppHelperTests100.cs" />
     <Compile Include="Helpers\GeneralOptionsHelperTests.cs" />
     <Compile Include="Helpers\AllAppsHelperTests100.cs" />
@@ -179,6 +175,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="TestFiles\OIA\Multiple_TextFilesb.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\OIA\Single_TextFilea.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="TestFiles\OIA\Single_TextFilea.txt">

@@ -244,6 +244,7 @@ namespace OpenInApp.Common.Helpers
                 case KeyToExecutableEnum.SQLServerManagementStudio:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft SQL Server\9999\Tools\Binn\ManagementStudio";
                     applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions = true;
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "ssms.exe", "ssmsee.exe", "SqlWb.exe" };
                     applicationToOpenDto.UseShellExecute = true;
                     break;
