@@ -11,7 +11,7 @@ namespace OpenInEmacs
         public const string Name = "Open in Emacs";
         public const string Description = @"Open multiple files simultaneously in Emacs directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
-        public const string Version = "1.1.9";
+        public const string Version = "1.1.40";
         public const string Author = "GregTrevellick";
         public const string Tags = "open, open in, emacs";
     }
