@@ -46,7 +46,7 @@ namespace OpenInApp.Common.Helpers
                 {
                     arguments += GetSingleArgument(actualArtefactToBeOpened) + " ";
                 }
-                arguments.TrimEnd(' ');
+                arguments = arguments.TrimEnd(' ');
                 InvokeProcess(arguments, fileName, useShellExecute, workingDirectory, processWithinProcess);
             }
         }

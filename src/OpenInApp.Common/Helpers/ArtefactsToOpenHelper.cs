@@ -19,7 +19,7 @@ namespace OpenInApp.Common.Helpers
                 FoldersToBeOpened = new List<string>()
             };
 
-            bool itemsNotFolder = ItemsNotFolder(commandPlacement, keyToExecutableEnum);
+            bool itemsNotFolder = ItemsNotFolder(keyToExecutableEnum);
 
             switch (commandPlacement)
             {
@@ -53,10 +53,10 @@ namespace OpenInApp.Common.Helpers
                     { 
                         result.FilesToBeOpened = GetProjectFolderItems(dte);
                         result.FilesToBeOpened = RemoveDisallowedSuffixes(result.FilesToBeOpened, allowedFileExtensions);
-                        //if (excludeBinAndObjFoldersWhenOpeningProjectNode)
-                        //{
-                        //    remove bin and obj from result.FilesToBeOpened
-                        //}
+                        if (ExcludeBinAndObjFoldersWhenOpeningProjectNode(keyToExecutableEnum))
+                        {
+                            result.FilesToBeOpened = RemoveDisallowedFolders(result.FilesToBeOpened);
+                        }
                     }
                     else
                     {
@@ -157,7 +157,7 @@ namespace OpenInApp.Common.Helpers
             return result;
         }
 
-        private static bool ItemsNotFolder(CommandPlacement commandPlacement, KeyToExecutableEnum keyToExecutableEnum)
+        private static bool ItemsNotFolder(KeyToExecutableEnum keyToExecutableEnum)
         {
             bool itemsNotFolder = true;
             var applicationToOpenHelper = new ApplicationToOpenHelper();
@@ -168,6 +168,13 @@ namespace OpenInApp.Common.Helpers
                     (openIndividualFilesInFolderRatherThanFolderItself.HasValue && openIndividualFilesInFolderRatherThanFolderItself.Value)
                 );
             return itemsNotFolder;
+        }
+
+        private static bool ExcludeBinAndObjFoldersWhenOpeningProjectNode(KeyToExecutableEnum keyToExecutableEnum)
+        {
+            var applicationToOpenHelper = new ApplicationToOpenHelper();
+            var excludeBinAndObjFoldersWhenOpeningProjectNode = applicationToOpenHelper.GetExcludeBinAndObjFoldersWhenOpeningProjectNode(keyToExecutableEnum);
+            return excludeBinAndObjFoldersWhenOpeningProjectNode;
         }
 
         private static IList<string> RemoveDisallowedSuffixes(IList<string> filesToBeOpened, IEnumerable<string> allowedFileExtensions)
@@ -198,5 +205,26 @@ namespace OpenInApp.Common.Helpers
             
             return result;
         }
+
+        private static IList<string> RemoveDisallowedFolders(IList<string> filesToBeOpened)
+        {
+            var result = filesToBeOpened.ToList();
+
+            if (filesToBeOpened != null &&
+                filesToBeOpened.Any())
+            {
+                foreach (var file in filesToBeOpened)
+                {
+                    if (file.Contains("\\obj\\") ||
+                        file.Contains("\\bin\\"))
+                    {
+                        result.Remove(file);
+                    }
+                }
+            }
+
+            return result;
+        }
+
     }
 }

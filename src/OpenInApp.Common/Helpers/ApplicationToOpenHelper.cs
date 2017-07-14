@@ -5,6 +5,11 @@ namespace OpenInApp.Common.Helpers
 {
     public class ApplicationToOpenHelper
     {
+        public bool GetExcludeBinAndObjFoldersWhenOpeningProjectNode(KeyToExecutableEnum keyToExecutableEnum)
+        {
+            return GetApplicationToOpenDto(keyToExecutableEnum).ExcludeBinAndObjFoldersWhenOpeningProjectNode;
+        }
+
         public bool? GetOpenIndividualFilesInFolderRatherThanFolderItself(KeyToExecutableEnum keyToExecutableEnum)
         {
             return GetApplicationToOpenDto(keyToExecutableEnum).OpenIndividualFilesInFolderRatherThanFolderItself;
