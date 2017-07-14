@@ -115,11 +115,18 @@ namespace OpenInApp.Common.Tests.Helpers
             InvokeApplication(KeyToExecutableEnum.WinDirStat, "Text");
         }
 
+        [Test()]
+        [Category("E2E")]
+        public void Test_XamarinStudio()
+        {
+            InvokeApplication(KeyToExecutableEnum.XamarinStudio, "Text");
+        }
+
         private void InvokeApplication(KeyToExecutableEnum keyToExecutableEnum, string typ)
         {
             SetExecutableFullPath(keyToExecutableEnum);
 
-            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, typ);
+            //InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, typ);
             //InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.Folder, null);
             InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.File, typ);
             //InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.Folder, null);
@@ -199,6 +206,9 @@ namespace OpenInApp.Common.Tests.Helpers
                     break;
                 case KeyToExecutableEnum.WinDirStat:
                     executableFullPath = @"D:\Program Files (x86)\WinDirStat\windirstat.exe";
+                    break;
+                case KeyToExecutableEnum.XamarinStudio:
+                    executableFullPath = @"D:\Program Files (x86)\Xamarin Studio\bin\XamarinStudio.exe";
                     break;
                 default:
                     executableFullPath = @"C:\Temp\NotFound.exe";
