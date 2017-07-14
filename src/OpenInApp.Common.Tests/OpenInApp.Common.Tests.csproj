@@ -165,25 +165,26 @@
     <Content Include="TestFiles\OIA\Multiple_Folders\Test\dummy multiple folders test sub-folder file.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="TestFiles\OIA\Multiple_ImageFilesA.jpg" />
+    <Content Include="TestFiles\OIA\Multiple_ImageFilesB.jpg" />
+    <Content Include="TestFiles\OIA\Multiple_SequelFilesA.sql" />
+    <Content Include="TestFiles\OIA\Multiple_SequelFilesB.sql" />
     <Content Include="TestFiles\OIA\Single_Folder\dummy single folder file.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="TestFiles\OIA\Single_ImageFile1.jpg">
+    <Content Include="TestFiles\OIA\Single_ImageFile.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="TestFiles\OIA\Multiple_ImageFiles2.jpg">
+    <Content Include="TestFiles\OIA\Multiple_TextFilesB.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="TestFiles\OIA\Multiple_TextFilesb.txt">
+    <Content Include="TestFiles\OIA\Single_SequelFile.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="TestFiles\OIA\Single_TextFilea.sql">
+    <Content Include="TestFiles\OIA\Single_TextFile.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="TestFiles\OIA\Single_TextFilea.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestFiles\OIA\Multiple_TextFilesa.txt">
+    <Content Include="TestFiles\OIA\Multiple_TextFilesA.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="TestFiles\AnyText1.txt">
@@ -196,9 +197,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="TestFiles\MovingImage2.mpeg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestFiles\OIA\Multiple_ImageFiles1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

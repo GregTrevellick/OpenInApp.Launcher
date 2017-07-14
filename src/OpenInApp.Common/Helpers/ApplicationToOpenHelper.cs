@@ -140,6 +140,7 @@ namespace OpenInApp.Common.Helpers
                     applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     break;
                 case KeyToExecutableEnum.Gimp:
+                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
                     applicationToOpenDto.SecondaryFilePathSegment = @"GIMP 2\bin";
                     applicationToOpenDto.DefaultTypicalFileExtensions = new List<string>
                     {
@@ -186,7 +187,6 @@ namespace OpenInApp.Common.Helpers
                         "zip",
 				        #endregion
                     };
-                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
                     break;
                 case KeyToExecutableEnum.MarkdownMonster:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Markdown Monster";
@@ -195,6 +195,7 @@ namespace OpenInApp.Common.Helpers
                 case KeyToExecutableEnum.MSPaint:
                     applicationToOpenDto.SecondaryFilePathSegment = "system32";
                     ///////////////////////////////applicationToOpenDto.InitialFolderType = InitialFolderType.Windows;
+                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
                     applicationToOpenDto.UseShellExecute = false;
                     applicationToOpenDto.DefaultTypicalFileExtensions = new List<string>
                     {
@@ -212,17 +213,17 @@ namespace OpenInApp.Common.Helpers
                         "tiff",
                         #endregion
                     };
-                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
                     break;
                 case KeyToExecutableEnum.Opera:
                     ///////////////////////////////applicationToOpenDto.InitialFolderType = InitialFolderType.LocalApplicationData;
-                    applicationToOpenDto.SecondaryFilePathSegment = @"Opera";
                     applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "launcher.exe", "opera.exe" };
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Opera";
                     break;
                 case KeyToExecutableEnum.OperaDeveloperEdition:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Opera developer";
                     break;
                 case KeyToExecutableEnum.PaintDotNet:
+                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
                     applicationToOpenDto.SecondaryFilePathSegment = @"Paint.NET";
                     applicationToOpenDto.DefaultTypicalFileExtensions = new List<string>
                     {
@@ -239,28 +240,27 @@ namespace OpenInApp.Common.Helpers
                         "TIFF",
 	                    #endregion
                     };
-                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
                     break;
                 case KeyToExecutableEnum.SQLServerManagementStudio:
+                    applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "ssms.exe", "ssmsee.exe", "SqlWb.exe" };
                     applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft SQL Server\9999\Tools\Binn\ManagementStudio";
                     applicationToOpenDto.SecondaryFilePathSegmentHasMultipleVersions = true;
                     applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
-                    applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "ssms.exe", "ssmsee.exe", "SqlWb.exe" };
                     applicationToOpenDto.UseShellExecute = true;
                     break;
                 case KeyToExecutableEnum.TreeSizeFree:
                     applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
-                    applicationToOpenDto.SecondaryFilePathSegment = @"JAM Software\TreeSize Free";
                     applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = false;
+                    applicationToOpenDto.SecondaryFilePathSegment = @"JAM Software\TreeSize Free";
                     break;
                 case KeyToExecutableEnum.TreeSizeProfessional:
                     applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
-                    applicationToOpenDto.SecondaryFilePathSegment = @"JAM Software\TreeSize";
                     applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = false;
+                    applicationToOpenDto.SecondaryFilePathSegment = @"JAM Software\TreeSize";
                     break;
                 case KeyToExecutableEnum.Vivaldi:
-                    applicationToOpenDto.SecondaryFilePathSegment = @"Vivaldi\Application";
                     applicationToOpenDto.ProcessWithinProcess = true;
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Vivaldi\Application";
                     applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     ///////////////////////////////applicationToOpenDto.InitialFolderType = InitialFolderType.LocalApplicationData;
                     break;
@@ -302,8 +302,8 @@ namespace OpenInApp.Common.Helpers
                     break;
                 case KeyToExecutableEnum.WinDirStat:
                     applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
-                    applicationToOpenDto.SecondaryFilePathSegment = @"WinDirStat";
                     applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = false;
+                    applicationToOpenDto.SecondaryFilePathSegment = @"WinDirStat";
                     break;
                 case KeyToExecutableEnum.XamarinStudio:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Xamarin Studio\bin";

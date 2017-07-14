@@ -15,109 +15,113 @@ namespace OpenInApp.Common.Tests.Helpers
         [Category("E2E")]
         public void AltovaXMLSpy()
         {
-            InvokeApplication(KeyToExecutableEnum.AltovaXMLSpy);
+            InvokeApplication(KeyToExecutableEnum.AltovaXMLSpy, "Text");
         }   
 
         [Test()]
         [Category("E2E")]
         public void FirefoxDeveloperEdition()
         {
-            InvokeApplication(KeyToExecutableEnum.FirefoxDeveloperEdition);
+            InvokeApplication(KeyToExecutableEnum.FirefoxDeveloperEdition, "Image");
+            InvokeApplication(KeyToExecutableEnum.FirefoxDeveloperEdition, "Text");
         }
    
         [Test()]
         [Category("E2E")]
         public void Gimp()
         {
-            InvokeApplication(KeyToExecutableEnum.Gimp);
+            InvokeApplication(KeyToExecutableEnum.Gimp, "Image");
         }     
 
         [Test()]
         [Category("E2E")]
         public void MarkdownMonster()
         {
-            InvokeApplication(KeyToExecutableEnum.MarkdownMonster);
+            InvokeApplication(KeyToExecutableEnum.MarkdownMonster, "Text");
         }
      
         [Test()]
         [Category("E2E")]
         public void MSPaint()
         {
-            InvokeApplication(KeyToExecutableEnum.MSPaint);
+            InvokeApplication(KeyToExecutableEnum.MSPaint, "Image");
         }
 
         [Test()]
         [Category("E2E")]
         public void Opera()
         {
-            InvokeApplication(KeyToExecutableEnum.Opera);
+            InvokeApplication(KeyToExecutableEnum.Opera, "Image");
+            InvokeApplication(KeyToExecutableEnum.Opera, "Text");
         }
 
         [Test()]
         [Category("E2E")]
         public void OperaDeveloperEdition()
         {
-            InvokeApplication(KeyToExecutableEnum.OperaDeveloperEdition);
+            InvokeApplication(KeyToExecutableEnum.OperaDeveloperEdition, "Image");
+            InvokeApplication(KeyToExecutableEnum.OperaDeveloperEdition, "Text");
         }     
 
         [Test()]
         [Category("E2E")]
         public void PaintDotNet()
         {
-            InvokeApplication(KeyToExecutableEnum.PaintDotNet);
+            InvokeApplication(KeyToExecutableEnum.PaintDotNet, "Image");
         }
 
         [Test()]
         [Category("E2E")]
         public void SQLServerManagementStudio()
         {
-            InvokeApplication(KeyToExecutableEnum.SQLServerManagementStudio);
+            InvokeApplication(KeyToExecutableEnum.SQLServerManagementStudio, "Sequel");
         }
 
         [Test()]
         [Category("E2E")]
         public void TreeSizeFree()
         {
-            InvokeApplication(KeyToExecutableEnum.TreeSizeFree);
+            InvokeApplication(KeyToExecutableEnum.TreeSizeFree, "Text");
         }
 
         [Test()]
         [Category("E2E")]
         public void Vivaldi()
         {
-            InvokeApplication(KeyToExecutableEnum.Vivaldi);
+            InvokeApplication(KeyToExecutableEnum.Vivaldi, "Image");
+            InvokeApplication(KeyToExecutableEnum.Vivaldi, "Text");
         }
-     
+
         [Test()]
         [Category("E2E")]
         public void VS2015()
         {
-            InvokeApplication(KeyToExecutableEnum.VS2015);
+            InvokeApplication(KeyToExecutableEnum.VS2015, "Image");
+            InvokeApplication(KeyToExecutableEnum.VS2015, "Text");
         }
 
         [Test()]
         [Category("E2E")]
         public void VS2017Community()
         {
-            InvokeApplication(KeyToExecutableEnum.VS2017Community);
+            InvokeApplication(KeyToExecutableEnum.VS2017Community, "Image");
+            InvokeApplication(KeyToExecutableEnum.VS2017Community, "Text");
         }
 
         [Test()]
         [Category("E2E")]
         public void WinDirStat()
         {
-            InvokeApplication(KeyToExecutableEnum.WinDirStat);
+            InvokeApplication(KeyToExecutableEnum.WinDirStat, "Text");
         }
 
-        private void InvokeApplication(KeyToExecutableEnum keyToExecutableEnum)
+        private void InvokeApplication(KeyToExecutableEnum keyToExecutableEnum, string typ)
         {
             SetExecutableFullPath(keyToExecutableEnum);
 
-            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, "Text");
-            //InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, "Image");
+            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, typ);
             //InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.Folder, null);
-            //InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.File, "Text");
-            //InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.File, "Image");
+            //InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.File, typ);
             //InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.Folder, null);
         }
 
@@ -202,21 +206,6 @@ namespace OpenInApp.Common.Tests.Helpers
         
         }
 
-        //////////////////////private const string altovaXMLSpyExePath = @"D:\Program Files (x86)\Altova\XMLSpy2017\XMLSpy.exe";
-        //////////////////////private const string firefoxDeveloperEditionExePath = @"C:\Program Files\Firefox Developer Edition\firefox.exe";
-        //////////////////////private const string gimpExePath = @"D:\Program Files\GIMP 2\bin\gimp-2.8.exe";
-        //////////////////////private const string markdownMonsterExePath = @"D:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";//private const string markdownMonsterExePath = @"C:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
-        //////////////////////private const string msPaintExePath = @"C:\Windows\system32\mspaint.exe";
-        //////////////////////private const string operaExePath = @"D:\Program Files\Opera\launcher.exe";
-        //////////////////////private const string operaDeveloperEditionExePath = @"D:\Program Files\Opera developer\launcher.exe";
-        //////////////////////private const string paintDotNetExePath = @"C:\Program Files\paint.net\PaintDotNet.exe";
-        //////////////////////private const string sqlServerManagementStudio = @"C:\Program Files\ssms.exe";
-        //////////////////////private const string treeSizeFreeExePath = @"D:\Program Files (x86)\JAM Software\TreeSize Free\TreeSizeFree.exe";//private const string vivaldiExePath = @"C:\Users\GregoryT\AppData\Local\Vivaldi\Application\vivaldi.exe";
-        //////////////////////private const string vivaldiExePath = @"D:\Users\gtrev\AppData\Local\Vivaldi\Application\vivaldi.exe";
-        //////////////////////private const string vs2015ExePath = @"D:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe";
-        //////////////////////private const string vs2017CommunityExePath = @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe";
-        //////////////////////private const string winDirStatExePath = @"D:\Program Files (x86)\WinDirStat\windirstat.exe";
-
         private string testFilesPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
         private List<string> GetTestArtefactsToBeOpened(string singleOrMultipleArtefacts, string typ, ApplicationToOpenDto dto, List<string> artefactsToBeOpened)
@@ -226,13 +215,19 @@ namespace OpenInApp.Common.Tests.Helpers
                 switch (dto.ArtefactTypeToOpen)
                 {
                     case ArtefactTypeToOpen.File:
-                        if (typ == "Text")
+                        switch (typ)
                         {
-                            artefactsToBeOpened = GetTestArtefactsToBeOpened_Single_TextFile();
-                        }
-                        else
-                        {
-                            artefactsToBeOpened = GetTestArtefactsToBeOpened_Single_ImageFile();
+                            case "Image":
+                                artefactsToBeOpened = GetTestArtefactsToBeOpened_Single_ImageFile();
+                                break;
+                            case "Sequel":
+                                artefactsToBeOpened = GetTestArtefactsToBeOpened_Single_SequelFile();
+                                break;
+                            case "Text":
+                                artefactsToBeOpened = GetTestArtefactsToBeOpened_Single_TextFile();
+                                break;
+                            default:
+                                throw new ArgumentOutOfRangeException();
                         }
                         break;
                     case ArtefactTypeToOpen.Folder:
@@ -245,13 +240,19 @@ namespace OpenInApp.Common.Tests.Helpers
                 switch (dto.ArtefactTypeToOpen)
                 {
                     case ArtefactTypeToOpen.File:
-                        if (typ == "Text")
+                        switch (typ)
                         {
-                            artefactsToBeOpened = GetTestArtefactsToBeOpened_Multiple_TextFiles();
-                        }
-                        else
-                        {
-                            artefactsToBeOpened = GetTestArtefactsToBeOpened_Multiple_ImageFiles();
+                            case "Image":
+                                artefactsToBeOpened = GetTestArtefactsToBeOpened_Multiple_ImageFiles();
+                                break;
+                            case "Sequel":
+                                artefactsToBeOpened = GetTestArtefactsToBeOpened_Multiple_SequelFiles();
+                                break;
+                            case "Text":
+                                artefactsToBeOpened = GetTestArtefactsToBeOpened_Multiple_TextFiles();
+                                break;
+                            default:
+                                throw new ArgumentOutOfRangeException();
                         }
                         break;
                     case ArtefactTypeToOpen.Folder:
@@ -267,7 +268,15 @@ namespace OpenInApp.Common.Tests.Helpers
         {
             return new List<string>
             {
-                testFilesPath + @"\TestFiles\OIA\Single_ImageFile1.jpg"
+                testFilesPath + @"\TestFiles\OIA\Single_ImageFile.jpg"
+            };
+        }
+
+        private List<string> GetTestArtefactsToBeOpened_Single_SequelFile()
+        {
+            return new List<string>
+            {
+                testFilesPath + @"\TestFiles\OIA\Single_SequelFile.sql"
             };
         }
 
@@ -275,7 +284,7 @@ namespace OpenInApp.Common.Tests.Helpers
         {
             return new List<string>
             {
-                testFilesPath + @"\TestFiles\OIA\Single_TextFilea.txt"
+                testFilesPath + @"\TestFiles\OIA\Single_TextFile.txt"
             };
         }
 
@@ -287,21 +296,30 @@ namespace OpenInApp.Common.Tests.Helpers
             };
         }
 
-        private List<string> GetTestArtefactsToBeOpened_Multiple_TextFiles()
-        {
-            return new List<string>
-            {
-                testFilesPath + @"\TestFiles\OIA\Multiple_TextFilesa.txt",
-                testFilesPath + @"\TestFiles\OIA\Multiple_TextFilesb.txt",
-            };
-        }
-
         private List<string> GetTestArtefactsToBeOpened_Multiple_ImageFiles()
         {
             return new List<string>
             {
-                testFilesPath + @"\TestFiles\OIA\Multiple_ImageFiles1.jpg",
-                testFilesPath + @"\TestFiles\OIA\Multiple_ImageFiles2.jpg",
+                testFilesPath + @"\TestFiles\OIA\Multiple_ImageFilesA.jpg",
+                testFilesPath + @"\TestFiles\OIA\Multiple_ImageFilesB.jpg",
+            };
+        }
+
+        private List<string> GetTestArtefactsToBeOpened_Multiple_SequelFiles()
+        {
+            return new List<string>
+            {
+                testFilesPath + @"\TestFiles\OIA\Multiple_SequelFilesA.sql",
+                testFilesPath + @"\TestFiles\OIA\Multiple_SequelFilesB.sql",
+            };
+        }
+
+        private List<string> GetTestArtefactsToBeOpened_Multiple_TextFiles()
+        {
+            return new List<string>
+            {
+                testFilesPath + @"\TestFiles\OIA\Multiple_TextFilesA.txt",
+                testFilesPath + @"\TestFiles\OIA\Multiple_TextFilesB.txt",
             };
         }
 
@@ -362,3 +380,19 @@ namespace OpenInApp.Common.Tests.Helpers
         //works, with 1 file at least, but video is black! [TestCase(@"C:\Program Files (x86)\Windows Media Player\wmplayer.exe", false)]
     }
 }
+
+
+//////////////////////private const string altovaXMLSpyExePath = @"D:\Program Files (x86)\Altova\XMLSpy2017\XMLSpy.exe";
+//////////////////////private const string firefoxDeveloperEditionExePath = @"C:\Program Files\Firefox Developer Edition\firefox.exe";
+//////////////////////private const string gimpExePath = @"D:\Program Files\GIMP 2\bin\gimp-2.8.exe";
+//////////////////////private const string markdownMonsterExePath = @"D:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";//private const string markdownMonsterExePath = @"C:\Program Files (x86)\Markdown Monster\MarkdownMonster.exe";
+//////////////////////private const string msPaintExePath = @"C:\Windows\system32\mspaint.exe";
+//////////////////////private const string operaExePath = @"D:\Program Files\Opera\launcher.exe";
+//////////////////////private const string operaDeveloperEditionExePath = @"D:\Program Files\Opera developer\launcher.exe";
+//////////////////////private const string paintDotNetExePath = @"C:\Program Files\paint.net\PaintDotNet.exe";
+//////////////////////private const string sqlServerManagementStudio = @"C:\Program Files\ssms.exe";
+//////////////////////private const string treeSizeFreeExePath = @"D:\Program Files (x86)\JAM Software\TreeSize Free\TreeSizeFree.exe";//private const string vivaldiExePath = @"C:\Users\GregoryT\AppData\Local\Vivaldi\Application\vivaldi.exe";
+//////////////////////private const string vivaldiExePath = @"D:\Users\gtrev\AppData\Local\Vivaldi\Application\vivaldi.exe";
+//////////////////////private const string vs2015ExePath = @"D:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe";
+//////////////////////private const string vs2017CommunityExePath = @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe";
+//////////////////////private const string winDirStatExePath = @"D:\Program Files (x86)\WinDirStat\windirstat.exe";
