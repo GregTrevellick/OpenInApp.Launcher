@@ -110,8 +110,7 @@ function GetAppType(appNam) {
         appNam === 'OpenInOpera' ||
         appNam === 'OpenInOperaDeveloper' ||
         appNam === 'OpenInSQLServerManagementStudio' ||
-        appNam === 'OpenInVivaldi' ||
-        appNam === 'OpenInXamarinStudio') {
+        appNam === 'OpenInVivaldi') {
             appType = 'FilesOnly'
     }
 
@@ -129,7 +128,8 @@ function GetAppType(appNam) {
         appNam === 'OpenInVS2017Community' ||
         appNam === 'OpenInVS2017Enterprise' ||
         appNam === 'OpenInVS2017Professional' ||
-        appNam === 'OpenInWinDirStat') {
+        appNam === 'OpenInWinDirStat' ||
+        appNam === 'OpenInXamarinStudio') {
             appType = 'FilesAndFolders'
     }
 
