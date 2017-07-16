@@ -4,12 +4,12 @@ These are the changes to each version that has been released in the Visual Studi
 
 ## 1.1.41
 **2017-07-15**
-- [x] Addition of 'Open In ...' when folder node selected for to all appropriate applications
-- [x] Addition of 'Open In ...' when project node selected for to all appropriate applications
+- [x] Addition of 'Open In ...' when folder node selected for all appropriate applications
+- [x] Addition of 'Open In ...' when project node selected for all appropriate applications
 - [x] Exclusion of \bin and \obj directories when 'Open In ...' project node selected
 - [x] Added screenshots for all applications 
 - [x] Robust refactoring of code
-- [x] Open Cover and Report Generator incorporatedusing [this](http://www.allenconway.net/2015/06/using-opencover-and-reportgenerator-to.html)
+- [x] Open Cover and Report Generator incorporated using [this](http://www.allenconway.net/2015/06/using-opencover-and-reportgenerator-to.html)
 - [x] Image optimization using [this](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ImageOptimizer)
 
 ## 1.1.27
