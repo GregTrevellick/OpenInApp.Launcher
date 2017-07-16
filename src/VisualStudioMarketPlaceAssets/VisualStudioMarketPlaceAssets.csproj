@@ -129,6 +129,8 @@
     <Content Include="OpenInVS2017Enterprise\ReadMeScreenShot_ProjNode.png" />
     <Content Include="OpenInVS2017Professional\ReadMeScreenShot_FolderNode.png" />
     <Content Include="OpenInVS2017Professional\ReadMeScreenShot_ProjNode.png" />
+    <Content Include="OpenInXamarinStudio\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInXamarinStudio\ReadMeScreenShot_ProjNode.png" />
     <Content Include="OpenInXamarinStudio\ThirdPartyScreenShot.png" />
     <Content Include="notes.txt" />
     <Content Include="OpenInAbracadabra\ReadMeScreenShot_FolderNode.png" />
