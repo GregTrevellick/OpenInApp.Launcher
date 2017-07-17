@@ -90,9 +90,8 @@ function OIAConcat (appNam, appDesc) {
         .pipe(gulp.dest('.'));
 } 
 
+//TODO add qunit tests for this function
 function GetAppType(appNam) {
-
-    //gregtt add qunit tests here
 
     var appType = "Undefined";
 
