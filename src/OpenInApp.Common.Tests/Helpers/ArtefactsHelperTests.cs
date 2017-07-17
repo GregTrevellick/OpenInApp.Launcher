@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace OpenInApp.Common.Tests.Helpers
 {
     [TestFixture()]
-    public class ArtefactsHelperTests100
+    public class ArtefactsHelperTests
     {
         [Test()]
         [Category("I")]

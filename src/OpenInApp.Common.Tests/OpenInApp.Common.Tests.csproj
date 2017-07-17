@@ -122,13 +122,12 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="FileToBeOpenedKind.cs" />
-    <Compile Include="Helpers\EnumHelperTests100.cs" />
-    <Compile Include="Helpers\ArtefactsHelperTests100.cs" />
-    <Compile Include="Helpers\CsvHelperTests100.cs" />
-    <Compile Include="Helpers\OpenInAppHelperTests100.cs" />
+    <Compile Include="Helpers\EnumHelperTests.cs" />
+    <Compile Include="Helpers\ArtefactsHelperTests.cs" />
+    <Compile Include="Helpers\CsvHelperTests.cs" />
+    <Compile Include="Helpers\OpenInAppHelperTests.cs" />
     <Compile Include="Helpers\GeneralOptionsHelperTests.cs" />
-    <Compile Include="Helpers\AllAppsHelperTests100.cs" />
+    <Compile Include="Helpers\AllAppsHelperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

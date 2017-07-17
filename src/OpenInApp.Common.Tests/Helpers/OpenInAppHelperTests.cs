@@ -9,7 +9,7 @@ using System.Reflection;
 namespace OpenInApp.Common.Tests.Helpers
 {
     [TestFixture()]
-    public class OpenInAppHelperTests100
+    public class OpenInAppHelperTests
     {
         [Test()]
         [Category("E2E")]

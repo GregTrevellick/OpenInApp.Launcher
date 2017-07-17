@@ -4,7 +4,7 @@ using OpenInApp.Common.Helpers;
 namespace OpenInApp.Common.Tests.Helpers
 {
     [TestFixture()]
-    public class EnumHelperTests100
+    public class EnumHelperTests
     {
         [Test()]
         [Category("U")]
