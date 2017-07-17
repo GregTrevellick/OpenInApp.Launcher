@@ -342,6 +342,8 @@ namespace OpenInApp.Common.Tests.Helpers
             };
         }
 
+        //codepen 
+        //jsfiddle
         //Open in intellij
         //open in rider
         //Open in “My Exe”
