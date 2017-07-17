@@ -16,7 +16,7 @@ namespace OpenInAbracadabra
     [ProvideOptionPage(typeof(GeneralOptions), Vsix.Name, CommonConstants.CategorySubLevel, 0, 0, true)]
     public sealed class VSPackage : Package
     {
-        public static GeneralOptions Options { get; private set; }//TODO gregt rename Options to GeneralOptions
+        public static GeneralOptions Options { get; private set; }
 
         protected override void Initialize()
         {
