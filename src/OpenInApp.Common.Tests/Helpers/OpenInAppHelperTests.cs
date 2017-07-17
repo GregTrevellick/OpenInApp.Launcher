@@ -16,7 +16,16 @@ namespace OpenInApp.Common.Tests.Helpers
         public void Test_AltovaXMLSpy()
         {
             InvokeApplication(KeyToExecutableEnum.AltovaXMLSpy, "Text");
-        }   
+        }
+
+        [Test()]
+        [Category("E2E")]
+        public void Test_Atom()
+        {
+            InvokeApplication(KeyToExecutableEnum.Atom, "Image");
+            InvokeApplication(KeyToExecutableEnum.Atom, "Folder");
+            InvokeApplication(KeyToExecutableEnum.Atom, "Text");
+        }
 
         [Test()]
         [Category("E2E")]
@@ -127,9 +136,9 @@ namespace OpenInApp.Common.Tests.Helpers
             SetExecutableFullPath(keyToExecutableEnum);
 
             InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, typ);
-            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.Folder, typ);// null);
+            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.Folder, typ);
             InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.File, typ);
-            InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.Folder, typ);//null);
+            InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.Folder, typ);
         }
 
         private void InvokeApplication(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath, string singleOrMultipleArtefacts, ArtefactTypeToOpen artefactTypeToOpen, string typ)
@@ -152,6 +161,9 @@ namespace OpenInApp.Common.Tests.Helpers
             {
                 case KeyToExecutableEnum.AltovaXMLSpy:
                     executableFullPath = @"D:\Program Files (x86)\Altova\XMLSpy2017\XMLSpy.exe";
+                    break;
+                case KeyToExecutableEnum.Atom:
+                    executableFullPath = @"C:\Users\gtrev\AppData\Local\atom\atom.exe";
                     break;
                 case KeyToExecutableEnum.FirefoxDeveloperEdition:
                     executableFullPath = @"C:\Program Files\Firefox Developer Edition\firefox.exe";

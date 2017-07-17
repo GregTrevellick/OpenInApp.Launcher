@@ -134,6 +134,10 @@ namespace OpenInApp.Common.Helpers
 				        #endregion
 	         		};
                     break;
+                case KeyToExecutableEnum.Atom:
+                    applicationToOpenDto.SecondaryFilePathSegment = @"atom";
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
+                    break;
                 case KeyToExecutableEnum.ChromeCanary:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Google\Chrome SxS\Application";
                     ///////////////////////////////applicationToOpenDto.InitialFolderType = InitialFolderType.LocalApplicationData;

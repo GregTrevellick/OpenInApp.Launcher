@@ -14,6 +14,7 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [TestCase(KeyToExecutableEnum.AltovaXMLSpy, @"C:\Program Files (x86)\Altova\XMLSpy2016\XMLSpy.exe")]
+        [TestCase(KeyToExecutableEnum.Atom, @"C:\Users\gtrev\AppData\Local\atom\atom.exe")]
         [TestCase(KeyToExecutableEnum.ChromeCanary, OverrideAtTestExecutionTime)]
         //[TestCase(KeyToExecutableEnum.Emacs, null)]
         [TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, @"C:\Program Files\Firefox Developer Edition\firefox.exe")]
