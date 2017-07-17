@@ -131,32 +131,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CodeCoverageReports\CodeCoverageReport.xml" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\combined.js" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\index.htm" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\OpenInApp.Common.Tests_FileHelperTests.htm" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\OpenInApp.Common.Tests_GeneralOptionsHelperTests.htm" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\OpenInApp.Common.Tests_OpenInAppHelperTests.htm" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_branch0.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_branch10.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_branch100.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_branch20.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_branch30.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_branch40.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_branch50.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_branch60.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_branch70.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_branch80.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_branch90.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_collapsed.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_expanded.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_info.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_method.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_property.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_sortactive_asc.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_sortactive_desc.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\pic_sortinactive.png" />
-    <Content Include="CodeCoverageReports\ReportGeneratorOutput\report.css" />
     <Content Include="README.txt" />
     <Content Include="TestFiles\OIA\Multiple_Folders\dummy multiple folders file.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -220,7 +194,9 @@
     </None>
     <None Include="GetCodeCoverageUsingOpenCover.bat" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="CodeCoverageReports\" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
