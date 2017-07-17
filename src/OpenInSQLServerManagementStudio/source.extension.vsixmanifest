@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="ae571a7d-4421-40a0-bf5d-e58baf00a57d" Version="1.1.41" Language="en-US" Publisher="GregTrevellick" />
+    <Identity Id="ae571a7d-4421-40a0-bf5d-e58baf00a57d" Version="1.1.42" Language="en-US" Publisher="GregTrevellick" />
     <DisplayName>Open in SQL Server Management Studio</DisplayName>
     <Description xml:space="preserve">Open multiple files simultaneously in SQL Server Management Studio directly from Solution Explorer or Code Editor window.</Description>
     <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>

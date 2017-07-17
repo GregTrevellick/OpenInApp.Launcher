@@ -30,28 +30,28 @@ gulp.task('OpenInXamarinStudio', function () { return OIAConcat('OpenInXamarinSt
 
 gulp.task('default',
     ['OpenInAbracadabra'
-        , 'OpenInAltovaXmlSpy'
-        , 'OpenInChromeCanary'
-        , 'OpenInEmacs'
-        , 'OpenInFirefoxDeveloperEdition'
-        , 'OpenInGimp'
-        , 'OpenInMarkdownMonster'
-        , 'OpenInMSPaint'
-        , 'OpenInOpera'
-        , 'OpenInOperaDeveloper'
-        , 'OpenInPaintDotNet'
-        , 'OpenInSQLServerManagementStudio'
-        , 'OpenInTreeSizeFree'
-        , 'OpenInTreeSizeProfessional'
-        , 'OpenInVivaldi'
-        , 'OpenInVS2012'
-        , 'OpenInVS2013'
-        , 'OpenInVS2015'
-        , 'OpenInVS2017Community'
-        , 'OpenInVS2017Enterprise'
-        , 'OpenInVS2017Professional'
-        , 'OpenInWinDirStat'
-        , 'OpenInXamarinStudio']);
+    , 'OpenInAltovaXmlSpy'
+    , 'OpenInChromeCanary'
+    , 'OpenInEmacs'
+    , 'OpenInFirefoxDeveloperEdition'
+    , 'OpenInGimp'
+    , 'OpenInMarkdownMonster'
+    , 'OpenInMSPaint'
+    , 'OpenInOpera'
+    , 'OpenInOperaDeveloper'
+    , 'OpenInPaintDotNet'
+    , 'OpenInSQLServerManagementStudio'
+    , 'OpenInTreeSizeFree'
+    , 'OpenInTreeSizeProfessional'
+    , 'OpenInVivaldi'
+    , 'OpenInVS2012'
+    , 'OpenInVS2013'
+    , 'OpenInVS2015'
+    , 'OpenInVS2017Community'
+    , 'OpenInVS2017Enterprise'
+    , 'OpenInVS2017Professional'
+    , 'OpenInWinDirStat'
+    , 'OpenInXamarinStudio']);
 
 function OIAConcat (appNam, appDesc) { 
 
@@ -82,15 +82,6 @@ function OIAConcat (appNam, appDesc) {
             '6_Links.md'
         );
     }
-
-    //if (appType === 'FoldersOnly') {
-    //    filesToConcat.push(
-    //        '1_Introduction_Folders.md',
-    //        '2_FreeReviews.md',
-    //        '3_Features_Folders.md',
-    //        '6_Links.md'
-    //    );
-    //}
 
     return gulp
         .src(filesToConcat)
@@ -133,13 +124,9 @@ function GetAppType(appNam) {
             appType = 'FilesAndFolders'
     }
 
-    //if (appNam === 'OpenInAbracadabra') {
-    //        appType = 'FoldersOnly'
-    //}
-
     return appType;
 }
 
 
-//TODO gregtt rename ReadMeScreenShot_CodeEditorWindow.png TO ReadMeScreenShot_CodeWin.png
+
 //TODO gregtt rename ReadMeScreenShot_ContextMenu.png TO ReadMeScreenShot_ItemNode.png
