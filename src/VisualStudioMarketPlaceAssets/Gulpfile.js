@@ -126,7 +126,3 @@ function GetAppType(appNam) {
 
     return appType;
 }
-
-
-
-//TODO gregtt rename ReadMeScreenShot_ContextMenu.png TO ReadMeScreenShot_ItemNode.png

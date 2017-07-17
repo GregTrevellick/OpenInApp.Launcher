@@ -9,5 +9,5 @@
 
 - From solution explorer at item level
  
-  ![](ReadMeScreenShot_ContextMenu.png)
+  ![](ReadMeScreenShot_ItemNode.png)
 

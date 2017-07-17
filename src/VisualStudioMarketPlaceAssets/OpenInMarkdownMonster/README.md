@@ -21,7 +21,7 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 
 - From solution explorer at item level
  
-  ![](ReadMeScreenShot_ContextMenu.png)
+  ![](ReadMeScreenShot_ItemNode.png)
 
 - From solution explorer at folder level
  
