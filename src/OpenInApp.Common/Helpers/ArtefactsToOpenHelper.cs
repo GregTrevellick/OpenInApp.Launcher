@@ -76,7 +76,7 @@ namespace OpenInApp.Common.Helpers
 
         private static string GetActiveDocumentArtefactName(DTE2 dte)
         {
-            dte.ActiveDocument.Save();//gregtt
+            dte.ActiveDocument.Save();
             return dte.ActiveDocument.FullName;
         }
 
