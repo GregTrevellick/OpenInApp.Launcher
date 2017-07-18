@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="110" xml:space="preserve">
-    <value>1.1.41Open in Visual Studio 2013</value>
+    <value>Open in Visual Studio 2013</value>
   </data>
   <data name="112" xml:space="preserve">
     <value>Open multiple files simultaneously in Visual Studio 2013 directly from Solution Explorer or Code Editor window.</value>
