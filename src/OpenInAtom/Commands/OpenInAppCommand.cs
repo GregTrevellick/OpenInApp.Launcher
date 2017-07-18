@@ -24,9 +24,8 @@ namespace OpenInAtom.Commands
                 PackageGuids.guidOpenInVsCmdSetString,
                 PackageIds.CmdIdOpenInAppItemNode,
                 PackageIds.CmdIdOpenInAppCodeWin,
-                //uncomment for extra node choices
-                //PackageIds.CmdIdOpenInAppFolderNode,
-                //PackageIds.CmdIdOpenInAppProjNode,
+                PackageIds.CmdIdOpenInAppFolderNode,
+                PackageIds.CmdIdOpenInAppProjNode,
                 GeneralOptions.keyToExecutableEnum,
                 VSPackage.Options.ActualPathToExe,
                 VSPackage.Options.FileQuantityWarningLimit,

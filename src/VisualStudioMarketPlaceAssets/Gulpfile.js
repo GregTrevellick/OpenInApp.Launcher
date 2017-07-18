@@ -6,6 +6,7 @@ var replace = require('gulp-replace');
 
 gulp.task('OpenInAbracadabra', function () { return OIAConcat('OpenInAbracadabra', 'Abracadabra') });
 gulp.task('OpenInAltovaXmlSpy', function () { return OIAConcat('OpenInAltovaXmlSpy', 'Altova XMLSpy XML Editor') });
+gulp.task('OpenInAtom', function () { return OIAConcat('OpenInAtom', 'Atom') });
 gulp.task('OpenInChromeCanary', function () { return OIAConcat('OpenInChromeCanary', 'Chrome Canary') });
 gulp.task('OpenInEmacs', function () { return OIAConcat('OpenInEmacs', 'Emacs') });
 gulp.task('OpenInFirefoxDeveloperEdition', function () { return OIAConcat('OpenInFirefoxDeveloperEdition', 'Firefox Developer Edition') });
@@ -31,6 +32,7 @@ gulp.task('OpenInXamarinStudio', function () { return OIAConcat('OpenInXamarinSt
 gulp.task('default',
     ['OpenInAbracadabra'
     , 'OpenInAltovaXmlSpy'
+    , 'OpenInAtom'
     , 'OpenInChromeCanary'
     , 'OpenInEmacs'
     , 'OpenInFirefoxDeveloperEdition'
@@ -105,6 +107,7 @@ function GetAppType(appNam) {
     }
 
     if (appNam === 'OpenInAltovaXmlSpy' ||
+        appNam === 'OpenInAtom' ||
         appNam === 'OpenInEmacs' ||
         appNam === 'OpenInGimp' ||
         appNam === 'OpenInMarkdownMonster' ||

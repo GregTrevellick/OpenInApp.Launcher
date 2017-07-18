@@ -55,6 +55,8 @@
     <None Include="5_UseCases_Files.md" />
     <None Include="6_Links.md" />
     <None Include="notes.xlsx" />
+    <None Include="OpenInAtom\0_Variables.md" />
+    <None Include="OpenInAtom\README.md" />
     <None Include="OpenInChromeCanary\README.md" />
     <None Include="OpenInChromeCanary\0_Variables.md" />
     <None Include="OpenInEmacs\README.md" />
@@ -107,6 +109,12 @@
     <Content Include="Gulpfile.js" />
     <Content Include="OpenInAltovaXmlSpy\ReadMeScreenShot_FolderNode.png" />
     <Content Include="OpenInAltovaXmlSpy\ReadMeScreenShot_ProjNode.png" />
+    <Content Include="OpenInAtom\ReadMeScreenShot_CodeEditorWindow.png" />
+    <Content Include="OpenInAtom\ReadMeScreenShot_FolderNode.png" />
+    <Content Include="OpenInAtom\ReadMeScreenShot_ItemNode.png" />
+    <Content Include="OpenInAtom\ReadMeScreenShot_ProjNode.png" />
+    <Content Include="OpenInAtom\ThirdPartyLogo.png" />
+    <Content Include="OpenInAtom\ThirdPartyScreenShot.png" />
     <Content Include="OpenInEmacs\ReadMeScreenShot_FolderNode.png" />
     <Content Include="OpenInEmacs\ReadMeScreenShot_ProjNode.png" />
     <Content Include="OpenInGimp\ReadMeScreenShot_FolderNode.png" />

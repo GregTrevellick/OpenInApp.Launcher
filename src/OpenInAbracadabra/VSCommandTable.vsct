@@ -8,6 +8,10 @@
       </Group>
       <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" priority="0x0100">
       </Group>
+			<!--<Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderNode" priority="0x0100">
+			</Group>
+			<Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppProjNode" priority="0x0100">
+			</Group>-->      
     </Groups>
 
     <Buttons>    
@@ -25,6 +29,20 @@
           <ButtonText>Open in Abracadabra</ButtonText>
         </Strings>
       </Button>
+      <!--<Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppFolderNode" priority="0x100" type="Button">
+        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderNode" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Open Folder in Abracadabra</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppProjNode" priority="0x100" type="Button">
+        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppProjNode" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Open Folder in Abracadabra</ButtonText>
+        </Strings>
+      </Button>-->      
     </Buttons>
     <Bitmaps>
       <Bitmap guid="guidImages" href="Resources\VsixCommandIcon_16x16.png" usedList="bmpPic1"/>
@@ -38,17 +56,27 @@
     <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
       <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN" />
     </CommandPlacement>
+		<!--<CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderNode" priority="0x0100">
+			<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_FOLDERNODE" />
+		</CommandPlacement>
+		<CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppProjNode" priority="0x0100">
+			<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE" />
+		</CommandPlacement>-->    
   </CommandPlacements>
 
   <Symbols>
-	<GuidSymbol name="guidOpenInAppPackage" value="{111117A9-1607-40E1-81B5-28D1454C1111}" /><!--abracadabra-->
-	<GuidSymbol name="guidOpenInVsCmdSet" value="{222217A9-1607-40E1-81B5-28D1454C2222}"><!--abracadabra-->
+	<GuidSymbol name="guidOpenInAppPackage" value="{111117A9-1607-40E1-81B5-28D1454C1111}" /><!--TODO abracadabra-->
+	<GuidSymbol name="guidOpenInVsCmdSet" value="{222217A9-1607-40E1-81B5-28D1454C2222}"><!--TODO abracadabra-->
       <IDSymbol name="GroupOpenInAppCodeWin" value="0x1030" />
       <IDSymbol name="CmdIdOpenInAppCodeWin" value="0x0100" />
       <IDSymbol name="GroupOpenInAppItemNode" value="0x1040" />
       <IDSymbol name="CmdIdOpenInAppItemNode" value="0x0110" />
+      <!--<IDSymbol name="GroupOpenInAppFolderNode" value="0x1050" />
+      <IDSymbol name="CmdIdOpenInAppFolderNode" value="0x0120" />
+      <IDSymbol name="GroupOpenInAppProjNode" value="0x1060" />
+      <IDSymbol name="CmdIdOpenInAppProjNode" value="0x0130" />-->    
     </GuidSymbol>
-    <GuidSymbol name="guidImages" value="{333317A9-1607-40E1-81B5-28D1454C3333}" >
+    <GuidSymbol name="guidImages" value="{333317A9-1607-40E1-81B5-28D1454C3333}" ><!--TODO abracadabra-->
       <IDSymbol name="bmpPic1" value="1" />
     </GuidSymbol>
   </Symbols>

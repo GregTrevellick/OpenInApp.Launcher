@@ -1,0 +1,1 @@
+[ThirdPartyAppHomePage]: https://atom.io/

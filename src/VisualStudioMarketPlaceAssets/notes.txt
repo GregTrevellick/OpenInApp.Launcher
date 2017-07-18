@@ -15,3 +15,4 @@ https://www.gimp.org/
 https://www.gimp.org/features/
 https://www.google.co.uk/chrome/assets/common/images/chrome_canary_logo_2x.png
 https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
+https://github-atom-io-herokuapp-com.global.ssl.fastly.net/assets/logo-4e073dbd4c0ce67ece1b30a6b31253b9.png

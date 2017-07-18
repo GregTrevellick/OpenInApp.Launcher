@@ -49,8 +49,8 @@ namespace OpenInApp.Common.Helpers
             switch (keyToExecutableEnum)
             {
                 case KeyToExecutableEnum.Abracadabra:
-                    applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
-                    applicationToOpenDto.SecondaryFilePathSegment = @"WinDirStat";
+                    applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.File;
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Xamarin Studio\bin";
                     break;
                 case KeyToExecutableEnum.AltovaXMLSpy:
                     applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
@@ -135,6 +135,7 @@ namespace OpenInApp.Common.Helpers
 	         		};
                     break;
                 case KeyToExecutableEnum.Atom:
+                    applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
                     applicationToOpenDto.SecondaryFilePathSegment = @"atom";
                     applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     break;

@@ -28,6 +28,10 @@ namespace OpenInAtom
         public const int CmdIdOpenInAppCodeWin = 0x0100;
         public const int GroupOpenInAppItemNode = 0x1040;
         public const int CmdIdOpenInAppItemNode = 0x0110;
+        public const int GroupOpenInAppFolderNode = 0x1050;
+        public const int CmdIdOpenInAppFolderNode = 0x0120;
+        public const int GroupOpenInAppProjNode = 0x1060;
+        public const int CmdIdOpenInAppProjNode = 0x0130;
         public const int bmpPic1 = 0x0001;
     }
 }
