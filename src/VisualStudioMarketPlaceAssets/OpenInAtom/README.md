@@ -1,3 +1,5 @@
+[ThirdPartyAppHomePage]: https://atom.io/
+
 Open multiple files and/or folders simultaneously in [Atom][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 
