@@ -136,8 +136,24 @@ namespace OpenInApp.Common.Helpers
                     break;
                 case KeyToExecutableEnum.Atom:
                     applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
+                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
                     applicationToOpenDto.SecondaryFilePathSegment = @"atom";
-                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
+
+                    //NOPE
+                    //applicationToOpenDto.ProcessWithinProcess = true;
+                    //applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
+                    //applicationToOpenDto.UseShellExecute = false;
+
+                    //NOPE
+                    //applicationToOpenDto.ProcessWithinProcess = false;
+                    //applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
+                    //applicationToOpenDto.UseShellExecute = false;
+
+                    //NOPE - EVEN FOR > 1 SELECTED 
+                    //applicationToOpenDto.ProcessWithinProcess = true;
+                    //applicationToOpenDto.SeparateProcessPerFileToBeOpened = true;
+                    //applicationToOpenDto.UseShellExecute = false;
+
                     break;
                 case KeyToExecutableEnum.ChromeCanary:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Google\Chrome SxS\Application";

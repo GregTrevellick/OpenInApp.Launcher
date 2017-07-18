@@ -42,18 +42,26 @@ namespace OpenInApp.Common.Helpers
             else
             {
                 var arguments = " ";
+
                 foreach (var actualArtefactToBeOpened in actualArtefactsToBeOpened)
                 {
-                    arguments += GetSingleArgument(actualArtefactToBeOpened) + " ";
+                    arguments += GetSingleArgument(actualArtefactToBeOpened);
                 }
-                arguments = arguments.TrimEnd(' ');
+                //var arguments = " ";
+                //foreach (var actualArtefactToBeOpened in actualArtefactsToBeOpened)
+                //{
+                //    arguments += GetSingleArgument(actualArtefactToBeOpened) + " ";
+                //}
+                //arguments = arguments.TrimEnd(' ');
+
                 InvokeProcess(arguments, fileName, useShellExecute, workingDirectory, processWithinProcess);
             }
         }
 
         private static string GetSingleArgument(string argument)
         {
-            return "\"" + argument + "\"";
+            return "\"" + argument + "\"" + " ";
+            //return "\"" + argument + "\"";
         }
 
         private static void InvokeProcess(string arguments, string fileName, bool useShellExecute, string workingDirectory, bool processWithinProcess)
