@@ -14,9 +14,10 @@ namespace OpenInApp.Common.Helpers
             IEnumerable<string> actualArtefactsToBeOpened, 
             string executableFullPath, 
             bool separateProcessPerFileToBeOpened, 
-            bool useShellExecute,
+            bool useShellExecute,//gregtt rename to OpenExeWithinItsWorkingDirectory
             ArtefactTypeToOpen artefactTypeToOpen,
-            bool processWithinProcess)
+            bool processWithinProcess,
+            bool wrapArgumentsWithQuotations)
         {
             string fileName;
             string workingDirectory = string.Empty;
@@ -29,39 +30,47 @@ namespace OpenInApp.Common.Helpers
             else
             {
                 fileName = executableFullPath;
+                // nil diff for atom                workingDirectory = Path.GetDirectoryName(executableFullPath);
             }
 
             if (separateProcessPerFileToBeOpened)
             {
                 foreach (var actualArtefactToBeOpened in actualArtefactsToBeOpened)
                 {
-                    var argument = GetSingleArgument(actualArtefactToBeOpened);
+                    var argument = GetSingleArgument(actualArtefactToBeOpened, wrapArgumentsWithQuotations);
                     InvokeProcess(argument, fileName, useShellExecute, workingDirectory, processWithinProcess);
                 }
             }
             else
             {
                 var arguments = " ";
+                //////////////var arguments = " . ";
 
                 foreach (var actualArtefactToBeOpened in actualArtefactsToBeOpened)
                 {
-                    arguments += GetSingleArgument(actualArtefactToBeOpened);
+                    arguments += GetSingleArgument(actualArtefactToBeOpened, wrapArgumentsWithQuotations);
                 }
-                //var arguments = " ";
-                //foreach (var actualArtefactToBeOpened in actualArtefactsToBeOpened)
-                //{
-                //    arguments += GetSingleArgument(actualArtefactToBeOpened) + " ";
-                //}
-                //arguments = arguments.TrimEnd(' ');
+
+                arguments = arguments.TrimEnd(' ');
 
                 InvokeProcess(arguments, fileName, useShellExecute, workingDirectory, processWithinProcess);
             }
         }
 
-        private static string GetSingleArgument(string argument)
+        private static string GetSingleArgument(string argument, bool wrapArgumentsWithQuotations)
         {
-            return "\"" + argument + "\"" + " ";
-            //return "\"" + argument + "\"";
+            var result = string.Empty;
+
+            if (wrapArgumentsWithQuotations)
+            {
+                result = "\"" + argument + "\"";
+            }
+            else
+            {
+                result = argument;
+            }
+
+            return result + " ";
         }
 
         private static void InvokeProcess(string arguments, string fileName, bool useShellExecute, string workingDirectory, bool processWithinProcess)
@@ -91,7 +100,7 @@ namespace OpenInApp.Common.Helpers
 
                     using (var proc = Process.Start(startNoArgs))
                     {
-                        Thread.Sleep(3000);
+                        Thread.Sleep(3000);//TODO use async ?
                         using (Process.Start(start)) { }
                     }
                 }

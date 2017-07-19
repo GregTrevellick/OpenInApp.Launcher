@@ -44,6 +44,7 @@ namespace OpenInApp.Common.Helpers
                 SecondaryFilePathSegmentHasMultipleVersions = false,
                 SeparateProcessPerFileToBeOpened = true,
                 UseShellExecute = true,
+                WrapArgumentsWithQuotations = true,
             };
 
             switch (keyToExecutableEnum)
@@ -136,21 +137,33 @@ namespace OpenInApp.Common.Helpers
                     break;
                 case KeyToExecutableEnum.Atom:
                     applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
-                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
-                    applicationToOpenDto.SecondaryFilePathSegment = @"atom";
+                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;//true false no diff
+                    //applicationToOpenDto.SecondaryFilePathSegment = @"atom";  
+                    applicationToOpenDto.SecondaryFilePathSegment = @"atom\bin";
+                    applicationToOpenDto.WrapArgumentsWithQuotations = false;//true false no diff but should be false
 
-                    //NOPE
-                    //applicationToOpenDto.ProcessWithinProcess = true;
-                    //applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
+                    //no good even for multis
+                    //applicationToOpenDto.ProcessWithinProcess = false;
+                    //applicationToOpenDto.SeparateProcessPerFileToBeOpened = true;
                     //applicationToOpenDto.UseShellExecute = false;
 
-                    //NOPE
+                    //no good even for multis - leaves lots of processes idle
                     //applicationToOpenDto.ProcessWithinProcess = false;
                     //applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
-                    //applicationToOpenDto.UseShellExecute = false;
+                    //applicationToOpenDto.UseShellExecute = true;
 
-                    //NOPE - EVEN FOR > 1 SELECTED 
+                    //no good even for multis - leaves lots of processes idle
                     //applicationToOpenDto.ProcessWithinProcess = true;
+                    //applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
+                    //applicationToOpenDto.UseShellExecute = true;
+
+                    //better - opens multiple atoms but only with untitled
+                    applicationToOpenDto.ProcessWithinProcess = false;
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = true;
+                    applicationToOpenDto.UseShellExecute = true;
+
+                    //better - opens multiple atoms but only with untitled
+                    //applicationToOpenDto.ProcessWithinProcess = false;
                     //applicationToOpenDto.SeparateProcessPerFileToBeOpened = true;
                     //applicationToOpenDto.UseShellExecute = false;
 

@@ -190,7 +190,8 @@ namespace OpenInApp.Menu
                 _constantsForAppCommon.Caption,
                 applicationToOpenDto,
                 _keyToExecutableEnumDescription,
-                keyToExecutableEnum);
+                keyToExecutableEnum,
+                );
 
             var persistOptionsDto = menuItemCallBackHelper.InvokeCommandCallBack(invokeCommandCallBackDto);
 
@@ -227,6 +228,7 @@ namespace OpenInApp.Menu
                 SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,
                 TypicalFileExtensions = typicalFileExtensions,
                 UseShellExecute = applicationToOpenDto.UseShellExecute,
+                WrapArgumentsWithQuotations = applicationToOpenDto.WrapArgumentsWithQuotations,
             };
         }
     }

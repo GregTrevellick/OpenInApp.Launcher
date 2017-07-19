@@ -14,5 +14,6 @@ namespace OpenInApp.Common.Helpers.Dtos
         public bool SecondaryFilePathSegmentHasMultipleVersions { get; set; }
         public bool SeparateProcessPerFileToBeOpened { get; set; } 
         public bool UseShellExecute { get; set; }
+        public bool WrapArgumentsWithQuotations { get; set; }
     }
 }

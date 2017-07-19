@@ -22,8 +22,8 @@ namespace OpenInApp.Common.Tests.Helpers
         [Category("E2E")]
         public void Test_Atom()
         {
-            InvokeApplication(KeyToExecutableEnum.Atom, "Image");
-            InvokeApplication(KeyToExecutableEnum.Atom, "Folder");
+            //InvokeApplication(KeyToExecutableEnum.Atom, "Image");
+            //InvokeApplication(KeyToExecutableEnum.Atom, "Folder");
             InvokeApplication(KeyToExecutableEnum.Atom, "Text");
         }
 
@@ -135,10 +135,10 @@ namespace OpenInApp.Common.Tests.Helpers
         {
             SetExecutableFullPath(keyToExecutableEnum);
 
-            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, typ);
-            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.Folder, typ);
+//            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, typ);
+//            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.Folder, typ);
             InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.File, typ);
-            InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.Folder, typ);
+//            InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.Folder, typ);
         }
 
         private void InvokeApplication(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath, string singleOrMultipleArtefacts, ArtefactTypeToOpen artefactTypeToOpen, string typ)
@@ -150,7 +150,7 @@ namespace OpenInApp.Common.Tests.Helpers
             artefactsToBeOpened = GetTestArtefactsToBeOpened(singleOrMultipleArtefacts, typ, dto, artefactsToBeOpened);
 
             // Act
-            OpenInAppHelper.InvokeCommand(artefactsToBeOpened, executableFullPath, dto.SeparateProcessPerFileToBeOpened, dto.UseShellExecute, dto.ArtefactTypeToOpen, dto.ProcessWithinProcess);
+            OpenInAppHelper.InvokeCommand(artefactsToBeOpened, executableFullPath, dto.SeparateProcessPerFileToBeOpened, dto.UseShellExecute, dto.ArtefactTypeToOpen, dto.ProcessWithinProcess, dto.WrapArgumentsWithQuotations);
         }
 
         private string executableFullPath { get; set; }
@@ -163,7 +163,8 @@ namespace OpenInApp.Common.Tests.Helpers
                     executableFullPath = @"D:\Program Files (x86)\Altova\XMLSpy2017\XMLSpy.exe";
                     break;
                 case KeyToExecutableEnum.Atom:
-                    executableFullPath = @"C:\Users\gtrev\AppData\Local\atom\atom.exe";
+                    //executableFullPath = @"C:\Users\gtrev\AppData\Local\atom\atom.exe";
+                    executableFullPath = @"C:\Users\gtrev\AppData\Local\atom\bin\atom.cmd";
                     break;
                 case KeyToExecutableEnum.FirefoxDeveloperEdition:
                     executableFullPath = @"C:\Program Files\Firefox Developer Edition\firefox.exe";
@@ -342,6 +343,7 @@ namespace OpenInApp.Common.Tests.Helpers
             {
                 testFilesPath + @"\TestFiles\OIA\Multiple_TextFilesA.txt",
                 testFilesPath + @"\TestFiles\OIA\Multiple_TextFilesB.txt",
+                testFilesPath + @"\TestFiles\OIA\Multiple_TextFilesC.txt",
             };
         }
 

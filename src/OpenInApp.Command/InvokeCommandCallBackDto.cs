@@ -19,5 +19,6 @@ namespace OpenInApp.Command
         public bool SuppressTypicalFileExtensionsWarning { get; set; }
         public string TypicalFileExtensions { get; set; }
         public bool UseShellExecute { get; set; }
+        public bool WrapArgumentsWithQuotations { get; set; }
     }
 }

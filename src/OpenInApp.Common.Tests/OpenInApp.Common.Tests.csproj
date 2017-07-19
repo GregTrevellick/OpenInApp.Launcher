@@ -150,6 +150,9 @@
     <Content Include="TestFiles\OIA\Multiple_SequelFilesB.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="TestFiles\OIA\Multiple_TextFilesC.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestFiles\OIA\Single_Folder\dummy single folder file.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
