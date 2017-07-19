@@ -11,7 +11,6 @@ namespace OpenInApp.Common.Helpers
         AltovaXMLSpy,
 
         [Description("atom.cmd")]
-        /////////////[Description("atom.exe")]
         Atom,
 
         [Description("chrome.exe")]
@@ -85,7 +84,6 @@ namespace OpenInApp.Common.Helpers
     {
         public const string Abracadabra = "windirstat.exe";
         public const string AltovaXMLSpy = "XMLSpy.exe";
-        //////////////public const string Atom = "atom.exe";
         public const string Atom = "atom.cmd";
         public const string ChromeCanary = "chrome.exe";
         public const string Emacs = "runemacs.exe";

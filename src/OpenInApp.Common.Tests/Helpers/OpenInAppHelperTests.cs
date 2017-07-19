@@ -22,8 +22,8 @@ namespace OpenInApp.Common.Tests.Helpers
         [Category("E2E")]
         public void Test_Atom()
         {
-            //InvokeApplication(KeyToExecutableEnum.Atom, "Image");
-            //InvokeApplication(KeyToExecutableEnum.Atom, "Folder");
+            InvokeApplication(KeyToExecutableEnum.Atom, "Image");
+            InvokeApplication(KeyToExecutableEnum.Atom, "Folder");
             InvokeApplication(KeyToExecutableEnum.Atom, "Text");
         }
 
@@ -135,10 +135,10 @@ namespace OpenInApp.Common.Tests.Helpers
         {
             SetExecutableFullPath(keyToExecutableEnum);
 
-//            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, typ);
-//            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.Folder, typ);
+            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.File, typ);
+            InvokeApplication(keyToExecutableEnum, executableFullPath, "Single", ArtefactTypeToOpen.Folder, typ);
             InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.File, typ);
-//            InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.Folder, typ);
+            InvokeApplication(keyToExecutableEnum, executableFullPath, "Multiple", ArtefactTypeToOpen.Folder, typ);
         }
 
         private void InvokeApplication(KeyToExecutableEnum keyToExecutableEnum, string executableFullPath, string singleOrMultipleArtefacts, ArtefactTypeToOpen artefactTypeToOpen, string typ)

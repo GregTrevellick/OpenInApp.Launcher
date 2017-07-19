@@ -30,7 +30,6 @@ namespace OpenInApp.Common.Helpers
             else
             {
                 fileName = executableFullPath;
-                // nil diff for atom                workingDirectory = Path.GetDirectoryName(executableFullPath);
             }
 
             if (separateProcessPerFileToBeOpened)
@@ -44,7 +43,6 @@ namespace OpenInApp.Common.Helpers
             else
             {
                 var arguments = " ";
-                //////////////var arguments = " . ";
 
                 foreach (var actualArtefactToBeOpened in actualArtefactsToBeOpened)
                 {
