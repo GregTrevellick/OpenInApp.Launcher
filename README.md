@@ -24,6 +24,7 @@ Software License is available [here](/LICENSE.txt).
 
 ---------------------------------------
 
+[![Atom](src/VisualStudioMarketPlaceAssets/OpenInAtom/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninAtom)
 [![Altova Xml Spy](src/VisualStudioMarketPlaceAssets/OpenInAltovaXmlSpy/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninAltovaXMLSpy)
 [![Paint Dot Net](src/VisualStudioMarketPlaceAssets/OpenInPaintDotNet/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninPaintDotNet)
 [![Visual Studio 2017 Community](src/VisualStudioMarketPlaceAssets/OpenInVS2017Community/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/search?term=trevellick%20open%20in%20visual%20studio&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance)
