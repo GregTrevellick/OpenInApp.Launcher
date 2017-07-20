@@ -11,7 +11,7 @@ namespace OpenInAtom
         public const string Name = "Open in Atom";
         public const string Description = @"Open multiple files simultaneously in Atom directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
-        public const string Version = "1.1.42";
+        public const string Version = "1.1.43";
         public const string Author = "GregTrevellick";
         public const string Tags = "open, open in, Atom";
     }
