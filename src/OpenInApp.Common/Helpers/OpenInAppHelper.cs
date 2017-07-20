@@ -57,7 +57,7 @@ namespace OpenInApp.Common.Helpers
 
         private static string GetSingleArgument(string argument, bool wrapArgumentsWithQuotations)
         {
-            var result = string.Empty;
+            string result;
 
             if (wrapArgumentsWithQuotations)
             {

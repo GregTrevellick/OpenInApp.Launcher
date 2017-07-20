@@ -307,7 +307,7 @@ namespace OpenInApp.Common.Tests.Helpers
         {
             return new List<string>
             {
-                testFilesPath + @"\TestFiles\OIA\Single_TextFile.txt"
+                testFilesPath + @"\TestFiles\OIA\Single_Text File.txt"
             };
         }
 

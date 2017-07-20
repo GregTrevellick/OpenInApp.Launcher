@@ -190,8 +190,7 @@ namespace OpenInApp.Menu
                 _constantsForAppCommon.Caption,
                 applicationToOpenDto,
                 _keyToExecutableEnumDescription,
-                keyToExecutableEnum,
-                );
+                keyToExecutableEnum);
 
             var persistOptionsDto = menuItemCallBackHelper.InvokeCommandCallBack(invokeCommandCallBackDto);
 
