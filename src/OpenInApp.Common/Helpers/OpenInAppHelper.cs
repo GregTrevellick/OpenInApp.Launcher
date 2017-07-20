@@ -16,8 +16,7 @@ namespace OpenInApp.Common.Helpers
             bool separateProcessPerFileToBeOpened, 
             bool useShellExecute,//gregtt rename to OpenExeWithinItsWorkingDirectory
             ArtefactTypeToOpen artefactTypeToOpen,
-            bool processWithinProcess,
-            bool wrapArgumentsWithQuotations)
+            bool processWithinProcess)
         {
             string fileName;
             string workingDirectory = string.Empty;
@@ -36,7 +35,7 @@ namespace OpenInApp.Common.Helpers
             {
                 foreach (var actualArtefactToBeOpened in actualArtefactsToBeOpened)
                 {
-                    var argument = GetSingleArgument(actualArtefactToBeOpened, wrapArgumentsWithQuotations);
+                    var argument = GetSingleArgument(actualArtefactToBeOpened);
                     InvokeProcess(argument, fileName, useShellExecute, workingDirectory, processWithinProcess);
                 }
             }
@@ -46,7 +45,7 @@ namespace OpenInApp.Common.Helpers
 
                 foreach (var actualArtefactToBeOpened in actualArtefactsToBeOpened)
                 {
-                    arguments += GetSingleArgument(actualArtefactToBeOpened, wrapArgumentsWithQuotations);
+                    arguments += GetSingleArgument(actualArtefactToBeOpened);
                 }
 
                 arguments = arguments.TrimEnd(' ');
@@ -55,19 +54,9 @@ namespace OpenInApp.Common.Helpers
             }
         }
 
-        private static string GetSingleArgument(string argument, bool wrapArgumentsWithQuotations)
+        private static string GetSingleArgument(string argument)
         {
-            string result;
-
-            if (wrapArgumentsWithQuotations)
-            {
-                result = "\"" + argument + "\"";
-            }
-            else
-            {
-                result = argument;
-            }
-
+            var result = "\"" + argument + "\"";
             return result + " ";
         }
 

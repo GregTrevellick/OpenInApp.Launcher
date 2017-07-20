@@ -106,8 +106,7 @@ namespace OpenInApp.Command
                                         dto.SeparateProcessPerFileToBeOpened, 
                                         dto.UseShellExecute,
                                         dto.ArtefactTypeToOpen,
-                                        dto.ProcessWithinProcess,
-                                        dto.WrapArgumentsWithQuotations);
+                                        dto.ProcessWithinProcess);
                                 }
                             }
                         }

@@ -44,7 +44,6 @@ namespace OpenInApp.Common.Helpers
                 SecondaryFilePathSegmentHasMultipleVersions = false,
                 SeparateProcessPerFileToBeOpened = true,
                 UseShellExecute = true,
-                WrapArgumentsWithQuotations = true,
             };
 
             switch (keyToExecutableEnum)
@@ -142,7 +141,6 @@ namespace OpenInApp.Common.Helpers
                     applicationToOpenDto.SecondaryFilePathSegment = @"atom\bin";
                     applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.UseShellExecute = false;
-//gregtt                    applicationToOpenDto.WrapArgumentsWithQuotations = false;
                     break;
                 case KeyToExecutableEnum.ChromeCanary:
                     applicationToOpenDto.SecondaryFilePathSegment = @"Google\Chrome SxS\Application";

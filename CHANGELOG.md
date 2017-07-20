@@ -2,8 +2,12 @@
 
 These are the changes to each version that has been released in the Visual Studio Marketplace.
 
+## 1.1.43
+**2017-07-20**
+- [x] Addition of Open In Atom
+
 ## 1.1.41
-**2017-07-15**
+**2017-07-16**
 - [x] Addition of 'Open In ...' when folder node selected for all appropriate applications
 - [x] Addition of 'Open In ...' when project node selected for all appropriate applications
 - [x] Exclusion of \bin and \obj directories when 'Open In ...' project node selected

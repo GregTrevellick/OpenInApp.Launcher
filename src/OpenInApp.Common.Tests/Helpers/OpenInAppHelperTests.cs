@@ -150,7 +150,7 @@ namespace OpenInApp.Common.Tests.Helpers
             artefactsToBeOpened = GetTestArtefactsToBeOpened(singleOrMultipleArtefacts, typ, dto, artefactsToBeOpened);
 
             // Act
-            OpenInAppHelper.InvokeCommand(artefactsToBeOpened, executableFullPath, dto.SeparateProcessPerFileToBeOpened, dto.UseShellExecute, dto.ArtefactTypeToOpen, dto.ProcessWithinProcess, dto.WrapArgumentsWithQuotations);
+            OpenInAppHelper.InvokeCommand(artefactsToBeOpened, executableFullPath, dto.SeparateProcessPerFileToBeOpened, dto.UseShellExecute, dto.ArtefactTypeToOpen, dto.ProcessWithinProcess);
         }
 
         private string executableFullPath { get; set; }

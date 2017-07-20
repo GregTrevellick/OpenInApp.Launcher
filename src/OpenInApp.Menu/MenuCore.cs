@@ -227,7 +227,6 @@ namespace OpenInApp.Menu
                 SuppressTypicalFileExtensionsWarning = suppressTypicalFileExtensionsWarning,
                 TypicalFileExtensions = typicalFileExtensions,
                 UseShellExecute = applicationToOpenDto.UseShellExecute,
-                WrapArgumentsWithQuotations = applicationToOpenDto.WrapArgumentsWithQuotations,
             };
         }
     }

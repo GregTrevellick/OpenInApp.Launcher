@@ -14,7 +14,7 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [TestCase(KeyToExecutableEnum.AltovaXMLSpy, @"C:\Program Files (x86)\Altova\XMLSpy2016\XMLSpy.exe")]
-        [TestCase(KeyToExecutableEnum.Atom, @"C:\Users\gtrev\AppData\Local\atom\atom.exe")]
+        [TestCase(KeyToExecutableEnum.Atom, OverrideAtTestExecutionTime)]
         [TestCase(KeyToExecutableEnum.ChromeCanary, OverrideAtTestExecutionTime)]
         //[TestCase(KeyToExecutableEnum.Emacs, null)]
         [TestCase(KeyToExecutableEnum.FirefoxDeveloperEdition, @"C:\Program Files\Firefox Developer Edition\firefox.exe")]
@@ -46,6 +46,9 @@ namespace OpenInApp.Common.Tests.Helpers
 
                 switch (keyToExecutableEnum)
                 {
+                    case KeyToExecutableEnum.Atom:
+                        expected = Path.Combine(localApplicationData, @"atom\bin\atom.cmd");
+                        break;
                     case KeyToExecutableEnum.ChromeCanary:
                         expected = Path.Combine(localApplicationData, @"Google\Chrome SxS\Application\chrome.exe");
                         break;
