@@ -11,6 +11,11 @@ namespace OpenInApp.Command
 {
     public class MenuItemCallBackHelper
     {
+        /// <summary>
+        /// todo severely needs refactoring to eradicate massivo waterfall coding. make considerably more SOLID.
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         public PersistOptionsDto InvokeCommandCallBack(InvokeCommandCallBackDto dto)
         {
             var dte = (DTE2)dto.ServiceProvider.GetService(typeof(DTE));
