@@ -400,5 +400,9 @@ namespace OpenInApp.Common.Tests.Helpers
         //opens app but even with just 1 arg containing folder name the app doesnt use the argument [TestCase(@"C:\Program Files (x86)\File Renamer\FileRenamer.exe", null)]
         //nothing happens even just 1 file [TestCase(@"C:\Program Files (x86)\Windows Media Player\wmplayer.exe", null)]
         //works, with 1 file at least, but video is black! [TestCase(@"C:\Program Files (x86)\Windows Media Player\wmplayer.exe", false)]
+        //http://www.irfanview.com/
+        //https://pinta-project.com/
+        //https://krita.org/
+        //http://www.photoscape.org/
     }
 }
