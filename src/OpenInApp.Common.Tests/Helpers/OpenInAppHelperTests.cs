@@ -358,6 +358,7 @@ namespace OpenInApp.Common.Tests.Helpers
 
         //codepen 
         //jsfiddle
+        //plnkr
         //Open in intellij
         //open in rider
         //Open in “My Exe”
