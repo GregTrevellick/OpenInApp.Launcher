@@ -26,10 +26,10 @@ Software License is available [here](/LICENSE.txt).
 
 [![Atom](src/VisualStudioMarketPlaceAssets/OpenInAtom/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninAtom)
 [![Altova Xml Spy](src/VisualStudioMarketPlaceAssets/OpenInAltovaXmlSpy/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninAltovaXMLSpy)
-[![Paint Dot Net](src/VisualStudioMarketPlaceAssets/OpenInPaintDotNet/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninPaintDotNet)
+[![Paint Dot Net](src/VisualStudioMarketPlaceAssets/OpenInPaintDotNet/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninPaintNe
 [![Visual Studio 2017 Community](src/VisualStudioMarketPlaceAssets/OpenInVS2017Community/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/search?term=trevellick%20open%20in%20visual%20studio&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance)
 [![Chrome Canary](src/VisualStudioMarketPlaceAssets/OpenInChromeCanary/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninChromeCanary)
-[![Gimp](src/VisualStudioMarketPlaceAssets/OpenInGimp/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninGimp)
+[![Gimp](src/VisualStudioMarketPlaceAssets/OpenInGimp/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninGIMP-GNUImageManipulationProgram)
 [![Opera](src/VisualStudioMarketPlaceAssets/OpenInOpera/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninOpera)
 [![Opera Developer](src/VisualStudioMarketPlaceAssets/OpenInOperaDeveloper/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninOperaDeveloper)
 [![Vivaldi](src/VisualStudioMarketPlaceAssets/OpenInVivaldi/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninVivaldi)
