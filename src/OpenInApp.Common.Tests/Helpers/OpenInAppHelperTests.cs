@@ -358,6 +358,8 @@ namespace OpenInApp.Common.Tests.Helpers
 
         //codepen 
         //jsfiddle   http://doc.jsfiddle.net/api/post.html
+        //android studio
+        //adobe acrobat pdf reader
         //plnkr
         //Open in intellij
         //open in rider
