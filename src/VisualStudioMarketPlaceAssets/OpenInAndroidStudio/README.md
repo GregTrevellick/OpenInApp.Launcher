@@ -1,4 +1,4 @@
-[ThirdPartyAppHomePage]: http://www.Abracadabra.net/
+[ThirdPartyAppHomePage]: https://developer.android.com/studio/index.html
 
 Open multiple files and/or folders simultaneously in [Android Studio][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
