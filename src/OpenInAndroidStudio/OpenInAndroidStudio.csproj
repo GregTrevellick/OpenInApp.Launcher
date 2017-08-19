@@ -30,8 +30,8 @@
     <ProjectGuid>{543A271A-FB6E-4918-BF68-0202EE7F1CAD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenInAbracadabra</RootNamespace>
-    <AssemblyName>OpenInAbracadabra</AssemblyName>
+    <RootNamespace>OpenInAndroidStudio</RootNamespace>
+    <AssemblyName>OpenInAndroidStudio</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
