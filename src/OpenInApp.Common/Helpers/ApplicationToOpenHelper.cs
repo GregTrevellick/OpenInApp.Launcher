@@ -54,6 +54,7 @@ namespace OpenInApp.Common.Helpers
                     break;
                 case KeyToExecutableEnum.AndroidStudio:
                     applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
+                    applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
                     applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = false;
                     applicationToOpenDto.SecondaryFilePathSegment = @"Android\Android Studio\bin";
                     break;
