@@ -7,6 +7,9 @@ namespace OpenInApp.Common.Helpers
         //[Description("intentionally commented out.exe")]
         Abracadabra,
 
+        [Description("studio64.exe")]
+        AndroidStudio,
+
         [Description("XMLSpy.exe")]
         AltovaXMLSpy,
 
@@ -83,6 +86,7 @@ namespace OpenInApp.Common.Helpers
     public static class KeyToExecutableString //TODO auto sync to the enum class above
     {
         public const string Abracadabra = "windirstat.exe";
+        public const string AndroidStudio = "studio64.exe";
         public const string AltovaXMLSpy = "XMLSpy.exe";
         public const string Atom = "atom.cmd";
         public const string ChromeCanary = "chrome.exe";

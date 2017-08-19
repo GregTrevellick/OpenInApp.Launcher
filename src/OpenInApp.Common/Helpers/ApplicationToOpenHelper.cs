@@ -52,6 +52,11 @@ namespace OpenInApp.Common.Helpers
                     applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.File;
                     applicationToOpenDto.SecondaryFilePathSegment = @"Xamarin Studio\bin";
                     break;
+                case KeyToExecutableEnum.AndroidStudio:
+                    applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
+                    applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = false;
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Android\Android Studio\bin";
+                    break;
                 case KeyToExecutableEnum.AltovaXMLSpy:
                     applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
                     applicationToOpenDto.SecondaryFilePathSegment = @"Altova\XMLSpy9999";

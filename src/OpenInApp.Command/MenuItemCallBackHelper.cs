@@ -48,8 +48,8 @@ namespace OpenInApp.Command
                 {
                     var actualArtefactsToBeOpened = ArtefactsToOpenHelper.GetArtefactsToBeOpened(dte, dto.TypicalFileExtensions, dto.CommandPlacement, dto.KeyToExecutableEnum);
 
-                    var actualArtefactsToBeOpenedExistFiles = DoArtefactsExist(actualArtefactsToBeOpened.FilesToBeOpened, dto.CommandPlacement, ArtefactTypeToOpen.File);
-                    var actualArtefactsToBeOpenedExistFolders = DoArtefactsExist(actualArtefactsToBeOpened.FoldersToBeOpened, dto.CommandPlacement, ArtefactTypeToOpen.Folder);
+                    var actualArtefactsToBeOpenedExistFiles = DoArtefactsExist(actualArtefactsToBeOpened.FilesToBeOpened, ArtefactTypeToOpen.File);
+                    var actualArtefactsToBeOpenedExistFolders = DoArtefactsExist(actualArtefactsToBeOpened.FoldersToBeOpened, ArtefactTypeToOpen.Folder);
 
                     if (!actualArtefactsToBeOpenedExistFiles || !actualArtefactsToBeOpenedExistFolders)
                     {
@@ -132,7 +132,7 @@ namespace OpenInApp.Command
             return persistOptionsDto;
         }
 
-        private static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, CommandPlacement commandPlacement, ArtefactTypeToOpen artefactTypeToOpen)
+        private static bool DoArtefactsExist(IEnumerable<string> fullArtefactNames, ArtefactTypeToOpen artefactTypeToOpen)
         {
             if (artefactTypeToOpen == ArtefactTypeToOpen.Folder)
             {
