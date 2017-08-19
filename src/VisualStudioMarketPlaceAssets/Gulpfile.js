@@ -5,6 +5,7 @@ var concat = require('gulp-concat');
 var replace = require('gulp-replace');
 
 gulp.task('OpenInAbracadabra', function () { return OIAConcat('OpenInAbracadabra', 'Abracadabra') });
+gulp.task('OpenInAndroidStudio', function () { return OIAConcat('OpenInAndroidStudio', 'Android Studio') });
 gulp.task('OpenInAltovaXmlSpy', function () { return OIAConcat('OpenInAltovaXmlSpy', 'Altova XMLSpy XML Editor') });
 gulp.task('OpenInAtom', function () { return OIAConcat('OpenInAtom', 'Atom') });
 gulp.task('OpenInChromeCanary', function () { return OIAConcat('OpenInChromeCanary', 'Chrome Canary') });
@@ -31,6 +32,7 @@ gulp.task('OpenInXamarinStudio', function () { return OIAConcat('OpenInXamarinSt
 
 gulp.task('default',
     ['OpenInAbracadabra'
+    ,'OpenInAndroidStudio'
     , 'OpenInAltovaXmlSpy'
     , 'OpenInAtom'
     , 'OpenInChromeCanary'
@@ -106,7 +108,8 @@ function GetAppType(appNam) {
             appType = 'FilesOnly'
     }
 
-    if (appNam === 'OpenInAltovaXmlSpy' ||
+    if (appNam === 'OpenInAndroidStudio' ||
+        appNam === 'OpenInAltovaXmlSpy' ||
         appNam === 'OpenInAtom' ||
         appNam === 'OpenInEmacs' ||
         appNam === 'OpenInGimp' ||

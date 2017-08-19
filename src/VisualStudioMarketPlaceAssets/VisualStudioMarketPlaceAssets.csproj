@@ -55,6 +55,7 @@
     <None Include="5_UseCases_Files.md" />
     <None Include="6_Links.md" />
     <None Include="notes.xlsx" />
+    <None Include="OpenInAndroidStudio\README.md" />
     <None Include="OpenInAtom\0_Variables.md" />
     <None Include="OpenInAtom\README.md" />
     <None Include="OpenInChromeCanary\README.md" />
