@@ -20,6 +20,15 @@ namespace OpenInApp.Common.Tests.Helpers
 
         [Test()]
         [Category("E2E")]
+        public void Test_AndroidStudio()
+        {
+            //InvokeApplication(KeyToExecutableEnum.AndroidStudio, "Image");
+           // InvokeApplication(KeyToExecutableEnum.AndroidStudio, "Folder");
+            InvokeApplication(KeyToExecutableEnum.AndroidStudio, "Text");
+        }
+
+        [Test()]
+        [Category("E2E")]
         public void Test_Atom()
         {
             InvokeApplication(KeyToExecutableEnum.Atom, "Image");
@@ -162,8 +171,10 @@ namespace OpenInApp.Common.Tests.Helpers
                 case KeyToExecutableEnum.AltovaXMLSpy:
                     executableFullPath = @"D:\Program Files (x86)\Altova\XMLSpy2017\XMLSpy.exe";
                     break;
+                case KeyToExecutableEnum.AndroidStudio:
+                    executableFullPath = @"D:\Program Files\Android\Android Studio\bin\studio64.exe";
+                    break;
                 case KeyToExecutableEnum.Atom:
-                    //executableFullPath = @"C:\Users\gtrev\AppData\Local\atom\atom.exe";
                     executableFullPath = @"C:\Users\gtrev\AppData\Local\atom\bin\atom.cmd";
                     break;
                 case KeyToExecutableEnum.FirefoxDeveloperEdition:
