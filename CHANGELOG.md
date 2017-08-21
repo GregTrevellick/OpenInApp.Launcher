@@ -2,6 +2,10 @@
 
 These are the changes to each version that has been released in the Visual Studio Marketplace.
 
+## 1.1.46
+**2017-08-21**
+- [x] Addition of Open In Android Studio
+
 ## 1.1.43
 **2017-07-20**
 - [x] Addition of Open In Atom
