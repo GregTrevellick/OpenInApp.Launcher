@@ -162,6 +162,7 @@ namespace OpenInApp.Common.Helpers
                     applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     break;
                 case KeyToExecutableEnum.Gimp:
+                    applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "gimp-2.5.exe", "gimp-2.6.exe", "gimp-2.7.exe", "gimp-2.8.exe", "gimp-2.9.exe", "gimp-2.10.exe" };
                     applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = true;
                     applicationToOpenDto.SecondaryFilePathSegment = @"GIMP 2\bin";
                     applicationToOpenDto.DefaultTypicalFileExtensions = new List<string>
