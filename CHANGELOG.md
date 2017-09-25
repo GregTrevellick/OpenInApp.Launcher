@@ -2,6 +2,10 @@
 
 These are the changes to each version that has been released in the Visual Studio Marketplace.
 
+## 1.1.47
+**2017-09-25**
+- [x] Open In Emacs bug fix for [issue 1](https://github.com/GregTrevellick/OpenInApp.Launcher/issues/1)
+
 ## 1.1.46
 **2017-08-21**
 - [x] Addition of Open In Android Studio

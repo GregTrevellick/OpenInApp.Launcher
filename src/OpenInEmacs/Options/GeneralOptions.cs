@@ -134,7 +134,11 @@ namespace OpenInEmacs.Options.Emacs
 
             if (actualPathToExeChanged)
             {
-                if (!ArtefactsHelper.DoesActualPathToExeExist(ActualPathToExe))
+                if (ArtefactsHelper.DoesActualPathToExeExist(ActualPathToExe))
+                {
+                    PersistVSToolOptions(ActualPathToExe);
+                }
+                else
                 {
                     e.ApplyBehavior = ApplyKind.Cancel;
 
