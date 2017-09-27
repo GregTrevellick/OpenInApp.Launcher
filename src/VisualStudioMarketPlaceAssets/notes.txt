@@ -19,3 +19,8 @@ https://github-atom-io-herokuapp-com.global.ssl.fastly.net/assets/logo-4e073dbd4
 
 
 C:\Users\gtrev\AppData\Local\atom\bin\atom C:\Users\gtrev\Source\Repos\OpenInApp.Launcher\src\OpenInApp.Common.Tests\TestFiles\OIA\Single_TextFile.txt
+
+
+Vsct <commandflag>dynamic visibility</commandflag>  https://msdn.microsoft.com/en-us/library/bb165339.aspx
+
+
