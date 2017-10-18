@@ -367,7 +367,7 @@ namespace OpenInApp.Common.Tests.Helpers
             };
         }
 
-        //open in CodeEditor (Moneybarn win 10)
+        //open in CodeWriter (Moneybarn win 10)
         //open in scriptCs (C#6 Scott Allen)
         //overops https://www.overops.com/dot-net
         //Open in blend / expression blend
