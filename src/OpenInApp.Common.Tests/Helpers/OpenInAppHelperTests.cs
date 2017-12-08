@@ -367,6 +367,12 @@ namespace OpenInApp.Common.Tests.Helpers
             };
         }
 
+        //Open in app - from solution node(includes the emacs issue fix when uploading the other apps)
+        //Open in app - Firefox Quantum
+        //Open in app – groupings - only AFTER open from solution node
+        //Open in app - Sql server management studio - test and publish
+        //Open in app - Rider C:\Program Files\JetBrains\Rider 2017.1.2\bin\rider64.exe
+        //Open in app - text mate / text mate 2 
         //open in CodeWriter (Moneybarn win 10)
         //open in scriptCs (C#6 Scott Allen)
         //overops https://www.overops.com/dot-net
