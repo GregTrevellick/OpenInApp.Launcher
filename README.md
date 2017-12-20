@@ -1,12 +1,13 @@
 [VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInEmacs.svg
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
+[CharityWareURL]: https://github.com/GregTrevellick/MiscellaneousArtefacts/blob/master/MiscellaneousArtefacts/CharityWare.MD
 
 # Open In App Launcher
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Build status][AppVeyorProjectBuildStatusBadgeSvg]][AppVeyorProjectUrl]
 
-A repository containing code for use in a series of [Visual Studio][VisualStudioURL] extensions that allow multiple files to be opened simultaneously in third party applications directly from within the [Visual Studio IDE][VisualStudioURL] code editor window and / or Solution Explorer.
+A [CharityWare][CharityWareURL] repository containing code for use in a series of [Visual Studio][VisualStudioURL] extensions that allow multiple files to be opened simultaneously in third party applications directly from within the [Visual Studio IDE][VisualStudioURL] code editor window and / or Solution Explorer.
 
 The [Visual Studio][VisualStudioURL] extensions are officially available at the [Visual Studio Marketplace][VSMarketplaceUrl].
 
