@@ -1,6 +1,6 @@
 [VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInEmacs.svg
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
-[CharityWareURL]: https://github.com/GregTrevellick/MiscellaneousArtefacts/blob/master/MiscellaneousArtefacts/CharityWare.MD
+[CharityWareURL]: https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware
 
 # Open In App Launcher
 
