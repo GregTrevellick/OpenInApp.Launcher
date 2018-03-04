@@ -3,7 +3,7 @@
 Open multiple files and/or folders simultaneously in [Xamarin Studio][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 
- - *If you like this ***free*** tool please take a few seconds out to give a star rating below*.
+ - *If you like this ***FREE*** tool please take a few seconds out to give a star rating below and/or [help others][CharityWareURL]*.
 
 Similar "Open In" VS extensions can be found [here](https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance).
 
@@ -61,6 +61,9 @@ That said, there may be times when you wish to edit a file in an alternative edi
 
 - You are more familiar with a certain editor's features, or simply have a favourite editor.
 
+[Why?][WhyURL]
+
 
 [ThirdPartyAppOfficialLogo]: ThirdPartyLogo.png
 [VisualStudioURL]: https://www.visualstudio.com/
+[CharityWareURL]: https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware

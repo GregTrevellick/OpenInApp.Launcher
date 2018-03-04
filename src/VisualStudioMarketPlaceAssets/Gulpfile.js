@@ -87,6 +87,18 @@ function OIAConcat (appNam, appDesc) {
         );
     }
 
+    if (appType === 'FilesAndFolders_gif') {
+        filesToConcat.push(
+            '1_Introduction_FilesAndFolders.md',
+            '2_FreeReviews_gif.md',
+            '3_Features_FilesAndFolders.md',
+            '4_FileTypeWarnings.md',
+            '4b_FileQuantityWarnings.md',
+            '5_UseCases_Files.md',
+            '6_Links.md'
+        );
+    }
+
     return gulp
         .src(filesToConcat)
         .pipe(concat(appNam + '/README.md'))
@@ -117,16 +129,19 @@ function GetAppType(appNam) {
         appNam === 'OpenInMSPaint' ||
         appNam === 'OpenInPaintDotNet' ||
         appNam === 'OpenInTreeSizeFree' ||
-        appNam === 'OpenInTreeSizeProfessional' ||
-        appNam === 'OpenInVS2012' ||
+        appNam === 'OpenInTreeSizeProfessional' ||        
+        appNam === 'OpenInWinDirStat' ||
+        appNam === 'OpenInXamarinStudio') {
+            appType = 'FilesAndFolders'
+    }
+
+    if (appNam === 'OpenInVS2012' ||
         appNam === 'OpenInVS2013' ||
         appNam === 'OpenInVS2015' ||
         appNam === 'OpenInVS2017Community' ||
         appNam === 'OpenInVS2017Enterprise' ||
-        appNam === 'OpenInVS2017Professional' ||
-        appNam === 'OpenInWinDirStat' ||
-        appNam === 'OpenInXamarinStudio') {
-            appType = 'FilesAndFolders'
+        appNam === 'OpenInVS2017Professional') {
+            appType = 'FilesAndFolders_gif'
     }
 
     return appType;
