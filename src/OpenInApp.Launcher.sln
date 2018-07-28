@@ -74,6 +74,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInAtom", "OpenInAtom\Op
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInAndroidStudio", "OpenInAndroidStudio\OpenInAndroidStudio.csproj", "{543A271A-FB6E-4918-BF68-0202EE7F1CAD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1F3D0298-4C07-41FB-92CC-56EEFAB440C2}"
+	ProjectSection(SolutionItems) = preProject
+		..\.travis.yml = ..\.travis.yml
+		..\_config.yml = ..\_config.yml
+		..\appveyor.yml = ..\appveyor.yml
+		..\Zappveyor.yml = ..\Zappveyor.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -209,5 +217,8 @@ Global
 		{78680FB3-22E5-4200-9756-2C2CEC66161D} = {20A3F2B7-5986-4BE8-A9A7-1E85B57DCBD1}
 		{14817DAF-3B76-4E3A-9C6B-B69C9A438183} = {20A3F2B7-5986-4BE8-A9A7-1E85B57DCBD1}
 		{89623B25-AF78-475C-819F-1C5990199F87} = {20A3F2B7-5986-4BE8-A9A7-1E85B57DCBD1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6CBD576-83EC-4DA7-9AFC-2DF85811D93A}
 	EndGlobalSection
 EndGlobal

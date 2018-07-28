@@ -1,9 +1,9 @@
 version: 1.0.{build}
 image: Visual Studio 2017
 before_build:
-- cmd: nuget restore Src/QuickLaunchButtons.sln
+- cmd: nuget restore Src/OpenInApp.Launcher.sln
 build:
-  project: Src/QuickLaunchButtons.sln
+  project: Src/OpenInApp.Launcher.sln
   verbosity: minimal
 notifications:
 - provider: Email
