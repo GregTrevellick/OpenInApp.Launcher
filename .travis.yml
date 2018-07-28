@@ -1,2 +1,2 @@
 language: csharp
-solution: FilesForEveryExtensionCreator.sln
+solution: src/OpenInApp.Launcher.sln
