@@ -2,6 +2,8 @@ version: 1.0.{build}
 image: Visual Studio 2017
 before_build:
 - cmd: nuget restore Src/OpenInApp.Launcher.sln
+- choco install opencover.portable
+- choco install codecov
 build:
   project: Src/OpenInApp.Launcher.sln
   verbosity: minimal
@@ -12,3 +14,6 @@ notifications:
   on_build_success: false
   on_build_failure: false
   on_build_status_changed: true
+test_script:
+- OpenCover.Console.exe -register:user -target:"nunit3-console.exe" -targetargs:".\src\OpenInApp.Common.Tests\bin\Debug\OpenInApp.Common.Tests.dll -noshadow" -filter:"+[UnitTestTargetProject*]* -[OpenInApp.Common.Tests*]*" -output:".\MyProject_coverage.xml"
+- codecov -f "MyProject_coverage.xml"
