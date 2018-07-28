@@ -1,0 +1,14 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+before_build:
+- cmd: nuget restore Src/QuickLaunchButtons.sln
+build:
+  project: Src/QuickLaunchButtons.sln
+  verbosity: minimal
+notifications:
+- provider: Email
+  to:
+  - gtrevellick@googlemail.com
+  on_build_success: false
+  on_build_failure: false
+  on_build_status_changed: true
