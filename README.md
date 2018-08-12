@@ -6,7 +6,19 @@
 # Open In App Launcher
 
 <!--BadgesSTART-->
-<!--BadgesEND-->
+
+[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/OpenInApp.Launcher?branch=master)](https://bettercodehub.com/results/GregTrevellick/OpenInApp.Launcher)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e61c4dba8261497fb447379730e97a25)](https://www.codacy.com/project/gtrevellick/OpenInAppLauncher/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/OpenInAppLauncher&amp;utm_campaign=Badge_Grade_Dashboard)
+[![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/OpenInApp.Launcher/badge)](https://www.codefactor.io/repository/github/gregtrevellick/OpenInApp.Launcher)
+[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
+[![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher/pulls)
+[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true)](https://ci.appveyor.com/project/GregTrevellick/OpenInApp-Launcher)
+[![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/OpenInAppLauncher.svg)](https://ci.appveyor.com/project/GregTrevellick/OpenInAppLauncher/build/tests)
+[![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
+[![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
+[![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
+[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)<!--BadgesEND-->
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Build status][AppVeyorProjectBuildStatusBadgeSvg]][AppVeyorProjectUrl]
