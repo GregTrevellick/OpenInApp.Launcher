@@ -56,7 +56,7 @@ Software License is available [here](/LICENSE.txt).
 [![Markdown Monster](src/VisualStudioMarketPlaceAssets/OpenInXamarinStudio/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninXamarinStudio)
 [![TreeSize Free](src/VisualStudioMarketPlaceAssets/OpenInTreeSizeFree/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninTreeSizeFree)
 [![TreeSize Professional](src/VisualStudioMarketPlaceAssets/OpenInTreeSizeProfessional/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninTreeSizeProfessional)
-[![WinDirStat](src/VisualStudioMarketPlaceAssets/OpenInWinDirStat/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninWinDirStat)
+[![WinDirStat](src/VisualStudioMarketPlaceAssets/OpenInWinDirStat/ThirdPartyLogo.png)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninWinDirStat) [![Greenkeeper badge](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)
 
 ## Legal
 
