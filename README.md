@@ -7,6 +7,7 @@
 
 <!--BadgesSTART-->
 <!-- Powered by https://github.com/GregTrevellick/ReadMeSynchronizer -->
+
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/OpenInApp.Launcher?branch=master)](https://bettercodehub.com/results/GregTrevellick/OpenInApp.Launcher)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e61c4dba8261497fb447379730e97a25)](https://www.codacy.com/project/gtrevellick/OpenInApp.Launcher/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/OpenInApp.Launcher&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/OpenInApp.Launcher/badge)](https://www.codefactor.io/repository/github/GregTrevellick/OpenInApp.Launcher)
@@ -23,6 +24,7 @@
 [![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.OpenInApp.Launcher.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInApp.Launcher)
 [![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInApp.Launcher.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInApp.Launcher)
 <!--BadgesEND-->
+
 
 
 
