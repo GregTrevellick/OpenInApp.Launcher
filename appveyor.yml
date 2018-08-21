@@ -1,12 +1,20 @@
 version: 1.0.{build}
 image: Visual Studio 2017
+environment:
+    my_encrypted_sonarqube_token:
+        secure: 94Py9ytqrmqFVtmUiyayJJ4Hgg2vjF1+YuRJldGGWO82/9zEens+sCjeh7wzc2Le
+install:
+    - choco install "sonarscanner-msbuild-net46" -y
 before_build:
-- cmd: nuget restore Src/OpenInApp.Launcher.sln
-- choco install opencover.portable
-- choco install codecov
+    - cmd: nuget restore Src/OpenInApp.Launcher.sln
+    - choco install opencover.portable
+    - choco install codecov
+    - SonarScanner.MSBuild.exe begin /k:"TrevellickProject001" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%my_encrypted_sonarqube_token%" /d:"sonar.organization=gregtrevellick-github"
 build:
-  project: Src/OpenInApp.Launcher.sln
-  verbosity: minimal
+    project: Src/OpenInApp.Launcher.sln
+    verbosity: minimal
+after_build:
+    - SonarScanner.MSBuild.exe end /d:"sonar.login=%my_encrypted_sonarqube_token%"
 notifications:
 - provider: Email
   to:
