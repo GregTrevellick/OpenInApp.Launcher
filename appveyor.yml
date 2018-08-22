@@ -9,7 +9,7 @@ before_build:
     - cmd: nuget restore Src/OpenInApp.Launcher.sln
     - choco install opencover.portable
     - choco install codecov
-    - SonarScanner.MSBuild.exe begin /k:"TrevellickProject001" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%my_encrypted_sonarqube_token%" /d:"sonar.organization=gregtrevellick-github"
+    - SonarScanner.MSBuild.exe begin /k:"OpenInApp.Launcher" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%my_encrypted_sonarqube_token%" /d:"sonar.organization=gregtrevellick-github"
 build:
     project: Src/OpenInApp.Launcher.sln
     verbosity: minimal
