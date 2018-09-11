@@ -6,13 +6,13 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using OpenInApp.Menu;
 
-namespace OpenInVS2017Community.Options.VS2017Community
+namespace OpenInVS2019Community.Options.VS2019Community
 {
     public class GeneralOptions : DialogPage, IGeneralOptionsFile // or set to IGeneralOptionsFolder
     {
-        internal static KeyToExecutableEnum keyToExecutableEnum = KeyToExecutableEnum.VS2017Community;
+        internal static KeyToExecutableEnum keyToExecutableEnum = KeyToExecutableEnum.VS2019Community;
         private IEnumerable<string> defaultTypicalFileExtensions = new ConstantsForAppCommon().GetDefaultTypicalFileExtensions(keyToExecutableEnum);
-        private const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableString.VS2017Community;
+        private const string CommonActualPathToExeOptionLabel = CommonConstants.ActualPathToExeOptionLabelPrefix + KeyToExecutableString.VS2019Community;
 
         [Category(CommonConstants.CategorySubLevel)]
         [DisplayName(CommonActualPathToExeOptionLabel)]

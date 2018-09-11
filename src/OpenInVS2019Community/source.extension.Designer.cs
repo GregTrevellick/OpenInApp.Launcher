@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OpenInAppVS2017Community {
+namespace OpenInAppVS2019Community {
     using System;
     
     

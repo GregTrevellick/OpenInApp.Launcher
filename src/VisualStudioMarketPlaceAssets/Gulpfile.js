@@ -27,6 +27,9 @@ gulp.task('OpenInVS2015', function () { return OIAConcat('OpenInVS2015', 'Visual
 gulp.task('OpenInVS2017Community', function () { return OIAConcat('OpenInVS2017Community', 'Visual Studio 2017 Community Edition') });
 gulp.task('OpenInVS2017Enterprise', function () { return OIAConcat('OpenInVS2017Enterprise', 'Visual Studio 2017 Enterprise Edition') });
 gulp.task('OpenInVS2017Professional', function () { return OIAConcat('OpenInVS2017Professional', 'Visual Studio 2017 Professional Edition') });
+gulp.task('OpenInVS2019Community', function () { return OIAConcat('OpenInVS2019Community', 'Visual Studio 2019 Community Edition') });
+gulp.task('OpenInVS2019Enterprise', function () { return OIAConcat('OpenInVS2019Enterprise', 'Visual Studio 2019 Enterprise Edition') });
+gulp.task('OpenInVS2019Professional', function () { return OIAConcat('OpenInVS2019Professional', 'Visual Studio 2019 Professional Edition') });
 gulp.task('OpenInWinDirStat', function () { return OIAConcat('OpenInWinDirStat', 'WinDirStat') });
 gulp.task('OpenInXamarinStudio', function () { return OIAConcat('OpenInXamarinStudio', 'Xamarin Studio') });
 
@@ -54,6 +57,9 @@ gulp.task('default',
     , 'OpenInVS2017Community'
     , 'OpenInVS2017Enterprise'
     , 'OpenInVS2017Professional'
+    , 'OpenInVS2019Community'
+    , 'OpenInVS2019Enterprise'
+    , 'OpenInVS2019Professional'
     , 'OpenInWinDirStat'
     , 'OpenInXamarinStudio']);
 
@@ -140,7 +146,10 @@ function GetAppType(appNam) {
         appNam === 'OpenInVS2015' ||
         appNam === 'OpenInVS2017Community' ||
         appNam === 'OpenInVS2017Enterprise' ||
-        appNam === 'OpenInVS2017Professional') {
+        appNam === 'OpenInVS2017Professional' ||
+        appNam === 'OpenInVS2019Community' ||
+        appNam === 'OpenInVS2019Enterprise' ||
+        appNam === 'OpenInVS2019Professional') {
             appType = 'FilesAndFolders_gif'
     }
 

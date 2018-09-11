@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OpenInVS2017Professional {
+namespace OpenInVS2019Professional {
     using System;
     
     

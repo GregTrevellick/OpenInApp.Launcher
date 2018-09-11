@@ -1,4 +1,4 @@
-﻿using OpenInVS2017Community;
+﻿using OpenInVS2019Community;
 using System.Reflection;
 using System.Runtime.InteropServices;
 

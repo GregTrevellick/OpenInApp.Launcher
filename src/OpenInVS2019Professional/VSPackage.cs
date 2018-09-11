@@ -1,12 +1,12 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Common.Helpers;
-using OpenInVS2017Professional.Commands;
-using OpenInVS2017Professional.Options.VS2017Professional;
+using OpenInVS2019Professional.Commands;
+using OpenInVS2019Professional.Options.VS2019Professional;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
-namespace OpenInVS2017Professional
+namespace OpenInVS2019Professional
 {
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [InstalledProductRegistration(productName: "#110", productDetails: "#112", productId: Vsix.Version, IconResourceID = 400)]

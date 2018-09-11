@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using OpenInApp.Common.Helpers;
 using OpenInApp.Menu;
-using OpenInVS2017Enterprise.Options.VS2017Enterprise;
+using OpenInVS2019Enterprise.Options.VS2019Enterprise;
 using System;
 
-namespace OpenInVS2017Enterprise.Commands
+namespace OpenInVS2019Enterprise.Commands
 {
     internal sealed class OpenInAppCommand
     {
