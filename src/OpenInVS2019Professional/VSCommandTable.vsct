@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidOpenInAppPackage">
+    <Groups>
+      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
+      </Group>
+      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" priority="0x0100">
+      </Group>
+      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderNode" priority="0x0100">
+      </Group>
+      <Group guid="guidOpenInVsCmdSet" id="GroupOpenInAppProjNode" priority="0x0100">
+      </Group>
+    </Groups>
+    <Buttons>    
+      <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppCodeWin" priority="0x0100" type="Button">
+        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Open in Visual Studio 2017 Professional</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppItemNode" priority="0x100" type="Button">
+        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Open in Visual Studio 2017 Professional</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppFolderNode" priority="0x100" type="Button">
+        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderNode" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Open Folder in Visual Studio 2017 Professional</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidOpenInVsCmdSet" id="CmdIdOpenInAppProjNode" priority="0x100" type="Button">
+        <Parent guid="guidOpenInVsCmdSet" id="GroupOpenInAppProjNode" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Open Folder in Visual Studio 2017 Professional</ButtonText>
+        </Strings>
+      </Button>      
+    </Buttons>
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\VsixCommandIcon_16x16.png" usedList="bmpPic1"/>
+    </Bitmaps>
+  </Commands>
+  
+  <CommandPlacements>
+    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppItemNode" priority="0x0100">
+      <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppCodeWin" priority="0x0100">
+      <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppFolderNode" priority="0x0100">
+      <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_FOLDERNODE" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidOpenInVsCmdSet" id="GroupOpenInAppProjNode" priority="0x0100">
+      <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE" />
+    </CommandPlacement>
+  </CommandPlacements>
+   
+  <Symbols>
+    <GuidSymbol name="guidOpenInAppPackage" value="{44147A97-9F32-4B28-B313-4A257B6EE3AE}" />
+    <GuidSymbol name="guidOpenInVsCmdSet" value="{90DAB6AD-0BDE-4DD5-B84D-A0DA46180E1C}">
+      <IDSymbol name="GroupOpenInAppCodeWin" value="0x1030" />
+      <IDSymbol name="CmdIdOpenInAppCodeWin" value="0x0100" />
+      <IDSymbol name="GroupOpenInAppItemNode" value="0x1040" />
+      <IDSymbol name="CmdIdOpenInAppItemNode" value="0x0110" />
+      <IDSymbol name="GroupOpenInAppFolderNode" value="0x1050" />
+      <IDSymbol name="CmdIdOpenInAppFolderNode" value="0x0120" />
+      <IDSymbol name="GroupOpenInAppProjNode" value="0x1060" />
+      <IDSymbol name="CmdIdOpenInAppProjNode" value="0x0130" />
+    </GuidSymbol>
+    <GuidSymbol name="guidImages" value="{FCCF8183-D712-4F44-B365-680BA2444EF4}" >
+      <IDSymbol name="bmpPic1" value="1" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
