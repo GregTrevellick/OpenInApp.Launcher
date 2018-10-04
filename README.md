@@ -14,6 +14,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/OpenInApp.Launcher/badge)](https://www.codefactor.io/repository/github/GregTrevellick/OpenInApp.Launcher)
 [![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 [![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
+[![GitHub issues](https://img.shields.io/github/issues-raw/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher/pulls)
 [![Sonar&metric=alert_status](https://sonarcloud.io/api/project_badges/measure?project=OpenInApp.Launcher&metric=alert_status)](https://sonarcloud.io/dashboard?id=OpenInApp.Launcher)
 [![Sonar&metric=bugs](https://sonarcloud.io/api/project_badges/measure?project=OpenInApp.Launcher&metric=bugs)](https://sonarcloud.io/component_measures?id=OpenInApp.Launcher&metric=bugs)
