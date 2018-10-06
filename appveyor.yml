@@ -1,5 +1,8 @@
 version: 1.0.{build}
 image: Visual Studio 2017
+branches:
+  only:
+    - master
 environment:
     my_encrypted_sonarqube_token:
         secure: 94Py9ytqrmqFVtmUiyayJJ4Hgg2vjF1+YuRJldGGWO82/9zEens+sCjeh7wzc2Le
