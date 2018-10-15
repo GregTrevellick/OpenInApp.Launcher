@@ -15,7 +15,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e61c4dba8261497fb447379730e97a25)](https://www.codacy.com/project/gtrevellick/OpenInApp.Launcher/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/OpenInApp.Launcher&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeBeat](https://codebeat.co/badges/undefined)](https://codebeat.co/projects/github-com-gregtrevellick-openinapp.launcher-master)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/OpenInApp.Launcher/badge)](https://www.codefactor.io/repository/github/GregTrevellick/OpenInApp.Launcher)
-[![DepShield](https://depshield.sonatype.org/badges/GregTrevellick/OpenInApp.Launcher/depshield.svg)](https://depshield.github.io)
 [![InspecodeRocro Report](https://inspecode.rocro.com/badges/github.com/GregTrevellick/OpenInApp.Launcher/report?token=gMeDVWmC1m0zT4s6qrY9hlEdBvNla8Qzmt2Mi5GAgEE)](https://inspecode.rocro.com/reports/github.com/GregTrevellick/OpenInApp.Launcher/branch/master/summary)
 [![LGTM Alerts](https://img.shields.io/lgtm/alerts/g/GregTrevellick/OpenInApp.Launcher.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/GregTrevellick/OpenInApp.Launcher/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/GregTrevellick/OpenInApp.Launcher.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/GregTrevellick/OpenInApp.Launcher/context:javascript)
