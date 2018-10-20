@@ -261,6 +261,7 @@ Inspired and adapted from these original code repositories
 - [Cem Yabansu](https://github.com/cemyabansu) 
   - [Publish In Crm](https://github.com/cemyabansu/PublishInCrm "Publish In Crm")
 - [Allen Conway](http://www.allenconway.net/2015/06/using-opencover-and-reportgenerator-to.html) 
+- [Utkarsh Shigihalli](https://www.visualstudiogeeks.com/devops/continuous-build-and-deployment-of-visual-studio-extensions)
 
 Additional thanks to
 
