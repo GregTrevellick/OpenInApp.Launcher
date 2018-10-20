@@ -6,6 +6,7 @@ These are the changes to each version that has been released in the Visual Studi
 **2018-10-20**
 - [x] Conversion to async packages
 - [x] Fix github issues
+- [x] Add VS2019 versions
 
 ## 1.1.48
 **2017-09-25**

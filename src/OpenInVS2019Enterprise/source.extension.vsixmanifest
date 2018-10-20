@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="348687B9-1B76-47EB-931C-1605660E3D7B" Version="1.1.51" Language="en-US" Publisher="GregTrevellick" />
+        <DisplayName>Open in Visual Studio 2019 Enterprise</DisplayName>
+        <Description xml:space="preserve">Open multiple files simultaneously in Visual Studio 2019 Enterprise Edition directly from Solution Explorer or Code Editor window.</Description>
+        <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>
+        <License>LICENSE.txt</License>
+        <ReleaseNotes>https://github.com/GregTrevellick/OpenInApp.Launcher/blob/master/CHANGELOG.md</ReleaseNotes>
+        <Icon>Resources\VsixExtensionIcon_90x90.png</Icon>
+        <PreviewImage>Resources\VsixExtensionPreview_175x175.png</PreviewImage>
+        <Tags>open, open in, open in VS2019, VS2019, open in Visual Studio 2019, Visual Studio 2019, enterprise</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,16.0)" />
+    </Installation>
+    <Dependencies>
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.26208.0,16.0)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
+</PackageManifest>

@@ -80,6 +80,9 @@
     <None Include="OpenInTreeSizeProfessional\README.md" />
     <None Include="OpenInVivaldi\README.md" />
     <None Include="OpenInVivaldi\0_Variables.md" />
+    <None Include="OpenInVS2019Community\README.md" />
+    <None Include="OpenInVS2019Enterprise\README.md" />
+    <None Include="OpenInVS2019Professional\README.md" />
     <None Include="OpenInWinDirStat\0_Variables.md" />
     <None Include="OpenInWinDirStat\README.md" />
     <None Include="OpenInXamarinStudio\README.md" />

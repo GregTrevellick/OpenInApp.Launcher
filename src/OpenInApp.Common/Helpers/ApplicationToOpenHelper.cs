@@ -331,6 +331,27 @@ namespace OpenInApp.Common.Helpers
                     applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
                     applicationToOpenDto.UseShellExecute = false;
                     break;
+                case KeyToExecutableEnum.VS2019Community:
+                    applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
+                    applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2019\Community\Common7\IDE";
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
+                    applicationToOpenDto.UseShellExecute = false;
+                    break;
+                case KeyToExecutableEnum.VS2019Enterprise:
+                    applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
+                    applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2019\Enterprise\Common7\IDE";
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
+                    applicationToOpenDto.UseShellExecute = false;
+                    break;
+                case KeyToExecutableEnum.VS2019Professional:
+                    applicationToOpenDto.ExcludeBinAndObjFoldersWhenOpeningProjectNode = true;
+                    applicationToOpenDto.ExecutableFilesToBrowseFor = new List<string> { "devenv.exe" };
+                    applicationToOpenDto.SecondaryFilePathSegment = @"Microsoft Visual Studio\2019\Professional\Common7\IDE";
+                    applicationToOpenDto.SeparateProcessPerFileToBeOpened = false;
+                    applicationToOpenDto.UseShellExecute = false;
+                    break;
                 case KeyToExecutableEnum.WinDirStat:
                     applicationToOpenDto.ArtefactTypeToOpen = ArtefactTypeToOpen.Folder;
                     applicationToOpenDto.OpenIndividualFilesInFolderRatherThanFolderItself = false;

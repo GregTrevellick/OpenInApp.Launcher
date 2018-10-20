@@ -73,6 +73,15 @@ namespace OpenInApp.Common.Helpers
         [Description("devenv.exe")]
         VS2017Professional,
 
+        [Description("devenv.exe")]
+        VS2019Community,
+
+        [Description("devenv.exe")]
+        VS2019Enterprise,
+
+        [Description("devenv.exe")]
+        VS2019Professional,
+
         [Description("windirstat.exe")]
         WinDirStat,
 
@@ -108,6 +117,9 @@ namespace OpenInApp.Common.Helpers
         public const string VS2017Community = "devenv.exeVS2017Community";
         public const string VS2017Enterprise = "devenv.exeVS2017Enterprise";
         public const string VS2017Professional = "devenv.exeVS2017Professional";
+        public const string VS2019Community = "devenv.exeVS2019Community";
+        public const string VS2019Enterprise = "devenv.exeVS2019Enterprise";
+        public const string VS2019Professional = "devenv.exeVS2019Professional";
         public const string WinDirStat = "windirstat.exe";
         public const string XamarinStudio = "XamarinStudio.exe";
     }
