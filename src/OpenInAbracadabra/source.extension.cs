@@ -11,7 +11,7 @@ namespace OpenInAbracadabra
         public const string Name = "Open in Abracadabra";
         public const string Description = @"Open multiple files simultaneously in Abracadabra directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
-        public const string Version = "1.1.50";
+        public const string Version = "1.1.51";
         public const string Author = "GregTrevellick";
         public const string Tags = "open, open in, Abracadabra";
     }

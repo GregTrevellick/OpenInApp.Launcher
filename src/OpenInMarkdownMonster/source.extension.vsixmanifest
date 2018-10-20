@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="MFA20CC7-7C8E-4E41-B258-539C067E5649" Version="1.1.50" Language="en-US" Publisher="GregTrevellick" />
+        <Identity Id="MFA20CC7-7C8E-4E41-B258-539C067E5649" Version="1.1.51" Language="en-US" Publisher="GregTrevellick" />
         <DisplayName>Open in Markdown Monster</DisplayName>
         <Description xml:space="preserve">Open multiple files simultaneously in Markdown Monster directly from Solution Explorer or Code Editor window.</Description>
         <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>

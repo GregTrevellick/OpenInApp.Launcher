@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
-	<Metadata>
-		<Identity Id="AE643C9F-EA6E-4A88-A122-34696D103F82" Version="1.1.50" Language="en-US" Publisher="GregTrevellick" />
-		<DisplayName>Open in Altova XMLSpy</DisplayName>
-		<Description xml:space="preserve">Open multiple files simultaneously in Altova XMLSpy XML Editor directly from Solution Explorer or Code Editor window.</Description>
-		<MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>
-		<License>LICENSE.txt</License>
-		<ReleaseNotes>https://github.com/GregTrevellick/OpenInApp.Launcher/blob/master/CHANGELOG.md</ReleaseNotes>
-		<Icon>Resources\VsixExtensionIcon_90x90.png</Icon>
-		<PreviewImage>Resources\VsixExtensionPreview_175x175.png</PreviewImage>
-		<Tags>xml, xmlspy, altova, xsd, xslt, open, open in</Tags>
-	</Metadata>
-	<Installation>
-		<InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,17.0)" />
-	</Installation>
-	<Dependencies>
-	</Dependencies>
-	<Assets>
-		<Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-	</Assets>
-	<Prerequisites>
-		<Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.26208.0,17.0)" DisplayName="Visual Studio core editor" />
-	</Prerequisites>
+    <Metadata>
+        <Identity Id="AE643C9F-EA6E-4A88-A122-34696D103F82" Version="1.1.51" Language="en-US" Publisher="GregTrevellick" />
+        <DisplayName>Open in Altova XMLSpy</DisplayName>
+        <Description xml:space="preserve">Open multiple files simultaneously in Altova XMLSpy XML Editor directly from Solution Explorer or Code Editor window.</Description>
+        <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>
+        <License>LICENSE.txt</License>
+        <ReleaseNotes>https://github.com/GregTrevellick/OpenInApp.Launcher/blob/master/CHANGELOG.md</ReleaseNotes>
+        <Icon>Resources\VsixExtensionIcon_90x90.png</Icon>
+        <PreviewImage>Resources\VsixExtensionPreview_175x175.png</PreviewImage>
+        <Tags>xml, xmlspy, altova, xsd, xslt, open, open in</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,17.0)" />
+    </Installation>
+    <Dependencies>
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.26208.0,17.0)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
 </PackageManifest>

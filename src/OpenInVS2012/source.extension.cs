@@ -11,7 +11,7 @@ namespace OpenInVS2012
         public const string Name = "Open in Visual Studio 2012";
         public const string Description = @"Open multiple files simultaneously in Visual Studio 2012 directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
-        public const string Version = "1.1.50";
+        public const string Version = "1.1.51";
         public const string Author = "GregTrevellick";
         public const string Tags = "open, open in, open in VS2012, VS2012, open in Visual Studio 2012, Visual Studio 2012";
     }

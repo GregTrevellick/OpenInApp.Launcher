@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="1F26AAE5-DA33-4D31-A5EB-AA424D745321" Version="1.1.50" Language="en-US" Publisher="GregTrevellick" />
+        <Identity Id="1F26AAE5-DA33-4D31-A5EB-AA424D745321" Version="1.1.51" Language="en-US" Publisher="GregTrevellick" />
         <DisplayName>Open in Paint.NET</DisplayName>
         <Description xml:space="preserve">Open multiple files simultaneously in Paint.NET directly from Solution Explorer or Code Editor window.</Description>
         <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>
