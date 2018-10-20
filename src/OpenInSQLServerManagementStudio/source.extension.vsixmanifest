@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
-  <Metadata>
-    <Identity Id="ae571a7d-4421-40a0-bf5d-e58baf00a57d" Version="1.1.42" Language="en-US" Publisher="GregTrevellick" />
-    <DisplayName>Open in SQL Server Management Studio</DisplayName>
-    <Description xml:space="preserve">Open multiple files simultaneously in SQL Server Management Studio directly from Solution Explorer or Code Editor window.</Description>
-    <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>
-    <License>LICENSE.txt</License>
-    <ReleaseNotes>https://github.com/GregTrevellick/OpenInApp.Launcher/blob/master/CHANGELOG.md</ReleaseNotes>
-    <Icon>Resources\VsixExtensionIcon_90x90.png</Icon>
-    <PreviewImage>Resources\VsixExtensionPreview_175x175.png</PreviewImage>
-    <Tags>open, open in, Sequel Server, Sequel Server Management Studio, SQL Server, SQL Server Management Studio, SSMS, </Tags>
-  </Metadata>
-  <Installation>
+    <Metadata>
+        <Identity Id="ae571a7d-4421-40a0-bf5d-e58baf00a57d" Version="1.1.50" Language="en-US" Publisher="GregTrevellick" />
+        <DisplayName>Open in SQL Server Management Studio</DisplayName>
+        <Description xml:space="preserve">Open multiple files simultaneously in SQL Server Management Studio directly from Solution Explorer or Code Editor window.</Description>
+        <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>
+        <License>LICENSE.txt</License>
+        <ReleaseNotes>https://github.com/GregTrevellick/OpenInApp.Launcher/blob/master/CHANGELOG.md</ReleaseNotes>
+        <Icon>Resources\VsixExtensionIcon_90x90.png</Icon>
+        <PreviewImage>Resources\VsixExtensionPreview_175x175.png</PreviewImage>
+        <Tags>open, open in, Sequel Server, Sequel Server Management Studio, SQL Server, SQL Server Management Studio, SSMS, </Tags>
+    </Metadata>
+    <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,17.0)" />
-  </Installation>
-  <Dependencies>
-  </Dependencies>
-  <Assets>
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-  </Assets>
-  <Prerequisites>
+    </Installation>
+    <Dependencies>
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    </Assets>
+    <Prerequisites>
         <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.26208.0,17.0)" DisplayName="Visual Studio core editor" />
-  </Prerequisites>
+    </Prerequisites>
 </PackageManifest>
