@@ -34,16 +34,16 @@ Similar "Open In" VS extensions can be found [here](https://marketplace.visualst
 
 - Warning if attempting to open one or more file types whose extension is not typically associated with [Altova XMLSpy XML Editor][ThirdPartyAppHomePage]. The list of typical file extensions is configurable in Tools > Options.
 
-  ![](../Generic_ReadMeScreenShot_WarningNonTypical.png)
+  ![](Generic_ReadMeScreenShot_WarningNonTypical.png)
 
 - Option to supress the warning message if attempting to open a file whose extension is not typically associated with [Altova XMLSpy XML Editor][ThirdPartyAppHomePage].
 
-  ![](../Generic_ReadMeScreenShot_OptionsGeneral.png)
+  ![](Generic_ReadMeScreenShot_OptionsGeneral.png)
 
 
 - Warning if attempting to open a large quantity of artefacts. The quantity is configurable in Tools > Options.
 
-  ![](../Generic_ReadMeScreenShot_WarningLargeQuantity.png)
+  ![](Generic_ReadMeScreenShot_WarningLargeQuantity.png)
 
 ## Use Cases
 
@@ -61,7 +61,6 @@ That said, there may be times when you wish to edit a file in an alternative edi
 
 - You are more familiar with a certain editor's features, or simply have a favourite editor.
 
-[Why?][WhyURL]
 
 
 [ThirdPartyAppOfficialLogo]: ThirdPartyLogo.png
