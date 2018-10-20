@@ -33,9 +33,10 @@ namespace OpenInApp.Command
                     var badFilePath = dto.KeyToExecutableEnum.ToString();
                     persistOptionsDto = fileHelper.PromptForActualExeFile(badFilePath);
 
-                    var newActualPathToExeExists = ArtefactsHelper.DoesActualPathToExeExist(dto.ActualPathToExe);
+                    var newActualPathToExeExists = ArtefactsHelper.DoesActualPathToExeExist(persistOptionsDto.ValueToPersist);
                     if (newActualPathToExeExists)
                     {
+                        dto.ActualPathToExe = persistOptionsDto.ValueToPersist;
                         proceedToExecute = true;
                     }
                     else
@@ -106,9 +107,9 @@ namespace OpenInApp.Command
                                         }
                                     }
 
-                                    OpenInAppHelper.InvokeCommand(actualArtefacts, 
-                                        dto.ActualPathToExe, 
-                                        dto.SeparateProcessPerFileToBeOpened, 
+                                    OpenInAppHelper.InvokeCommand(actualArtefacts,
+                                        dto.ActualPathToExe,
+                                        dto.SeparateProcessPerFileToBeOpened,
                                         dto.UseShellExecute,
                                         dto.ArtefactTypeToOpen,
                                         dto.ProcessWithinProcess);
