@@ -2,8 +2,8 @@
 
 These are the changes to each version that has been released in the Visual Studio Marketplace.
 
-## 1.1.51
-**2018-10-20**
+## 1.1.52
+**2018-10-21**
 - [x] Conversion to async packages
 - [x] Fix github issues
 - [x] Add VS2019 versions
