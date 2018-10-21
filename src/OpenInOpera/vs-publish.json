@@ -18,16 +18,8 @@
             "targetPath": "ReadMeScreenShot_CodeEditorWindow.png"
         },
         {
-            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInOpera\\ReadMeScreenShot_FolderNode.png",
-            "targetPath": "ReadMeScreenShot_FolderNode.png"
-        },
-        {
             "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInOpera\\ReadMeScreenShot_ItemNode.png",
             "targetPath": "ReadMeScreenShot_ItemNode.png"
-        },
-        {
-            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInOpera\\ReadMeScreenShot_ProjNode.png",
-            "targetPath": "ReadMeScreenShot_ProjNode.png"
         },
         {
             "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInOpera\\ThirdPartyLogo.png",
