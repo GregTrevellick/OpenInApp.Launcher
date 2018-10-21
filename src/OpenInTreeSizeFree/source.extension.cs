@@ -11,8 +11,8 @@ namespace OpenInTreeSizeFree
         public const string Name = "Open in TreeSize Free";
         public const string Description = @"Open multiple folders simultaneously in TreeSize Free directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
-        public const string Version = "1.1.51";
+        public const string Version = "1.1.52";
         public const string Author = "GregTrevellick";
-        public const string Tags = "open, open in, TreeSize, TreeSize Free, TreeSizeFree, disc space";
+        public const string Tags = "open in, TreeSize, TreeSizeFree, disc space";
     }
 }
