@@ -32,10 +32,6 @@
         {
             "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInVS2015\\ThirdPartyLogo.png",
             "targetPath": "ThirdPartyLogo.png"
-        },
-        {
-            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInVS2015\\ThirdPartyScreenShot.png",
-            "targetPath": "ThirdPartyScreenShot.png"
         }
     ],
     "categories": [
@@ -44,28 +40,7 @@
         "Other"
     ],
     "identity": {
-
-
-
-
-
-
-
-
-
-        "internalName": "OpenInVS2015"
-
-
-
-
-
-
-
-
-
-
-
-
+        "internalName": "OpeninVisualStudio2015"
     },
     "overview": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInVS2015\\README.md",
     "priceCategory": "free",

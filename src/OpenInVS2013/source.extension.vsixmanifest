@@ -9,7 +9,7 @@
         <ReleaseNotes>https://github.com/GregTrevellick/OpenInApp.Launcher/blob/master/CHANGELOG.md</ReleaseNotes>
         <Icon>Resources\VsixExtensionIcon_90x90.png</Icon>
         <PreviewImage>Resources\VsixExtensionPreview_175x175.png</PreviewImage>
-        <Tags>open, open in, open in VS2013, VS2013, open in Visual Studio 2013, Visual Studio 2013</Tags>
+        <Tags>open in VS2013, VS2013, Visual Studio 2013</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,17.0)" />
