@@ -14,27 +14,27 @@
             "targetPath": "Generic_ReadMeScreenShot_WarningNonTypical.png"
         },
         {
-            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInAltovaXmlSpy\\ReadMeScreenShot_CodeEditorWindow.png",
+            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInGimp\\ReadMeScreenShot_CodeEditorWindow.png",
             "targetPath": "ReadMeScreenShot_CodeEditorWindow.png"
         },
         {
-            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInAltovaXmlSpy\\ReadMeScreenShot_FolderNode.png",
+            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInGimp\\ReadMeScreenShot_FolderNode.png",
             "targetPath": "ReadMeScreenShot_FolderNode.png"
         },
         {
-            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInAltovaXmlSpy\\ReadMeScreenShot_ItemNode.png",
+            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInGimp\\ReadMeScreenShot_ItemNode.png",
             "targetPath": "ReadMeScreenShot_ItemNode.png"
         },
         {
-            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInAltovaXmlSpy\\ReadMeScreenShot_ProjNode.png",
+            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInGimp\\ReadMeScreenShot_ProjNode.png",
             "targetPath": "ReadMeScreenShot_ProjNode.png"
         },
         {
-            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInAltovaXmlSpy\\ThirdPartyLogo.png",
+            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInGimp\\ThirdPartyLogo.png",
             "targetPath": "ThirdPartyLogo.png"
         },
         {
-            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInAltovaXmlSpy\\ThirdPartyScreenShot.png",
+            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInGimp\\ThirdPartyScreenShot.png",
             "targetPath": "ThirdPartyScreenShot.png"
         }
     ],
@@ -53,7 +53,7 @@
         //        "version": "[11.0,17.0)"
         //    }
         //],
-        "internalName": "OpenInAltovaXmlSpy",
+        "internalName": "OpenInGimp",
         //"language": "en-US",
         //"tags": [
         //    "xml",
@@ -67,7 +67,7 @@
         //"version": "1.1.51",
         //"vsixId": "AE643C9F-EA6E-4A88-A122-34696D103F82"
     },
-    "overview": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInAltovaXmlSpy\\README.md",
+    "overview": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInGimp\\README.md",
     "priceCategory": "free",
     "publisher": "GregTrevellick",
     "private": false,
