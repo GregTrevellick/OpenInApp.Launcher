@@ -44,33 +44,12 @@
         "Other"
     ],
     "identity": {
-
-
-
-
-
-
-
-
-
         "internalName": "OpenInVS2019Enterprise"
-
-
-
-
-
-
-
-
-
-
-
-
     },
     "overview": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInVS2019Enterprise\\README.md",
     "priceCategory": "free",
     "publisher": "GregTrevellick",
-    "private": false,
+    "private": true,
     "qna": true,
     "repo": "https://github.com/GregTrevellick/OpenInApp.Launcher"
 }
