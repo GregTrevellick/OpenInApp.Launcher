@@ -1,3 +1,5 @@
+[ThirdPartyAppHomePage]: https://www.visualstudio.com/vs/
+
 Open multiple files and/or folders simultaneously in [Visual Studio 2019 Enterprise Edition][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 
