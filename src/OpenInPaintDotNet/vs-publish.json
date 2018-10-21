@@ -44,28 +44,7 @@
         "Other"
     ],
     "identity": {
-
-
-
-
-
-
-
-
-
-        "internalName": "OpenInPaintDotNet"
-
-
-
-
-
-
-
-
-
-
-
-
+        "internalName": "OpenInPaintNet"
     },
     "overview": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInPaintDotNet\\README.md",
     "priceCategory": "free",
