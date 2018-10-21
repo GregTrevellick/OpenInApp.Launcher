@@ -44,28 +44,7 @@
         "Other"
     ],
     "identity": {
-
-
-
-
-
-
-
-
-
-        "internalName": "OpenInGimp"
-
-
-
-
-
-
-
-
-
-
-
-
+        "internalName": "OpeninGIMP-GNUImageManipulationProgram"
     },
     "overview": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInGimp\\README.md",
     "priceCategory": "free",

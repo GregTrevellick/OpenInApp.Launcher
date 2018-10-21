@@ -11,8 +11,8 @@ namespace OpenInAppGimp
         public const string Name = "Open in GIMP - GNU Image Manipulation Program";
         public const string Description = @"Open multiple files simultaneously in GIMP (GNU Image Manipulation Program) directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
-        public const string Version = "1.1.51";
-        public const string Author = "GregTrevellick";
-        public const string Tags = "open, open in, gimp, GNU Image Manipulation Program";
+        public const string Version = "1.1.52";
+        public const string Author = "Greg Trevellick";
+        public const string Tags = "open in, gimp, GNU Image Manipulation Program";
     }
 }
