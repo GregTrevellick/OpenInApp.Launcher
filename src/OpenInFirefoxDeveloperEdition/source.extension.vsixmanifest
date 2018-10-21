@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="44EC5BEA-981F-45FB-A489-75F838CCD812" Version="1.1.51" Language="en-US" Publisher="GregTrevellick" />
+        <Identity Id="44EC5BEA-981F-45FB-A489-75F838CCD812" Version="1.1.52" Language="en-US" Publisher="GregTrevellick" />
         <DisplayName>Open in Firefox Developer Edition</DisplayName>
         <Description xml:space="preserve">Open multiple files simultaneously in Firefox Developer Edition directly from Solution Explorer or Code Editor window.</Description>
         <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>

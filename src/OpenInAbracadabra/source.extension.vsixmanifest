@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="Abracadabra.AA6B2292-8144-47F4-B559-2178E2B0DE44" Version="1.1.51" Language="en-US" Publisher="GregTrevellick" />
+        <Identity Id="Abracadabra.AA6B2292-8144-47F4-B559-2178E2B0DE44" Version="1.1.52" Language="en-US" Publisher="GregTrevellick" />
         <DisplayName>Open in Abracadabra</DisplayName>
         <Description xml:space="preserve">Open multiple files simultaneously in Abracadabra directly from Solution Explorer or Code Editor window.</Description>
         <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>
