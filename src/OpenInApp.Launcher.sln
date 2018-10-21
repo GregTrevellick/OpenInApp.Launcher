@@ -76,9 +76,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInAndroidStudio", "Open
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1F3D0298-4C07-41FB-92CC-56EEFAB440C2}"
 	ProjectSection(SolutionItems) = preProject
+		..\.gitattributes = ..\.gitattributes
+		..\.gitignore = ..\.gitignore
 		..\.travis.yml = ..\.travis.yml
 		..\_config.yml = ..\_config.yml
 		..\appveyor.yml = ..\appveyor.yml
+		..\azure-pipelines.yml = ..\azure-pipelines.yml
+		..\greenkeeper.json = ..\greenkeeper.json
+		..\renovate.json = ..\renovate.json
+		..\z.travis.yml = ..\z.travis.yml
 		..\Zappveyor.yml = ..\Zappveyor.yml
 	EndProjectSection
 EndProject

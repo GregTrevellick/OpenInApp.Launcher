@@ -1,0 +1,76 @@
+{
+    "$schema": "http://json.schemastore.org/vsix-publish",
+    "assetFiles": [
+        {
+            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\Generic_ReadMeScreenShot_OptionsGeneral.png",
+            "targetPath": "Generic_ReadMeScreenShot_OptionsGeneral.png"
+        },
+        {
+            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\Generic_ReadMeScreenShot_WarningLargeQuantity.png",
+            "targetPath": "Generic_ReadMeScreenShot_WarningLargeQuantity.png"
+        },
+        {
+            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\Generic_ReadMeScreenShot_WarningNonTypical.png",
+            "targetPath": "Generic_ReadMeScreenShot_WarningNonTypical.png"
+        },
+        {
+            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInAltovaXmlSpy\\ReadMeScreenShot_CodeEditorWindow.png",
+            "targetPath": "ReadMeScreenShot_CodeEditorWindow.png"
+        },
+        {
+            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInAltovaXmlSpy\\ReadMeScreenShot_FolderNode.png",
+            "targetPath": "ReadMeScreenShot_FolderNode.png"
+        },
+        {
+            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInAltovaXmlSpy\\ReadMeScreenShot_ItemNode.png",
+            "targetPath": "ReadMeScreenShot_ItemNode.png"
+        },
+        {
+            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInAltovaXmlSpy\\ReadMeScreenShot_ProjNode.png",
+            "targetPath": "ReadMeScreenShot_ProjNode.png"
+        },
+        {
+            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInAltovaXmlSpy\\ThirdPartyLogo.png",
+            "targetPath": "ThirdPartyLogo.png"
+        },
+        {
+            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInAltovaXmlSpy\\ThirdPartyScreenShot.png",
+            "targetPath": "ThirdPartyScreenShot.png"
+        }
+    ],
+    "categories": [
+        "Coding",
+        "Modeling",
+        "Other"
+    ],
+    "identity": {
+        //"description": "Open multiple files simultaneously in Altova XMLSpy XML Editor directly from Solution Explorer or Code Editor window.",
+        //"displayName": "Open in Altova XMLSpy",
+        //"icon": "\\Resources\\VsixExtensionIcon_90x90.png",
+        //"installTargets": [
+        //    {
+        //        "sku": "Microsoft.VisualStudio.Pro",
+        //        "version": "[11.0,17.0)"
+        //    }
+        //],
+        "internalName": "OpenInAltovaXmlSpy",
+        //"language": "en-US",
+        //"tags": [
+        //    "xml",
+        //    "xmlspy",
+        //    "altova",
+        //    "xsd",
+        //    "xslt",
+        //    "open",
+        //    "open in"
+        //],
+        //"version": "1.1.51",
+        //"vsixId": "AE643C9F-EA6E-4A88-A122-34696D103F82"
+    },
+    "overview": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInAltovaXmlSpy\\README.md",
+    "priceCategory": "free",
+    "publisher": "GregTrevellick",
+    "private": false,
+    "qna": true,
+    "repo": "https://github.com/GregTrevellick/OpenInApp.Launcher"
+}
