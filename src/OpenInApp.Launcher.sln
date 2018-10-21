@@ -84,8 +84,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\azure-pipelines.yml = ..\azure-pipelines.yml
 		..\greenkeeper.json = ..\greenkeeper.json
 		..\renovate.json = ..\renovate.json
-		..\z.travis.yml = ..\z.travis.yml
-		..\Zappveyor.yml = ..\Zappveyor.yml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenInVS2019Community", "OpenInVS2019Community\OpenInVS2019Community.csproj", "{84ED17E7-7027-49E3-8B3D-532B4600D3AE}"
