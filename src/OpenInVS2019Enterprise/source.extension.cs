@@ -7,12 +7,12 @@ namespace OpenInVS2019Enterprise
 {
     static class Vsix
     {
-        public const string Id = "348687B9-1B76-47EB-931C-1605660E3D7B";
+        public const string Id = "E105EE1F-8B3C-43E6-BA8F-9E53B78804C2";
         public const string Name = "Open in Visual Studio 2019 Enterprise";
         public const string Description = @"Open multiple files simultaneously in Visual Studio 2019 Enterprise Edition directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
         public const string Version = "1.1.52";
-        public const string Author = "GregTrevellick";
+        public const string Author = "Greg Trevellick";
         public const string Tags = "VS2019, Visual Studio 2019, Enterprise";
     }
 }
