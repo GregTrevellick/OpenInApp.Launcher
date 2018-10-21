@@ -44,28 +44,28 @@
         "Other"
     ],
     "identity": {
-        //"description": "Open multiple files simultaneously in Altova XMLSpy XML Editor directly from Solution Explorer or Code Editor window.",
-        //"displayName": "Open in Altova XMLSpy",
-        //"icon": "\\Resources\\VsixExtensionIcon_90x90.png",
-        //"installTargets": [
-        //    {
-        //        "sku": "Microsoft.VisualStudio.Pro",
-        //        "version": "[11.0,17.0)"
-        //    }
-        //],
-        "internalName": "OpenInOperaDeveloper",
-        //"language": "en-US",
-        //"tags": [
-        //    "xml",
-        //    "xmlspy",
-        //    "altova",
-        //    "xsd",
-        //    "xslt",
-        //    "open",
-        //    "open in"
-        //],
-        //"version": "1.1.51",
-        //"vsixId": "AE643C9F-EA6E-4A88-A122-34696D103F82"
+
+
+
+
+
+
+
+
+
+        "internalName": "OpenInOperaDeveloper"
+
+
+
+
+
+
+
+
+
+
+
+
     },
     "overview": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInOperaDeveloper\\README.md",
     "priceCategory": "free",
