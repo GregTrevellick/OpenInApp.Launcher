@@ -11,8 +11,8 @@ namespace OpenInVS2017Enterprise
         public const string Name = "Open in Visual Studio 2017 Enterprise";
         public const string Description = @"Open multiple files simultaneously in Visual Studio 2017 Enterprise Edition directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
-        public const string Version = "1.1.51";
+        public const string Version = "1.1.52";
         public const string Author = "GregTrevellick";
-        public const string Tags = "open, open in, open in VS2017, VS2017, open in Visual Studio 2017, Visual Studio 2017, enterprise";
+        public const string Tags = "VS2017, Visual Studio 2017, Enterprise";
     }
 }

@@ -32,10 +32,6 @@
         {
             "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInVS2019Enterprise\\ThirdPartyLogo.png",
             "targetPath": "ThirdPartyLogo.png"
-        },
-        {
-            "pathOnDisk": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInVS2019Enterprise\\ThirdPartyScreenShot.png",
-            "targetPath": "ThirdPartyScreenShot.png"
         }
     ],
     "categories": [
@@ -44,7 +40,7 @@
         "Other"
     ],
     "identity": {
-        "internalName": "OpenInVS2019Enterprise"
+        "internalName": "OpenInVisualStudio2019Enterprise"
     },
     "overview": "..\\..\\src\\VisualStudioMarketPlaceAssets\\OpenInVS2019Enterprise\\README.md",
     "priceCategory": "free",

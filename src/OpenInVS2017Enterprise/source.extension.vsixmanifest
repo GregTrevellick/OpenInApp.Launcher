@@ -9,7 +9,7 @@
         <ReleaseNotes>https://github.com/GregTrevellick/OpenInApp.Launcher/blob/master/CHANGELOG.md</ReleaseNotes>
         <Icon>Resources\VsixExtensionIcon_90x90.png</Icon>
         <PreviewImage>Resources\VsixExtensionPreview_175x175.png</PreviewImage>
-        <Tags>open, open in, open in VS2017, VS2017, open in Visual Studio 2017, Visual Studio 2017, enterprise</Tags>
+        <Tags>VS2017, Visual Studio 2017, Enterprise</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,17.0)" />
