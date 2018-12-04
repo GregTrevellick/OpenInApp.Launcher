@@ -1,5 +1,7 @@
 [ThirdPartyAppHomePage]: https://www.visualstudio.com/vs/
 
+>#### Please note: At this time the extension will currently open the selected file in [VS2019 Preview Edition](https://visualstudio.microsoft.com/vs/preview/).
+
 Open multiple files and/or folders simultaneously in [Visual Studio 2019 Enterprise Edition][ThirdPartyAppHomePage] directly from [Visual Studio's][VisualStudioURL] Code Editor window and / or Solution Explorer.
 
 
