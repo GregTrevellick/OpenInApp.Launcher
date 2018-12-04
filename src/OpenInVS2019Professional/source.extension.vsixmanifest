@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="6962FBF6-8B06-4884-97DA-E07D208D89C5" Version="1.1.52" Language="en-US" Publisher="Greg Trevellick" />
+        <Identity Id="6962FBF6-8B06-4884-97DA-E07D208D89C5" Version="1.1.53" Language="en-US" Publisher="Greg Trevellick" />
         <DisplayName>Open in Visual Studio 2019 Professional</DisplayName>
         <Description xml:space="preserve">Open multiple files simultaneously in Visual Studio 2019 Professional Edition directly from Solution Explorer or Code Editor window.</Description>
         <MoreInfo>https://github.com/GregTrevellick/OpenInApp.Launcher</MoreInfo>

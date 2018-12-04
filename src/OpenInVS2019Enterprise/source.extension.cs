@@ -11,7 +11,7 @@ namespace OpenInVS2019Enterprise
         public const string Name = "Open in Visual Studio 2019 Enterprise";
         public const string Description = @"Open multiple files simultaneously in Visual Studio 2019 Enterprise Edition directly from Solution Explorer or Code Editor window.";
         public const string Language = "en-US";
-        public const string Version = "1.1.52";
+        public const string Version = "1.1.53";
         public const string Author = "Greg Trevellick";
         public const string Tags = "VS2019, Visual Studio 2019, Enterprise";
     }
