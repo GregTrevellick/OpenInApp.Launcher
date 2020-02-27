@@ -5,14 +5,14 @@ branches:
     - master
 environment:
     my_encrypted_sonarqube_token:
-        secure: 94Py9ytqrmqFVtmUiyayJJ4Hgg2vjF1+YuRJldGGWO82/9zEens+sCjeh7wzc2Le
+        secure: auSP7uJIC8Y5I0AW97f0ANIOLXxkszux38+nFJhry4PFvH1MBd1xfBFMcA30a8Z9
 install:
     - choco install "sonarscanner-msbuild-net46" -y
 before_build:
     - cmd: nuget restore Src/OpenInApp.Launcher.sln
     - choco install opencover.portable
     - choco install codecov
-    - SonarScanner.MSBuild.exe begin /k:"OpenInApp.Launcher" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%my_encrypted_sonarqube_token%" /o:"gregtrevellick-github"
+    - SonarScanner.MSBuild.exe begin /k:"OpenInApp.Launcher" /d:"sonar.host.url=https://sonarcloud.io" /d:"sonar.login=%my_encrypted_sonarqube_token%" /o:"gregtrevellick-github"
 build:
     project: Src/OpenInApp.Launcher.sln
     verbosity: minimal
