@@ -3,21 +3,21 @@ image: Visual Studio 2019
 branches:
   only:
     - master
-environment:
-    my_encrypted_sonarqube_token:
-        secure: auSP7uJIC8Y5I0AW97f0ANIOLXxkszux38+nFJhry4PFvH1MBd1xfBFMcA30a8Z9
-install:
-    - choco install "sonarscanner-msbuild-net46" -y
+# environment:
+#    my_encrypted_sonarqube_token:
+#        secure: auSP7uJIC8Y5I0AW97f0ANIOLXxkszux38+nFJhry4PFvH1MBd1xfBFMcA30a8Z9
+# install:
+#    - choco install "sonarscanner-msbuild-net46" -y
 before_build:
     - cmd: nuget restore Src/OpenInApp.Launcher.sln
     - choco install opencover.portable
     - choco install codecov
-    - SonarScanner.MSBuild.exe begin /key:"GregTrevellick_OpenInApp.Launcher" /d:"sonar.host.url=https://sonarcloud.io" /d:"sonar.login=%my_encrypted_sonarqube_token%" /o:"gregtrevellick-github"
+#    - SonarScanner.MSBuild.exe begin /key:"GregTrevellick_OpenInApp.Launcher" /d:"sonar.host.url=https://sonarcloud.io" /d:"sonar.login=%my_encrypted_sonarqube_token%" /o:"gregtrevellick-github"
 build:
     project: Src/OpenInApp.Launcher.sln
     verbosity: minimal
-after_build:
-    - SonarScanner.MSBuild.exe end /d:"sonar.login=%my_encrypted_sonarqube_token%"
+# after_build:
+#    - SonarScanner.MSBuild.exe end /d:"sonar.login=%my_encrypted_sonarqube_token%"
 notifications:
 - provider: Email
   to:
