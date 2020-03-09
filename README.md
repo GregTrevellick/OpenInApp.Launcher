@@ -38,11 +38,14 @@
 [![Renovate Bot github](https://img.shields.io/badge/renovatebot-checked-brightgreen.svg)](https://renovatebot.com/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
-[Subscribe](https://github.com/GregTrevellick/OpenInApp.Launcher/subscription) to receive notificatons.
+[![Subscribe](https://img.shields.io/badge/Subscribe-black.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher/subscription)
+
 [![Visual Studio Marketplace version](https://img.shields.io/badge/-OpenInAltovaXmlSpy-%23e2165e.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInAltovaXmlSpy)
 [![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.OpenInAltovaXmlSpy.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInAltovaXmlSpy)
 [![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.OpenInAltovaXmlSpy.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInAltovaXmlSpy)
 [![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInAltovaXmlSpy.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInAltovaXmlSpy)
+
+
 [![Visual Studio Marketplace version](https://img.shields.io/badge/-OpenInAndroidStudio-%23e2165e.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInAndroidStudio)
 [![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.OpenInAndroidStudio.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInAndroidStudio)
 [![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.OpenInAndroidStudio.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInAndroidStudio)
