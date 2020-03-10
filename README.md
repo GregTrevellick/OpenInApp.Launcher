@@ -112,12 +112,6 @@
 [![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpeninPaintNET.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninPaintNET)
 
 
-[![Visual Studio Marketplace version](https://img.shields.io/badge/-OpenInSQLServerManagementStudio-%23e2165e.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInSQLServerManagementStudio)
-[![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.OpenInSQLServerManagementStudio.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInSQLServerManagementStudio)
-[![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.OpenInSQLServerManagementStudio.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInSQLServerManagementStudio)
-[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInSQLServerManagementStudio.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInSQLServerManagementStudio)
-
-
 [![Visual Studio Marketplace version](https://img.shields.io/badge/-OpenInTreeSizeFree-%23e2165e.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInTreeSizeFree)
 [![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.OpenInTreeSizeFree.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInTreeSizeFree)
 [![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.OpenInTreeSizeFree.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInTreeSizeFree)
