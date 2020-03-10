@@ -106,10 +106,10 @@
 [![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInOperaDeveloper.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInOperaDeveloper)
 
 
-[![Visual Studio Marketplace version](https://img.shields.io/badge/-OpenInPaintDotNet-%23e2165e.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInPaintDotNet)
-[![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.OpenInPaintDotNet.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInPaintDotNet)
-[![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.OpenInPaintDotNet.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInPaintDotNet)
-[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInPaintDotNet.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInPaintDotNet)
+[![Visual Studio Marketplace version](https://img.shields.io/badge/-OpeninPaintNET-%23e2165e.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninPaintNET)
+[![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.OpeninPaintNET.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninPaintNET)
+[![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.OpeninPaintNET.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninPaintNET)
+[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpeninPaintNET.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninPaintNET)
 
 
 [![Visual Studio Marketplace version](https://img.shields.io/badge/-OpenInSQLServerManagementStudio-%23e2165e.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInSQLServerManagementStudio)
