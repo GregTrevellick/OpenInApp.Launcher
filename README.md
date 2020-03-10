@@ -76,10 +76,10 @@
 [![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInFirefoxDeveloperEdition.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInFirefoxDeveloperEdition)
 
 
-[![Visual Studio Marketplace version](https://img.shields.io/badge/-OpenInGimp-%23e2165e.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInGimp)
-[![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.OpenInGimp.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInGimp)
-[![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.OpenInGimp.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInGimp)
-[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInGimp.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInGimp)
+[![Visual Studio Marketplace version](https://img.shields.io/badge/-OpeninGIMP-GNUImageManipulationProgram-%23e2165e.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninGIMP-GNUImageManipulationProgram)
+[![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.OpeninGIMP-GNUImageManipulationProgram.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninGIMP-GNUImageManipulationProgram)
+[![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.OpeninGIMP-GNUImageManipulationProgram.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninGIMP-GNUImageManipulationProgram)
+[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpeninGIMP-GNUImageManipulationProgram.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpeninGIMP-GNUImageManipulationProgram)
 
 
 [![Visual Studio Marketplace version](https://img.shields.io/badge/-OpenInMarkdownMonster-%23e2165e.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInMarkdownMonster)
@@ -170,6 +170,24 @@
 [![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.OpenInVS2017Professional.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInVS2017Professional)
 [![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.OpenInVS2017Professional.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInVS2017Professional)
 [![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInVS2017Professional.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInVS2017Professional)
+
+
+[![Visual Studio Marketplace version](https://img.shields.io/badge/-OpenInVisualStudio2019Community-%23e2165e.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInVisualStudio2019Community)
+[![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.OpenInVisualStudio2019Community.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInVisualStudio2019Community)
+[![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.OpenInVisualStudio2019Community.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInVisualStudio2019Community)
+[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInVisualStudio2019Community.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInVisualStudio2019Community)
+
+
+[![Visual Studio Marketplace version](https://img.shields.io/badge/-OpenInVisualStudio2019Enterprise-%23e2165e.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInVisualStudio2019Enterprise)
+[![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.OpenInVisualStudio2019Enterprise.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInVisualStudio2019Enterprise)
+[![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.OpenInVisualStudio2019Enterprise.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInVisualStudio2019Enterprise)
+[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInVisualStudio2019Enterprise.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInVisualStudio2019Enterprise)
+
+
+[![Visual Studio Marketplace version](https://img.shields.io/badge/-OpenInVisualStudio2019Professional-%23e2165e.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInVisualStudio2019Professional)
+[![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.OpenInVisualStudio2019Professional.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInVisualStudio2019Professional)
+[![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.OpenInVisualStudio2019Professional.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInVisualStudio2019Professional)
+[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInVisualStudio2019Professional.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInVisualStudio2019Professional)
 
 
 [![Visual Studio Marketplace version](https://img.shields.io/badge/-OpenInWinDirStat-%23e2165e.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInWinDirStat)
