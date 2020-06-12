@@ -1,119 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3FB0055C-325C-40A6-8D60-5AA0B09D58DC}</ProjectGuid>
+    <TargetFramework>net461</TargetFramework>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VisualStudioMarketPlaceAssets</RootNamespace>
-    <AssemblyName>VisualStudioMarketPlaceAssets</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="1_Introduction_Files.md" />
-    <None Include="1_Introduction_FilesAndFolders.md" />
-    <None Include="1_Introduction_Folders.md" />
-    <None Include="2_FreeReviews_gif.md" />
-    <None Include="2_FreeReviews.md" />
-    <None Include="3_Features_FilesAndFolders.md" />
-    <None Include="3_Features_Files.md" />
-    <None Include="4b_FileQuantityWarnings.md" />
-    <None Include="4_FileTypeWarnings.md" />
-    <None Include="5_UseCases_Files.md" />
-    <None Include="6_Links.md" />
-    <None Include="notes.xlsx" />
-    <None Include="OpenInAndroidStudio\0_Variables.md" />
-    <None Include="OpenInAndroidStudio\README.md" />
-    <None Include="OpenInAtom\0_Variables.md" />
-    <None Include="OpenInAtom\README.md" />
-    <None Include="OpenInChromeCanary\README.md" />
-    <None Include="OpenInChromeCanary\0_Variables.md" />
-    <None Include="OpenInEmacs\README.md" />
-    <None Include="OpenInEmacs\0_Variables.md" />
-    <None Include="OpenInFirefoxDeveloperEdition\README.md" />
-    <None Include="OpenInFirefoxDeveloperEdition\0_Variables.md" />
-    <None Include="OpenInMSPaint\README.md" />
-    <None Include="OpenInMSPaint\0_Variables.md" />
-    <None Include="OpenInOperaDeveloper\README.md" />
-    <None Include="OpenInOperaDeveloper\0_Variables.md" />
-    <None Include="OpenInOpera\README.md" />
-    <None Include="OpenInOpera\0_Variables.md" />
-    <None Include="OpenInSQLServerManagementStudio\0_Variables.md" />
-    <None Include="OpenInSQLServerManagementStudio\README.md" />
-    <None Include="OpenInTreeSizeFree\README.md" />
-    <None Include="OpenInTreeSizeFree\0_Variables.md" />
-    <None Include="OpenInTreeSizeProfessional\0_Variables.md" />
-    <None Include="OpenInTreeSizeProfessional\README.md" />
-    <None Include="OpenInVivaldi\README.md" />
-    <None Include="OpenInVivaldi\0_Variables.md" />
-    <None Include="OpenInVS2019Community\0_Variables.md" />
-    <None Include="OpenInVS2019Community\README.md" />
-    <None Include="OpenInVS2019Enterprise\0_Variables.md" />
-    <None Include="OpenInVS2019Enterprise\README.md" />
-    <None Include="OpenInVS2019Professional\0_Variables.md" />
-    <None Include="OpenInVS2019Professional\README.md" />
-    <None Include="OpenInWinDirStat\0_Variables.md" />
-    <None Include="OpenInWinDirStat\README.md" />
-    <None Include="OpenInXamarinStudio\README.md" />
-    <None Include="OpenInXamarinStudio\0_Variables.md" />
-    <None Include="package.json" />
-    <None Include="OpenInAltovaXmlSpy\README.md" />
-    <None Include="OpenInAltovaXmlSpy\0_Variables.md" />
-    <None Include="OpenInGimp\README.md" />
-    <None Include="OpenInGimp\0_Variables.md" />
-    <None Include="OpenInMarkdownMonster\README.md" />
-    <None Include="OpenInMarkdownMonster\0_Variables.md" />
-    <None Include="OpenInPaintDotNet\README.md" />
-    <None Include="OpenInPaintDotNet\0_Variables.md" />
-    <None Include="OpenInAbracadabra\README.md" />
-    <None Include="OpenInAbracadabra\0_Variables.md" />
-    <None Include="OpenInVS2012\README.md" />
-    <None Include="OpenInVS2012\0_Variables.md" />
-    <None Include="OpenInVS2013\README.md" />
-    <None Include="OpenInVS2013\0_Variables.md" />
-    <None Include="OpenInVS2015\README.md" />
-    <None Include="OpenInVS2015\0_Variables.md" />
-    <None Include="OpenInVS2017Community\README.md" />
-    <None Include="OpenInVS2017Community\0_Variables.md" />
-    <None Include="OpenInVS2017Enterprise\README.md" />
-    <None Include="OpenInVS2017Enterprise\0_Variables.md" />
-    <None Include="OpenInVS2017Professional\README.md" />
-    <None Include="OpenInVS2017Professional\0_Variables.md" />
-  </ItemGroup>
   <ItemGroup>
     <Content Include="Gulpfile.js" />
     <Content Include="OpenInAltovaXmlSpy\ReadMeScreenShot_FolderNode.png" />
@@ -283,13 +173,8 @@
     <Content Include="OpenInXamarinStudio\ReadMeScreenShot_ItemNode.png" />
     <Content Include="OpenInXamarinStudio\ThirdPartyLogo.png" />
   </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
 </Project>
