@@ -2,7 +2,7 @@
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/search?term=trevellick&target=VS&sortBy=Relevance
 [CharityWareURL]: https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware
 [WhyURL]: https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Why
-
+  
 # Open In App Launcher
 
 <!--BadgesSTART-->
