@@ -165,7 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="EnvDTE80">
-      <Version>8.0.1</Version>
+      <Version>8.0.3</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.ApplicationInsights">
       <Version>2.13.1</Version>
