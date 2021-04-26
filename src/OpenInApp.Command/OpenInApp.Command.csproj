@@ -72,7 +72,7 @@
       <Version>15.0.26201</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.OLE.Interop">
-      <Version>7.10.6071</Version>
+      <Version>7.10.6072</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.SDK.Analyzers">
       <Version>16.3.14</Version>
