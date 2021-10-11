@@ -10,6 +10,8 @@ install:
     - choco install "sonarscanner-msbuild-netcoreapp2.0" -y
 before_build:
     - cmd: nuget restore Src/OpenInApp.Launcher.sln
+    - set JAVA_HOME=C:\Program Files\Java\jdk11
+    - set PATH=%JAVA_HOME%\bin;%PATH%
     - choco install opencover.portable
     - choco install codecov
     - dotnet tool install -g dotnet-sonarscanner
