@@ -171,7 +171,7 @@
       <Version>2.6.3</Version>
     </PackageReference>
     <PackageReference Include="OpenCover">
-      <Version>4.6.519</Version>
+      <Version>4.7.1221</Version>
     </PackageReference>
     <PackageReference Include="ReportGenerator">
       <Version>2.5.9</Version>
