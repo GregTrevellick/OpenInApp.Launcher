@@ -173,7 +173,7 @@
       <Version>2.13.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Imaging">
-      <Version>15.0.26201</Version>
+      <Version>15.9.28307</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.OLE.Interop">
       <Version>7.10.6071</Version>
