@@ -75,7 +75,7 @@
       <Version>10.0.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.ApplicationInsights">
-      <Version>2.13.1</Version>
+      <Version>2.20.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
