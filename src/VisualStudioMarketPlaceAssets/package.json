@@ -7,6 +7,6 @@
     "gulp-bower": "0.0.14",
     "gulp-config": "0.3.0",
     "gulp-concat": "2.6.1",
-    "gulp-replace": "1.0.0"
+    "gulp-replace": "1.1.4"
   } 
 }    
