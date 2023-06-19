@@ -72,7 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="EnvDTE100">
-      <Version>10.0.1</Version>
+      <Version>10.0.3</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.ApplicationInsights">
       <Version>2.13.1</Version>
